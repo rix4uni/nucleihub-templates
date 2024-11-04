@@ -1,0 +1,9 @@
+{
+"vulnerability_description":" A weakness has been reported in memcached, which can be exploited by malicious people to disclose system information. The weakness is caused due to the application disclosing the content of /proc/self/maps if a stats maps command is received. This can be exploited to disclose e.g. the addresses of allocated memory regions.",
+"vulnerability_severity":"low",
+"vulnerability_type":"memcached-stats",
+"vulnerability_remediation":"Memcached version prior to 1.2.8 are affected so update to version 1.2.8 or later.",
+"impact":"Successful exploitation will let the attacker craft malicious commands and pass it to the vulnerable functions to gain sensitive information about the application i.e. disclosure of locations of memory regions and defeat ASLR protections, by sending a command to the daemon's TCP port."
+
+
+}

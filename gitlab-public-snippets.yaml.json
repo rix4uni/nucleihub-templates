@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Sometimes adding (/-/snippets) to a url can recover source code,credentials and keys from misconfigured gitlab instances ",
+"vulnerability_severity":"info",
+"vulnerability_type":"gitlab-public-snippets",
+"vulnerability_remediation":"Project snippets are enabled and available by default so Change default visibility of snippets",
+"impact":"It may disclose the code or some internal files"
+
+
+}

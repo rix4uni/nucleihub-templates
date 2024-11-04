@@ -1,0 +1,49 @@
+id: wordpress-taxonomy-terms-order
+
+info:
+  name: Category Order and Taxonomy Terms Order Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/taxonomy-terms-order/
+  metadata:
+    plugin_namespace: taxonomy-terms-order
+    wpscan: https://wpscan.com/plugin/taxonomy-terms-order
+  tags: tech,wordpress,wp-plugin,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/taxonomy-terms-order/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/taxonomy-terms-order.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4a0a0047304502201700e995aba8486a942d9ece33144e96a1bc474e61ed5eec14411a93ca8c6f51022100a50c406e95990cfc266db73cc15e86f346325fee2e3c3ea8512e344383d9ed83:922c64590222798bb761d5b6d8e72950

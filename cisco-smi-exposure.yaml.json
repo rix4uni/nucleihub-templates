@@ -1,0 +1,9 @@
+{
+"vulnerability_description":" Cisco Smart Install endpoints were discovered. Exposure of SMI to untrusted networks could allow complete compromise of the switch",
+"vulnerability_severity":"info",
+"vulnerability_type":"cisco-smi-exposure",
+"vulnerability_remediation":"If  devices in network that continue to have the Smart Install feature enabled, it is  strongly recommends to disable the Smart Install feature with the no vstack configuration command.",
+"impact":"allowing an unauthenticated, remote attacker to change the startup-config file and force a reload of the device, load a new IOS image on the device, and execute high-privilege CLI commands on switches running Cisco IOS and IOS XE Software."
+
+
+}

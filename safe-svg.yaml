@@ -1,0 +1,49 @@
+id: wordpress-safe-svg
+
+info:
+  name: Safe SVG Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/safe-svg/
+  metadata:
+    plugin_namespace: safe-svg
+    wpscan: https://wpscan.com/plugin/safe-svg
+  tags: tech,wordpress,wp-plugin,top-100,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/safe-svg/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/safe-svg.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4b0a00483046022100ca50e6ec4f52a81a959c08edd6f2742ba2d6f5cba6b48b0f82604e9fa16089e802210093d8425625f8d2977d52a16a38d05aa89c3e566b072d8489de6065c9db8444de:922c64590222798bb761d5b6d8e72950

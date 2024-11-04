@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"A security issue in nginx resolver was identified, which might allow an attacker who is able to forge UDP packets from the DNS server to cause 1-byte memory overwrite, resulting in worker process crash or potential other impact. (CVE-2021-23017) ",
+"vulnerability_severity":"info",
+"vulnerability_type":"nginx-linux-page",
+"vulnerability_remediation":"Run 'yum update nginx' to update your system.",
+"impact":"allow an attacker who is able to forge UDP packets from the DNS server to cause 1-byte memory overwrite, resulting in worker process crash or potential other impact. (CVE-2021-23017)"
+
+
+}

@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Virtual Network Computing (VNC) is a graphical desktop-sharing system that uses the Remote Frame Buffer protocol (RFB) to remotely control another computer. The main use of this service is because systems administrators want to control remotely other systems or for technical support issues.So when a penetration tester discovers a VNC server running on port 5900 then it is a good practice to check if he could gain access to the system from that service by testing it for weak passwords ",
+"vulnerability_severity":"info",
+"vulnerability_type":"vnc-service-detection",
+"vulnerability_remediation":"first of all update and upgrade it and while creating REALVNC account choose stong password,if you wish to share access only invite people you trust,enable 2-step verification for your REALVNC account as well to these people",
+"impact":"Attacker can gain access to the victim system"
+
+
+}

@@ -1,0 +1,9 @@
+{
+"vulnerability_description":" The remote web server uses the default Apache index page. This page may contain some sensitive data like the server root and installation paths.This could potentially leak useful information about the server installation to a remote, unauthenticated attacker.",
+"vulnerability_severity":"info",
+"vulnerability_type":" default-apache2-ubuntu-page",
+"vulnerability_remediation":"Remove the default index page.",
+"impact":"potentially leak useful information about the server installation to a remote, unauthenticated attacker"
+
+
+}

@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"The IIOP (Internet Inter-ORB Protocol) protocol makes it possible for distributed programs written in different programming languages to communicate over the Internet. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"weblogic-iiop-detect",
+"vulnerability_remediation":"",
+"impact":""
+
+
+}

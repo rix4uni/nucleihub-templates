@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Apache HTTP Server 2.4.52 and earlier fails to close inbound connection when errors are encountered discarding the request body, exposing the server to HTTP Request Smuggling. (CVE-2022-22720) ",
+"vulnerability_severity":"info",
+"vulnerability_type":"apache-detect",
+"vulnerability_remediation":"you can eliminate this vulnerability by upgrading to latest version.Until it is possible to install a fixed version, you can use the following sections as temporary mitigations. These mitigations restrict access to the Configuration utility to only trusted networks or devices, thereby limiting the attack surface.Block Configuration utility access through self IP addresses,Block Configuration utility access through the management interface",
+"impact":"Any authenticated user may exploit this vulnerability and cause a breach in data confidentiality, integrity, and availability."
+
+
+}

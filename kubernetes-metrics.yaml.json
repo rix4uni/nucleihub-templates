@@ -1,0 +1,13 @@
+{
+"vulnerability_type":"kubernetes-metrics",
+"vulnerability_severity":"low",
+"vulnerability_description":"Information Disclosure of Garbage Collection",
+"vulnerability_remediation":"",
+"impact":""
+
+
+}
+
+
+
+

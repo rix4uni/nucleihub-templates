@@ -1,0 +1,7 @@
+{
+"vulnerability_severity":"info",
+"vulnerability_remidation":"Disable the suggestion feature if possible in the GraphQL implementation used, or try to consider using one which allows this to be done",
+"vulnerability_description":" If introspection is disabled on the target, Field Suggestion can allow users to still earn information on the GraphQL schema. By default, GraphQL backends have a feature for fields and operations suggestions.If we try to query a field but we have made a typo, GraphQL will attempt to suggest fields that are similar to the initial attempt",
+"vulnerability_type":"Information Disclosure",
+"impact":"By leveraging this capability, an attacker could conduct a bruteforce attack to discover the GraphQL schema and potential hidden or private endpoints, and could try accessing sensitive information or performing arbitrary actions on the target server"
+}

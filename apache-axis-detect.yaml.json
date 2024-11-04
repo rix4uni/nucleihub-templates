@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Apache Axis has proven itself to be a reliable and stable base on which to implement Java Web services. There is a very active user community and there are many companies who use Axis for Web services support in their products. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"apache-axis-detect",
+"vulnerability_remediation":"If you are still using Axis, make sure to delete the StockQuoteService.jws from the Axis root directory. Ensure that any libraries or services",
+"impact":"Since the request is being made over HTTP, this means if attacker were on the same network as an Axis server attacker  could perform a man-in-the-middle attack targeting that server and then using the “StockQuoteService.jws” trigger or wait for an HTTP request and again, redirect this request to localhost to exploit the SSRF trick."
+
+
+}

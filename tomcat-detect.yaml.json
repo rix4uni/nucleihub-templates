@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"If an Tomcat instance is deployed on the target URL, when we send a request for a non existent resource we receive a Tomcat error page with version. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"tomcat-detect",
+"vulnerability_remediation":"you should not let the user see the raw HTTP 404 error page rendered by the server. Instead, you should design your own user-friendly 404 error page",
+"impact":"A remote user can exploit this vulnerability to trigger information disclosure on the targeted system."
+
+
+}

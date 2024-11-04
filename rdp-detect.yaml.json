@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"A recently discovered vulnerability in Microsoft’s remote desktop protocol (RDP) goes back to Windows Server 2012 R2 and lets anyone who can connect to an RDP session gain near total control over other RDP users, launching a man-in-the-middle attack.if an attacker can connect to RDP, all they need to do is create a duplicate pipe and wait for a new connection. RDP automatically connects to the service that was created first, so when a new user connects, the existing malicious pipe will be the one their machine automatically connects to. At that point, the attacker controls both ends of the pipe and can read, pass and modify data between the client and host.  ",
+"vulnerability_severity":"info",
+"vulnerability_type":"rdp-detect",
+"vulnerability_remediation":"Be sure you update affected systems as soon as possible as the microsoft already released a security update to fix it. Enable multi factor authentication, log all failed connection attempts and review them regularly",
+"impact":"It enables any standard unprivileged user connected to a remote machine via remote desktop to gain file system access to the client machines of other connected users, to view and modify clipboard data of other connected users, and to impersonate the identity of other users logged on to the machine using smart cards,"
+
+
+}

@@ -1,0 +1,13 @@
+{
+"vulnerability_type":"gitlab-user-enum",
+"vulnerability_severity":"info",
+"vulnerability_description":" The successful exploitation of the vulnerability would allow an attacker to read the personal information such as usernames, names, and email IDs of the GitLab users. Although the vulnerability has less impact on the functionality, it may give a way to perform password attacks such as bruit force, password spraying, credential stuffing, and information leak attacks on GitLab. These types of attacks are considered the first phase of attacks before conducting a large phishing campaign that leads to further escalation or exploitation.",
+"vulnerability_remediation":"update your GitLab, we recommend not to host the GitLab directly to the internet. Deploy it behind the VPN gateways. or publish them on a secure platform and Disabling public profiles is also good general mitigation against unauthenticated information gathering as it prevents anyone who isn’t logged in from seeing user profiles.",
+"impact":"it may give a way to perform password attacks such as bruit force, password spraying, credential stuffing, and information leak attacks on GitLab"
+
+
+}
+
+
+
+

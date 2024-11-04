@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Ganglia is a scalable distributed monitoring system for high-performance computing systems such as clusters and Grids. ",
+"vulnerability_severity":"low",
+"vulnerability_type":"ganglia-xml-grid-monitor",
+"vulnerability_remediation":"If Ganglia XML Grid Monitor  doesn't have any authentication mechanism, set an authentication mechanism immediately. ",
+"impact":"Retrieves system information (OS version, available memory, etc.) from a listening Ganglia Monitoring Daemon or Ganglia Meta Daemon. "
+
+
+}

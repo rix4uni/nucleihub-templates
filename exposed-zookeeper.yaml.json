@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Zookeeper is a coordination service for distributed applications. It allows common services such as naming, synchronisation, configuration management and group services to be managed by a simple interface and It uses a data model of File System on an operating system.",
+"vulnerability_severity":"high",
+"vulnerability_type":"exposed-zookeeper",
+"vulnerability_remediation":" Use an authentication method other than Digest (e.g. Kerberos) or upgrade to 3.4.14 or later (3.5.5 or later if on the 3.5 branch).",
+"impact":" Apache ZooKeeper server service runs on TCP 2181 and Zookeeper installations does not deploy any authentication by default, this makes it very easy for remote attackers to abuse Zookeeper installations, gather information about the system environment, and service statistics. "
+
+
+}

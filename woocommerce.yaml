@@ -1,0 +1,49 @@
+id: wordpress-woocommerce
+
+info:
+  name: WooCommerce Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/woocommerce/
+  metadata:
+    plugin_namespace: woocommerce
+    wpscan: https://wpscan.com/plugin/woocommerce
+  tags: tech,wordpress,wp-plugin,top-100,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/woocommerce/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/woocommerce.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 490a0046304402204b44e03247890de49f1f7eb87c77c8ea24396c38ffb5da6843821e17dd1a3ee002200b2444457e9eef2000fa0e2136072566cde2ee19518d9fe0e731a17bde2629a4:922c64590222798bb761d5b6d8e72950

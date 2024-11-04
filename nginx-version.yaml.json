@@ -1,0 +1,9 @@
+{
+"vulnerability_description":" NGINX is open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more. It started out as a web server designed for maximum performance and stability.",
+"vulnerability_severity":"info",
+"vulnerability_type":"nginx-version",
+"vulnerability_remediation":"Add the following line to your nginx.conf file to prevent information leakage from the SERVER header of its HTTP response:server_tokens off",
+"impact":"help attacker to gain information or an attacker might use the disclosed information to harvest specific security vulnerabilities for the version identified."
+
+
+}

@@ -1,0 +1,39 @@
+id: django-admin-panel
+
+info:
+  name: Python Django Admin Login Panel - Detect
+  author: pdteam,righettod
+  severity: info
+  description: Python Django admin login panel was detected.
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cwe-id: CWE-200
+    cpe: cpe:2.3:a:djangoproject:django:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 2
+    vendor: djangoproject
+    product: django
+    shodan-query: cpe:"cpe:2.3:a:djangoproject:django" || http.title:"Django administration"
+  tags: panel,django,python,djangoproject,login
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/admin/login/"
+
+    redirects: true
+    max-redirects: 2
+    matchers:
+      - type: dsl
+        dsl:
+          - 'status_code == 200'
+          - 'contains_any(to_lower(body), "| django administration", "| django-administration", "django-admin-interface", "<span>django administration</span>")'
+        condition: and
+
+    extractors:
+      - type: regex
+        part: body
+        group: 1
+        regex:
+          - '(?i)django-admin-interface\s+([0-9.]+)'
+# digest: 4a0a00473045022100dad0f0b60ef7b6aa78556e9fb9c1bf1ec4907f613c85c08372e02e51b05e603f0220405d828d6cf6096f9069762cb2a461558f991300864e7a28792fd48e1b46421c:922c64590222798bb761d5b6d8e72950

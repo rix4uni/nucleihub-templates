@@ -1,0 +1,9 @@
+{
+"vulnerability_description":" OpenSSH through 7.7 is prone to a user enumeration vulnerability due to not delaying bailout for an invalid authenticating user until after the packet containing the request has been fully parsed, related to auth2-gss.c, auth2-hostbased.c, and auth2-pubkey.c.",
+"vulnerability_severity":"info",
+"vulnerability_type":" openssh-detection",
+"vulnerability_remediation":"Upgrade to latest OpenSSH version",
+"impact":"Can be  affected by a file creation restriction bypass vulnerability related to the 'process_open' function in the file 'sftp-server.c' that allows authenticated users to create zero-length files regardless of configuration."
+
+
+}

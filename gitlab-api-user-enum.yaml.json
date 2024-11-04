@@ -1,0 +1,8 @@
+{
+"vulnerability_description":"The API users endpoint no longer requires authentication to fetch data on individual users",
+"vulnerability_type":"gitlab-api-user-enum",
+"vulnerabitlity_severity":"medium",
+"vulnerability_remediation":"update your GitLab, we recommend not to host the GitLab directly to the internet. Deploy it behind the VPN gateways. or publish them on a secure platform and Disabling public profiles is also good general mitigation against unauthenticated information gathering as it prevents anyone who isn’t logged in from seeing user profiles",
+"impact":"This allows fetching of user data on instances that do not allow public projects",
+
+}

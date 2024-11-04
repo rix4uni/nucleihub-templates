@@ -1,0 +1,17 @@
+id: no-csp-check
+
+info:
+  name: Test csp
+  author: Jagomeister
+  severity: info
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+    matchers:
+      - type: word
+        words:
+          - "Content-Security-Policy"
+        part: header
+        negative: true

@@ -1,0 +1,13 @@
+{
+"vulnerability_type":"jolokia-info-disclosure",
+"vulnerability_severity":"medium",
+"vulnerability_description":"",
+"vulnerability_remediation":"Sanitize user inputs. Always Avoid mixing-up web-servers and the filesystem (shame on php, jsp, asp, cgi, …).Only expose what is really useful to the application",
+"impact":""
+
+
+}
+
+
+
+

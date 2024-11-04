@@ -1,0 +1,9 @@
+{
+"vulnerability_description":" With this template we can detect a running ColdFusion instance due to an error page.",
+"vulnerability_severity":"info",
+"vulnerability_type":"adobe-coldfusion-error-detect",
+"vulnerability_remediation":" disable robust exception information in your coldfusion administrator and you should not let the user see the raw  error page rendered by the server. Instead, you should design your own user-friendly  error page",
+"impact":"A remote user can exploit this vulnerability to trigger information disclosure on the targeted system."
+
+
+}

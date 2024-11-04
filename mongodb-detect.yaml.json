@@ -1,0 +1,9 @@
+{
+"vulnerability_description":" MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas.this script  Detects the installed version of MongoDB database.The script sends a connection request to the server and attempts to extract the version number from the reply.",
+"vulnerability_severity":"info",
+"vulnerability_type":"mongodb-detect",
+"vulnerability_remediation":"upgrading to the lastest version",
+"impact":"may allow remote attackers to access and manipulate the database from the Internet"
+
+
+}

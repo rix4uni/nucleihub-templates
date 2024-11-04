@@ -1,0 +1,49 @@
+id: wordpress-easy-wp-smtp
+
+info:
+  name: Easy WP SMTP – WordPress SMTP and Email Logs' Gmail, Office 365, Outlook, Custom SMTP, and more Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/easy-wp-smtp/
+  metadata:
+    plugin_namespace: easy-wp-smtp
+    wpscan: https://wpscan.com/plugin/easy-wp-smtp
+  tags: tech,wordpress,wp-plugin,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/easy-wp-smtp/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/easy-wp-smtp.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4b0a00483046022100e064905b3592d170348b890988f6d697c1869a5aa1624c76c116a1a11667615c022100e1135d8891e65e1814ff353db33799da1b40200b4ae57b7aba3552cb24a4ff6b:922c64590222798bb761d5b6d8e72950

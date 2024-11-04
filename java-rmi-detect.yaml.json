@@ -1,0 +1,9 @@
+{
+"vulnerability_description":" Java Remote Method Invocation, or Java RMI, is an object oriented RPC mechanism that allows an object located in one Java virtual machine to call methods on an object located in another Java virtual machine. This enables developers to write distributed applications using an object-oriented paradigm.",
+"vulnerability_severity":"info",
+"vulnerability_type":"java-rmi-detect",
+"vulnerability_remediation":"Access restriction should be applied",
+"impact":"Thus, by running an exposed RMI Server on a system, one can allow external actors to interact with it and possibly execute methods on the RMI Server. These methods should be defined within the Server implementation. Once they are called by a client, they will be executed on the Server and the return values will be returned to the client."
+
+
+}

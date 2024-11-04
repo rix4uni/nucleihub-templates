@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"The gopher service is a text-based information service which was common before the rise of the World Wide Web. With a gopher client, a user can connect to a gopher server and retrieve information, do searches, and follow links to resources on other gopher servers.Similar to http, gopher allows an administrator to password protect certain areas of the gopher server. A user attempting to access a password protected area is prompted to enter a login name and password.  ",
+"vulnerability_severity":"info",
+"vulnerability_type":"gopher-detection",
+"vulnerability_remediation":"If you do not use the gopher service, disable gopherd in the system boot-up scripts.If you do use the gopher service, but do not require authentication, then another solution is to disable authentication. This is done in the gopher source directory by doing:./configure --disable-auth,make,make install. If you use gopher with password authentication, then upgrade to the latest version of gopher. ",
+"impact":"There is a buffer overflow condition in the authentication portion of the gopher server. A remote attacker could supply a parameter which exceeds the length of the buffer, causing the stack pointer to be overwritten. If the parameter contains specially crafted code, the attacker could execute arbitrary commands on the server.  By exploiting a buffer overflow condition, a remote attacker could gain access to the system with root privileges. "
+
+
+}

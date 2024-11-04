@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"cowrie mostly used to records the sessions of an attacker, then with cowrie we get a better comprehension on the details of the attacker such as the attacker tools, methods and procedures.and  a cyber honeypot works in a similar way, baiting a trap for hackers. It’s a sacrificial computer system that’s intended to attract cyberattacks, like a decoy. It mimics a target for hackers, and uses their intrusion attempts to gain information about cybercriminals and the way they are operating or to distract them from other targets.. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"cowrie-honeypot-detect",
+"vulnerability_remediation":" keeping the records and tracks of the attacker such as their commands, or every keys typed in and saves everything the attacker downloaded. This is a genius way to capture an attacker.",
+"impact":"Honeypots Help to Understand How Malicious Hackers Work,Honeypots Protect Against & Help Identify Breaches"
+
+
+}

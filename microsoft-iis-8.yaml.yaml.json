@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"The IP Security feature in Microsoft Internet Information Services (IIS) 8.0 and 8.5 does not properly process wildcard allow and deny rules for domains within the IP Address and Domain Restrictions list, which makes it easier for remote attackers to bypass an intended rule set via an HTTP request, aka IIS Security Feature Bypass Vulnerability. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"microsoft-iis-8",
+"vulnerability_remediation":"install updates",
+"impact":"Remote attackers might bypass an intended rule set via an HTTP request, aka IIS Security Feature Bypass Vulnerability."
+
+
+}

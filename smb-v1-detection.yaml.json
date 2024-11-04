@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"The Microsoft Server Message Block 1.0 (SMBv1) allows denial of service when an attacker sends specially crafted requests to the server, aka Windows SMB Denial of Service Vulnerability. This CVE ID is unique from CVE-2017-0269 and CVE-2017-0273.",
+"vulnerability_severity":"low",
+"vulnerability_type":"smb-v1-detection",
+"vulnerability_remediation":"Disable the SMBv1 compression feature",
+"impact":"SMBv1 has a number of vulnerabilities that allow for remote code execution on the target machine. Even though most of them have a patch available and SMBv1 is no longer installed by default as of Windows Server 2016, hackers are still exploiting this protocol to launch devastating attacks. In particular, EternalBlue exploits a vulnerability in  SMBv1 — and just a month after EternalBlue was published, hackers used it to launch the infamous WannaCry ransomware attack. "
+
+
+}

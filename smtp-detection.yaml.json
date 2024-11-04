@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"The remote host is running a mail (SMTP) server on this port.Since SMTP servers are the targets of spammers, it is recommended you disable it if you do not use it.",
+"vulnerability_severity":"info",
+"vulnerability_type":"smtp-service-detection",
+"vulnerability_remediation":"Disable this service if you do not use it, or filter incoming traffic to this port.",
+"impact":"Unauthorized access to your emails and data leakage,Spam and Phishing,Malware,DoS attacks"
+
+
+}

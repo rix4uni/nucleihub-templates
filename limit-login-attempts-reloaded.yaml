@@ -1,0 +1,49 @@
+id: wordpress-limit-login-attempts-reloaded
+
+info:
+  name: Limit Login Attempts Reloaded Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/limit-login-attempts-reloaded/
+  metadata:
+    plugin_namespace: limit-login-attempts-reloaded
+    wpscan: https://wpscan.com/plugin/limit-login-attempts-reloaded
+  tags: tech,wordpress,wp-plugin,top-100,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/limit-login-attempts-reloaded/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/limit-login-attempts-reloaded.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 490a00463044022003ad8bc05d8a3654671239a3168b1c6a361b59db5708566443d6ee3f0410ce7c02207c2425c7d01778cc0484f58ded2d9c54c545615916a320c76c2bf918b4a05c92:922c64590222798bb761d5b6d8e72950

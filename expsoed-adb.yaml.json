@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"The debug feature, Android Debug Bridge (ADB), is used by developers to remotely connect to Android devices and execute commands. However, vendors have been shipping some products with ADB enabled, leaving the critical port left wide open and unsecured",
+"vulnerability_severity":"critical",
+"vulnerability_type":"expsoed-adb",
+"vulnerability_remediation":"vendors should be extra diligent to ensure ADB is disabled prior to shipping to users and avoid an otherwise “Root Bridge” issue exposing end-users to attacks. ",
+"impact":"leading to subsequent malware infections of mostly Android smart phones and smart TVs"
+
+
+}

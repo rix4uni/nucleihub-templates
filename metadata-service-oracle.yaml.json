@@ -1,0 +1,13 @@
+{
+"vulnerability_type":"metadata-service-oracle",
+"vulnerability_severity":"critical",
+"vulnerability_description":"The Oracle cloud host is configured as a proxy which allows access to the instance metadata IMDSv1 service. This could allow significant access to the host/infrastructure",
+"vulnerability_remediation":"Disable the proxy or restrict configuration to only allow access to approved hosts/ports. Upgrade to IMDSv2 if possible",
+"impact":"The metadata services like sensitive details about the instance and cloud operating environment can be accessed by attacker because of the  misconfigured reverse proxies (which some people do classify as SSRF)"
+
+
+}
+
+
+
+

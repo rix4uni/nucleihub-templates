@@ -1,0 +1,9 @@
+{
+"vulnerability_description":" XAMPP is the most popular PHP development environment XAMPP is a completely free, easy to install Apache distribution containing MariaDB, PHP, and Perl. The XAMPP open source package has been set up to be incredibly easy to install and to use.Attackers may find your web server's default page. If you are not using this web server or page, it should be disabled because it may pose a security threat.",
+"vulnerability_severity":"info",
+"vulnerability_type":"xampp-default-page",
+"vulnerability_remediation":"Remove the default index page or configure the default web page initially.",
+"impact":"Certain versions of XAMPP came with a remotely accessible web status page that is not password protected. This web status page allows any remote user to view the information about important system configuration, including MySQL account information, phpMyAdmin account information, FTP, and POP3 service configurations."
+
+
+}

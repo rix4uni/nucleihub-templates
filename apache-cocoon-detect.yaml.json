@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Apache Cocoon is a Spring-based framework built around the concepts of separation. All processing jobs under it are linearly connected by predefined processing components, which can process the inputs and generated outputs in a pipeline sequence. Its users include Apache Lenya, Daisy CMS, Hippo CMS, Mindquarry, etc. It is usually used as a data ETL tool or relay for data transfer between systems.CVE-2020-11991 is related to StreamGenerator. When using the StreamGenerator, Cocoon parses a user-provided XML. A specially crafted XML, including external system entities, could be used to access any file on the server system.",
+"vulnerability_severity":"info",
+"vulnerability_type":"apache-cocoon-detect",
+"vulnerability_remediation":"The vulnerability has been officially fixed in the new version. Tencent Security recommends you: Upgrade to the latest version (2.1.13) of Apache Cocoon,Use Tencent Cloud WAF that supports detection of and defense against XXE vulnerabilities like CVE-2020-11991.",
+"impact":"A specially crafted XML, including external system entities, could be used to access any file on the server system."
+
+
+}

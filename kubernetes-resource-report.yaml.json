@@ -1,0 +1,13 @@
+{
+"vulnerability_type":"kubernetes-resource-report",
+"vulnerability_severity":"medium",
+"vulnerability_description":"Information Disclosure of Kubernetes Resource Report",
+"vulnerability_remediation":"",
+"impact":""
+
+
+}
+
+
+
+

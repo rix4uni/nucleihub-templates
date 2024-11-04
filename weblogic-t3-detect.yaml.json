@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"T3 is the protocol used to transport information between WebLogic servers and other types of Java programs. WebLogic keeps track of every Java virtual machine connected to the application. To carry traffic to the Java virtual machine, WebLogic creates a single T3 connection. This type of connection maximizes efficiency by eliminating multiple protocols used to communicate between networks, thereby using fewer operating system resources. The protocol used for the T3 connection also enhances efficiency and minimizes packet sizes, increasing the speed of the delivery method. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"weblogic-t3-detect",
+"vulnerability_remediation":"",
+"impact":""
+
+
+}

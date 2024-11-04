@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Samba is a free and open-source software that allows files to be shared across Windows and Linux systems simply and easily.It is an important component to seamlessly integrate Linux/Unix Servers and Desktops into Active Directory environments. It can function both as a domain controller or as a regular domain member. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"samba-detection",
+"vulnerability_remediation":"Always apply the latest security patch.",
+"impact":"If abused, this security gap can be used by remote attackers to execute arbitrary code as root on all affected installations that use the virtual file system (VFS) module vfs_fruit. Samba has released all the relevant patches to mitigate the impact of the threats that can abuse this gap"
+
+
+}

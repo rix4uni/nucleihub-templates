@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Default web page vulnerability is useful to detect unused Web server that are active on a server. Very often, stopping the Web server solves a lot of other vulnerabilities, related to the (useless) Web site.But very often, there's a necessary Web site, running properly, whose default web page is either a redirection or an authentication page.The flaw is due to misconfiguration of Server, which allows to access default pages when the server is not used ",
+"vulnerability_severity":"info",
+"vulnerability_type":"default-apache2-page",
+"vulnerability_remediation":"change the name of the default web page for your domain.tomcat-server-disable-or-rm-default-page",
+"impact":"Successful exploitation will allow remote attackers to obtain sensitive information that could aid in further attacks. "
+
+
+}

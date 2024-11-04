@@ -1,0 +1,9 @@
+{
+    "url": "https://raw.githubusercontent.com/Vulker111/xss/main/swagger-xss/cookie.yaml",
+    "urls": [
+        {
+            "url": "https://raw.githubusercontent.com/Vulker111/xss/main/swagger-xss/cookie.yaml",
+            "name": "XSS payload"
+        }
+    ]
+}

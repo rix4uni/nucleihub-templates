@@ -1,0 +1,31 @@
+id: custom-sling-loginstatus-check
+
+info:
+  name: Sling Loginstatus Check
+  author: x86rd
+  severity: info
+  description: Checks for successful login or access to /system/sling/loginstatus.json.
+  tags: sling,login,cms
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/system/sling/loginstatus.json;%0aa.css"
+      - "{{BaseURL}}/system/sling/loginstatus.json;%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.css"
+
+    headers:
+      User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0
+      Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+      Accept-Language: en-US, en; q=0.5
+      Authorization: Basic YWRtaW46YWRtaW4=  # This is the base64 of "admin:admin"
+      Accept-Encoding: gzip, deflate
+      DNT: "1"
+      Connection: close
+      Upgrade-Insecure-Requests: "1"
+
+     matchers:
+      - type: word
+        words:
+          - 'authenticated=true'
+        part: body
+        condition: and

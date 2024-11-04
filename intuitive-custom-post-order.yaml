@@ -1,0 +1,49 @@
+id: wordpress-intuitive-custom-post-order
+
+info:
+  name: Intuitive Custom Post Order Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/intuitive-custom-post-order/
+  metadata:
+    plugin_namespace: intuitive-custom-post-order
+    wpscan: https://wpscan.com/plugin/intuitive-custom-post-order
+  tags: tech,wordpress,wp-plugin,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/intuitive-custom-post-order/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/intuitive-custom-post-order.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 490a0046304402201be7c7df8e5f6c480ab601330b409a346af2ec7c8a7a93c278d48f85bea26cbd02200a40c6d859a9cd8c1758551aff127631cae20ab5829d6c3fef3494426e121173:922c64590222798bb761d5b6d8e72950

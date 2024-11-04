@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"StartTLS is a protocol command used to inform the email server that the email client wants to upgrade from an insecure connection to a secure one using TLS or SSL. StartTLS is used with SMTP and IMAP, while POP3 uses the slightly different command for encryption, STLS.",
+"vulnerability_severity":"info",
+"vulnerability_type":"starttls-mail-detect",
+"vulnerability_remediation":"Make sure to use secure connections while securing your mail servers. Encrypt IMAP and POP3 authentication and use TLS and SSL. Moreover, limit the number of connection and authentication errors to avoid attacks. Eliminate unused functionalities from the server by disabling unnecessary default settings. Mail server administrators should avoid being an open relay for intruders by specifying the domains and IP addresses.",
+"impact":" The abuse of STARTTLS vulnerabilities could open the gateway to the intended man-in-the-middle attacks, allowing an invader to produce mailbox content and steal user credentials."
+
+
+}

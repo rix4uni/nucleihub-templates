@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Lotus Domino is business collaboration software developed by IBM for hosting critical applications, messaging (enterprise-grade email) and workflow, and providing security features for business-critical information. Lotus Domino can be used as a Web server and/or as an application server for the Lotus Notes application, the client side of a client-server collaborative application.",
+"vulnerability_severity":"info",
+"vulnerability_type":"lotus-domino-version",
+"vulnerability_remediation":"Restrict access to the related paths on the web server where Lotus Domino is deployed.",
+"impact":" users’ password hashes and other data are included in hidden fields in the public address book ‘names.nsf’ that is readable by default by all users. Moreover, Domino does not use a ‘salt’ to compute password hashes, which makes it easier to crack passwords.and help attacker to gain information or an attacker might use the disclosed information to harvest specific security vulnerabilities for the version identified."
+
+
+}

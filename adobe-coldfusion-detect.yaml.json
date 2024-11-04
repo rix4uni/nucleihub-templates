@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"A vulnerability has been discovered in Adobe ColdFusion, which could allow for arbitrary code execution. This vulnerability occurs due to improper input validation. Successful exploitation of this vulnerability could result in an attacker executing arbitrary code in the context of the affected application. Depending on the privileges associated with the application, an attacker could then install programs; view, change, or delete data; or create new accounts with full user rights. Applications that are configured to have fewer user rights on the system could be less impacted than those that operate with administrative user rights.",
+"vulnerability_severity":"info",
+"vulnerability_type":"adobe-coldfusion-detect",
+"vulnerability_remediation":"Adobe has released security updates for ColdFusion versions 2021, 2016 and 2018. These updates resolve a  vulnerability rated moderate that could lead to arbitrary code execution.  so update to latest version",
+"impact":"Successful exploitation of this vulnerability could result in an attacker executing arbitrary code in the context of the affected application"
+
+
+}

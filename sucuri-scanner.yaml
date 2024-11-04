@@ -1,0 +1,49 @@
+id: wordpress-sucuri-scanner
+
+info:
+  name: Sucuri Security – Auditing, Malware Scanner and Security Hardening Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/sucuri-scanner/
+  metadata:
+    plugin_namespace: sucuri-scanner
+    wpscan: https://wpscan.com/plugin/sucuri-scanner
+  tags: tech,wordpress,wp-plugin,top-100,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/sucuri-scanner/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/sucuri-scanner.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4b0a00483046022100990aabfd04afea39f5a697bcc7cac100b531e35d11e821425e223f30a6ec8035022100c47ea62c4cef24e3406eed10068b17a450afc905d2daff33d44eb93096ac353a:922c64590222798bb761d5b6d8e72950

@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era. MongoDB by default does not enforce authentication. In many situations, this may allow anyone on the network to access all data within the database.",
+"vulnerability_severity":"high",
+"vulnerability_type":"mongodb-unauth",
+"vulnerability_remediation":"To secure a MongoDB server we’ll need to set a username and password. Once a user is created, the database needs to be shut down, and restarted with access control enabled.",
+"impact":"Misconfigured MongoDB databases can cause many private data to be leaked by attackers.or in general, attacker can access the whole database system "
+
+
+}

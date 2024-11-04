@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"A vulnerability has been identified in certain printers, which could be exploited remotely to gain unauthorized access to data. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"printers-info-leak",
+"vulnerability_remediation":"Use a private IP address, Use a firewall or Wi-Fi router to limit communication,Set the password to your printer.",
+"impact":"Attacker can gain a full control of your printer or attacker can gain unauthorized access to your data"
+
+
+}

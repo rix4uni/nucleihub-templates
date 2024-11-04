@@ -1,0 +1,49 @@
+id: wordpress-envato-elements
+
+info:
+  name: Envato Elements – Photos & Elementor Templates Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/envato-elements/
+  metadata:
+    plugin_namespace: envato-elements
+    wpscan: https://wpscan.com/plugin/envato-elements
+  tags: tech,wordpress,wp-plugin,top-100,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/envato-elements/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/envato-elements.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4b0a004830460221008df9e3717353738b40b1c67d6aebea949c8aa4a7b9d2dc666317168e43525c33022100e29cf9df47abe01670e5bb07f4327f719d725a6171fdf60f54d0c8d2f9596da6:922c64590222798bb761d5b6d8e72950

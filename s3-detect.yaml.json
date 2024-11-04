@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Amazon S3 provides a simple web services interface that can be used to store and retrieve any amount of data, at any time, from anywhere on the web. Files within S3 are organized into buckets, which are named logical containers accessible at a predictable URL. Access controls can be applied to both the bucket itself and to individual objects (files and directories) stored within that bucket. A bucket is considered public if any user can list the contents of the bucket, and private if the bucket's contents can only be listed or written by certain S3 users.  ",
+"vulnerability_severity":"info",
+"vulnerability_type":"s3-detect",
+"vulnerability_remediation":"Ensure that the detected Amazon S3 bucket is already identified in the assets used by the web applications, and that the permissions are defined according to its expected purpose and to the AWS security best practices.",
+"impact":"Attacker may have a privilige of read or write to files inside the bucket "
+
+
+}

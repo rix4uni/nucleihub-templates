@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"The Telerik UI component for ASP.NET AJAX is using weak, static or publicly known encryption keys to encrypt data used by RadAsyncUpload. This may allow an attacker to upload arbitrary files, which may ultimately lead to remote code execution on the software's underlying host. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"telerik-fileupload-detect",
+"vulnerability_remediation":"Upgrade to the latest version, follow the guidance in the RadAsyncUpload Security Guide (https://docs.telerik.com/devtools/aspnet-ajax/controls/asyncupload/security), and set all encryption keys.",
+"impact":"This may allow an attacker to upload arbitrary files, which may ultimately lead to remote code execution on the software's underlying host."
+
+
+}

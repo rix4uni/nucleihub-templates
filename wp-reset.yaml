@@ -1,0 +1,49 @@
+id: wordpress-wp-reset
+
+info:
+  name: WP Reset – Most Advanced WordPress Reset Tool Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/wp-reset/
+  metadata:
+    plugin_namespace: wp-reset
+    wpscan: https://wpscan.com/plugin/wp-reset
+  tags: tech,wordpress,wp-plugin,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/wp-reset/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/wp-reset.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4b0a004830460221009004ebd3ca3b5e444494d590598e2521e083eec424469d036059e31c49cd098e022100d767a72251e4f91c9134aa1060cf0ea4d70d811bf574ad843c94061ccef61fea:922c64590222798bb761d5b6d8e72950

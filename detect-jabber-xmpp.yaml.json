@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Jabber is the original name of the Extensible Messaging and Presence Protocol (XMPP), the open technology for instant messaging and presence.",
+"vulnerability_severity":"info",
+"vulnerability_type":"detect-jabber-xmpp",
+"vulnerability_remediation":"It is best to upgrade to corrected server code. An alternative, temporary workaround is to disable XMPP-level compression.",
+"impact":"Affected servers are reported to Consume the virtual memory; in certain cases, it has been reported that servers are terminated by the operating system for out of memory conditions,Monopolize the use of the CPU,In certain cases, not allow administrators to disable stream compression."
+
+
+}

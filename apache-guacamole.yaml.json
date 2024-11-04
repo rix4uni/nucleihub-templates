@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"In June of 2020, security researchers at Check Point Research discovered multiple critical RDP (Remote Desktop Protocol) flaws in Apache Guacamole. The nature of these vulnerabilities could enable hackers to exploit the gateway and disclose sensitive information remotely. Besides gaining control of the Guacamole server, a successful RDP exploit may allow adversaries to eavesdrop on all sessions, launch new sessions, control other systems on the enterprise network and record account credentials. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"apache-guacamole",
+"vulnerability_remediation":"Bitnami has released the a version of Bitnami Apache Guacamole, 1.2.0, for both virtual machines and cloud images that fix these vulnerabilities.If you are running an outdated version of Guacamole, it is highly recommended to deploy the new version instead.",
+"impact":"Apache Guacamole does not properly validate data received from Remote Desktop Protocol (RDP) servers via static virtual channels. If a user connects to a malicious or compromised RDP server, specially-crafted PDUs could result in disclosure of information within the memory of the “guacd” process handling the connection."
+
+
+}

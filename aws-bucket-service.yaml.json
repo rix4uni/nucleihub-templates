@@ -1,0 +1,9 @@
+{
+"vulnerability_description":" Amazon S3 provides a simple web services interface that can be used to store and retrieve any amount of data, at any time, from anywhere on the web. Files within S3 are organized into buckets, which are named logical containers accessible at a predictable URL. Access controls can be applied to both the bucket itself and to individual objects (files and directories) stored within that bucket. A bucket is considered public if any user can list the contents of the bucket, and private if the bucket's contents can only be listed or written by certain S3 users. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"aws-bucket-service",
+"vulnerability_remediation":"Make sure all the Amazon S3 buckets you are using are marked as private.",
+"impact":"Some S3 buckets are used to host static assets, such as images and Javascript libraries. However, even for these buckets with less-sensitive assets, an open upload policy could enable an attacker to upload a custom Javascript library, allowing them to serve malicious Javascript (such as a BeEF Hook) to all application users.and sometimes buckets allowing downloading of system backups, source code, and more – a critical risk to the leaky company. Even log files that are available for download can reveal usernames, passwords, database queries and more."
+
+
+}

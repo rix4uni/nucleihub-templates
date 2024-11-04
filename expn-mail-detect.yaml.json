@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"we can detect mail server using this tool.The SMTP EXPN command allows you to expand a mailing list or alias, to see where mail addressed to the alias actually goes. For example, many organizations alias postmaster to root, so that mail addressed to postmaster will get delivered to the system administrator.",
+"vulnerability_severity":"info",
+"vulnerability_type":"expn-mail-detect",
+"vulnerability_remediation":"If you are using Sendmail, add the option :O PrivacyOptions=goaway in /etc/sendmail.cf.",
+"impact":"It is possible to enumerate the names of valid users on the remote host."
+
+
+}

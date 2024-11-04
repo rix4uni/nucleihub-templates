@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Redis is designed to be accessed by trusted clients inside trusted environments. This means that usually it is not a good idea to expose the Redis instance directly to the internet or, in general, to an environment where untrusted clients can directly access the Redis TCP port or UNIX socket. ",
+"vulnerability_severity":"high",
+"vulnerability_type":"exposed-redis",
+"vulnerability_remediation":"Since version 3.2.0, Redis enters a special mode called protected mode when it is executed with the default configuration (binding all the interfaces) and without any password in order to access it. In this mode, Redis only replies to queries from the loopback interfaces, and replies to clients connecting from other addresses with an error that explains the problem and how to configure Redis properly and It is possible to disallow commands in Redis or to rename them as an unguessable name, so that normal clients are limited to a specified set of commands.",
+"impact":"Failing to protect the Redis port from the outside can have a big security impact because of the nature of Redis. For instance, a single FLUSHALL command can be used by an external attacker to delete the whole data set"
+
+
+}

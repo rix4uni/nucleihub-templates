@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Atlassian Jira is vulnerable to an unauthorized server side request forgery (SSRF) vulnerability that affects the endpoint /plugins/servlet/gadgets/makeRequest. An unauthenticated attacker could exploit this vulnerability by sending a specially crafted web request to a vulnerable Jira server. Successful exploitation would result in unauthorized access to view and potentially modify internal network resources. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"jira-serverinfo",
+"vulnerability_remediation":"To fix this vulnerability upgrade to the latest version of Atlassian Jira. This vulnerability was fixed in Jira versions 8.4.0, 7.13.9.",
+"impact":"An unauthenticated attacker could exploit this vulnerability by sending a specially crafted web request to a vulnerable Jira server. Successful exploitation would result in unauthorized access to view and potentially modify internal network resources."
+
+
+}

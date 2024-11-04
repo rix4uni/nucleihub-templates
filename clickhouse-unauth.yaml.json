@@ -1,0 +1,7 @@
+{
+"vulnerability_description":" A vulnerability has been found in ClickHouse and classified as problematic. This vulnerability affects unknown code. The manipulation leads to information disclosure. This vulnerability was named CVE-2021-25263. There is no exploit available. It is recommended to upgrade the affected component.",
+"vulnerability_severity":"high",
+"vulnerability_type":"clickhouse-unauth",
+"vulnerability_remediation":"Upgrading to version 20.8.18.32-lts, 21.1.9.41-stable, 21.2.9.41-stable, 21.3.6.55-lts or 21.4.3.21-stable eliminates this vulnerability. The upgrade is hosted for download at clickhouse.tech.",
+"impact":"https://github.com/binod235/nuclei-templates-and-reports/blob/main/aws/aws-bucket-service.yaml.json"
+}

@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"phpPgAdmin allows sensitive actions to be performed without validating that the request originated from the application. One such area, 'database.php' does not verify the source of an HTTP request. This can be leveraged by a remote attacker to trick a logged-in administrator to visit a malicious page with a CSRF exploit and execute arbitrary system commands on the server.phpPgAdmin version 7.13.0 and prior are affected to this vulnerability ",
+"vulnerability_severity":"info",
+"vulnerability_type":"phppgadmin-version",
+"vulnerability_remediation":"No known solution was made available for at least one year since the disclosure of this vulnerability. Likely none will be provided anymore. General solution options are to upgrade to a newer release, disable respective features, remove the product or replace the product by another one.",
+"impact":"This can be leveraged by a remote attacker to trick a logged-in administrator to visit a malicious page with a CSRF exploit and execute arbitrary system commands on the server."
+
+
+}

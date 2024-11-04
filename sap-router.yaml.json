@@ -1,0 +1,9 @@
+{
+"vulnerability_description":" SAP router is a standalone program that protects your SAP network against unauthorised access. SAP router is a proxy in a network connection between SAP systems, or between SAP systems and external networks. SAP router acts as an extra firewall to the existing firewall (port filter). It is usually installed directly on the firewall host. The SAP router port serves as a gateway, through which connections to your firewall-protected system can be opened. You can specify the connections you want to allow in a route permission table. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"sap-router",
+"vulnerability_remediation":"The route permission table defined in the saprouttab file should specify the source hosts permitted to connect to specific services and target hosts. The use of wildcards in route strings should be avoided. Native connections should be blocked using S entries for the saprouttab rather than P entries. KT and KP entries are recommended to enforce SNC for connections. Information disclosure via the SAProuter should be prevented using the option -Z for info requests. Switching to a non-standard port for the SAProuter is advisable. SAProuter binaries should be updated to the latest available version to apply patches for program vulnerabilities.Logging for the SAProuter should be enabled using option -G. Once enabled, the SAProuter log can be monitored using SAP Solution Manager to alert for suspected attacks against including accepted or rejected information requests, connection requests, port scans, and native connections. ",
+"impact":" Attackers can execute targeted exploits against the servers. For example, an unauthenticated SOAP request to the SAP Host Agent on port 1128 can disclose operating system users that can be targeted using brute force and other attacks. Attackers can also route malicious payloads to SAP servers through the SAProuter."
+
+
+}

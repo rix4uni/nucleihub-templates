@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"This module exploits a malicious backdoor that was added to the VSFTPD download archive. This backdoor was introduced into the vsftpd-2.3.4.tar.gz archive between June 30th 2011 and July 1st 2011 according to the most recent information available. This backdoor was removed on July 3rd 2011.  ",
+"vulnerability_severity":"critical",
+"vulnerability_type":"vsftpd-detection",
+"vulnerability_remediation":"This backdoor was removed on July 3rd, 2011",
+"impact":"vsftpd 2.3.4 downloaded between 20110630 and 20110703 contains a backdoor which opens a shell on port 6200/tcp."
+
+
+}

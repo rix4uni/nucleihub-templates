@@ -1,0 +1,122 @@
+id: customized-owasp-top10
+info:
+  name: Customized OWASP Top 10
+  severity: high
+  description: Customized Nuclei template for scanning OWASP Top 10 vulnerabilities.
+  reference: https://example.com/custom-owasp-top10/
+
+requests:
+  - name: Broken Authentication Detection
+    path:
+      - '/admin'
+      - '/account'
+      - '/login'
+      - '/reset_password'
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 401
+          - 403
+    description: Identify potential broken authentication endpoints and recommend best practices for authentication implementation.
+
+  - name: Sensitive Data Exposure Detection
+    path:
+      - '/user_profile.php?id=1'
+      - '/api/get_user_data'
+    matchers-condition: and
+    matchers:
+      - type: regex
+        part: body
+        words:
+          - 'password'
+          - 'credit_card'
+          - 'api_key'
+          - 'secret'
+    description: Detect endpoints exposing sensitive data and provide recommendations for securing sensitive information.
+
+  - name: XML External Entity (XXE) Detection
+    path:
+      - '/xmlparser'
+    method: POST
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'ENTITY'
+          - 'DOCTYPE'
+    description: Detect potential XXE vulnerabilities and suggest mitigation strategies to prevent XML-based attacks.
+
+  - name: Broken Access Control Detection
+    path:
+      - '/user_profile.php?id=2'
+      - '/admin/delete_user'
+    matchers-condition: and
+    matchers:
+      - type: status
+        status: 200
+      - type: word
+        words:
+          - 'unauthorized'
+          - 'forbidden'
+    description: Detect broken access control endpoints and provide guidance on implementing proper access controls.
+
+
+requests:
+  - name: SQL Injection Detection
+    path:
+      - 'index.php?id=1'
+      - 'login.php?user=admin&pass=\' or 1=1 -- '
+      - 'search.php?q=test\''
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'error in your SQL syntax'
+          - 'mysql_fetch_array()'
+          - 'ODBC Error'
+          - 'Microsoft JET Database Engine error'
+    description: Detect SQL injection vulnerabilities.
+
+
+
+  - name: Insecure Deserialization Detection
+    path:
+      - '/deserialize'
+    method: POST
+    matchers-condition: and
+    matchers:
+      - type: regex
+        part: body
+        words:
+          - 'java.io.ObjectInputStream'
+          - 'pickle.loads'
+    description: Detect insecure deserialization endpoints and suggest secure deserialization practices.
+
+  - name: Components with Known Vulnerabilities Detection
+    path:
+      - '/vendor'
+      - '/libraries'
+      - '/third-party'
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'vulnerable_component'
+          - 'outdated_version'
+    description: Detect components with known vulnerabilities and provide recommendations for updating or patching vulnerable components.
+
+  - name: Insufficient Logging and Monitoring Detection
+    path:
+      - '/log'
+      - '/monitor'
+    method: POST
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'error'
+          - 'exception'
+          - 'warning'
+    description: Detect insufficient logging and monitoring endpoints and refer to OWASP guidance on logging and monitoring best practices.
+    reference: https://example.com/logging-and-monitoring-best-practices

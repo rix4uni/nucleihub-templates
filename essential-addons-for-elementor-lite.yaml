@@ -1,0 +1,49 @@
+id: wordpress-essential-addons-for-elementor-lite
+
+info:
+  name: Essential Addons for Elementor – Best Elementor Addon, Templates, Widgets, Kits & WooCommerce Builders Detection
+  author: ricardomaia
+  severity: info
+  reference:
+    - https://wordpress.org/plugins/essential-addons-for-elementor-lite/
+  metadata:
+    plugin_namespace: essential-addons-for-elementor-lite
+    wpscan: https://wpscan.com/plugin/essential-addons-for-elementor-lite
+  tags: tech,wordpress,wp-plugin,top-100,top-200
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wp-content/plugins/essential-addons-for-elementor-lite/readme.txt"
+
+    payloads:
+      last_version: helpers/wordpress/plugins/essential-addons-for-elementor-lite.txt
+
+    extractors:
+      - type: regex
+        part: body
+        internal: true
+        name: internal_detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 490a004630440220463d87e2bc79e024f1982c904570cc085134a0ee5b38f2b21195dedd5c092613022026d8a627f590c04a4f90b123a0a61ad55ae984fc7b7c20d946711399a04925b4:922c64590222798bb761d5b6d8e72950

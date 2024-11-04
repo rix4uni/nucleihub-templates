@@ -1,0 +1,10 @@
+{
+"vulnerability_description":"AVulnerability Summary The Apache Dubbo module used for handling HTTP requests contains a deserialization vulnerability, which has similar exploitation method with other deserialization vulnerabilities in Java based middleware. Apache Dubbo handles message body improperly, which causes deserialization. When Dubbo project package includes available gadgets, attackers can send malicious deserializated data via HTTP protocol. This vulnerability will be triggered when Dubbo serializes the malicious data.",
+"vulnerability_severity":"apache-dubbo-detect",
+"vulnerability_type":"info",
+"vulnerability_remediation":" Apache Dubbo has fixed this vulnerability so   applying the latest version will fix the issue.",
+"impact":"Attackers can exploit this vulnerability to execute arbitrary code on affected Apache Dubbo servers.
+"
+
+
+}

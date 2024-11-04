@@ -1,0 +1,13 @@
+{
+"vulnerability_type":"open-proxy-portscan",
+"vulnerability_severity":"high",
+"vulnerability_description":"The host is configured as a proxy which allows access to its internal interface",
+"vulnerability_remediation":"Disable the proxy or restrict configuration to only allow access to approved hosts/ports. ",
+"impact":"open proxies can allow an attacker to access cloud metadata API services. However, even without metadata services available, open proxies can be a boon for an attacker."
+
+
+}
+
+
+
+

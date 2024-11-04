@@ -1,0 +1,62 @@
+<!-- This is the submission/main page -->
+<!-- By Rutger Harmers -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="substyle.css">
+  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/Hacker0x01/docs.hackerone.com/master/static/favicon.ico">
+  <title>Submission Form POC</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://cdn.freebiesupply.com/logos/large/2x/hackerone-logo-png-transparent.png" alt="H1">
+    </div>
+  </header>
+  <main>
+    <!-- Under here is the user submission form with user input fields and stuff -->
+    <h1>Vulnerability Submission Form POC</h1>
+    <p>Please fill out the form below to submit your vulnerability report and generate a YAML template!</p>
+    <form action="/template" method="POST">
+      <label for="vuln_category">Vulnerability category:</label><br>
+      <select id="vuln-category" name="vuln_category">
+        <option value="1">Reflected XSS</option>
+        <option value="2">Open redirect</option>
+        <option value="3">PHPinfo()</option>
+      </select><br><br>
+      <label for="target">Target URL:</label><br>
+      <input type="text" id="target" name="target" placeholder="Enter Target URL"><br><br>
+      <label id="payloadtxt" for="payload">Payload:</label><br>
+      <input id="payload" type="text" name="payload" placeholder="Enter Payload">
+      <input type="submit" value="Submit Report">
+      
+      <script>
+        // Get the select element and the payload input element
+        var select = document.getElementById("vuln-category");
+        var payloadInput = document.getElementById("payload");
+        var payloadInputtxt = document.getElementById("payloadtxt");
+      
+        // Add a change event listener to the select element
+        select.addEventListener("change", function() {
+          // If the PHPinfo() or Open Redirect options are selected, hide the payload input and payload text elements
+          if (this.value === "2" || this.value === "3") {
+            payloadInput.style.display = "none";
+            payloadInputtxt.style.display = "none";
+          }
+          // Otherwise show the payload input and text elements
+          else {
+            payloadInput.style.display = "block";
+            payloadInputtxt.style.display = "block";
+          }
+        });
+      </script>
+    </form>
+  </main>
+  <footer>
+    <p>Created by Rutger Harmers</p>
+  </footer>
+</body>
+</html>
+
+

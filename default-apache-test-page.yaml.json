@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"The Apache HTTP Server Project is an effort to develop and maintain an open-​source HTTP server for modern operating systems including UNIX and Windows.  ",
+"vulnerability_severity":"info",
+"vulnerability_type":"default-apache-test-page",
+"vulnerability_remediation":"Remove  test pages on your server",
+"impact":"If attackers detect the test page, they will try to detect vulnerabilities related to this version of Apache"
+
+
+}

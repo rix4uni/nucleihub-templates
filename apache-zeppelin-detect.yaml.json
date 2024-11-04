@@ -1,0 +1,9 @@
+{
+"vulnerability_description":"Apache Zeppelin is a web-based notebook that enables data-driven, interactive data analytics and collaborative documents with SQL, Scala, Python, R and more.Authentication bypass vulnerability in Apache Zeppelin allows an attacker to bypass Zeppelin authentication mechanism to act as another user. This issue affects Apache Zeppelin Apache Zeppelin version 0.9.0 and prior versions.Cross Site Scripting vulnerability in markdown interpreter of Apache Zeppelin allows an attacker to inject malicious scripts. This issue affects Apache Zeppelin Apache Zeppelin versions prior to 0.9.0.bash command injection vulnerability in Apache Zeppelin allows an attacker to inject system commands into Spark interpreter settings. This issue affects Apache Zeppelin Apache Zeppelin version 0.9.0 and prior versions. ",
+"vulnerability_severity":"info",
+"vulnerability_type":"apache-zeppelin-detect",
+"vulnerability_remediation":"upgrade to version 0.10.0 or later",
+"impact":"Successful exploitation of the vulnerability may lead to complete system compromise."
+
+
+}

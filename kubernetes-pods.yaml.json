@@ -1,0 +1,13 @@
+{
+"vulnerability_type":"kubernetes-pods",
+"vulnerability_severity":"critical",
+"vulnerability_description":"A Kubernetes Pods API was discovered. When the service port is available, unauthenticated users can execute commands inside the container.",
+"vulnerability_remediation":"",
+"impact":""
+
+
+}
+
+
+
+

@@ -1,0 +1,8 @@
+{
+"vulnerability_severity":"low",
+"vulnerability_description":" Some GraphQL engines support batching of multiple queries into a single request. This allows users to request multiple objects or multiple instances of objects efficiently",
+"vulnerability_remediation":" Deactivate or limit Batching in your GraphQL engine",
+"vulnerability_type":"GraphQL Array-based Batching",
+"imapct":"an attacker can leverage this feature to evade many security measures, including Rate Limit."
+}
+

@@ -1,0 +1,9 @@
+{
+    "url": "https://raw.githubusercontent.com/twseptian/custom-nuclei-templates/main/test.yaml",
+    "urls": [
+        {
+            "url": "https://raw.githubusercontent.com/twseptian/custom-nuclei-templates/main/test.yaml",
+            "name": "Foo"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+# GitHub repositories
+
+https://github.com/0xSojalSec/nuclei-templates-websphere-portal-preauth-ssrf
+
+https://github.com/0xSojalSec/Nuclei-TemplatesNuclei-Templates-CVE-2017-17736
+
+https://github.com/0xSojalSec/kenzer-templates
+
+https://github.com/0xSojalSec/my-nuclei-templates-1
+
+https://github.com/0xSojalSec/nuclei-templates-5
+
+https://github.com/0xSojalSec/nuclei-templates-4
+
+https://github.com/0xSojalSec/templatesallnuclei
+
+https://github.com/0xSojalSec/my-nuclei-templates-1
+
+https://github.com/0xSojalSec/Nuclei-Templates-Collection
+
+https://github.com/0xSojalSec/templates-nuclei-Oracle-OAM---XSS
+
+https://github.com/0xSojalSec/Nuclei-Templates-API-Linkfinder
+
+https://github.com/0xSojalSec/nuclei_templates-SymfonyRCE/tree/main/nuclei_templates
+
+# Get all
+
+wget https://raw.githubusercontent.com/0xSojalSec/nuclei-templates-websphere-portal-preauth-ssrf/main/nuclei-templates/websphere-portal-preauth-ssrf.yaml
+
+wget https://raw.githubusercontent.com/0xSojalSec/Nuclei-TemplatesNuclei-Templates-CVE-2017-17736/main/Nuclei-Templates/CVE-2017-17736.yaml

