@@ -1,14 +1,15 @@
-id: responsive-tabs
+id: responsive-tabs-3374dc41ed303f1beb4be0b4e0d3cdc3
 
 info:
   name: >
-    Responsive Tabs <= 4.0.5 - Authenticated Stored Cross-Site Scripting
+    Responsive Tabs <= 4.0.6 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/14b334ee-ab3b-4b18-a776-c0831c4ff855?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1b34a4aa-bcaa-4be5-a059-6f2efa3a8198?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.0.5')
+          - compare_versions(version, '<= 4.0.6')

@@ -1,4 +1,4 @@
-id: wp-posturl
+id: wp-posturl-81d7f65505ab25a359cbca37e43f31f1
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/24d08127-67b6-434a-8dbe-233a47854f9b?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,14 +1,15 @@
-id: yith-maintenance-mode
+id: yith-maintenance-mode-6c8d93f915b779d9bec96edf262962ff
 
 info:
   name: >
-    YITH Maintenance Mode <= 1.1.4 - Reflected Cross-Site Scripting
+    YITH Maintenance Mode <= 1.3.8 - Multiple Authenticated Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cf00d5a9-bf7f-404c-b91f-1d7cf14d883b?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3589fd35-df91-48fb-b3be-4954f1e05656?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/yith-maintenance-mode/"
     google-query: inurl:"/wp-content/plugins/yith-maintenance-mode/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,yith-maintenance-mode,medium
+  tags: cve,wordpress,wp-plugin,yith-maintenance-mode,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.4')
+          - compare_versions(version, '<= 1.3.8')

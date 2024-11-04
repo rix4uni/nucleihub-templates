@@ -1,14 +1,15 @@
-id: social-testimonials-and-reviews-widget
+id: social-testimonials-and-reviews-widget-fc754ef21ec43a5936bfb284e3707176
 
 info:
   name: >
-    Social proof testimonials and reviews by Repuso <= 4.97 - Missing Authorization
+    Social proof testimonials and reviews by Repuso <= 5.01 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ec311df2-33af-4b91-80a1-252d934c7f61?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/526aa2e5-06bd-4b4c-a331-315f8ab37858?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/social-testimonials-and-reviews-widget/"
     google-query: inurl:"/wp-content/plugins/social-testimonials-and-reviews-widget/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,social-testimonials-and-reviews-widget,high
+  tags: cve,wordpress,wp-plugin,social-testimonials-and-reviews-widget,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.97')
+          - compare_versions(version, '<= 5.01')

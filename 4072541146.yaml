@@ -1,23 +1,25 @@
 id: http
 info:
-  name: Dreambox httpd
+  name: Catwalk
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: media device
+    device_type: printer
     fallback:
     - get-request
+    info: Canon imageRUNNER C5000-series printer http config
     rarity: 5
+    version: $1
 tcp:
-- name: rtsprequest
+- name: sipoptions
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: 'OPTIONS sip:nm SIP/2.0\r\nVia: SIP/2.0/TCP nm;branch=foo\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nMax-Forwards: 70\r\nContent-Length: 0\r\nContact: <sip:nm@nm>\r\nAccept: application/sdp\r\n\r\n'
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
+  port: 406,5060,8081,31337
   extractors:
   - name: http
     type: regex
     regex:
-    - (?i)^HTTP/1\.1 406 Not Acceptable\r\n.*<blockquote>\n<TABLE border=0 cellPadding=1 width=\"80%\">\n<TR><TD>\n<FONT face=\"Helvetica\">\n<big>Request Error \(unsupported_protocol\)</big>\n<BR>\n<BR>\n</FONT>
+    - '^HTTP/1\.1 500 Internal Server Error\r\nServer: Catwalk/([\d.]+)\r\n'

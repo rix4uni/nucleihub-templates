@@ -1,4 +1,4 @@
-id: posts-and-users-stats
+id: posts-and-users-stats-0ab172d4ca9582c8fe74d25d5316a728
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/766c2aa5-e829-45b9-b6e3-0a522a0977d4?source=api-scan
   classification:
     cvss-metrics: 

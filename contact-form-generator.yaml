@@ -1,14 +1,15 @@
-id: contact-form-generator
+id: contact-form-generator-ad30960f4f1ac70ed03e1a5da33d729f
 
 info:
   name: >
-    Contact Form Generator <= 2.5.5 - Reflected Cross-Site Scripting
+    Contact Form Generator : Creative form builder for WordPress <= 2.1.86 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/acdac8a7-6ac5-481d-a636-dd791fda89a3?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bbb57de9-210e-4983-965b-9a74ca10c494?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.5.5')
+          - compare_versions(version, '<= 2.1.86')

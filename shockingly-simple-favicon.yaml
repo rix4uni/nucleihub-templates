@@ -1,4 +1,4 @@
-id: shockingly-simple-favicon
+id: shockingly-simple-favicon-e3d8720dce4306d0413044c96beaeda8
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/fd7a1440-18f5-4bcb-a4cf-c4713375d0a1?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: websimon-tables
+id: websimon-tables-bf9b470d9cff125fe0a0a43cc71f57a8
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/51c1c4ee-c17f-4565-b800-f306569fc502?source=api-scan
   classification:
     cvss-metrics: 

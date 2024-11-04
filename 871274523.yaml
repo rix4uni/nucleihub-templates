@@ -1,15 +1,18 @@
 id: imap
 info:
-  name: Microsoft Exchange imapd
+  name: Cyrus imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: exchange_server
+    hostname: $1
+    info: Debian/Ubuntu
+    operating_system: Linux
+    product: cyrus_imap_server
     rarity: 0
-    vendor: microsoft
+    vendor: cmu
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +23,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* BYE Connection is closed\. 14\r\n
+    - ^\* OK (?:\[CAPABILITY IMAP4[^\]]*?\] )?([-\w_.]+) Cyrus IMAP4? v([-\w_.]+)-Debian

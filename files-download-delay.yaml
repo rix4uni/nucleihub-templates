@@ -1,4 +1,4 @@
-id: files-download-delay
+id: files-download-delay-08fd51fbc78181d1e34dd9d45b2727c0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/570942bf-49b1-4217-abc6-5e83f27d9824?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,49 +1,57 @@
-id: wordpress-woocommerce-pdf-invoices-packing-slips
+id: woocommerce-pdf-invoices-packing-slips-da61f5b53c1eada8a3ffb215bf0f93d5
 
 info:
-  name: PDF Invoices & Packing Slips for WooCommerce Detection
-  author: ricardomaia
-  severity: info
+  name: "WooCommerce PDF Invoices & Packing Slips <=  2.14.5 - Cross-Site Scripting"
+  author: topscoder
+  severity: medium
+  description: "The WooCommerce PDF Invoices & Packing Slips plugin for WordPress is vulnerable to Reflected Cross-Site Scripting  in versions up to, and including, 2.14.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
   reference:
-    - https://wordpress.org/plugins/woocommerce-pdf-invoices-packing-slips/
+    - https://plugins.trac.wordpress.org/changeset/2738458
+    - https://patchstack.com/database/vulnerability/woocommerce-pdf-invoices-packing-slips/wordpress-woocommerce-pdf-invoices-packing-slips-plugin-2-14-5-reflected-cross-site-scripting-xss-vulnerability
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
-    plugin_namespace: woocommerce-pdf-invoices-packing-slips
-    wpscan: https://wpscan.com/plugin/woocommerce-pdf-invoices-packing-slips
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/woocommerce-pdf-invoices-packing-slips/"
+    google-query: inurl:"/wp-content/plugins/woocommerce-pdf-invoices-packing-slips/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,woocommerce-pdf-invoices-packing-slips,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/woocommerce-pdf-invoices-packing-slips/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/woocommerce-pdf-invoices-packing-slips.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "woocommerce-pdf-invoices-packing-slips"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100ae4ec143f4a11fefbd8ea69477c0ced6d6f2416a13c3900fe87ca38268ec6ae402202378d139f0f4cd6a3471361f2f78143cb483cbce48f0100334afd910d6069deb:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '>= 2.14.5', '<= 2.14.5')

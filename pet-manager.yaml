@@ -1,14 +1,15 @@
-id: pet-manager
+id: pet-manager-dd2adfbba79531a57cc27ea29e127a50
 
 info:
   name: >
-    Pet Manager <= 1.4 - Reflected Cross-Site Scripting
+    Pet Manager <= 1.4 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9f397671-0b59-4049-95af-3087e07685f0?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d0c724a4-7783-4d2a-938e-800960c2be64?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/pet-manager/"
     google-query: inurl:"/wp-content/plugins/pet-manager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,pet-manager,medium
+  tags: cve,wordpress,wp-plugin,pet-manager,low
 
 http:
   - method: GET

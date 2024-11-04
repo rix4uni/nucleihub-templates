@@ -1,14 +1,15 @@
-id: wc-frontend-manager
+id: wc-frontend-manager-4104b751f56d6b225d23caaf18a7079e
 
 info:
   name: >
-    WCFM Frontend Manager <= 6.6.0 - Missing Authorization
+    WCFM – Frontend Manager for WooCommerce along with Bookings Subscription Listings Compatible <= 6.7.12 - Insecure Direct Object Reference to Account Takeover/Privilege Escalation
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d946d4b5-bed7-4808-b133-783b2dcd7992?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/79172fe3-c0cf-48c4-8bc5-862c628c1a09?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wc-frontend-manager/"
     google-query: inurl:"/wp-content/plugins/wc-frontend-manager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wc-frontend-manager,high
+  tags: cve,wordpress,wp-plugin,wc-frontend-manager,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '6.6.0')
+          - compare_versions(version, '<= 6.7.12')

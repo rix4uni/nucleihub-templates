@@ -1,4 +1,4 @@
-id: woocommerce-order-status-change-notifier
+id: woocommerce-order-status-change-notifier-1ed23e15969f67c1a0db7359c9bff151
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/66bc83f5-0f6c-425f-a560-e79e777b76ca?source=api-scan
   classification:
     cvss-metrics: 

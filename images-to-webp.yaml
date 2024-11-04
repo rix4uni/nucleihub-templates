@@ -1,14 +1,15 @@
-id: images-to-webp
+id: images-to-webp-d05abdc0b2f385c3fdba5dea299b077b
 
 info:
   name: >
-    Images to WebP <= 1.8 - Local File Inclusion
+    Images to WebP < 1.9 - Cross-Site Request Forgery
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/63ae3a9d-1e6b-4784-8429-04be2a89b6cb?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a26f4bb7-fe61-4343-82ee-19639c16d978?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/images-to-webp/"
     google-query: inurl:"/wp-content/plugins/images-to-webp/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,images-to-webp,critical
+  tags: cve,wordpress,wp-plugin,images-to-webp,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8')
+          - compare_versions(version, '< 1.9')

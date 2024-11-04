@@ -1,4 +1,4 @@
-id: backup-bolt
+id: backup-bolt-56958b7863334116d5f9bdbeb6e86c61
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/440e2618-5b45-4bad-8a97-2fb1a6e991ea?source=api-scan
   classification:
     cvss-metrics: 

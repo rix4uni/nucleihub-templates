@@ -1,4 +1,4 @@
-id: wordprezi
+id: wordprezi-584db66faa21db5cdefc91cc7e54449b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/7f8e836e-c9af-4614-83b2-c15e77d51155?source=api-scan
   classification:
     cvss-metrics: 

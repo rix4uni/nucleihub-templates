@@ -1,4 +1,4 @@
-id: preview-link-generator
+id: preview-link-generator-0589ff3158b1565719bb3611e16d2c46
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2b6b4953-a264-4668-9cc3-1578109f6592?source=api-scan
   classification:
     cvss-metrics: 

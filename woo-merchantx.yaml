@@ -1,23 +1,23 @@
-id: woo-merchantx
+id: woo-merchantx-af70fcd4f5fc635e0cba5d472666726e
 
 info:
-  name: >
-    Woo MerchantX <= 1.0 - Cross-Site Request Forgery
+  name: "Woo MerchantX <= 1.0 - Cross-Site Request Forgery"
   author: topscoder
-  severity: medium
-  description: >
-    The Woo MerchantX plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.0. This is due to missing or incorrect nonce validation on the 'merchantx_stepOne_addBilling', 'merchantx_stepOne' and 'merchantx_deletePaymentMethod' functions. This makes it possible for unauthenticated attackers to gain restricted access to administrative actions via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
+  severity: high
+  description: "The Woo MerchantX plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.0. This is due to missing or incorrect nonce validation on the 'merchantx_stepOne_addBilling', 'merchantx_stepOne' and 'merchantx_deletePaymentMethod' functions. This makes it possible for unauthenticated attackers to gain restricted access to administrative actions via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/28c3b377-4cab-4c17-adc3-6ce8b600b20a?source=api-prod
+    - https://ithemes.com/blog/wordpress-vulnerability-report-july-2021-part-2/#ib-toc-anchor-2
+    - https://wpscan.com/vulnerability/c6ec6b54-ac22-4c5f-89de-2ce0f943eb9f
+    - https://wordpress.org/plugins/woo-merchantx/#developers
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/woo-merchantx/"
     google-query: inurl:"/wp-content/plugins/woo-merchantx/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woo-merchantx,medium
+  tags: cve,wordpress,wp-plugin,woo-merchantx,high
 
 http:
   - method: GET

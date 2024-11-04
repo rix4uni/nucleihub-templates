@@ -1,22 +1,23 @@
-id: kingcomposer
+id: kingcomposer-bc37b7a1b4862600c463f5089cd9c59f
 
 info:
-  name: "Page Builder: KingComposer < 2.9.4 - Stored Cross-Site Scripting"
+  name: "Page Builder: KingComposer < 2.9.4 - Arbitrary File Upload"
   author: topscoder
-  severity: medium
-  description: "The Page Builder: KingComposer plugin for WordPress is vulnerable to Stored Cross-Site Scripting via via shortcode in versions before 2.9.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: high
+  description: "The Page Builder: KingComposer plugin for WordPress is vulnerable to Arbitrary File Uploads in versions up to, and including, 2.9.3 via the 'process_bulk_action' function in the 'kingcomposer/includes/kc.extensions.php' file. This makes it possible for authenticated users with author level permissions and above to upload arbitrary files onto the server which can be used to execute code on the server."
   reference:
     - https://blog.nintechnet.com/wordpress-kingcomposer-page-builder-fixed-multiple-critical-vulnerabilities/
-    - https://wpsocket.com/plugin/kingcomposer/changelog/
+    - https://wordpress.org/plugins/kingcomposer/#developers
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2320014%40kingcomposer&new=2320014%40kingcomposer&sfp_email=&sfph_mail=
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 5.5
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
     cve-id:
   metadata:
     fofa-query: "wp-content/plugins/kingcomposer/"
     google-query: inurl:"/wp-content/plugins/kingcomposer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,kingcomposer,medium
+  tags: cve,wordpress,wp-plugin,kingcomposer,high
 
 http:
   - method: GET
@@ -54,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.9.4')
+          - compare_versions(version, '<= 2.9.3')

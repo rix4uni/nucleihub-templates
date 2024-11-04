@@ -1,4 +1,4 @@
-id: tripay-payment-gateway
+id: tripay-payment-gateway-72213a7c863bdfaf87d000676e48db94
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/946add6f-4cd5-4c55-9399-a782140f217c?source=api-scan
   classification:
     cvss-metrics: 

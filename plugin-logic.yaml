@@ -1,4 +1,4 @@
-id: plugin-logic
+id: plugin-logic-37a9f005ba4b93a4158e2bd060d27967
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e75a96ab-499b-4f1d-a60b-a5aa9d804363?source=api-scan
   classification:
     cvss-metrics: 

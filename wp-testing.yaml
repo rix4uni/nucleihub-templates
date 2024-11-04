@@ -1,4 +1,4 @@
-id: wp-testing
+id: wp-testing-a7a2546d387bcc9b77c25a1b873bbf17
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/daa9abc2-310f-4bd9-9b88-d6f3024ab5f1?source=api-scan
   classification:
     cvss-metrics: 

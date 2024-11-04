@@ -1,6 +1,6 @@
 id: pop3
 info:
-  name: Openwall popa3d
+  name: Tobit David.fx pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK\r\n$
+    - ^\+OK David\.fx Mail Access Server ready \(Tobit\.Software, Germany\)\r\n

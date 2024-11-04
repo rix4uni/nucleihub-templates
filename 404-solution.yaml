@@ -1,23 +1,24 @@
-id: 404-solution
+id: 404-solution-787eb4efdc6dda13eb25162707b80ea2
 
 info:
   name: >
-    404 Solution <= 2.33.0 - Sensitive Information Exposure
+    404 Solution <= 2.33.2 - Authenticated (Administrator+) SQL Injection via orderby
   author: topscoder
-  severity: medium
+  severity: low
   description: >
-    The 404 Solution plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 2.33.0. This makes it possible for unauthenticated attackers to extract sensitive user or configuration data.
+    The 404 Solution plugin for WordPress is vulnerable to SQL Injection via the ‘orderby’ parameter in all versions up to, and including, 2.33.2 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers, with administrator-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fadc1374-fe4d-414a-af84-1a4de5b89807?source=api-prod
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/14958861-305e-4a9b-b428-de204cd6781e?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    cvss-score: 5.3
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 7.2
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/404-solution/"
     google-query: inurl:"/wp-content/plugins/404-solution/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,404-solution,medium
+  tags: cve,wordpress,wp-plugin,404-solution,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.33.0')
+          - compare_versions(version, '< 2.34.0')

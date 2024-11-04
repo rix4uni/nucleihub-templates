@@ -1,12 +1,16 @@
 id: nntp
 info:
-  name: NNTPCache
+  name: Symantec Enterprise Firewall nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: Access denied
+    device_type: firewall
+    info: unauthorized
+    product: enterprise_firewall
     rarity: 0
+    vendor: symantec
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^502 access denied <[-\w_.]+@[-\w_.]+>, you do not have connect permissions in the nntpcache\.access file\.\r\n
+    - ^201 NNTP server ready \(no posting\)\r\n502 No permission\r\n

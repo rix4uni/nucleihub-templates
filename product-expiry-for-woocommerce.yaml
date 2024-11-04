@@ -1,4 +1,4 @@
-id: product-expiry-for-woocommerce
+id: product-expiry-for-woocommerce-53f85e203527a1d8cf1b8bb1e2272397
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c4006612-770a-482f-a8c2-e62f607914a9?source=api-scan
   classification:
     cvss-metrics: 

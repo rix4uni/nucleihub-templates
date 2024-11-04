@@ -1,14 +1,15 @@
-id: wp-tell-a-friend-popup-form
+id: wp-tell-a-friend-popup-form-9391ee16fcd7e0f7b85a72279bbf9dff
 
 info:
   name: >
-    wp tell a friend popup form <= 7.1 - Cross-Site Request Forgery via 'TellAFriend_admin'
+    wp tell a friend popup form <= 7.1 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2f760821-98d4-4154-a4ae-861283f991f8?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ec860ad9-7054-4ed2-a8f2-6589e4db36cd?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-tell-a-friend-popup-form/"
     google-query: inurl:"/wp-content/plugins/wp-tell-a-friend-popup-form/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-tell-a-friend-popup-form,medium
+  tags: cve,wordpress,wp-plugin,wp-tell-a-friend-popup-form,low
 
 http:
   - method: GET

@@ -1,4 +1,4 @@
-id: rk-responsive-contact-form
+id: rk-responsive-contact-form-25126d240208f360fa974db9ad1d7ebc
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/58fa1235-846f-4bd4-ba0d-be6b039f411e?source=api-scan
   classification:
     cvss-metrics: 

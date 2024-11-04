@@ -1,14 +1,15 @@
-id: popup-anything-on-click
+id: popup-anything-on-click-cd5420d8af2d87e21727e3edd1562da2
 
 info:
   name: >
-    WP OnlineSupport, Essential Plugin Popup Anything <= 2.2.1 - Cross Site Request Forgery
+    Popup Anything – A Marketing Popup and Lead Generation Conversions <= 2.1.6 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/11ea3e40-8802-43ea-9816-973a15d7904d?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0bc1ebf6-2797-43cc-8c7a-930da29d6c78?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/popup-anything-on-click/"
     google-query: inurl:"/wp-content/plugins/popup-anything-on-click/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,popup-anything-on-click,low
+  tags: cve,wordpress,wp-plugin,popup-anything-on-click,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.2.2')
+          - compare_versions(version, '<= 2.1.6')

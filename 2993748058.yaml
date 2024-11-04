@@ -1,6 +1,6 @@
 id: pop3-proxy
 info:
-  name: CCProxy pop3d
+  name: Mirapoint pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK CCProxy (\S+) POP3 Service Ready\r\n
+    - ^\+OK Mirapoint POP3PROXY ([-\w.]+) server ready\r\n

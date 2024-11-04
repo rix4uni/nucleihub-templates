@@ -1,4 +1,4 @@
-id: order-delivery-date-for-woocommerce
+id: order-delivery-date-for-woocommerce-0a1e73557358a5b2fa4a31e0b34b7e12
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/9719d083-cc7c-4655-a4c4-f5370cfe76e0?source=api-scan
   classification:
     cvss-metrics: 

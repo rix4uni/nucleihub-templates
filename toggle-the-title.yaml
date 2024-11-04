@@ -1,4 +1,4 @@
-id: toggle-the-title
+id: toggle-the-title-d7285428e6ce53f882f1ab8275407147
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1abdc53b-7abe-422b-aeea-5bf31733bdad?source=api-scan
   classification:
     cvss-metrics: 

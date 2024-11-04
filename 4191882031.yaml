@@ -5,8 +5,8 @@ info:
   tags: detect,tech,irc-proxy,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: irc-proxy
     type: regex
     regex:
-    - ^:.*!psyBNC@lam3rz\.de NOTICE \* :psyBNC([-.\w]+)\r\n
+    - ^:.*!psyBNC@[-\w_.]+ NOTICE \* :psyBNC on ([-\w_.]+)\r\n

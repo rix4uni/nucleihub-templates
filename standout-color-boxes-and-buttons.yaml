@@ -1,4 +1,4 @@
-id: standout-color-boxes-and-buttons
+id: standout-color-boxes-and-buttons-7e0d4e9adbf861e28095c7f6f307d64f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a826dff8-60ae-4e25-9d3e-be93f192aaca?source=api-scan
   classification:
     cvss-metrics: 

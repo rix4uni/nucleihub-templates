@@ -1,18 +1,18 @@
-id: simple-flash-video
+id: simple-flash-video-6d00672d3b290a3ee0aca6104990651e
 
 info:
-  name: >
-    Simple Flash Video <= 1.7 - Cross-Site Scripting
+  name: "Simple Flash Video <= 1.7 - Cross-Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    The Simple Flash Video plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 1.7 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
+  description: "The Simple Flash Video plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 1.7 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/aa16cbeb-b3ba-4ef4-83ef-69d8ebd3738f?source=api-prod
+    - https://www.securityfocus.com/bid/62950/
+    - https://wpscan.com/vulnerability/971c8560-ab0f-4dda-85f4-6087afade1c8
+    - http://web.archive.org/web/20191021103710/https%3A//packetstormsecurity.com/files/123562/
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/simple-flash-video/"
     google-query: inurl:"/wp-content/plugins/simple-flash-video/"

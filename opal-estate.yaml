@@ -1,4 +1,4 @@
-id: opal-estate
+id: opal-estate-0dcb54302d1cbc14744921bfe49d6ec9
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2645899c-2b6b-48bd-8f33-2a837a951c5e?source=api-scan
   classification:
     cvss-metrics: 

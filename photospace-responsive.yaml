@@ -1,23 +1,24 @@
-id: photospace-responsive
+id: photospace-responsive-ab656aee73cb034e68598045d1558aa5
 
 info:
   name: >
-    Photospace Responsive <= 2.1.1 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    Photospace Responsive <= 1.1.7 - Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
-    
+    The Photospace Responsive plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 1.1.7 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3bc98896-6ff9-40de-ace2-2ca331c2a44a?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/645552ef-84aa-4f51-93d4-cb85c43fed58?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 6.4
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/photospace-responsive/"
     google-query: inurl:"/wp-content/plugins/photospace-responsive/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,photospace-responsive,low
+  tags: cve,wordpress,wp-plugin,photospace-responsive,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1.1')
+          - compare_versions(version, '<= 1.1.7')

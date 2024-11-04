@@ -1,4 +1,4 @@
-id: user-avatar-reloaded
+id: user-avatar-reloaded-00e7807a38aef7482832da6d1804cb13
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c3ecf638-dfc4-4e9d-bca8-cd008227e934?source=api-scan
   classification:
     cvss-metrics: 

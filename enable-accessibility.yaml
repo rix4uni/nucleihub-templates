@@ -1,4 +1,4 @@
-id: enable-accessibility
+id: enable-accessibility-d1b70bbc56e31b5e146631f879f8076a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b0b8c4c3-eba2-4c20-b790-48eceeba898e?source=api-scan
   classification:
     cvss-metrics: 

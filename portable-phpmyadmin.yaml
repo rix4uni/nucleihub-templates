@@ -1,4 +1,4 @@
-id: portable-phpmyadmin
+id: portable-phpmyadmin-1323a0dd707f816854c3dda211a27a41
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/04bfad0d-9c6d-41b6-8c59-516eceef9a36?source=api-scan
   classification:
     cvss-metrics: 

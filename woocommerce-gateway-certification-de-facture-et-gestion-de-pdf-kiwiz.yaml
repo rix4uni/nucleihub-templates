@@ -1,4 +1,4 @@
-id: woocommerce-gateway-certification-de-facture-et-gestion-de-pdf-kiwiz
+id: woocommerce-gateway-certification-de-facture-et-gestion-de-pdf-kiwiz-4cfd3acbfb2f838d55123d20dcb89454
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/603f0c9d-6964-4911-b4a5-bdad24a1a8dd?source=api-scan
   classification:
     cvss-metrics: 

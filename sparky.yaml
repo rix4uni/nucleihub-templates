@@ -1,18 +1,20 @@
-id: sparky
+id: sparky-d4430db8e030babb446d9f42ad29ad59
 
 info:
-  name: >
-    Sparky <= 1.0 - Cross-Site Scripting
+  name: "Sparky <= 1.0 - Cross-Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    The Sparky theme for WordPress is vulnerable to Cross-Site Scripting due to insufficient input sanitization and output escaping in versions up to, and including, 1.0. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser.
+  description: "The Sparky theme for WordPress is vulnerable to Cross-Site Scripting due to insufficient input sanitization and output escaping in versions up to, and including, 1.0. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0d50eda3-20d8-436b-968c-9d8eeccaa0c9?source=api-prod
+    - https://jannefi.blogspot.com/2012/09/xss-vulnerability-in-multiple-premium.html
+    - https://themeforest.net/user/ikonize/portfolio
+    - https://wpscan.com/vulnerability/d27f786f-9a89-4d75-ab72-5bcaab592dd3
+    - https://web.archive.org/web/20121016135006/http%3A//themeforest.net/user/Flow/portfolio
+    - https://web.archive.org/web/20120610215515/http%3A//themeforest.net/item/sparky-creative-blog-portfolio-wordpress-theme/137630?WT.ac=portfolio_item&WT.seg_1=portfolio_item&WT.z_author=Flow
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/themes/sparky/"
     google-query: inurl:"/wp-content/themes/sparky/"

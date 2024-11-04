@@ -1,4 +1,4 @@
-id: translation-exchange
+id: translation-exchange-769a2f1f7464dc96ff0f37bb456e3f38
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/85ba54cc-3ef8-49ee-bef0-6fef8e116871?source=api-scan
   classification:
     cvss-metrics: 

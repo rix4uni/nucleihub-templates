@@ -1,4 +1,4 @@
-id: yamaps
+id: yamaps-0254c37657f232adb9d77c9c25505f56
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1056804b-c317-4b9f-85ce-41b4ed0ac40a?source=api-scan
   classification:
     cvss-metrics: 

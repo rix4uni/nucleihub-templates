@@ -1,14 +1,15 @@
-id: traffic-manager
+id: traffic-manager-b46d1c6f4de8a5d648bda5e0807b06c4
 
 info:
   name: >
-    Traffic Manager <= 1.4.5 - Missing Authorization
+    Traffic Manager <= 1.4.5 - Missing Authorization to Stored Cross-Site Scripting
   author: topscoder
   severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3610644e-3481-4fed-a83c-cd9ce09775d2?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fc98e78b-5388-4573-b2a1-9bad7901d507?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

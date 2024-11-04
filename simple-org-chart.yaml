@@ -1,4 +1,4 @@
-id: simple-org-chart
+id: simple-org-chart-11ce1c2850e056152ce51409c1527728
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8d413350-f520-4dd9-af7d-e776628aef1d?source=api-scan
   classification:
     cvss-metrics: 

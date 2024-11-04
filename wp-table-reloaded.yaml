@@ -1,14 +1,15 @@
-id: wp-table-reloaded
+id: wp-table-reloaded-f9987025254b58a5d361c3dcfe94ff5c
 
 info:
   name: >
-    WP-Table Reloaded <= 1.9.3 - Cross-Site Scripting
+    WP-Table Reloaded <= 1.9.4 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7bacae6f-d23d-414c-8d8a-0f1702eafd84?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6065d77d-33ca-4f54-b485-ff1ce71b5e2b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-table-reloaded/"
     google-query: inurl:"/wp-content/plugins/wp-table-reloaded/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-table-reloaded,high
+  tags: cve,wordpress,wp-plugin,wp-table-reloaded,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.9.3')
+          - compare_versions(version, '<= 1.9.4')

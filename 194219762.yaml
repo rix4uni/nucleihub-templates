@@ -1,13 +1,14 @@
 id: ftp-proxy
 info:
-  name: Gauntlet FTP proxy
+  name: Frox ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    hostname: $1
+    product: frox
     rarity: 0
-    version: $2
+    vendor: james_hollingshead
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 ([-.\w]+) FTP proxy \(Version (\d[-.\w]+)\) ready\.\r\n
+    - ^220 Frox transparent ftp proxy\. Login with username\r\n

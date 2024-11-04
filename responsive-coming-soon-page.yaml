@@ -1,14 +1,15 @@
-id: responsive-coming-soon-page
+id: responsive-coming-soon-page-5e889797c39c3bbde2dccbb68ce16854
 
 info:
   name: >
-    Coming Soon < 1.1.19 - Stored Cross-Site Scripting
+    Coming Soon Page – Responsive Coming Soon & Maintenance Mode <= 1.1.18 - Cross-Site Scripting via coming-soon_sub_title parameter
   author: topscoder
   severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6f947843-7a6f-48b0-b3cd-2f3dd1708898?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e57631c2-ad6c-4c8c-985e-948285058567?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.1.19')
+          - compare_versions(version, '<= 1.1.18')

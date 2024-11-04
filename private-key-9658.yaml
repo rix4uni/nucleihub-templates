@@ -1,14 +1,11 @@
 id: private-key
-
 info:
   name: Private Key Detect
   author: gaurang
   severity: high
-
 file:
   - extensions:
       - all
-
     extractors:
       - type: regex
         regex:

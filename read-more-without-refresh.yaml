@@ -1,4 +1,4 @@
-id: read-more-without-refresh
+id: read-more-without-refresh-2835ec59bfcce92a319ed7a444d7c89a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b2bdb698-3a07-4e8b-a498-b156accadc0a?source=api-scan
   classification:
     cvss-metrics: 

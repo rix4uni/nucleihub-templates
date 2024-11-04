@@ -1,12 +1,14 @@
 id: tftp
 info:
-  name: Plan 9 tftpd
+  name: SolarWinds Free tftpd
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    operating_system: Plan 9
+    product: tftp_server
     rarity: 5
+    vendor: solarwinds
+    verified: true
 tcp:
 - name: dnsstatus-request
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - ^\0\x05\0\x04Illegal TFTP operation\0
+    - '^\0\x05\0\x04Unknown operatation code: 0 received from [\d.]+:\d+\0'

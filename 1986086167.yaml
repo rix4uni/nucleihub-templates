@@ -1,15 +1,18 @@
 id: pop3
 info:
-  name: CommuniGate Pro pop3d
+  name: MDaemon pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
-    product: communigate_pro
+    info: Spanish
+    operating_system: Windows
+    product: mdaemon
     rarity: 0
-    vendor: stalker
+    vendor: altn
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +23,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 Server OK <[\d.]+@([-\w_.]+)>\r\n
+    - ^\+OK ([-\w_.]+) POP MDaemon ([\d.]+) listo <MDAEMON-[\w.]+@[-\w_.]+>\r\n

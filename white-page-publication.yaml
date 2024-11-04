@@ -1,4 +1,4 @@
-id: white-page-publication
+id: white-page-publication-d6353490af30343cf3ee330dd2d33ef0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1b377236-bb56-4d31-837a-c5064d46a6c6?source=api-scan
   classification:
     cvss-metrics: 

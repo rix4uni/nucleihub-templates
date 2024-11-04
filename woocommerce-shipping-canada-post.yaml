@@ -1,4 +1,4 @@
-id: woocommerce-shipping-canada-post
+id: woocommerce-shipping-canada-post-f55f0d8344cc5c9b34a33254dae73f87
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ff850f88-6e89-48dd-ad70-dda4018c22fc?source=api-scan
   classification:
     cvss-metrics: 

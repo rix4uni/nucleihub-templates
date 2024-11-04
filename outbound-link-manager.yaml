@@ -1,4 +1,4 @@
-id: outbound-link-manager
+id: outbound-link-manager-b04c8f5371c23273655fc465fefa0937
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8dfc0d5e-bdc4-4f71-8aa3-0a4fbd7ef37d?source=api-scan
   classification:
     cvss-metrics: 

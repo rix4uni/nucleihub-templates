@@ -1,14 +1,15 @@
-id: starbox
+id: starbox-aac1fa023cf48ed0ab4988e793760dbd
 
 info:
   name: >
-    Starbox – the Author Box for Humans <= 3.4.7 - Insecure Direct Object Reference
+    Starbox <= 3.4.8 - Authenticated (Subscriber+) Stored Cross-Site Scripting via Profile Display Name and Social Settings
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c47601b4-bf16-4f59-b5f3-584a8eac7c67?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0eafe473-9177-47c4-aa1e-2350cb827447?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.4.7')
+          - compare_versions(version, '<= 3.4.8')

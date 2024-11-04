@@ -1,4 +1,4 @@
-id: accesspress-twitter-feed
+id: accesspress-twitter-feed-24f04d23baa445ec149e169255005a4f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/73986641-b3a4-438d-90ae-6ff0f6f73f01?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,23 +1,25 @@
-id: ultimate-member
+id: ultimate-member-752778a0c76ce15732044beb8f04bb43
 
 info:
-  name: >
-    Ultimate Member <= 2.0.53 - Cross-Site Scripting
+  name: "Ultimate Member <= 1.3.64 - Local File Inclusion"
   author: topscoder
-  severity: high
-  description: >
-    
+  severity: critical
+  description: "The Ultimate Member plugin for WordPress is vulnerable to Local File Inclusion in versions up to, and including, 1.3.64 via the 'page' parameter. This allows unauthenticated attackers to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6eedf009-116c-4a98-8b84-e01bd35e7e60?source=api-scan
+    - https://sumofpwn.nl/advisory/2016/ultimate_member_local_file_inclusion_vulnerability.html
+    - https://wordpress.org/plugins/ultimate-member/changelog/
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-ultimate-member-user-profile-membership-local-file-inclusion-1-3-64/
+    - https://wpscan.com/vulnerability/3ccc5483-2dd9-4925-95dd-3faa5cfdb951
+    - https://patchstack.com/database/vulnerability/ultimate-member/wordpress-ultimate-member-plugin-1-3-64-local-file-inclusion
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H
+    cvss-score: 9.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/ultimate-member/"
     google-query: inurl:"/wp-content/plugins/ultimate-member/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ultimate-member,high
+  tags: cve,wordpress,wp-plugin,ultimate-member,critical
 
 http:
   - method: GET
@@ -55,4 +57,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.53')
+          - compare_versions(version, '< 1.3.65')

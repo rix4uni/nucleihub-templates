@@ -1,4 +1,4 @@
-id: seosamba-webmasters
+id: seosamba-webmasters-7db61b9f5c5ddec4aae0861e6db4dd70
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8b0140f2-ceaa-4589-b1ad-1daa244aa3cd?source=api-scan
   classification:
     cvss-metrics: 

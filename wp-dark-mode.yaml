@@ -1,17 +1,18 @@
-id: wp-dark-mode
+id: wp-dark-mode-bcaeda5fa883f3d2797714a248e53e97
 
 info:
   name: >
-    WP Dark Mode <= 4.0.7 - Authenticated (Subscriber+) Local File Inclusion via 'style'
+    Appsero <= 1.2.1 - Missing Authorization
   author: topscoder
   severity: low
   description: >
-    
+    The Appsero analytics tool used in several plugins is vulnerable to authorization bypass due to a missing capability check on the uninstall_reason_submission function used for feedback submission in versions up to, and including, 1.2.1. This makes it possible for authenticated attackers, with subscriber-level permissions and above, to invoke this function intended for administrator use.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d43234d0-5f44-4484-a8d6-16d43d1db51e?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/84003388-c47c-41db-8d2d-4643aa375a89?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+    cvss-score: 4.3
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-dark-mode/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.0.7')
+          - compare_versions(version, '<= 3.0.4')

@@ -1,11 +1,15 @@
 id: http
 info:
-  name: Pcounter httpd
+  name: CrushFTP web interface
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
+    info: IP banned
+    product: crushftp
     rarity: 0
+    vendor: crushftp
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +20,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 400 Bad Request\r\nContent-Type: text/plain\r\nContent-Length: 51\r\nConnection: close\r\n\r\nError 400: Bad Request\nCan not parse request: \[\r\n\r\]$'
+    - '^HTTP/1\.1 200 BANNED\r\nContent-Length: \d+\r\n\r\nYour IP is banned, no further requests will be processed from this IP \([\d.]+\)\.\r\n'

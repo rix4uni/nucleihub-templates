@@ -1,4 +1,4 @@
-id: scroll-baner
+id: scroll-baner-20e60e10e517adab44f7422aa9983cca
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a86d196f-9613-4352-8a96-87ea147eb1c8?source=api-scan
   classification:
     cvss-metrics: 

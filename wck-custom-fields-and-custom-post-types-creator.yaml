@@ -1,4 +1,4 @@
-id: wck-custom-fields-and-custom-post-types-creator
+id: wck-custom-fields-and-custom-post-types-creator-b67316ab62b2cbdc852d5908cd91c74c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/796e35bc-db5f-45e3-8f79-73b30add877f?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,14 +1,15 @@
-id: quillforms
+id: quillforms-ca8ada486579d049d2c2b924b2c36d7a
 
 info:
   name: >
-    Quill Forms <= 3.3.0 - Cross-Site Request Forgery
+    Quill Forms <= 3.7.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8ea4617a-6211-4f8d-ab51-10ca509aaacf?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/605b49a9-caa2-4bcd-8849-eb777b03ab01?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/quillforms/"
     google-query: inurl:"/wp-content/plugins/quillforms/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,quillforms,medium
+  tags: cve,wordpress,wp-plugin,quillforms,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.3.0')
+          - compare_versions(version, '<= 3.7.0')

@@ -1,14 +1,15 @@
-id: ultimate-addons-for-elementor
+id: ultimate-addons-for-elementor-db4b4ab3d95ad9ae34552e25c8355457
 
 info:
   name: >
-    Mega Addons For Elementor <= 1.8 - Missing Authorization
+    Mega Addons For Elementor <= 1.9 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2f557c6e-2fbd-478d-8dc3-cdc550e523b7?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a64c67de-1c16-4dcb-a3e4-81341b37c3e3?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ultimate-addons-for-elementor/"
     google-query: inurl:"/wp-content/plugins/ultimate-addons-for-elementor/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ultimate-addons-for-elementor,high
+  tags: cve,wordpress,wp-plugin,ultimate-addons-for-elementor,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8')
+          - compare_versions(version, '<= 1.9')

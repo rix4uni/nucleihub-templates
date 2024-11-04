@@ -1,4 +1,4 @@
-id: wp-mailto-links
+id: wp-mailto-links-9e4406b99ed9728029497ac1e97783e2
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ec882062-0059-47ca-a007-3347e7adb70b?source=api-scan
   classification:
     cvss-metrics: 

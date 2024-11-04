@@ -1,23 +1,24 @@
-id: payment-gateway-stripe-and-woocommerce-integration
+id: payment-gateway-stripe-and-woocommerce-integration-988d55592a55e8dbec9b2b183fa815e4
 
 info:
   name: >
-    Stripe Payment Plugin for WooCommerce <= 3.7.9 - Missing Authorization to Arbitrary Order Status Modification
+    Stripe Payment Plugin for WooCommerce <= 3.5.9 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
-    
+    The Stripe Payment Plugin for WooCommerce plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'page' parameter in versions up to, and including, 3.5.9 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ef543c61-2acc-4b72-81ff-883960d4c7c3?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bb545a42-6c66-412b-a686-e486b0a58dc5?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/payment-gateway-stripe-and-woocommerce-integration/"
     google-query: inurl:"/wp-content/plugins/payment-gateway-stripe-and-woocommerce-integration/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,payment-gateway-stripe-and-woocommerce-integration,high
+  tags: cve,wordpress,wp-plugin,payment-gateway-stripe-and-woocommerce-integration,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '3.7.9')
+          - compare_versions(version, '<= 3.5.9')

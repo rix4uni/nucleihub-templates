@@ -1,4 +1,4 @@
-id: simple-visitor-stat
+id: simple-visitor-stat-bf3e05a5169dac2c7659952c2ae58cfa
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/508225ab-beb7-40eb-a80b-de123650fcff?source=api-scan
   classification:
     cvss-metrics: 

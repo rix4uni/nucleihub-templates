@@ -1,4 +1,4 @@
-id: swipehq-payment-gateway-wp-e-commerce
+id: swipehq-payment-gateway-wp-e-commerce-443842d1d8712ea7662492da3baca3c2
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/691b080c-052a-4967-a251-98a17038448d?source=api-scan
   classification:
     cvss-metrics: 

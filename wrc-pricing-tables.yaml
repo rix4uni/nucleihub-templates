@@ -1,4 +1,4 @@
-id: wrc-pricing-tables
+id: wrc-pricing-tables-0043c8f5035f2f72a3307209db1c0e73
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e7028184-2b16-45a8-893a-37eb74bab329?source=api-scan
   classification:
     cvss-metrics: 

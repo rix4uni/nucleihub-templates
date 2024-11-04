@@ -1,13 +1,15 @@
 id: ftp-proxy
 info:
-  name: Webwasher ftp proxy
+  name: WinProxy FTP proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
     operating_system: Windows
+    product: winproxy
     rarity: 0
-    version: $1 build $2
+    vendor: bluecoat
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 Webwasher FTP Proxy ([\d.]+) build (\d+)\r\n
+    - ^220 WinProxy FTP Gateway ready, enter username@host\[:port\]\r\n

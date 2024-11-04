@@ -1,4 +1,4 @@
-id: wp-jump-menu
+id: wp-jump-menu-cb75448a2b55efc7f0de04ca3f0f9bdf
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2d34c665-e99c-408e-b7ab-d08a1a51c6c4?source=api-scan
   classification:
     cvss-metrics: 

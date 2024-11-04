@@ -1,11 +1,11 @@
 id: telnet
 info:
-  name: Polycom ViewStation Video Conferencing telnetd
+  name: Vertical Xcelerator IP telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: webcam
+    device_type: VoIP adapter
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '(?i)^\xff.\x01\0?\xff\xfd.*Welcome to ViewStation.*Password:'
+    - '^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03Xcelerator IP \r\nLogin: '

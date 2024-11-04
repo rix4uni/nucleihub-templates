@@ -1,13 +1,13 @@
 id: pop3
 info:
-  name: MailMax PopMax pop3d
+  name: Kerio MailServer POP3 Server
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $3
     rarity: 0
-    version: $1
+    version: $1 patch $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK [-\w_.]+ PopMax version ([\d. ]+) POP3 Mail Server Ready, Willing, and Waiting\r\n
+    - ^\+OK Kerio MailServer (\d[-.\w]+) patch ([\d.]+) POP3 server ready <[\d.]+@([-\w_.]+)>\r\n

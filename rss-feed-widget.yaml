@@ -1,14 +1,15 @@
-id: rss-feed-widget
+id: rss-feed-widget-80a0a36ea063283e29ed3c5e77408ead
 
 info:
   name: >
-    RSS Feed Widget <= 2.8.0 - Reflected Cross-Site Scripting
+    RSS Feed Widget <= 2.9.9 - Authenticated (Contributor+) Stored Cross-Site Scripting via rfw-youtube-videos Shortcode
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/91abd172-e024-4272-96ee-1725af4d5488?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b77ea258-dced-4c36-bd0d-8977a347d1c9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/rss-feed-widget/"
     google-query: inurl:"/wp-content/plugins/rss-feed-widget/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,rss-feed-widget,medium
+  tags: cve,wordpress,wp-plugin,rss-feed-widget,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.8.1')
+          - compare_versions(version, '<= 2.9.9')

@@ -1,12 +1,16 @@
 id: domain
 info:
-  name: Incognito DNS Commander
+  name: ISC BIND
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    info: $2
+    info: Debian Linux
+    operating_system: Linux
+    product: bind
     rarity: 1
+    vendor: isc
+    verified: true
     version: $1
 tcp:
 - name: dnsversion-bind-req
@@ -19,4 +23,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}Incognito DNS Commander ([\d.]+) \((built \w{3} \d+ \d{4})\)
+    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}(\d[-\w.+~]*?)-[Dd]ebian

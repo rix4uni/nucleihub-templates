@@ -1,49 +1,59 @@
-id: wordpress-elementskit-lite
+id: elementskit-lite-fcab7b046f35e426f0f893aba3f31124
 
 info:
-  name: ElementsKit Elementor addons Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    ElementsKit Elementor addons 3.0.7 - 3.1.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Image Accordion Widget
+  author: topscoder
+  severity: low
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/elementskit-lite/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/93dcbab7-fdf5-4631-8605-77f8f190512d?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: elementskit-lite
-    wpscan: https://wpscan.com/plugin/elementskit-lite
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/elementskit-lite/"
+    google-query: inurl:"/wp-content/plugins/elementskit-lite/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,elementskit-lite,low
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/elementskit-lite/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/elementskit-lite.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "elementskit-lite"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a00463044022041b65435d72ec58d84c50781001a044434e0e274d747cdc3e22fcffc26c1d2fe02206aae33ade463fa724d996f13f07338476d8b13f1da5857e04a3b33ad93d943dd:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '>= 3.0.7', '<= 3.1.2')

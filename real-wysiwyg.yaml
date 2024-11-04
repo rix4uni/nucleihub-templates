@@ -1,4 +1,4 @@
-id: real-wysiwyg
+id: real-wysiwyg-cf2b63d489aa19ce18dc45a20a3781bc
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b3b39055-aa2a-4db8-838b-e4baaea105b4?source=api-scan
   classification:
     cvss-metrics: 

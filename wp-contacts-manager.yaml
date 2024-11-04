@@ -1,13 +1,14 @@
-id: wp-contacts-manager
+id: wp-contacts-manager-5ae127511b903ef3b145d2932899b557
 
 info:
   name: >
     WP Contacts Manager <= 2.2.4 - Unauthenticated SQL Injection
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b352b2e4-8d72-4ebd-8dcd-8e2740759f3e?source=api-scan
   classification:
     cvss-metrics: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-contacts-manager/"
     google-query: inurl:"/wp-content/plugins/wp-contacts-manager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-contacts-manager,low
+  tags: cve,wordpress,wp-plugin,wp-contacts-manager,critical
 
 http:
   - method: GET

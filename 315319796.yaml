@@ -1,11 +1,15 @@
 id: afs
 info:
-  name: Transarc AFS
+  name: OpenAFS
   author: nmap,cn-kali-team
   tags: detect,tech,afs,service
   severity: info
   metadata:
+    info: $2
+    product: openafs
     rarity: 5
+    vendor: openafs
+    verified: true
     version: $1
 tcp:
 - name: afsversion-request
@@ -18,4 +22,4 @@ tcp:
   - name: afs
     type: regex
     regex:
-    - ^[\d\D]{28}\s*Base\sconfiguration\safs([\d\.]+)\s+[^\s\0\;]+[\0\;]
+    - ^[\d\D]{28}\s*OpenAFS([\d\.]{3}[^\s\0]*)\s+([^\0]+)\0

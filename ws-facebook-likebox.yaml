@@ -1,4 +1,4 @@
-id: ws-facebook-likebox
+id: ws-facebook-likebox-b434245a00deeab982df8a507c461be5
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8bebc229-9d15-439f-a8df-f68455bc5193?source=api-scan
   classification:
     cvss-metrics: 

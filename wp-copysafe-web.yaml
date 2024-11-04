@@ -1,14 +1,15 @@
-id: wp-copysafe-web
+id: wp-copysafe-web-7a654bdc2eff39bb29c7801e79e746ca
 
 info:
   name: >
-    CopySafe Web Protection <= 3.13 - Unauthenticated Stored Cross-Site Scripting
+    CopySafe Web Protection <= 3.14 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/07e110b3-ef10-482d-a564-c9f23631e5f3?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/90d4d8c8-ccc1-46f8-bbf5-6aabaacc9d79?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.13')
+          - compare_versions(version, '<= 3.14')

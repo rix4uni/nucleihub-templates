@@ -1,14 +1,15 @@
-id: wordpress-23-related-posts-plugin
+id: wordpress-23-related-posts-plugin-94bd4e3a30b7df514114c0aadba12d87
 
 info:
   name: >
-    Related Posts < 2.7.2 - Cross-Site Request Forgery
+    WordPress Related Posts <= 3.6.4 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4ae3ad65-54d7-4ee0-894f-8ffd9fa8ac35?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c55792d6-3f31-4635-ad5c-17d03a5b2977?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wordpress-23-related-posts-plugin/"
     google-query: inurl:"/wp-content/plugins/wordpress-23-related-posts-plugin/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wordpress-23-related-posts-plugin,medium
+  tags: cve,wordpress,wp-plugin,wordpress-23-related-posts-plugin,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.7.2')
+          - compare_versions(version, '<= 3.6.4')

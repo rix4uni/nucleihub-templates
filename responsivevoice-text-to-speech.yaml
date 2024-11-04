@@ -1,4 +1,4 @@
-id: responsivevoice-text-to-speech
+id: responsivevoice-text-to-speech-c78b99e405f430d59fc832d4c1e71825
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2fc806fe-bf12-4e70-84a2-2027102e5b9b?source=api-scan
   classification:
     cvss-metrics: 

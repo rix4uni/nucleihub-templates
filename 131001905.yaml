@@ -1,16 +1,15 @@
 id: sip
 info:
-  name: PJSIP pjsua sipd
+  name: AVM FRITZ!Box $1 sipd
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
+    device_type: broadband router
     fallback:
     - get-request
-    info: 'arch: $3'
-    operating_system: Linux $2
     rarity: 5
-    version: $1
+    version: $2
 tcp:
 - name: sipoptions
   inputs:
@@ -22,4 +21,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: PJSUA v([\d.]+) Linux-([\d.]+)/(ix[\w_]+)'
+    - '(?i)^SIP/2\.0 404 Not Found\r\n(?:[^\r\n]+\r\n)*?User-Agent: AVM FRITZ!Box ([\w._-]+) Cable \(um\) ([\w._-]+) \([\w ]+\)\r\n'

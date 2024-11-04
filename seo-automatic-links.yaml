@@ -1,4 +1,4 @@
-id: seo-automatic-links
+id: seo-automatic-links-682d380f6a061ca18cf98f78c04f2b95
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2a677eed-0344-457e-aa5f-3b94a624462c?source=api-scan
   classification:
     cvss-metrics: 

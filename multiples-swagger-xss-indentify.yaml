@@ -2,7 +2,7 @@ id: swagger-page
 
 info:
   name: Verificação de Swagger em URLs
-  author: sysevil
+  author: [erickfernandox]
   severity: medium
   description: |
       Este template verifica varios caminhos possiveis nas URLs para achar paginas de Swagger UI.
@@ -77,6 +77,8 @@ requests:
       - "{{BaseURL}}/v2/"          
       - "{{BaseURL}}/v3/"       
       - "{{BaseURL}}/api/schema/swagger-ui/"
+      
+      
     matchers:
       - type: word
         words:

@@ -1,4 +1,4 @@
-id: swift-performance-lite
+id: swift-performance-lite-ff16d085629ee3b61efab5d02050c62e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/58b7736a-e3e0-4ecd-9adf-284568b02ef7?source=api-scan
   classification:
     cvss-metrics: 

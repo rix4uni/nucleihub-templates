@@ -1,4 +1,4 @@
-id: restaurant-pickup-delivery-dine-in
+id: restaurant-pickup-delivery-dine-in-61ea57e12f29be8546ef06d87e9e3571
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/936803ab-93d5-4808-8758-6b8f7c01b3c2?source=api-scan
   classification:
     cvss-metrics: 

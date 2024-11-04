@@ -1,4 +1,4 @@
-id: login-and-logout-redirect
+id: login-and-logout-redirect-2e880a42c739bd0db4dee779aa6991dc
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/09a0639e-4b14-4dc9-a50c-d18234faa7b1?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,49 +1,59 @@
-id: wordpress-wp-fastest-cache
+id: wp-fastest-cache-ea091aa5c37ed725da0ffd1509d75a6f
 
 info:
-  name: WP Fastest Cache Detection
-  author: ricardomaia
-  severity: info
+  name: "WP Fastest Cache <= 0.8.5.9 - Local File Inclusion"
+  author: topscoder
+  severity: high
+  description: "The WP Fastest Cache plugin for WordPress is vulnerable to Local File Inclusion in versions up to, and including, 0.8.5.9 via the id POST parameter. This allows authenticated attackers to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included. This is due to an impartial fix of https://ti.wordfence.io/vulnerabilities/3ebe25a7-fa4d-4e3f-b969-2ff3a8388b06."
   reference:
-    - https://wordpress.org/plugins/wp-fastest-cache/
+    - https://sumofpwn.nl/advisory/2016/wp_fastest_cache_member_local_file_inclusion_vulnerability.html
+    - https://seclists.org/fulldisclosure/2016/Jul/29
+    - https://wpscan.com/vulnerability/1c9e81b9-8a7c-44ce-8c8d-2edb35ae44a1
+    - https://patchstack.com/database/vulnerability/wp-fastest-cache/wordpress-fastest-cache-plugin-0-8-5-9-local-file-inclusion
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id:
   metadata:
-    plugin_namespace: wp-fastest-cache
-    wpscan: https://wpscan.com/plugin/wp-fastest-cache
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/wp-fastest-cache/"
+    google-query: inurl:"/wp-content/plugins/wp-fastest-cache/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,wp-fastest-cache,high
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/wp-fastest-cache/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/wp-fastest-cache.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "wp-fastest-cache"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a00483046022100b3c6a91aa68431a48410ec5b263dc5c9b2dc499a398fd4c0afba0713db22fcad022100f705d4f53ded49b11f3b0875808e55bac8dda3d4828cb7af684cd12a194f4bd8:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 0.8.5.9')

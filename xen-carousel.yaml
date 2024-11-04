@@ -1,4 +1,4 @@
-id: xen-carousel
+id: xen-carousel-a0a8d598930ffcd760618a652d1bc54d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/25ba4be3-0bcd-41ff-8a7a-fd6ae848afb8?source=api-scan
   classification:
     cvss-metrics: 

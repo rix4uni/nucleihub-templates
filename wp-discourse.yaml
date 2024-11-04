@@ -1,4 +1,4 @@
-id: wp-discourse
+id: wp-discourse-b653e8fef7929c5b643d33710936e77f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/cfb87c87-f9dc-4f26-93f5-10d6bf6c822b?source=api-scan
   classification:
     cvss-metrics: 

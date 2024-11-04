@@ -1,4 +1,4 @@
-id: update-theme-and-plugins-from-zip-file
+id: update-theme-and-plugins-from-zip-file-9bc5ff2ebe49c4cd7112793a34cf410c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e59293a6-cc61-4913-9ed0-13fa16299705?source=api-scan
   classification:
     cvss-metrics: 

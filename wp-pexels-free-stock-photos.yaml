@@ -1,4 +1,4 @@
-id: wp-pexels-free-stock-photos
+id: wp-pexels-free-stock-photos-d85805461df3a6407261aa622e9f4009
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/597660c5-8c99-40b1-8780-5a2ab9c07656?source=api-scan
   classification:
     cvss-metrics: 

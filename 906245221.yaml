@@ -1,15 +1,14 @@
 id: rtsp
 info:
-  name: Darwin Streaming Server
+  name: Freebox rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
+    device_type: media device
     fallback:
     - get-request
-    operating_system: Solaris
     rarity: 5
-    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 \d\d\d .*\r\nServer: DSS/([\d.]+) \(Build/[\d.]+; Platform/Solaris'
+    - '^RTSP/1\.0 200 OK\r\nPublic: OPTIONS, ANNOUNCE, SETUP, RECORD, SET_PARAMETER, GET_PARAMETER, FLUSH, TEARDOWN, POST\r\n\r\n'

@@ -1,4 +1,4 @@
-id: thank-me-later
+id: thank-me-later-b918f8ed347650d0bc3b2aa9b61af7bf
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/d73fd485-cb59-42eb-9426-9b89299bb6bc?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: wp-affiliate-links
+id: wp-affiliate-links-4e7ac47215d550d1a873e81f74fd6294
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ba4638be-29d3-4638-84d3-6a9d540bfa33?source=api-scan
   classification:
     cvss-metrics: 

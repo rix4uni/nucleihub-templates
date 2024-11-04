@@ -1,4 +1,4 @@
-id: wp-admin-logo-changer
+id: wp-admin-logo-changer-b53a8d77f88d9372be1c9e8baf08e8e0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/cd01d83e-a337-4f93-8bd0-0c9f3c786583?source=api-scan
   classification:
     cvss-metrics: 

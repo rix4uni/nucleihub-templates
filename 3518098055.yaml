@@ -1,13 +1,14 @@
 id: ftp
 info:
-  name: Zebra print server ftpd
+  name: NetPresenz
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: firmware $1
+    info: Unregistered
+    operating_system: Mac OS
     rarity: 0
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ZBR-(\d+) Version ([\d.]+) ready\.\r\n
+    - ^220 NetPresenz v([\d.]+) \(Unregistered\) awaits your command\.\r\n

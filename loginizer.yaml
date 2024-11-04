@@ -1,49 +1,59 @@
-id: wordpress-loginizer
+id: loginizer-0f3c958b2bafbf0c247ff8eff776cf57
 
 info:
-  name: Loginizer Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Loginizer <= 1.7.8 - Reflected Cross-Site Scripting via 'limit_session[count]'
+  author: topscoder
+  severity: medium
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/loginizer/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4e6ef932-975c-423b-b780-b38449eec577?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: loginizer
-    wpscan: https://wpscan.com/plugin/loginizer
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/loginizer/"
+    google-query: inurl:"/wp-content/plugins/loginizer/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,loginizer,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/loginizer/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/loginizer.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "loginizer"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100cc70e5d8aaa9da6c4b206273a4582b9215c3ed65d0cb69e4b4bf3059cab94a8d0220128bbd0640b9d2bf69998f74965c95fe14407d29f329561429a57628acc3dbe4:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 1.7.8')

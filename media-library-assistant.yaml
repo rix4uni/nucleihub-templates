@@ -1,14 +1,15 @@
-id: media-library-assistant
+id: media-library-assistant-8803138ea266f17e77472b06b5cc08bb
 
 info:
   name: >
-    Media Library Assistant <= 3.11 - Authenticated (Author+) Stored Cross-Site Scripting
+    Media Library Assistant <= 3.18 - Authenticated (Author+) Arbitrary File Upload via mla-inline-edit-upload-scripts AJAX Action
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a1603dc9-7f5e-47e1-8a81-27bb4df1aa4f?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9a446fe7-c97a-436e-b494-b924e6518297?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.11')
+          - compare_versions(version, '<= 3.18')

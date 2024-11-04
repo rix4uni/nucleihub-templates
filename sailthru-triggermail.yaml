@@ -1,14 +1,15 @@
-id: sailthru-triggermail
+id: sailthru-triggermail-e3bb9208767a626b15fb7fec447dea53
 
 info:
   name: >
-    Sailthru Triggermail <= 1.1 - Reflected Cross-Site Scripting
+    Sailthru Triggermail <= 1.1 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9b6be9c5-0142-458e-bf7e-2d4ae169e555?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9c657ea2-ff7b-4ef2-a7dd-a330484dd821?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/sailthru-triggermail/"
     google-query: inurl:"/wp-content/plugins/sailthru-triggermail/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,sailthru-triggermail,medium
+  tags: cve,wordpress,wp-plugin,sailthru-triggermail,low
 
 http:
   - method: GET

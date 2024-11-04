@@ -1,23 +1,23 @@
-id: simple-file-list
+id: simple-file-list-ec86d0dfb7877f9cab1aa413e690c529
 
 info:
-  name: >
-    Simple File List <= 4.4.11 - Reflected Cross-Site Scripting
+  name: "Simple File List <= 3.2.4 - Arbitrary File Deletion"
   author: topscoder
-  severity: medium
-  description: >
-    
+  severity: high
+  description: "The Simple File List plugin for WordPress is vulnerable to Arbitrary File Deletion in versions up to, and including, 3.2.4. This is due to the upward path traversal via the 'eeDeleteFile' parameter. This makes it possible for unauthenticated attackers to delete files within the vulnerable service."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/da9e3db0-9cbf-4b1a-bdaa-d5d86be744af?source=api-scan
+    - https://docs.google.com/document/d/11KLjuMaHLjPBf2R-Af1R01JNebD5mLRDBnCadmNmC_M/edit?usp=sharing
+    - https://plugins.trac.wordpress.org/changeset/2093272/simple-file-list
+    - https://wpscan.com/vulnerability/38119afe-f308-40e3-a8b8-06f3a4011bcd
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N
+    cvss-score: 8.6
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/simple-file-list/"
     google-query: inurl:"/wp-content/plugins/simple-file-list/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-file-list,medium
+  tags: cve,wordpress,wp-plugin,simple-file-list,high
 
 http:
   - method: GET
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.4.11')
+          - compare_versions(version, '<= 3.2.4')

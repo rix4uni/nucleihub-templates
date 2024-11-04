@@ -1,13 +1,16 @@
 id: afp
 info:
-  name: 'name: $1; protocol 2.2; MS2.0'
+  name: Netatalk
   author: nmap,cn-kali-team
   tags: detect,tech,afp,service
   severity: info
   metadata:
-    info: 'name: $1; protocol 2.2; MS2.0'
-    operating_system: Windows
+    info: protocol 3.1
+    operating_system: Unix
+    product: netatalk
     rarity: 6
+    vendor: netatalk
+    verified: true
 tcp:
 - name: afp
   inputs:
@@ -19,4 +22,4 @@ tcp:
   - name: afp
     type: regex
     regex:
-    - (?i)^\x01\x03\0\x01\0\0\0\0....\0\0\0\0........\x80\x7f.([^\0\x01]+)[\0\x01].*\x0aWindows NT\x03\x0eAFPVersion 2\.0\x0eAFPVersion 2\.1\x06AFP2\.2\x03\x10ClearTxt Passwrd\x0eMicrosoft V1\.0\x05MS2\.0
+    - (?i)^\x01\x03\0\x01\0\0\0\0....\0\0\0\0........\x81\x7d\0\0.*Netatalk\x06\x0eAFPVersion 1\.1\x0eAFPVersion 2\.0\x0eAFPVersion 2\.1\x06AFP2\.2\x06AFPX03\x06AFP3\.1\x04\x04DHX2\tDHCAST128

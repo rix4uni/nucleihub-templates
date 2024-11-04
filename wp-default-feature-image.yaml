@@ -1,4 +1,4 @@
-id: wp-default-feature-image
+id: wp-default-feature-image-77ca0fafb755e10a5f728cc189fc877a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/380024dc-ed2a-4a7b-b5f8-47879ad2d659?source=api-scan
   classification:
     cvss-metrics: 

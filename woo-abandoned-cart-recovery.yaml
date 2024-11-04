@@ -1,4 +1,4 @@
-id: woo-abandoned-cart-recovery
+id: woo-abandoned-cart-recovery-3392042a76a9b76c2a7252400276aa91
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/45b627f9-e7c6-4bf6-b1c7-d607f3e083f8?source=api-scan
   classification:
     cvss-metrics: 

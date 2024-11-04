@@ -1,49 +1,59 @@
-id: wordpress-smart-slider-3
+id: smart-slider-3-979424a6eedb1bbe7360cf692ba209d1
 
 info:
-  name: Smart Slider 3 Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Smart Slider 3 <= 3.5.1.13 - Authenticated (Contributor+) Stored Cross-Site Scripting
+  author: topscoder
+  severity: low
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/smart-slider-3/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0191e5b0-b669-439b-8ad4-9f860e6ee637?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: smart-slider-3
-    wpscan: https://wpscan.com/plugin/smart-slider-3
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/smart-slider-3/"
+    google-query: inurl:"/wp-content/plugins/smart-slider-3/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,smart-slider-3,low
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/smart-slider-3/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/smart-slider-3.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "smart-slider-3"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100bbb7c78cef6e99c4b6ebdd7395939423caedcbaf9366a90432a7ce4db037cd3d02201d939c069acc005d3fa8b4e182723bbf1955087491f0cd9947e0c1129b270fc2:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 3.5.1.13')

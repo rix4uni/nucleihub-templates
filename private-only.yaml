@@ -1,4 +1,4 @@
-id: private-only
+id: private-only-d6d91f6cec50e66c8aa8b7d27ce9d5ae
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/85790564-811c-4087-ad36-345e443ae9f8?source=api-scan
   classification:
     cvss-metrics: 

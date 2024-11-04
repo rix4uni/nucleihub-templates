@@ -1,14 +1,15 @@
-id: webmaster-tools
+id: webmaster-tools-5f21794f8d039fbb45515734fc6d980a
 
 info:
   name: >
-    Webmaster Tools <= 2.0 - Cross-Site Request Forgery vin lionscripts_plg_f
+    Webmaster Tools <= 2.0 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4112ca9a-39fa-4fe8-a060-9f8f492eb846?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e80bb7de-ce18-40d5-bf4c-9616739b2f9d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/webmaster-tools/"
     google-query: inurl:"/wp-content/plugins/webmaster-tools/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,webmaster-tools,medium
+  tags: cve,wordpress,wp-plugin,webmaster-tools,low
 
 http:
   - method: GET

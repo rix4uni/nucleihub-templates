@@ -1,4 +1,4 @@
-id: youtube-widget-responsive
+id: youtube-widget-responsive-b48a41c17d509cc756b45a20c98e1541
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/72daa533-8b17-420c-9b51-b5f72da2726c?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: aajoda-testimonials
+id: aajoda-testimonials-0c2f42e4ed4943c148a085a995d351f5
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/10f28404-acd0-40de-af42-2970b5b25bde?source=api-scan
   classification:
     cvss-metrics: 

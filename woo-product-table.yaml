@@ -1,4 +1,4 @@
-id: woo-product-table
+id: woo-product-table-80a01b7acbeaa448d3d51a59321711b1
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f4494a0f-57fb-4ed7-8fdc-85b5dcee6549?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: subscribe-sidebar
+id: subscribe-sidebar-2c355c46ce3b6d886ae4dfa5b91b369b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b403b1f3-cc04-48fb-b2ae-c6c234fad29f?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: shiftnav-responsive-mobile-menu
+id: shiftnav-responsive-mobile-menu-dd2e0f1f2d24d3ef3cf095d76e552370
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/36b71a50-270a-4960-bf31-e888df84e619?source=api-scan
   classification:
     cvss-metrics: 

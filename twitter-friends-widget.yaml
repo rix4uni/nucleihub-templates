@@ -1,4 +1,4 @@
-id: twitter-friends-widget
+id: twitter-friends-widget-34f105a17ec88a805745398e7f7462a6
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/4888a1dc-ed12-41c0-910b-6c9740a54ef0?source=api-scan
   classification:
     cvss-metrics: 

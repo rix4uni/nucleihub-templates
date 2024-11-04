@@ -1,18 +1,18 @@
-id: wp-vertical-image-slider
+id: wp-vertical-image-slider-725201887f3e60d345849ceb830f272f
 
 info:
-  name: >
-    wordpress vertical image slider plugin <= 1.2.16 - Reflected Cross-Site Scripting
+  name: "wordpress vertical image slider plugin < 1.2 - Cross-Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    
+  description: "The wordpress vertical image slider plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘imagetitle’ and ‘imageurl’ parameters in versions up to, and including, 1.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c9983364-9b52-4acc-91d4-b352c6d24d52?source=api-scan
+    - https://packetstormsecurity.com/files/133615/
+    - https://plugins.trac.wordpress.org/changeset/1250596
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-wordpress-vertical-image-slider-multiple-vulnerabilities-1-0/
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/wp-vertical-image-slider/"
     google-query: inurl:"/wp-content/plugins/wp-vertical-image-slider/"
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.16')
+          - compare_versions(version, '< 1.2')

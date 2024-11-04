@@ -1,4 +1,4 @@
-id: shortcode-for-font-awesome
+id: shortcode-for-font-awesome-3e874e482fd8cb9e242ff7bf9921235b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c8d06b5d-43b8-4dae-abe9-abe07a63528e?source=api-scan
   classification:
     cvss-metrics: 

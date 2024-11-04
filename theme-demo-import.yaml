@@ -1,4 +1,4 @@
-id: theme-demo-import
+id: theme-demo-import-34b6055809ae0ea8a6c080d425a1ba71
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a9636b15-1259-4c6e-8691-b1d573ef0417?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: popup-contact-form
+id: popup-contact-form-2d0af1f6462c2dfcc27eaf1701787aff
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/47eb6ca7-049c-41b8-9210-391d4d1b8b2f?source=api-scan
   classification:
     cvss-metrics: 

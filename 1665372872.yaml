@@ -1,6 +1,6 @@
 id: crestron-ctp
 info:
-  name: Crestron PRO2 automation system text ui
+  name: Crestron $1 automation system text ui
   author: nmap,cn-kali-team
   tags: detect,tech,crestron-ctp,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: crestron-ctp
     type: regex
     regex:
-    - ^\r\nPRO2 Control Console\r\n
+    - ^\r?\n?[-\w]+ Control Console\r\n\r\n?([-\w_.]+)>

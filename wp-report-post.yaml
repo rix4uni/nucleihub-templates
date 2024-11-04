@@ -1,4 +1,4 @@
-id: wp-report-post
+id: wp-report-post-39ba34834d4b1ca1d4da8dba846a3950
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8dae13e5-cee7-4392-af71-7d466ba6f6c4?source=api-scan
   classification:
     cvss-metrics: 

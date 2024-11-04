@@ -1,15 +1,15 @@
-id: woffice-core
+id: woffice-core-74decc1b5c0157a82e71ac13eca70ba2
 
 info:
   name: >
-    Woffice Core <= 5.4.8 - Missing Authorization
+    Woffice Core <= 5.4.8 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/43daaaf7-8086-448a-be99-ee1959ef0fb4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f07957b3-27cb-4a5e-a8bb-2bca72f8eecf?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/woffice-core/"
     google-query: inurl:"/wp-content/plugins/woffice-core/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woffice-core,high
+  tags: cve,wordpress,wp-plugin,woffice-core,medium
 
 http:
   - method: GET

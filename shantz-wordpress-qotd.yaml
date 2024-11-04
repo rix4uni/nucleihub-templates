@@ -1,4 +1,4 @@
-id: shantz-wordpress-qotd
+id: shantz-wordpress-qotd-d94dba6f1acc3720d09831527e46a80a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e31bf122-e3b0-43d4-afff-f3baf3aa53e6?source=api-scan
   classification:
     cvss-metrics: 

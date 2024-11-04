@@ -6,21 +6,20 @@ info:
   severity: info
   metadata:
     hostname: $1
-    info: MSA support
-    operating_system: Windows
+    info: 'timezone: $2'
     product: mdaemon
-    rarity: 0
-    vendor: altn
+    rarity: 8
+    vendor: alt-n
     verified: true
-    version: $2
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220[ -]([-\w_.]+) ESMTP MSA MDaemon ([\d.]+);
+    - ^220 ([\w.-]+) ESMTP \w\w\w, \d\d \w\w\w \d\d\d\d [\d:]{8} ([-+]?\d\d\d\d)\r\n550 Invalid or missing command argument\(s\)\r\n

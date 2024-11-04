@@ -1,14 +1,17 @@
 id: rtsp
 info:
-  name: AXIS 207W or 212 PTZ network camera rtspd
+  name: Wowza Streaming Engine rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
-    device_type: webcam
     fallback:
     - get-request
+    product: wowza_streaming_engine
     rarity: 5
+    vendor: wowza
+    verified: true
+    version: $1 build $2
 tcp:
 - name: rtsprequest
   inputs:
@@ -20,4 +23,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nPublic: DESCRIBE, GET_PARAMETER, PAUSE, PLAY, SETUP, SET_PARAMETER, TEARDOWN\r\n\r\n$'
+    - '^RTSP/1\.0 200 OK\r\nSupported: play\.basic, con\.persistent\r\nCseq: 0\r\nServer: Wowza Streaming Engine ([\w._-]+) build(\d+)\r\nPublic: DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, OPTIONS, ANNOUNCE, RECORD, GET_PARAMETER\r\nCache-Control: no-cache\r\n\r\n$'

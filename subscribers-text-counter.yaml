@@ -1,4 +1,4 @@
-id: subscribers-text-counter
+id: subscribers-text-counter-d36c6c9917a1b5672a0ef61c808ff27a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a548e71f-4f36-4a29-8293-474e119f09cc?source=api-scan
   classification:
     cvss-metrics: 

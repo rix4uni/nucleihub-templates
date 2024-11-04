@@ -1,4 +1,4 @@
-id: peters-random-anti-spam-image
+id: peters-random-anti-spam-image-fedbb89525f5d8d51c252afae7e6e290
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2f257c92-1529-49c8-a140-567ba5c36d04?source=api-scan
   classification:
     cvss-metrics: 

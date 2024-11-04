@@ -1,23 +1,21 @@
-id: ebay-feeds-for-wordpress
+id: ebay-feeds-for-wordpress-494cd6b5c352e8ad8af98d622e5530dd
 
 info:
-  name: >
-    WP eBay Product Feeds <= 3.3.1 - Authenticated (Administrator+) Stored Cross-Site Scripting
+  name: "WP eBay Product Feeds <= 3.3.1 - Authenticated (Administrator+) Stored Cross-Site Scripting"
   author: topscoder
-  severity: low
-  description: >
-    
+  severity: medium
+  description: "The WP eBay Product Feeds plugin for WordPress is vulnerable to Stored Cross-Site Scripting via its settings parameters in versions up to, and including, 3.3.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c4d552a7-499f-4946-b0ec-5f733c01a365?source=api-scan
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2850937%40ebay-feeds-for-wordpress%2Ftrunk&old=2726056%40ebay-feeds-for-wordpress%2Ftrunk&sfp_email=&sfph_mail=#file0
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 5.5
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/ebay-feeds-for-wordpress/"
     google-query: inurl:"/wp-content/plugins/ebay-feeds-for-wordpress/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ebay-feeds-for-wordpress,low
+  tags: cve,wordpress,wp-plugin,ebay-feeds-for-wordpress,medium
 
 http:
   - method: GET

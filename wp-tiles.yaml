@@ -1,14 +1,15 @@
-id: wp-tiles
+id: wp-tiles-a408ed2317b0315cc11d12d2b3031c37
 
 info:
   name: >
-    WP Tiles <= 1.1.2 - Authenticated(Subscriber+) Sensitive Information Exposure
+    WP Tiles <= 1.1.2 - Authenticated(Contributor+) Stored Cross-Site Scripting via shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/efaef405-9721-4fb6-bcb4-4bd4f78742fd?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5d128197-802c-48fb-8782-eb4e10126e55?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

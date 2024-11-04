@@ -1,14 +1,15 @@
-id: wp-fusion-lite
+id: wp-fusion-lite-07737f3f503066971b9bccc08e7531a9
 
 info:
   name: >
-    WP Fusion Lite <= 3.37.18 – Reflected Cross-Site Scripting
+    WP Fusion Lite – Marketing Automation and CRM Integration for WordPress <= 3.42.10 - Information Exposure
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/651df16c-2472-4124-90a3-69b98e478ed3?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1b245791-6aac-4ee3-9278-5b7c01f13263?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-fusion-lite/"
     google-query: inurl:"/wp-content/plugins/wp-fusion-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-fusion-lite,medium
+  tags: cve,wordpress,wp-plugin,wp-fusion-lite,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.37.18')
+          - compare_versions(version, '<= 3.42.10')

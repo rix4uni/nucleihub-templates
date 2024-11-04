@@ -1,4 +1,4 @@
-id: posts-like-dislike
+id: posts-like-dislike-1991e693aad5e74cc5a6dbd874d82d79
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8babc42a-c45c-423f-bd09-da7afb947691?source=api-scan
   classification:
     cvss-metrics: 

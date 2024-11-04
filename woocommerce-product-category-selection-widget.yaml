@@ -1,4 +1,4 @@
-id: woocommerce-product-category-selection-widget
+id: woocommerce-product-category-selection-widget-b3ef49144bce5b7d1aadad9a05bd3db7
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8f68c70b-9fde-43a6-8a7c-00938aa0e109?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,10 +1,11 @@
 id: pop3
 info:
-  name: InterMail pop3d
+  name: Quick 'n Easy pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK InterMail POP3 server ready\.\r\n
+    - ^\+OK Quick 'n Easy Mail Server ready\r\n

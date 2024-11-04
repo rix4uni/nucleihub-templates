@@ -1,4 +1,4 @@
-id: woocommerce-help-scout
+id: woocommerce-help-scout-176d65273e08465c9b16a1ad57cec77f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/5f98f4b3-8cce-45dd-a138-5f2c8031fab5?source=api-scan
   classification:
     cvss-metrics: 

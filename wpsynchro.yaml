@@ -1,14 +1,15 @@
-id: wpsynchro
+id: wpsynchro-94318fb3d3137aafba91e4d0cbb2c4f1
 
 info:
   name: >
-    WP Migration Plugin DB & Files – WP Synchro <= 1.9.1 - Cross-Site Request Forgery
+    WP Migration Plugin DB & Files – WP Synchro <= 1.11.2 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f1b6f041-5ea6-48ca-9ca7-4ce96cbfa275?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fe9659ff-7233-44d4-aaff-ad3089511a67?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.9.1')
+          - compare_versions(version, '<= 1.11.2')

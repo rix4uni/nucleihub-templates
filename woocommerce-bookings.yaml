@@ -1,14 +1,15 @@
-id: woocommerce-bookings
+id: woocommerce-bookings-a9ad7d62c09b1ba0f7e4148da69bef80
 
 info:
   name: >
-    WooCommerce Bookings <= 2.0.3 - Cross-Site Request Forgery
+    WooCommerce Bookings <= 1.15.78 - Insecure Direct Object Reference
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a54841af-65ce-4434-a67e-79ea673ec8f9?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2b365fb8-7a93-4306-b2b1-ce47dc19457a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/woocommerce-bookings/"
     google-query: inurl:"/wp-content/plugins/woocommerce-bookings/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woocommerce-bookings,medium
+  tags: cve,wordpress,wp-plugin,woocommerce-bookings,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.3')
+          - compare_versions(version, '<= 1.15.78')

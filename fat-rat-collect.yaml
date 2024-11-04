@@ -1,4 +1,4 @@
-id: fat-rat-collect
+id: fat-rat-collect-53fbd725230db6170eaa32c77e44d562
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/279cebb5-4be4-485a-92c7-e0bcc961f93e?source=api-scan
   classification:
     cvss-metrics: 

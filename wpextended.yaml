@@ -1,15 +1,15 @@
-id: wpextended
+id: wpextended-a2b149f2d5703f489bf82b331eacb4d5
 
 info:
   name: >
-    The Ultimate WordPress Toolkit – WP Extended <= 2.4.7 - Unauthenticated Stored Cross-Site Scripting
+    The Ultimate WordPress Toolkit – WP Extended <= 3.0.8 - Directory Traversal to Authenticated (Subscriber+) Arbitrary File Download
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b825f4c2-8373-4aba-ab01-880cf0553b54?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0fad1834-0ee1-4542-a5a7-55a32861c81d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wpextended/"
     google-query: inurl:"/wp-content/plugins/wpextended/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wpextended,high
+  tags: cve,wordpress,wp-plugin,wpextended,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.7')
+          - compare_versions(version, '<= 3.0.8')

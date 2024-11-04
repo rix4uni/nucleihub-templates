@@ -1,49 +1,59 @@
-id: wordpress-wp-file-manager
+id: wp-file-manager-ec285d2d6c4e0896c988504fde36e466
 
 info:
-  name: File Manager Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    File Manager <= 3.0 - Unauthenticated Arbitrary File Upload/Download
+  author: topscoder
+  severity: critical
+  description: >
+    The  File Manager plugin for WordPress is vulnerable to authorization bypass due to a missing capability check in the /inc/root.php file in versions up to, and including, 3.0. This makes it possible for unauthenticated attackers to download arbitrary files from the server and upload arbitrary files that can be used for remote code execution.
   reference:
-    - https://wordpress.org/plugins/wp-file-manager/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a56d5a2f-ae13-4523-bc4a-17bb2fb4c6f0?source=api-prod
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id: 
   metadata:
-    plugin_namespace: wp-file-manager
-    wpscan: https://wpscan.com/plugin/wp-file-manager
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/wp-file-manager/"
+    google-query: inurl:"/wp-content/plugins/wp-file-manager/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,wp-file-manager,critical
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/wp-file-manager/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/wp-file-manager.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "wp-file-manager"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100efde78df3993543d37dd0f65db14cacc8005f04c6ee9781debfb44673364d848022064ceddcb271b06282f1f367650d1d0726ef7e0f2cbb49cfb1d04d089ec9e855f:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 3.0')

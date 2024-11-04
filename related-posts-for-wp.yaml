@@ -1,18 +1,16 @@
-id: related-posts-for-wp
+id: related-posts-for-wp-a9fc287236da6eb2cbf9f0a6c7f083d6
 
 info:
-  name: >
-    Related Posts for WordPress < 1.8.2 - Reflected Cross-Site Scripting
+  name: "Related Posts for WordPress <= 2.1.1 - Reflected Cross-Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    The Related Posts for WordPress plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, not including, 1.8.2 due to insufficient input sanitization and output escaping. The same vulnerability exists in Related Posts Premium up to, not including, 1.3.4. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
+  description: "The Related Posts for WordPress plugin is vulnerable to Reflected Cross-Site Scripting due to the use of unsanitized user input when constructing a URL in versions up to, and including, 2.1.1. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. This is unlikely to work in newer browsers."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4f32d1fe-17ea-48c0-b276-36c8fcaad4a6?source=api-prod
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2792848%40related-posts-for-wp%2Ftrunk&old=2786285%40related-posts-for-wp%2Ftrunk&sfp_email=&sfph_mail=#file0
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/related-posts-for-wp/"
     google-query: inurl:"/wp-content/plugins/related-posts-for-wp/"
@@ -55,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.8.2')
+          - compare_versions(version, '<= 2.1.1')

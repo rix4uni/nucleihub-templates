@@ -1,4 +1,4 @@
-id: social-sharing-toolkit
+id: social-sharing-toolkit-8b0db7156873702bdc12cab20cd09570
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/6594b5ba-57e4-4ef1-93b9-ac1e90ed13be?source=api-scan
   classification:
     cvss-metrics: 

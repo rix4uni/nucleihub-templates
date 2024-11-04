@@ -1,4 +1,4 @@
-id: rough-chart
+id: rough-chart-602bf6bc7f492cd38ee7c2181340c8a8
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/d7c0b933-469e-4f8b-94b2-8823568c5d45?source=api-scan
   classification:
     cvss-metrics: 

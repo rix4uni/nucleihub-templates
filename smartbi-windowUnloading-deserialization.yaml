@@ -1,4 +1,4 @@
-id: smartbi-windowunloading-deserialization
+id: smartbi-windowUnloading-deserialization
 
 info:
   name: smartbi - Deserialization vulnerability in the windowunloading interface
@@ -8,6 +8,7 @@ info:
     Smartbi Deserialization vulnerability in the windowunloading interface.
   reference:
     - https://stack.chaitin.com/techblog/detail?id=122
+    - https://mp.weixin.qq.com/s/TtwRRQwuhYGVHheJPb1Xag
   tags: smartbi
 
 http:

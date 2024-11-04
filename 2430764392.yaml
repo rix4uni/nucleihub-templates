@@ -1,13 +1,17 @@
 id: ssh
 info:
-  name: SrSshServer
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: sshlib $2; protocol $1
+    info: protocol $1; HPN-SSH patch $3
+    operating_system: DragonFlyBSD
+    product: openssh
     rarity: 0
-    version: $3
+    vendor: openbsd
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +22,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - '^SSH-([\d.]+)-([\w._-]+) sshlib: sshlibSrSshServer ([\w._-]+)\r\n'
+    - ^SSH-([\d.]+)-OpenSSH_([\w.]+)[-_]hpn(\w+) DragonFly-

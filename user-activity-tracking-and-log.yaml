@@ -1,4 +1,4 @@
-id: user-activity-tracking-and-log
+id: user-activity-tracking-and-log-48df4bacb7f3568e85060ed7dff1f1cf
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/420f56de-4c83-4c9f-933c-0422467bbc7a?source=api-scan
   classification:
     cvss-metrics: 

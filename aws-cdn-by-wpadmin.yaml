@@ -1,4 +1,4 @@
-id: aws-cdn-by-wpadmin
+id: aws-cdn-by-wpadmin-975bccdb766488fb23747f51954fe8b7
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/7b039c23-51d4-422a-a57b-59abaeca682c?source=api-scan
   classification:
     cvss-metrics: 

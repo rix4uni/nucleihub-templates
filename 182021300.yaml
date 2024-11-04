@@ -1,11 +1,15 @@
 id: ldap
 info:
-  name: Nortel CallPilot LDAP
+  name: Lotus Domino 6.x LDAP
   author: nmap,cn-kali-team
   tags: detect,tech,ldap,service
   severity: info
   metadata:
+    info: access denied
+    product: lotus_domino
     rarity: 6
+    vendor: ibm
+    verified: true
 tcp:
 - name: ldapbind-req
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: ldap
     type: regex
     regex:
-    - ^0\x1a\x02\x01\x01a\x15\n\x01\0\x04\0\x04\x0eanonymous bind
+    - ^0\.\x02\x01\x01a\)\n\x010\x04\0\x04\"Failed, anonymous bind not allowed$

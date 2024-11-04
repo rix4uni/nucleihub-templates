@@ -1,14 +1,14 @@
 id: smtp
 info:
-  name: Novonyx Novell NetMail smtpd
+  name: CommuniGate Pro mail server
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    product: netmail
+    product: communigate_pro
     rarity: 0
-    vendor: novell
+    vendor: stalker
     verified: true
     version: $2
 tcp:
@@ -21,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - '^220 ([-.+\w]+) Novonyx SMTP ready \$Re..sion: *([\d.]+) *\$\r\n'
+    - ^220 ([-.\w]+) ESMTP CommuniGate Pro (\d[-.\w]+) is glad to see you!\r\n

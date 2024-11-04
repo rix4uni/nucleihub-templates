@@ -1,49 +1,56 @@
-id: wordpress-complianz-gdpr
+id: complianz-gdpr-16022b20d3dcb407f1909f705bc37713
 
 info:
-  name: Complianz – GDPR/CCPA Cookie Consent Detection
-  author: ricardomaia
-  severity: info
+  name: "Complianz - GDPR/CCPA Cookie Consent <= 6.4.4 - Cross-Site Request Forgery via ajax_delete_snapshot"
+  author: topscoder
+  severity: medium
+  description: "The Complianz - GDPR/CCPA Cookie Consent plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 6.4.4. This is due to missing or incorrect nonce validation on the ajax_delete_snapshot function. This makes it possible for unauthenticated attackers to delete arbitrary files in the complianz 'snapshots' folder via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://wordpress.org/plugins/complianz-gdpr/
+    - https://plugins.trac.wordpress.org/changeset?old_path=%2Fcomplianz-gdpr%2Ftags%2F6.4.4&old=2911698&new_path=%2Fcomplianz-gdpr%2Ftags%2F6.4.5&new=2911698&sfp_email=&sfph_mail=
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L
+    cvss-score: 5.4
+    cve-id:
   metadata:
-    plugin_namespace: complianz-gdpr
-    wpscan: https://wpscan.com/plugin/complianz-gdpr
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/complianz-gdpr/"
+    google-query: inurl:"/wp-content/plugins/complianz-gdpr/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,complianz-gdpr,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/complianz-gdpr/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/complianz-gdpr.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "complianz-gdpr"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402205da8c1aa1b0b68db52300caa2e9858f9b34be7597046d8092d355f4db1e5dd9e0220208387071921540f297f98b35263eb8c671307fe44d1e910ae523b269f51f330:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 6.4.4')

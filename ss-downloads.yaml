@@ -1,4 +1,4 @@
-id: ss-downloads
+id: ss-downloads-13e894a5c32f4aed183a19f794d1f179
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3871b908-a9a1-4c35-8a8d-d1a609db475a?source=api-scan
   classification:
     cvss-metrics: 

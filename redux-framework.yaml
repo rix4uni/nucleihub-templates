@@ -1,49 +1,61 @@
-id: wordpress-redux-framework
+id: redux-framework-faefbeaf7e92eabdc4138bd43ee4a066
 
 info:
-  name: Redux Framework Detection
-  author: ricardomaia
-  severity: info
+  name: "Gutenberg Template and Pattern Library & Redux Framework <= 4.1.20 - Cross-Site Request Forgery"
+  author: topscoder
+  severity: high
+  description: "The Gutenberg Template and Pattern Library & Redux Framework plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 4.1.20. This is due to missing or incorrect nonce validation on the save() function. This makes it possible for unauthenticated attackers to modify settings via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://wordpress.org/plugins/redux-framework/
+    - https://plugins.trac.wordpress.org/changeset/2395813/redux-framework/trunk/redux-core/inc/classes/class-redux-admin-notices.php
+    - https://plugins.trac.wordpress.org/changeset/2395813/redux-framework/trunk/redux-core/inc/classes/class-redux-ajax-save.php
+    - https://github.com/reduxframework/redux-framework-4/pull/160/files
+    - https://www.searchenginejournal.com/redux-plugin-vulnerability/391007/#close
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-gutenberg-template-library-redux-framework-cross-site-request-forgery-4-1-20/
+    - https://web.archive.org/web/20210115211235/https%3A//security.devsoftin.com/blog/2020/11/23/exploiting-vulnerability-in-logical-operators-isset-anything/
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id:
   metadata:
-    plugin_namespace: redux-framework
-    wpscan: https://wpscan.com/plugin/redux-framework
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/redux-framework/"
+    google-query: inurl:"/wp-content/plugins/redux-framework/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,redux-framework,high
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/redux-framework/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/redux-framework.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "redux-framework"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100c90ba0f4a3eb0e3596b51af41bce31e73bc17c225807a892e1873249c334896602204a44a1d40cd9c11c590555a09cfe9d349b9ff544c0df56608333c1e13f45f9b7:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 4.1.20')

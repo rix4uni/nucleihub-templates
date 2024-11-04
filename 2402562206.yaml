@@ -1,13 +1,13 @@
 id: http-proxy
 info:
-  name: iPlanet web proxy
+  name: tinyproxy http proxy
   author: nmap,cn-kali-team
   tags: detect,tech,http-proxy,service
   severity: info
   metadata:
-    product: iplanet_web_server
+    product: tinyproxy
     rarity: 0
-    vendor: sun
+    vendor: banu
     verified: true
     version: $1
 tcp:
@@ -20,4 +20,4 @@ tcp:
   - name: http-proxy
     type: regex
     regex:
-    - '(?i)^HTTP/1\.[01] \d\d\d .*\r\n(?:Server|Proxy-agent): iPlanet-Web-Proxy-Server/([\d.]+)\r\n'
+    - '^HTTP/1\.0 408 Timeout\r\nServer: tinyproxy/([\w._-]+)\r\nContent-Type: text/html\r\nConnection: close\r\n\r\n'

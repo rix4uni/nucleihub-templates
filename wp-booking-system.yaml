@@ -1,14 +1,15 @@
-id: wp-booking-system
+id: wp-booking-system-2e9fdbf19f3d51d9f6d247d78b23b645
 
 info:
   name: >
-    WP Booking System Free version < 1.5.2 - Cross-Site Request Forgery
+    WP Booking System <= 2.0.19.10 - Missing Authorization via wpbs_refresh_calendar_editor
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/843822f0-dd4c-4ae6-823d-96dd7a59df8e?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a8a05986-46e2-49eb-b196-d5c36b03a394?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-booking-system/"
     google-query: inurl:"/wp-content/plugins/wp-booking-system/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-booking-system,medium
+  tags: cve,wordpress,wp-plugin,wp-booking-system,high
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.5.2')
+          - compare_versions(version, '<= 2.0.19.10')

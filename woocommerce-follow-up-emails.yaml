@@ -1,14 +1,15 @@
-id: woocommerce-follow-up-emails
+id: woocommerce-follow-up-emails-02532099d04dce0c530075b4f782c76f
 
 info:
   name: >
-    WooCommerce Follow-Up Emails <= 4.9.40 - Reflected Cross-Site Scripting
+    WooCommerce Follow-Up Emails <= 4.9.40 - Authenticated Arbitrary File Upload in Template Editing
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4487391e-baa4-4320-a23d-b52a42e2de90?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a169934d-17ce-4d34-be00-c5ac0b488066?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/woocommerce-follow-up-emails/"
     google-query: inurl:"/wp-content/plugins/woocommerce-follow-up-emails/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woocommerce-follow-up-emails,medium
+  tags: cve,wordpress,wp-plugin,woocommerce-follow-up-emails,low
 
 http:
   - method: GET

@@ -1,49 +1,58 @@
-id: wordpress-jetpack
+id: jetpack-30941ee2523ad0b6eab5ba5173b1fab0
 
 info:
-  name: Jetpack – WP Security, Backup, Speed, & Growth Detection
-  author: ricardomaia
-  severity: info
+  name: "Jetpack <= 3.5.2 - Cross-Site Scripting"
+  author: topscoder
+  severity: high
+  description: "The Jetpack plugin for WordPress, in versions up to 3.5.2, is vulnerable to DOM based Cross-Site Scripting via the file genericons/example.html. This vulnerability allowed unauthenticated users to execute JavaScript in a visitor's browser provided they were able to trick them into clicking on a carefully crafted link. Executing JavaScript in an administrative user was possible if the victim was logged on to the affected site as an administrator."
   reference:
-    - https://wordpress.org/plugins/jetpack/
+    - https://blog.sucuri.net/2015/05/jetpack-and-twentyfifteen-vulnerable-to-dom-based-xss-millions-of-wordpress-websites-affected-millions-of-wordpress-websites-affected.html
+    - https://vulners.com/wpexploit/WPEX-ID%3A2765D571-059B-4D6F-948C-3CA7B9FEBCDC
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-jetpack-wp-security-backup-speed-growth-cross-site-scripting-3-5-2/
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 7.2
+    cve-id:
   metadata:
-    plugin_namespace: jetpack
-    wpscan: https://wpscan.com/plugin/jetpack
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/jetpack/"
+    google-query: inurl:"/wp-content/plugins/jetpack/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,jetpack,high
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/jetpack/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/jetpack.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "jetpack"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a0047304502210089e6ebced9ac86789db9ad7210d6f76777cff6829aee5a216e55923bb5366c3302206df11900235ab4a9a222afb13a02136e21b54f3b3c16fb091f3dbbc9c13b6792:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 3.5.2')

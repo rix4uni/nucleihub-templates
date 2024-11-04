@@ -1,18 +1,18 @@
-id: area53
+id: area53-e32369078271787c04ab4706a1bfb34e
 
 info:
-  name: >
-    AREA53 <= 1.0.5 - Arbitrary File Upload
+  name: "AREA53 <= 1.0.5 - Arbitrary File Upload"
   author: topscoder
   severity: critical
-  description: >
-    The AREA53 Theme for WordPress is vulnerable to arbitrary file uploads due to missing file type validation via the php.php file in versions up to, and including, 1.0.5. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected sites server which may make remote code execution possible.
+  description: "The AREA53 Theme for WordPress is vulnerable to arbitrary file uploads due to missing file type validation via the php.php file in versions up to, and including, 1.0.5. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected sites server which may make remote code execution possible."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b8652b40-480c-4d53-b1c8-e1dcfbd8a4a4?source=api-prod
+    - https://en.0day.today/exploits/21442
+    - https://web.archive.org/web/20140502034252/https%3A//www.securityfocus.com/bid/63306/
+    - https://themeforest.net/item/area53-a-responsive-html5-wordpress-theme/2538737
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 9.8
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/themes/area53/"
     google-query: inurl:"/wp-content/themes/area53/"

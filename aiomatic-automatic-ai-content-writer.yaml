@@ -1,15 +1,15 @@
-id: aiomatic-automatic-ai-content-writer
+id: aiomatic-automatic-ai-content-writer-d1ada30f1be583cdc6da7a02651471a9
 
 info:
   name: >
-    Aiomatic <= 1.9.3 - Missing Authorization
+    AIomatic - Automatic AI Content Writer <= 2.0.5 - Unauthenticated Arbitrary Email Sending
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/01170186-3384-494b-83d3-86ba3cf74837?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/be5be40f-89da-4b97-9a85-527602d84c4d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/aiomatic-automatic-ai-content-writer/"
     google-query: inurl:"/wp-content/plugins/aiomatic-automatic-ai-content-writer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,aiomatic-automatic-ai-content-writer,high
+  tags: cve,wordpress,wp-plugin,aiomatic-automatic-ai-content-writer,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.9.3')
+          - compare_versions(version, '<= 2.0.5')

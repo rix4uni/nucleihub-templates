@@ -1,4 +1,4 @@
-id: post-hit-counter
+id: post-hit-counter-9aa0ad7609d629dab6cdd2ebed900041
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/4049f8fb-ad81-4f09-97b3-39ac6a9275d6?source=api-scan
   classification:
     cvss-metrics: 

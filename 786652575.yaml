@@ -1,11 +1,12 @@
 id: pop3
 info:
-  name: qpopper pop3d
+  name: POPFile pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 server ready\r\n$
+    - ^\+OK POP3 POPFile \(v(\d[-.\w]+)\) server ready\r\n

@@ -1,4 +1,4 @@
-id: sitemap-index
+id: sitemap-index-cfa41474351932f32e2db601c15270c8
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/40005aed-07aa-44da-a06e-0187931105ec?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: wp-image-carousel
+id: wp-image-carousel-ee79bd840d0f54b417cb444a7b15624f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/0f4bb514-80bd-4d66-a60f-0a6a287af5de?source=api-scan
   classification:
     cvss-metrics: 

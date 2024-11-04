@@ -1,12 +1,16 @@
 id: nntp
 info:
-  name: Microsoft NNTP Service
+  name: Microsoft Exchange Internet News Service
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    operating_system: Windows 2000
+    info: $2
+    operating_system: Windows
+    product: exchange_server
     rarity: 0
+    vendor: microsoft
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -18,4 +22,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - '^200 NNTP-service ([\w._-]+) Version: [\w._-]+ Posting Allowed \r\n'
+    - ^20[01] Microsoft Exchange Internet News Service Version (\d\.\d\.[\d.]+) \((.*)\)\r\n

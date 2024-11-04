@@ -1,13 +1,11 @@
 id: telnet
 info:
-  name: Siemens $1 T1E1 router
+  name: Versatek VersaXpress HPNA Routing Concentrator telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: router
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +16,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\r\nSiemens \d+ T1E1 \[COMBO\] Router \(([-\d]+)\) v([\d.]+) Ready\r\n\xff\xfb\x01\xff\xfb\x03\xff\xfd\x01\xff\xfe\x01Username: '
+    - ^\xff\xfb\x01\xff\xfd\x03\xff\xfb\x03\x1b\[0m\x1b\[2J\x1b\[01;00H\r\n\r\0\r\n\r\0[ \t]+\r\n\r\0\r\n\r\0\r\0VersaXpress HPNA Routing Concentrator\r\n

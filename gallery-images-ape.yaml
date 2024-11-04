@@ -1,23 +1,21 @@
-id: gallery-images-ape
+id: gallery-images-ape-e96747b53e3223633c5010b7aa6bbcc0
 
 info:
-  name: >
-    Gallery Images Ape <= 2.2.8 - Authenticated (Contributor+) Cross-Site Scripting
+  name: "Gallery Images Ape <= 2.0.6 - Authenticated Plugin Deactivation"
   author: topscoder
-  severity: low
-  description: >
-    
+  severity: high
+  description: "The Gallery Images Ape plugin for WordPress is vulnerable to Arbitrary Plugin Deactivation in versions up to, and including, 2.0.6. This allows authenticated attackers with any capability level to deactivate any plugin on the site, including plugins necessary to site functionality or security."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/78e35c10-2480-4b23-8f5c-a196ccdc71f2?source=api-scan
+    - https://blog.nintechnet.com/wordpress-ape-gallery-plugin-fixed-authenticated-arbitrary-plugin-deactivation-vulnerability/
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H
+    cvss-score: 7.6
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/gallery-images-ape/"
     google-query: inurl:"/wp-content/plugins/gallery-images-ape/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,gallery-images-ape,low
+  tags: cve,wordpress,wp-plugin,gallery-images-ape,high
 
 http:
   - method: GET
@@ -55,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2.8')
+          - compare_versions(version, '< 2.0.7')

@@ -1,14 +1,12 @@
 id: finger
 info:
-  name: OpenLDAP fingerd
+  name: Lexmark T642 printer fingerd
   author: nmap,cn-kali-team
   tags: detect,tech,finger,service
   severity: info
   metadata:
-    product: openldap
+    device_type: printer
     rarity: 0
-    vendor: openldap
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: finger
     type: regex
     regex:
-    - ^OpenLDAP Finger Service\.\.\.\r\n
+    - '^\r\nIntegrated port\r\nPrinter Type: Lexmark T642\r\nPrint Job Status:'

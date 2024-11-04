@@ -1,14 +1,15 @@
-id: jeg-elementor-kit
+id: jeg-elementor-kit-890e5d7bb2d815b66d00fc359ad7802a
 
 info:
   name: >
-    Jeg Elementor Kit <= 2.6.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via HTML Tags
+    Jeg Elementor Kit <= 2.6.5 - Authenticated (Contributor+) Stored Cross-Site Scripting via JKit - Tabs and JKit - Accordion Widgets
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d108cb36-c072-483e-9746-15b8e7a880c3?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c6048ba9-671f-4729-9618-d7a0556a31e6?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.6.2')
+          - compare_versions(version, '<= 2.6.5')

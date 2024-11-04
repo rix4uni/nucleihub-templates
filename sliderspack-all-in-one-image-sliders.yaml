@@ -1,4 +1,4 @@
-id: sliderspack-all-in-one-image-sliders
+id: sliderspack-all-in-one-image-sliders-a02d5253a086dd8368089185b359e88a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/fb5cb7ce-127a-4f9a-b52e-1e957560ca55?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: pondol-formmail
+id: pondol-formmail-8db9fc72d5c79b747cd8d4c468ce6fec
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/72c5fd31-f457-494a-a160-1f64366e3e63?source=api-scan
   classification:
     cvss-metrics: 

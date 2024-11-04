@@ -1,4 +1,4 @@
-id: shopping-pages
+id: shopping-pages-9e4b9048b98e2cdbdbb1c3f4269e909b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/0f20c7d3-8987-4dc0-9d97-98a29adbab85?source=api-scan
   classification:
     cvss-metrics: 

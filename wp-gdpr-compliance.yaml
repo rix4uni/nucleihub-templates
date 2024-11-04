@@ -1,23 +1,23 @@
-id: wp-gdpr-compliance
+id: wp-gdpr-compliance-2dc21fef23eca745f1c91bfcf6263fa5
 
 info:
-  name: >
-    Cookie Information | Free GDPR Consent Solution <= 1.5.5 - Stored Cross-Site Scripting
+  name: "Cookie Information | Free GDPR Consent Solution <= 1.5.5 - Stored Cross-Site Scripting"
   author: topscoder
-  severity: high
-  description: >
-    The Cookie Information | Free GDPR Consent Solution plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘$ipAddress’ parameter in versions up to, and including, 1.5.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
+  severity: medium
+  description: "The Cookie Information | Free GDPR Consent Solution plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘$ipAddress’ parameter in versions up to, and including, 1.5.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/79a574c4-1faf-4572-801c-00b50923a669?source=api-prod
+    - https://vavkamil.cz/2021/02/16/wp-gdpr-compliance-unauthenticated-xss/
+    - https://wpscan.com/vulnerability/69655879-9fd5-49a3-96ce-81e43b8d8438
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-wp-gdpr-compliance-cross-site-scripting-1-5-5/
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:N
     cvss-score: 4.7
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/wp-gdpr-compliance/"
     google-query: inurl:"/wp-content/plugins/wp-gdpr-compliance/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-gdpr-compliance,high
+  tags: cve,wordpress,wp-plugin,wp-gdpr-compliance,medium
 
 http:
   - method: GET

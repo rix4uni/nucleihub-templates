@@ -1,51 +1,59 @@
-id: wordpress-cloudflare
+id: cloudflare-813885f510407428ca10712c4e07c5cf
 
 info:
-  name: Cloudflare Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Cloudflare < 1.3.21 - Cross-Site Scripting
+  author: topscoder
+  severity: high
+  description: >
+    The Cloudflare plugin for WordPress is vulnerable to Cross-Site Scripting via several parameters in versions before 1.3.21 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://wordpress.org/plugins/cloudflare/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b8d63789-16b3-443b-8dcb-67b1e5e25d20?source=api-prod
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L
+    cvss-score: 7.1
+    cve-id: 
   metadata:
-    max-request: 1
-    plugin_namespace: cloudflare
-    wpscan: https://wpscan.com/plugin/cloudflare
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/cloudflare/"
+    google-query: inurl:"/wp-content/plugins/cloudflare/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,cloudflare,high
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/cloudflare/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/cloudflare.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "cloudflare"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
 
-# digest: 4a0a0047304502206af67ea4f42abaa5502cb4658bc23c50fc338969d390bbd6e8db8fe435f35d0e022100e16997f81c7f455228104c0f30fc83ceee7a33fc053f08a09d741325ebb0dfe5:922c64590222798bb761d5b6d8e72950
+      - type: dsl
+        dsl:
+          - compare_versions(version, '< 1.3.21')

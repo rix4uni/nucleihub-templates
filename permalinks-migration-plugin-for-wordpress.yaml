@@ -1,4 +1,4 @@
-id: permalinks-migration-plugin-for-wordpress
+id: permalinks-migration-plugin-for-wordpress-574d85b56c8c6badaf403f6203aab14c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ab0cc008-be18-4703-8156-acb00c1ac9a7?source=api-scan
   classification:
     cvss-metrics: 

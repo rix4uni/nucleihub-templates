@@ -1,12 +1,15 @@
 id: mysql
 info:
-  name: Drizzle
+  name: MySQL
   author: nmap,cn-kali-team
   tags: detect,tech,mysql,service
   severity: info
   metadata:
+    info: unauthorized; French
+    product: mysql
     rarity: 0
-    version: $1
+    vendor: mysql
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: mysql
     type: regex
     regex:
-    - (?i)^.\0\0\0\x0a([\w._-]+)\0............\0\x5f\xd3\x2d\x02\0\0\0\0\0\0\0\0\0\0\0\0\0\0............\0$
+    - ^.\0\0\0\xff..Le h\xf4te '[-.\w]+' n'est pas authoris\xe9 \xe0 se connecter \xe0 ce serveur MySQL$

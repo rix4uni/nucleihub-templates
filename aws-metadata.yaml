@@ -2,8 +2,8 @@ id: aws-metadata
 
 info:
   name: AWS Metadata
-  author: h0tak88r
-  severity: info
+  author: notnotnotveg
+  severity: informative
 
 requests:
   - method: GET

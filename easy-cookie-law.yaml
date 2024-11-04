@@ -1,4 +1,4 @@
-id: easy-cookie-law
+id: easy-cookie-law-936eafeb2ab8ddee0cab3f0861304ef0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/40487921-b9eb-4a18-b6f5-194611d2ef82?source=api-scan
   classification:
     cvss-metrics: 

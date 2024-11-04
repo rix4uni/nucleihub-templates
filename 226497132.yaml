@@ -1,12 +1,14 @@
 id: ftp-proxy
 info:
-  name: AVM KEN! ftp proxy
+  name: Frox ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    hostname: $1
+    product: frox
     rarity: 0
+    vendor: james_hollingshead
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 ([\w._-]+), KEN! FTP-Gateway\r\n
+    - ^220 Frox transparent ftp proxy\. Login with username\[@host\[:port\]\]\r\n

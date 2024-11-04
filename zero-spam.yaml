@@ -1,18 +1,20 @@
-id: zero-spam
+id: zero-spam-80de8060a2644dcebfac2e99b4cffa20
 
 info:
-  name: >
-    WordPress Zero Spam <= 2.1.1 - SQL Injection
+  name: "WordPress Zero Spam <= 2.1.1 - SQL Injection"
   author: topscoder
   severity: critical
-  description: >
-    The WordPress Zero Spam plugin for WordPress is vulnerable to Blind SQL Injection in versions up to, and including, 2.1.1 due to insufficient escaping on the user supplied Client-IP header parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.
+  description: "The WordPress Zero Spam plugin for WordPress is vulnerable to Blind SQL Injection in versions up to, and including, 2.1.1 due to insufficient escaping on the user supplied Client-IP header parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/af7345f9-6f62-424b-b02d-c145a90508ae?source=api-prod
+    - https://github.com/bmarshall511/wordpress-zero-spam/commit/269ac79aa199da629208190a24114c5551b77c71
+    - https://github.com/bmarshall511/wordpress-zero-spam/issues/135
+    - https://github.com/bmarshall511/wordpress-zero-spam/pull/138
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-zero-spam-sql-injection-2-1-2/
+    - https://wpscan.com/vulnerability/44cc8d59-9b45-46b7-afaf-894e4ba62dd5
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 9.8
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/zero-spam/"
     google-query: inurl:"/wp-content/plugins/zero-spam/"

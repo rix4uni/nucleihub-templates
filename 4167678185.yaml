@@ -1,12 +1,12 @@
 id: smtp
 info:
-  name: Smail
+  name: Winmail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - '^220[- ][^ ]+ Smail-([^ ]+) '
+    - ^220 [-\w_.]+ Winmail Mail Server ESMTP ready\r\n

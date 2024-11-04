@@ -1,14 +1,15 @@
-id: woocommerce-shipping-multiple-addresses
+id: woocommerce-shipping-multiple-addresses-d5fbf5e9f0d8248991c002fb4298ca01
 
 info:
   name: >
-    WooCommerce Ship to Multiple Addresses <= 3.8.5 - Cross-Site Request Forgery
+    WooCommerce Ship to Multiple Addresses <= 3.8.5 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bda44801-6599-459d-a70c-164f563bf158?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b0ac43ba-cc49-4688-9efa-585551f3c40c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

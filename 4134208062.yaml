@@ -1,12 +1,16 @@
 id: pop3
 info:
-  name: Eudora Internet Mail Server pop3d
+  name: IceWarp pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
+    info: x64
+    product: mail_server
     rarity: 0
+    vendor: icewarp
+    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -18,4 +22,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-.\w]+) running Eudora Internet Mail Server (\d[-.\w]+) <.*>\r\n
+    - ^\+OK ([\w._-]+) IceWarp ([\w._-]+) x64 POP3 \w+, \d+ \w+ \d+ \d+:\d+:\d+ [+-]\d+ <[\w._-]+@[\w._-]+>\r\n

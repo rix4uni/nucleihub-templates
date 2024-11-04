@@ -1,4 +1,4 @@
-id: pressference-exporter
+id: pressference-exporter-05df7f818d3b81181d50e6cdb2233927
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c12ba39f-03bc-4a45-b2f4-368f48c0a57b?source=api-scan
   classification:
     cvss-metrics: 

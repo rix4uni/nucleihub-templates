@@ -1,4 +1,4 @@
-id: video-slider-with-thumbnails
+id: video-slider-with-thumbnails-9183fdebb835b88d6b445703dfa7423a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8cfbad9f-61ba-4216-9078-c1e7e809899a?source=api-scan
   classification:
     cvss-metrics: 

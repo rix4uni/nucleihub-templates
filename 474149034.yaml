@@ -1,12 +1,14 @@
 id: domain
 info:
-  name: Nominum Vantio $1
+  name: PowerDNS Recursor
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
+    product: recursor
     rarity: 1
-    version: $2
+    vendor: powerdns
+    verified: true
 tcp:
 - name: dnsversion-bind-req
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}Nominum Vantio (\w+) ([\d\.]+)$
+    - (?i)\x07version\x04bind\0\0\x10\0[\x01\x03]\xc0\x0c\0\x10\0[\x01\x03].{7}PowerDNS Recursor$

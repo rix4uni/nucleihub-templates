@@ -1,14 +1,15 @@
-id: real-media-library-lite
+id: real-media-library-lite-79f3994d3a1e3a6fae02ed627270177e
 
 info:
   name: >
-    Real Media Library: Media Library Folder & File Manager <= 4.18.28 - Authenticated (Author+) Stored Cross-Site Scripting
+    Real Media Library: Media Library Folder & File Manager <= 4.22.7 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/950d71ae-29a1-4b71-b74a-b1a5c9f3326e?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/67a44d4c-da3f-4c3d-997b-1417c6906a9c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.18.28')
+          - compare_versions(version, '<= 4.22.7')

@@ -1,4 +1,4 @@
-id: wonderplugin-pdf-embed
+id: wonderplugin-pdf-embed-54a106e3674c62d74c74f5b86f05b900
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1d8331ce-666d-4d5a-b9cd-08562e3eea43?source=api-scan
   classification:
     cvss-metrics: 

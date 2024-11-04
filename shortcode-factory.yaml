@@ -1,14 +1,15 @@
-id: shortcode-factory
+id: shortcode-factory-bb8c7d13ad5dab028e9d0d3a3d2621e1
 
 info:
   name: >
-    Shortcode Factory <= 2.7 - Local File Inclusion
+    Shortcode Factory <= 1.1 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b829b7a1-2891-402b-a48f-a7fb1202448e?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a90e1628-3490-4aac-9e82-b3b9692813f0?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/shortcode-factory/"
     google-query: inurl:"/wp-content/plugins/shortcode-factory/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,shortcode-factory,critical
+  tags: cve,wordpress,wp-plugin,shortcode-factory,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.7')
+          - compare_versions(version, '<= 1.1')

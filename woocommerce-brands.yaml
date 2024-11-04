@@ -1,4 +1,4 @@
-id: woocommerce-brands
+id: woocommerce-brands-a14f40214c9feb9c1b2c6608b0d425ef
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/accdcff0-f361-4632-b0b7-e55975adeebb?source=api-scan
   classification:
     cvss-metrics: 

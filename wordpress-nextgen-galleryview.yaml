@@ -1,14 +1,15 @@
-id: wordpress-nextgen-galleryview
+id: wordpress-nextgen-galleryview-9a21a4e93f5e7f3460704eb270d168b3
 
 info:
   name: >
-    NextGen GalleryView <= 0.5.5 - Cross-Site Request Forgery
+    NextGen GalleryView <= 0.5.5 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/052ea3af-96d8-4e83-b4e7-3db30b556d0d?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/043ed446-3af3-4d90-8da7-b1fe73e06bba?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

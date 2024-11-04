@@ -1,4 +1,4 @@
-id: staff-directory-pro
+id: staff-directory-pro-c68d9513576d8cfae36e730894c421b9
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/5971447d-0634-49a5-91d0-c4f0c0825a86?source=api-scan
   classification:
     cvss-metrics: 

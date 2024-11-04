@@ -1,4 +1,4 @@
-id: page-views-count
+id: page-views-count-2d3a3a6965147c18af494b7797fa51d6
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/895d882b-f4ca-4837-9d8e-aca04c3fb9e3?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: vospari-forms
+id: vospari-forms-e9bd69dbdf78833ce2843fc07cba7b74
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3bb4a3f3-495d-4ece-9436-9c317688982c?source=api-scan
   classification:
     cvss-metrics: 

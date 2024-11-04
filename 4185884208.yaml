@@ -1,16 +1,15 @@
 id: ftp
 info:
-  name: FileZilla ftpd
+  name: pSOSystem ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: filezilla_server
+    hostname: $1
+    info: PowerPC; build date $3
+    operating_system: pSOS
     rarity: 0
-    vendor: filezilla-project
-    verified: true
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - (?i)^220.*\r\n220[- ]FileZilla Server version (\d[-.\w ]+)\r\n
+    - ^220 ([\w._-]+) pSOSystem FTP server \(@\(#\)\(#\)pVER IA/PPC, Version ([\w._ -]+), Built on ([\d/]+)\) ready\.\r\n

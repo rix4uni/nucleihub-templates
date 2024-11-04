@@ -1,14 +1,15 @@
-id: smart-donations
+id: smart-donations-c9fdff37330ec773a452af9922b07317
 
 info:
   name: >
-    Donations Made Easy – Smart Donations <= 4.0.12 - Unauthenticated Stored Cross-Site Scripting
+    Donations Made Easy – Smart Donations <= 4.0.12 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/799975aa-44fe-48dc-8ac9-469c89a03c67?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/92aae1f6-e624-4619-8195-ee3c443a31fc?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

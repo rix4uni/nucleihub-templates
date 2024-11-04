@@ -1,11 +1,11 @@
 id: netbios-ns
 info:
-  name: MikroTik router netbios-ns
+  name: WinCE netbios-ns
   author: nmap,cn-kali-team
   tags: detect,tech,netbios-ns,service
   severity: info
   metadata:
-    device_type: router
+    operating_system: Windows CE
     rarity: 4
 tcp:
 - name: nbtstat
@@ -18,4 +18,4 @@ tcp:
   - name: netbios-ns
     type: regex
     regex:
-    - ^\x80\xf0\x85\x80\0\x01\0\0\0\0\0\0 CKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\0\0!\0\x01\0\0\0\0...\d+\.\d+ \0D\0\0\0
+    - ^\x80\xf0\x84\0\0\0\0\x01\0\0\0\0 CKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\0\0!\0\x01\0\0\0\0...\0\x80H'y\x86\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0

@@ -1,4 +1,4 @@
-id: yith-woocommerce-account-funds-premium
+id: yith-woocommerce-account-funds-premium-90fadae0592814128dc4f5d00fdd8df2
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/bbd0fb22-a39c-43f5-a93c-976b7e49967b?source=api-scan
   classification:
     cvss-metrics: 

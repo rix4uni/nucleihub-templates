@@ -1,23 +1,23 @@
-id: leaguemanager
+id: leaguemanager-9cfa7a5beb1428a631c3e8e85fafde51
 
 info:
-  name: >
-    LeagueManager <= 3.7 - Multiple Cross-Site Scripting
+  name: "LeagueManager < 4.0.5 - SQL Injection"
   author: topscoder
-  severity: high
-  description: >
-    
+  severity: critical
+  description: "The LeagueManager plugin for WordPress is vulnerable to SQL Injection via the ‘match_id’ and 'league_id' parameters in versions before 4.0.5 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/535af5fa-891b-4d21-ab13-c4ef68dd339b?source=api-scan
+    - https://packetstormsecurity.com/files/132123/
+    - https://wordpress.org/plugins/leaguemanager/#developers
+    - https://wordpress.org/support/topic/responding-to-security-problems-and-credit/
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/leaguemanager/"
     google-query: inurl:"/wp-content/plugins/leaguemanager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,leaguemanager,high
+  tags: cve,wordpress,wp-plugin,leaguemanager,critical
 
 http:
   - method: GET
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.7')
+          - compare_versions(version, '< 4.0.5')

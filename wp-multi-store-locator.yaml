@@ -1,4 +1,4 @@
-id: wp-multi-store-locator
+id: wp-multi-store-locator-551c78eb348370f4b28b6fd728df7369
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b9da31ff-4173-4aee-a3a6-8eebaa0d71ab?source=api-scan
   classification:
     cvss-metrics: 

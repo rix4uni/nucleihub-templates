@@ -9,7 +9,7 @@ info:
     rarity: 6
     vendor: openldap
     verified: true
-    version: 2.2.X - 2.3.X
+    version: 2.4.X
 tcp:
 - name: ldapbind-req
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: ldap
     type: regex
     regex:
-    - ^0E\x02\x01\x01a@\n\x01\x02\x04\0\x049historical protocol version requested, use LDAPv3 instead
+    - ^0\x84\0\0\0I\x02\x01\x01a\x84\0\0\0@\n\x01\x02\x04\0\x049historical protocol version requested, use LDAPv3 instead$

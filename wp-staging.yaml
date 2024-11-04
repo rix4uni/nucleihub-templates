@@ -1,14 +1,15 @@
-id: wp-staging
+id: wp-staging-03229f62ce36f793b13e4769c55a57dc
 
 info:
   name: >
-    WP STAGING WordPress Backup Plugin < 3.2.0 - Sensitive Information Exposure via cache files
+    WP STAGING WordPress Backup Plugin – Migration Backup Restore <= 3.4.3 - Authenticated (Admin+) Arbitrary File Upload
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fe8816d8-1687-4a3c-9f2a-23f21d679cc5?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8ebb1072-ea05-4914-961d-0d8f20248078?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.2.0')
+          - compare_versions(version, '<= 3.4.3')

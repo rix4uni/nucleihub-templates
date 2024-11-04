@@ -1,14 +1,17 @@
 id: pop3
 info:
-  name: Merak Mail Server pop3d
+  name: Microsoft Exchange pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
+    hostname: $2
     operating_system: Windows
+    product: exchange_server
     rarity: 0
-    version: $2
+    vendor: microsoft
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +22,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-\w_.]+) [-\w_.]+ Mail Server ([\d.]+) POP3 .*\d:\d\d:\d\d \+
+    - ^\+OK Microsoft Exchange POP3 server version ([\d.]+) ready  <[\d.]+@([-\w_.]+)>\r\n

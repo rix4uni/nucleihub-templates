@@ -1,4 +1,4 @@
-id: slickr-flickr
+id: slickr-flickr-7148e8622f7bd02c3912771941154b1c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/86d3ff76-49be-4517-a62e-7522e26479b7?source=api-scan
   classification:
     cvss-metrics: 

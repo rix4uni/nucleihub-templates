@@ -1,15 +1,15 @@
-id: truebooker-appointment-booking
+id: truebooker-appointment-booking-0cb6fb12e166f6598b66402766bb2c64
 
 info:
   name: >
-    TrueBooker <= 1.0.2 - Unauthenticated SQL Injection
+    TrueBooker <= 1.0.2 - Cross-Site Request Forgery to Settings Update
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/971d40d2-428f-49d9-8918-89843980f177?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cf3d2b0f-667f-469e-a1de-3be213cd7007?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/truebooker-appointment-booking/"
     google-query: inurl:"/wp-content/plugins/truebooker-appointment-booking/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,truebooker-appointment-booking,critical
+  tags: cve,wordpress,wp-plugin,truebooker-appointment-booking,medium
 
 http:
   - method: GET

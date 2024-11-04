@@ -1,4 +1,4 @@
-id: thanks-you-counter-button
+id: thanks-you-counter-button-7f78b9773261a8cba2f93634b19d1a14
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/4a984bd8-ca43-4676-9985-b111111c17ab?source=api-scan
   classification:
     cvss-metrics: 

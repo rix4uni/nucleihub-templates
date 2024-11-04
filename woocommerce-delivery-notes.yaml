@@ -1,14 +1,15 @@
-id: woocommerce-delivery-notes
+id: woocommerce-delivery-notes-4a7e13a7c3c4102b8d5d50e6a2362ae0
 
 info:
   name: >
-    Multiple Plugins by tychesoftwares <= (Various Versions) - Missing Authorization to Notice Dismissal
+    Print Invoice & Delivery Notes for WooCommerce <= 4.7.2 - Cross-Site Request Forgery via ts_reset_tracking_setting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8a07d293-4c50-4be0-955f-b7c4a0eaef4b?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d811782e-3b59-4a46-9a2e-f24ef3dfbd4a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/woocommerce-delivery-notes/"
     google-query: inurl:"/wp-content/plugins/woocommerce-delivery-notes/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woocommerce-delivery-notes,high
+  tags: cve,wordpress,wp-plugin,woocommerce-delivery-notes,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.8.1')
+          - compare_versions(version, '<= 4.7.2')

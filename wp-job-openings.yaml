@@ -1,14 +1,15 @@
-id: wp-job-openings
+id: wp-job-openings-af2c35f9ce7ba3572d5127d1db8fe3a7
 
 info:
   name: >
-    WP Job Openings <= 3.4.2 - Information Exposure
+    WP Job Openings <= 3.4.1 - Missing Authorization
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/334be95c-438a-4e03-9ee4-9a6d2c2fa5f7?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0753bd90-0f1a-4efa-9cbd-7cc80d91e84f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-job-openings/"
     google-query: inurl:"/wp-content/plugins/wp-job-openings/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-job-openings,low
+  tags: cve,wordpress,wp-plugin,wp-job-openings,high
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.4.2')
+          - compare_versions(version, '<= 3.4.1')

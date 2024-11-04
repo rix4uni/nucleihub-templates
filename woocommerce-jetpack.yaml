@@ -1,18 +1,17 @@
-id: woocommerce-jetpack
+id: woocommerce-jetpack-8ed005f8312b9c14da01346593d0f521
 
 info:
-  name: >
-    Booster (<= 6.0.0), Booster Plus (<= 6.0.0), and Booster Elite (<= 6.0.0) for WooCommerce - Cross-Site Request Forgery
+  name: "Booster for WooCommerce (Free <= 5.6.2 and Premium <= 5.6.0) - Authenticated (Subscriber+) Order Modification"
   author: topscoder
   severity: medium
-  description: >
-    
+  description: "The Booster for WooCommerce plugin for WordPress is vulnerable to order modification due to a missing capability/authorization check in versions up to, and including, 5.6.2 (free) or 5.6.0 (premium). This makes it possible for authenticated attackers, with subscriber-level permissions and above, to modify their own orders, which includes the ability to mark them as paid."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0af6e55d-def9-4bb1-ade9-56aa8184961c?source=api-scan
+    - https://patchstack.com/database/vulnerability/booster-plus-for-woocommerce/wordpress-booster-plus-for-woocommerce-premium-plugin-5-6-0-authenticated-order-status-update-vulnerability
+    - https://wpscan.com/vulnerability/0adced32-70e2-452d-b919-2c9bb7351624
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
+    cvss-score: 6.5
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/woocommerce-jetpack/"
     google-query: inurl:"/wp-content/plugins/woocommerce-jetpack/"
@@ -55,4 +54,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 6.0.0')
+          - compare_versions(version, '<= 5.6.2')

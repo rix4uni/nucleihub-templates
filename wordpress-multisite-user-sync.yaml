@@ -1,4 +1,4 @@
-id: wordpress-multisite-user-sync
+id: wordpress-multisite-user-sync-59dd0e2864ce21ea5a080177cc0fe877
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/4c6e444a-3737-46ab-b5e8-b0c1f215050a?source=api-scan
   classification:
     cvss-metrics: 

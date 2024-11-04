@@ -1,11 +1,11 @@
 id: ftp
 info:
-  name: ATAboy2X ftpd
+  name: ShareIt ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: storage-misc
+    device_type: PDA
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ATAboy2X-\d+ FTP V([\w._-]+) ready\n
+    - ^220 ShareIt FTP Server ([\d.]+) \(WINCE\) Ready\.\r\n

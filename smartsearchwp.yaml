@@ -1,15 +1,15 @@
-id: smartsearchwp
+id: smartsearchwp-205a111237fafc890b016922e1f7065e
 
 info:
   name: >
-    Chatbot with ChatGPT <= 2.4.4 - Unauthenticated Stored Cross-Site Scripting
+    Chatbot with ChatGPT  <= 2.4.5 - Missing Authorization to Unauthenticated OpenAI API Key Exposure
   author: topscoder
   severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/109a99ca-1173-4367-b8a7-c3d8cffcfcaf?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1f2cfb14-1076-492f-8a1b-ae04b47dc6fa?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.4')
+          - compare_versions(version, '<= 2.4.5')

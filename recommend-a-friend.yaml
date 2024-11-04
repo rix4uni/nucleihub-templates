@@ -1,4 +1,4 @@
-id: recommend-a-friend
+id: recommend-a-friend-562685e4af57c80e9573942d8c66558c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b8c66ddd-8a01-40e0-8893-668551b527d1?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,14 +1,15 @@
-id: wp-media-library-categories
+id: wp-media-library-categories-903b1f7c933a9d3f4b81cfe33b593514
 
 info:
   name: >
-    Media Library Categories <= 1.9.9 - Authenticated (Admin+) Stored Cross-Site Scripting
+    Media Library Categories <= 2.0.0 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d542c1e8-7e9f-4687-8739-0ebcb865b998?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/44982138-7ebb-4562-a869-f17bfecd16d2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.9.9')
+          - compare_versions(version, '<= 2.0.0')

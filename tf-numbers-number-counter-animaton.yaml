@@ -1,4 +1,4 @@
-id: tf-numbers-number-counter-animaton
+id: tf-numbers-number-counter-animaton-585bd9fd6a88a06d73e1f81d5d17b475
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/db6616b5-4c4e-4cc7-83eb-22fac94f47f2?source=api-scan
   classification:
     cvss-metrics: 

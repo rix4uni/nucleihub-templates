@@ -1,14 +1,15 @@
-id: wp-custom-fields-search
+id: wp-custom-fields-search-a5f3263eed0597146c2c2584d480b4df
 
 info:
   name: >
-    WP Custom Fields Search <= 1.2.34 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    WP Custom Fields Search <= 1.2.35 - Authenticated (Contributor+) Stored Cross-Site Scripting via wpcfs-preset Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ce106c3a-e99b-4182-84d8-8f896edbbefd?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ef36a2a1-b3be-4270-8890-76705817b4b5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.34')
+          - compare_versions(version, '<= 1.2.35')

@@ -1,11 +1,11 @@
 id: sip
 info:
-  name: X-Lite SIP phone
+  name: Tandberg VCS VoIP server
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: VoIP phone
+    device_type: VoIP adapter
     fallback:
     - get-request
     rarity: 5
@@ -21,4 +21,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: X-Lite release ([\w._ -]+)\r\n'
+    - '(?i)^SIP/2\.0 \d\d\d .*Server: TANDBERG/(?:69|4098|4100) \(([\w._ -]+)\)\r\n'

@@ -1,4 +1,4 @@
-id: wp-plugin-manager
+id: wp-plugin-manager-921df181249bd59c9625c2dcc1df1b66
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/623decc5-bdb7-42c9-8531-8004ddc16682?source=api-scan
   classification:
     cvss-metrics: 

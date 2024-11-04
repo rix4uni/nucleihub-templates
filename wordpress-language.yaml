@@ -1,4 +1,4 @@
-id: wordpress-language
+id: wordpress-language-7a04dfac5ff879ee9a27e2783540d3cb
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/11fc48b0-cee2-4392-866b-5c0f366e5d98?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: whatsapp
+id: whatsapp-d2849c5a94eab99299abb9cd24dbee03
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/77911b0f-c028-49ae-b85e-15909d806e30?source=api-scan
   classification:
     cvss-metrics: 

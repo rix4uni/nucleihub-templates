@@ -1,4 +1,4 @@
-id: woo-tipdonation
+id: woo-tipdonation-df55c69b72dca731bb724ffc63747991
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/9ec83425-c756-450e-ac46-c897ad72714c?source=api-scan
   classification:
     cvss-metrics: 

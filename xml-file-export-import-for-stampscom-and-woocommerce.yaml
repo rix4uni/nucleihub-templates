@@ -1,4 +1,4 @@
-id: xml-file-export-import-for-stampscom-and-woocommerce
+id: xml-file-export-import-for-stampscom-and-woocommerce-0e7c6b52509d8bfd0e2b068d7ec9abcb
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/27ac48a7-52ee-46cb-a6d0-efbd2b516445?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: add-to-calendar-button
+id: add-to-calendar-button-b1ab851a1ed7965481e5b6c945b2d8dc
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/60ba7f68-1fe1-4349-a3eb-11a63ae11e38?source=api-scan
   classification:
     cvss-metrics: 

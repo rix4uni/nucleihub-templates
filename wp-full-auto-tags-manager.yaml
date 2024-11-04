@@ -1,4 +1,4 @@
-id: wp-full-auto-tags-manager
+id: wp-full-auto-tags-manager-4c934eda242d0419e3e635b91ae55277
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/5bf209b8-7c12-4fc3-af7f-4fd25777caab?source=api-scan
   classification:
     cvss-metrics: 

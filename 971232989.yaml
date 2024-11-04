@@ -1,15 +1,14 @@
 id: rtsp
 info:
-  name: Apple AirTunes rtspd
+  name: Y-cam HomeMonitor HD Pro rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
+    device_type: webcam
     fallback:
     - get-request
-    info: bandwidth maxed out
     rarity: 5
-    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 453 Not Enough Bandwidth\r\nServer: AirTunes/([\w._-]+)\r\n\r\n'
+    - '^RTSP/1\.0 200 OK\r\nCSeq: \r\nPublic: DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE\r\nServer: HomeMonitor HD Pro\r\n\r\n'

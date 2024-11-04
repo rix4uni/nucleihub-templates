@@ -1,12 +1,12 @@
 id: nntp
 info:
-  name: Colobus nntpd
+  name: Diablo nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
     hostname: $1
-    info: posting ok
+    operating_system: Unix
     rarity: 0
     version: $2
 tcp:
@@ -19,4 +19,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) - colobus ([\d.]+) ready - \(posting ok\)\.\r\n
+    - '^502 ([-\w_.]+): Transfer permission denied to [\d.]+ - [-\w_.@]+ \(DIABLO ([-\w_.]+)\)\r\n'

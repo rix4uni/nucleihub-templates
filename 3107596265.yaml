@@ -1,14 +1,12 @@
 id: ftp-proxy
 info:
-  name: Frox ftp proxy
+  name: CCProxy ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    product: frox
+    operating_system: Windows
     rarity: 0
-    vendor: james_hollingshead
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 Frox transparent ftp proxy\. Login with username\[@host\[:port\]\]\r\n
+    - '^220-CCProxy FTP Service\r\n220-you need to input userid@site as login name\.\r\n220 Example: user anonymous@ftp\.netscape\.com\r\n'

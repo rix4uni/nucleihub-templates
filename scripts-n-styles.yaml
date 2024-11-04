@@ -1,4 +1,4 @@
-id: scripts-n-styles
+id: scripts-n-styles-81973f7f30add346e2dc3285a0cc0f7d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a86d8f97-54dc-4c6b-92c0-05a8625cc073?source=api-scan
   classification:
     cvss-metrics: 

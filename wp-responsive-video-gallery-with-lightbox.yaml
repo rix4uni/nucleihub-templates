@@ -1,4 +1,4 @@
-id: wp-responsive-video-gallery-with-lightbox
+id: wp-responsive-video-gallery-with-lightbox-4efb64b85896db248a3009b15c2811ba
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e88bb3a8-de24-46fb-a3e4-9ca3fdd4cca7?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,23 +1,21 @@
-id: beautiful-and-responsive-cookie-consent
+id: beautiful-and-responsive-cookie-consent-f546b6b73b7ee19c4134867c08dcab8b
 
 info:
-  name: >
-    Beautiful Cookie Consent Banner <= 2.9.0 - Authenticated (Admin+) Stored Cross-Site Scripting
+  name: "Beautiful Cookie Consent Banner <= 2.10.0 - Missing Authorization to Settings Update"
   author: topscoder
-  severity: low
-  description: >
-    
+  severity: high
+  description: "The Beautiful Cookie Consent Banner plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the nsc_bar_save_submitted_form_fields() function called via and admin_init hook in versions up to, and including, 2.10.0. This makes it possible for unauthenticated attackers to modify the plugin's settings and inject malicious web scripts. Please note this is still vulnerable to Cross-Site Request Forgery attacks."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dd1b6b89-6c3c-4956-aa99-798ce186eb97?source=api-scan
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2857982%40beautiful-and-responsive-cookie-consent&new=2857982%40beautiful-and-responsive-cookie-consent&sfp_email=&sfph_mail=
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L
+    cvss-score: 7.3
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/beautiful-and-responsive-cookie-consent/"
     google-query: inurl:"/wp-content/plugins/beautiful-and-responsive-cookie-consent/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,beautiful-and-responsive-cookie-consent,low
+  tags: cve,wordpress,wp-plugin,beautiful-and-responsive-cookie-consent,high
 
 http:
   - method: GET
@@ -55,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.9.0')
+          - compare_versions(version, '<= 2.10.0')

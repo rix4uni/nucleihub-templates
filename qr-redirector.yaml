@@ -1,4 +1,4 @@
-id: qr-redirector
+id: qr-redirector-1286e8f48e3ddb3ca25b0601ade43bd5
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/bc2ee795-39e5-48c2-ac2a-cfc520bdd857?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: simple-security
+id: simple-security-a6b3b1ffbdd0bf0e3799a1e02b9d985c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2b346ae7-e3aa-4728-8dd9-e77fc388576e?source=api-scan
   classification:
     cvss-metrics: 

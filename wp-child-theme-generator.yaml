@@ -1,14 +1,15 @@
-id: wp-child-theme-generator
+id: wp-child-theme-generator-a641e23c775f6a8b60e0e2560d072dd7
 
 info:
   name: >
-    WP Child Theme Generator <= 1.1.0 - Authenticated (Administrator+) Arbitrary File Upload
+    WP Child Theme Generator <= 1.1.1 - Missing Authorization to Unauthenticated Child Theme Creation/Activation
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/49fcd2cb-d880-4152-a736-33fd90f07083?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/581e6686-a103-43f6-aa99-6a9862d98837?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-child-theme-generator/"
     google-query: inurl:"/wp-content/plugins/wp-child-theme-generator/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-child-theme-generator,low
+  tags: cve,wordpress,wp-plugin,wp-child-theme-generator,high
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.0')
+          - compare_versions(version, '<= 1.1.1')

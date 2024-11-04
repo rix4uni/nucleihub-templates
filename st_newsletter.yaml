@@ -1,4 +1,4 @@
-id: st_newsletter
+id: st_newsletter-06d1c7e09e9834aed347b62ce7221b3c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/60242725-200e-4794-acdc-2ab4a1e8e4fc?source=api-scan
   classification:
     cvss-metrics: 

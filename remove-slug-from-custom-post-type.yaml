@@ -1,4 +1,4 @@
-id: remove-slug-from-custom-post-type
+id: remove-slug-from-custom-post-type-4aee93eec44557f647dc14ca325eefe6
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/77cb14b1-d9e5-4296-ad8c-6642327ef310?source=api-scan
   classification:
     cvss-metrics: 

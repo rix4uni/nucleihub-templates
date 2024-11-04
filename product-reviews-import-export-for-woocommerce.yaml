@@ -1,14 +1,15 @@
-id: product-reviews-import-export-for-woocommerce
+id: product-reviews-import-export-for-woocommerce-cf2aff9667687b735727fe71f11f3375
 
 info:
   name: >
-    WebToffee Plugins <= (Various Versions) - Arbitrary User Creation
+    Product Reviews Import Export for WooCommerce <= 1.4.8 - CSV Injection
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/27ac48a7-52ee-46cb-a6d0-efbd2b516445?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e6650eb7-143f-4c8f-b18f-056fc82972fc?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.3.3')
+          - compare_versions(version, '<= 1.4.8')

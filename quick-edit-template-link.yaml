@@ -1,4 +1,4 @@
-id: quick-edit-template-link
+id: quick-edit-template-link-dc10fbe08be0296b48eb5718d44aa80e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8da0fed9-4b88-4b68-b317-124fe678cfa4?source=api-scan
   classification:
     cvss-metrics: 

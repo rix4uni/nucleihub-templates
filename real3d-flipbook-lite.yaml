@@ -1,14 +1,15 @@
-id: real3d-flipbook-lite
+id: real3d-flipbook-lite-4d053dea297968bd3c11230aa8d1ac60
 
 info:
   name: >
-    3D FlipBook, PDF Viewer, PDF Embedder – Real 3D FlipBook WordPress Plugin <= 3.62 - Reflected Cross-Site Scripting
+    3D FlipBook, PDF Viewer, PDF Embedder – Real 3D FlipBook WordPress Plugin <= 3.71 - Authenticated (Author+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c496a5f8-9cfc-49b3-b360-d942d554b860?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/929ec66c-a4b2-4846-8330-65fd0e595e58?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/real3d-flipbook-lite/"
     google-query: inurl:"/wp-content/plugins/real3d-flipbook-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,real3d-flipbook-lite,medium
+  tags: cve,wordpress,wp-plugin,real3d-flipbook-lite,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.62')
+          - compare_versions(version, '<= 3.71')

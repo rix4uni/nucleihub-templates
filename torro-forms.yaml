@@ -1,4 +1,4 @@
-id: torro-forms
+id: torro-forms-32b2e2ff95bce6c610720879796f4bca
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1e9641e2-fe33-4e22-895e-7974b4da6866?source=api-scan
   classification:
     cvss-metrics: 

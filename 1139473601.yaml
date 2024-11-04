@@ -1,11 +1,14 @@
 id: pop3
 info:
-  name: Openwall popa3d
+  name: Dovecot pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    product: dovecot
     rarity: 0
+    vendor: dovecot
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK\r\n$
+    - \+OK E-mail server ready\.\r\n

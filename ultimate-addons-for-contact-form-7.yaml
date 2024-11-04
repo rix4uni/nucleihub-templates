@@ -1,14 +1,15 @@
-id: ultimate-addons-for-contact-form-7
+id: ultimate-addons-for-contact-form-7-5ed2db34684463722f6aeee2145b6b0a
 
 info:
   name: >
-    Ultimate Addons for Contact Form 7 <= 3.1.0 - Reflected Cross-Site Scripting via 'page'
+    Ultimate Addons for Contact Form 7 <= 3.1.23 - Unauthenticated SQL Injection via form_id
   author: topscoder
-  severity: medium
+  severity: critical
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d857324c-94c9-471a-9da8-0b8c9bb50262?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f10e5eef-1ccf-4f98-b0e9-5ed05b3881a6?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ultimate-addons-for-contact-form-7/"
     google-query: inurl:"/wp-content/plugins/ultimate-addons-for-contact-form-7/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ultimate-addons-for-contact-form-7,medium
+  tags: cve,wordpress,wp-plugin,ultimate-addons-for-contact-form-7,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.1.0')
+          - compare_versions(version, '<= 3.1.23')

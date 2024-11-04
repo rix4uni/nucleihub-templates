@@ -1,14 +1,15 @@
-id: wp-cirrus
+id: wp-cirrus-411a378f22a1a6af169e368f8522997a
 
 info:
   name: >
-    WP-Cirrus <= 0.6.11 - Cross-Site Request Forgery
+    WP-Cirrus <= 0.6.11 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/710aa0fd-34e2-4f0e-b354-0722d9692410?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4cab3c9c-39c6-4279-9573-858b0592c3fa?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-cirrus/"
     google-query: inurl:"/wp-content/plugins/wp-cirrus/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-cirrus,medium
+  tags: cve,wordpress,wp-plugin,wp-cirrus,low
 
 http:
   - method: GET

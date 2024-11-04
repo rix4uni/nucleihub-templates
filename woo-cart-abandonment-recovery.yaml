@@ -1,49 +1,59 @@
-id: wordpress-woo-cart-abandonment-recovery
+id: woo-cart-abandonment-recovery-7dadc2d2ae314fd7bd464abf2969a4ea
 
 info:
-  name: WooCommerce Cart Abandonment Recovery Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    WooCommerce Cart Abandonment Recovery <= 1.2.26 - Cross-Site Request Forgery to Templates/Abandoned Orders Deletion
+  author: topscoder
+  severity: medium
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/woo-cart-abandonment-recovery/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6a466c8f-835d-4d37-a273-7b5689dfbcea?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: woo-cart-abandonment-recovery
-    wpscan: https://wpscan.com/plugin/woo-cart-abandonment-recovery
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/woo-cart-abandonment-recovery/"
+    google-query: inurl:"/wp-content/plugins/woo-cart-abandonment-recovery/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,woo-cart-abandonment-recovery,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/woo-cart-abandonment-recovery/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/woo-cart-abandonment-recovery.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "woo-cart-abandonment-recovery"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a004730450220234a6eaa0bfcdca36baa227f2933c958e6f0ad28e61cfadcc043c5acebbfa75e022100bdec4742bf5c8f4999cb6a3ef217715ff90416457c8af894458e9b0bb39e4705:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 1.2.26')

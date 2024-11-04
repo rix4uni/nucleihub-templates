@@ -1,4 +1,4 @@
-id: stop-referrer-spam
+id: stop-referrer-spam-6166d35dd139ea13065d016abd5d8f97
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a5deac61-031f-452a-a478-d5d0c7953817?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,11 +1,12 @@
 id: imap
 info:
-  name: Mirapoint imapd
+  name: Sun Solstice Internet Mail Server imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
     hostname: $1
+    operating_system: Unix
     rarity: 0
     version: $2
 tcp:
@@ -18,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([-\w_.]+) Mirapoint IMAP4 ([-\w.]+) server ready\r\n
+    - '^\* OK ([-/.+\w]+) Solstice \(tm\) Internet Mail Server \(tm\) (\d[-.\w]+) IMAP4 service - at '

@@ -1,14 +1,15 @@
-id: smartcrawl-seo
+id: smartcrawl-seo-ea8bfc664b1ec231204ef769647322a7
 
 info:
   name: >
-    SmartCrawl WordPress SEO checker, SEO analyzer, SEO optimizer <= 3.10.2 - Missing Authorization
+    SmartCrawl WordPress SEO checker, SEO analyzer, SEO optimizer <= 3.10.8 - Unauthenticated Full Path Disclosure
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9a77672b-340e-4f10-abe7-461c2db537b8?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4d357096-25da-4cbf-9c6c-261bf1b29a9f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/smartcrawl-seo/"
     google-query: inurl:"/wp-content/plugins/smartcrawl-seo/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,smartcrawl-seo,high
+  tags: cve,wordpress,wp-plugin,smartcrawl-seo,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.10.2')
+          - compare_versions(version, '<= 3.10.8')

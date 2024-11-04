@@ -1,4 +1,4 @@
-id: wordpress-tabs-slides
+id: wordpress-tabs-slides-be4418fb2f8f0622b5a1bb5cf01f9bd2
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/98ebcc70-58c3-4c9d-a1cd-776c159647ed?source=api-scan
   classification:
     cvss-metrics: 

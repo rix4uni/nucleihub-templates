@@ -1,17 +1,18 @@
-id: simple-custom-website-data
+id: simple-custom-website-data-985b5d5578305a737647d9dcac0d6701
 
 info:
   name: >
-    Custom Website Data <= 2.2 - Reflected Cross-Site Scripting
+    Custom Website Data < 1.1 - Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
-    
+    The Custom Website Data plugin for WordPress is vulnerable to Cross-Site Scripting via the 'ref' parameter in versions before 1.1 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/550a8107-f639-4edc-9aad-1943d032cc26?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f60fef0e-5b2d-4672-ab3d-21e4b6708f4a?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/simple-custom-website-data/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2')
+          - compare_versions(version, '< 1.1')

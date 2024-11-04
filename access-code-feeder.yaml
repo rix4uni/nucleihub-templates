@@ -1,4 +1,4 @@
-id: access-code-feeder
+id: access-code-feeder-8e4236f888a51af8e4c54d67f2301163
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/0a8127e5-b5e6-4545-9e38-f3fa9daabcf2?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,23 +1,22 @@
-id: vslider
+id: vslider-0be0a4f63adb92ae4208f6a727d13b8b
 
 info:
-  name: >
-    vSlider Multi Image Slider <= 4.1.2 - Missing Authorization
+  name: "vSlider Multi Image Slider <= 4.1.2 - Cross-Site Request Forgery"
   author: topscoder
-  severity: high
-  description: >
-    
+  severity: medium
+  description: "The vSlider Multi Image Slider plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 4.1.2. This is due to missing nonce validation on several functions such as vslider_admin_callback, vslider_images_callback, and vslider_generate_images_callback. This makes it possible for unauthenticated attackers to modify the plugin's settings, retrieve settings, and manipulate sliders via a forged request, granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f0c7324f-4c22-44e0-8d2a-9b95fd89467d?source=api-scan
+    - https://plugins.trac.wordpress.org/browser/vslider/trunk/classes/vslider.class.php
+    - https://plugins.trac.wordpress.org/browser/vslider/trunk/includes/functions.php
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L
+    cvss-score: 6.3
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/vslider/"
     google-query: inurl:"/wp-content/plugins/vslider/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,vslider,high
+  tags: cve,wordpress,wp-plugin,vslider,medium
 
 http:
   - method: GET

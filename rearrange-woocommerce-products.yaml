@@ -1,4 +1,4 @@
-id: rearrange-woocommerce-products
+id: rearrange-woocommerce-products-2701269be55f42136afa30d0caa5ce95
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/379aa658-ebc4-4000-913e-5f95a4783233?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,14 +1,15 @@
-id: print-o-matic
+id: print-o-matic-fba6aeaf09dddf13493fa04045be453b
 
 info:
   name: >
-    Print-O-Matic <= 2.1.10 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Print-O-Matic <= 2.1.10 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/706549d9-aa2f-4b1e-83b8-0eea38654565?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/10ea8f3a-35d6-494e-90f6-9165320cf99c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

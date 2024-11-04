@@ -1,13 +1,14 @@
 id: pop3
 info:
-  name: BorderWare firewall pop3d
+  name: Sun Solstice Internet Mail Server pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    device_type: firewall
     hostname: $1
+    operating_system: Unix
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Pop server at ([-\w_.]+) starting\.\r\n
+    - ^\+OK ([-\w_.]+) Solstice \(tm\) Internet Mail Server \(tm\) POP3 ([\d.]+)

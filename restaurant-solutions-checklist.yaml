@@ -1,4 +1,4 @@
-id: restaurant-solutions-checklist
+id: restaurant-solutions-checklist-b153f43461ec7d665d82838ed178c6d9
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8dca7f2e-f572-468a-8342-a6e096441561?source=api-scan
   classification:
     cvss-metrics: 

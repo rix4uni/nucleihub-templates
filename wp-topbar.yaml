@@ -1,23 +1,25 @@
-id: wp-topbar
+id: wp-topbar-27628df6076d5a1d6b094f150b593a9d
 
 info:
-  name: >
-    WP TopBar <= 5.36 - Cross Site Request Forgery
+  name: "WP-TopBar <= 4.02 - Cross-Site Request Forgery to Stored Cross-Site Scripting"
   author: topscoder
-  severity: low
-  description: >
-    
+  severity: medium
+  description: "The WP-TopBar plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 4.02. This is due to missing or incorrect nonce validation in the admin pages. This makes it possible for unauthenticated attackers to gain otherwise restricted access and perform subsequent Stored Cross-Site Scripting attacks via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7b1242fc-1bbf-4686-ba7d-d948336f65a3?source=api-scan
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-wp-topbar-cross-site-scripting-and-cross-site-request-forgery-vulnerabilities-4-02/
+    - https://wpscan.com/vulnerability/380bfdd2-5bb5-4416-9a5a-e037d0c2858a
+    - https://www.exploit-db.com/exploits/21393
+    - https://packetstormsecurity.com/files/116716/WordPress-Wp-TopBar-4.02-CSRF-XSS.html
+    - https://wordpress.org/plugins/wp-topbar/#developers
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/wp-topbar/"
     google-query: inurl:"/wp-content/plugins/wp-topbar/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-topbar,low
+  tags: cve,wordpress,wp-plugin,wp-topbar,medium
 
 http:
   - method: GET
@@ -55,4 +57,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.36')
+          - compare_versions(version, '<= 4.02')

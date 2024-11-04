@@ -1,4 +1,4 @@
-id: wpdm-gutenberg-blocks
+id: wpdm-gutenberg-blocks-055c2a59f216ef473b493c568e05a010
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f090e1f1-2713-4f3a-b908-9407c242fdf9?source=api-scan
   classification:
     cvss-metrics: 

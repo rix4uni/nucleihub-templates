@@ -1,4 +1,4 @@
-id: wpsimpletools-upload-limit
+id: wpsimpletools-upload-limit-67d5207c426a2fbd43b7cb0a3427a1fe
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/9b90bf09-639c-497c-a58e-3972250db1e4?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: order-auto-complete-for-woocommerce
+id: order-auto-complete-for-woocommerce-d52da6d8785fe0d333ad93221eb739c1
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/9521ad5b-83c3-487e-a69e-ca057777bc9e?source=api-scan
   classification:
     cvss-metrics: 

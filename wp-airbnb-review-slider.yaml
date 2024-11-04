@@ -1,4 +1,4 @@
-id: wp-airbnb-review-slider
+id: wp-airbnb-review-slider-2fe9724b0a06f384394467d10c3274aa
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/038d1144-81b8-4e4b-b0d5-60516f02dbdf?source=api-scan
   classification:
     cvss-metrics: 

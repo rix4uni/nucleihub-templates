@@ -1,4 +1,4 @@
-id: ps-phpcaptcha
+id: ps-phpcaptcha-63d11ed63756d407b391c7f4620c89c1
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b9ed7e26-34f0-4e5d-b560-03b1de9c5c95?source=api-scan
   classification:
     cvss-metrics: 

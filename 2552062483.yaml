@@ -1,11 +1,14 @@
 id: smtp
 info:
-  name: Barracuda Spam firewall
+  name: MgSMTP
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
+    hostname: $1
+    operating_system: Windows
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +19,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 SPAM, we hates it.\r\n
+    - ^220 ([\w._-]+) SMTP server ready \(MgSMTP ([\w._-]+)\)\r\n

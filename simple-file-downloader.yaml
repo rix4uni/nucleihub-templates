@@ -1,4 +1,4 @@
-id: simple-file-downloader
+id: simple-file-downloader-9bb144cabe2675a2469208720aedb678
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/9c29c110-87ed-47e3-919f-f6e98f703805?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,11 +1,12 @@
 id: donkey
 info:
-  name: MLDonkey multi-network P2P GUI port
+  name: Lugdunum eserver
   author: nmap,cn-kali-team
   tags: detect,tech,donkey,service
   severity: info
   metadata:
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +17,4 @@ tcp:
   - name: donkey
     type: regex
     regex:
-    - ^\xff\xfd\x1f[\r\n* ]+Welcome to MLdonkey          \r\n
+    - '^HTTP/1\.1 404 Not Found\r\nDate: .*\r\nServer: eserver ([\d.]+)\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nContent-Length: \d+\r\n\r\n<html><head><title>404 File not found - eserver is not a HTTP server</title>'

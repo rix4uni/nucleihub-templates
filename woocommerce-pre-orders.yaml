@@ -1,17 +1,18 @@
-id: woocommerce-pre-orders
+id: woocommerce-pre-orders-42ef888804cff58a605eb642b965ceec
 
 info:
   name: >
-    WooCommerce Pre-Orders <= 2.0.2 - Cross-Site Request Forgery to Order Cancellation
+    WooCommerce Pre-Orders <= 2.0.1 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
-    
+    The WooCommerce Pre-Orders plugin for WordPress is vulnerable to Reflected Cross-Site Scripting in versions up to, and including, 2.0.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/14e6e06c-edc0-44ef-ba07-50fcfc4fd7b1?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7f73d0a6-2eae-4d85-96ce-db5902bd6e3a?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/woocommerce-pre-orders/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.2')
+          - compare_versions(version, '<= 2.0.1')

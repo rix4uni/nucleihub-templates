@@ -1,11 +1,10 @@
 id: irc-proxy
 info:
-  name: psyBNC
+  name: dirkproxy
   author: nmap,cn-kali-team
   tags: detect,tech,irc-proxy,service
   severity: info
   metadata:
-    hostname: $1
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: irc-proxy
     type: regex
     regex:
-    - ^:.*!psyBNC@[-\w_.]+ NOTICE \* :psyBNC on ([-\w_.]+)\r\n
+    - ^:dirkproxy NOTICE AUTH :Looking up your hostname\.\.\.\r\n:dirkproxy NOTICE AUTH :Got your hostname\.\r\n

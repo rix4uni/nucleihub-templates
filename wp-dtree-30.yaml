@@ -1,14 +1,15 @@
-id: wp-dtree-30
+id: wp-dtree-30-d861529de27ca2bf282f971190846ae7
 
 info:
   name: >
-    WP-dTree <= 4.4.5 - Cross-Site Request Forgery
+    WP-dTree <= 4.4.5 - Authenticated (Administrator+) Stored Cross-Site Scripting via plugin settings
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/61808624-b2c7-4e86-b5a1-56f32fca9eaa?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cde92185-d63a-47b3-a17e-3f2b2b20270c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-dtree-30/"
     google-query: inurl:"/wp-content/plugins/wp-dtree-30/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-dtree-30,medium
+  tags: cve,wordpress,wp-plugin,wp-dtree-30,low
 
 http:
   - method: GET

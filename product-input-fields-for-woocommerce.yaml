@@ -1,18 +1,17 @@
-id: product-input-fields-for-woocommerce
+id: product-input-fields-for-woocommerce-9a3ca09635424f94d3861e1ff9bab7e9
 
 info:
-  name: >
-    Product Input Fields for WooCommerce <= 1.2.6 - Missing Authorization
+  name: "Product Input Fields for WooCommerce <= 1.2.6 - Missing Authorization"
   author: topscoder
   severity: high
-  description: >
-    
+  description: "The Product Input Fields for WooCommerce plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the handle_downloads() function in versions up to, and including, 1.2.6. This makes it possible for unauthenticated attackers to download files from the vulnerable service."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/01e41573-9329-48e1-9191-e8e1532f7afc?source=api-scan
+    - https://blog.nintechnet.com/high-severity-vulnerability-fixed-in-product-input-fields-for-woocommerce/
+    - https://wpscan.com/vulnerability/15f345e6-fc53-4bac-bc5a-de898181ea74
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
+    cvss-score: 7.5
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/product-input-fields-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/product-input-fields-for-woocommerce/"

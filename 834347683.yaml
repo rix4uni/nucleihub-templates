@@ -1,14 +1,14 @@
 id: lmtp
 info:
-  name: DBMail lmtpd
+  name: Zimbra lmtpd
   author: nmap,cn-kali-team
   tags: detect,tech,lmtp,service
   severity: info
   metadata:
     hostname: $1
-    product: dbmail
+    product: zimbra_collaboration_suite
     rarity: 0
-    vendor: paul_j_stevens
+    vendor: zimbra
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +20,4 @@ tcp:
   - name: lmtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) DBMail LMTP service ready to rock\r\n
+    - ^220 ([\w._-]+) Zimbra LMTP (?:server )?ready\r\n

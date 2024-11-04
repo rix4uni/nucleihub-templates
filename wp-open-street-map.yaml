@@ -1,4 +1,4 @@
-id: wp-open-street-map
+id: wp-open-street-map-e4016abe45e73ec72fe3149c4085e7ad
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1aa0fd9d-6c9f-4110-92a0-064fa4b9b589?source=api-scan
   classification:
     cvss-metrics: 

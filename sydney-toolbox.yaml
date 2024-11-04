@@ -1,4 +1,4 @@
-id: sydney-toolbox
+id: sydney-toolbox-0a9e969e9ff94559efaed6ee728e71d3
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/60f16abd-951b-48a0-a363-0221f7e0957d?source=api-scan
   classification:
     cvss-metrics: 

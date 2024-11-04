@@ -1,14 +1,15 @@
-id: phpinfo-wp
+id: phpinfo-wp-65045a96fa205971d398621730cb0c89
 
 info:
   name: >
-    phpinfo() WP <= 4.0 - Cross-Site Request Forgery
+    phpinfo() WP <= 5.0 - Unauthenticated Information Exposure
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4e944a08-b6c1-456f-921a-501ab4b59f31?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6091faeb-f8a0-40f3-963c-6c5814219832?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/phpinfo-wp/"
     google-query: inurl:"/wp-content/plugins/phpinfo-wp/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,phpinfo-wp,medium
+  tags: cve,wordpress,wp-plugin,phpinfo-wp,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.0')
+          - compare_versions(version, '<= 5.0')

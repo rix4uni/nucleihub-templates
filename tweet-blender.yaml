@@ -1,4 +1,4 @@
-id: tweet-blender
+id: tweet-blender-ceaa25919651090fe72a2b84b252f994
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/af838653-d575-48fc-bded-f0068a6c6ebf?source=api-scan
   classification:
     cvss-metrics: 

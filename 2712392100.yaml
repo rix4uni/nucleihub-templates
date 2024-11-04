@@ -1,6 +1,6 @@
 id: rtsp
 info:
-  name: NUUO IP Surveillance rtpsd
+  name: D-Link DCS-2130 or Pelco IDE10DN webcam rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
@@ -20,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 400 Bad Request\r\nDate: .*\r\nAllow: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE\r\n\r\n'
+    - '^RTSP/1\.0 400 Bad Request\r\nDate: .* GMT\r\nAllow: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, GET_PARAMETER, SET_PARAMETER\r\n\r\n'

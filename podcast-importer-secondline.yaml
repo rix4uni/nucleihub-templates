@@ -1,14 +1,15 @@
-id: podcast-importer-secondline
+id: podcast-importer-secondline-f9ddbe40bf10012bef632d776090af5c
 
 info:
   name: >
-    Podcast Importer SecondLine < 1.3.8 - SQL Injection
+    Podcast Importer SecondLine <= 1.1.4 - Server-Side Request Forgery
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2b0f887c-b9e5-4d3c-b354-ebf5741dc3ba?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5ee7f904-d150-4da1-a79c-502fe2ca3b37?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/podcast-importer-secondline/"
     google-query: inurl:"/wp-content/plugins/podcast-importer-secondline/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,podcast-importer-secondline,critical
+  tags: cve,wordpress,wp-plugin,podcast-importer-secondline,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.3.8')
+          - compare_versions(version, '< 1.1.5')

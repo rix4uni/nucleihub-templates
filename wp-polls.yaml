@@ -1,18 +1,18 @@
-id: wp-polls
+id: wp-polls-c4bb5548ff06db3796db1a30168ead5d
 
 info:
-  name: >
-    WP-Polls <= 2.70 - Stored Cross-Site Scripting
+  name: "WP-Polls <= 2.70 - Stored Cross-Site Scripting"
   author: topscoder
   severity: high
-  description: >
-    
+  description: "The WP-Polls plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘pollq_question and polla_answers’ parameters in versions up to, and including, 2.70 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e25f524e-360d-4c80-a0ab-90ee94825b1b?source=api-scan
+    - https://wordpress.org/plugins/wp-polls/changelog/
+    - https://wpscan.com/vulnerability/8497ceda-f72f-4c55-a4eb-616ba5c403ce
+    - https://patchstack.com/database/vulnerability/polls/wordpress-polls-plugin-2-70-cross-site-scripting-xss
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 7.2
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/wp-polls/"
     google-query: inurl:"/wp-content/plugins/wp-polls/"

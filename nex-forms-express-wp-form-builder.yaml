@@ -1,18 +1,21 @@
-id: nex-forms-express-wp-form-builder
+id: nex-forms-express-wp-form-builder-51dbaa7fd3d81c1e5ec52439f920f434
 
 info:
-  name: >
-    NEX-Forms – Ultimate Form Builder < 4.6.1 - SQL Injection
+  name: "NEX-Forms – Ultimate Form Builder – Contact forms and much more < 3.4 - SQL Injection"
   author: topscoder
   severity: critical
-  description: >
-    
+  description: "The NEX-Forms – Ultimate Form Builder – Contact forms and much more plugin for WordPress is vulnerable to time-based SQL Injection via the ‘nex_forms_Id’ parameter in versions before 3.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6989e54b-ce5e-4c79-bd0d-0f7978a4bd44?source=api-scan
+    - https://www.homelab.it/index.php/2015/04/21/wordpress-nex-forms-sqli/
+    - https://packetstormsecurity.com/files/131540/
+    - https://packetstormsecurity.com/files/131553/
+    - https://vigilance.fr/vulnerability/WordPress-NEX-Forms-Ultimate-Form-builder-SQL-injection-16681
+    - https://wordpress.org/plugins/nex-forms-express-wp-form-builder/#developers
+    - https://plugins.trac.wordpress.org/browser/nex-forms-express-wp-form-builder/tags/3.4/main.php#L862
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/nex-forms-express-wp-form-builder/"
     google-query: inurl:"/wp-content/plugins/nex-forms-express-wp-form-builder/"
@@ -55,4 +58,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 4.6.1')
+          - compare_versions(version, '< 3.4')

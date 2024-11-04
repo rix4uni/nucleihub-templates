@@ -21,4 +21,4 @@ tcp:
   - name: lmtp
     type: regex
     regex:
-    - ^220 ([-.\w]+) LMTP Cyrus v(\d[-.\w]+) ready\r\n
+    - ^220 ([\w._-]+) Cyrus LMTP v([\w._+-]+) server ready\r\n

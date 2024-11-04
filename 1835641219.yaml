@@ -1,12 +1,18 @@
 id: pop3
 info:
-  name: 602LAN Suite pop3
+  name: MDaemon pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    hostname: $1
+    info: Chinese
     operating_system: Windows
+    product: mdaemon
     rarity: 0
+    vendor: altn
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +23,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ready\r\n
+    - ^\+OK ([-\w_.]+) POP MDaemon ([\d.]+) \xd7\xbc\xb1\xb8\xba\xc3 <MDAEMON-[\w.]+@[-\w_.]+>\r\n

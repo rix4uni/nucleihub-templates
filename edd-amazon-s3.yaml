@@ -1,4 +1,4 @@
-id: edd-amazon-s3
+id: edd-amazon-s3-0a9c584008d1e4514631aabcae93856c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/dcfca0fe-5b15-4276-896a-9ad12b9a9478?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,13 +1,14 @@
-id: pepro-cf7-database
+id: pepro-cf7-database-bcc4e816161d32e8b695ab6c1da96889
 
 info:
   name: >
     PeproDev CF7 Database <= 1.7.0 - Unauthenticated Stored Cross-Site Scripting via form submission
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c7a7df90-a542-48cf-a58e-bcbddc978df2?source=api-scan
   classification:
     cvss-metrics: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/pepro-cf7-database/"
     google-query: inurl:"/wp-content/plugins/pepro-cf7-database/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,pepro-cf7-database,low
+  tags: cve,wordpress,wp-plugin,pepro-cf7-database,high
 
 http:
   - method: GET

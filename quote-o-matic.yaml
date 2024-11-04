@@ -1,4 +1,4 @@
-id: quote-o-matic
+id: quote-o-matic-6c0ac18aecda8d15a386aeb7e2b582f9
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/5a425bf5-de09-4f8c-8766-c9912d337512?source=api-scan
   classification:
     cvss-metrics: 

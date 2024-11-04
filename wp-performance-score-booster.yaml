@@ -1,4 +1,4 @@
-id: wp-performance-score-booster
+id: wp-performance-score-booster-939f7a119ce47ab9d077115d9a38fa7c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/d97af468-d345-4d19-a1b0-f42d890a34d8?source=api-scan
   classification:
     cvss-metrics: 

@@ -5,7 +5,8 @@ info:
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    operating_system: Windows 2000
+    info: Portuguese
+    operating_system: Windows
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +19,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - '^200 NNTP-service ([\w._-]+) Version: [\w._-]+ Posting Allowed \r\n'
+    - '^200 Servi\xe7o NNTP ([\w._-]+) Version: [\w._-]+ Posting Allowed \r\n'

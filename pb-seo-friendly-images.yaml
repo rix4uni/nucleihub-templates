@@ -1,4 +1,4 @@
-id: pb-seo-friendly-images
+id: pb-seo-friendly-images-cde6539d59a39850bc5f484362b57d34
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/89fc8407-3d1f-4b1b-9b4c-13c0da928231?source=api-scan
   classification:
     cvss-metrics: 

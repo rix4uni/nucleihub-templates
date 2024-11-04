@@ -1,18 +1,17 @@
-id: cost-of-goods-for-woocommerce
+id: cost-of-goods-for-woocommerce-ed016228a714c4a27140b5bfd5ddaf9b
 
 info:
-  name: >
-    Cost of Goods for WooCommerce <= 2.8.6 - Cross-Site Request Forgery in save_costs
+  name: "Cost of Goods for WooCommerce <= 2.8.6 - Cross-Site Request Forgery in save_costs"
   author: topscoder
   severity: medium
-  description: >
-    The Cost of Goods for WooCommerce plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.8.6. This is due to missing or incorrect nonce validation on the save_costs function. This makes it possible for unauthenticated attackers to edit or save of prices via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
+  description: "The Cost of Goods for WooCommerce plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.8.6. This is due to missing or incorrect nonce validation on the save_costs function. This makes it possible for unauthenticated attackers to edit or save of prices via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ee50731f-696f-4e9f-a930-05b2b23752de?source=api-prod
+    - https://patchstack.com/database/vulnerability/cost-of-goods-for-woocommerce/wordpress-cost-of-goods-for-woocommerce-plugin-2-8-6-broken-access-control-vulnerability
+    - https://plugins.trac.wordpress.org/changeset/2851930/cost-of-goods-for-woocommerce
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N
     cvss-score: 6.5
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/cost-of-goods-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/cost-of-goods-for-woocommerce/"

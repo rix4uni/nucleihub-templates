@@ -1,4 +1,4 @@
-id: youtube-shortcode
+id: youtube-shortcode-9c9fb3450527cfa1661b0e10068e0444
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/fadfe181-cc30-407c-baec-dc8f70cffe27?source=api-scan
   classification:
     cvss-metrics: 

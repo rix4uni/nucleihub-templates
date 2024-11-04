@@ -1,4 +1,4 @@
-id: tinymce-and-tinymce-advanced-professsional-formats-and-styles
+id: tinymce-and-tinymce-advanced-professsional-formats-and-styles-245b1b7f82fc8a7f11b4a4a1c4647ee3
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/63370972-a6cb-40ed-91f2-4f469dc5335b?source=api-scan
   classification:
     cvss-metrics: 

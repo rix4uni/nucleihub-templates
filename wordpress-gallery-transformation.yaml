@@ -1,4 +1,4 @@
-id: wordpress-gallery-transformation
+id: wordpress-gallery-transformation-4c36a6711be4e999884e528fae28ef1a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/35b74f5b-f088-4307-81ba-2c379754c4a2?source=api-scan
   classification:
     cvss-metrics: 

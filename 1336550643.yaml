@@ -1,12 +1,17 @@
 id: nntp
 info:
-  name: WendzelNNTPd
+  name: INN nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
+    hostname: $1
+    info: posting ok
+    product: inn
     rarity: 0
-    version: $1
+    vendor: isc
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +22,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 WendzelNNTPd-OSE \(Open Source Edition\) ([\w._-]+) '\w+'  - \([^)]+\) ready \(posting ok\)\.\r\n
+    - ^200 ([-\w_.]+) InterNetNews (?:NNRP )?server INN ([\d.]+) .* ready \(posting ok\)\.\r\n

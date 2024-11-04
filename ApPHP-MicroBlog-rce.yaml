@@ -1,9 +1,9 @@
-id: aphp-microblog-rce
+id: ApPHP-MicroBlog-rc
 
 info:
-  name: ApPHP MicroBlog Remote Code Execution Vulnerability
-  author: glatisant
-  severity: high
+  name:  ApPHP-MicroBlog-rce.yaml
+  author: medbsq
+  severity: hight
 
 requests:
   - method: GET
@@ -12,4 +12,5 @@ requests:
     matchers:
       - type: word
         words:
-          - "phpinfo"
+          - "<title>phpinfo()"
+        part: body

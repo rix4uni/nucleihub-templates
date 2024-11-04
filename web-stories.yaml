@@ -1,4 +1,4 @@
-id: web-stories
+id: web-stories-0534ad78fbe08e9117469de7739eaf9f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/63f2e02c-baa4-446c-bf1c-96ce099ad02e?source=api-scan
   classification:
     cvss-metrics: 

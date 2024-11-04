@@ -1,14 +1,15 @@
-id: themesflat-addons-for-elementor
+id: themesflat-addons-for-elementor-ad0bd2aac3de326e49ee76466ad358f6
 
 info:
   name: >
-    Themesflat Addons For Elementor <= 2.0.0 - Unauthenticated PHP Object Injection
+    Themesflat Addons For Elementor <= 2.1.1 - Authenticated (Contributor+) Stored Cross-Site Scripting in Multiple Widgets
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f33d080c-6d64-46d1-b01c-ef859106159f?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dc686a35-4ce3-4359-a7d3-e6459e2f5dfe?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/themesflat-addons-for-elementor/"
     google-query: inurl:"/wp-content/plugins/themesflat-addons-for-elementor/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,themesflat-addons-for-elementor,critical
+  tags: cve,wordpress,wp-plugin,themesflat-addons-for-elementor,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.0')
+          - compare_versions(version, '<= 2.1.1')

@@ -1,4 +1,4 @@
-id: verweise-wordpress-twitter
+id: verweise-wordpress-twitter-2964744389fb5f1e33539ac6baa901dc
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c9291a17-7add-4cc2-ab44-9b640940c6b7?source=api-scan
   classification:
     cvss-metrics: 

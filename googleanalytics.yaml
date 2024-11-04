@@ -1,14 +1,15 @@
-id: googleanalytics
+id: googleanalytics-d51404cd4bd36f1efa321fdcc45371d8
 
 info:
   name: >
-    ShareThis Dashboard for Google Analytics <= 3.1.4 - Missing Authorization
+    ShareThis Dashboard for Google Analytics <= 2.5.1 - Reflected Cross-Site Scripting via ga_action parameter
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4e343489-4969-4a16-9741-34de93c8b06e?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/da89e8f9-3843-4d72-92b2-cd2f717510cd?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/googleanalytics/"
     google-query: inurl:"/wp-content/plugins/googleanalytics/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,googleanalytics,high
+  tags: cve,wordpress,wp-plugin,googleanalytics,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.1.4')
+          - compare_versions(version, '< 2.5.2')

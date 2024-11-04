@@ -1,49 +1,59 @@
-id: wordpress-ocean-extra
+id: ocean-extra-0d809e05a8b934a95ae95c06597b05f3
 
 info:
-  name: Ocean Extra Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Freemius SDK <= 2.4.2 - Missing Authorization Checks
+  author: topscoder
+  severity: medium
+  description: >
+    The Freemius SDK, as used by hundreds of WordPress plugin and theme developers, was vulnerable to Cross-Site Request Forgery and Information disclosure due to missing capability checks and nonce protection on the _get_debug_log, _get_db_option, and the _set_db_option functions in versions up to, and including 2.4.2. Any WordPress plugin or theme running a version of Freemius less than 2.4.3 is vulnerable.
   reference:
-    - https://wordpress.org/plugins/ocean-extra/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/39fb0499-9ab4-4a2f-b0db-ece86bcf4d42?source=api-prod
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L
+    cvss-score: 6.3
+    cve-id: 
   metadata:
-    plugin_namespace: ocean-extra
-    wpscan: https://wpscan.com/plugin/ocean-extra
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/ocean-extra/"
+    google-query: inurl:"/wp-content/plugins/ocean-extra/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,ocean-extra,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/ocean-extra/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/ocean-extra.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "ocean-extra"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a0047304502203e67bcfacd9a67a2db8819ae58e475d4e40a62b421566d02ed10ca836ab4a056022100e33634b33fdb19c1e93ae8b41a81d449f2c262328bb9e9dc686558c2cf311b9d:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '< 1.9.4')

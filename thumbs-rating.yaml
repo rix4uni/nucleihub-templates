@@ -1,4 +1,4 @@
-id: thumbs-rating
+id: thumbs-rating-2551aea37293f7feb377db28af59096c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e98b0a3a-6c14-45f1-a6b2-9911ba34ce0d?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,12 +1,15 @@
 id: smtp
 info:
-  name: LavaSoftware ShareMailPro smtpd
+  name: SocketLabs Hurricane MTA smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
+    product: hurricane_mta
     rarity: 0
+    vendor: socketlabs
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ShareMailPro SMTP Server Ready \r\n
+    - ^220 ([\w.-]+) Hurricane Server ESMTP service ready\.\r\n

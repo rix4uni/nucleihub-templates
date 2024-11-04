@@ -1,4 +1,4 @@
-id: quiz-tool-lite
+id: quiz-tool-lite-8f986621fb336c04705f6b190a83dccd
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/4a515dc9-e6d6-4083-a3e8-c22307b120a8?source=api-scan
   classification:
     cvss-metrics: 

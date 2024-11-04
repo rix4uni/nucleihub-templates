@@ -1,4 +1,4 @@
-id: post-category-image-with-grid-and-slider
+id: post-category-image-with-grid-and-slider-375a5b2c1df41c6d0e13cd16d3e7f19b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b2ce9854-06df-44a8-b998-de21bf52a5d8?source=api-scan
   classification:
     cvss-metrics: 

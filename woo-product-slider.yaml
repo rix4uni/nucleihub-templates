@@ -1,14 +1,15 @@
-id: woo-product-slider
+id: woo-product-slider-f5e684f31d3e67bac9d192c014bf2843
 
 info:
   name: >
-    Product Slider for WooCommerce <= 2.5.6 - Missing Authorization
+    Product Slider for WooCommerce <= 2.6.3 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e2e8d217-51a7-4653-bb23-c53f5c75cb85?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d11e8124-1028-4dba-bbd9-c45699d78909?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/woo-product-slider/"
     google-query: inurl:"/wp-content/plugins/woo-product-slider/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woo-product-slider,high
+  tags: cve,wordpress,wp-plugin,woo-product-slider,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.5.6')
+          - compare_versions(version, '<= 2.6.3')

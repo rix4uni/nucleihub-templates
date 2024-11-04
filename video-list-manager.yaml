@@ -1,4 +1,4 @@
-id: video-list-manager
+id: video-list-manager-b9968854f28ac4b4c64945b5bac1378d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8b2d42ab-46c1-4c3e-b99a-1cdcade1b5bb?source=api-scan
   classification:
     cvss-metrics: 

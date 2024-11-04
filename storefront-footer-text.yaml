@@ -1,4 +1,4 @@
-id: storefront-footer-text
+id: storefront-footer-text-b0173e61c510a4716de1c5b2112a4ce5
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a66c2e1e-fd59-424b-bd11-0991a5c32dce?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,12 +1,13 @@
 id: ftp-proxy
 info:
-  name: FileCatalyst ftp proxy
+  name: CCProxy ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
+    info: unregistered
+    operating_system: Windows
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 FileCatalyst Server Enterprise v([^\r\n]*)\r\n$
+    - ^220-CCProxy FTP Service\(Unregistered\)\r\n

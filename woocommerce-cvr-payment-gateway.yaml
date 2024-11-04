@@ -1,4 +1,4 @@
-id: woocommerce-cvr-payment-gateway
+id: woocommerce-cvr-payment-gateway-7511ca4c99c3364cb4839a5a1a256ed5
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f72ba0e2-a9c4-43b0-a01f-185554090162?source=api-scan
   classification:
     cvss-metrics: 

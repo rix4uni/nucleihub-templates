@@ -1,14 +1,15 @@
-id: visitors-online
+id: visitors-online-eed83df29e81af76906d6f23249b7b07
 
 info:
   name: >
-    Visitors Online by BestWebSoft <= 0.3 - SQL Injection
+    Visitors Online by BestWebSoft < 1.0.0 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5dfa4ddf-bbe7-49b1-8b0d-c030ae81d0e8?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9032d416-28d1-4fdc-ac95-ba807df165a2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/visitors-online/"
     google-query: inurl:"/wp-content/plugins/visitors-online/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,visitors-online,critical
+  tags: cve,wordpress,wp-plugin,visitors-online,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 0.3')
+          - compare_versions(version, '< 1.0.0')

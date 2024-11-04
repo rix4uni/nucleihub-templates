@@ -1,4 +1,4 @@
-id: rss-for-yandex-turbo
+id: rss-for-yandex-turbo-25ba50902493a7e536f84e758470fb78
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/5269ea0a-b0e9-433a-a166-28d23bfb6b4e?source=api-scan
   classification:
     cvss-metrics: 

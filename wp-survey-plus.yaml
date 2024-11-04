@@ -1,4 +1,4 @@
-id: wp-survey-plus
+id: wp-survey-plus-3ad7ce1f49e4c7b2823176e3a65f9ad9
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/496249cf-f75e-42e6-a189-332dd73d14bd?source=api-scan
   classification:
     cvss-metrics: 

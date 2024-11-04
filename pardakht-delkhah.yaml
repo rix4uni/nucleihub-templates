@@ -1,14 +1,15 @@
-id: pardakht-delkhah
+id: pardakht-delkhah-79bed9ec7adb95df6b2d1083e9181034
 
 info:
   name: >
-    Pardakht Delkhah <= 2.9.2 - Unauthenticated Stored Cross-Site Scripting
+    Pardakht Delkhah <= 2.9.8 - Cross-Site Request Forgery to Form Setting Reset
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/73a1174d-fb5a-4cc0-ada0-dbf1e011619a?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3eca4da3-2d8b-4a68-807b-d9a2cb52fb6b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/pardakht-delkhah/"
     google-query: inurl:"/wp-content/plugins/pardakht-delkhah/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,pardakht-delkhah,high
+  tags: cve,wordpress,wp-plugin,pardakht-delkhah,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.9.2')
+          - compare_versions(version, '<= 2.9.8')

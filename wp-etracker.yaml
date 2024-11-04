@@ -1,4 +1,4 @@
-id: wp-etracker
+id: wp-etracker-6687b85f6987c5a881a987137733c6c0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/852c44ba-e5c5-4206-b727-f4c4c1b889a1?source=api-scan
   classification:
     cvss-metrics: 

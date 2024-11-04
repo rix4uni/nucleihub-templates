@@ -1,4 +1,4 @@
-id: login-page-styler
+id: login-page-styler-7d2fe3d0a667b7e78cb331a7501a4fb0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/4d70cd0a-5c30-4a9b-81e8-e465d1e8f2b0?source=api-scan
   classification:
     cvss-metrics: 

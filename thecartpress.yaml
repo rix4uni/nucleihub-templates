@@ -1,14 +1,15 @@
-id: thecartpress
+id: thecartpress-461f1176276500d5a7a85425c6e02e12
 
 info:
   name: >
-    TheCartPress eCommerce Shopping Cart <= 1.5.3.6 - Directory Traversal
+    TheCartPress eCommerce Shopping Cart <= 1.5.3.6 - Sensitive Information Disclosure
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e8150619-9710-4dc0-ab62-ffd3e9fa8cd6?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/73a049de-f4b2-4b87-a78b-62cd333853b8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

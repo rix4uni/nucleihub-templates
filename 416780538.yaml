@@ -1,12 +1,16 @@
 id: smtp
 info:
-  name: LavaSoftware ShareMailPro smtpd
+  name: XMail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    operating_system: Windows
+    info: server busy
+    product: xmail
     rarity: 0
+    vendor: davide_libenzi
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ShareMailPro SMTP Server Ready \r\n
+    - ^421 \[XMail (\d[\w._-]+) ESMTP Server\] - Server too busy, retry later\r\n

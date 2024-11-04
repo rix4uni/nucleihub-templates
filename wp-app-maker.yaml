@@ -1,4 +1,4 @@
-id: wp-app-maker
+id: wp-app-maker-d5bf137b7ca050a2a583e1ae8ec72cb0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b2413083-262c-4646-91fa-f9b51010f3e3?source=api-scan
   classification:
     cvss-metrics: 

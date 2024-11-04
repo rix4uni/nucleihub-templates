@@ -1,4 +1,4 @@
-id: product-category-tree
+id: product-category-tree-00a37285d7ee63ae09c85901ab6b7d05
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3e03ecc0-5ca1-4d64-a6d7-257325bcc5cb?source=api-scan
   classification:
     cvss-metrics: 

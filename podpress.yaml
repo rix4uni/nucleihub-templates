@@ -1,4 +1,4 @@
-id: podpress
+id: podpress-34d9d44c81f37fa87637a207dbccd2ef
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e56ebe2a-8a7e-454b-a1cd-7103112087e0?source=api-scan
   classification:
     cvss-metrics: 

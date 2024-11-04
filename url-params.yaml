@@ -1,4 +1,4 @@
-id: url-params
+id: url-params-f19652a5880671e8ab08cef4428b64e0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/98e22884-f7d6-47df-9b1b-9232c48e3685?source=api-scan
   classification:
     cvss-metrics: 

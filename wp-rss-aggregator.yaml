@@ -1,23 +1,24 @@
-id: wp-rss-aggregator
+id: wp-rss-aggregator-bb72f8dc5d6167f8f8ad7ef8c4576288
 
 info:
   name: >
-    WP RSS Aggregator <= 4.19.3 - Reflected Cross-Site Scripting
+    WP RSS Aggregator – News Feeds, Autoblogging, Youtube Video Feeds and More <= 4.6.3 - Authorization Bypass
   author: topscoder
-  severity: medium
+  severity: high
   description: >
-    
+    The WP RSS Aggregator – News Feeds, Autoblogging, Youtube Video Feeds and More plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the wprss_check_if_blacklist_delete() function in versions up to, and including, 4.6.3. This makes it possible for unauthenticated attackers to delete arbitrary posts.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9b4bb70a-ee8e-4e1a-9989-7658307bedc1?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a46364f4-9258-4f5e-9d53-dcbaf726f2f0?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L
+    cvss-score: 6.5
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-rss-aggregator/"
     google-query: inurl:"/wp-content/plugins/wp-rss-aggregator/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-rss-aggregator,medium
+  tags: cve,wordpress,wp-plugin,wp-rss-aggregator,high
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.19.3')
+          - compare_versions(version, '<= 4.6.3')

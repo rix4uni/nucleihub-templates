@@ -1,4 +1,4 @@
-id: photoswipe-masonry
+id: photoswipe-masonry-461a86e8e83cb0ca28281922ba4c0fa2
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/64624d4c-3ffb-4516-a938-0accde24c79f?source=api-scan
   classification:
     cvss-metrics: 

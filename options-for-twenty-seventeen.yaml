@@ -1,4 +1,4 @@
-id: options-for-twenty-seventeen
+id: options-for-twenty-seventeen-d783fd79e7f3586f54d84e6445c097e3
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/df35d8c6-55ec-4cf5-8055-93ec5193c0a4?source=api-scan
   classification:
     cvss-metrics: 

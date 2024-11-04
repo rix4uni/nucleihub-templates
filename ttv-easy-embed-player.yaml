@@ -1,4 +1,4 @@
-id: ttv-easy-embed-player
+id: ttv-easy-embed-player-08782f3ac6a6bfe98f18eeb1b1db7269
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/03c8ec0a-f75f-450f-86e7-a18dfbae9461?source=api-scan
   classification:
     cvss-metrics: 

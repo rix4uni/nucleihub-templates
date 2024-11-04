@@ -1,14 +1,15 @@
-id: wp-migration-duplicator
+id: wp-migration-duplicator-1d84238d04e90e6dcd9582328df3a7f9
 
 info:
   name: >
-    WordPress Backup & Migration <= 1.4.7 - Unauthenticated Sensitive Information Exposure
+    WordPress Backup & Migration <= 1.4.1 - Missing Authorization to Settings and Schedule Modification
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/40570bb7-1638-4305-876e-86ad4c336944?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/adfc5084-ed33-4600-bd34-d3516f1a1b96?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-migration-duplicator/"
     google-query: inurl:"/wp-content/plugins/wp-migration-duplicator/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-migration-duplicator,low
+  tags: cve,wordpress,wp-plugin,wp-migration-duplicator,high
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.7')
+          - compare_versions(version, '<= 1.4.1')

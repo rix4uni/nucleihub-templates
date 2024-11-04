@@ -1,4 +1,4 @@
-id: 2kb-amazon-affiliates-store
+id: 2kb-amazon-affiliates-store-5e5e19f6f3d2621866cbba00f83c1a4d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1d7d9521-4814-411d-859f-c7645551d3c5?source=api-scan
   classification:
     cvss-metrics: 

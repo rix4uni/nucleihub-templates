@@ -1,18 +1,19 @@
-id: woocommerce-product-vendors
+id: woocommerce-product-vendors-fc9960e25d574e9c4cdeba05be00ee0c
 
 info:
-  name: >
-    WooCommerce Product Vendors <= 2.1.76 - Reflected Cross-Site Scripting
+  name: "Product Vendors <= 2.0.35 - Reflected Cross Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    
+  description: "The Product Vendors is vulnerable to Reflected Cross-Site Scripting via the 'vendor_description' parameter in versions up to, and including, 2.0.35 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a93c0dd4-8341-438d-8730-470e9a230d97?source=api-scan
+    - https://hackerone.com/reports/253313
+    - https://woocommerce.com/products/product-vendors/
+    - https://threatpost.com/reflected-xss-bug-patched-in-popular-woocommerce-wordpress-plugin/127744/
+    - https://www.majemedia.com/2017/09/xss-vulnerability-in-woocommerce-product-vendors-plugin/
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:N
+    cvss-score: 4.7
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/woocommerce-product-vendors/"
     google-query: inurl:"/wp-content/plugins/woocommerce-product-vendors/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1.76')
+          - compare_versions(version, '< 2.0.36')

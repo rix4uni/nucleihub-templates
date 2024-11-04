@@ -1,15 +1,15 @@
-id: ultimate_ai
+id: ultimate_ai-51df24ee74081ced705b61452931c568
 
 info:
   name: >
-    UltimateAI <= 2.8.3 - Authentication Bypass
+    UltimateAI <= 2.8.3 - Limited User Password Change due to Improper Empty and Missing Default Value Check
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c2475643-a0b4-444a-a2c6-a5c45e90e1dd?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3faf976d-0763-4e47-9bc3-18c791ec4487?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/Ultimate_AI/"
     google-query: inurl:"/wp-content/plugins/Ultimate_AI/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,Ultimate_AI,critical
+  tags: cve,wordpress,wp-plugin,Ultimate_AI,low
 
 http:
   - method: GET

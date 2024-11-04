@@ -1,23 +1,22 @@
-id: ws-form
+id: ws-form-9d0ef762c4db1d0bcffaeecbf6f5c7bb
 
 info:
-  name: >
-    WS Form LITE <= 1.9.170 - Authenticated(Administrator+) SQL Injection
+  name: "WS Form LITE <= 1.9.117 - CAPTCHA Bypass"
   author: topscoder
-  severity: low
-  description: >
-    
+  severity: medium
+  description: "The WS Form LITE plugin for WordPress is vulnerable to CAPTCHA bypass in versions up to, and including, 1.9.117. This is due to the existence of a mechanism that allows the CAPTCHA to be bypassed if the client-side field is hidden (or omitted from the request). This makes it possible for unauthenticated attackers to bypass an intended protection mechanism for contact form submissions."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a3171015-227d-420a-ba3a-e6e2dc17ba8c?source=api-scan
+    - https://plugins.svn.wordpress.org/ws-form/tags/1.9.118/readme.txt
+    - https://plugins.trac.wordpress.org/changeset/2916094/ws-form/trunk/includes/core/class-ws-form-submit.php
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+    cvss-score: 5.3
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/ws-form/"
     google-query: inurl:"/wp-content/plugins/ws-form/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ws-form,low
+  tags: cve,wordpress,wp-plugin,ws-form,medium
 
 http:
   - method: GET
@@ -55,4 +54,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.9.171')
+          - compare_versions(version, '<= 1.9.117')

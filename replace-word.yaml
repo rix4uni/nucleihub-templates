@@ -1,4 +1,4 @@
-id: replace-word
+id: replace-word-bf90ae7dcdce9a29c64435ecc2c1a487
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/75ddf732-ddb2-47ba-884a-477fcc6595b4?source=api-scan
   classification:
     cvss-metrics: 

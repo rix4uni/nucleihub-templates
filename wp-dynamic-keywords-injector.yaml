@@ -1,14 +1,15 @@
-id: wp-dynamic-keywords-injector
+id: wp-dynamic-keywords-injector-6f557c94e32ee72d6e3028e64e7a922f
 
 info:
   name: >
-    WP Dynamic Keywords Injector <= 2.3.15 - Cross-Site Request Forgery
+    WP Dynamic Keywords Injector <= 2.3.21 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f5b00784-9120-403d-9788-3cd3c3c020aa?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/992f9f08-82c1-4bbd-bbd2-543ad8affe53?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.3.15')
+          - compare_versions(version, '<= 2.3.21')

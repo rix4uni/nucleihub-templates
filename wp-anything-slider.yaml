@@ -1,4 +1,4 @@
-id: wp-anything-slider
+id: wp-anything-slider-891a270d54f27d7fec7d193dc8350b94
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/535e754e-f851-4809-a148-d9ba808b9d8a?source=api-scan
   classification:
     cvss-metrics: 

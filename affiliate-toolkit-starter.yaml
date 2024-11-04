@@ -1,14 +1,15 @@
-id: affiliate-toolkit-starter
+id: affiliate-toolkit-starter-dd5a0e0390a10aa5d721daf54dd2417d
 
 info:
   name: >
-    affiliate-toolkit – WordPress Affiliate Plugin <= 3.5.4 - Missing Authorization via atkp_create_list
+    affiliate-toolkit <= 3.6.5 - Authenticated (Contributor+) Stored Cross-Site Scripting via atkp_product Shortcode
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e9e256b0-e4e3-4f41-842c-80aa2b80af72?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7f86568f-dcdd-44fb-905a-9c5474f56515?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/affiliate-toolkit-starter/"
     google-query: inurl:"/wp-content/plugins/affiliate-toolkit-starter/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,affiliate-toolkit-starter,high
+  tags: cve,wordpress,wp-plugin,affiliate-toolkit-starter,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.5.4')
+          - compare_versions(version, '<= 3.6.5')

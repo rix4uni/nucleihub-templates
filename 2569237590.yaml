@@ -1,11 +1,11 @@
 id: ftp
 info:
-  name: Ricoh Aficio $1 printer ftpd
+  name: Kyocera Mita TASKalfa 300ci printer ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
+    hostname: $1
     rarity: 0
     version: $2
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 RICOH Aficio ([\w ._+-]+?) FTP server \(([-\w_.]+)\) ready\.\r\n
+    - ^220 ([\w._-]+) FTP server \(InterCon version ([\w._-]+)\) ready\.\r\n

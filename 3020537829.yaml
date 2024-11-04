@@ -1,14 +1,17 @@
 id: domain
 info:
-  name: Synology DNS Server
+  name: ISC BIND
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    product: dns
+    info: RedHat Enterprise Linux $2
+    operating_system: Linux
+    product: bind
     rarity: 1
-    vendor: synology
+    vendor: isc
     verified: true
+    version: $1
 tcp:
 - name: dnsversion-bind-req
   inputs:
@@ -20,4 +23,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}DNSServer\xc0\x0c
+    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}(\d[-\w.+]*?)-RedHat-[-\w._+]+.el(\d+)

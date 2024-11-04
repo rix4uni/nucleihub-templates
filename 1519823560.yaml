@@ -1,13 +1,16 @@
 id: pop3-proxy
 info:
-  name: JanaServer pop3 proxy
+  name: AVG pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    hostname: $1
+    info: broken
     operating_system: Windows
+    product: anti-virus
     rarity: 0
+    vendor: avg
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK Jana-Server POP3 ready <[\w.]+@([-\w_.]+)>\r\n
+    - '^-ERR AVG POP3 Proxy Server: Cannot connect to the mail server!\r\n'

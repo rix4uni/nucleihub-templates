@@ -1,14 +1,15 @@
-id: wp-express-checkout
+id: wp-express-checkout-9c395d3672d8686c11a58114a97fb2b9
 
 info:
   name: >
-    WP Express Checkout (Accept PayPal Payments) <= 2.3.7 - Unauthenticated Price Manipulation
+    WP Express Checkout <= 2.2.8 - Authenticated (Admin+) Stored Cross-Site Scripting via pec_coupon[code]
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/42cd1b53-400f-4933-b3cc-2fd9079e241c?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b35ee801-f04d-4b22-8238-053b02a6ee0c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.3.7')
+          - compare_versions(version, '2.2.8')

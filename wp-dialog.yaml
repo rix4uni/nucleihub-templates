@@ -1,4 +1,4 @@
-id: wp-dialog
+id: wp-dialog-1bd7c6c6e4b6cad9bd9cc8292bcea64b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/03d02297-0cc6-4935-b282-9b95d8292954?source=api-scan
   classification:
     cvss-metrics: 

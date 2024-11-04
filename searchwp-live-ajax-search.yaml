@@ -1,4 +1,4 @@
-id: searchwp-live-ajax-search
+id: searchwp-live-ajax-search-9c3bbf8c945f8b7787914d2218b86b6a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2e0ca51c-0536-45ff-a5af-41ef4977179d?source=api-scan
   classification:
     cvss-metrics: 

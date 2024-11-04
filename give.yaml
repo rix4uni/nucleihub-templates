@@ -1,18 +1,17 @@
-id: give
+id: give-45f34483ec6a645a0df5f4e6df7478bd
 
 info:
-  name: >
-    GiveWP <= 3.3.1 - Reflected Cross-Site Scripting
+  name: "GiveWP <= 2.25.1 - Cross-Site Request Forgery to Cross-Site Scripting via render_dropdown"
   author: topscoder
   severity: medium
-  description: >
-    
+  description: "The GiveWP plugin is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.25.1. This is due to missing or incorrect nonce validation on the 'render_dropdown' AJAX function. This makes it possible for unauthenticated attackers to execute JavaScript in the browser of an administrator via forged request granted a CSV file containing JavaScript in the column names has been uploaded and they can trick a site administrator into performing an action such as clicking on a link. Note that it is only possible to upload CSV files containing JavaScript tags in cases where ALLOW_UNFILTERED_UPLOADS is enabled."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d8bf1d64-8012-4588-9897-aa8bb0cacfb6?source=api-scan
+    - https://plugins.trac.wordpress.org/changeset/2876809/give/tags/2.25.2/includes/admin/tools/import/class-give-import-donations.php
+    - https://wordpress.org/plugins/give/#developers
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/give/"
     google-query: inurl:"/wp-content/plugins/give/"
@@ -55,4 +54,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.3.1')
+          - compare_versions(version, '<= 2.25.1')

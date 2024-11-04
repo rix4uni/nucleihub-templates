@@ -1,14 +1,15 @@
-id: pricing-tables-for-wpbakery-page-builder
+id: pricing-tables-for-wpbakery-page-builder-212d54a83ca53288c312dc97901ca7c3
 
 info:
   name: >
-    Pricing Tables For WPBakery Page Builder (formerly Visual Composer) <= 2.0 - Authenticated (Subscriber+) Local File Inclusion via Shortcode
+    Pricing Tables For WPBakery Page Builder (formerly Visual Composer) <= 2.0 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3475c8fe-17fa-4d8e-bffd-a33e59f6e03b?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c04a0f82-97f6-44ff-999d-08a8c106f889?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

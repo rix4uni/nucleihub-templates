@@ -1,4 +1,4 @@
-id: attendance-manager
+id: attendance-manager-2f7e3fa0d9035c2964eac08f4a5f9ecc
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/dc221b37-565d-41e4-874c-06015753045f?source=api-scan
   classification:
     cvss-metrics: 

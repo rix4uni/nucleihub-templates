@@ -1,4 +1,4 @@
-id: simple-shipping-edd
+id: simple-shipping-edd-f68445c2078de9684afae18c24befca2
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/01179ac2-ad68-4a5d-af67-70d57ed611d2?source=api-scan
   classification:
     cvss-metrics: 

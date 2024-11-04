@@ -1,15 +1,15 @@
-id: wp-multitasking
+id: wp-multitasking-8b8cb46012156674cf0d034e5d7db501
 
 info:
   name: >
-    WP MultiTasking <= 0.1.12 - Cross-Site Request Forgery to SMTP Settings Update
+    WP MultiTasking - WP Utilities <= 0.1.17 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c2cb2475-2064-4212-89fe-402622736b78?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0c976e5a-2f6c-4632-99a7-a512b3dd38e6?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-multitasking/"
     google-query: inurl:"/wp-content/plugins/wp-multitasking/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-multitasking,medium
+  tags: cve,wordpress,wp-plugin,wp-multitasking,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 0.1.12')
+          - compare_versions(version, '<= 0.1.17')

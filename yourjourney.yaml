@@ -1,4 +1,4 @@
-id: yourjourney
+id: yourjourney-da461700c7241eb3bda12a7b8d9cfa35
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c738e051-ad1c-4115-94d3-127dd5dff935?source=api-scan
   classification:
     cvss-metrics: 

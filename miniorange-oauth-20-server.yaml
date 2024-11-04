@@ -1,4 +1,4 @@
-id: miniorange-oauth-20-server
+id: miniorange-oauth-20-server-309857313f8af7377dac370c25c0ccc2
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/0f13b2dd-4832-4646-828c-ba2df1eb7d33?source=api-scan
   classification:
     cvss-metrics: 

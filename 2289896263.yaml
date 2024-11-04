@@ -1,12 +1,13 @@
 id: imap
 info:
-  name: Kerio imapd
+  name: Netscape imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    hostname: $2
     rarity: 0
-    version: $1 patch $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Kerio MailServer ([\d.]+) patch (\d+) IMAP4rev1 server ready\r\n
+    - ^\* OK Netscape IMAP4rev1 Service ([\d.]+) on ([-\w_.]+) at .*\r\n

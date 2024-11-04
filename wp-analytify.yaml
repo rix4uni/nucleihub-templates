@@ -1,22 +1,24 @@
-id: wp-analytify
+id: wp-analytify-bdc320b3166daecdd3e788de36e4d1d7
 
 info:
-  name: "Analytify <= 4.2.0 - Reflected Cross-Site Scripting"
+  name: >
+    Analytify – Google Analytics Dashboard For WordPress <= 4.2.2 - Authorization Bypass
   author: topscoder
-  severity: medium
-  description: "The Analytify plugin for WordPress is vulnerable to Reflected Cross-Site Scripting due to the use of add_query_arg without appropriate escaping on the URL in versions up to, and including, 4.2.0. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  severity: low
+  description: >
+    The Analytify plugin for WordPress is vulnerable to authorization bypass due to a missing capability and nonce checks on the analytify_delete_cache function in versions up to, and including, 4.2.2 . This makes it possible for authenticated attackers, with subscriber-level permissions and above, to delete the cache of the plugin and also allows unauthenticated attackers to delete the plugin cache via forged request, granted they can trick a subscriber or higher into clicking on a link. Version 4.2.3 adds a nonce check to the function, which addressed the Cross-Site Request Forgery Vulnerability and makes exploitation impractical for lower-level accounts.
   reference:
-    - https://wpscan.com/vulnerability/b8415ed5-6fd0-42fe-9201-73686c1871c5
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2742045%40wp-analytify&new=2742045%40wp-analytify&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b899ca76-d6f4-4369-8f66-738b144433b7?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
+    cvss-score: 6.5
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-analytify/"
     google-query: inurl:"/wp-content/plugins/wp-analytify/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-analytify,medium
+  tags: cve,wordpress,wp-plugin,wp-analytify,low
 
 http:
   - method: GET
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.2.1')
+          - compare_versions(version, '<= 4.2.2')

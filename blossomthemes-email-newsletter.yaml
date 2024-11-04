@@ -1,14 +1,15 @@
-id: blossomthemes-email-newsletter
+id: blossomthemes-email-newsletter-177ca6f123df3908c72783acdc59043c
 
 info:
   name: >
-    BlossomThemes Email Newsletter <= 2.2.4 - Missing Authorization
+    BlossomThemes Email Newsletter <= 2.2.7 - Authenticated (Admin+) Server-Side Request Forgery
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1e98b763-29b9-435d-a436-d4df64234b4d?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8e73b00e-38f7-45dc-8577-5cc47c18b9fd?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/blossomthemes-email-newsletter/"
     google-query: inurl:"/wp-content/plugins/blossomthemes-email-newsletter/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,blossomthemes-email-newsletter,high
+  tags: cve,wordpress,wp-plugin,blossomthemes-email-newsletter,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2.4')
+          - compare_versions(version, '<= 2.2.7')

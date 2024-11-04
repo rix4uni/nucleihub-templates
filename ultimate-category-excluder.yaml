@@ -1,4 +1,4 @@
-id: ultimate-category-excluder
+id: ultimate-category-excluder-cee11a9dec16ef54c1ee632c1a6e1cb7
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/0e30d2ca-1918-4fcf-979e-7cae0d84529e?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,14 +1,15 @@
-id: woocommerce-box-office
+id: woocommerce-box-office-f06a8d65085cb3f97fc6ee3ec4a5f512
 
 info:
   name: >
-    WooCommerce Box Office <= 1.2.2 - Missing Authorization
+    WooCommerce Box Office <= 1.1.50 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ff2097a9-fe7a-48f3-be9c-dc0caef74262?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3ebd05d5-a65d-49df-a865-882e9d17fc0f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/woocommerce-box-office/"
     google-query: inurl:"/wp-content/plugins/woocommerce-box-office/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woocommerce-box-office,high
+  tags: cve,wordpress,wp-plugin,woocommerce-box-office,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.2')
+          - compare_versions(version, '<= 1.1.50')

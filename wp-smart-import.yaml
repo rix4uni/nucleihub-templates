@@ -1,14 +1,15 @@
-id: wp-smart-import
+id: wp-smart-import-afd4fccb0f984211d9f34e035433067e
 
 info:
   name: >
-    WordPress Importer: Import any XML File to WordPress <= 1.0.2 - Reflected Cross-Site Scripting
+    WP Smart Import : Import any XML File to WordPress <= 1.0.7 - Authenticated (Author+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/22dbd787-2b9a-4883-9203-c79fc241596d?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/28bc0672-3469-4f58-860d-9e13da46804e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-smart-import/"
     google-query: inurl:"/wp-content/plugins/wp-smart-import/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-smart-import,medium
+  tags: cve,wordpress,wp-plugin,wp-smart-import,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.2')
+          - compare_versions(version, '<= 1.0.7')

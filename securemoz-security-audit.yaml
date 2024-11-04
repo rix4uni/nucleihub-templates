@@ -1,4 +1,4 @@
-id: securemoz-security-audit
+id: securemoz-security-audit-5934c9784ef1b47d3135045450f457ae
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e0a294c5-dc2f-4739-9519-ae2a1268ff55?source=api-scan
   classification:
     cvss-metrics: 

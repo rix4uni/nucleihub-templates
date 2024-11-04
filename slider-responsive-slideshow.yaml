@@ -1,4 +1,4 @@
-id: slider-responsive-slideshow
+id: slider-responsive-slideshow-b31dafdbd54219db06be5bbb18599c96
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/d35266cd-41e6-4358-afaa-bc008962f2e1?source=api-scan
   classification:
     cvss-metrics: 

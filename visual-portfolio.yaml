@@ -1,14 +1,15 @@
-id: visual-portfolio
+id: visual-portfolio-5b72fb14dc1565cfab9c121bde59e952
 
 info:
   name: >
-    Visual Portfolio, Photo Gallery & Post Grid <= 2.18.0 - Contributor+ CSS Injection
+    Visual Portfolio, Photo Gallery & Post Grid <= 3.3.2 - Authenticated (Author+) Stored Cross-Site Scripting via title_tag Parameter
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a7519c43-d8d1-4412-b2f3-77f59736924c?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ab5e09d8-6fa3-4a5b-bee1-6648df4f4b3b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.18.0')
+          - compare_versions(version, '<= 3.3.2')

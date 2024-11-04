@@ -1,4 +1,4 @@
-id: wp-db-backup
+id: wp-db-backup-3b5e97ccc00edffef3b62fcaabec2b86
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/453c656a-c26d-44c3-bc7d-7fc502a00b03?source=api-scan
   classification:
     cvss-metrics: 

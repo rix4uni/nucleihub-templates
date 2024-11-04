@@ -1,4 +1,4 @@
-id: onesignal-free-web-push-notifications
+id: onesignal-free-web-push-notifications-a9dd39dd89af6b4a6b43d70f5c7bd243
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a913ca7e-8f61-4615-b7fb-863b111fe22e?source=api-scan
   classification:
     cvss-metrics: 

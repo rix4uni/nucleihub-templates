@@ -1,15 +1,15 @@
-id: arkhe-blocks
+id: arkhe-blocks-241159718d80d395d578418047267d9a
 
 info:
   name: >
-    Arkhe Blocks <= 2.22.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Arkhe Blocks <= 2.23.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1079282d-3183-4190-8a54-d6085d27935a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0a8089e1-51ca-4e27-930c-d0bb57bbd641?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.22.1')
+          - compare_versions(version, '<= 2.23.0')

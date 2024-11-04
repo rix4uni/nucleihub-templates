@@ -1,15 +1,14 @@
 id: rtsp
 info:
-  name: Darwin Streaming Server
+  name: Hikvision DVR rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
+    device_type: media device
     fallback:
     - get-request
-    operating_system: Linux
     rarity: 5
-    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 \d\d\d .*\r\nServer: DSS/([\d.]+) \(Build/[\d.]+; Platform/Linux'
+    - '^RTSP/1\.0 401 Unauthorized\r\nWWW-Authenticate: Digest realm=\"Hikvision\", nonce=\"[\da-f]{32}\", stale=\"FALSE\"\r\nWWW-Authenticate: Basic realm=\"/\"\r\n\r\n'

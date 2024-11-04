@@ -1,4 +1,4 @@
-id: restaurant-and-cafe
+id: restaurant-and-cafe-2696994b3359a0fa1fe940842c51e8da
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/6f4424be-d63d-431d-a237-2bff6c4a647a?source=api-scan
   classification:
     cvss-metrics: 

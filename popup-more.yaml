@@ -1,4 +1,4 @@
-id: popup-more
+id: popup-more-60e7c6bfd506468c7c1f08db88e0d744
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/7894a19c-b873-4c5b-8c82-6656cc306ee2?source=api-scan
   classification:
     cvss-metrics: 

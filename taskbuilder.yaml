@@ -1,4 +1,4 @@
-id: taskbuilder
+id: taskbuilder-30f91fb5738ca71150d80cdf2245bdf4
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/0eb875d6-03ff-441e-9a4e-69aa577c8587?source=api-scan
   classification:
     cvss-metrics: 

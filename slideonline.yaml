@@ -1,4 +1,4 @@
-id: slideonline
+id: slideonline-7db66b39f8d5686d7daa9615badea8b4
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/778e2191-d764-44a1-9f52-9698e9183fd2?source=api-scan
   classification:
     cvss-metrics: 

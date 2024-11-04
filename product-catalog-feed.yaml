@@ -1,4 +1,4 @@
-id: product-catalog-feed
+id: product-catalog-feed-0540153e1216e2926fd65d50a2231125
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/18d33d68-9719-4e74-a594-bc4add38ceee?source=api-scan
   classification:
     cvss-metrics: 

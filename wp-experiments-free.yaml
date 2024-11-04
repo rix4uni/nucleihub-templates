@@ -1,4 +1,4 @@
-id: wp-experiments-free
+id: wp-experiments-free-d22925e264a6c1632d667f43f0193fb4
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/0f35cc8b-11be-4664-be48-12a8db872d66?source=api-scan
   classification:
     cvss-metrics: 

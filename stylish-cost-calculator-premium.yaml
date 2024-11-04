@@ -1,13 +1,14 @@
-id: stylish-cost-calculator-premium
+id: stylish-cost-calculator-premium-84af4479cdbf2b6fd2583d1103c4131b
 
 info:
   name: >
     Stylish Cost Calculator < 7.9.0 - Unauthenticated Stored Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/5b7cc660-b430-4b0f-b2d1-68ba458de8a9?source=api-scan
   classification:
     cvss-metrics: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/stylish-cost-calculator-premium/"
     google-query: inurl:"/wp-content/plugins/stylish-cost-calculator-premium/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,stylish-cost-calculator-premium,low
+  tags: cve,wordpress,wp-plugin,stylish-cost-calculator-premium,high
 
 http:
   - method: GET

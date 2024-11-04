@@ -1,4 +1,4 @@
-id: electric-studio-client-login
+id: electric-studio-client-login-f80c5406ebadb06c127dd29569b85330
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e797c0ca-f348-4d9c-815e-0c1756686690?source=api-scan
   classification:
     cvss-metrics: 

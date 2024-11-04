@@ -1,12 +1,13 @@
 id: telnet
 info:
-  name: D-Link $1 webcam telnetd
+  name: Soyo SIP VoIP phone telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: webcam
+    device_type: VoIP phone
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\xff\xfb\x03Welcome to (DCS-\w+) telnet daemon\r\n\r\nPassword:'
+    - '^\xff\xfb\x01SOYO_SIP V([\w._-]+) settings\r\nPassword:'

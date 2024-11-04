@@ -1,4 +1,4 @@
-id: wp-booklet
+id: wp-booklet-d0c04da8a214864eb279b0cce8e1e67d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/02551726-672d-481a-8b77-ec7bf33a22c1?source=api-scan
   classification:
     cvss-metrics: 

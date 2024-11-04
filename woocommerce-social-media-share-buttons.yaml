@@ -1,4 +1,4 @@
-id: woocommerce-social-media-share-buttons
+id: woocommerce-social-media-share-buttons-9e66720a0e1720448903d3312c56aff4
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c5c96063-a6ac-4325-9f44-a6f8344e00ef?source=api-scan
   classification:
     cvss-metrics: 

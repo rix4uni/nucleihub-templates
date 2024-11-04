@@ -1,4 +1,4 @@
-id: publisher-media-kit
+id: publisher-media-kit-b98496a862f051b9926ad8f184b175ee
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/d535c069-cfa3-4c41-9a01-b4c4e7c75764?source=api-scan
   classification:
     cvss-metrics: 

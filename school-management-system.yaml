@@ -1,4 +1,4 @@
-id: school-management-system
+id: school-management-system-e61e95d0b660c11176a808e650b8367a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1268bdb9-7f80-4fdc-a95a-d51b0ab83e17?source=api-scan
   classification:
     cvss-metrics: 

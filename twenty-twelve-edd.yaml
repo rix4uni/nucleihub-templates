@@ -1,4 +1,4 @@
-id: twenty-twelve-edd
+id: twenty-twelve-edd-050584624e9a7dee92e9145811b49094
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/12946a87-0b61-45ea-aae3-385d860b0db8?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: stripe-for-woocommerce
+id: stripe-for-woocommerce-65e3e56492d215bfe09c610ad1f04407
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/7f706c15-56c8-4eb4-9790-b394d37b0e33?source=api-scan
   classification:
     cvss-metrics: 

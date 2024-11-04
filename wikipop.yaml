@@ -1,4 +1,4 @@
-id: wikipop
+id: wikipop-9bad34cda368db8dbdc596d61cddc4aa
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/5dbebce4-599b-4241-aa9a-3d2486a57d52?source=api-scan
   classification:
     cvss-metrics: 

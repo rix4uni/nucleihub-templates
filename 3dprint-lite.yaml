@@ -1,18 +1,18 @@
-id: 3dprint-lite
+id: 3dprint-lite-f94d4444c3631fd35d25ed35a445cc8b
 
 info:
-  name: >
-    3DPrint Lite < 1.9.1.5 - Arbitrary File Upload
+  name: "3DPrint Lite < 1.9.1.5 - Arbitrary File Upload"
   author: topscoder
   severity: critical
-  description: >
-    
+  description: "The 3DPrint Lite plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the p3dlite_handle_upload function in versions before 1.9.1.5. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected sites server which may make remote code execution possible."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d52f601b-6a80-4b6f-895b-fcbbdf73103a?source=api-scan
+    - https://wpscan.com/vulnerability/c46ecd0d-a132-4ad6-b936-8acde3a09282
+    - https://wordpress.org/plugins/3dprint-lite/#developers
+    - https://plugins.trac.wordpress.org/changeset/2607339
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/3dprint-lite/"
     google-query: inurl:"/wp-content/plugins/3dprint-lite/"

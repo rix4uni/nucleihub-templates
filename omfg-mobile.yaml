@@ -1,4 +1,4 @@
-id: omfg-mobile
+id: omfg-mobile-1853c8d9ef69576378c5a2deb0da9a5d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/cf458f57-2c8b-44d1-8e36-bbfc1a66c2e2?source=api-scan
   classification:
     cvss-metrics: 

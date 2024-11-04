@@ -1,23 +1,24 @@
-id: traveler
+id: traveler-52456c16d02f96fdbec2551c7c01a399
 
 info:
-  name: >
-    Travel Booking WordPress Theme < 2.8.2 - Cross-Site Scripting
+  name: "Travel Booking WordPress Theme < 2.8.4 - SQL Injection"
   author: topscoder
-  severity: medium
-  description: >
-    The "Travel Booking WordPress Theme" theme for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘adult_number’ parameter in versions up to, and including, 2.8.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
+  severity: critical
+  description: "The Travel Booking WordPress Theme for WordPress is vulnerable to blind SQL Injection via the ‘location_id’ parameter in versions up to, and including, 2.8.3 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for ;unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d524a2c1-43df-4059-b1ec-b0738026158e?source=api-prod
+    - https://themeforest.net/item/traveler-traveltourbooking-wordpress-theme/10822683
+    - https://travelerwp.com/traveler-changelog/
+    - https://www.cybersecurity-help.cz/vdb/SB2020070928
+    - https://web.archive.org/web/20200710050009/github.com/vladvector/vladvector.github.io/blob/master/exploit/2020-06-23-travel-booking-wordpress-theme-v2-8-3.txt
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id:
   metadata:
     fofa-query: "wp-content/themes/traveler/"
     google-query: inurl:"/wp-content/themes/traveler/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,traveler,medium
+  tags: cve,wordpress,wp-theme,traveler,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.8.1')
+          - compare_versions(version, '< 2.8.4')

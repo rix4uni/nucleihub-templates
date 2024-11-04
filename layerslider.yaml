@@ -1,30 +1,32 @@
-id: layerslider
+id: layerslider-cb384ba3c35b92565877405afa8e9e9b
 
 info:
-  name: >
-    LayerSlider <= 7.7.9 - Cross-Site Request Forgery
+  name: "LayerSlider <= 6.2.0 - Cross-Site Request Forgery"
   author: topscoder
-  severity: medium
-  description: >
-    
+  severity: high
+  description: "The LayerSlider plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 6.2.0. This is due to missing or incorrect nonce validation on the ls_save_screen_options() function. This makes it possible for authenticated attackers to create an administrative account via XSS, which the attacker can use to perform SQLi attacks. Assuming they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9225ebc6-bff9-4176-a86e-022ff8ec3b05?source=api-scan
+    - https://news.kreaturamedia.com/layerslider/?t=1646157803
+    - https://deeptor.ws/threads/xss-exploit-layerslider-administration-page.45795/
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-layerslider-responsive-wordpress-slider-multiple-vulnerabilities-6-2-0/
+    - https://patchstack.com/database/vulnerability/layerslider/wordpress-layerslider-plugin-6-2-0-cross-site-request-forgery-csrf-vulnerability
+    - https://web.archive.org/web/20200423062011/http%3A//wphutte.com%3A80/layer-slider-6-1-6-csrf-to-xss-to-sqli-with-poc
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id:
   metadata:
-    fofa-query: "wp-content/plugins/LayerSlider/"
-    google-query: inurl:"/wp-content/plugins/LayerSlider/"
+    fofa-query: "wp-content/plugins/layerslider/"
+    google-query: inurl:"/wp-content/plugins/layerslider/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,LayerSlider,medium
+  tags: cve,wordpress,wp-plugin,layerslider,high
 
 http:
   - method: GET
     redirects: true
     max-redirects: 3
     path:
-      - "{{BaseURL}}/wp-content/plugins/LayerSlider/readme.txt"
+      - "{{BaseURL}}/wp-content/plugins/layerslider/readme.txt"
 
     extractors:
       - type: regex
@@ -50,9 +52,9 @@ http:
 
       - type: word
         words:
-          - "LayerSlider"
+          - "layerslider"
         part: body
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 7.7.9')
+          - compare_versions(version, '<= 6.2.0')

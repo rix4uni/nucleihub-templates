@@ -1,14 +1,11 @@
 id: sieve
 info:
-  name: DBMail timsieved
+  name: Dovecot Pigeonhole sieve
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
-    product: dbmail
     rarity: 0
-    vendor: paul_j_stevens
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -20,4 +17,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"DBMail timsieved ([\w._-]+)\"\r\n
+    - ^\"IMPLEMENTATION\" \"Dovecot Pigeonhole\"\r\n\"SIEVE\" \"[\w._;-]+(?:\s+[\w._;-]+)*\"\r\n\"NOTIFY\" \"mailto\"\r\n\"SASL\" \"[\w._;-]*(?:\s+[\w._;-]+)*\"\r\n\"STARTTLS\"\r\n\"VERSION\" \"([\w._-]+)\"\r\nOK \"[^"]*\"\r\n$

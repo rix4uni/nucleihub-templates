@@ -1,4 +1,4 @@
-id: yikes-inc-easy-custom-woocommerce-product-tabs
+id: yikes-inc-easy-custom-woocommerce-product-tabs-02a26657350b931c1f5ee83a424e363d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/03cd1f6e-2400-44e7-b2b0-32c9890e1c1b?source=api-scan
   classification:
     cvss-metrics: 

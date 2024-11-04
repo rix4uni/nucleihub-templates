@@ -1,18 +1,20 @@
-id: myriad
+id: myriad-d95a71211b23edae834f061a87650c33
 
 info:
-  name: >
-    Myriad <= 2.0 - Arbitrary File Deletion
+  name: "Myriad <= 2.0 - Arbitrary File Download"
   author: topscoder
   severity: high
-  description: >
-    The Myriad Theme for WordPress is vulnerable to Arbitrary File Deletion in versions up to, and including, 2.1. This is due to the '_mysite_delete_skin_zip' parameter in the 'dl-skin.php' file. This makes it possible for unauthenticated attackers to delete any file on the server of the vulnerable service.
+  description: "The Myriad Theme for WordPress is vulnerable to Arbitrary File Download in versions up to, and including, 2.0. This is due to the '_mysite_download_skin' parameter in the 'dl-skin.php' file. This makes it possible for unauthenticated attackers to download any file within the server of the vulnerable service."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/65c8ea6c-85f1-4e96-995f-57200819280e?source=api-prod
+    - https://www.securityfocus.com/bid/64501/
+    - https://www.exploit-db.com/exploits/30443
+    - https://packetstormsecurity.com/files/127357/WordPress-Themes-File-Download-Deletion.html
+    - http://web.archive.org/web/20180125015159/http%3A//mysitemyway.com/theme/myriad-wordpress-theme/
+    - https://web.archive.org/web/20150427084612/http%3A//mysitemyway.com/docs/Myriad_Changelog
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/themes/myriad/"
     google-query: inurl:"/wp-content/themes/myriad/"

@@ -1,4 +1,4 @@
-id: private-files
+id: private-files-c96341757b20e6a9032240aebcf40041
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/d764b1be-b4ae-4845-b506-846f782cf21e?source=api-scan
   classification:
     cvss-metrics: 

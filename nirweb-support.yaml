@@ -1,4 +1,4 @@
-id: nirweb-support
+id: nirweb-support-fdd0b2f70a76087df265948c9e79cd66
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f0ec70a0-d1be-4652-b029-d8268c2667ec?source=api-scan
   classification:
     cvss-metrics: 

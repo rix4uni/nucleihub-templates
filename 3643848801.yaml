@@ -1,11 +1,14 @@
 id: imap
 info:
-  name: Binc imapd
+  name: Axigen imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    product: axigen_mail_server
     rarity: 0
+    vendor: gecad
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Welcome to Binc IMAP
+    - ^\* OK AXIGEN IMAP4rev1 service is ready\r\n

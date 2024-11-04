@@ -1,4 +1,4 @@
-id: svs-pricing-tables
+id: svs-pricing-tables-03a10a0c5ea4201203e901b26db77b6b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/78af081a-807b-48c8-82cd-f87fbef0fbe6?source=api-scan
   classification:
     cvss-metrics: 

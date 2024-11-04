@@ -1,49 +1,56 @@
-id: wordpress-google-site-kit
+id: google-site-kit-812ea1b628d17c54757399034af0fea3
 
 info:
-  name: Site Kit by Google – Analytics, Search Console, AdSense, Speed Detection
-  author: ricardomaia
-  severity: info
+  name: "Site Kit by Google <= 1.7.1 - Sensitive Information Disclosure"
+  author: topscoder
+  severity: medium
+  description: "The Site Kit by Google plugin for WordPress is vulnerable to Sensitive Information Disclosure in versions up to, and including, 1.7.1. This is due to the lack of capability checks on the admin_enqueue_scripts action which displays the connection key. This makes it possible for authenticated attackers with any level of access obtaining owner access to a site in the Google Search Console."
   reference:
-    - https://wordpress.org/plugins/google-site-kit/
+    - https://www.wordfence.com/blog/2020/05/vulnerability-in-google-wordpress-plugin-grants-attacker-search-console-access/
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    cvss-score: 4.3
+    cve-id:
   metadata:
-    plugin_namespace: google-site-kit
-    wpscan: https://wpscan.com/plugin/google-site-kit
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/google-site-kit/"
+    google-query: inurl:"/wp-content/plugins/google-site-kit/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,google-site-kit,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/google-site-kit/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/google-site-kit.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "google-site-kit"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a00483046022100815ffe2d759418cf110d32c1310cecc959ac04e99051e28d05205e0d1d1b3045022100dc783199b7b2a0bdbe68428c80703d6bce08a3bd70841147d3e7d2e5601c8d70:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 1.7.1')

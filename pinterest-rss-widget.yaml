@@ -1,4 +1,4 @@
-id: pinterest-rss-widget
+id: pinterest-rss-widget-d811af033b9a8a534a836c281fc1ba19
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1ec186b0-72f0-4017-ad24-1c82247a23ec?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: swipe-hq-checkout-for-jigoshop
+id: swipe-hq-checkout-for-jigoshop-3b5e5c185ca9fa5755306d773978ba9a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c5fe6884-4a31-4341-b30f-354b447f5313?source=api-scan
   classification:
     cvss-metrics: 

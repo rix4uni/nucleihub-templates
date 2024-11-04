@@ -1,14 +1,17 @@
 id: imap
 info:
-  name: Zarafa imapd
+  name: University of Washington IMAP imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    product: zarafa
+    hostname: $1
+    info: 'time zone: $3'
+    product: uw_imap
     rarity: 0
-    vendor: zarafa
+    vendor: uw
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +22,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[CAPABILITY IMAP4rev1 LITERAL\+ STARTTLS AUTH=PLAIN\] Zarafa IMAP gateway ready\r\n
+    - ^\* OK \[CAPABILITY IMAP4REV1 [^]]+\] \[([\w.-]+)\] IMAP4rev1 (20\w+\.\d+) at [ \w,:]+ ([+-]\d+) \(\w+\)\r\n

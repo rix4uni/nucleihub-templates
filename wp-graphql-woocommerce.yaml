@@ -1,4 +1,4 @@
-id: wp-graphql-woocommerce
+id: wp-graphql-woocommerce-5e48b1d9464c6954c7f09642fd0e35aa
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3c926145-f0b5-44cf-bea6-e9bdf6e8e687?source=api-scan
   classification:
     cvss-metrics: 

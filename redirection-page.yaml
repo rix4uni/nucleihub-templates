@@ -1,4 +1,4 @@
-id: redirection-page
+id: redirection-page-76f8119fb39083ae70893a1b68737a55
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/65869722-1147-4fdd-a844-944c51a07f2e?source=api-scan
   classification:
     cvss-metrics: 

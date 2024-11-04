@@ -1,17 +1,18 @@
-id: wp-opening-hours
+id: wp-opening-hours-dc917534849ec740853345e88dd6e64a
 
 info:
   name: >
-    Opening Hours <= 2.3.0 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
+    Opening Hours <= 2.3.0 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
-    
+    The Opening Hours plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 2.3.0, via the "Set Details" meta box. This makes it possible for authenticated attackers with administrator permissions to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bb9bce29-9842-4d8a-ac9b-24432a28851c?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cfc59e3d-13c6-4051-8a1a-d109ea06b10b?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 5.5
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-opening-hours/"

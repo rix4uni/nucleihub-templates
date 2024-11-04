@@ -1,23 +1,23 @@
-id: upscale
+id: upscale-8525917b8f35bb4eaf3e210e14fd7fa5
 
 info:
-  name: >
-    Upscale (Unknown Versions) - Cross-Site Scripting
+  name: "Upscale (Unknown Versions) - Cross-Site Scripting"
   author: topscoder
-  severity: high
-  description: >
-    
+  severity: medium
+  description: "The upscale theme for WordPress is vulnerable to Cross-Site Scripting due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/afb3e2f8-ba44-48fc-9882-d9bcd39676ee?source=api-scan
+    - https://jannefi.blogspot.com/2012/10/xss-vulnerability-in-wp-themes-by-kriesi.html
+    - https://kriesi.at/archives/upscale
+    - http://web.archive.org/web/20141125123431/https%3A//themeforest.net/item/upscale-wordpress-business-portfolio-theme/241085?ref=Kriesi
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/themes/upscale/"
     google-query: inurl:"/wp-content/themes/upscale/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,upscale,high
+  tags: cve,wordpress,wp-theme,upscale,medium
 
 http:
   - method: GET
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= *')
+          - compare_versions(version, '>0')

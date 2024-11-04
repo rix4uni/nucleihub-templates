@@ -1,4 +1,4 @@
-id: swipe-hq-checkout-for-eshop
+id: swipe-hq-checkout-for-eshop-baaa09bc880d86506096b0e079ccd1e0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b9a603ee-183d-4130-8e03-12deb86466ce?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,23 +1,23 @@
-id: custom-registration-form-builder-with-submission-manager
+id: custom-registration-form-builder-with-submission-manager-ffedc30c7670effca7512067609fd2cc
 
 info:
-  name: >
-    RegistrationMagic <= 5.2.4.1 - Reflected Cross-Site Scripting via section_id
+  name: "RegistrationMagic - Custom Registration Forms <= 3.8.0.4 - SQL Injection"
   author: topscoder
-  severity: medium
-  description: >
-    
+  severity: high
+  description: "The RegistrationMagic - Custom Registration Forms plugin for WordPress is vulnerable to generic SQL Injection via the 'rm_form_id' field in versions up to, and including, 3.8.0.4 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2d010e55-d57a-49f7-a991-76b676b88f1e?source=api-scan
+    - https://rastating.github.io/registrationmagic-custom-registration-forms-3-7-9-2-authenticated-sql-injection
+    - https://github.com/rastating/wordpress-exploit-framework/blob/master/lib/wpxf/modules/auxiliary/hash_dump/registrationmagic_hash_dump.rb
+    - https://wpscan.com/vulnerability/8975
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/custom-registration-form-builder-with-submission-manager/"
     google-query: inurl:"/wp-content/plugins/custom-registration-form-builder-with-submission-manager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,custom-registration-form-builder-with-submission-manager,medium
+  tags: cve,wordpress,wp-plugin,custom-registration-form-builder-with-submission-manager,high
 
 http:
   - method: GET
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 5.2.4.2')
+          - compare_versions(version, '<= 3.8.0.4')

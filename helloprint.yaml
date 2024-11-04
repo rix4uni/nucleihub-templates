@@ -1,4 +1,4 @@
-id: helloprint
+id: helloprint-34e41f309c98caf99baeb7f290643ca1
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c7cdfa6a-1555-494f-9802-bf92b90e7d9a?source=api-scan
   classification:
     cvss-metrics: 

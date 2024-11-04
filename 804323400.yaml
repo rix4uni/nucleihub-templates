@@ -6,6 +6,7 @@ info:
   severity: info
   metadata:
     hostname: $1
+    info: Unauthorized
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - '^([-\w_.]+): lpsched: Malformed from address\n'
+    - '^([-\w_.]+): lpsched: Host name for your address \([\d.]+\) unknown\n'

@@ -1,14 +1,15 @@
-id: testimonial-slider
+id: testimonial-slider-4b0e431237253b67645c02e14973d7bb
 
 info:
   name: >
-    Testimonial Slider < 1.2.5 - SQL Injection
+    Testimonial Slider <= 1.2.5 - Cross-Site Request Forgery to Stored Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e5240171-6051-455c-b6df-630e2cd8308d?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5d9e0147-74ae-481a-bdc2-16bb3cdc10d7?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/testimonial-slider/"
     google-query: inurl:"/wp-content/plugins/testimonial-slider/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,testimonial-slider,critical
+  tags: cve,wordpress,wp-plugin,testimonial-slider,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.2.5')
+          - compare_versions(version, '<= 1.2.5')

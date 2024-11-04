@@ -1,12 +1,13 @@
 id: pop3-proxy
 info:
-  name: Avast! anti-virus pop3 proxy
+  name: Spam Inspector pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
     operating_system: Windows
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK avast! POP3 proxy ready\.\r\n
+    - ^\+OK POP3 Spam Inspector Spam Filter Gateway Version ([\d.]+) Ready\.\r\n

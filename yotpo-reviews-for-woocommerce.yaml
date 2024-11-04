@@ -1,4 +1,4 @@
-id: yotpo-reviews-for-woocommerce
+id: yotpo-reviews-for-woocommerce-58258843b571df0213f35ea9341a70e8
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/6297753c-72c0-4926-9365-d0c760ddfd2a?source=api-scan
   classification:
     cvss-metrics: 

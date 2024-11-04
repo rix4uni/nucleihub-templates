@@ -1,4 +1,4 @@
-id: turn-off-comments-for-all-posts
+id: turn-off-comments-for-all-posts-f128053e2a44d66610243a5d2015cb7b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3ee49082-5255-4ab7-9562-bd786a32382c?source=api-scan
   classification:
     cvss-metrics: 

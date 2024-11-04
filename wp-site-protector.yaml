@@ -1,4 +1,4 @@
-id: wp-site-protector
+id: wp-site-protector-369e6df88defc6a2d480218b91579983
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f92f614b-162a-4ca5-bf7d-9d7088f59af9?source=api-scan
   classification:
     cvss-metrics: 

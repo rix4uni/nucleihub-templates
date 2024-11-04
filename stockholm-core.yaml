@@ -1,4 +1,4 @@
-id: stockholm-core
+id: stockholm-core-95b3fcdbd3304fccf1c5d2aa7f283ee5
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/704a60e1-bdb0-498f-a9f1-c9de1c29df7c?source=api-scan
   classification:
     cvss-metrics: 

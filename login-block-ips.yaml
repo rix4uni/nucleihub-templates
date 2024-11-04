@@ -1,4 +1,4 @@
-id: login-block-ips
+id: login-block-ips-27f0d3bad435db86a73e55bb3b09f90e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/d3adabcc-3259-4d4d-8359-71af16823d18?source=api-scan
   classification:
     cvss-metrics: 

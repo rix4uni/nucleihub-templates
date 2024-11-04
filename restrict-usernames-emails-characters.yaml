@@ -1,4 +1,4 @@
-id: restrict-usernames-emails-characters
+id: restrict-usernames-emails-characters-04b5371f36ee530763ae4bd1dca4ec27
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/12532f84-bc76-4968-a01f-f879ab41b901?source=api-scan
   classification:
     cvss-metrics: 

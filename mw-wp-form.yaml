@@ -1,23 +1,24 @@
-id: mw-wp-form
+id: mw-wp-form-4f3887e31c9dd8ce0ca984079d0d55a4
 
 info:
-  name: >
-    MW WP Form <= 4.4.2 - Directory Traversal via _file_upload
+  name: "MW WP Form <= 4.4.2 - Directory Traversal via _file_upload"
   author: topscoder
-  severity: low
-  description: >
-    
+  severity: medium
+  description: "The MW WP Form plugin for WordPress is vulnerable to Directory Traversal in versions up to, and including, 4.4.2 via the _file_upload function. This allows unauthenticated attackers to upload files of allowed types to arbitrary directories on the site."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f7adeee0-30ff-4759-b42e-1ac2dea5a8a4?source=api-scan
+    - https://plugins.svn.wordpress.org/mw-wp-form/tags/4.4.3/readme.txt
+    - https://plugins.svn.wordpress.org/mw-wp-form/tags/4.4.3/readme.md
+    - https://plugins.2inc.org/mw-wp-form/
+    - https://plugins.trac.wordpress.org/changeset/2909239/
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
+    cvss-score: 5.3
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/mw-wp-form/"
     google-query: inurl:"/wp-content/plugins/mw-wp-form/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,mw-wp-form,low
+  tags: cve,wordpress,wp-plugin,mw-wp-form,medium
 
 http:
   - method: GET

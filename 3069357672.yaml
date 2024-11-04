@@ -1,13 +1,15 @@
 id: ftp
 info:
-  name: Tornado vxWorks ftpd
+  name: Xerox FreeFlow Accxess ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: VxWorks
+    device_type: print server
+    product: freeflow_print_server
     rarity: 0
-    version: $1
+    vendor: xerox
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Tornado-vxWorks \(VxWorks([\d.]+)\) FTP server ready\r\n
+    - ^220 FreeFlow Accxes FTP server ready\r\n

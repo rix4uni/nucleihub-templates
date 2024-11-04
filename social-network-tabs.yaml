@@ -1,4 +1,4 @@
-id: social-network-tabs
+id: social-network-tabs-14fcb5f61ad49c73ae6246d88e51dd78
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/dd58a528-4c01-407d-b3f9-99c0817e9820?source=api-scan
   classification:
     cvss-metrics: 

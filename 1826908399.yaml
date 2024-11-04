@@ -1,15 +1,15 @@
 id: domain
 info:
-  name: Unbound
+  name: Check Point Meta IP ISC BIND
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    product: unbound
+    product: bind
     rarity: 1
-    vendor: nlnetlabs
+    vendor: isc
     verified: true
-    version: $1
+    version: $1 build $2
 tcp:
 - name: dnsversion-bind-req
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - \x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}unbound ([\w.-]+)$
+    - n\x04bind\0\0\x10\0\x03\x07VERSION\x04BIND\0\0\x10\0\x03.{7}Meta IP DNS - BIND V([\d.]+)-REL \(Build (\d+)\)

@@ -1,14 +1,15 @@
-id: youtube-showcase
+id: youtube-showcase-a54ab79ead4267b354d9ebd98e832415
 
 info:
   name: >
-    Video Gallery & Management <= 3.3.5 - Cross-Site Request Forgery
+    YouTube Video Gallery by YouTube Showcase – Video Gallery Plugin for WordPress <= 3.3.6 - Missing Authorization to Arbitrary Post/Page Creation
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e226d75f-37b2-4af2-bba0-0fd3a96cc1a0?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0e9d5382-d37d-4a40-8f22-e32b8ee98859?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/youtube-showcase/"
     google-query: inurl:"/wp-content/plugins/youtube-showcase/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,youtube-showcase,medium
+  tags: cve,wordpress,wp-plugin,youtube-showcase,high
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.3.5')
+          - compare_versions(version, '<= 3.3.6')

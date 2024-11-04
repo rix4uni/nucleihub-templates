@@ -1,4 +1,4 @@
-id: simple-retail-menus
+id: simple-retail-menus-ce54b62b8259ea82a84e3c009b043db8
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/11c369eb-7e5b-4fcf-a526-23466ebad420?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: wp-user-manager
+id: wp-user-manager-d80f42e51e6fec10b3c8e0a200ec4731
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b581e866-2b3b-4d6f-8bd3-d370c6482d12?source=api-scan
   classification:
     cvss-metrics: 

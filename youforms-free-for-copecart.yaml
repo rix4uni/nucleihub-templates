@@ -1,4 +1,4 @@
-id: youforms-free-for-copecart
+id: youforms-free-for-copecart-00f36cfe5772264aeb5d3916e05a25a2
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c1d67b80-67b7-4194-ab90-e9f8cea1ac33?source=api-scan
   classification:
     cvss-metrics: 

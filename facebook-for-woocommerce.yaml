@@ -1,49 +1,59 @@
-id: wordpress-facebook-for-woocommerce
+id: facebook-for-woocommerce-f02b53ed8bb3375bf3e7051fa2b98828
 
 info:
-  name: Facebook for WooCommerce Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Facebook for WooCommerce <= 1.9.12 - Cross-Site Request Forgery allowing Option Update
+  author: topscoder
+  severity: medium
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/facebook-for-woocommerce/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/655b3a54-34b1-4c1a-a1b5-51d87e3134d4?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: facebook-for-woocommerce
-    wpscan: https://wpscan.com/plugin/facebook-for-woocommerce
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/facebook-for-woocommerce/"
+    google-query: inurl:"/wp-content/plugins/facebook-for-woocommerce/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,facebook-for-woocommerce,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/facebook-for-woocommerce/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/facebook-for-woocommerce.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "facebook-for-woocommerce"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a004830460221008ddee1e025b4ca6ebd7e86e0b84138cff2c8d3d7492d90b3b1d81590c356ed53022100f5177ad849729321ce0a872f0aff997d0dcfc267629e1185144bd22877fc3237:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 1.9.12')

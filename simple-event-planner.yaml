@@ -1,14 +1,15 @@
-id: simple-event-planner
+id: simple-event-planner-e36a69b44b89ff02531389bf94190722
 
 info:
   name: >
-    Simple Event Planner plugin <= 1.5.4 - Cross-Site Scripting
+    Simple Event Planner <= 1.5.4 - Authenticated Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bda0d24c-b1c9-4ae4-93b3-46568982d718?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/43c9b6f2-2b72-4326-8080-f41606c0880c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/simple-event-planner/"
     google-query: inurl:"/wp-content/plugins/simple-event-planner/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-event-planner,high
+  tags: cve,wordpress,wp-plugin,simple-event-planner,low
 
 http:
   - method: GET

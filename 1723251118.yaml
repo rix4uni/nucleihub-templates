@@ -1,10 +1,11 @@
 id: daytime
 info:
-  name: Tardis 2000 daytime
+  name: Microsoft Windows daytime
   author: nmap,cn-kali-team
   tags: detect,tech,daytime,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: daytime
     type: regex
     regex:
-    - ^[A-Z][a-z]{2} [A-Z][a-z]{2} +\d{1,2} \d\d:\d\d:\d\d 20\d\d $
+    - ^\d{1,2}:\d\d:\d\d [ap]m \d{4}/\d\d/\d\d\n$

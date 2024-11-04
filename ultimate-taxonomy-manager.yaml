@@ -1,14 +1,15 @@
-id: ultimate-taxonomy-manager
+id: ultimate-taxonomy-manager-d47f93e6628f023e6226c7ad55f98577
 
 info:
   name: >
-    XYDAC Ultimate Taxonomy Manager <= 2.0 - Cross-Site Request Forgery
+    Ultimate Taxonomy Manager <= 2.0 - Unauthenticated Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4baf39fd-4191-47eb-9b37-cdf290d6345b?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/06f56834-e1e9-4a02-988a-df4c563182c4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ultimate-taxonomy-manager/"
     google-query: inurl:"/wp-content/plugins/ultimate-taxonomy-manager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ultimate-taxonomy-manager,medium
+  tags: cve,wordpress,wp-plugin,ultimate-taxonomy-manager,high
 
 http:
   - method: GET

@@ -1,14 +1,15 @@
-id: salient-core
+id: salient-core-a69cafe3abd1248d6d49cbfacd550e36
 
 info:
   name: >
-    Salient Core <= 2.0.2 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Salient Core <= 2.0.7 - Authenticated (Contributor+) Local File Inclusion via Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/316ffb37-47fe-47c4-8a81-5794fa12ce33?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ebd3b70e-a06a-4dcc-a6af-dbe64fd57c82?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.2')
+          - compare_versions(version, '<= 2.0.7')

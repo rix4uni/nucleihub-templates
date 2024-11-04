@@ -1,14 +1,17 @@
 id: domain
 info:
-  name: NLnet Labs NSD
+  name: Microsoft DNS
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    product: nsd
+    info: Windows Server 2008
+    operating_system: Windows
+    product: dns
     rarity: 1
-    vendor: nlnetlabs
+    vendor: microsoft
     verified: true
+    version: $1
 tcp:
 - name: dnsversion-bind-req
   inputs:
@@ -20,4 +23,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - ^(?:..)?\0\x06\x81\x05\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03
+    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0[\x01\x03].{7}Microsoft DNS (6\.0)$

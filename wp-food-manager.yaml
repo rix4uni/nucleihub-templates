@@ -1,4 +1,4 @@
-id: wp-food-manager
+id: wp-food-manager-199bbb735eafbe4f5f8dfe316fee808d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2a78b274-f83f-4168-a8d2-9ee945518b60?source=api-scan
   classification:
     cvss-metrics: 

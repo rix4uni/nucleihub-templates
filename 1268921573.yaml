@@ -1,15 +1,15 @@
 id: http
 info:
-  name: nginx
+  name: Apache Tomcat httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
     fallback:
     - get-request
-    product: nginx
+    product: tomcat
     rarity: 5
-    vendor: igor_sysoev
+    vendor: apache
     verified: true
 tcp:
 - name: rtsprequest
@@ -22,4 +22,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - ^<head><title>400 Bad Request</title></head>\r\n<h1>400 Bad Request</h1>\r\n\r\n
+    - '^HTTP/1\.1 505 HTTP Version Not Supported\r\nDate: .*\r\nConnection: close\r\nServer: Apache\r\n\r\n'

@@ -1,23 +1,25 @@
-id: acurax-social-media-widget
+id: acurax-social-media-widget-625d78d10a9ef6fdfaf2846da8c52b1c
 
 info:
-  name: >
-    Social Media Widget <= 2.2 - Stored Cross-Site Scripting
+  name: "Social Media Widget by Acurax < 2.2 - Stored Cross-Site Scripting"
   author: topscoder
-  severity: medium
-  description: >
-    The Social Media Widget plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'acx_widget_si_theme', 'acx_widget_si_twitter', 'acx_widget_si_facebook', 'acx_widget_si_youtube', 'acx_widget_si_linkedin', 'acx_widget_si_gplus', 'acx_widget_si_credit', 'acx_widget_si_icon_size', 'acx_widget_si_pinterest', and 'acx_widget_si_feed' parameters in versions up to, and including, 2.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
+  severity: high
+  description: "The Social Media Widget by Acurax plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘acx_si_theme, acx_si_twitter, acx_si_facebook, acx_si_youtube, acx_si_linkedin, acx_si_gplus, acx_si_credi, $acx_si_icon_size, acx_si_display, acx_si_pinterest, acx_si_feed’ parameters in versions up to, and including, 2.2 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2540bd75-ba5e-4aaf-9e65-8fc22c8b87cf?source=api-prod
+    - http://cinu.pl/research/wp-plugins/mail_32bca56557b17f0f39d026e85cd878ab.html
+    - http://blog.cinu.pl/2015/11/php-static-code-analysis-vs-top-1000-wordpress-plugins.html
+    - https://wpscan.com/vulnerability/599da7b4-ad1c-4b4e-8531-ec672d2cac54
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-social-media-flying-icons-floating-social-media-icon-cross-site-scripting-2-1/
+    - https://patchstack.com/database/vulnerability/floating-social-media-icon/wordpress-floating-social-media-icon-plugin-2-1-stored-xss
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 6.4
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 7.2
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/acurax-social-media-widget/"
     google-query: inurl:"/wp-content/plugins/acurax-social-media-widget/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,acurax-social-media-widget,medium
+  tags: cve,wordpress,wp-plugin,acurax-social-media-widget,high
 
 http:
   - method: GET
@@ -55,4 +57,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2')
+          - compare_versions(version, '< 2.2')

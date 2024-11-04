@@ -1,4 +1,4 @@
-id: aco-product-labels-for-woocommerce
+id: aco-product-labels-for-woocommerce-64e0f1c6a645ab321657aec1b493593e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/24226595-6ae7-44c2-a159-5b69808273fa?source=api-scan
   classification:
     cvss-metrics: 

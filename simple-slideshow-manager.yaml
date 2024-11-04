@@ -1,18 +1,18 @@
-id: simple-slideshow-manager
+id: simple-slideshow-manager-5b9802d8624350c44aeb5dd86ff29afe
 
 info:
-  name: >
-    Simple Slideshow Manager <= 2.1 - Cross-Site Request Forgery
+  name: "Simple Slideshow Manager <= 2.3 - Reflected Cross-Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    
+  description: "The Simple Slideshow Manager plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'name' parameter in versions up to, and including, 2.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6205b0fe-6c68-4550-b9aa-87c3fbc88ddf?source=api-scan
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-simple-slideshow-manager-multiple-cross-site-scripting-vulnerabilities-2-3/
+    - https://packetstormsecurity.com/files/142747/WordPress-Simple-Slideshow-Manager-2.2-Cross-Site-Scripting.html
+    - https://web.archive.org/web/20170617085034/http%3A//defensecode.com/advisories/DC-2017-02-016_WordPress_Simple_Slideshow_Manager_Plugin_Advisory.pdf
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/simple-slideshow-manager/"
     google-query: inurl:"/wp-content/plugins/simple-slideshow-manager/"
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1')
+          - compare_versions(version, '<= 2.3')

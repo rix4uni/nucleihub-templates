@@ -1,4 +1,4 @@
-id: facebook-page-feed-graph-api
+id: facebook-page-feed-graph-api-124428fc6a79b3aa2b4be454d33a013a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/7fbb7a39-936b-48f1-97f1-46dc23180b00?source=api-scan
   classification:
     cvss-metrics: 

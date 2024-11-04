@@ -1,23 +1,21 @@
-id: responsive-lightbox
+id: responsive-lightbox-c526d8d4ebf37ac4d151ac571629686b
 
 info:
-  name: >
-    Responsive Lightbox <= 2.4.5 - Authenticated (Author+) Stored Cross-Site Scripting via name
+  name: "Responsive Lightbox & Gallery <= 2.4.1 - Authenticated (Administrator+) Stored Cross-Site Scripting"
   author: topscoder
-  severity: low
-  description: >
-    
+  severity: medium
+  description: "The Responsive Lightbox & Gallery plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘sanitize_field’ function in versions up to, and including, 2.4.1 due to insufficient input sanitization and output escaping on text fields. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4b60c1e2-5a4b-4a7a-8224-f1afd3888e08?source=api-scan
+    - https://plugins.trac.wordpress.org/changeset/2810855/responsive-lightbox/trunk/includes/class-settings.php?contextall=1&old=2741626&old_path=%2Fresponsive-lightbox%2Ftrunk%2Fincludes%2Fclass-settings.php
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 5.5
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/responsive-lightbox/"
     google-query: inurl:"/wp-content/plugins/responsive-lightbox/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,responsive-lightbox,low
+  tags: cve,wordpress,wp-plugin,responsive-lightbox,medium
 
 http:
   - method: GET
@@ -55,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.5')
+          - compare_versions(version, '<= 2.4.1')

@@ -1,11 +1,11 @@
 id: daytime
 info:
-  name: Microsoft Windows 2003 daytime
+  name: HP-UX daytime
   author: nmap,cn-kali-team
   tags: detect,tech,daytime,service
   severity: info
   metadata:
-    operating_system: Windows
+    operating_system: HP-UX
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: daytime
     type: regex
     regex:
-    - ^\d{1,2}:\d\d:\d\d [ap]m \d{1,2}/\d{1,2}/\d{4}\n$
+    - ^[A-Z][a-z]{2} [A-Z][a-z]{2} +\d{1,2} \d\d:\d\d:\d\d [A-Z]+ 20\d\d\r\n$

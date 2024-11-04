@@ -1,6 +1,6 @@
 id: afs
 info:
-  name: Arla
+  name: Transarc AFS
   author: nmap,cn-kali-team
   tags: detect,tech,afs,service
   severity: info
@@ -18,4 +18,4 @@ tcp:
   - name: afs
     type: regex
     regex:
-    - ^[\d\D]{28}\s*arla-([\d\.]+)\0
+    - ^[\d\D]{28}\s*Base\sconfiguration\safs([\d\.]+)\s+[^\s\0\;]+[\0\;]

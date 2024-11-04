@@ -1,14 +1,15 @@
-id: video-posts-webcam-recorder
+id: video-posts-webcam-recorder-62f30d8327fe68c84435294315d64448
 
 info:
   name: >
-    Video Posts Webcam Recorder < 3.2.4 - Cross-Site Scripting
+    Video Posts Webcam Recorder <= 1.55.4 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a4e343eb-b83d-43bf-a26d-db10dac18099?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3e0e022b-857d-4e7f-99d2-3837014c254e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/video-posts-webcam-recorder/"
     google-query: inurl:"/wp-content/plugins/video-posts-webcam-recorder/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,video-posts-webcam-recorder,high
+  tags: cve,wordpress,wp-plugin,video-posts-webcam-recorder,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.2.4')
+          - compare_versions(version, '<= 1.55.4')

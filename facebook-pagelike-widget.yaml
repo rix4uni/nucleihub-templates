@@ -1,4 +1,4 @@
-id: facebook-pagelike-widget
+id: facebook-pagelike-widget-7b45add6a4db1017bdea5020d0358073
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3b08f457-0864-41e0-b45e-cbd597d87752?source=api-scan
   classification:
     cvss-metrics: 

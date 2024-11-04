@@ -1,4 +1,4 @@
-id: woocommerce-shipping-per-product
+id: woocommerce-shipping-per-product-8beefb42fdffb8190e29273e22df98a9
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8b0504f3-f8df-4b37-bafa-5320920e9571?source=api-scan
   classification:
     cvss-metrics: 

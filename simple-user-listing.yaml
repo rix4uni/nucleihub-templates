@@ -1,4 +1,4 @@
-id: simple-user-listing
+id: simple-user-listing-f0c202d91db6bfd086013f999da95a84
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c7035903-d598-4db3-ba77-6e836229c5de?source=api-scan
   classification:
     cvss-metrics: 

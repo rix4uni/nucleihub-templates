@@ -1,4 +1,4 @@
-id: smsmaster
+id: smsmaster-476a7e3a40fa1e840322928f3de2f63f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1c2153f5-1c8b-4095-a0a8-849a7ee967c1?source=api-scan
   classification:
     cvss-metrics: 

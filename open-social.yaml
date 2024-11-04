@@ -1,4 +1,4 @@
-id: open-social
+id: open-social-e0f20df5aaf8178881ef112f1f58113e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/be0dc9be-f597-46d8-badd-452e442a6d1a?source=api-scan
   classification:
     cvss-metrics: 

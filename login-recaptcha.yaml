@@ -1,4 +1,4 @@
-id: login-recaptcha
+id: login-recaptcha-f9f2c15f1d2609deb00e84bb916415e9
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c8c69fc2-e1bf-43e7-a80e-931dbb70d8da?source=api-scan
   classification:
     cvss-metrics: 

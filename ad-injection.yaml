@@ -1,4 +1,4 @@
-id: ad-injection
+id: ad-injection-77dd310da778b3699853e87aae645af9
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a07ca145-9349-4961-9e66-4c59ea9b5069?source=api-scan
   classification:
     cvss-metrics: 

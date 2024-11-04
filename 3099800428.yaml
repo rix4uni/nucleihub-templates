@@ -1,13 +1,14 @@
 id: ssh
 info:
-  name: Tasman router sshd
+  name: Radware sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    device_type: router
+    device_type: firewall
     info: protocol $1
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-0 Tasman Networks Inc\.\r?\n
+    - ^SSH-([\d.]+)-Radware_([\d.]+)\r?\n

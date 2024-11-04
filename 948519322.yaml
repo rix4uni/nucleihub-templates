@@ -1,12 +1,14 @@
 id: irc
 info:
-  name: Bahamut ircd
+  name: Hybrid-based ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
-    hostname: $1
+    product: ircd-hybrid
     rarity: 0
+    vendor: ircd-hybrid
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^:([\w._-]+) NOTICE ZUSR :You have been throttled for 2 minutes for too many connections in a short period of time\. Further connections in this period will reset your throttle and you will have to wait longer\.\r\n
+    - ^NOTICE AUTH :\*\*\* Looking up your hostname\.\.\.\r\nNOTICE AUTH :\*\*\* Checking Ident\r\nNOTICE AUTH :\*\*\* (?:Couldn't look up|Found) your hostname\r\nNOTICE AUTH :\*\*\* (?:No|Got) Ident response\r\n$

@@ -1,13 +1,13 @@
 id: backdoor
 info:
-  name: Haxdoor trojan
+  name: w4ck1ng-shell
   author: nmap,cn-kali-team
   tags: detect,tech,backdoor,service
   severity: info
   metadata:
     info: '**BACKDOOR**'
-    operating_system: Windows
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: backdoor
     type: regex
     regex:
-    - ^A-311 Death welcome\x001
+    - '^:: w4ck1ng-shell \(Private Build v([\w._-]+)\) bind shell backdoor :: \n\n'

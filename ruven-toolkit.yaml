@@ -1,4 +1,4 @@
-id: ruven-toolkit
+id: ruven-toolkit-b8c001dba518758b0714eba788f0bbd3
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/01b9f536-cdab-4e38-b935-008cbd899a98?source=api-scan
   classification:
     cvss-metrics: 

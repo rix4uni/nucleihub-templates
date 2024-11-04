@@ -1,14 +1,15 @@
-id: theplus_elementor_addon
+id: theplus_elementor_addon-644e640ad4611653cd923b5a48db8e9d
 
 info:
   name: >
-    Plus Addons for Elementor Page Builder <= 4.1.6 - Authentication Bypass
+    The Plus Addons for Elementor – Elementor Addons, Page Templates, Widgets, Mega Menu, WooCommerce <= 5.5.4 - Authenticated (Contributor+) Stored Cross-Site Scripting via Heading Title Widget
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cd3a7af1-0cae-4872-9e61-58e9a9e3eda5?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/39c8e951-8e8c-4a72-9ecf-1dd96392105d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/theplus_elementor_addon/"
     google-query: inurl:"/wp-content/plugins/theplus_elementor_addon/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,theplus_elementor_addon,critical
+  tags: cve,wordpress,wp-plugin,theplus_elementor_addon,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 4.1.7')
+          - compare_versions(version, '<= 5.5.4')

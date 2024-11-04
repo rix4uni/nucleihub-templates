@@ -1,14 +1,15 @@
-id: yellow-pencil-visual-theme-customizer
+id: yellow-pencil-visual-theme-customizer-d565b2affb4c34a5302af1ca4b551ded
 
 info:
   name: >
-    Visual CSS Style Editor <= 7.2.0 - Unauthenticated Arbitrary Options Update
+    Visual CSS Style Editor <= 7.5.3 - Reflected Cross-Site Scripting via wyp_page_type parameter
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b4b3b4a4-9a56-49b8-b3d3-7e50954b4487?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2608f894-88ed-4f34-a382-8eab7eaab2e7?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/yellow-pencil-visual-theme-customizer/"
     google-query: inurl:"/wp-content/plugins/yellow-pencil-visual-theme-customizer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,yellow-pencil-visual-theme-customizer,low
+  tags: cve,wordpress,wp-plugin,yellow-pencil-visual-theme-customizer,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 7.2.1')
+          - compare_versions(version, '<= 7.5.3')

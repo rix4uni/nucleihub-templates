@@ -1,11 +1,12 @@
 id: printer
 info:
-  name: LPRng
+  name: lpsched
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    info: Not authorized
+    hostname: $1
+    info: host denied
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - ^\x01no connect permissions\n$
+    - '^([-\w_.]+): lpsched: Your host does not have line printer access\n'

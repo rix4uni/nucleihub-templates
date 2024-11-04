@@ -1,49 +1,59 @@
-id: wordpress-ninja-forms
+id: ninja-forms-3af5a927daac33dce34dd28a35058e78
 
 info:
-  name: Ninja Forms – The Contact Form Builder That Grows With You Detection
-  author: ricardomaia
-  severity: info
+  name: "Ninja Forms Contact Form – The Drag and Drop Form Builder for WordPress <= 3.6.10 - Code Injection"
+  author: topscoder
+  severity: critical
+  description: "The Ninja Forms Contact Form – The Drag and Drop Form Builder for WordPress plugin for WordPress is vulnerable to code injection in versions up to, and including 3.6.10 due to insufficient validation on Merge Tags that makes it possible to call arbitrary Ninja Form classes. This could lead to a variety of actions, however, one notable one is deserialization when the NF_Admin_Processes_ImportForm::startup method is called.  On sites with a POP chain this could be used to achieve remote code execution in the worst possible scenarios."
   reference:
-    - https://wordpress.org/plugins/ninja-forms/
+    - https://patchstack.com/database/vulnerability/ninja-forms-/wordpress-ninja-forms-plugin-3-6-10-unauthenticated-php-object-injection-vulnerability
+    - https://wpscan.com/vulnerability/8843d66b-e895-4336-afda-00b99442cdc1
+    - https://plugins.trac.wordpress.org/changeset/2742567/ninja-forms
+    - https://www.wordfence.com/blog/2022/06/psa-critical-vulnerability-patched-in-ninja-forms-wordpress-plugin/
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id:
   metadata:
-    plugin_namespace: ninja-forms
-    wpscan: https://wpscan.com/plugin/ninja-forms
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/ninja-forms/"
+    google-query: inurl:"/wp-content/plugins/ninja-forms/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,ninja-forms,critical
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/ninja-forms/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/ninja-forms.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "ninja-forms"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a00483046022100a9ba8bae2eb2ed1330352e8e6f427cfadd7560663445b5bab7acfc06e47f335702210093fadb21c2eca1aa8c594f7f2d928433202747c7564378fe8824cf6922ad35a3:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 3.0')

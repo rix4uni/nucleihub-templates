@@ -1,19 +1,23 @@
 id: http
 info:
-  name: Java Anonymous Proxy
+  name: Embedded HTTP Server
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    rarity: 0
+    fallback:
+    - get-request
+    rarity: 5
+    version: $1
 tcp:
-- name: 'null'
+- name: sipoptions
   inputs:
-  - data: ''
+  - data: 'OPTIONS sip:nm SIP/2.0\r\nVia: SIP/2.0/TCP nm;branch=foo\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nMax-Forwards: 70\r\nContent-Length: 0\r\nContact: <sip:nm@nm>\r\nAccept: application/sdp\r\n\r\n'
   host:
   - '{{Hostname}}'
+  port: 406,5060,8081,31337
   extractors:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 200 OK\r\nContent-type: text/html\r\nExpires: .*\r\nDate: .*\r\nPragma: no-cache\r\nCache-Control: no-cache\r\n\r\n<HTML><TITLE>JAP</TITLE>\n'
+    - '^SIP/2\.0 501 Not Implemented\r\nServer: Embedded HTTP Server ([\d.]+)\r\n'

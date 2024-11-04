@@ -5,7 +5,7 @@ info:
   tags: detect,tech,afp,service
   severity: info
   metadata:
-    info: 'name: $1; protocol 3.3'
+    info: 'name: $1; protocol 3.4'
     operating_system: Unix
     product: netatalk
     rarity: 6
@@ -23,4 +23,4 @@ tcp:
   - name: afp
     type: regex
     regex:
-    - (?i)^\x01\x03\0\x01\0\0\0\0....\0\0\0\0........\x8f\x5d.([\w._-]+)[\0\x01].*Netatalk[ \0]?([\w._-]+)\x05\x06AFP2\.2\x06AFPX03\x06AFP3\.1\x06AFP3\.2\x06AFP3\.3
+    - (?i)^\x01\x03\0\x01\0\0\0\0....\0\0\0\0........\x8f[\x59\x79].([^\0\x01]+)[\0\x01].*Netatalk([\w._-]+)\x06\x06AFP2\.2\x06AFPX03\x06AFP3\.1\x06AFP3\.2\x06AFP3\.3\x06AFP3\.4

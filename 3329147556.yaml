@@ -1,12 +1,14 @@
 id: pop3pw
 info:
-  name: SLMail pop3pw
+  name: poppassd
   author: nmap,cn-kali-team
   tags: detect,tech,pop3pw,service
   severity: info
   metadata:
-    operating_system: Windows
+    info: Digital Unix with C2 security
+    operating_system: Digital UNIX
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - ^200 hello\r\n
+    - ^200 poppassd v([\w.]+) for Digital Unix with C2 security Hello, who are you\?\r\n

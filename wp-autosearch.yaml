@@ -1,4 +1,4 @@
-id: wp-autosearch
+id: wp-autosearch-3013221bec1e8c080cfd4c6fa44a7c60
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b498e274-db8c-438f-8e19-43f3018d1663?source=api-scan
   classification:
     cvss-metrics: 

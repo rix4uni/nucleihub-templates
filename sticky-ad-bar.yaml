@@ -1,4 +1,4 @@
-id: sticky-ad-bar
+id: sticky-ad-bar-d1ae1625b23ddb2527f7790fdb55f050
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/750a4a94-458c-4944-a99b-a1c8e23e57d1?source=api-scan
   classification:
     cvss-metrics: 

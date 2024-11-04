@@ -1,14 +1,15 @@
-id: fluent-support
+id: fluent-support-3aebb0033b5eb39309cbb1b966a5249f
 
 info:
   name: >
-    Fluent Support <= 1.7.6 - Authenticated(Administrator+) SQL Injection
+    Fluent Support <= 1.8.0 - Insufficient Authorization on Email Verification
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8909dafa-3383-405e-a264-f0770e6714a4?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/039ac1d9-ccb5-43d0-8b17-10d12b7df90e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.7.7')
+          - compare_versions(version, '<= 1.8.0')

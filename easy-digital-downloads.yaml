@@ -1,16 +1,18 @@
-id: easy-digital-downloads
+id: easy-digital-downloads-8a53de3bd2f0c8a1cf7bd9b8a6e42ef6
 
 info:
-  name: "Easy Digital Downloads – Simple eCommerce for Selling Digital Files <= 2.11.2 - Reflected Cross-Site Scripting"
+  name: "Easy Digital Downloads – Simple eCommerce for Selling Digital Files <= 2.10.2 - Cross-Site Request Forgery"
   author: topscoder
   severity: medium
-  description: "The Easy Digital Downloads plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'start-date' and 'end-date' parameters in versions up to, and including, 2.11.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  description: "The Easy Digital Downloads plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.10.2. This is due to missing or incorrect nonce validation on the edds_stripe_connect_process_disconnect() function. This makes it possible for unauthenticated attackers to disconnect any user signed in with the manage_options capability via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
     - https://plugins.svn.wordpress.org/easy-digital-downloads/trunk/readme.txt
-    - https://wpscan.com/vulnerability/21f5823e-0245-4353-8d4d-2f63b8912b40
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-easy-digital-downloads-simple-ecommerce-for-selling-digital-files-cross-site-request-forgery-2-10-2/
+    - https://wpscan.com/vulnerability/b4100738-fb93-42e8-97db-508a911c092e
+    - https://plugins.trac.wordpress.org/changeset/2514681/
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 5.4
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
+    cvss-score: 4.3
     cve-id:
   metadata:
     fofa-query: "wp-content/plugins/easy-digital-downloads/"
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.11.2')
+          - compare_versions(version, '<= 2.10.2')

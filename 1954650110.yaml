@@ -1,13 +1,15 @@
 id: ftp-proxy
 info:
-  name: DeleGate ftp proxy
+  name: McAfee Web Gateway ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    hostname: $1
+    product: web_gateway
     rarity: 0
-    version: $2
+    vendor: mcafee
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220- ([-\w_.]+) PROXY-FTP server \(DeleGate/([\d.]+)\) ready\.\r\n
+    - ^220 McAfee Web Gateway ([\d.]+ (?:- )?build:? \d+)\r\n

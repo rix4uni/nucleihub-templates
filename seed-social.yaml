@@ -1,4 +1,4 @@
-id: seed-social
+id: seed-social-2469f603fdf449edfed5d7210aa6c605
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/47a99115-3e7b-4666-a00e-2b94d7d62e1a?source=api-scan
   classification:
     cvss-metrics: 

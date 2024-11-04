@@ -1,18 +1,21 @@
-id: wp-affiliate-platform
+id: wp-affiliate-platform-ae2d9b67e81a77ab41075e0f1735f343
 
 info:
-  name: >
-    WP Affiliate Platform <= 6.3.9 - Cross-Site Request Forgery
+  name: "WP Affiliate Platform <= 6.3.8 - Reflected Cross-Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    
+  description: "The WP Affiliate Platform plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'msg' parameter in the 'login.php' file due to insufficient input sanitization and output escaping. This affects versions up to and including 6.3.8. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a6096b9a-f7bb-454a-8203-50ac99d37100?source=api-scan
+    - https://packetstormsecurity.com/files/126424/
+    - https://wpscan.com/vulnerability/4f94aefe-fd3e-40be-be60-9c2fb33e8dd3
+    - https://patchstack.com/database/vulnerability/wp-affiliate-platform/wordpress-affiliate-manager-plugin-cross-site-scripting
+    - https://wpaffiliatemanager.com/
+    - https://wordpress.org/plugins/affiliates-manager/#developers
+    - https://github.com/mt8623/SWZTEST/blob/7c9bf2c4f1a7ca0abe7df5da409c7ada2fd7613b/swztest/wp-content/plugins/wp-affiliate-platform/affiliates/login.php#L64
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/wp-affiliate-platform/"
     google-query: inurl:"/wp-content/plugins/wp-affiliate-platform/"
@@ -55,4 +58,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 6.3.9')
+          - compare_versions(version, '<= 6.3.8')

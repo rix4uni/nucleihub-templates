@@ -1,4 +1,4 @@
-id: wpdm-premium-packages
+id: wpdm-premium-packages-9491ca65a776ca86d4056fca9a3265bd
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/82137302-60ca-44d5-b087-dc96e2815fca?source=api-scan
   classification:
     cvss-metrics: 

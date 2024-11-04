@@ -1,4 +1,4 @@
-id: peepso-photos
+id: peepso-photos-0b3bda7d728ceb5393649f6dc1062d4a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/fad492f4-7112-4f4f-8825-c42aab552c9b?source=api-scan
   classification:
     cvss-metrics: 

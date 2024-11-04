@@ -1,12 +1,17 @@
 id: smtp
 info:
-  name: AntiVir MailGate smtpd
+  name: MDaemon smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
+    operating_system: Windows
+    product: mdaemon
     rarity: 0
+    vendor: altn
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +22,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) AntiVir MailGate\r\n
+    - ^220 ([-\w_.]+) ESMTP MDaemon ([\d.]+) ready\r\n

@@ -1,4 +1,4 @@
-id: ts-webfonts-for-conoha
+id: ts-webfonts-for-conoha-a3c1ad54e781d8c7bfbcbe242ff5de31
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/80e9aa1f-166f-47df-bc50-c7dd55c6e7cc?source=api-scan
   classification:
     cvss-metrics: 

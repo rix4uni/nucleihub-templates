@@ -1,23 +1,23 @@
-id: ip-blacklist-cloud
+id: ip-blacklist-cloud-d21c514d669c148bfc0cb72c9e7c0c1b
 
 info:
-  name: >
-    IP Blacklist Cloud <= 5.00 - Reflected Cross-Site Scripting
+  name: "IP Blacklist Cloud < 3.41 - SQL Injections"
   author: topscoder
-  severity: medium
-  description: >
-    The IP Blacklist Cloud  plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'search' parameter in versions up to, and including, 5.00 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
+  severity: critical
+  description: "The IP Blacklist Cloud plugin for WordPress is vulnerable to SQL Injections via several parameters in versions before 3.41 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL queries. This makes it possible for attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dd108f90-7afc-43e1-86d4-939c1c25fb2d?source=api-prod
+    - https://github.com/wp-plugins/ip-blacklist-cloud/commit/98c22e450ea5b1ff005cc38f54cce20a02bff0fa
+    - https://wordpress.org/plugins/ip-blacklist-cloud/#developers
+    - https://plugins.trac.wordpress.org/changeset/1100239
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/ip-blacklist-cloud/"
     google-query: inurl:"/wp-content/plugins/ip-blacklist-cloud/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ip-blacklist-cloud,medium
+  tags: cve,wordpress,wp-plugin,ip-blacklist-cloud,critical
 
 http:
   - method: GET
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.00')
+          - compare_versions(version, '< 3.41')

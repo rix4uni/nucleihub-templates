@@ -1,23 +1,24 @@
-id: visitors-traffic-real-time-statistics
+id: visitors-traffic-real-time-statistics-569d816dcfa68f665b089985e38544c0
 
 info:
-  name: >
-    Visitor Traffic Real Time Statistics <= 1.13 - Cross-Site Request Forgery
+  name: "Visitor Traffic Real Time Statistics <= 2.13 - Cross-Site Request Forgery to Arbitrary Plugin Installation/Activation"
   author: topscoder
-  severity: medium
-  description: >
-    
+  severity: high
+  description: "The Visitor Traffic Real Time Statistics Plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.13. This is due to missing or incorrect nonce validation on the 'cp_plugins_do_button_job_later_callback' AJAX action. This makes it possible for unauthenticated attackers to install and activate other plugins via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ae741363-b0aa-4263-bb49-d3baa213167a?source=api-scan
+    - https://ithemes.com/blog/wordpress-vulnerability-report-april-2021-part-4/
+    - https://wpscan.com/vulnerability/3961132f-ecc1-4f41-83f1-3ac537143b38
+    - https://wordpress.org/plugins/visitors-traffic-real-time-statistics/#developers
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2504796%40visitors-traffic-real-time-statistics&new=2504796%40visitors-traffic-real-time-statistics&sfp_email=&sfph_mail=
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/visitors-traffic-real-time-statistics/"
     google-query: inurl:"/wp-content/plugins/visitors-traffic-real-time-statistics/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,visitors-traffic-real-time-statistics,medium
+  tags: cve,wordpress,wp-plugin,visitors-traffic-real-time-statistics,high
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.13')
+          - compare_versions(version, '<= 2.13')

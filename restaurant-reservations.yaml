@@ -1,14 +1,15 @@
-id: restaurant-reservations
+id: restaurant-reservations-822fd9c174a032c998a9117b5e31801e
 
 info:
   name: >
-    Five Star Restaurant Reservations <= 2.4.7 - Subscriber+ Stored Cross-Site Scripting
+    Five Star Restaurant Reservations <= 2.4.11 - Missing Authorization to Stored Cross-Site Scripting
   author: topscoder
   severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a3e61538-0bd9-4319-ba71-a72c9039f4d8?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1fe257e6-4bdf-49ef-adbb-f82ce378e3e7?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.7')
+          - compare_versions(version, '<= 2.4.11')

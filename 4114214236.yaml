@@ -1,6 +1,6 @@
 id: hbn3
 info:
-  name: Lexmark S300-S400 Series HBN3
+  name: Lexmark S300-S400 series HBN3
   author: nmap,cn-kali-team
   tags: detect,tech,hbn3,service
   severity: info
@@ -19,4 +19,4 @@ tcp:
   - name: hbn3
     type: regex
     regex:
-    - ^\0\0\x84\0\0\0\0\x05\0\0\0\0\x15S300-S400 Series.+ET(\w{2})(\w{2})(\w{2})(\w{2})(\w{2})(\w{2})
+    - ^\0\0\x84\0\0\0\0\x05\0\0\0\0\x15S300-S400 Series \(32\).+ET(\w{2})(\w{2})(\w{2})(\w{2})(\w{2})(\w{2})

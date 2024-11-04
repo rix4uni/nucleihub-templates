@@ -1,6 +1,6 @@
 id: irc-proxy
 info:
-  name: sbnc
+  name: dircproxy
   author: nmap,cn-kali-team
   tags: detect,tech,irc-proxy,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: irc-proxy
     type: regex
     regex:
-    - ^:sbnc!sbnc@sbnc\.soohrt\.org NOTICE \* :Wellcum\r\n
+    - ^:dircproxy NOTICE AUTH :Looking up your hostname\.\.\.\r\n:dircproxy NOTICE AUTH :Got your hostname\.\r\n

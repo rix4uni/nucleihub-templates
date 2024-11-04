@@ -1,4 +1,4 @@
-id: stock-locations-for-woocommerce
+id: stock-locations-for-woocommerce-0286437553874ad2fb8e0263543938f0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e6090a49-f3dc-4b7b-bc86-eb7ec57b7ba4?source=api-scan
   classification:
     cvss-metrics: 

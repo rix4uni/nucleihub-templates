@@ -1,4 +1,4 @@
-id: yurl-retwitt
+id: yurl-retwitt-8e023bb6c90c3f1f02fb7f5495902c4a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/24d050ad-0816-46a3-a37e-17356acf88d2?source=api-scan
   classification:
     cvss-metrics: 

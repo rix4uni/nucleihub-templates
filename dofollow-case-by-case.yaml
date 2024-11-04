@@ -1,4 +1,4 @@
-id: dofollow-case-by-case
+id: dofollow-case-by-case-8c17b8b1fdac50490dd60efa54b7c7ec
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/60c63be2-dd17-4224-ba96-ba30ed0b25ce?source=api-scan
   classification:
     cvss-metrics: 

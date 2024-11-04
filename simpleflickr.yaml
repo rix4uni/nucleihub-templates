@@ -1,4 +1,4 @@
-id: simpleflickr
+id: simpleflickr-227d5a4d2cec5fb701b1ab352bcc7780
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/223ace0a-5a98-4714-90d5-06fe96bc9a2d?source=api-scan
   classification:
     cvss-metrics: 

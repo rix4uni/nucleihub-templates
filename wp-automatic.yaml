@@ -1,18 +1,19 @@
-id: wp-automatic
+id: wp-automatic-bf4d021d589359206ee42e2f001f3bf8
 
 info:
-  name: >
-    Automatic <= 3.92.0 - Unauthenticated SQL Injection
+  name: "WordPress Automatic Plugin <= 2.0.3 - Cross-Site Request Forgery to SQL Injection"
   author: topscoder
   severity: critical
-  description: >
-    
+  description: "The 'WordPress Automatic Plugin' plugin for WordPress is vulnerable to generic SQL Injection via the ‘q’ parameter in versions up to, and including, 2.0.3 due to insufficient escaping on the user-supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a8b319be-f312-4d02-840f-e2a91c16b67a?source=api-scan
+    - https://packetstormsecurity.com/files/113763/
+    - https://wpscan.com/vulnerability/dadc99ca-54ee-42b4-b247-79a47b884f03
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-automatic-q-parameter-sql-injection-2-0-3/
+    - https://www.exploit-db.com/exploits/19187
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/wp-automatic/"
     google-query: inurl:"/wp-content/plugins/wp-automatic/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.92.0')
+          - compare_versions(version, '<= 2.0.3')

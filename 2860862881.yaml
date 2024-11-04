@@ -1,6 +1,6 @@
 id: daytime
 info:
-  name: Microsoft Windows daytime
+  name: Microsoft Windows USA daytime
   author: nmap,cn-kali-team
   tags: detect,tech,daytime,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: daytime
     type: regex
     regex:
-    - ^\d{1,2}:\d\d:\d\d [ap]m \d{4}/\d\d/\d\d\n$
+    - ^\d+:\d\d:\d\d [AP]M \d+/\d+/(?:19|20)\d\d\n$

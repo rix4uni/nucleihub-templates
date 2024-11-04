@@ -1,4 +1,4 @@
-id: qtranslate-slug
+id: qtranslate-slug-3c6ad1a9feb2f4d7ac5cdf0b5e9df0cc
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/9d682596-c32d-4abd-ba39-b57fc45c9ce0?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: pdf-block
+id: pdf-block-615a079e3552dbff38dc6dbbb7a3554e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3a1d8adf-c49c-4d88-83c7-4515b0ab1f35?source=api-scan
   classification:
     cvss-metrics: 

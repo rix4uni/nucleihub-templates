@@ -1,4 +1,4 @@
-id: planso-forms
+id: planso-forms-68ddc22980bc843ae8553f744f5fbafe
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/51e4f7ac-efc5-492c-b7a4-eea6d5f69e0d?source=api-scan
   classification:
     cvss-metrics: 

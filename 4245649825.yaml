@@ -1,6 +1,6 @@
 id: ixia-unknown
 info:
-  name: Ixia 400T traffic QA
+  name: Ixia TCL server
   author: nmap,cn-kali-team
   tags: detect,tech,ixia-unknown,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: ixia-unknown
     type: regex
     regex:
-    - ^Enter port cpu supported card port number and hit Enter\. For example \"3 4\"\r\n
+    - ^\r\nWelcome to the Ixia Socket/Serial TCL Server\r\nPress Ctrl-C to reset Tcl Session\r\nIxia>

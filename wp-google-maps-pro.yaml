@@ -1,4 +1,4 @@
-id: wp-google-maps-pro
+id: wp-google-maps-pro-f36d986f43f95748b7fe09a6162882e1
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/45700ca9-8bda-4148-b19f-86ed39c60117?source=api-scan
   classification:
     cvss-metrics: 

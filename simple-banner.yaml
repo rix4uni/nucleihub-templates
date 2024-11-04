@@ -1,14 +1,15 @@
-id: simple-banner
+id: simple-banner-0aaf9e1daba3af45e6036444bc4267c5
 
 info:
   name: >
-    Simple Banner <= 2.10.3 - Authenticated (Admin+) Stored Cross-Site Scripting
+    Simple Banner <= 2.11.0 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b890d168-9ea7-49c0-b628-71c76c0c2c9c?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/67953bf3-5465-4f25-874c-46dff59b2199?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.10.3')
+          - compare_versions(version, '<= 2.11.0')

@@ -1,4 +1,4 @@
-id: admin-site-enhancements
+id: admin-site-enhancements-79589d0ea9816223a68a2d499e59f99f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/0abad47f-a806-4cdd-a11f-015b997b5e86?source=api-scan
   classification:
     cvss-metrics: 

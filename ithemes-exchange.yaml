@@ -1,4 +1,4 @@
-id: ithemes-exchange
+id: ithemes-exchange-de530a6e850db0ea00e72b3a5128745b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/69150437-dfd6-436a-b100-99f5001c7fe7?source=api-scan
   classification:
     cvss-metrics: 

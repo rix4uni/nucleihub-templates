@@ -1,4 +1,4 @@
-id: site-is-offline-plugin
+id: site-is-offline-plugin-dd82c5c32aaaa65ec0f1f6b3b7baed30
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ffaf7a75-de27-4361-ba04-ff17151b7eb5?source=api-scan
   classification:
     cvss-metrics: 

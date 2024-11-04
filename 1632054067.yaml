@@ -1,13 +1,14 @@
 id: finger
 info:
-  name: Cisco fingerd
+  name: Hummingbird fingerd
   author: nmap,cn-kali-team
   tags: detect,tech,finger,service
   severity: info
   metadata:
-    device_type: router
-    operating_system: IOS
+    info: WinNT $1 build $2
+    operating_system: Windows NT
     rarity: 0
+    version: $3
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: finger
     type: regex
     regex:
-    - \r\n {4}Line {5,8}User {6,8}Host\(s\) {13,18}Idle +Location\r\n
+    - ^Windows NT Version ([\d.]+) build (\d+), \d+ processors? \(.*\)\r\nFingerDW V([\d.]+) - Hummingbird Ltd\.\n

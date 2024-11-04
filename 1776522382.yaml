@@ -1,6 +1,6 @@
 id: pop3pw
 info:
-  name: poppassd
+  name: Courierpassd pop3 password change daemon
   author: nmap,cn-kali-team
   tags: detect,tech,pop3pw,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - '^200 poppassd v?([-._\w]+) '
+    - ^200 courierpassd v(\d[-.\w]+) hello, who are you\?\r\n

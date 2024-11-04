@@ -1,4 +1,4 @@
-id: username-updater
+id: username-updater-6f519a9ab6c2f0e575088fe9d1b11d30
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/9e3e996b-6988-42ab-9766-ddc070243c1f?source=api-scan
   classification:
     cvss-metrics: 

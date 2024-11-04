@@ -1,18 +1,19 @@
-id: google-shortlink
+id: google-shortlink-a339626eb1ea749e7fc23a708495a739
 
 info:
-  name: >
-    Shortlink by BestWebSoft < 1.5.3 - Reflected Cross-Site Scripting
+  name: "Shortlink by BestWebSoft < 1.5.3 - Reflected Cross-Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    
+  description: "The Shortlink by BestWebSoft plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘category’ parameter in versions before 1.5.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/281c49d3-078a-4fdc-9720-dac6b3a32892?source=api-scan
+    - https://web.archive.org/web/20191101101637/http%3A//www.defensecode.com%3A80/advisories/DC-2017-02-014_50_WordPress_plugins_by_BestWebSoft_Advisory.pdf
+    - http://jvn.jp/en/jp/JVN24834813/index.html
+    - https://wordpress.org/plugins/google-shortlink/#developers
+    - https://plugins.trac.wordpress.org/changeset/1620073
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/google-shortlink/"
     google-query: inurl:"/wp-content/plugins/google-shortlink/"

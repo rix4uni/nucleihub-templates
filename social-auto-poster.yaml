@@ -1,15 +1,15 @@
-id: social-auto-poster
+id: social-auto-poster-d66eee482982c610ffdd46ce664519c8
 
 info:
   name: >
-    Social Auto Poster <= 5.3.14 - Missing Authorization to Unauthenticated Arbitrary Post Deletion
+    Social Auto Poster <= 5.3.14 - Missing Authorization to Authenticated (Subscriber+) Arbitrary Post Meta Update via wpw_auto_poster_update_tweet_template
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d9b1044d-6858-498f-9b89-352650061858?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/72934d2f-fd52-46d1-8cf9-9a20968899f7?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/social-auto-poster/"
     google-query: inurl:"/wp-content/plugins/social-auto-poster/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,social-auto-poster,high
+  tags: cve,wordpress,wp-plugin,social-auto-poster,low
 
 http:
   - method: GET

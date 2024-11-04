@@ -1,4 +1,4 @@
-id: bp-profile-shortcodes-extra
+id: bp-profile-shortcodes-extra-b33d59683eec51ded08b32b7acb5fff0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ea9eaca6-3441-4976-8556-0ce288d1a0c6?source=api-scan
   classification:
     cvss-metrics: 

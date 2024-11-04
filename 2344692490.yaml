@@ -1,13 +1,14 @@
 id: shell
 info:
-  name: HP-UX Remshd
+  name: Netkit rshd
   author: nmap,cn-kali-team
   tags: detect,tech,shell,service
   severity: info
   metadata:
-    info: Kerberos disabled
-    operating_system: HP-UX
+    product: netkit_rsh
     rarity: 0
+    vendor: netkit
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: shell
     type: regex
     regex:
-    - '^\x01remshd: Kerberos Authentication not enabled\.\n'
+    - '^\x01getnameinfo: Temporary failure in name resolution\n'

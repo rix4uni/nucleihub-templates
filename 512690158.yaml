@@ -1,16 +1,17 @@
 id: sip
 info:
-  name: PJSIP pjsua sipd
+  name: Microsoft Skype for Business SIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
     fallback:
     - get-request
-    info: 'arch: $3'
-    operating_system: Linux $2
+    product: skype_for_business
     rarity: 5
-    version: $1
+    vendor: microsoft
+    verified: true
+    version: '2015'
 tcp:
 - name: sipoptions
   inputs:
@@ -22,4 +23,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: PJSUA v([\d.]+) Linux-([\d.]+)/(ix[\w_]+)'
+    - '^SIP/2\.0 504 Server time-out\r\nms-user-logon-data: RemoteUser\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>;tag=\w+\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nVia: SIP/2\.0/TCP nm;branch=foo\r\nServer: RTC/6\.0\r\nContent-Length: 0\r\n\r\n'

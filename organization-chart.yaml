@@ -1,23 +1,21 @@
-id: organization-chart
+id: organization-chart-ecdd2bcf8f489cf94fa6ab80031158e0
 
 info:
-  name: >
-    Organization chart <= 1.4.4 - Cross-Site Request Forgery
+  name: "Organization chart <= 1.4.2 - Cross-Site Request Forgery"
   author: topscoder
-  severity: medium
-  description: >
-    
+  severity: high
+  description: "The Organization chart plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.4.2. This is due to missing or incorrect nonce validation on the post_page_content function. This makes it possible for unauthenticated attackers to invoke this function, via forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e2bd8eec-5984-42f8-ba9a-ce61bf7cd440?source=api-scan
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2788306%40organization-chart%2Ftrunk&old=2781978%40organization-chart%2Ftrunk&sfp_email=&sfph_mail=
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/organization-chart/"
     google-query: inurl:"/wp-content/plugins/organization-chart/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,organization-chart,medium
+  tags: cve,wordpress,wp-plugin,organization-chart,high
 
 http:
   - method: GET
@@ -55,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.4')
+          - compare_versions(version, '<= 1.4.2')

@@ -1,11 +1,11 @@
 id: pop3pw
 info:
-  name: ModusMail poppassd
+  name: Qualcomm poppassd
   author: nmap,cn-kali-team
   tags: detect,tech,pop3pw,service
   severity: info
   metadata:
-    operating_system: Windows
+    info: Maximum users connected
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - ^200 Ok, \"modusMail Mail Management Server ready\" <[\d.]+@\(null\)>\r\n
+    - ^550 Login failed - already \d+/\d+ users connected sorry \(use G_CON_PERIP_EXCEPT to bypass\) \(IP=[\d.]+\)\r\n

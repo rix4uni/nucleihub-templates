@@ -1,13 +1,15 @@
 id: ssh
 info:
-  name: Cisco IP Phone sshd
+  name: Apache Mina sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    device_type: VoIP phone
-    info: protocol $1
+    info: Atlassian Bitbucket; protocol $1
+    product: sshd
     rarity: 0
+    vendor: apache
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-1\.00\r\n$
+    - ^SSH-([\d.]+)-SSHD-UNKNOWN\r\n

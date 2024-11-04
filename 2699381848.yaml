@@ -1,13 +1,15 @@
 id: pop3
 info:
-  name: PMDF pop3d
+  name: Microsoft Exchange pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $2
-    operating_system: OpenVMS
+    info: Hungarian
+    product: exchange_server
     rarity: 0
+    vendor: microsoft
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -19,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3D\(\*\) Server PMDFV([\w._-]+) at .* <\w+@([\w._-]+)>\r\n
+    - ^\+OK Microsoft Exchange POP3 kiszolg\xe1l\xf3 verzi\xf3 ([\d.]+) k\xe9sz\r\n

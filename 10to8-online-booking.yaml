@@ -1,4 +1,4 @@
-id: 10to8-online-booking
+id: 10to8-online-booking-bb84547dbc80b97ba42af8b80464c3ed
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/9fbb5ed0-ed76-44fe-88c4-eb05ad87e510?source=api-scan
   classification:
     cvss-metrics: 

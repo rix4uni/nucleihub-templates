@@ -1,4 +1,4 @@
-id: grid-plus
+id: grid-plus-077017011efa2b3f2430be7b8cdba8ec
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/d2d34c84-473c-49f8-b55c-c869b5479974?source=api-scan
   classification:
     cvss-metrics: 

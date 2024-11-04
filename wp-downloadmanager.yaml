@@ -1,14 +1,15 @@
-id: wp-downloadmanager
+id: wp-downloadmanager-5425e1ef3b051dcde7ce2a9d646dc30b
 
 info:
   name: >
-    WP-DownloadManager <= 1.68.4 - Server-Side Request Forgery
+    WP-DownloadManager plugin <= 1.68.6 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bfe48948-7fc9-4806-b1b5-9fac5a6c7d96?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a27da737-d925-471f-b0e0-25bc27a95714?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-downloadmanager/"
     google-query: inurl:"/wp-content/plugins/wp-downloadmanager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-downloadmanager,low
+  tags: cve,wordpress,wp-plugin,wp-downloadmanager,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.68.5')
+          - compare_versions(version, '<= 1.68.6')

@@ -1,4 +1,4 @@
-id: anonymous-restricted-content
+id: anonymous-restricted-content-a1c228113f48faf98c264ba16b96c84a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f478ff7c-7193-4c59-a84f-c7cafff9b6c0?source=api-scan
   classification:
     cvss-metrics: 

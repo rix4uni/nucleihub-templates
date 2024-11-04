@@ -1,21 +1,23 @@
 id: shell
 info:
-  name: FreeBSD rshd
+  name: Ricoh rshd
   author: nmap,cn-kali-team
   tags: detect,tech,shell,service
   severity: info
   metadata:
-    info: Access denied
-    operating_system: Unix
-    rarity: 0
+    device_type: printer
+    fallback:
+    - dnsstatus-request
+    rarity: 7
 tcp:
-- name: 'null'
+- name: dnsstatus-request-tcp
   inputs:
-  - data: ''
+  - data: \0\x0C\0\0\x10\0\0\0\0\0\0\0\0\0
   host:
   - '{{Hostname}}'
+  port: 53,513,514,6050,41523
   extractors:
   - name: shell
     type: regex
     regex:
-    - ^\* You are not welcome to use rshd from .*\n
+    - '^\0rsh: \x10: Command not supported\n'

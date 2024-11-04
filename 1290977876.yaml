@@ -9,7 +9,7 @@ info:
     rarity: 0
     vendor: gunnar_beutner
     verified: true
-    version: $1
+    version: $1 revision $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: irc-proxy
     type: regex
     regex:
-    - '^:shroudbnc\.info NOTICE AUTH :\*\*\* shroudBNC ([\d.]+) '
+    - '^:[-\w_.!@]+ NOTICE \S+ :\*\*\* shroudBNC *([\d.]+) .Revision: (\d+)'

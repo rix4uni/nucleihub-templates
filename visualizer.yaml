@@ -1,23 +1,23 @@
-id: visualizer
+id: visualizer-43fe23bade423b2db63b8d028b140fb5
 
 info:
-  name: >
-    Visualizer: Tables and Charts Manager for WordPress <= 3.3.0 - Server-Side Request Forgery
+  name: "Visualizer <= 3.7.6 - Reflected Cross-Site Scripting"
   author: topscoder
-  severity: low
-  description: >
-    
+  severity: medium
+  description: "The Visualizer plugin for WordPress is vulnerable to Reflected Cross-Site Scripting due to the use of add_query_arg without appropriate escaping on the URL in versions up to, and including, 3.7.6. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/54a425b0-592a-433d-b9e7-776760536668?source=api-scan
+    - https://patchstack.com/database/vulnerability/visualizer-/wordpress-visualizer-plugin-3-7-6-reflected-cross-site-scripting-xss-vulnerability
+    - https://wpscan.com/vulnerability/c1ea0b28-8b47-463f-a5d7-57c338b90372
+    - https://wordpress.org/plugins/visualizer/#developers
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/visualizer/"
     google-query: inurl:"/wp-content/plugins/visualizer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,visualizer,low
+  tags: cve,wordpress,wp-plugin,visualizer,medium
 
 http:
   - method: GET
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.3.0')
+          - compare_versions(version, '<= 3.7.6')

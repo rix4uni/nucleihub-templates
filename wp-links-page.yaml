@@ -1,14 +1,15 @@
-id: wp-links-page
+id: wp-links-page-78820bb0cfba0e12065e37741a10b82f
 
 info:
   name: >
-    WP Links Page <= 4.9.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
+    WP Links Page <= 4.9.5 - Missing Authorization to Authenticated (Subscriber+) Limited Image Update
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9ef3297d-8686-44aa-ac73-793b644be3f2?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2b59d281-d5c8-455a-8aa8-b03847bdd45f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.9.1')
+          - compare_versions(version, '<= 4.9.5')

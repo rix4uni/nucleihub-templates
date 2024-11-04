@@ -1,4 +1,4 @@
-id: image-hover-effects-css3
+id: image-hover-effects-css3-b606a5daff8e1b9b25cc919da023555c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/0e6616d0-0690-4bf4-9228-33679b926b90?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,15 +1,15 @@
-id: woocommerce-openpos
+id: woocommerce-openpos-ac5bd33fc018701d4632da51528993bd
 
 info:
   name: >
-    Woocommerce OpenPos <= 6.4.4 - Unauthenticated SQL Injection
+    Woocommerce OpenPos <= 6.4.4 - Missing Authorization to Information Exposure
   author: topscoder
-  severity: critical
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/21da3c10-72b9-4c04-8586-dcf6dcf55852?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f5fda67f-2bec-4439-8f7b-892fd89b9390?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/woocommerce-openpos/"
     google-query: inurl:"/wp-content/plugins/woocommerce-openpos/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woocommerce-openpos,critical
+  tags: cve,wordpress,wp-plugin,woocommerce-openpos,high
 
 http:
   - method: GET

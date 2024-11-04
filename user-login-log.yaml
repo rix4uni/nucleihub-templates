@@ -1,4 +1,4 @@
-id: user-login-log
+id: user-login-log-fb356fa1af9c56ad4f2241401009a48a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/5684366b-f09c-4710-a43e-ff451d88b0e1?source=api-scan
   classification:
     cvss-metrics: 

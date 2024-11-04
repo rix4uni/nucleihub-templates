@@ -1,14 +1,11 @@
 id: irc
 info:
-  name: Hybrid ircd
+  name: PTlink ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
-    product: ircd-hybrid
     rarity: 0
-    vendor: ircd-hybrid
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +16,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^ERROR :Trying to reconnect too fast\.\r\n
+    - ^NOTICE AUTH :\*\*\* Hostname lookup disabled, using your numeric IP\r\nNOTICE AUTH :\*\*\* Checking Ident\r\n

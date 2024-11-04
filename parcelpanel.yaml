@@ -1,4 +1,4 @@
-id: parcelpanel
+id: parcelpanel-50987a9e3cb40e276f77db6e2351593e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/964d6dd2-0e93-4fc2-87ca-0257186d1b37?source=api-scan
   classification:
     cvss-metrics: 

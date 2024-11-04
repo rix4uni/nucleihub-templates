@@ -1,4 +1,4 @@
-id: flower-delivery-by-florist-one
+id: flower-delivery-by-florist-one-202a28546a7f698ae0e9d575d8a6083b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c0ba19a2-0a30-4346-88a2-d1166ab13388?source=api-scan
   classification:
     cvss-metrics: 

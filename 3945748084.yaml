@@ -1,12 +1,13 @@
 id: ftp-proxy
 info:
-  name: FileCatalyst ftp proxy
+  name: DeleGate ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 FileCatalyst Server Enterprise v([^\r\n]*)\r\n$
+    - ^220- ([-\w_.]+) PROXY-FTP server \(DeleGate/([\d.]+)\) ready\.\r\n

@@ -1,4 +1,4 @@
-id: wp-footnotes
+id: wp-footnotes-b40c4ab6051d7b912eccdd919bfd8f70
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8369d83a-bfbf-4e29-8b0b-ceb371a271b6?source=api-scan
   classification:
     cvss-metrics: 

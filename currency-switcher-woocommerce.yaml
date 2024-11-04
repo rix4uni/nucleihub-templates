@@ -1,4 +1,4 @@
-id: currency-switcher-woocommerce
+id: currency-switcher-woocommerce-776cbf73fd12264628552efd40eed9f1
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8f9863b2-177d-4b72-8337-90fbedfd5b54?source=api-scan
   classification:
     cvss-metrics: 

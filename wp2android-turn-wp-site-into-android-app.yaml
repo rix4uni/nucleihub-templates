@@ -1,4 +1,4 @@
-id: wp2android-turn-wp-site-into-android-app
+id: wp2android-turn-wp-site-into-android-app-ebea09f5eec019823b01ee0b989b79ef
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/63effbe3-e509-4f62-a7aa-7727e855bebf?source=api-scan
   classification:
     cvss-metrics: 

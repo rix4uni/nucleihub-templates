@@ -1,9 +1,8 @@
-id: wp-theme-mobile-edition-LFI
+id: wp-theme-mobile-edition-rfd
 
 info:
   name: Wordpress Plugin WP Mobile Edition Remote File Disclosure
   severity: high
-  author: h0tak88r
   tags: wordpress,wp-plugin,lfi,rfd
   description: Wordpress Plugin WP Mobile Edition is not filtering data in GET parameter files in file themes/mTheme-Unus/css/css.php
   reference: https://www.exploit-db.com/exploits/36733

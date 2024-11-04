@@ -1,17 +1,18 @@
-id: wp-fb-autoconnect
+id: wp-fb-autoconnect-521ff2becb3b692e3b59230f77707fc7
 
 info:
   name: >
-    WP-FB-AutoConnect <= 4.6.1 - Cross-Site Request Forgery via jfb_admin_page
+    WP-FB-AutoConnect <= 4.0.5 - Cross-Site Request Forgery to Stored Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
-    
+    The WP-FB-AutoConnect plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'jfb_email_to', 'jfb_stream_content', 'jfb_api_key' and 'jfb_api_sec' variables in versions up to, and including, 4.0.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/eab1fe39-dda2-49c9-9c76-c1127626a85c?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d118beb2-bcb1-4d35-b25e-172fa4b6d916?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-fb-autoconnect/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.6.1')
+          - compare_versions(version, '<= 4.0.5')

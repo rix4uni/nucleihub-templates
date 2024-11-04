@@ -1,13 +1,15 @@
 id: ftp
 info:
-  name: Avalaunch XBOX ftpd
+  name: Wing FTP Server
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: game console
-    info: Max connections reached
+    info: unregistered
+    product: wing_ftp_server
     rarity: 0
+    vendor: wingftp
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^550 no more people, max connections is reached\r\n
+    - ^220 Wing FTP Server ready\.\.\. \(UNREGISTERED WING FTP SERVER\)\r\n

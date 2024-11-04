@@ -1,4 +1,4 @@
-id: wp-total-hacks
+id: wp-total-hacks-34cb81fc3abe0bb634ca98615a87562a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3732bf4c-e5e4-4947-9044-9a49e7547cf3?source=api-scan
   classification:
     cvss-metrics: 

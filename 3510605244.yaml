@@ -1,11 +1,11 @@
 id: ftp
 info:
-  name: FoxGate switch ftpd
+  name: ZyXEL $1 WAP ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: switch
+    device_type: WAP
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 welcome your using  ftp server\.\.\.\r\n
+    - ^220 FTP Server \(([NWAP]{3}\d+[\w-]*)\) \[[a-f:\d.]+\]\r\n

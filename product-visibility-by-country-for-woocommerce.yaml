@@ -1,4 +1,4 @@
-id: product-visibility-by-country-for-woocommerce
+id: product-visibility-by-country-for-woocommerce-bbfc2069bf41360050cbb45dae02205e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e56b11a1-dd40-461b-9624-b60367c0c727?source=api-scan
   classification:
     cvss-metrics: 

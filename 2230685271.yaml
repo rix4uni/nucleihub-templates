@@ -1,16 +1,14 @@
 id: nntp
 info:
-  name: INN nntpd
+  name: Classic Hamster NNTPd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
     info: posting ok
-    product: inn
+    operating_system: Windows
     rarity: 0
-    vendor: isc
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +19,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) NNRP Service Ready - [-\w_.]+@[-\w_.]+ \(posting ok\)\.\r\n
+    - '^200 NNTP-Server Classic Hamster (?:Vr\.|Version) \d[-.\w ]+ \(Build (\d[-.\w ]+)\) \(post ok\) says: Hi!\r\n'

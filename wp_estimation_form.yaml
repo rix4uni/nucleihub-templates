@@ -1,24 +1,24 @@
-id: wp_estimation_form
+id: wp_estimation_form-e9e57f3dfd561856803278afb5b47825
 
 info:
   name: >
-    WP Cost Estimation < 9.660 - Upload Directory Traversal
+    WP Cost Estimation <= 9.642 - Missing Authorization to Arbitrary File Upload/Delete
   author: topscoder
-  severity: medium
+  severity: high
   description: >
-    The WP Cost Estimation plugin for WordPress is vulnerable to Upload Directory Traversal in versions before 9.660 via the uploadFormFiles function. This allows attackers to overwrite any file with a whitelisted type on an affected site.
+    The WP Cost Estimation plugin for WordPress is vulnerable to arbitrary file uploads and deletion due to missing file type validation in the lfb_upload_form and lfb_removeFile AJAX actions in versions up to, and including, 9.642. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected sites server which may make remote code execution possible. Additionally, the attacker can also delete files on the server such as database configuration files, subsequently uploading their own database files.
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/65a9e877-e870-4e36-985d-c0629abe3f78?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ae50aa5d-95e3-4650-9dbf-118b4ba3abda?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L
-    cvss-score: 6.5
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/WP_Estimation_Form/"
     google-query: inurl:"/wp-content/plugins/WP_Estimation_Form/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,WP_Estimation_Form,medium
+  tags: cve,wordpress,wp-plugin,WP_Estimation_Form,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 9.660')
+          - compare_versions(version, '< 9.644')

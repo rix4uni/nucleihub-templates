@@ -1,4 +1,4 @@
-id: schreikasten
+id: schreikasten-e2315b91de0deab5e8d13df6c9883c53
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/62fd2c51-eac1-47c0-adbc-90bdd8dbbc8e?source=api-scan
   classification:
     cvss-metrics: 

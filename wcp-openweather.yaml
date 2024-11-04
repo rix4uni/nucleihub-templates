@@ -1,14 +1,15 @@
-id: wcp-openweather
+id: wcp-openweather-b59c64b354b6f9174305441e5b308e24
 
 info:
   name: >
-    WCP OpenWeather <= 2.5.0 - Cross-Site Request Forgery
+    WCP OpenWeather <= 2.5.0 - Reflected Cross-Site Scripting via 'tab'
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d5b573e2-373f-41bc-8d9a-ea42e908ac4e?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ab8cc5d1-8ea2-4590-90c4-6541f336b057?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

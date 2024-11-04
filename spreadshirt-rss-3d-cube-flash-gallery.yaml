@@ -1,4 +1,4 @@
-id: spreadshirt-rss-3d-cube-flash-gallery
+id: spreadshirt-rss-3d-cube-flash-gallery-d7f5f9e2edc5d7fc74f2b9eb5dae2e4f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/4eaefe2d-b7f8-49ed-8ba1-833e888857b8?source=api-scan
   classification:
     cvss-metrics: 

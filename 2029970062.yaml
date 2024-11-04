@@ -1,15 +1,14 @@
 id: rtsp
 info:
-  name: Darwin Streaming Server
+  name: Arecont Vision surveillance camera rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
+    device_type: webcam
     fallback:
     - get-request
-    operating_system: Linux
     rarity: 5
-    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 \d\d\d .*\r\nServer: DSS/([\d.]+) \(Build/[\d.]+; Platform/Linux'
+    - '^RTSP/1\.0 401 Unauthorized\r\nCSeq: 0\r\nWWW-Authenticate: Basic realm=\"Arecont Vision\"\r\n\r\n'

@@ -1,13 +1,15 @@
 id: nntp
 info:
-  name: Leafnode nntpd
+  name: INN NNTPd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $2
+    info: unauthorized
+    product: inn
     rarity: 0
-    version: $1
+    vendor: isc
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 Leafnode NNTP daemon, version ([\w.]+) at ([-\w_.]+) \r\n
+    - ^502 You have no permission to talk\.  Goodbye.\r\n$

@@ -1,4 +1,4 @@
-id: dynamically-register-sidebars
+id: dynamically-register-sidebars-a3329eaa025f4bd78463fd98e337add9
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/4e6b39da-26d4-4615-b6c7-68909bdf0a61?source=api-scan
   classification:
     cvss-metrics: 

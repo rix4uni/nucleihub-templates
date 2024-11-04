@@ -1,4 +1,4 @@
-id: wp-404-auto-redirect-to-similar-post
+id: wp-404-auto-redirect-to-similar-post-062dffbc9ba36d2c45b3c3ca1f34e0d3
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/33166510-41b2-4e9a-8bd7-501235729346?source=api-scan
   classification:
     cvss-metrics: 

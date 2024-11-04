@@ -1,23 +1,25 @@
 id: http
 info:
-  name: Konica Minolta bizhub C452 OpenAPI
+  name: Allegro RomPager
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: printer
-    fallback:
-    - get-request
-    rarity: 5
+    device_type: remote management
+    info: Dell DRAC config
+    product: rompager
+    rarity: 0
+    vendor: allegro
+    verified: true
+    version: $1
 tcp:
-- name: rtsprequest
+- name: 'null'
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 505 HTTP Version not supported\r\nContent-Length: 0\r\nDate: .* GMT\r\nConnection: close\r\n\r\n'
+    - '^HTTP/1\.1 200 OK\r\nContent-Type: text/html\r\nCache-Control: no-cache\r\nExpires: Thu, 26 Oct 1995 00:00:00 GMT\r\nTransfer-Encoding: chunked\r\nServer: Allegro-Software-RomPager/([\d.]+)\r\n\r\n'

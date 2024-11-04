@@ -1,4 +1,4 @@
-id: pubydoc-data-tables-and-charts
+id: pubydoc-data-tables-and-charts-a9deea2681b19a399e40c83439314cc6
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3badf9b8-7558-4a46-9eb2-cd119a77c903?source=api-scan
   classification:
     cvss-metrics: 

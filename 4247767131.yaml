@@ -5,6 +5,7 @@ info:
   tags: detect,tech,remoting,service
   severity: info
   metadata:
+    info: French
     product: .net_framework
     rarity: 0
     vendor: microsoft
@@ -19,4 +20,4 @@ tcp:
   - name: remoting
     type: regex
     regex:
-    - ^\.NET\x01\0\x02\0\0\0\0\0\0\0\x02\0\x03\x01\0\x03\0\x01\x01..\0\0Server encountered an internal error\. To get more info turn on customErrors in the server's config file\.\x05\0\0\0\0
+    - '(?i)^\.NET\x01\0\x02\0\0\0\0\0\0\0\x02\0\x03\x01\0\x03\0\x01\x01..\0\0System\.Runtime\.Remoting\.RemotingException: Violation de protocole de canal tcp\xc2\xa0: pr\xc3\xa9ambule attendu\.\r\n'

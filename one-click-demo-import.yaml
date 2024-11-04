@@ -1,49 +1,59 @@
-id: wordpress-one-click-demo-import
+id: one-click-demo-import-58399e882eb2218747e68951561e991e
 
 info:
-  name: One Click Demo Import Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Catch Themes Demo Import <= 3.0.2 - Authenticated (Admin+) Arbitrary File Upload
+  author: topscoder
+  severity: low
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/one-click-demo-import/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fe98bd8c-6db3-4094-8ff2-ab21c8778698?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: one-click-demo-import
-    wpscan: https://wpscan.com/plugin/one-click-demo-import
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/one-click-demo-import/"
+    google-query: inurl:"/wp-content/plugins/one-click-demo-import/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,one-click-demo-import,low
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/one-click-demo-import/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/one-click-demo-import.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "one-click-demo-import"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a00483046022100f5a687cdf510629513ac860aae0cd25dc7279961ee72c81e324447444002da51022100d77e97ac6b80a3970a10d159d58cc2c7f819710f5cde3859fc60189e9dc2dc05:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '< 3.1.0')

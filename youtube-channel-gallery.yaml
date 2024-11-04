@@ -1,4 +1,4 @@
-id: youtube-channel-gallery
+id: youtube-channel-gallery-cd848c69a56cf6d21a6b1a1d17bf6dc9
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/070f6a8e-a06d-4f48-9703-933515a3098c?source=api-scan
   classification:
     cvss-metrics: 

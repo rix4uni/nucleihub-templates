@@ -1,14 +1,15 @@
-id: whizz
+id: whizz-eecbfff0a36b3917a801f8e7a484944b
 
 info:
   name: >
-    WHIZZ < 1.1.1 - Cross-Site Request Forgery
+    WHIZZ < 1.0.8 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3abac0a1-a696-48b1-88d9-d0b102c82ac3?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/acde42e4-7445-427a-b4fa-9ef225049bb8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1')
+          - compare_versions(version, '< 1.0.8')

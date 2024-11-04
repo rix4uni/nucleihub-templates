@@ -1,4 +1,4 @@
-id: conference-scheduler
+id: conference-scheduler-43cc1c32a7af0d1769778ca9846f97ba
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/eed6306a-317b-40ed-b7f5-7f930b3509e0?source=api-scan
   classification:
     cvss-metrics: 

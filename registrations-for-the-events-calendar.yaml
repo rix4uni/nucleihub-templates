@@ -1,14 +1,15 @@
-id: registrations-for-the-events-calendar
+id: registrations-for-the-events-calendar-cff64aa365787e00304f119ad6984b45
 
 info:
   name: >
-    Registrations for the Events Calendar <= 2.7.9 - Reflected Cross-Site Scripting
+    Registrations for the Events Calendar – Event Registration Plugin <= 2.12.2 - Authenticated (Contributor+) SQL Injection
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3c455509-9cbb-4a77-b28f-921beeeede0e?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/26e35c4a-79ec-4742-8004-1c799d2c56ff?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/registrations-for-the-events-calendar/"
     google-query: inurl:"/wp-content/plugins/registrations-for-the-events-calendar/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,registrations-for-the-events-calendar,medium
+  tags: cve,wordpress,wp-plugin,registrations-for-the-events-calendar,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.7.10')
+          - compare_versions(version, '<= 2.12.2')

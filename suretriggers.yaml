@@ -1,14 +1,15 @@
-id: suretriggers
+id: suretriggers-ddd6b25e999ea4a00d04505007fb4ab0
 
 info:
   name: >
-    SureTriggers <= 1.0.23 - Cross-Site Request Forgery
+    SureTriggers – Connect All Your Plugins, Apps, Tools & Automate Everything! <= 1.0.46 - Authenticated (Contributor+) Stored Cross-Site Scripting via Trigger Link Shortcode
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/461211c9-951e-4ccd-abf5-84941290a6a5?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ab19f7b1-2b1e-43bc-9843-ddee0fc74f50?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/suretriggers/"
     google-query: inurl:"/wp-content/plugins/suretriggers/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,suretriggers,medium
+  tags: cve,wordpress,wp-plugin,suretriggers,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.23')
+          - compare_versions(version, '<= 1.0.47')

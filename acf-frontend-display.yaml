@@ -1,13 +1,14 @@
-id: acf-frontend-display
+id: acf-frontend-display-c667563a8b586a7cf6bc89d07f5cdbda
 
 info:
   name: >
     ACF Frontend Display <= 2.0.6 - Unauthenticated Arbitrary File Upload
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/205e0b90-0d84-4b16-b968-8ec7770f0695?source=api-scan
   classification:
     cvss-metrics: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/acf-frontend-display/"
     google-query: inurl:"/wp-content/plugins/acf-frontend-display/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,acf-frontend-display,low
+  tags: cve,wordpress,wp-plugin,acf-frontend-display,critical
 
 http:
   - method: GET

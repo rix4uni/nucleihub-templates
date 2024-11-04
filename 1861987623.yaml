@@ -1,12 +1,16 @@
 id: imap
 info:
-  name: Kerio imapd
+  name: Microsoft Exchange imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    operating_system: Windows
+    product: exchange_server
     rarity: 0
-    version: $1 patch $2
+    vendor: microsoft
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Kerio MailServer ([\d.]+) patch (\d+) IMAP4rev1 server ready\r\n
+    - '^\* OK Microsoft Exchange IMAP4rev1 server version ([-.\w]+) '

@@ -1,4 +1,4 @@
-id: woocommerce-ean-payment-gateway
+id: woocommerce-ean-payment-gateway-90a5ba7f23e67e1efc40e82054294c7b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2760b183-3c15-4f0e-b72f-7c0333f9d4b6?source=api-scan
   classification:
     cvss-metrics: 

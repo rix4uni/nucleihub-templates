@@ -1,15 +1,15 @@
-id: eu-vat-for-woocommerce
+id: eu-vat-for-woocommerce-8ea2a074b6bbe92d81332cbc58e90bd5
 
 info:
   name: >
-    EU/UK VAT Manager for WooCommerce <= 2.12.10 - Reflected Cross-Site Scripting
+    EU/UK VAT Manager for WooCommerce <= 2.12.12 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bf03a656-7a3b-4227-9493-88f522d7bc13?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/443c57bf-2f3d-4b8f-9dae-b11142a74341?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.12.10')
+          - compare_versions(version, '<= 2.12.12')

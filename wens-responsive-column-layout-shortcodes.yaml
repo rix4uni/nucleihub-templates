@@ -1,4 +1,4 @@
-id: wens-responsive-column-layout-shortcodes
+id: wens-responsive-column-layout-shortcodes-1963751f4c19386996d2bbeb413c4c38
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c47e9220-d7d7-4a66-b555-8fa837d45d59?source=api-scan
   classification:
     cvss-metrics: 

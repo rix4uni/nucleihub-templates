@@ -1,4 +1,4 @@
-id: product-slider-for-woocommerce-lite
+id: product-slider-for-woocommerce-lite-e009a0836b09dac25a2b537f750de80e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8159ee7c-69ac-4422-ba8b-664f1fee8e07?source=api-scan
   classification:
     cvss-metrics: 

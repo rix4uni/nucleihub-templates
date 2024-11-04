@@ -1,14 +1,15 @@
-id: wp-reactions-lite
+id: wp-reactions-lite-52f7b0ae970d68caf46dff2922a4b34c
 
 info:
   name: >
-    WP Reactions Lite <= 1.3.3 - Cross-Site Scripting
+    WP Reactions Lite <= 1.3.8 - Cross-Site Request Forgery via AJAX action
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9cceca0e-5411-4b8c-a261-91098a8bc7fa?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/558b4b31-fd4f-4265-bddc-baf484d48fc5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-reactions-lite/"
     google-query: inurl:"/wp-content/plugins/wp-reactions-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-reactions-lite,high
+  tags: cve,wordpress,wp-plugin,wp-reactions-lite,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.3.6')
+          - compare_versions(version, '<= 1.3.8')

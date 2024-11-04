@@ -1,49 +1,59 @@
-id: wordpress-translatepress-multilingual
+id: translatepress-multilingual-d3e2328e2ff34f2f614fbc7627a043e5
 
 info:
-  name: Translate Multilingual sites – TranslatePress Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Translate Multilingual sites – TranslatePress <= 2.7.5 - Cross-Site Request Forgery
+  author: topscoder
+  severity: medium
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/translatepress-multilingual/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/571fd575-ff03-465f-9e3c-574e93586396?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: translatepress-multilingual
-    wpscan: https://wpscan.com/plugin/translatepress-multilingual
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/translatepress-multilingual/"
+    google-query: inurl:"/wp-content/plugins/translatepress-multilingual/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,translatepress-multilingual,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/translatepress-multilingual/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/translatepress-multilingual.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "translatepress-multilingual"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402205414cf875bbcd82cc592c52b6c2573254a6e723116ccb7ad6f36e9d7d4a9773d02201a1aa468840c744208b77513977fcb98d705b0b2df829a00c511db880ea4d622:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 2.7.5')

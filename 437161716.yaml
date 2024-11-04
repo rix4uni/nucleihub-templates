@@ -1,11 +1,16 @@
 id: ftp-proxy
 info:
-  name: Sidewinder FTP proxy
+  name: WinProxy FTP proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
+    operating_system: Windows
+    product: winproxy
     rarity: 0
+    vendor: bluecoat
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +21,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - (?i)^220-\r\x0a220-Sidewinder ftp proxy
+    - ^220 WinProxy \(Version ([^)]+)\) ready\.\r\n

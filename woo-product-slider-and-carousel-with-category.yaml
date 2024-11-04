@@ -1,4 +1,4 @@
-id: woo-product-slider-and-carousel-with-category
+id: woo-product-slider-and-carousel-with-category-df25c1c232979c3bf81fe64de128206e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/bf464e16-f5cf-4b3e-a9ee-b3df9aa38c9e?source=api-scan
   classification:
     cvss-metrics: 

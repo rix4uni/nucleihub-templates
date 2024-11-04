@@ -1,12 +1,15 @@
 id: ftp
 info:
-  name: BSDI/Unixware ftpd
+  name: SurgeFTPd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
     hostname: $1
+    product: surgeftp
     rarity: 0
+    vendor: netwin
+    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -18,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) FTP server \(BSDI Version ([\w.]+)\) ready\.\r\n
+    - ^220 SurgeFTP ([-\w_.]+) \(Version ([\w.]+)\)\r\n

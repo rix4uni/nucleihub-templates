@@ -1,4 +1,4 @@
-id: optin-forms
+id: optin-forms-2b5298ba04623328bfa5ec7b2fd61145
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3971c145-6dca-49af-bbb3-7ef4ce51507f?source=api-scan
   classification:
     cvss-metrics: 

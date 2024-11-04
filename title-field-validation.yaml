@@ -1,18 +1,18 @@
-id: title-field-validation
+id: title-field-validation-8cdddad196825d0db1b47d53a6738f65
 
 info:
-  name: >
-    Title Field Validation <= 1.1 - Cross-Site Request Forgery
+  name: "Title Field Validation <= 1.1 - Cross-Site Request Forgery"
   author: topscoder
   severity: high
-  description: >
-    The Title Field Validation plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.1. This is due to missing or incorrect nonce validation on several functions. This makes it possible for unauthenticated attackers to add, edit, and delete validation parameters via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
+  description: "The Title Field Validation plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.1. This is due to missing or incorrect nonce validation on several functions. This makes it possible for unauthenticated attackers to add, edit, and delete validation parameters via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0bb43b6c-4f14-401c-9964-1c4c19fc9e51?source=api-prod
+    - https://ithemes.com/blog/wordpress-vulnerability-report-july-7-2021/
+    - https://wpscan.com/vulnerability/cc5938a3-a7d8-4dfa-8256-9ace889ab4b4
+    - https://wordpress.org/plugins/title-field-validation/
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/title-field-validation/"
     google-query: inurl:"/wp-content/plugins/title-field-validation/"

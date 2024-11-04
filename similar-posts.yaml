@@ -1,14 +1,15 @@
-id: similar-posts
+id: similar-posts-ae9ebb692f69f94c9d9cc1ea4439931d
 
 info:
   name: >
-    Similar Posts <= 3.1.5 - Admin+ Arbitrary PHP Code Execution
+    Similar Posts – Best Related Posts Plugin for WordPress <= 3.1.6 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e08c3db4-6353-4bca-ab89-af46e5a0a128?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fb1cf9f1-7b87-4690-80db-0d4b3ccd98f9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.1.5')
+          - compare_versions(version, '<= 3.1.6')

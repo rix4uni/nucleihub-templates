@@ -1,4 +1,4 @@
-id: api2cart-bridge-connector
+id: api2cart-bridge-connector-9310170fdba6634de0183ef1f76c24bb
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/5bf6d60f-57ac-4cbc-895f-a7db548cbf67?source=api-scan
   classification:
     cvss-metrics: 

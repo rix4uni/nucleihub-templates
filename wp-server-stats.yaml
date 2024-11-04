@@ -1,4 +1,4 @@
-id: wp-server-stats
+id: wp-server-stats-fd823ed7bac9003350af5ac85b97a111
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c394295f-d1b5-48be-978f-f15a6b56e40f?source=api-scan
   classification:
     cvss-metrics: 

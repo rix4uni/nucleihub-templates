@@ -1,12 +1,15 @@
 id: smtp
 info:
-  name: Sun sims smtpd
+  name: Postfix smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
+    product: postfix
     rarity: 0
+    vendor: postfix
+    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -18,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 (\S+).*?SMTP \(Sun Internet Mail Server sims.(\d[^\)]+)\)
+    - ^220 ([-\w_.]+) ESMTP PostFix ([\d.]+)\r\n

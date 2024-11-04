@@ -1,4 +1,4 @@
-id: wp-insert
+id: wp-insert-6a1f9d67e169b2bdaa313f189458cb6c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f607b33a-58ef-4526-9ca1-aaa444aa12bc?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: wp-content-filter
+id: wp-content-filter-b01a40a19554696b7c04cbb4a2df4b20
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/95ffefff-80e1-4f5a-8939-47a00f75493d?source=api-scan
   classification:
     cvss-metrics: 

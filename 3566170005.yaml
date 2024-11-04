@@ -1,11 +1,11 @@
 id: teamtalk
 info:
-  name: Bearware TeamTalk
+  name: BearWare TeamTalk
   author: nmap,cn-kali-team
   tags: detect,tech,teamtalk,service
   severity: info
   metadata:
-    info: 'protocol: $1'
+    info: 'protocol: $2; servername: $1'
     product: teamtalk
     rarity: 9
     vendor: bearware
@@ -21,4 +21,4 @@ tcp:
   - name: teamtalk
     type: regex
     regex:
-    - ^(?:teamtalk|welcome) userid=\d+ servername=\"\" .* protocol=\"([\w._-]+)\"\r\n
+    - ^(?:teamtalk|welcome) userid=\d+ servername="([^"]+)" .* protocol="([\d.]+)"\r\nerror number=2002 message="Invalid user account"\r\n

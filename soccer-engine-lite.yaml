@@ -1,4 +1,4 @@
-id: soccer-engine-lite
+id: soccer-engine-lite-2bb7af1cf0813ad14903981701cc8a93
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/57e84624-98ab-495b-b985-908302527b3a?source=api-scan
   classification:
     cvss-metrics: 

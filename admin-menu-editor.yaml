@@ -1,49 +1,59 @@
-id: wordpress-admin-menu-editor
+id: admin-menu-editor-d60a524e3c04cd828aab01549c358585
 
 info:
-  name: Admin Menu Editor Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Admin Menu Editor <= 1.12 - Cross-Site Request Forgery via ajax_hide_hint()
+  author: topscoder
+  severity: medium
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/admin-menu-editor/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/53fa9be4-a2b3-458c-af6e-d3ada639a622?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: admin-menu-editor
-    wpscan: https://wpscan.com/plugin/admin-menu-editor
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/admin-menu-editor/"
+    google-query: inurl:"/wp-content/plugins/admin-menu-editor/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,admin-menu-editor,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/admin-menu-editor/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/admin-menu-editor.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "admin-menu-editor"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100f1cb174c4aee315a5e8de069670fa1dcd792ed693bb86dbc7468a95e99e788ff02204c2d23efd66d537f0ab3d1c65cdbf250b2be494a4ef60253a45c3d4bec864599:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 1.12')

@@ -1,16 +1,17 @@
 id: ssh
 info:
-  name: Akamai SSH
+  name: Bitvise WinSSHD
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1
-    product: ssh
+    info: FlowSsh $2; protocol $1
+    operating_system: Windows
+    product: winsshd
     rarity: 0
-    vendor: akamai
+    vendor: bitvise
     verified: true
-    version: $2
+    version: $3
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +22,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-(\d[\d.]*)-(Server-V)\r?\n$
+    - '^SSH-([\d.]+)-([\w._-]+) FlowSsh: WinSSHD ([\w._-]+)\r\n'

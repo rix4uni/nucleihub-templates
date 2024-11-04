@@ -1,4 +1,4 @@
-id: one-click-plugin-updater
+id: one-click-plugin-updater-1ae86956bb60c34157b5c54aab90f89d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/65b2b72a-5c76-463e-9513-26b400b40a65?source=api-scan
   classification:
     cvss-metrics: 

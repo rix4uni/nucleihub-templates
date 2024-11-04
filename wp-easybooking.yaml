@@ -1,4 +1,4 @@
-id: wp-easybooking
+id: wp-easybooking-c66ca5fc9b1d531a801c0145e1df92b5
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e23bdcf9-8068-40c5-b27e-4562040068ca?source=api-scan
   classification:
     cvss-metrics: 

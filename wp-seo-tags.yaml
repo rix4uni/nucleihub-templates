@@ -1,4 +1,4 @@
-id: wp-seo-tags
+id: wp-seo-tags-76d5162ee7223bd601a1ea0824e24c24
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/16e7a7c5-b845-4f28-bee6-fde54d003e13?source=api-scan
   classification:
     cvss-metrics: 

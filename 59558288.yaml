@@ -1,12 +1,12 @@
 id: smtp
 info:
-  name: DavMail smtpd
+  name: rblsmtpd wrapped smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
+    info: Connecting from banned IP
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - '^220 DavMail ([\w._-]+) SMTP ready at '
+    - ^220 rblsmtpd\.local\r\n

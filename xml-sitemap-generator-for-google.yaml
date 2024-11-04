@@ -1,4 +1,4 @@
-id: xml-sitemap-generator-for-google
+id: xml-sitemap-generator-for-google-84048d0f2c99adaa353d98a86968a712
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b03a9aaa-ce9a-47bf-8574-0eba92fcf0c5?source=api-scan
   classification:
     cvss-metrics: 

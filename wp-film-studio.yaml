@@ -1,4 +1,4 @@
-id: wp-film-studio
+id: wp-film-studio-49f13dc6fa66760ca1ff6d5f40c3291d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ae5121bd-2f3f-4d87-a2fd-d11bb9f8dc2c?source=api-scan
   classification:
     cvss-metrics: 

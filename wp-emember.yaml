@@ -1,15 +1,15 @@
-id: wp-emember
+id: wp-emember-8bbbad07247312125a74bba31f45589a
 
 info:
   name: >
-    WP eMember <= 10.3.8 - Reflected Cross-Site Scripting
+    WP eMember <= 10.6.6 - Reflected Cross-Site Scripting via $_SERVER['REQUEST_URI']
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/143e28b0-56cf-4d8d-9147-60a85a595290?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1ceae0dc-205a-4a24-a912-b632c9ca7e6f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 10.3.8')
+          - compare_versions(version, '<= 10.6.6')

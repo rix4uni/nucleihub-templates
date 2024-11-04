@@ -1,4 +1,4 @@
-id: pagepost-content-shortcode
+id: pagepost-content-shortcode-dadda0b08ca9531496c1a761e79d9415
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c619cb36-7216-4a23-96d2-57d8142be4af?source=api-scan
   classification:
     cvss-metrics: 

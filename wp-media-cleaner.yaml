@@ -1,4 +1,4 @@
-id: wp-media-cleaner
+id: wp-media-cleaner-814cddf0d280cd475d03d3f44b111272
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/0654ddef-0a6e-4241-b226-947b5b0415b1?source=api-scan
   classification:
     cvss-metrics: 

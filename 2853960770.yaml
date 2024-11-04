@@ -5,11 +5,11 @@ info:
   tags: detect,tech,mysql,service
   severity: info
   metadata:
+    info: Too many connections
     product: mysql
     rarity: 0
     vendor: mysql
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: mysql
     type: regex
     regex:
-    - (?i)^.\0\0\0\x0a(6\.[-_~.+\w]+)\0...\0
+    - (?i)^.\0\0\0\xff..Too many connections

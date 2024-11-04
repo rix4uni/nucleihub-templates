@@ -1,4 +1,4 @@
-id: scrollrevealjs-effects
+id: scrollrevealjs-effects-8ca92f3cf8bec51febac1ff0fc216716
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/68d44dd9-cfe4-4bc0-aa2e-9b7fb766870a?source=api-scan
   classification:
     cvss-metrics: 

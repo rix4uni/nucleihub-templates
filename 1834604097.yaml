@@ -1,14 +1,19 @@
 id: sip
 info:
-  name: Nokia N86 phone SIP
+  name: M5T SIP Client Engine
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: phone
+    device_type: VoIP adapter
     fallback:
     - get-request
+    info: Patton $1
+    product: m5t_sip_client_engine
     rarity: 5
+    vendor: media5corp
+    verified: true
+    version: $2
 tcp:
 - name: sipoptions
   inputs:
@@ -20,4 +25,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '^SIP/2\.0 404 Not Found\r\nVia: SIP/2\.0/TCP nm;branch=foo;received=[\d.]+\r\nTo: <sip:nm2@nm2>;tag=\w+\r\nFrom: <sip:nm@nm>;tag=root\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nContent-Length: 0\r\n\r\n$'
+    - '(?i)^SIP/2\.0 200 OK\r\nAccept: application/sdp, application/dtmf-relay, application/QSIG, application/broadsoft\r\n(?:[^\r\n]+\r\n)*?Server: Patton (\w+) [^\r\n]+ M5T SIP Stack/([\w._-]+)\r\n'

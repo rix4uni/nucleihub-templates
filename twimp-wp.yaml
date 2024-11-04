@@ -1,4 +1,4 @@
-id: twimp-wp
+id: twimp-wp-fde2d1f453a010049d1a8983b13dd544
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/25e4abf4-9869-436c-8fd3-9f59b2363ba7?source=api-scan
   classification:
     cvss-metrics: 

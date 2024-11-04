@@ -1,23 +1,24 @@
-id: wp-nested-pages
+id: wp-nested-pages-21c6f38c12841cb789c7ff98d52bd1a8
 
 info:
   name: >
-    Nested Pages <= 3.1.15 - Cross-Site Request Forgery to Arbitrary Post Deletion and Modification
+    Nested Pages <= 3.0.7 - Missing Authorization
   author: topscoder
-  severity: medium
+  severity: low
   description: >
-    
+    The Nested Pages plugin for WordPress is vulnerable to authorization bypass due to a missing capability check in versions up to, and including, 3.0.7. This makes it possible for authenticated attackers to edit other contributors' posts along with modifying the slugs and titles.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ecbbe9f0-bf6c-4153-9843-8ae7713adef9?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1a76571a-f820-4902-afa9-287b59a11d14?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:L/A:L
+    cvss-score: 6.4
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-nested-pages/"
     google-query: inurl:"/wp-content/plugins/wp-nested-pages/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-nested-pages,medium
+  tags: cve,wordpress,wp-plugin,wp-nested-pages,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.1.15')
+          - compare_versions(version, '<= 3.0.7')

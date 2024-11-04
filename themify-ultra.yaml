@@ -1,14 +1,15 @@
-id: themify-ultra
+id: themify-ultra-6d868ce9e4343351f6736fb0d4d6c2db
 
 info:
   name: >
-    Themify Ultra <= 7.3.5 - Privilege Escalation
+    Themify Ultra <= 7.3.5 - Authenticated (Subscriber+) Arbitrary File Upload
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cc994b2a-b3da-4edc-ada3-1150065efd30?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ed5251e7-64d2-4210-9864-144952a49327?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

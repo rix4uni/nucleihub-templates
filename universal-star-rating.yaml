@@ -1,18 +1,18 @@
-id: universal-star-rating
+id: universal-star-rating-f870c800c188349e28c0c928a56349a9
 
 info:
-  name: >
-    Universal Star Rating <= 2.1.0 - Cross-Site Request Forgery
+  name: "Universal Star Rating <= 1.10.4 - Authenticated (Administrator+) Stored Cross-Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    
+  description: "The Universal Star Rating plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘usrCustomImagesFolder’ parameter in versions up to, and including, 1.10.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/767bd8dd-993f-48d3-92f1-669d2329f1ab?source=api-scan
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-universal-star-rating-unspecified-vulnerability-1-10-3/
+    - https://wordpress.org/support/topic/vulnerability-notification/
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=1700756%40universal-star-rating&new=1700756%40universal-star-rating&sfp_email=&sfph_mail=
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 5.5
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/universal-star-rating/"
     google-query: inurl:"/wp-content/plugins/universal-star-rating/"
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1.0')
+          - compare_versions(version, '<= 1.10.4')

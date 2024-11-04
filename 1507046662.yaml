@@ -1,6 +1,6 @@
 id: rtsp
 info:
-  name: Hikvision DVR rtspd
+  name: Axis 207W Webcam rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
@@ -19,4 +19,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nPublic: OPTIONS, DESCRIBE, SETUP, PLAY, TEARDOWN, PAUSE\r\n\r\n$'
+    - '^RTSP/1\.0 \d\d\d .*\r\nPublic: DESCRIBE, GET_PARAMETER, PAUSE, PLAY, SETUP, TEARDOWN\r\n\r\n'

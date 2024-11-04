@@ -1,23 +1,23 @@
 id: rtsp
 info:
-  name: Freebox rtspd
+  name: Hikvision 7513 POE IP camera rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
-    device_type: media device
+    device_type: webcam
     fallback:
     - get-request
     rarity: 5
 tcp:
-- name: rtsprequest
+- name: sipoptions
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: 'OPTIONS sip:nm SIP/2.0\r\nVia: SIP/2.0/TCP nm;branch=foo\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nMax-Forwards: 70\r\nContent-Length: 0\r\nContact: <sip:nm@nm>\r\nAccept: application/sdp\r\n\r\n'
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
+  port: 406,5060,8081,31337
   extractors:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nPublic: OPTIONS, ANNOUNCE, SETUP, RECORD, SET_PARAMETER, GET_PARAMETER, FLUSH, TEARDOWN, POST\r\n\r\n'
+    - '^RTSP/1\.0 200 OK\r\nCSeq: 42 OPTIONS\r\nPublic: OPTIONS, DESCRIBE, PLAY, PAUSE, SETUP, TEARDOWN, SET_PARAMETER, GET_PARAMETER\r\nDate: .*\r\n\r\n'

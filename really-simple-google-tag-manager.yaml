@@ -1,4 +1,4 @@
-id: really-simple-google-tag-manager
+id: really-simple-google-tag-manager-c56b8f02a7fb23d0eca9c44d73127f09
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c579825b-e92e-48d2-925e-d1fc81374c4a?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,12 +1,14 @@
 id: pop3
 info:
-  name: GNU POP3 Server
+  name: Dovecot MUA pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    product: dovecot
     rarity: 0
-    version: $1
+    vendor: dovecot
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 Welcome to GNU POP3 Server Version (\d[-.\w]+) <.*>\r\n
+    - ^\+OK dovecot MUA ready\r\n

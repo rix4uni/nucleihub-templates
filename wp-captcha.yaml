@@ -1,4 +1,4 @@
-id: wp-captcha
+id: wp-captcha-25a8cc67ffe95fa1e4747392578da042
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/810adc9a-d4e1-46a8-89e4-22615cbbb9c6?source=api-scan
   classification:
     cvss-metrics: 

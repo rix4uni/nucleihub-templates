@@ -1,14 +1,15 @@
-id: php-everywhere
+id: php-everywhere-547d207883318ac23ca7067a18227333
 
 info:
   name: >
-    PHP Everywhere <= 2.0.2 - Cross-Site Request Forgery
+    PHP Everywhere <= 2.0.3 - Remote Code Execution by Contributor+ users via gutenberg block
   author: topscoder
-  severity: medium
+  severity: critical
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a2cd027b-fbaa-41ce-8822-2fa16aa93eb5?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7aa62be9-93b9-423f-89f8-809ca0035547?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/php-everywhere/"
     google-query: inurl:"/wp-content/plugins/php-everywhere/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,php-everywhere,medium
+  tags: cve,wordpress,wp-plugin,php-everywhere,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.2')
+          - compare_versions(version, '<= 2.0.3')

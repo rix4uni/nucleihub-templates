@@ -1,11 +1,12 @@
 id: shell
 info:
-  name: HP-UX Remshd
+  name: FreeBSD rshd
   author: nmap,cn-kali-team
   tags: detect,tech,shell,service
   severity: info
   metadata:
-    operating_system: HP-UX
+    info: Access denied
+    operating_system: Unix
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: shell
     type: regex
     regex:
-    - '^\x01remshd: getservbyname\n$'
+    - ^\* You are not welcome to use rshd from .*\n

@@ -1,4 +1,4 @@
-id: paypal-brasil-para-woocommerce
+id: paypal-brasil-para-woocommerce-00e0ce087fc000d49a2b3704a2e50df5
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b4a44a8a-740b-45dd-962c-945238f6ddee?source=api-scan
   classification:
     cvss-metrics: 

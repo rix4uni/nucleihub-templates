@@ -1,14 +1,16 @@
 id: rtsp
 info:
-  name: Darwin Streaming Server
+  name: VLC rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
     fallback:
     - get-request
-    operating_system: Solaris
+    product: vlc_media_player
     rarity: 5
+    vendor: videolan
+    verified: true
     version: $1
 tcp:
 - name: rtsprequest
@@ -21,4 +23,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 \d\d\d .*\r\nServer: DSS/([\d.]+) \(Build/[\d.]+; Platform/Solaris'
+    - '^RTSP/1\.0 200 OK\r\nServer: VLC/([\w._-]+)\r\nContent-Length: 0\r\nPublic: DESCRIBE,SETUP,TEARDOWN,PLAY,PAUSE,GET_PARAMETER\r\n\r\n'

@@ -1,12 +1,17 @@
 id: nntp
 info:
-  name: NOFFLE nntpd
+  name: Lotus Domino nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
+    info: posting denied
+    operating_system: $1
+    product: lotus_domino
     rarity: 0
-    version: $1
+    vendor: ibm
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +22,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 NNTP server NOFFLE ([\w.]+)\r\n
+    - ^200 Lotus Domino NNTP Server for ([-./\w]+) \(Release (\d[-.\w]+), .*\) - Not OK to post\r\n$

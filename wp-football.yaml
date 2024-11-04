@@ -1,4 +1,4 @@
-id: wp-football
+id: wp-football-ab1c9b8c8ad02edb393b9c947c7bcf69
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/15e06f6e-2a13-490e-8e41-d9f7db8e78e0?source=api-scan
   classification:
     cvss-metrics: 

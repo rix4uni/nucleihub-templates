@@ -1,18 +1,18 @@
-id: javo-spot
+id: javo-spot-b83e717fc7a5fa25179e1d41c1487b28
 
 info:
-  name: >
-    Javo Spot < 3.0.0 - Directory Traversal
+  name: "Javo Spot < 3.0.0 - Directory Traversal"
   author: topscoder
   severity: high
-  description: >
-    The Javo Spot theme for WordPress is vulnerable to Directory Traversal in versions up to 3.0.0 via the 'fn' parameter found in the jvfrm_spot_get_json() function called via a nopriv AJAX action. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information.
+  description: "The Javo Spot theme for WordPress is vulnerable to Directory Traversal in versions up to 3.0.0 via the 'fn' parameter found in the jvfrm_spot_get_json() function called via a nopriv AJAX action. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/db9cd10e-90c1-48b2-8760-d5fc501fb3ba?source=api-prod
+    - https://codeseekah.com/2017/02/09/javo-themes-spot-lfi-vulnerability/
+    - https://wpscan.com/vulnerability/2d465fc4-d4fa-43bb-9c0d-71dcc3ee4eab
+    - https://themeforest.net/item/javo-spot-multi-purpose-directory-wordpress-theme/13198068
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/themes/javo-spot/"
     google-query: inurl:"/wp-content/themes/javo-spot/"

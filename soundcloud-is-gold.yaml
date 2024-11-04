@@ -1,14 +1,15 @@
-id: soundcloud-is-gold
+id: soundcloud-is-gold-4e15cf4263cf24ac3301d0389ed79c46
 
 info:
   name: >
-    SoundCloud Is Gold <= 2.3.1 - Reflected Cross-Site Scripting
+    Soundcloud Is Gold <= 2.5.1 - Missing Authorization to Soundcloud User Add
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f294175e-dfcd-4d8d-84ee-a945ec7ac7e3?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/14b2fa77-dc51-47b4-913a-9129f95ba766?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/soundcloud-is-gold/"
     google-query: inurl:"/wp-content/plugins/soundcloud-is-gold/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,soundcloud-is-gold,medium
+  tags: cve,wordpress,wp-plugin,soundcloud-is-gold,high
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.3.2')
+          - compare_versions(version, '<= 2.5.1')

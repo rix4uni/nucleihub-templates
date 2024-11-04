@@ -1,4 +1,4 @@
-id: permalinks-customizer
+id: permalinks-customizer-b9ccaddbcabefd5d42a85bb5f16bcf7a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/bf1f402d-98d7-42d7-8d8d-ff74a65e5293?source=api-scan
   classification:
     cvss-metrics: 

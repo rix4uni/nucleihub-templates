@@ -1,14 +1,15 @@
-id: wp-ultimate-email-marketer
+id: wp-ultimate-email-marketer-37785b957e46251527ec57abe8d200b6
 
 info:
   name: >
-    WP Ultimate Email Marketer <= 1.1.0 - Stored Cross-Site Scripting
+    WP Ultimate Email Marketer <= 1.2.0 - Authentication Bypass
   author: topscoder
-  severity: high
+  severity: critical
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d49a2180-cf3f-4ef9-805f-e7592b793a2c?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/35806af6-bb63-41c8-a20b-f5e36d2aa515?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-ultimate-email-marketer/"
     google-query: inurl:"/wp-content/plugins/wp-ultimate-email-marketer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-ultimate-email-marketer,high
+  tags: cve,wordpress,wp-plugin,wp-ultimate-email-marketer,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.0')
+          - compare_versions(version, '<= 1.2.0')

@@ -1,14 +1,15 @@
-id: gallery-videos
+id: gallery-videos-b0b3f41392f5d7ed9e53a46ed243de56
 
 info:
   name: >
-    Video Gallery – YouTube Gallery <= 2.1.4 - Authenticated (Administrator+) SQL Injection
+    Video Gallery – YouTube Gallery <= 1.7.6 -  Authenticated (Admin+) Stored Cross Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a8382051-ae17-4719-94b5-3cfb0b5e82b1?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/88f9f4db-b15b-43d4-918a-a4c83e5735d1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1.4')
+          - compare_versions(version, '<= 1.7.6')

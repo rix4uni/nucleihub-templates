@@ -1,4 +1,4 @@
-id: scrolling-anchors
+id: scrolling-anchors-ef36ac8f5bb1a00642fc2351c050dd40
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/bd248252-4329-4b3c-acf1-3b3d8cc9887c?source=api-scan
   classification:
     cvss-metrics: 

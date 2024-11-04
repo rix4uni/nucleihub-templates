@@ -1,4 +1,4 @@
-id: service-area-postcode-checker
+id: service-area-postcode-checker-57707f3012d1f1c79fc5af2afbec3d55
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/da8dd02f-0d9f-44a2-bcad-1e392668dd67?source=api-scan
   classification:
     cvss-metrics: 

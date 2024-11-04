@@ -1,11 +1,12 @@
 id: printer
 info:
-  name: lpd
+  name: BSD/Linux lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
     hostname: $1
+    info: hostname denied
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - '^([-\w_.]+): lpd: hostname for your address \([\d.]+\) unknown\n'
+    - '^([-.\w]+): lpd: Your host does not have line printer access\n'

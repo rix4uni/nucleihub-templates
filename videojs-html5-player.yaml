@@ -1,14 +1,15 @@
-id: videojs-html5-player
+id: videojs-html5-player-51d9458a115d242279fba8fa10bcce8b
 
 info:
   name: >
-    Videojs HTML5 Player <= 1.1.8 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Videojs HTML5 Player <= 1.1.11 - Authenticated (Contributor+) Stored Cross-Site Scripting via videojs_video Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ef4ecdd3-1041-4dbe-a804-59a51f6123e4?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4ffd76a2-6700-4c2a-858d-4c7339a8d09a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.8')
+          - compare_versions(version, '<= 1.1.11')

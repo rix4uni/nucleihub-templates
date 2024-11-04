@@ -1,13 +1,15 @@
 id: nntp
 info:
-  name: NNTPCache
+  name: INN NNTPd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
+    info: broken
+    product: inn
     rarity: 0
-    version: $2
+    vendor: isc
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^20\d ([\w.-_]+) NNTPCache server V([\d.]+) \[see www\.nntpcache\.org\]
+    - '^nnrpd: invalid option -- S\nUsage error\.\n'

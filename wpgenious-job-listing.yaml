@@ -1,4 +1,4 @@
-id: wpgenious-job-listing
+id: wpgenious-job-listing-06121f20d76d265c580c43cb212413b8
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/821b8ed1-10be-4798-826a-aaaef4888950?source=api-scan
   classification:
     cvss-metrics: 

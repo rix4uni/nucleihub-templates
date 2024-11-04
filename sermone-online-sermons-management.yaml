@@ -1,14 +1,15 @@
-id: sermone-online-sermons-management
+id: sermone-online-sermons-management-139bef5b5213790e12b84be388a01e90
 
 info:
   name: >
-    Sermon'e <= 1.0.0 - Authenticated(Contributor+) Stored Cross-Site Scripting via Shortcode
+    Sermon'e <= 1.0.0 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0e1bfb29-80e7-4122-ab61-ef7c1dd8ebaa?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/08b5f399-018c-4e0b-aefc-55463d4ac48d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

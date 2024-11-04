@@ -1,4 +1,4 @@
-id: simple-portfolio-gallery
+id: simple-portfolio-gallery-c823a8c32782388082e34fa9dc4f43bc
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/46d65fed-cb21-46e1-bafe-eda11c25a467?source=api-scan
   classification:
     cvss-metrics: 

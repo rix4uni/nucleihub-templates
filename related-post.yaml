@@ -1,4 +1,4 @@
-id: related-post
+id: related-post-e56b8ec64658dc5eb93433645f7f4e4f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f08ca5e3-8b48-4333-9c42-cc103d40394c?source=api-scan
   classification:
     cvss-metrics: 

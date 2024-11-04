@@ -1,14 +1,15 @@
-id: powerpack-addon-for-beaver-builder
+id: powerpack-addon-for-beaver-builder-46dd7e819713282e5218e23dab2747c8
 
 info:
   name: >
-    PowerPack Lite for Beaver Builder  <= 1.2.9.2 Reflected Cross-Site Scripting
+    PowerPack Lite for Beaver Builder <= 1.3.0 - Authenticated(Contributor+) Stored Cross-Site Scripting via element link
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d992a9cf-f24c-4c82-a56b-22394524ba3b?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a22c7b45-752c-482d-8812-888d5bc3d630?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/powerpack-addon-for-beaver-builder/"
     google-query: inurl:"/wp-content/plugins/powerpack-addon-for-beaver-builder/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,powerpack-addon-for-beaver-builder,medium
+  tags: cve,wordpress,wp-plugin,powerpack-addon-for-beaver-builder,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.9.2')
+          - compare_versions(version, '<= 1.3.0')

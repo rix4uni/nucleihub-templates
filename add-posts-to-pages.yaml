@@ -1,4 +1,4 @@
-id: add-posts-to-pages
+id: add-posts-to-pages-0532ae154ffc3d6db211b8b7981e88d0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/139b081d-17b1-4e1f-9d22-cf3f9de123f5?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,23 +1,24 @@
-id: tree-website-map
+id: tree-website-map-e634847f659354d742a569ace9d869a1
 
 info:
-  name: >
-    Tree Sitemap (Pages, Posts & Categories list) <= 2.9 - Cross-Site Request Forgery to Arbitrary Plugin Installation/Activation
+  name: "Tree Sitemap (Pages, Posts & Categories list) <= 2.9 - Cross-Site Request Forgery to Arbitrary Plugin Installation/Activation"
   author: topscoder
-  severity: medium
-  description: >
-    The Tree Sitemap (Pages, Posts & Categories list) plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.9. This is due to missing or incorrect nonce validation on the 'cp_plugins_do_button_job_later_callback' AJAX action. This makes it possible for unauthenticated attackers to install and activate other plugins via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
+  severity: high
+  description: "The Tree Sitemap (Pages, Posts & Categories list) plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.9. This is due to missing or incorrect nonce validation on the 'cp_plugins_do_button_job_later_callback' AJAX action. This makes it possible for unauthenticated attackers to install and activate other plugins via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5658f62b-2f4a-46f7-b229-8e239c7ef148?source=api-prod
+    - https://ithemes.com/blog/wordpress-vulnerability-report-april-2021-part-4/
+    - https://wpscan.com/vulnerability/3961132f-ecc1-4f41-83f1-3ac537143b38
+    - https://wordpress.org/plugins/tree-website-map/#developers
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2502320%40tree-website-map&new=2502320%40tree-website-map&sfp_email=&sfph_mail=
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/tree-website-map/"
     google-query: inurl:"/wp-content/plugins/tree-website-map/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,tree-website-map,medium
+  tags: cve,wordpress,wp-plugin,tree-website-map,high
 
 http:
   - method: GET

@@ -1,4 +1,4 @@
-id: youtube-embed-plus
+id: youtube-embed-plus-46924986dad4c7851d0c32e8d2696cc9
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/91ebde99-3383-4179-a72b-2709c1db9e53?source=api-scan
   classification:
     cvss-metrics: 

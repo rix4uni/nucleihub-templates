@@ -1,4 +1,4 @@
-id: webriti-smtp-mail
+id: webriti-smtp-mail-76890a3a55491f21b91f4c2317b455a0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/053d374e-68b2-4d48-af6d-45087d5ce211?source=api-scan
   classification:
     cvss-metrics: 

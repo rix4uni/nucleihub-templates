@@ -1,49 +1,59 @@
-id: wordpress-official-facebook-pixel
+id: official-facebook-pixel-6cf66ddcf9ef63b567b3a5272946086a
 
 info:
-  name: Meta pixel for WordPress Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Facebook for WordPress <= 3.0.3 - Cross-site Request Forgery to Stored Cross-site Scripting and Settings Deletion via wp_ajax_(save|delete)_fbe_settings
+  author: topscoder
+  severity: low
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/official-facebook-pixel/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9bc3039c-8e96-42e9-a28d-d3204f3e84f7?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: official-facebook-pixel
-    wpscan: https://wpscan.com/plugin/official-facebook-pixel
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/official-facebook-pixel/"
+    google-query: inurl:"/wp-content/plugins/official-facebook-pixel/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,official-facebook-pixel,low
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/official-facebook-pixel/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/official-facebook-pixel.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "official-facebook-pixel"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a004630440220771a9bd04a369d29178615dbde5746a88bc012565693c90d8dc0f942396ccf8902200a02d4e3ce22799ee40eff5b5509249e42b95b21143b0dbda70e048dff340914:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '>= 3.0.0', '< 3.0.4')

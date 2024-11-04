@@ -1,13 +1,15 @@
 id: ssh
 info:
-  name: Dopra Linux sshd
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
-    operating_system: Dopra Linux
+    product: openssh
     rarity: 0
+    vendor: openbsd
+    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -19,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-DOPRA-([\w._-]+)\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+)-chrootssh\n

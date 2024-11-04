@@ -1,4 +1,4 @@
-id: bertha-ai-free
+id: bertha-ai-free-a474de516ce34e32666cdee1f71438f0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1b4630f7-74db-46c4-bf86-f1ff64be3463?source=api-scan
   classification:
     cvss-metrics: 

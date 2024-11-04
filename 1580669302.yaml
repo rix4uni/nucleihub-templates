@@ -1,12 +1,14 @@
 id: pop3
 info:
-  name: Solid pop3d
+  name: Hermes pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
+    hostname: $2
+    operating_system: Windows
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Solid POP3 server ready <[\d.]+@([\w._-]+)>\r\n
+    - ^\+OK Hermes ([\w. ]+) POP3 Ready\. <[\d.]+@([-\w_.]+)>\r\n

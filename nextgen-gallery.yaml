@@ -1,49 +1,61 @@
-id: wordpress-nextgen-gallery
+id: nextgen-gallery-0c027214a79531b3faf7c56f8bc252b8
 
 info:
-  name: Photo Gallery, Sliders, Proofing and Themes – NextGEN Gallery Detection
-  author: ricardomaia
-  severity: info
+  name: "NextGen Gallery <= 2.1.7 - Path Traversal"
+  author: topscoder
+  severity: medium
+  description: "The NextGen Gallery plugin for WordPress is vulnerable to Path Traversal in versions up to, and including, 2.1.7 via the  browse_folder AJAX action and the 'dir' parameter. This allows authenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information."
   reference:
-    - https://wordpress.org/plugins/nextgen-gallery/
+    - https://web.archive.org/web/20181021204353/https%3A//permalink.gmane.org/gmane.comp.security.oss.general/17650
+    - https://github.com/espreto/wpsploit/blob/master/documentation/auxiliary/wp_nextgen_gallery_dir_read.md
+    - https://wordpress.org/plugins/nextgen-gallery/#developers
+    - https://wpscan.com/vulnerability/16e10990-4f4a-43ed-89d4-008f4db3c95f
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-nextgen-gallery-wordpress-gallery-directory-traversal-2-1-9/
+    - https://web.archive.org/web/20170603171400/https%3A//www.youtube.com/watch?v=KkPVMxubUis
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
+    cvss-score: 6.5
+    cve-id:
   metadata:
-    plugin_namespace: nextgen-gallery
-    wpscan: https://wpscan.com/plugin/nextgen-gallery
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/nextgen-gallery/"
+    google-query: inurl:"/wp-content/plugins/nextgen-gallery/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,nextgen-gallery,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/nextgen-gallery/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/nextgen-gallery.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "nextgen-gallery"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a0047304502200efab0402f065d660b5a29f222afb2bfa6453a87290bd7a02314ec2cbc39dc7f022100edc430c24b127fd7682a1dabf70bcbb4e5d0a9c50a20a4dc11a0c603eefd93b2:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 2.1.7')

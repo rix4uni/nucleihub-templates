@@ -1,4 +1,4 @@
-id: thesis-openhook
+id: thesis-openhook-2651cb4a9337e3e4efc30c0899a30511
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/37b9ed0e-5af2-47c1-b2da-8d103e4c31bf?source=api-scan
   classification:
     cvss-metrics: 

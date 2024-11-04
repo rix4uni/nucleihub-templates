@@ -1,14 +1,15 @@
-id: login-configurator
+id: login-configurator-fe19785cecc9ded62fb9e19ffd55d7fb
 
 info:
   name: >
-    Login Configurator <= 2.1 - Reflected Cross-Site Scripting
+    Login Configurator <= 2.1 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cb148264-c75e-4e73-95d7-3a06cdd8990e?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/74d3606f-bd62-4844-ac17-8e47feddab92?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/login-configurator/"
     google-query: inurl:"/wp-content/plugins/login-configurator/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,login-configurator,medium
+  tags: cve,wordpress,wp-plugin,login-configurator,low
 
 http:
   - method: GET

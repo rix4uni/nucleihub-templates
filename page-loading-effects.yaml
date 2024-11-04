@@ -1,4 +1,4 @@
-id: page-loading-effects
+id: page-loading-effects-c10f58f40337d3f82fa9281e29407a54
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/9642be85-2817-4a3b-831b-0f1535106897?source=api-scan
   classification:
     cvss-metrics: 

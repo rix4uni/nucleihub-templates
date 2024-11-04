@@ -1,4 +1,4 @@
-id: product-recommendation-quiz-for-ecommerce
+id: product-recommendation-quiz-for-ecommerce-e0c035680352a44c97e2bb0b01e08092
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f10ae2b6-1580-418c-9cf7-e75ed71bb309?source=api-scan
   classification:
     cvss-metrics: 

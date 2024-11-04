@@ -1,14 +1,17 @@
 id: rtsp
 info:
-  name: Amino AmiNET set-top box rtspd
+  name: AirTunes rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
-    device_type: media device
     fallback:
     - get-request
+    product: airtunes
     rarity: 5
+    vendor: apple
+    verified: true
+    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -20,4 +23,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '(?i)^RTSP/1\.0 200 OK 200\r\n(?:[^\r\n]+\r\n)*?Server: Amino streamer\r\n'
+    - '^RTSP/1\.0 403 Forbidden\r\nContent-Length: 0\r\nServer: AirTunes/([\d.]+)\r\n\r\n'

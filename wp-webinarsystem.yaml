@@ -1,14 +1,15 @@
-id: wp-webinarsystem
+id: wp-webinarsystem-98e29f88714f1d86a799e5f0b6bb9e29
 
 info:
   name: >
-    WebinarPress <= 1.33.9 - Reflected Cross-Site Scripting
+    WordPress Webinar Plugin – WebinarPress <= 1.33.17 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ca0e51b2-640a-4bd1-b667-74107b7dcc6f?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e58fa0b6-22f3-4e56-96f8-d1085498a1ac?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.33.9')
+          - compare_versions(version, '<= 1.33.17')

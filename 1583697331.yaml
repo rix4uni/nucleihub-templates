@@ -1,6 +1,6 @@
 id: pop3-proxy
 info:
-  name: MailMarshal pop3d
+  name: DeleGate pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
@@ -18,4 +18,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK MailMarshal\(([\d.]+)\) POP3 server ready <[\d.]+@([-\w_.]+)>\r\n
+    - ^\+OK Proxy-POP server \(DeleGate/([\d.]+) by ysato AT delegate DOT org\) at ([-\w_.]+) starting\.\r\n

@@ -1,49 +1,59 @@
-id: wordpress-tinymce-advanced
+id: tinymce-advanced-85a6b5e989313c1f251d0966c47e345b
 
 info:
-  name: Advanced Editor Tools Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    TinyMCE Advanced <= 4.1.9 - Cross-Site Request Forgery
+  author: topscoder
+  severity: medium
+  description: >
+    The TinyMCE Advanced plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 4.1.9. This is due to missing or incorrect nonce validation for plugin options. This makes it possible for unauthenticated attackers to reset the plugin settings via forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://wordpress.org/plugins/tinymce-advanced/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cb427792-8675-4c38-a4e6-ba2b8091003f?source=api-prod
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
+    cvss-score: 4.3
+    cve-id: 
   metadata:
-    plugin_namespace: tinymce-advanced
-    wpscan: https://wpscan.com/plugin/tinymce-advanced
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/tinymce-advanced/"
+    google-query: inurl:"/wp-content/plugins/tinymce-advanced/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,tinymce-advanced,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/tinymce-advanced/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/tinymce-advanced.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "tinymce-advanced"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a00463044022074af33714dba3f59dc44bcc0a8ba8ff601813deccba6880e4f1cdc266b98b64b02201f1cc1ee5fe633526767b4fcc60982283ea6432810d3cfbccbc1b6bd721c8d90:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '< 4.2.3')

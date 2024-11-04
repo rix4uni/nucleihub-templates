@@ -1,13 +1,16 @@
 id: smtp-proxy
 info:
-  name: BitDefender anti-virus mail gateway
+  name: AnalogX SMTP proxy
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: Windows
+    product: proxy
     rarity: 0
+    vendor: analogx
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 ([-\w_.]+) ESMTP BitDefender Proxy\r\n
+    - ^220 ([-/.+\w]+) SMTP AnalogX Proxy (\d[-.\w]+) \(Release\) ready\r\n

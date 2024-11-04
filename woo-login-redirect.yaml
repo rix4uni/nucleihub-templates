@@ -1,4 +1,4 @@
-id: woo-login-redirect
+id: woo-login-redirect-317022364d5cdae673f22cdada5aba50
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/53d5fbcf-7af7-4345-b207-0a3277f78065?source=api-scan
   classification:
     cvss-metrics: 

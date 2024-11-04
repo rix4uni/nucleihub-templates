@@ -1,14 +1,16 @@
 id: rtsp
 info:
-  name: Freebox rtspd
+  name: HiLinux IP camera rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
-    device_type: media device
+    device_type: webcam
     fallback:
     - get-request
+    info: VodServer $2
     rarity: 5
+    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -20,4 +22,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nPublic: OPTIONS, ANNOUNCE, SETUP, RECORD, SET_PARAMETER, GET_PARAMETER, FLUSH, TEARDOWN, POST\r\n\r\n'
+    - '^RTSP/1\.0 200 OK\r\nServer: HiIpcam/(V\d+R\d+) VodServer/([\d.]+)\r\nPublic: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY\r\n\r\n'

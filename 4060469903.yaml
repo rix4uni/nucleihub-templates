@@ -1,20 +1,21 @@
 id: daytime
 info:
-  name: American Dynamics EDVR security camera daytime
+  name: Windows small service daytime
   author: nmap,cn-kali-team
   tags: detect,tech,daytime,service
   severity: info
   metadata:
-    device_type: webcam
-    rarity: 0
+    operating_system: Windows
+    rarity: 3
 tcp:
-- name: 'null'
+- name: help
   inputs:
-  - data: ''
+  - data: help\r\n\r\n
   host:
   - '{{Hostname}}'
+  port: 7,13,37,42
   extractors:
   - name: daytime
     type: regex
     regex:
-    - ^\d\d\d\d/\d\d/\d\d \d\d:\d\d:\d\d\r\n$
+    - ^\d{1,2}:\d\d:\d\d [AP]M \d{1,2}/\d\d/\d{4}\n$

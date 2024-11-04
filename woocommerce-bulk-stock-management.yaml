@@ -1,4 +1,4 @@
-id: woocommerce-bulk-stock-management
+id: woocommerce-bulk-stock-management-7d0f57c0ba0a2153803c7578eab92b2b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2f5d874a-d70e-4d3f-a9aa-d24707a3f7f4?source=api-scan
   classification:
     cvss-metrics: 

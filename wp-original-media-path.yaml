@@ -1,4 +1,4 @@
-id: wp-original-media-path
+id: wp-original-media-path-db5822fa7776dbdac4862e7f195feef5
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/277eb517-c949-41e9-becf-af056fd32f35?source=api-scan
   classification:
     cvss-metrics: 

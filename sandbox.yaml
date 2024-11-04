@@ -1,18 +1,21 @@
-id: sandbox
+id: sandbox-f87c841ec57ed9279f00f23df1aea26b
 
 info:
-  name: >
-    Sandbox <= 1.6.1 - Arbitrary File Upload
+  name: "Sandbox <= 1.6.1 - Arbitrary File Upload"
   author: topscoder
   severity: critical
-  description: >
-    The Sandbox theme for WordPress is vulnerable to arbitrary file uploads due to missing file type validation via the uploadify.php file in versions up to, and including 1.6.1. This makes it possible for attackers to upload arbitrary files on the affected sites server which may make remote code execution possible.
+  description: "The Sandbox theme for WordPress is vulnerable to arbitrary file uploads due to missing file type validation via the uploadify.php file in versions up to, and including 1.6.1. This makes it possible for attackers to upload arbitrary files on the affected sites server which may make remote code execution possible."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a3160602-6522-478d-8a99-d097472d10ac?source=api-prod
+    - https://en.0day.today/exploits/20228
+    - https://patchstack.com/database/vulnerability/sandbox/wordpress-sandbox-theme-multiple-vulnerabilities
+    - https://web.archive.org/web/20140820044841/http%3A//1337day.com/exploit/20228
+    - https://packetstormsecurity.com/files/123777/Uploadify-3.2.1-Shell-Upload-Information-Disclosure.html
+    - https://web.archive.org/web/20130520230146/https%3A//wordpress.org/themes/sandbox/
+    - https://vulners.com/zdt/1337DAY-ID-20228
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 9.8
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/themes/sandbox/"
     google-query: inurl:"/wp-content/themes/sandbox/"

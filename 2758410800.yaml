@@ -1,12 +1,17 @@
 id: http
 info:
-  name: MenuetOS webcam server
+  name: Cassini httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    operating_system: MenuetOS
+    info: Sonic Foundry Mediasite Service Manager
+    operating_system: Windows
+    product: cassini
     rarity: 0
+    vendor: microsoft
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +22,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 200 OK\r\nServer: Menuet\r\nConnection: close\r\nContent-Length: 0\d+\r\nContent-Type: image/bmp\r\n\r\n'
+    - '(?i)^HTTP/1\.1 400 Bad Request\r\nServer: Cassini/([\w._-]+)\r\n.*<style type=\"text/css\">\r\n        \t          body {margin:0; padding:0; color:Black; background-color:#BABED1;}\r\n'

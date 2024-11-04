@@ -1,4 +1,4 @@
-id: wp-born-babies
+id: wp-born-babies-f4e9672b02a155fa82042099a7208fa7
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f97d97fd-5eac-4fdb-b65a-4c42c3005a2e?source=api-scan
   classification:
     cvss-metrics: 

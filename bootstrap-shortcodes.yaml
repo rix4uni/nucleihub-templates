@@ -1,4 +1,4 @@
-id: bootstrap-shortcodes
+id: bootstrap-shortcodes-29114bae3ba8c203f94f8a259ae624b0
 
 info:
   name: >
@@ -8,7 +8,8 @@ info:
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2b1dc849-e306-4c09-a565-14d4e2427c69?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b7e504ef-9989-468f-9bd0-dd8416f16d85?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

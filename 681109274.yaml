@@ -1,6 +1,6 @@
 id: hp-gsg
 info:
-  name: HP Generic Scan Gateway
+  name: HP JetDirect Generic Scan Gateway
   author: nmap,cn-kali-team
   tags: detect,tech,hp-gsg,service
   severity: info
@@ -18,4 +18,4 @@ tcp:
   - name: hp-gsg
     type: regex
     regex:
-    - ^220 HP GGW server \(version ([\w._-]+)\) ready\r\n\0
+    - ^220 JetDirect GGW server \(version (\d[\d.]+)\) ready\r\n

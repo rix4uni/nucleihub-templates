@@ -1,23 +1,26 @@
-id: count-per-day
+id: count-per-day-35e4fd2755a73394d80f462f3df49aaa
 
 info:
-  name: >
-    Count per Day < 3.5.5 - Reflected Cross-Site Scripting
+  name: "Count Per Day <= 3.2.3 - Path Disclosure and Denial of Service"
   author: topscoder
-  severity: medium
-  description: >
-    
+  severity: critical
+  description: "The Count Per Day plugin for WordPress is vulnerable to Path Disclosure and Denial of Service in versions up to, and including, 3.2.3 via the 'notes.php' file. This makes it possible for unauthenticated attackers to disclose sensitive information and slow/deny the responsiveness of the vulnerable service."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d2ea39fb-5adc-4666-95da-b25024ca32d6?source=api-scan
+    - https://packetstormsecurity.com/files/120631/
+    - https://seclists.org/fulldisclosure/2013/Mar/43
+    - https://wpscan.com/vulnerability/df85abfc-810b-48c8-ade7-aacac158e7e9
+    - https://patchstack.com/database/vulnerability/count-per-day/wordpress-count-per-day-plugin-3-2-3-full-path-disclosure
+    - https://wordpress.org/plugins/count-per-day/#developers
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=591940%40count-per-day&new=591940%40count-per-day&sfp_email=&sfph_mail=
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H
+    cvss-score: 9.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/count-per-day/"
     google-query: inurl:"/wp-content/plugins/count-per-day/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,count-per-day,medium
+  tags: cve,wordpress,wp-plugin,count-per-day,critical
 
 http:
   - method: GET
@@ -55,4 +58,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.5.5')
+          - compare_versions(version, '<= 3.2.3')

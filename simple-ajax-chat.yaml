@@ -1,14 +1,15 @@
-id: simple-ajax-chat
+id: simple-ajax-chat-0a7e4415bfddb98c365d97e5f2440d1c
 
 info:
   name: >
-    Simple Ajax Chat <= 20240216 -  Unauthenticated Stored Cross-Site Scripting
+    Simple Ajax Chat – Add a Fast, Secure Chat Box <= 20240318 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f67b5cd8-bae8-48ca-87d5-7445724791f6?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a24ed885-557b-4f3e-b3d0-345d2ebc8cc5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/simple-ajax-chat/"
     google-query: inurl:"/wp-content/plugins/simple-ajax-chat/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-ajax-chat,high
+  tags: cve,wordpress,wp-plugin,simple-ajax-chat,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 20240216')
+          - compare_versions(version, '<= 20240318')

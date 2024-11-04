@@ -1,14 +1,15 @@
-id: js-support-ticket
+id: js-support-ticket-b251a43135e255c23d983ae5548fcfa6
 
 info:
   name: >
-    JS Help Desk <= 2.7.1 - Missing Authorization to Plugin Settings Update
+    JS Help Desk – The Ultimate Help Desk & Support Plugin <= 2.8.6 - Unauthenticated PHP Code Injection to Remote Code Execution
   author: topscoder
-  severity: high
+  severity: critical
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/74403688-06a0-453f-ac44-bd731c389892?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/31513f9e-6185-425b-9e7e-36f21f72d0a2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/js-support-ticket/"
     google-query: inurl:"/wp-content/plugins/js-support-ticket/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,js-support-ticket,high
+  tags: cve,wordpress,wp-plugin,js-support-ticket,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '2.7.1')
+          - compare_versions(version, '<= 2.8.6')

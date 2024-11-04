@@ -1,14 +1,15 @@
-id: responsive-column-widgets
+id: responsive-column-widgets-a29187a1468326dc4ead18d4b4b0773c
 
 info:
   name: >
-    Responsive Column Widgets <= 1.2.7 - Reflected Cross-Site Scripting via tab
+    Responsive Column Widgets <= 1.2.7 - Open Redirect via responsive_column_widgets_link
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d749c24c-0ed9-423b-872a-4771e9d8a2eb?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a092266b-bd7f-424d-b8c4-d79e4811e6c9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/responsive-column-widgets/"
     google-query: inurl:"/wp-content/plugins/responsive-column-widgets/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,responsive-column-widgets,medium
+  tags: cve,wordpress,wp-plugin,responsive-column-widgets,low
 
 http:
   - method: GET

@@ -1,4 +1,4 @@
-id: mangboard
+id: mangboard-07a978677036d86cc1ca5a446ddb8162
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/4d8cfcdc-6258-4629-a3b4-d65e44ac82f1?source=api-scan
   classification:
     cvss-metrics: 

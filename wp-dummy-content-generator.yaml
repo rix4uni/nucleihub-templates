@@ -1,14 +1,15 @@
-id: wp-dummy-content-generator
+id: wp-dummy-content-generator-54d48eb8971b6505492698bef9e2345f
 
 info:
   name: >
-    WP Dummy Content Generator <= 3.2.1 - Unauthenticated Code Injection
+    WP Dummy Content Generator <= 2.3.0 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a2bda5d0-9589-4925-baa6-6e207e6fc978?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0576737d-8330-4a80-af70-4f0eab6657ed?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-dummy-content-generator/"
     google-query: inurl:"/wp-content/plugins/wp-dummy-content-generator/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-dummy-content-generator,low
+  tags: cve,wordpress,wp-plugin,wp-dummy-content-generator,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.2.1')
+          - compare_versions(version, '<= 2.3.0')

@@ -1,4 +1,4 @@
-id: wp-powerplaygallery
+id: wp-powerplaygallery-528de7a6817e4644c6a354480a550043
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/474ad5a5-6384-41cb-a60b-e25477d48ad7?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: sky-elementor-addons
+id: sky-elementor-addons-a77d646b0ca65be83cef4a1196433a63
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/d5d0ccbd-a091-4897-a100-eac75ffa0e3b?source=api-scan
   classification:
     cvss-metrics: 

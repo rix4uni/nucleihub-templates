@@ -1,4 +1,4 @@
-id: yahoo-updates-for-wordpress
+id: yahoo-updates-for-wordpress-76e60f76756955d709873707e72d4dfd
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3f5ff15d-2436-48d4-a31d-6bfd9704149f?source=api-scan
   classification:
     cvss-metrics: 

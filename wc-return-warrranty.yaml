@@ -1,13 +1,14 @@
-id: wc-return-warrranty
+id: wc-return-warrranty-d03258be295fcd9b4c668d3110b38f26
 
 info:
   name: >
     Return and Warranty Management System for WooCommerce <= 1.2.3 - Unauthenticated Stored Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/fa1e6527-d874-4003-b36b-5769c2950864?source=api-scan
   classification:
     cvss-metrics: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wc-return-warrranty/"
     google-query: inurl:"/wp-content/plugins/wc-return-warrranty/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wc-return-warrranty,low
+  tags: cve,wordpress,wp-plugin,wc-return-warrranty,high
 
 http:
   - method: GET

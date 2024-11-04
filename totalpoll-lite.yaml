@@ -1,14 +1,15 @@
-id: totalpoll-lite
+id: totalpoll-lite-94ad8b9a89e31e944a9c3e1b10d4e2a6
 
 info:
   name: >
-    Total Poll Lite <= 4.9.9 - Missing Authorization
+    Total Poll Lite <= 4.8.6 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3ef57441-8e35-44c4-b566-56e8f1dd18d9?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7e3ae5e7-1f41-48cd-8aea-698e3b00066c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/totalpoll-lite/"
     google-query: inurl:"/wp-content/plugins/totalpoll-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,totalpoll-lite,high
+  tags: cve,wordpress,wp-plugin,totalpoll-lite,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.9.9')
+          - compare_versions(version, '<= 4.8.6')

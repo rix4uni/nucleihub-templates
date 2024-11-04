@@ -1,4 +1,4 @@
-id: zen-mobile-app-native
+id: zen-mobile-app-native-3dc86c7ba63a760d3be76da4bba9af01
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1ad38d18-689c-41ab-9e33-fccbf6791cdb?source=api-scan
   classification:
     cvss-metrics: 

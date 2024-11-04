@@ -1,12 +1,13 @@
 id: ntp
 info:
-  name: Microsoft NTP
+  name: NTP
   author: nmap,cn-kali-team
   tags: detect,tech,ntp,service
   severity: info
   metadata:
-    operating_system: Windows
+    info: primary server
     rarity: 5
+    version: v4
 tcp:
 - name: ntprequest
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: ntp
     type: regex
     regex:
-    - (?i)^\xdc[\x00-\x0f]..............................................$
+    - (?i)^[\x24\x64\xa4]\x01..............................................$

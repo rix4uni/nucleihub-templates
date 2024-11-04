@@ -1,14 +1,15 @@
-id: page-scroll-to-id
+id: page-scroll-to-id-e384746654436f8b95abec5e1de8d9be
 
 info:
   name: >
-    Page scroll to id <= 1.7.5 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Page scroll to id <= 1.7.8 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9b487949-c52d-43ec-b660-2d4057bf3c08?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c0d5f034-fd8b-456a-b44a-7d82db3a16a0?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.7.5')
+          - compare_versions(version, '<= 1.7.8')

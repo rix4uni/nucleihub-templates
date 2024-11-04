@@ -1,15 +1,15 @@
-id: sender-net-automated-emails
+id: sender-net-automated-emails-75e6229e22118e65941667161d8ddc32
 
 info:
   name: >
-    Sender – Newsletter, SMS and Email Marketing Automation for WooCommerce <= 2.6.18 - Cross-Site Request Forgery
+    Sender – Newsletter, SMS and Email Marketing Automation for WooCommerce <= 2.6.15 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0644cfb3-04ff-4c6f-8a1a-aa416f044e4e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/868905af-ee6e-41a8-8040-84eee696b747?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.6.18')
+          - compare_versions(version, '<= 2.6.15')

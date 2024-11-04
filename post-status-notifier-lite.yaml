@@ -1,14 +1,15 @@
-id: post-status-notifier-lite
+id: post-status-notifier-lite-1f96a6ee00d3cc511b2ed232d5c404c1
 
 info:
   name: >
-    Post Status Notifier Lite <= 1.10.0 - Reflected Cross-Site Scripting
+    Post Status Notifier Lite and Premium <= 1.11.6 - Reflected Cross-Site Scripting via page
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2bef9fbc-ada5-475d-b630-923483b8fb7a?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/90220c8d-8efc-48a2-955c-3155598f5f19?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.10.0')
+          - compare_versions(version, '<= 1.11.6')

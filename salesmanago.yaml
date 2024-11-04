@@ -1,4 +1,4 @@
-id: salesmanago
+id: salesmanago-219e89723381044ef0e31e0c97b87e65
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/de7db1d6-b352-44c7-a6cc-b21cb65a0482?source=api-scan
   classification:
     cvss-metrics: 

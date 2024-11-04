@@ -1,21 +1,22 @@
 id: ntp
 info:
-  name: Digium Switchvox PBX ntpd
+  name: NTP
   author: nmap,cn-kali-team
   tags: detect,tech,ntp,service
   severity: info
   metadata:
-    device_type: PBX
+    info: unsynchronized
     rarity: 5
+    version: v4
 tcp:
-- name: citrix
+- name: ntprequest
   inputs:
-  - data: \x1e\0\x01\x30\x02\xfd\xa8\xe3\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+  - data: \xe3\x00\x04\xfa\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xc5\x4f\x23\x4b\x71\xb1\x52\xf3
   host:
   - '{{Hostname}}'
-  port: '1604'
+  port: 123,5353,9100
   extractors:
   - name: ntp
     type: regex
     regex:
-    - ^\x1e\xc0\x010\x02\0\xa8\xe3\0\0\0\0$
+    - (?i)^\xe4[\0\x10]..............................................$

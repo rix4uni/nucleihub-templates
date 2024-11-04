@@ -1,13 +1,13 @@
 id: zebra
 info:
-  name: Quagga routing software
+  name: GNU Zebra routing software
   author: nmap,cn-kali-team
   tags: detect,tech,zebra,service
   severity: info
   metadata:
-    product: quagga
+    product: zebra
     rarity: 0
-    vendor: quagga
+    vendor: gnu
     verified: true
 tcp:
 - name: 'null'
@@ -19,4 +19,4 @@ tcp:
   - name: zebra
     type: regex
     regex:
-    - ^Vty password is not set\.\r\n$
+    - '^\r\nUser Access Verification\r\n\r\n\xff\xfb\x01\xff\xfb\x03\xff\xfe\"\xff\xfd\x1fPassword: '

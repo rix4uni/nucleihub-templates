@@ -1,14 +1,15 @@
-id: srbtranslatin
+id: srbtranslatin-f7db05af59833415408fe225000f5a16
 
 info:
   name: >
-    SrbTransLatin – SrbTransLatin <= 1.46 - Cross-Site Scripting
+    WP-Optimize <= 3.2.12 & SrbTransLatin <= 2.4 - Stored/Reflected Cross-Site Scripting via Third Party Library
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9bf8485b-a363-44a3-93c7-a6fba034b48f?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fdb822e8-583e-4437-a735-b116aa8886e2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/srbtranslatin/"
     google-query: inurl:"/wp-content/plugins/srbtranslatin/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,srbtranslatin,high
+  tags: cve,wordpress,wp-plugin,srbtranslatin,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.46')
+          - compare_versions(version, '<= 2.4')

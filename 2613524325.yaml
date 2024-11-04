@@ -5,7 +5,7 @@ info:
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
-    hostname: $1
+    info: Access denied
     operating_system: Windows
     rarity: 0
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 Proxy\+ SMTP server at ([-\w_.]+)\. Authentication required\.\r\n
+    - ^421 proxyplus\.universe SMTP server\. Insecure access - terminating\.\r\n

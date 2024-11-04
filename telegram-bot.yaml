@@ -1,4 +1,4 @@
-id: telegram-bot
+id: telegram-bot-6475b8f759916edca5480f4b8dc57962
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/6eb099c3-f6f6-4d9c-a9c7-fa1b81ce082e?source=api-scan
   classification:
     cvss-metrics: 

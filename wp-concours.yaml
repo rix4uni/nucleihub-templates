@@ -1,4 +1,4 @@
-id: wp-concours
+id: wp-concours-b49a721da816cde150953847e07a5d57
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/76f32441-ce6a-472d-a437-c284cb91eb8c?source=api-scan
   classification:
     cvss-metrics: 

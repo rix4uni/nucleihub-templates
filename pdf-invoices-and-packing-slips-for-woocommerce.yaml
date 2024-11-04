@@ -1,4 +1,4 @@
-id: pdf-invoices-and-packing-slips-for-woocommerce
+id: pdf-invoices-and-packing-slips-for-woocommerce-9d530be5fa0db61096efe68f160be112
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/4dc6e879-4ccf-485e-b02d-2b291e67df40?source=api-scan
   classification:
     cvss-metrics: 

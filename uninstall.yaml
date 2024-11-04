@@ -1,4 +1,4 @@
-id: uninstall
+id: uninstall-178ddb80849ce5b45cdf76459af3607b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2f975d32-a008-46a9-bc00-420610464ecb?source=api-scan
   classification:
     cvss-metrics: 

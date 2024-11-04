@@ -1,4 +1,4 @@
-id: woo-viet
+id: woo-viet-72011eca56cb10d0a53bdbbba9899da6
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/4204209b-054f-4249-87d0-a0837ac172d6?source=api-scan
   classification:
     cvss-metrics: 

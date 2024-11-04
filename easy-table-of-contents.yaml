@@ -1,49 +1,59 @@
-id: wordpress-easy-table-of-contents
+id: easy-table-of-contents-3fa034556e5dfba7a2aae28c6a12f3a6
 
 info:
-  name: Easy Table of Contents Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Easy Table of Contents <= 2.0.45.2 - Missing Authorization via eztoc_reset_options_to_default
+  author: topscoder
+  severity: high
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/easy-table-of-contents/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ff937860-c4e0-4172-9f0f-d66578fa7203?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: easy-table-of-contents
-    wpscan: https://wpscan.com/plugin/easy-table-of-contents
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/easy-table-of-contents/"
+    google-query: inurl:"/wp-content/plugins/easy-table-of-contents/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,easy-table-of-contents,high
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/easy-table-of-contents/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/easy-table-of-contents.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "easy-table-of-contents"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022006651ff97ed5bec436f28920f1554eeb2230f8b943cdb06ac54b8098e0167f3e0221009425ff88eff63f4076235d5742b878d4087c4c09f60017d6c09e5a0538653c61:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 2.0.45.2')

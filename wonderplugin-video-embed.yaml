@@ -1,4 +1,4 @@
-id: wonderplugin-video-embed
+id: wonderplugin-video-embed-b09ba742fb0f8b652e055c617591ac74
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c232ddc0-35e8-42e0-8fff-831c74457615?source=api-scan
   classification:
     cvss-metrics: 

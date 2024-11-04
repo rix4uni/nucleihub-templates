@@ -1,14 +1,15 @@
-id: real-time-auto-find-and-replace
+id: real-time-auto-find-and-replace-64df014cf48d2ed8dfa33002ac2589c8
 
 info:
   name: >
-    Better Find and Replace <= 1.2.8 - Reflected Cross-Site Scripting
+    Better Find and Replace <= 1.6.1 - Unauthenticated PHP Object Injection
   author: topscoder
-  severity: medium
+  severity: critical
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/879bd819-5513-4253-b6e0-a34dbebae287?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4b5d1190-3c1e-4cb8-b64b-894ffb1b1f38?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/real-time-auto-find-and-replace/"
     google-query: inurl:"/wp-content/plugins/real-time-auto-find-and-replace/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,real-time-auto-find-and-replace,medium
+  tags: cve,wordpress,wp-plugin,real-time-auto-find-and-replace,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.8')
+          - compare_versions(version, '<= 1.6.1')

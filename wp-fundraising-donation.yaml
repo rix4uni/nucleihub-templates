@@ -1,14 +1,15 @@
-id: wp-fundraising-donation
+id: wp-fundraising-donation-ec4db4aefeb023dd749e6d376410f3d6
 
 info:
   name: >
-    WP Fundraising Donation and Crowdfunding Platform <= 1.4.2 - Unauthenticated SQL Injection
+    FundEngine – Donation and Crowdfunding Platform <= 1.7.0 - Authenticated (Subscriber+) Privilege Escalation
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cdb35927-b239-4243-a2d0-2e2c2cc61668?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2ec6cf42-291b-452d-ad14-80ae1cd5ec5c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.2')
+          - compare_versions(version, '<= 1.7.0')

@@ -1,4 +1,4 @@
-id: wp-bootstrap-gallery
+id: wp-bootstrap-gallery-776916dc6768c4dadc6f3791f47a8ec8
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/040005bc-bdc3-4085-8192-cd0a7e38fee0?source=api-scan
   classification:
     cvss-metrics: 

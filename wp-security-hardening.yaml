@@ -1,14 +1,15 @@
-id: wp-security-hardening
+id: wp-security-hardening-c40b6bbfc9f0ae99efa1551d33204904
 
 info:
   name: >
-    WP Hardening – Fix Your WordPress Security <= 1.2.1 - Reflected Cross-Site Scripting
+    WP Hardening – Fix Your WordPress Security <= 1.2.6 - Unauthenticated Security Feature Bypass to Username Enumeration
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/acd61330-eba8-4311-8b60-30c3124067f0?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7a52a278-1729-4027-8a00-e9804fa6698b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.1')
+          - compare_versions(version, '<= 1.2.6')

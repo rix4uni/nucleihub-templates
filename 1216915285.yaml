@@ -1,20 +1,21 @@
 id: chargen
 info:
-  name: Tektronix Phaser chargen
+  name: Windows Vista chargen
   author: nmap,cn-kali-team
   tags: detect,tech,chargen,service
   severity: info
   metadata:
-    device_type: printer
-    rarity: 0
+    operating_system: Windows Vista
+    rarity: 1
 tcp:
-- name: 'null'
+- name: dnsversion-bind-req
   inputs:
-  - data: ''
+  - data: \0\x06\x01\0\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03
   host:
   - '{{Hostname}}'
+  port: 53,1967,2967,26198
   extractors:
   - name: chargen
     type: regex
     regex:
-    - ^The quick brown fox jumps over the lazy dog\. 1234567890\r\n
+    - ^ !\"#\$%&'\(\)\*\+,-\./0123456789:;<=>\?@ABCDEFGHIJKLMNOPQRSTUVWXYZ\[\\\]\^_`abcdefg\r\n!\"#\$%&'\(\)\*\+,-\./0123456789

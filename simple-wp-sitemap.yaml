@@ -1,4 +1,4 @@
-id: simple-wp-sitemap
+id: simple-wp-sitemap-323de429115e56159deead1e045ebb50
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3e3dc509-73c3-4869-b520-6f5c1d691184?source=api-scan
   classification:
     cvss-metrics: 

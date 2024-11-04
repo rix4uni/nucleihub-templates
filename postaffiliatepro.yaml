@@ -1,4 +1,4 @@
-id: postaffiliatepro
+id: postaffiliatepro-9ed24bf70201233fb5c59de83955e65e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8db8adba-347f-4bdc-8215-23b6f8eb0327?source=api-scan
   classification:
     cvss-metrics: 

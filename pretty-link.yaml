@@ -1,49 +1,57 @@
-id: wordpress-pretty-link
+id: pretty-link-17fd0e83c56c2d35239cad96f5e19695
 
 info:
-  name: PrettyLinks – Affiliate Links, Link Branding, Link Tracking & Marketing Plugin Detection
-  author: ricardomaia
-  severity: info
+  name: "Pretty Links <= 2.1.9 - Unauthenticated Stored Cross-Site Scripting via track_link"
+  author: topscoder
+  severity: high
+  description: "The Pretty Links plugin for WordPress is vulnerable to Stored Cross-Site Scripting via various IP headers as well as the referer header in versions up to, and including, 2.1.9 due to insufficient input sanitization and output escaping in the track_link function. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
   reference:
-    - https://wordpress.org/plugins/pretty-link/
+    - https://blog.nintechnet.com/stored-xss-and-csv-injection-vulnerabilities-in-wordpress-shortlinks-by-pretty-links-plugin/
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2108490%40pretty-link%2Ftrunk&old=2078274%40pretty-link%2Ftrunk&sfp_email=&sfph_mail=
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 7.2
+    cve-id:
   metadata:
-    plugin_namespace: pretty-link
-    wpscan: https://wpscan.com/plugin/pretty-link
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/pretty-link/"
+    google-query: inurl:"/wp-content/plugins/pretty-link/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,pretty-link,high
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/pretty-link/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/pretty-link.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "pretty-link"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a0047304502205d278d538349aecbb36372e7c84183b75e7b7ad262a6390743050736ff17d3e00221008e1c8a21ed724406fefc4eaacac2385cf97c65399eb2a793521c118329d050b8:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '< 2.1.10')

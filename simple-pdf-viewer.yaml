@@ -1,4 +1,4 @@
-id: simple-pdf-viewer
+id: simple-pdf-viewer-fed2371e125e6966490a0eab7af6cf96
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/89bc17fd-14e8-4210-8cf7-a043d1ea9c22?source=api-scan
   classification:
     cvss-metrics: 

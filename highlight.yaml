@@ -1,4 +1,4 @@
-id: highlight
+id: highlight-79bcbbf20394d8fbe8eb520bbfb6a194
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/436cd742-c271-4eb7-96a3-cd6af046d26f?source=api-scan
   classification:
     cvss-metrics: 

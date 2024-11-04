@@ -1,18 +1,17 @@
-id: redirect-redirection
+id: redirect-redirection-be43b6008dde13ef20efe02e1e18bb0f
 
 info:
-  name: >
-    Redirect Redirection <= 1.1.3 - Missing Authorization in 'addRedirectRule' function
+  name: "Redirect Redirection <= 1.1.4 - Cross-Site Request Forgery to Plugin De-Installation"
   author: topscoder
   severity: medium
-  description: >
-    The Redirect Redirection plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the addRedirectRule function called via an AJAX action in versions up to, and including, 1.1.3. This makes it possible for authenticated attackers with subscriber-level access, and above, to add redirect rules to a vulnerable site.
+  description: "The Redirect Redirection plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.1.4. This is due to missing nonce validation on the uninstall() function called via an admin_post hook. This makes it possible for unauthenticated attackers to uninstall the plugin via a forged request, granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b57dd8e3-e3e1-4d6b-b9dd-b5a24c4886b4?source=api-prod
+    - https://plugins.trac.wordpress.org/browser/redirect-redirection/tags/1.1.5/redirect-redirection.php?rev=2879380#L297
+    - https://plugins.trac.wordpress.org/browser/redirect-redirection/tags/1.1.4/redirect-redirection.php?rev=2879380#L297
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
-    cvss-score: 4.3
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L
+    cvss-score: 5.4
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/redirect-redirection/"
     google-query: inurl:"/wp-content/plugins/redirect-redirection/"
@@ -55,4 +54,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.3')
+          - compare_versions(version, '<= 1.1.4')

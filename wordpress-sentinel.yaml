@@ -1,14 +1,15 @@
-id: wordpress-sentinel
+id: wordpress-sentinel-f11f419a58a2af375d7b240d6c2e0df5
 
 info:
   name: >
-    WordPress Sentinel <= 1.0.0 - Cross-Site Scripting
+    WordPress Sentinel <= 1.0.0 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a691a44d-0a33-4f13-9afe-255c557ee10f?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b2642726-a878-46d1-9c17-a4c8f4d5e315?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wordpress-sentinel/"
     google-query: inurl:"/wp-content/plugins/wordpress-sentinel/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wordpress-sentinel,high
+  tags: cve,wordpress,wp-plugin,wordpress-sentinel,medium
 
 http:
   - method: GET

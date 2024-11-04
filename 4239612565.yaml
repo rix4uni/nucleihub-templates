@@ -1,11 +1,13 @@
 id: ftp
 info:
-  name: ZyXEL $1 Unified Access Gateway ftpd
+  name: ABB Robotics ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: security-misc
+    device_type: specialized
+    info: VxWorks $1 rev $2  **A ROBOT**
+    operating_system: VxWorks
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +19,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 FTP Server \((UAG\d+)\) \[[a-f:\d.]+\]\r\n
+    - ^220 ABB Robotics FTP server \(VxWorks ([\d.]+) rev ([\d.]+)\) ready\.\r\n

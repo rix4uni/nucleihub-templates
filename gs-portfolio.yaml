@@ -1,4 +1,4 @@
-id: gs-portfolio
+id: gs-portfolio-c6dd23417f29f94c8461a2c8767650a6
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f531489b-a87d-41e7-a988-8b29840047ec?source=api-scan
   classification:
     cvss-metrics: 

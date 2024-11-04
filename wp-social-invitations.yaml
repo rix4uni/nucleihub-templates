@@ -1,4 +1,4 @@
-id: wp-social-invitations
+id: wp-social-invitations-58d8b1c5ab367dfaeb5aefe0ab59f1d0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/57a68d4a-4857-4631-8863-6ff847490ef5?source=api-scan
   classification:
     cvss-metrics: 

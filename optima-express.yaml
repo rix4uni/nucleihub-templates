@@ -1,4 +1,4 @@
-id: optima-express
+id: optima-express-ffff46b32f4dcd1d99d421202dc5e67a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/059e262b-ee63-4f8b-82ab-c12bcf70f879?source=api-scan
   classification:
     cvss-metrics: 

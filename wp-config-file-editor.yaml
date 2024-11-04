@@ -1,4 +1,4 @@
-id: wp-config-file-editor
+id: wp-config-file-editor-84106243219572b793cbbcfa1ea1a8b6
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f2ce4a14-5c56-4ca0-9deb-80cd609b71e6?source=api-scan
   classification:
     cvss-metrics: 

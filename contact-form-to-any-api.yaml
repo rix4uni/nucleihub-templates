@@ -1,14 +1,15 @@
-id: contact-form-to-any-api
+id: contact-form-to-any-api-7f2464fa8a66776a00093c1a9ee3c329
 
 info:
   name: >
-    Contact Form to Any API <= 1.1.2 - Authenticated (Administrator+) SQL Injection via 'form_id'
+    Contact Form to Any API <= 1.2.2 - Unauthenticated Stored Cross-Site Scripting via Contact Form
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8fc6c23c-1c5c-4fd8-aeea-8eb431e33b39?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/39487908-5cc5-42ac-8af4-65626694b1e4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/contact-form-to-any-api/"
     google-query: inurl:"/wp-content/plugins/contact-form-to-any-api/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,contact-form-to-any-api,low
+  tags: cve,wordpress,wp-plugin,contact-form-to-any-api,high
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.2')
+          - compare_versions(version, '<= 1.2.2')

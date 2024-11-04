@@ -1,23 +1,23 @@
 id: smtp
 info:
-  name: qmail smtpd
+  name: Postfix smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    operating_system: Unix
-    product: qmail
-    rarity: 0
-    vendor: djb
+    product: postfix
+    rarity: 8
+    vendor: postfix
     verified: true
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^451 Temporary local problem - please try later\r\n
+    - '^220 ESMTP Postfix\r\n501 Syntax: EHLO hostname\r\n'

@@ -1,4 +1,4 @@
-id: wp-githuber-md
+id: wp-githuber-md-3d4ca604f74dfc99007278807d75f075
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a6fda35d-8b82-4a7a-8db6-21dc38a841f4?source=api-scan
   classification:
     cvss-metrics: 

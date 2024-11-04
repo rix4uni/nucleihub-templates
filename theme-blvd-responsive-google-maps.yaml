@@ -1,4 +1,4 @@
-id: theme-blvd-responsive-google-maps
+id: theme-blvd-responsive-google-maps-ee0d1bf2af0a8d7c66b9d8d587e48fcf
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/d97761cb-8645-474d-9f9a-15ecdd426db4?source=api-scan
   classification:
     cvss-metrics: 

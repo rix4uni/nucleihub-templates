@@ -1,4 +1,4 @@
-id: facebook-like-send-button
+id: facebook-like-send-button-418f9543903ba4658c6878bd23356dcd
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/9d8e0ad2-3cfb-443f-9958-9639d0745dd7?source=api-scan
   classification:
     cvss-metrics: 

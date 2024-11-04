@@ -1,25 +1,25 @@
 id: ldap
 info:
-  name: Red Hat directory server LDAP
+  name: VMware vCenter or PSC LDAP
   author: nmap,cn-kali-team
   tags: detect,tech,ldap,service
   severity: info
   metadata:
-    info: Minimum SSF not met
-    operating_system: Linux
-    product: ns-slapd
+    hostname: $2
+    product: server
     rarity: 6
-    vendor: redhat
+    vendor: vmware
     verified: true
+    version: PSCv $1
 tcp:
-- name: ldapbind-req
+- name: ldapsearch-req
   inputs:
-  - data: \x30\x0c\x02\x01\x01\x60\x07\x02\x01\x02\x04\0\x80\0
+  - data: \x30\x84\x00\x00\x00\x2d\x02\x01\x07\x63\x84\x00\x00\x00\x24\x04\x00\x0a\x01\x00\x0a\x01\x00\x02\x01\x00\x02\x01\x64\x01\x01\x00\x87\x0b\x6f\x62\x6a\x65\x63\x74\x43\x6c\x61\x73\x73\x30\x84\x00\x00\x00\x00
   host:
   - '{{Hostname}}'
-  port: 256,257,389,390,1702,3268,3892,4035
+  port: 256,257,389,390,1702,3268,3892,11711
   extractors:
   - name: ldap
     type: regex
     regex:
-    - ^0 \x02\x01\x01a\x1b\n\x015\x04\0\x04\x14Minimum SSF not met\.
+    - (?i)^0\x82\x05.\x02\x01.*vmwPlatformServicesControllerVersion1\x07\x04\x05([\d.]+)0.\x04.*\nserverName1.\x04.cn=([^,.]+)

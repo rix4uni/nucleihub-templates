@@ -1,49 +1,59 @@
-id: wordpress-instagram-feed
+id: instagram-feed-13db67ba27cfb954556541c1249e833d
 
 info:
-  name: Smash Balloon Social Photo Feed – Easy Social Feeds Plugin Detection
-  author: ricardomaia
-  severity: info
+  name: "Smash Balloon Social Photo Feed <= 1.4.6.2 - Cross-Site Request Forgery to Stored Cross-Site Scripting"
+  author: topscoder
+  severity: medium
+  description: "The Smash Balloon Social Photo Feed plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Cross-Site Request Forgery in the settings page in versions up to, and including, 1.4.6.2 due to insufficient input sanitization and output escaping and missing nonce validation. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
   reference:
-    - https://wordpress.org/plugins/instagram-feed/
+    - https://sumofpwn.nl/advisory/2016/persistent_cross_site_scripting_in_instagram_feed_plugin_via_csrf.html
+    - https://seclists.org/fulldisclosure/2016/Nov/115
+    - https://plugins.trac.wordpress.org/changeset/1464504/instagram-feed
+    - https://wpscan.com/vulnerability/d9a57a3a-251b-46cc-8f42-0c64657aaaa3
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 6.4
+    cve-id:
   metadata:
-    plugin_namespace: instagram-feed
-    wpscan: https://wpscan.com/plugin/instagram-feed
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/instagram-feed/"
+    google-query: inurl:"/wp-content/plugins/instagram-feed/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,instagram-feed,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/instagram-feed/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/instagram-feed.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "instagram-feed"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a0048304602210094da5c0973982a8d396ca59c33a4935d6d1187656c819657aadcb0560507fb21022100d81d38d98f0c2c34484786730a6355f2fd3f1ff1824f9f3c2d1f2813cdac6c5a:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 1.4.6.2')

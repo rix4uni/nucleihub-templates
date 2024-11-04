@@ -1,4 +1,4 @@
-id: wp-category-meta
+id: wp-category-meta-85fd8e312567752176c8417bc8327dff
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/bf2ddc42-9910-40e5-9546-89f229b852da?source=api-scan
   classification:
     cvss-metrics: 

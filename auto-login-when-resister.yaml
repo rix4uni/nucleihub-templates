@@ -1,4 +1,4 @@
-id: auto-login-when-resister
+id: auto-login-when-resister-2f930912217edb47a1b0335c7c11b347
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1fa45fa7-b1da-42f0-945b-2a6b0db5ba91?source=api-scan
   classification:
     cvss-metrics: 

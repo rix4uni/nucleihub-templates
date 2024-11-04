@@ -1,4 +1,4 @@
-id: woocommerce-chained-products
+id: woocommerce-chained-products-713f841c764ba91d6961041a6c6404bc
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/6b839c7d-76fb-465e-9f27-1882cf0099fa?source=api-scan
   classification:
     cvss-metrics: 

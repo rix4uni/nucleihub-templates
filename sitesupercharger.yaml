@@ -1,13 +1,14 @@
-id: sitesupercharger
+id: sitesupercharger-a1987f8c2b26ab506f96799d87fb9b28
 
 info:
   name: >
     SiteSuperCharger <= 5.1.10 - Unauthenticated SQL Injection
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ddc91762-b1b0-4d88-bf2d-04a35aab62b1?source=api-scan
   classification:
     cvss-metrics: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/sitesupercharger/"
     google-query: inurl:"/wp-content/plugins/sitesupercharger/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,sitesupercharger,low
+  tags: cve,wordpress,wp-plugin,sitesupercharger,critical
 
 http:
   - method: GET

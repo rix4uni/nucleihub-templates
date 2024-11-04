@@ -1,4 +1,4 @@
-id: user-activation-email
+id: user-activation-email-ef34f532212a7d43bfea3a5becd5b640
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1a7687fe-6246-4bd3-9d4f-e7fa6398f265?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,20 +1,23 @@
 id: http
 info:
-  name: SonicWALL firewall http config
+  name: Embedded HTTP Server
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: firewall
-    rarity: 0
+    fallback:
+    - get-request
+    rarity: 5
+    version: $1
 tcp:
-- name: 'null'
+- name: rtsprequest
   inputs:
-  - data: ''
+  - data: OPTIONS / RTSP/1.0\r\n\r\n
   host:
   - '{{Hostname}}'
+  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.0 \d\d\d .*\r\nServer: SonicWALL\r\n'
+    - '^RTSP/1\.0 501 Not Implemented\r\nServer: Embedded HTTP Server ([\d.]+)\r\n'

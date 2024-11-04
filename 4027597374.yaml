@@ -1,13 +1,15 @@
 id: pop3
 info:
-  name: hMailServer pop3d
+  name: qmail-pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
+    operating_system: Unix
+    product: qmail
     rarity: 0
-    version: $1
+    vendor: djb
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK \(POP3\) hMailServer ([-\w.]+)\r\n
+    - ^\+OK <\d{1,5}\.10\d{8}@[-.\w]+>\r\n$

@@ -1,49 +1,59 @@
-id: wordpress-astra-sites
+id: astra-sites-48e5682020304f2735c9955ad0c0a7f0
 
 info:
-  name: Starter Templates — Elementor, WordPress & Beaver Builder Templates Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Starter Templates — Elementor, WordPress & Beaver Builder Templates <= 4.1.6 - Authenticated (Contributor+) Server-Side Request Forgery
+  author: topscoder
+  severity: low
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/astra-sites/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cf5075f9-9658-4a09-bd38-34a72f6560f4?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: astra-sites
-    wpscan: https://wpscan.com/plugin/astra-sites
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/astra-sites/"
+    google-query: inurl:"/wp-content/plugins/astra-sites/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,astra-sites,low
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/astra-sites/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/astra-sites.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "astra-sites"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a00483046022100e3daf6a6a7f1a5a13557bf42a79bf7e847e339f7fef08dd183d94ac2e1bbba26022100fd597eeb8d0103ed6bbd40e8071b7eecc9f083a1bb8cb2d068bd392c71359162:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 4.1.6')

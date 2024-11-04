@@ -1,18 +1,16 @@
-id: bck-tu-dong-xac-nhan-thanh-toan-chuyen-khoan-ngan-hang
+id: bck-tu-dong-xac-nhan-thanh-toan-chuyen-khoan-ngan-hang-e096a02da67b657ea447690b97d6e8d6
 
 info:
-  name: >
-    Thanh Toán Quét Mã QR Code Tự Động – MoMo, ViettelPay, VNPay và 40 ngân hàng Việt Nam <= 2.0.0 - Cross-Site Scripting
+  name: "Thanh Toán Quét Mã QR Code Tự Động – MoMo, ViettelPay, VNPay và 40 ngân hàng Việt Nam <= 2.0.0 - Cross-Site Scripting"
   author: topscoder
   severity: high
-  description: >
-    The Thanh Toán Quét Mã QR Code Tự Động – MoMo, ViettelPay, VNPay và 40 ngân hàng Việt Nam plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to an including 2.0.0. This is due to missing input sanitization and escaping on several parameters that make it possible for attackers to inject arbitrary web scripts in web pages that execute when users access those pages.
+  description: "The Thanh Toán Quét Mã QR Code Tự Động – MoMo, ViettelPay, VNPay và 40 ngân hàng Việt Nam plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to an including 2.0.0. This is due to missing input sanitization and escaping on several parameters that make it possible for attackers to inject arbitrary web scripts in web pages that execute when users access those pages."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/28bdad82-f09a-461f-b826-3f458f121fea?source=api-prod
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2720935%40bck-tu-dong-xac-nhan-thanh-toan-chuyen-khoan-ngan-hang&new=2720935%40bck-tu-dong-xac-nhan-thanh-toan-chuyen-khoan-ngan-hang&sfp_email=&sfph_mail=
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 7.2
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/bck-tu-dong-xac-nhan-thanh-toan-chuyen-khoan-ngan-hang/"
     google-query: inurl:"/wp-content/plugins/bck-tu-dong-xac-nhan-thanh-toan-chuyen-khoan-ngan-hang/"

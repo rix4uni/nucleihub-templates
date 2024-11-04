@@ -1,4 +1,4 @@
-id: xqueue-maileon
+id: xqueue-maileon-be234f0448120239ae116f2cb99e0278
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a67972d7-abfd-4ce3-9e47-30736ab32af5?source=api-scan
   classification:
     cvss-metrics: 

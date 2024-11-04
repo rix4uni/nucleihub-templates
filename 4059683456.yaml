@@ -1,15 +1,15 @@
 id: sieve
 info:
-  name: DBMail timsieved
+  name: Cyrus timsieved
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
-    product: dbmail
+    info: included w/cyrus imap
+    product: cyrus_imap_server
     rarity: 0
-    vendor: paul_j_stevens
+    vendor: cmu
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"DBMail timsieved ([\w._-]+)\"\r\n
+    - '^NO Fatal error: Error initializing actions\r\n$'

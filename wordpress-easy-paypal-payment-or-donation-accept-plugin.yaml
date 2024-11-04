@@ -1,4 +1,4 @@
-id: wordpress-easy-paypal-payment-or-donation-accept-plugin
+id: wordpress-easy-paypal-payment-or-donation-accept-plugin-b796028375739d748153c2156a819aaf
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c1871009-8bf1-47a6-9fef-9ab2798b057c?source=api-scan
   classification:
     cvss-metrics: 

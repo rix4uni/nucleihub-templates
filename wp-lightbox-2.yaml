@@ -1,4 +1,4 @@
-id: wp-lightbox-2
+id: wp-lightbox-2-77e6013abc8939366eda9dc7f95c8a05
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/5ef104ae-b67c-4669-adeb-e5397561c0ae?source=api-scan
   classification:
     cvss-metrics: 

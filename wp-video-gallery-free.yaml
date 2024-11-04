@@ -1,4 +1,4 @@
-id: wp-video-gallery-free
+id: wp-video-gallery-free-8c3ede2676726c5ec18f70bafb4e7867
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/53889ac8-a101-4aae-a1d2-f25cbf6f58e2?source=api-scan
   classification:
     cvss-metrics: 

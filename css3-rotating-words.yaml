@@ -1,4 +1,4 @@
-id: css3-rotating-words
+id: css3-rotating-words-098c8be288876d7ed3132db6d67e1e7e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/15b7008f-07fc-4f8a-b214-8ac0c4cf6d99?source=api-scan
   classification:
     cvss-metrics: 

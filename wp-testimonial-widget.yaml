@@ -1,15 +1,15 @@
-id: wp-testimonial-widget
+id: wp-testimonial-widget-82d487f0b8fd6103c1335305b84fab11
 
 info:
   name: >
-    WP Testimonial Widget <= 3.0 - Missing Authorization
+    WP Testimonial Widget <= 3.1 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/67eef869-a57f-40b5-b289-9353bf5b680a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b11ccbbd-c909-4160-af36-8f0b50fb1285?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-testimonial-widget/"
     google-query: inurl:"/wp-content/plugins/wp-testimonial-widget/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-testimonial-widget,high
+  tags: cve,wordpress,wp-plugin,wp-testimonial-widget,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.0')
+          - compare_versions(version, '<= 3.1')

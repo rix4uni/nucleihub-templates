@@ -1,10 +1,11 @@
 id: telnet
 info:
-  name: HP ProLiant ML110 Integrated Lights-Out telnetd
+  name: IBM 2218 Link Level Converter telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
+    device_type: specialized
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x03\xff\xfb\x01\r\n\*\*\* IPCOM \*\*\*\r\nlogin: '
+    - ^Connected\r\nUse log command to LOGON\r\n$

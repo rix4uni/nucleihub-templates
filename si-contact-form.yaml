@@ -1,4 +1,4 @@
-id: si-contact-form
+id: si-contact-form-3be55cbe9791ab2a792cad5e09e7fadc
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/5e21524e-2470-49e1-983a-a62a0ae478f6?source=api-scan
   classification:
     cvss-metrics: 

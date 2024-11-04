@@ -1,20 +1,25 @@
 id: http
 info:
-  name: Trend Micro OfficeScan Antivirus http config
+  name: nginx
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    operating_system: Windows
-    rarity: 0
+    fallback:
+    - get-request
+    product: nginx
+    rarity: 5
+    vendor: igor_sysoev
+    verified: true
 tcp:
-- name: 'null'
+- name: rtsprequest
   inputs:
-  - data: ''
+  - data: OPTIONS / RTSP/1.0\r\n\r\n
   host:
   - '{{Hostname}}'
+  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.0 400 Bad Request\r\nServer: OfficeScan Client\r\nContent-Type: text/plain\r\nAccept-Ranges: bytes\r\nContent-Length: 4\r\n\r\nFail'
+    - ^<head><title>400 Bad Request</title></head>\r\n<h1>400 Bad Request</h1>\r\n\r\n

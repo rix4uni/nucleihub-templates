@@ -1,4 +1,4 @@
-id: rockhoist-badges
+id: rockhoist-badges-56fe8d31030f5649c5eb38e86694f5ff
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/0a46420e-8ca5-43ac-8475-786e24185f55?source=api-scan
   classification:
     cvss-metrics: 

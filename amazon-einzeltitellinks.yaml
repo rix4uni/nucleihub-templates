@@ -1,4 +1,4 @@
-id: amazon-einzeltitellinks
+id: amazon-einzeltitellinks-6c575ce7bdb8499dce4ce35ed88e8474
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1b2ac807-c6e1-43de-8385-240ccae87e81?source=api-scan
   classification:
     cvss-metrics: 

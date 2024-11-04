@@ -1,18 +1,18 @@
-id: alphabetic-pagination
+id: alphabetic-pagination-cc21ec041af33517c665a1266ea76d63
 
 info:
-  name: >
-    Alphabetic Pagination <= 3.0.7 - Missing Authorization to Unauthenticated Arbitrary Options Update
+  name: "Alphabetic Pagination <= 3.0.7 - Missing Authorization to Unauthenticated Arbitrary Options Update"
   author: topscoder
   severity: critical
-  description: >
-    The Alphabetic Pagination plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the api_update_settings function in versions up to, and including, 3.0.7. This makes it possible for unauthenticated attackers update settings not limited to those of the plugin.
+  description: "The Alphabetic Pagination plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the api_update_settings function in versions up to, and including, 3.0.7. This makes it possible for unauthenticated attackers update settings not limited to those of the plugin."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dbda16f5-65c2-47cf-8b06-6aa231b8fd11?source=api-prod
+    - https://plugins.trac.wordpress.org/browser/alphabetic-pagination/trunk/io/functions-inner.php?rev=2449877#L669
+    - https://wpscan.com/vulnerability/3d72b705-f1ab-4e20-aa2d-426b3151eeea
+    - https://patchstack.com/database/vulnerability/alphabetic-pagination-/wordpress-alphabetic-pagination-plugin-3-0-7-unauthenticated-arbitrary-option-update-vulnerability
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
     cvss-score: 9.1
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/alphabetic-pagination/"
     google-query: inurl:"/wp-content/plugins/alphabetic-pagination/"

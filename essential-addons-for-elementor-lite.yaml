@@ -1,49 +1,56 @@
-id: wordpress-essential-addons-for-elementor-lite
+id: essential-addons-for-elementor-lite-2b7bfc50138c1316bd8c16c73f461874
 
 info:
-  name: Essential Addons for Elementor – Best Elementor Addon, Templates, Widgets, Kits & WooCommerce Builders Detection
-  author: ricardomaia
-  severity: info
+  name: "Essential Addons for Elementor <= 4.6.4 - Authenticated (Contributor+) Privilege Escalation"
+  author: topscoder
+  severity: high
+  description: "The Essential Addons for Elementor  plugin for WordPress is vulnerable to privilege escalation in versions up to and including 4.6.4 due to a lack of restrictions on who can add a registration form and a custom registration role to an Elementor created page. This makes it possible for attackers with access to the Elementor page builder to create a new registration form that defaults to the user role being set to administrator and subsequently register as an administrative user."
   reference:
-    - https://wordpress.org/plugins/essential-addons-for-elementor-lite/
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2526471%40essential-addons-for-elementor-lite&new=2526471%40essential-addons-for-elementor-lite&sfp_email=&sfph_mail=
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id:
   metadata:
-    plugin_namespace: essential-addons-for-elementor-lite
-    wpscan: https://wpscan.com/plugin/essential-addons-for-elementor-lite
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/essential-addons-for-elementor-lite/"
+    google-query: inurl:"/wp-content/plugins/essential-addons-for-elementor-lite/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,essential-addons-for-elementor-lite,high
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/essential-addons-for-elementor-lite/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/essential-addons-for-elementor-lite.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "essential-addons-for-elementor-lite"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a004630440220463d87e2bc79e024f1982c904570cc085134a0ee5b38f2b21195dedd5c092613022026d8a627f590c04a4f90b123a0a61ad55ae984fc7b7c20d946711399a04925b4:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 4.6.4')

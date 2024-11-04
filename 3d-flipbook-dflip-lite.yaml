@@ -1,14 +1,15 @@
-id: 3d-flipbook-dflip-lite
+id: 3d-flipbook-dflip-lite-27221742251ebe9cf2652c90ba550053
 
 info:
   name: >
-    PDF Flipbook, 3D Flipbook – DearFlip <= 2.2.26 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    PDF Flipbook, 3D Flipbook, PDF embed, PDF viewer – DearFlip <= 2.3.32 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/92e37b28-1a17-417a-b40f-cb4bbe6ec759?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6d4c2944-28e8-4866-b4da-91cf12d9d115?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/3d-flipbook-dflip-lite/"
     google-query: inurl:"/wp-content/plugins/3d-flipbook-dflip-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,3d-flipbook-dflip-lite,low
+  tags: cve,wordpress,wp-plugin,3d-flipbook-dflip-lite,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2.26')
+          - compare_versions(version, '<= 2.3.32')

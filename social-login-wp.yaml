@@ -1,4 +1,4 @@
-id: social-login-wp
+id: social-login-wp-e99eebfad9065c45993831ff9d87e487
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1518653c-e64d-4aba-b7f8-a928b8f2cbe3?source=api-scan
   classification:
     cvss-metrics: 

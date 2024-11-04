@@ -1,23 +1,23 @@
-id: wp-rss-multi-importer
+id: wp-rss-multi-importer-fdeb6f948343c25c4baa3ee12bb462fa
 
 info:
-  name: >
-    WP RSS Multi Importer < 3.14 - Cross-Site Request Forgery
+  name: "WP RSS Multi Importer < 3.14 - Cross-Site Request Forgery"
   author: topscoder
-  severity: medium
-  description: >
-    
+  severity: high
+  description: "The WP RSS Multi Importer plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to 3.14. This is due to missing nonce validation on several GET request functions. This makes it possible for unauthenticated attackers to perform restricted actions, such as arbitrary post deletion, via forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fe0fedc1-d4bd-40bf-8d8f-953db4bf2120?source=api-scan
+    - https://vexatioustendencies.com/wordpress-plugin-vulnerability-dump-part-1/
+    - https://patchstack.com/database/vulnerability/wp-rss-multi-importer/wordpress-wp-rss-multi-importer-plugin-3-15-multiple-vulnerabilities
+    - https://wpscan.com/vulnerability/338a1219-928a-4a9c-90cd-cacb73ea154f
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/wp-rss-multi-importer/"
     google-query: inurl:"/wp-content/plugins/wp-rss-multi-importer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-rss-multi-importer,medium
+  tags: cve,wordpress,wp-plugin,wp-rss-multi-importer,high
 
 http:
   - method: GET

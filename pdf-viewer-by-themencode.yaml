@@ -1,4 +1,4 @@
-id: pdf-viewer-by-themencode
+id: pdf-viewer-by-themencode-954aaf94c51c9c1b16c8b6e75e318dbe
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8bcae8d6-6dbd-4174-85ff-0b52d8e45c84?source=api-scan
   classification:
     cvss-metrics: 

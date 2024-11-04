@@ -1,14 +1,15 @@
-id: rate-my-post
+id: rate-my-post-73ce5c77ef7860b9c033778a60bb989d
 
 info:
   name: >
-    Rate my Post - WP Rating System <= 3.4.1 - Insecure Direct Object Reference
+    Rate my Post – WP Rating System <= 3.3.8 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6669d04c-9f97-43a5-a312-1cb3d67d21fa?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/60c96210-d6ed-4838-b2fc-419e6a68f689?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.4.2')
+          - compare_versions(version, '<= 3.3.8')

@@ -1,14 +1,15 @@
-id: wicked-folders
+id: wicked-folders-e4e9dde96b41cd674c84e225c651422f
 
 info:
   name: >
-    Wicked Folders <= 2.18.16 - Missing Authorization on ajax_save_sort_order
+    Wicked Folders <= 2.18.16 - Cross-Site Request Forgery via ajax_save_folder_order
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9b26604b-2423-4130-b0ef-8f63a392c760?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4104f69f-b185-498a-aabf-2126ffb94ab3?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wicked-folders/"
     google-query: inurl:"/wp-content/plugins/wicked-folders/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wicked-folders,high
+  tags: cve,wordpress,wp-plugin,wicked-folders,medium
 
 http:
   - method: GET

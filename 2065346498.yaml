@@ -1,13 +1,14 @@
 id: imap
 info:
-  name: Dovecot imapd
+  name: Zimbra imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    product: dovecot
+    hostname: $1
+    product: zimbra_collaboration_suite
     rarity: 0
-    vendor: dovecot
+    vendor: zimbra
     verified: true
 tcp:
 - name: 'null'
@@ -19,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK [Dd]ovecot ready\.\r\n
+    - ^\* OK ([-\w_.]+) Zimbra IMAP4rev1 server ready\r\n

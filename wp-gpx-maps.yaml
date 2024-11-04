@@ -1,14 +1,15 @@
-id: wp-gpx-maps
+id: wp-gpx-maps-0d9a1e75d08df9ec9ff58db5271ee389
 
 info:
   name: >
-    WP GPX Maps < 1.1.23 - Arbitrary File Upload
+    WP GPX Maps <= 1.7.08 - Authenticated (Contributor+) Stored Cross-Site Scripting via sgpx Shortcode
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c7a6eff3-a592-4476-aff4-c133bb4e5870?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/872c8328-9089-4bc0-af17-f755524da610?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-gpx-maps/"
     google-query: inurl:"/wp-content/plugins/wp-gpx-maps/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-gpx-maps,critical
+  tags: cve,wordpress,wp-plugin,wp-gpx-maps,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.1.23')
+          - compare_versions(version, '<= 1.7.08')

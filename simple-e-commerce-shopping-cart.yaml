@@ -1,4 +1,4 @@
-id: simple-e-commerce-shopping-cart
+id: simple-e-commerce-shopping-cart-7e2981ed79fe5531ebd17112083654eb
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/bdc946ed-8891-4f97-af7e-2034760eef5b?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: wp-easy-contact
+id: wp-easy-contact-3b570fced573df49cceb54d741239f7e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/80ba732f-b3cc-4b42-8c56-9fa1cee08c7b?source=api-scan
   classification:
     cvss-metrics: 

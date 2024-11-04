@@ -1,18 +1,18 @@
-id: quick-pagepost-redirect-plugin
+id: quick-pagepost-redirect-plugin-ea3568ab4f120e2015befb9dcb3e2397
 
 info:
-  name: >
-    Quick Page/Post Redirect Plugin < 5.0.5 - Cross-Site Request Forgery to Stored Cross-Site Scripting
+  name: "Quick Page/Post Redirect Plugin <= 5.1.9 - Redirect Security Bypass"
   author: topscoder
   severity: medium
-  description: >
-    
+  description: "The Quick Page/Post Redirect Plugin for WordPress is vulnerable to authorization bypass due to missing capability checks on the qppr_save_quick_redirect_ajax and qppr_delete_quick_redirect functions in versions up to, and including, 5.1.9. This makes it possible for low-privileged attackers to interact with the plugin settings and to create a redirect link that would forward all traffic to an external malicious website."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0b6e9430-bb78-47c3-9958-4f40028c3d93?source=api-scan
+    - https://blog.nintechnet.com/authenticated-settings-change-vulnerability-in-wordpress-quick-page-post-redirect-plugin-unpatched/
+    - https://wpscan.com/vulnerability/10198
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-quick-page-post-redirect-security-bypass-5-1-9/
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+    cvss-score: 4.3
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/quick-pagepost-redirect-plugin/"
     google-query: inurl:"/wp-content/plugins/quick-pagepost-redirect-plugin/"
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 5.0.5')
+          - compare_versions(version, '<= 5.1.9')

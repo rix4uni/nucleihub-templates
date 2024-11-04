@@ -1,14 +1,15 @@
-id: seraphinite-post-docx-source
+id: seraphinite-post-docx-source-32f560fde028dec9785718a73b7d6fd3
 
 info:
   name: >
-    Seraphinite Post .DOCX Source <= 2.16.6 - Cross-Site Request Forgery
+    Seraphinite Post .DOCX Source <= 2.16.9 - Authenticated (Subscriber+) Server-Side Request Forgery
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dfcc2ab2-504d-4151-9435-618e317ce95c?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4aebd497-d3c7-4a85-bde4-07e8eade836f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/seraphinite-post-docx-source/"
     google-query: inurl:"/wp-content/plugins/seraphinite-post-docx-source/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,seraphinite-post-docx-source,medium
+  tags: cve,wordpress,wp-plugin,seraphinite-post-docx-source,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.16.6')
+          - compare_versions(version, '<= 2.16.9')

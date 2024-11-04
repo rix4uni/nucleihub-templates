@@ -1,4 +1,4 @@
-id: yellow-yard
+id: yellow-yard-3aa2de77d95e38ae48f7f6f8446609c1
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8472cdbe-89a8-49ac-ab7e-065ebf717692?source=api-scan
   classification:
     cvss-metrics: 

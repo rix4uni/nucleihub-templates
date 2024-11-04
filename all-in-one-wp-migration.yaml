@@ -1,49 +1,59 @@
-id: wordpress-all-in-one-wp-migration
+id: all-in-one-wp-migration-c457cee6c5aa713c1063985f51820d05
 
 info:
-  name: All-in-One WP Migration and Backup Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    All-in-One WP Migration <= 7.14 - Unauthenticated Backup Download
+  author: topscoder
+  severity: medium
+  description: >
+    The All-in-One WP Migration plugin for WordPress is vulnerable to unauthenticated arbitrary back-up downloads due to insufficient filename randomization that made it possible for unauthenticated attackers to brute force back-up filenames in unique situations in versions up to, and including, 7.14. This would make it possible for unauthenticated attackers to discover information from files contained in the back-ups that could be used to aid further attacks or lead to simply sensitive information disclosure.
   reference:
-    - https://wordpress.org/plugins/all-in-one-wp-migration/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f373a1d5-3d7e-4a0a-af03-28ca6ce6a170?source=api-prod
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
+    cvss-score: 5.9
+    cve-id: 
   metadata:
-    plugin_namespace: all-in-one-wp-migration
-    wpscan: https://wpscan.com/plugin/all-in-one-wp-migration
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/all-in-one-wp-migration/"
+    google-query: inurl:"/wp-content/plugins/all-in-one-wp-migration/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,all-in-one-wp-migration,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/all-in-one-wp-migration/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/all-in-one-wp-migration.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "all-in-one-wp-migration"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022009d450764c8e438f5a7656795a352dc0d4d67fe27573615b0acc1f3592b98bf202210095cfc359a82d5b92d919a2727126788564899e88b33be3da376c9b8115dbde29:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '< 7.15')

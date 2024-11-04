@@ -1,18 +1,19 @@
-id: knews
+id: knews-91ec9538e5d1e34f834680408cce79af
 
 info:
-  name: >
-    Knews Multilingual Newsletters < 1.2.6 - Cross-Site Request Forgery
+  name: "Knews Multilingual Newsletters <= 1.1.0 - Reflected Cross-Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    The Knews Multilingual Newsletters plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.2.5. This is due to missing or incorrect nonce validation on the several functions. This makes it possible for unauthenticated attackers to inject SQL queries via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
+  description: "The Knews Multilingual Newsletters plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘ff’ parameter in versions up to, and including,1.1.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f52d5c44-4a5e-4a45-b622-66aa4e509fd8?source=api-prod
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-knews-multilingual-newsletters-ff-parameter-cross-site-scripting-1-1-0/
+    - https://vulners.com/zdt/1337DAY-ID-18931
+    - https://web.archive.org/web/20210213220043/https%3A//www.securityfocus.com/bid/54330/info
+    - https://plugins.trac.wordpress.org/changeset/569277
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    cvss-score: 8.8
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/knews/"
     google-query: inurl:"/wp-content/plugins/knews/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.2.6')
+          - compare_versions(version, '<= 1.1.0')

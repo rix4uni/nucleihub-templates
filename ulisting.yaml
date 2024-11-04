@@ -1,18 +1,18 @@
-id: ulisting
+id: ulisting-5dbc01f7b0f6c2a386a3664610ac3e23
 
 info:
-  name: >
-    uListing <= 1.6.6 - Missing Authorization
+  name: "Listing, Classified Ads & Business Directory – uListing <= 2.0.8 - Cross-Site Request Forgery"
   author: topscoder
   severity: high
-  description: >
-    
+  description: "The Listing, Classified Ads & Business Directory – uListing plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.0.8. This is due to missing or incorrect nonce validation on several functions. This makes it possible for unauthenticated attackers to edit blog settings and post meta via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c5ada976-03b8-4219-9ae3-9060fb7b9de5?source=api-scan
+    - https://ithemes.com/blog/wordpress-vulnerability-report-september-2021-part-3/
+    - https://wpscan.com/vulnerability/fe0fee35-4f20-4ab9-a18c-85a76a61ef09
+    - https://plugins.trac.wordpress.org/changeset/2590718
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/ulisting/"
     google-query: inurl:"/wp-content/plugins/ulisting/"
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.7')
+          - compare_versions(version, '<= 2.0.8')

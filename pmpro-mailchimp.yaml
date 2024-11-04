@@ -1,4 +1,4 @@
-id: pmpro-mailchimp
+id: pmpro-mailchimp-600922105e67d46673ae767cdb2376bd
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/415c2648-4fcb-4226-baac-9e75db79bfdf?source=api-scan
   classification:
     cvss-metrics: 

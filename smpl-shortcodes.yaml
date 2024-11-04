@@ -1,4 +1,4 @@
-id: smpl-shortcodes
+id: smpl-shortcodes-e69c558e1ddd33a09346202334d228be
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a153d6b2-e3fd-42db-90ba-d899a07d60c1?source=api-scan
   classification:
     cvss-metrics: 

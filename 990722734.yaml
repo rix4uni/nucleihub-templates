@@ -1,11 +1,12 @@
 id: printer
 info:
-  name: LPRng
+  name: BSD lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    info: Not authorized
+    hostname: $1
+    info: Unauthorized host
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - ^\x01no connect permissions\n$
+    - '^lpd \[@([-.\w]+)\]: Print-services are not available to your host \([-.\w]+\)\.\n'

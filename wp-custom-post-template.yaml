@@ -1,4 +1,4 @@
-id: wp-custom-post-template
+id: wp-custom-post-template-efd63a67ee15374063f7c4b69a61e144
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b796b514-b6ca-4a22-9340-df02fec97075?source=api-scan
   classification:
     cvss-metrics: 

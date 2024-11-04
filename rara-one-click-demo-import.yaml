@@ -1,4 +1,4 @@
-id: rara-one-click-demo-import
+id: rara-one-click-demo-import-b02e4e03f7e79713938778aba15c227f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/be4061ef-849a-4797-aeee-07da2afc1a40?source=api-scan
   classification:
     cvss-metrics: 

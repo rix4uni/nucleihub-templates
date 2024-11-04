@@ -1,4 +1,4 @@
-id: post-expirator
+id: post-expirator-d40cf996cedb1e14a2c2ac31f6fc8cbd
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f0576cde-8d32-4f06-899a-a9ebff99d8ba?source=api-scan
   classification:
     cvss-metrics: 

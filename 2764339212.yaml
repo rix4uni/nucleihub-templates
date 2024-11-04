@@ -1,22 +1,24 @@
 id: smtp
 info:
-  name: Process Software smtpd
+  name: CommuniGate Pro SMTP
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: OpenVMS
-    rarity: 0
-    version: $2
+    product: communigate_pro
+    rarity: 8
+    vendor: stalker
+    verified: true
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-.\w]+) Process Software ESMTP service V([-.\w]+) ready
+    - ^220 \S*[^\w.-]\S* ESMTP CommuniGate Pro [^\d].*\r\n250-([\w.-]+) domain name should be qualified \r\n

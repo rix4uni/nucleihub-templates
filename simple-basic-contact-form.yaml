@@ -1,14 +1,15 @@
-id: simple-basic-contact-form
+id: simple-basic-contact-form-4c6a710b1814cde7e69d69c139947279
 
 info:
   name: >
-    Simple Basic Contact Form <= 20240502 - Unauthenticated Arbitrary Shortcode Execution
+    Simple Basic Contact Form <= 20220207 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ded1944f-662d-4d25-8277-4b1dc63b2144?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/38e831b4-8284-4fad-ac24-a2f08053c53e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 20240502')
+          - compare_versions(version, '<= 20220207')

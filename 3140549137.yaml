@@ -1,6 +1,6 @@
 id: telnet
 info:
-  name: Philips DECT D&T Agent telnetd
+  name: Genetec Directory
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\r\n>>> DECT@NET D&T Agent <<<\r\n\r\nlocal> '
+    - ^\xff\xfe\x01Genetec Directory \(STUDENT03\)\r\n\r\n\r\n\r\n\r\n======================\r\n  Main menu\r\n======================\r\n1\) Status\r\n\?\) Help\r\nx\) Exit\r\n

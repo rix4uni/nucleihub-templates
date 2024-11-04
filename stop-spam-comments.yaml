@@ -1,4 +1,4 @@
-id: stop-spam-comments
+id: stop-spam-comments-d43a9ac92ca6a34b6a1845625a03c53a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/62061cf9-cdbf-4cb2-9890-36bdcbc65c21?source=api-scan
   classification:
     cvss-metrics: 

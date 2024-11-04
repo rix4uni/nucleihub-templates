@@ -1,17 +1,18 @@
-id: wp-private-content-plus
+id: wp-private-content-plus-8399cc72e60881a40af3ce56aada6cb9
 
 info:
   name: >
-    WP Private Content Plus <= 1.31 - Unauthenticated Settings Change
+    WP Private Content Plus <= 3.4 - Authenticated(Admin+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
-    
+    The WP Private Content Plus plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the Admin Settings in versions up to, and including, 3.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fb26ea7b-fc54-4cef-aaa8-3a41e8d0c371?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bcb82472-e18c-447e-acad-796724188515?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 4.4
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-private-content-plus/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.31')
+          - compare_versions(version, '<= 3.4')

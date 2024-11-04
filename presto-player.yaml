@@ -1,4 +1,4 @@
-id: presto-player
+id: presto-player-0d642af2f5f31ad3054a8d749c0007db
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c4250395-3709-47cd-86d4-e6a1fec10298?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,11 +1,14 @@
 id: nntp
 info:
-  name: Freenet Message System nntpd
+  name: Microsoft NNTP Service
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
+    info: Spanish
+    operating_system: Windows
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +19,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 Service available, posting allowed\r\n
+    - '^200 Servicio NNTP ([\w._-]+) Version: [\w._-]+ Posting Allowed \r\n'

@@ -1,19 +1,22 @@
 id: smtp
 info:
-  name: PostCast SMTP server
+  name: Access Remote PC smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    rarity: 0
+    hostname: $1
+    operating_system: Windows
+    rarity: 8
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 PostCast SMTP server.*\r\n$
+    - ^220 ([\w_.-]+) ESMTP\r\n250-[-\w_.]+\r\n250-AUTH LOGIN CRAM-MD5 PLAIN\r\n250-AUTH=LOGIN CRAM-MD5 PLAIN\r\n250-PIPELINING\r\n250 8BITMIME\r\n

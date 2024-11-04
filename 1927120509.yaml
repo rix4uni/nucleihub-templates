@@ -1,10 +1,11 @@
 id: smtp
 info:
-  name: Panasonic DP-3500 smtpd
+  name: OpenSMTPD
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220  DP-3510\r\n
+    - ^220 ([\w_.-]+) ESMTP OpenSMTPD\r\n

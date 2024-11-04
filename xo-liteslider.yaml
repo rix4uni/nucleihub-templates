@@ -1,4 +1,4 @@
-id: xo-liteslider
+id: xo-liteslider-3aee988b0b8800deade53cc221541734
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/85150a6f-b2f3-4b95-9c9b-78f50cb8468f?source=api-scan
   classification:
     cvss-metrics: 

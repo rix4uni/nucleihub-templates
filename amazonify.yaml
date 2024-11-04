@@ -1,14 +1,15 @@
-id: amazonify
+id: amazonify-25dbcff14dc0d3ea282d70c266e4ef4a
 
 info:
   name: >
-    Amazonify <= 0.8.1 - Authenticated (Admin+) Stored Cross-Site Scripting
+    Amazonify <= 0.8.1 - Cross-Site Request Forgery to Amazon Tracking ID Update
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/41adfb58-d79f-40a3-8a7e-f3f08f64659f?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/33f3c466-bdeb-402f-bf34-bc703f35e1e2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/amazonify/"
     google-query: inurl:"/wp-content/plugins/amazonify/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,amazonify,low
+  tags: cve,wordpress,wp-plugin,amazonify,medium
 
 http:
   - method: GET

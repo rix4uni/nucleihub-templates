@@ -1,14 +1,15 @@
-id: the-moneytizer
+id: the-moneytizer-62aeb68c8206c3c1db67ef6ca58b9e51
 
 info:
   name: >
-    The Moneytizer <= 9.5.20 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    The Moneytizer <= 9.5.20 - Cross-Site Request Forgery via multiple AJAX actions
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d4d9e8fa-abc5-477a-bf99-dc910f0aabda?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/14351561-bd31-4aaa-931a-e72917458013?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/the-moneytizer/"
     google-query: inurl:"/wp-content/plugins/the-moneytizer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,the-moneytizer,low
+  tags: cve,wordpress,wp-plugin,the-moneytizer,medium
 
 http:
   - method: GET

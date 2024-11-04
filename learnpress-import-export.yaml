@@ -1,14 +1,15 @@
-id: learnpress-import-export
+id: learnpress-import-export-781d3d408316c6ba4e0dfff74447c45e
 
 info:
   name: >
-    LearnPress Export Import <= 4.0.3 - Reflected Cross-Site Scripting
+    LearnPress - Export/Import Courses <= 4.0.2 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/096ea1e3-a6c3-43c7-94f0-6c5617dd3fa9?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1322e229-5e0b-4c3d-ae96-e211a2831842?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.0.3')
+          - compare_versions(version, '< 4.0.3')

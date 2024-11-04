@@ -1,14 +1,15 @@
-id: easy-pricing-tables
+id: easy-pricing-tables-bd2e4615eea76170282fc879ed47c2f9
 
 info:
   name: >
-    Easy Pricing Tables <= 3.2.0 - Reflected Cross-Site Scripting
+    Pricing Tables WordPress Plugin – Easy Pricing Tables <= 3.2.5 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/55b08fca-65af-4535-aa94-a9bfaef67b4c?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a5e4f40b-c028-4283-ba02-c77408136713?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.2.0')
+          - compare_versions(version, '<= 3.2.5')

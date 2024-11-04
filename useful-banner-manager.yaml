@@ -1,4 +1,4 @@
-id: useful-banner-manager
+id: useful-banner-manager-8bbc7ba0291c5d40d20c000f7f4b40ae
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/57a39691-8fff-4e62-a03a-70b428025d77?source=api-scan
   classification:
     cvss-metrics: 

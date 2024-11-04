@@ -1,4 +1,4 @@
-id: show-all-comments-in-one-page
+id: show-all-comments-in-one-page-51b39e68c122494be640485960d25b9f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ba385261-bee2-491d-9b31-a1624d740dff?source=api-scan
   classification:
     cvss-metrics: 

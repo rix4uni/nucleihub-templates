@@ -1,4 +1,4 @@
-id: pondol-carousel
+id: pondol-carousel-1907be6d54c8f5ebde4af5dc6c71562d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8e59e02f-d701-476a-9fd8-2098004089ec?source=api-scan
   classification:
     cvss-metrics: 

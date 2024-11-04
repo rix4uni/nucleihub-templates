@@ -1,4 +1,4 @@
-id: vimeo-video-autoplay-automute
+id: vimeo-video-autoplay-automute-4597e54f57d530b7b5f2bb68b6fe0ba3
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a3494e39-b4dc-46c1-9e8f-2c04fa3df940?source=api-scan
   classification:
     cvss-metrics: 

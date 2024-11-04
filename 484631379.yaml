@@ -1,13 +1,13 @@
 id: rtsp
 info:
-  name: RealMedia Server
+  name: RogueAmoeba Airfoil rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
     fallback:
     - get-request
-    operating_system: $2
+    operating_system: Mac OS X
     rarity: 5
     version: $1
 tcp:
@@ -21,4 +21,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nCSeq: 0\r\nDate: .*\r\nServer: RealMedia Server Version ([\d.]+) \(([^)]+)\)\r\nPublic: OPTIONS, DESCRIBE, ANNOUNCE, SETUP, GET_PARAMETER, SET_PARAMETER, TEARDOWN\r\nRealChallenge1: '
+    - '^RTSP/1\.0 200 OK\r\nServer: AirTunes/([\w._-]+)\r\nAudio-Jack-Status: connected; type=analog\r\nPublic: ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER, POST, GET\r\n\r\n'

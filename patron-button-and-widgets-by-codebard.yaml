@@ -1,4 +1,4 @@
-id: patron-button-and-widgets-by-codebard
+id: patron-button-and-widgets-by-codebard-4f00661e8ca7c5c2c1cbd3756ab8bfb4
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/46f5d1fa-dba7-4882-be29-39dc281d7278?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: ctt-expresso-para-woocommerce
+id: ctt-expresso-para-woocommerce-f35a01bcf427c70c611ddacf618492f8
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/598768fe-e36d-48d8-925e-64513f36b18b?source=api-scan
   classification:
     cvss-metrics: 

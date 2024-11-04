@@ -1,18 +1,18 @@
-id: alpine-photo-tile-for-instagram
+id: alpine-photo-tile-for-instagram-3bd315144d041ec9e1636b4a162d31b2
 
 info:
-  name: >
-    Alpine PhotoTile for Instagram < 1.2.7.6 - Reflected Cross-Site Scripting
+  name: "Alpine Photo Tile for Instagram < 1.2.10 - Reflected Cross-Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    
+  description: "The Alpine Photo Tile for Instagram plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘client_id’ parameter in versions up to, and including, 1.2.9 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/95265186-ff13-464b-adb9-3cf1753487d5?source=api-scan
+    - https://sumofpwn.nl/advisory/2016/cross_site_scripting_in_alpine_phototile_for_instagram_wordpress_plugin.html
+    - https://seclists.org/fulldisclosure/2017/Feb/94
+    - https://github.com/thealpinepress/alpine-photo-tile-for-instagram/commit/2496e60eaa059131cba9c4b24a801eb6687abad6
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/alpine-photo-tile-for-instagram/"
     google-query: inurl:"/wp-content/plugins/alpine-photo-tile-for-instagram/"
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.2.7.6')
+          - compare_versions(version, '< 1.2.10')

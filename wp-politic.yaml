@@ -1,4 +1,4 @@
-id: wp-politic
+id: wp-politic-bd0df64fd16240fcd5ec0aa9c1ba7804
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/5b127a47-d22f-47b5-92a8-440a5892a181?source=api-scan
   classification:
     cvss-metrics: 

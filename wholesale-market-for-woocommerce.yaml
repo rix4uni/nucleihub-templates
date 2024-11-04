@@ -1,14 +1,15 @@
-id: wholesale-market-for-woocommerce
+id: wholesale-market-for-woocommerce-9a141659d4f1aa9b9237f3fa9d32ad4a
 
 info:
   name: >
-    Wholesale Market for WooCommerce <= 1.0.6 - Unauthenticated Arbitrary File Download
+    Wholesale Market for WooCommerce < 2.0.0 - Authenticated (Administrator+) Arbitrary Log File Download
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/959f7e13-ef58-4b02-a721-7bb10373aaaa?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8436ba39-b236-4d76-95b6-d2bed3728d8a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.6')
+          - compare_versions(version, '< 2.0.0')

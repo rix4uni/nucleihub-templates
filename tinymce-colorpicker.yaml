@@ -1,4 +1,4 @@
-id: tinymce-colorpicker
+id: tinymce-colorpicker-9186ede445e39ac4390dcdb7e4cde4bc
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8f9cd0f2-1ca6-47cb-94bd-5c286cf9c67f?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,14 +1,15 @@
-id: wp-editor
+id: wp-editor-c489d3bdfb8499c978184619111131c4
 
 info:
   name: >
-    WP Editor <= 1.2.6.3 - Authenticated (Admin+) SQL injection
+    WP Editor <= 1.2.7 - Sensitive Information Exposure via log file
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8d5a1aec-11f5-4516-9454-651ca4cd6600?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/66b1f539-9192-43f5-a77d-9763024e6b74?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.6.3')
+          - compare_versions(version, '<= 1.2.7')

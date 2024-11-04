@@ -1,4 +1,4 @@
-id: wha-crossword
+id: wha-crossword-a5f8f0a8f0dae85e22d883f24d35c50a
 
 info:
   name: >
@@ -8,7 +8,8 @@ info:
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/16b0947e-3bb2-4150-b810-2e77de3e75da?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cb7316cd-8a15-4b81-b57c-b8e4adcaf1ef?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

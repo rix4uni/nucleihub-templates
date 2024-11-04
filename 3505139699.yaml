@@ -1,12 +1,16 @@
 id: ftp
 info:
-  name: Balance Servers TCAdmin game hosting ftpd
+  name: vsftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Windows
+    info: Misconfigured
+    operating_system: Unix
+    product: vsftpd
     rarity: 0
+    vendor: vsftpd
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 TCAdmin FTP Server\r\n
+    - '^500 OOPS: .*\r\n$'

@@ -1,12 +1,16 @@
 id: smtp
 info:
-  name: Barracuda Networks Spam Firewall smtpd
+  name: IceWarp smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
+    product: mail_server
     rarity: 0
+    vendor: icewarp
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-.\w\d]+) ESMTP \([a-fA-F0-9]{32}\)\r\n
+    - ^220 ([-\w_.]+) ESMTP IceWarp ([\d.]+)[; ]

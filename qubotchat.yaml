@@ -1,23 +1,22 @@
-id: qubotchat
+id: qubotchat-40bf29212443698556986effddd391fa
 
 info:
-  name: >
-    QuBotChat <= 1.1.5 - Authenticated(Administrator+) Stored Cross-Site Scripting
+  name: "QuBotChat <= 1.1.5 - Unauthenticated Stored Cross-Site Scripting"
   author: topscoder
-  severity: low
-  description: >
-    
+  severity: high
+  description: "The QuBotChat plugin for WordPress is vulnerable to Stored Cross-Site Scripting in versions up to, and including, 1.1.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/45f98c00-0bfd-405e-a6b3-581841d803de?source=api-scan
+    - https://plugins.svn.wordpress.org/qubotchat/tags/1.1.6/readme.txt
+    - https://plugins.trac.wordpress.org/changeset/2909986/qubotchat
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 7.2
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/qubotchat/"
     google-query: inurl:"/wp-content/plugins/qubotchat/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,qubotchat,low
+  tags: cve,wordpress,wp-plugin,qubotchat,high
 
 http:
   - method: GET

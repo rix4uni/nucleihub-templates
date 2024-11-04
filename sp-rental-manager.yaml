@@ -1,13 +1,14 @@
-id: sp-rental-manager
+id: sp-rental-manager-469d3b5bfeba7c903240bfb46df59c70
 
 info:
   name: >
     SP Rental Manager <= 1.5.3 - Unauthenticated SQL Injection
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e2876c97-a612-4c0f-b094-3233768703b1?source=api-scan
   classification:
     cvss-metrics: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/sp-rental-manager/"
     google-query: inurl:"/wp-content/plugins/sp-rental-manager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,sp-rental-manager,low
+  tags: cve,wordpress,wp-plugin,sp-rental-manager,critical
 
 http:
   - method: GET

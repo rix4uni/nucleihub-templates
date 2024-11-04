@@ -1,14 +1,15 @@
-id: whydowork-adsense
+id: whydowork-adsense-69d55eae8f309aa7a9f612361d6f6c82
 
 info:
   name: >
-    WhyDoWork AdSense <= 1.2 - Cross-Site Request Forgery
+    WhyDoWork AdSense <= 1.2 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cd36530d-4165-4b98-a75f-b9c88178a5b6?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0719db26-da88-4bda-ae83-f489591c8128?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

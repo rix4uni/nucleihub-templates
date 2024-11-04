@@ -1,4 +1,4 @@
-id: void-elementor-post-grid-addon-for-elementor-page-builder
+id: void-elementor-post-grid-addon-for-elementor-page-builder-43fee4bb1d77f38f878eb4cd1435bfb1
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1b847857-5dc9-4793-b9d6-759f27377fe3?source=api-scan
   classification:
     cvss-metrics: 

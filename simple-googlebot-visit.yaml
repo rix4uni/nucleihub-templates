@@ -1,4 +1,4 @@
-id: simple-googlebot-visit
+id: simple-googlebot-visit-b3c25dd5f553950035d34462efc51620
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b1e7bb04-28b4-407c-910b-e37a7e26682e?source=api-scan
   classification:
     cvss-metrics: 

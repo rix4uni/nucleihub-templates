@@ -1,23 +1,23 @@
-id: better-font-awesome
+id: better-font-awesome-85060fdd660e3c511f37e818a4dcd4bb
 
 info:
-  name: >
-    Better Font Awesome <= 2.0.1 - Missing Authorization to Plugin Options Update
+  name: "Better Font Awesome <= 2.0.1 - Missing Authorization to Plugin Options Update"
   author: topscoder
-  severity: high
-  description: >
-    
+  severity: medium
+  description: "The Better Font Awesome plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the save_options function in versions up to, and including, 2.0.1. This makes it possible for authenticated attackers, with subscriber-level permissions and above, to update the plugin's settings."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1575e301-a26f-485e-bdf3-526b71c8306a?source=api-scan
+    - https://plugins.trac.wordpress.org/browser/better-font-awesome/tags/2.0.1/better-font-awesome.php#L489
+    - https://wpscan.com/vulnerability/1a4e952e-dd6d-4cf9-aec7-525180e7ba8e
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2782645%40better-font-awesome%2Ftrunk&old=2492883%40better-font-awesome%2Ftrunk&sfp_email=&sfph_mail=
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N
+    cvss-score: 6.5
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/better-font-awesome/"
     google-query: inurl:"/wp-content/plugins/better-font-awesome/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,better-font-awesome,high
+  tags: cve,wordpress,wp-plugin,better-font-awesome,medium
 
 http:
   - method: GET
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '2.0.1')
+          - compare_versions(version, '>= 2.0.1', '<= 2.0.1')

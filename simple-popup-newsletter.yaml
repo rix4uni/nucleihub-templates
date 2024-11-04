@@ -1,4 +1,4 @@
-id: simple-popup-newsletter
+id: simple-popup-newsletter-37ea2e2e3aea7fd080f5e6d86e61b12c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/15655362-b77f-4ba4-a823-17085de55f85?source=api-scan
   classification:
     cvss-metrics: 

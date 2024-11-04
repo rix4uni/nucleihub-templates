@@ -1,4 +1,4 @@
-id: widgetshortcode
+id: widgetshortcode-27111530307be58c4eef6c5b45451b75
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/00234d96-cece-4217-89c9-1a329887e8da?source=api-scan
   classification:
     cvss-metrics: 

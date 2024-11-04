@@ -6,6 +6,8 @@ info:
   severity: info
   metadata:
     hostname: $1
+    info: on Red Hat
+    operating_system: Linux
     product: cyrus_imap_server
     rarity: 0
     vendor: cmu
@@ -21,4 +23,4 @@ tcp:
   - name: lmtp
     type: regex
     regex:
-    - ^220 ([\w._-]+) Cyrus LMTP v([\w._+-]+) server ready\r\n
+    - ^220 ([-\w_.]+) LMTP Cyrus v([\d.]+)-Red Hat [\d.-]+ ready\r\n

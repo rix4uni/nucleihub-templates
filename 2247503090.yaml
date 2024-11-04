@@ -1,12 +1,14 @@
 id: http
 info:
-  name: TP-LINK Smart Plug fake_httpd
+  name: InterSect Alliance SNARE http config
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: power-misc
+    product: system_intrusion_analysis_and_reporting_environment
     rarity: 0
+    vendor: intersectalliance
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 200 OK\r\nServer: TP-LINK SmartPlug\r\nConnection: close\r\nContent-Length: 5\r\nContent-Type: text/html\r\n\r\n\.\.\.\r\n'
+    - ^<HTML><BODY><CENTER>Authentication failed</CENTER></BODY></HTML>\r\n$

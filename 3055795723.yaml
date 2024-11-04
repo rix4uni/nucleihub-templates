@@ -1,14 +1,14 @@
 id: imap
 info:
-  name: Lotus Domino imapd
+  name: Dovecot imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    info: SSL-only; imaps on port $1
-    product: lotus_domino
+    info: SASL enabled
+    product: dovecot
     rarity: 0
-    vendor: ibm
+    vendor: dovecot
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* BYE Domino IMAP4 Server Configured for SSL Connections only\. Please reconnect using SSL Port (\d+), .*\r\n
+    - ^\* OK \[CAPABILITY IMAP4rev1 SASL-IR SORT THREAD=REFERENCES MULTIAPPEND UNSELECT LITERAL\+ IDLE CHILDREN NAMESPACE LOGIN-REFERRALS

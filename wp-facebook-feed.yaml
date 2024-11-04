@@ -1,14 +1,15 @@
-id: wp-facebook-feed
+id: wp-facebook-feed-1856ec4f89024a87d082c919983d6852
 
 info:
   name: >
-    The Awesome Feed – Custom Feed <= 2.2.5 - Reflected Cross-Site Scripting
+    The Awesome Feed – Custom Feed <= 2.2.5 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/01878991-37c7-4c7b-b68c-d59ca66521e7?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6892fefa-3866-4dbf-8604-dd4bc1e7d481?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-facebook-feed/"
     google-query: inurl:"/wp-content/plugins/wp-facebook-feed/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-facebook-feed,medium
+  tags: cve,wordpress,wp-plugin,wp-facebook-feed,low
 
 http:
   - method: GET

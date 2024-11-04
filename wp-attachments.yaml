@@ -1,14 +1,15 @@
-id: wp-attachments
+id: wp-attachments-e35695d6d965226d5a0666a801bbb277
 
 info:
   name: >
-    WP Attachments <= 5.0.6 - Cross-Site Request Forgery
+    WP Attachments <= 5.0.5 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f23b144e-4380-4099-89b5-816c8c2f710f?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b5c715f9-8655-448e-a8d2-71f24c9d48ba?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-attachments/"
     google-query: inurl:"/wp-content/plugins/wp-attachments/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-attachments,medium
+  tags: cve,wordpress,wp-plugin,wp-attachments,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.0.6')
+          - compare_versions(version, '<= 5.0.5')

@@ -1,4 +1,4 @@
-id: bp-social-connect
+id: bp-social-connect-120f025352b9196cf832e6854d24702e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/44c96df2-530a-4ebe-b722-c606a7b135f9?source=api-scan
   classification:
     cvss-metrics: 

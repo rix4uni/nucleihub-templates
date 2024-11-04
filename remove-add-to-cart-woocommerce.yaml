@@ -1,17 +1,18 @@
-id: remove-add-to-cart-woocommerce
+id: remove-add-to-cart-woocommerce-cb43a3033745f9235059b7d1b7a3d855
 
 info:
   name: >
-    Remove Add to Cart WooCommerce <= 1.4.4 - Cross-Site Request Forgery to Settings Modification
+    Freemius SDK <= 2.4.2 - Missing Authorization Checks
   author: topscoder
   severity: medium
   description: >
-    
+    The Freemius SDK, as used by hundreds of WordPress plugin and theme developers, was vulnerable to Cross-Site Request Forgery and Information disclosure due to missing capability checks and nonce protection on the _get_debug_log, _get_db_option, and the _set_db_option functions in versions up to, and including 2.4.2. Any WordPress plugin or theme running a version of Freemius less than 2.4.3 is vulnerable.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4938c1be-2356-4a9c-9795-108a2d5a6cc7?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/39fb0499-9ab4-4a2f-b0db-ece86bcf4d42?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L
+    cvss-score: 6.3
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/remove-add-to-cart-woocommerce/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.4')
+          - compare_versions(version, '< 1.4.3')

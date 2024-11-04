@@ -1,4 +1,4 @@
-id: woo-moneybird
+id: woo-moneybird-1d3e261b14ca82fc45a1c07fde6dac86
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/962c0440-04d7-4201-829c-dad9b8f796d5?source=api-scan
   classification:
     cvss-metrics: 

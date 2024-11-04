@@ -1,14 +1,15 @@
-id: woo-product-tables
+id: woo-product-tables-01f7169be90ab832a6294f40076a75e6
 
 info:
   name: >
-    Product Table by WBW <= 1.8.6 - Cross-Site Request Forgery via saveGroup
+    Product Table by WBW <= 2.0.1 - Unauthenticated Remote Code Execution
   author: topscoder
-  severity: medium
+  severity: critical
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/eff03dbc-1bb7-4a72-b57c-f1bde966c286?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ba84711f-bdbe-46d3-a9a3-cc2b1dcefd1a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/woo-product-tables/"
     google-query: inurl:"/wp-content/plugins/woo-product-tables/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woo-product-tables,medium
+  tags: cve,wordpress,wp-plugin,woo-product-tables,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8.6')
+          - compare_versions(version, '<= 2.0.1')

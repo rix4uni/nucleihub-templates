@@ -1,4 +1,4 @@
-id: vk-blocks-pro
+id: vk-blocks-pro-64fefb73c9ea684ec5a987dca906f984
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/e01f5bd8-de0f-48aa-8007-61a0ebd0ebf3?source=api-scan
   classification:
     cvss-metrics: 

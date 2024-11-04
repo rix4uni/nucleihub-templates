@@ -1,49 +1,59 @@
-id: wordpress-advanced-custom-fields
+id: advanced-custom-fields-13a04604b23e354797632eaff5ef432e
 
 info:
-  name: Secure Custom Fields Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Advanced Custom Fields <= 6.3.8 & Secure Custom Fields <= 6.3.6.2 - Authenticated (Admin+) Stored Cross-Site Scripting
+  author: topscoder
+  severity: low
+  description: >
+    The Advanced Custom Fields & Secure Custom Fields plugins for WordPress are vulnerable to Stored Cross-Site Scripting via ACF field labels in all versions up to, and including, 6.3.8 & 6.3.6.2 respectively due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level access, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled. Please follow the reference listed in this vulnerability record for instructions on how to update to the latest version of ACF that patches this issue and ensures accessibility to updates moving forward. Special note: only the minified files in Secure Custom Fields have been patched meaning the source build files are still vulnerable.
   reference:
-    - https://wordpress.org/plugins/advanced-custom-fields/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b3552de0-3e0b-4529-a757-a31c69a06122?source=api-prod
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 4.4
+    cve-id: 
   metadata:
-    plugin_namespace: advanced-custom-fields
-    wpscan: https://wpscan.com/plugin/advanced-custom-fields
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/advanced-custom-fields/"
+    google-query: inurl:"/wp-content/plugins/advanced-custom-fields/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,advanced-custom-fields,low
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/advanced-custom-fields/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/advanced-custom-fields.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "advanced-custom-fields"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022100dd619ec9c0d47cb83161a4d17b2726a00edc2b0a74369bdc220bcb962efd4bce022047e766e9359ee1f8a3a55bf71bd7a4fc8dff9e861a86399dbe5ef0ed71ad7878:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 6.3.6.2')

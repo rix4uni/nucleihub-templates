@@ -1,14 +1,15 @@
-id: contact-form-with-a-meeting-scheduler-by-vcita
+id: contact-form-with-a-meeting-scheduler-by-vcita-a905e62d671df4de0b3d1d784144a0b4
 
 info:
   name: >
-    Contact Form Builder by vcita <= 4.9.1 - Cross-Site Request Forgery to Stored Cross-Site Scripting
+    Contact Form and Calls To Action by vcita <= 2.6.4 - Cross-Site Request Forgery to Stored Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/61c39f5f-3b17-4e4d-824e-241159a73400?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2345c972-9fd4-4709-8bde-315ab54f60e2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.9.1')
+          - compare_versions(version, '<= 2.6.4')

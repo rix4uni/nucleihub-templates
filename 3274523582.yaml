@@ -5,12 +5,12 @@ info:
   tags: detect,tech,drawpile,service
   severity: info
   metadata:
-    info: 'protocol 14; flags: $1'
+    info: 'JSON protocol $3; flags: $1'
     product: drawpile
     rarity: 0
     vendor: calle_laakkonen
     verified: true
-    version: 0.9.9
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: drawpile
     type: regex
     regex:
-    - (?i)^..\0DRAWPILE 14 ([A-Z,]+)
+    - (?i)^..\0\0\{"flags":\[([^]]+)\],"message":"Drawpile server (\d[\w._-]+)","type":"login","version":(\d+)\}

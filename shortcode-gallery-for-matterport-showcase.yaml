@@ -1,4 +1,4 @@
-id: shortcode-gallery-for-matterport-showcase
+id: shortcode-gallery-for-matterport-showcase-c9c3686d080413cd166147668fad74a1
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/7b76ce38-d9ee-4998-ba3b-9f21158ce18a?source=api-scan
   classification:
     cvss-metrics: 

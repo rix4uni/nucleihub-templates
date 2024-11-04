@@ -1,4 +1,4 @@
-id: woo-pensopay
+id: woo-pensopay-09982b78f0903db47082c498edd9651a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/6845b506-3d38-47f6-9348-d7931e65707a?source=api-scan
   classification:
     cvss-metrics: 

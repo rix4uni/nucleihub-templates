@@ -1,49 +1,59 @@
-id: wordpress-kadence-blocks
+id: kadence-blocks-3e181d8efdd28018b87b183713487d12
 
 info:
-  name: Gutenberg Blocks with AI by Kadence WP – Page Builder Features Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Kadence Blocks <= 3.1.10 - Unauthenticated Arbitrary File Upload
+  author: topscoder
+  severity: critical
+  description: >
+    The Kadence Blocks for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the process_fields function in versions up to, and including, 3.1.10. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.
   reference:
-    - https://wordpress.org/plugins/kadence-blocks/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a4562535-ef69-4337-b03e-0b7c869cb042?source=api-prod
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id: 
   metadata:
-    plugin_namespace: kadence-blocks
-    wpscan: https://wpscan.com/plugin/kadence-blocks
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/kadence-blocks/"
+    google-query: inurl:"/wp-content/plugins/kadence-blocks/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,kadence-blocks,critical
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/kadence-blocks/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/kadence-blocks.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "kadence-blocks"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022041efd1040649438c608b138fc0229d4d2ed31d3f3dfb061855c35ff28213d628022100fc6a58e311789783742fbb6c6d5234041040ec6161b1cb0668b23d31d19ef2e6:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '< 3.1.11')

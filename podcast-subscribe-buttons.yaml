@@ -1,4 +1,4 @@
-id: podcast-subscribe-buttons
+id: podcast-subscribe-buttons-39f34eed4bf6019923d5723c5610b490
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/17dbfb82-e380-464a-bfaf-2d0f6bf07f25?source=api-scan
   classification:
     cvss-metrics: 

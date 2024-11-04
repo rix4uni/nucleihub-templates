@@ -1,6 +1,6 @@
 id: donkey
 info:
-  name: MLDonkey multi-network P2P server
+  name: MLDonkey multi-network P2P server information port
   author: nmap,cn-kali-team
   tags: detect,tech,donkey,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: donkey
     type: regex
     regex:
-    - ^[\x00-\x10]\0\0\0\0\0[^\0]\0\0\0
+    - ^ADDDOWNLOAD\(\d+\)\nhash\(\d+\)\nstate\([\w ]+\)\ntransmit\(\d+\)\nsize\(\d+\)\nfile\(\w+\)\nshared\(\d+\)\nthroughput\(\d+\)\nelapsed\(\d+\)\n;

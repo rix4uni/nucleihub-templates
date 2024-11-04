@@ -1,4 +1,4 @@
-id: sendpulse-web-push
+id: sendpulse-web-push-b2dc26ba8c51f8b62822c8062c63930f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/654727e0-6129-47c7-94f3-10567b1a42d4?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: tiny-carousel-horizontal-slider-plus
+id: tiny-carousel-horizontal-slider-plus-d3ecfeab5919cfaacddc034200e3cea1
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/167ae586-1f18-43ac-a7c1-e67a00ce8787?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,4 +1,4 @@
-id: original-texts-yandex-webmaster
+id: original-texts-yandex-webmaster-2e0593c9307af66de377149e0e6a4d6c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a9c500fc-0d85-41b1-a2b8-9c8ba372a6e3?source=api-scan
   classification:
     cvss-metrics: 

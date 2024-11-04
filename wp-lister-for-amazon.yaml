@@ -1,14 +1,15 @@
-id: wp-lister-for-amazon
+id: wp-lister-for-amazon-e44307385745aa645e15b4ce0e49fbc3
 
 info:
   name: >
-    WP-Lister Lite for Amazon <= 2.4.2 - Reflected Cross-Site Scripting
+    WP-Lister Lite for Amazon <= 2.6.11 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/08746755-9abe-4120-8ffb-90f2f9f1b7cf?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/36f37875-69fe-41cb-a68d-ad73d53d1a83?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-lister-for-amazon/"
     google-query: inurl:"/wp-content/plugins/wp-lister-for-amazon/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-lister-for-amazon,medium
+  tags: cve,wordpress,wp-plugin,wp-lister-for-amazon,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.2')
+          - compare_versions(version, '<= 2.6.11')

@@ -1,4 +1,4 @@
-id: wp-ds-blog-map
+id: wp-ds-blog-map-a3f0b815d9cd3e530ac465726571a97c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/89384b42-8c66-469d-a7d2-1c50c89cfe7e?source=api-scan
   classification:
     cvss-metrics: 

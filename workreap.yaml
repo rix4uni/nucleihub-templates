@@ -1,14 +1,15 @@
-id: workreap
+id: workreap-5f80fafad73be2700358a48cdda826c3
 
 info:
   name: >
-    Workreap <= 2.6.3 - Insecure Direct Object Reference
+    Workreap - Freelance Marketplace and Directory WordPress Theme < 2.2.2 - Arbitrary File Upload
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a9ee90c4-e9ab-426e-8b92-217de43bd2e4?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/59a05868-7457-4fb1-845e-bf7044d5cb81?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/themes/workreap/"
     google-query: inurl:"/wp-content/themes/workreap/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,workreap,low
+  tags: cve,wordpress,wp-theme,workreap,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.6.3')
+          - compare_versions(version, '< 2.2.2')

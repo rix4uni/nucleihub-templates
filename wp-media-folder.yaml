@@ -1,14 +1,15 @@
-id: wp-media-folder
+id: wp-media-folder-2008b939fb0755f206693e7f708c985e
 
 info:
   name: >
-    WP Media folder <= 5.7.2 - Authenticated (Subscriber+) Arbitrary File Upload
+    WP Media folder <= 5.7.2 - Missing Authorization to Authenticated(Subscriber+) Plugin settings change
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f5e4a172-38de-49d3-8a5d-62253cf6d67c?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d96a3d43-81dd-4c23-984b-a9ddf450164b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

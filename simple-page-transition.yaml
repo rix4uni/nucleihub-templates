@@ -1,4 +1,4 @@
-id: simple-page-transition
+id: simple-page-transition-834a77144041e73495108f94e8062a9e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3931b201-037d-4c4f-8e40-098c6c1251b9?source=api-scan
   classification:
     cvss-metrics: 

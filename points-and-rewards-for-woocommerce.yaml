@@ -1,4 +1,4 @@
-id: points-and-rewards-for-woocommerce
+id: points-and-rewards-for-woocommerce-59003981778a3475404f3f6bfc9978ae
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/36a43b08-872e-4760-a319-67e30fd004a2?source=api-scan
   classification:
     cvss-metrics: 

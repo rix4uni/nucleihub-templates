@@ -5,15 +5,16 @@ info:
   tags: detect,tech,lineage-ii,service
   severity: info
   metadata:
-    rarity: 0
+    rarity: 6
 tcp:
-- name: 'null'
+- name: terminal-server
   inputs:
-  - data: ''
+  - data: \x03\0\0\x0b\x06\xe0\0\0\0\0\0
   host:
   - '{{Hostname}}'
+  port: 515,1028,1068,1503,1720,1935,2040,3388,3389
   extractors:
   - name: lineage-ii
     type: regex
     regex:
-    - ^\x03\0\x7e$
+    - ^\x03\0.$

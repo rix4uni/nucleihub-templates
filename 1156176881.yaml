@@ -1,12 +1,15 @@
 id: lmtp
 info:
-  name: DSPAM lmtpd
+  name: DBMail lmtpd
   author: nmap,cn-kali-team
   tags: detect,tech,lmtp,service
   severity: info
   metadata:
+    hostname: $1
+    product: dbmail
     rarity: 0
-    version: $1
+    vendor: paul_j_stevens
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: lmtp
     type: regex
     regex:
-    - ^220 DSPAM LMTP ([-\w_.]+) Ready\r\n
+    - ^220 ([-\w_.]+) DBMail LMTP service ready to rock\r\n

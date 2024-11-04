@@ -1,4 +1,4 @@
-id: xml-sitemaps-for-videos
+id: xml-sitemaps-for-videos-345f6a94f1e7134d6fa6e6de3b3bc794
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/feb4f3dc-9abf-4ee3-834e-e5516652d810?source=api-scan
   classification:
     cvss-metrics: 

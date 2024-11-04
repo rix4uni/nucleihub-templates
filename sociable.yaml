@@ -1,4 +1,4 @@
-id: sociable
+id: sociable-f1db90477ba49f379d2711b9b2eb02ad
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/43f6a5c2-3de0-4990-89ad-64e5d866345a?source=api-scan
   classification:
     cvss-metrics: 

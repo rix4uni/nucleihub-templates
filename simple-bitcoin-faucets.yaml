@@ -1,4 +1,4 @@
-id: simple-bitcoin-faucets
+id: simple-bitcoin-faucets-4e7b45f8394454218564eb3f5dbe0f71
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ec5fc038-b855-4744-8797-ce2cedd88f6a?source=api-scan
   classification:
     cvss-metrics: 

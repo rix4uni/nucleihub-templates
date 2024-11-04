@@ -1,4 +1,4 @@
-id: accordions-wp
+id: accordions-wp-3e0503339619be2e76accf30f30e4723
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ff656409-2344-4190-a731-5a282e21375c?source=api-scan
   classification:
     cvss-metrics: 

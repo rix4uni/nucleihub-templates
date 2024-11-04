@@ -1,4 +1,4 @@
-id: thinkific-uploader
+id: thinkific-uploader-f8988e64fe918fd90cb13772394fd4a3
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/826f75dd-ff37-459a-8a28-c70e403b720a?source=api-scan
   classification:
     cvss-metrics: 

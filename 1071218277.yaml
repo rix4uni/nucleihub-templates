@@ -1,11 +1,11 @@
 id: backdoor
 info:
-  name: Subseven backdoor
+  name: Deep Throat keylogger
   author: nmap,cn-kali-team
   tags: detect,tech,backdoor,service
   severity: info
   metadata:
-    info: '**BACKDOOR**'
+    info: '**MALWARE**'
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: backdoor
     type: regex
     regex:
-    - ^\r\n\[RPL\]002\r\n$
+    - ^DT Key Logger -- Logging System Wide Key Presses\r\n

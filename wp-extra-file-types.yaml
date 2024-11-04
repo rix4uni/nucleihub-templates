@@ -1,4 +1,4 @@
-id: wp-extra-file-types
+id: wp-extra-file-types-7320c184a66ddf70479431bbce60fe13
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ae397949-12d2-4323-871e-4fd4f14f35c6?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,23 +1,23 @@
-id: simple-share-buttons-adder
+id: simple-share-buttons-adder-5625db2be051e69df2a794017546d212
 
 info:
-  name: >
-    Simple Share Buttons Adder <= 8.4.6 - Cross-Site Request Forgery
+  name: "Simple Share Buttons Adder <= 4.4 - Cross-Site Request Forgery"
   author: topscoder
-  severity: medium
-  description: >
-    
+  severity: high
+  description: "The Simple Share Buttons Adder  plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 4.4. This is due to missing or incorrect nonce validation. This makes it possible for unauthenticated attackers to execute arbitrary javascript in the context of the Homepage, Pages, Posts, Category/Archive pages and post Excerpt via forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e57bfae5-4cc0-4d97-9431-4c8ebb2f0882?source=api-scan
+    - https://advisories.dxw.com/advisories/csrf-and-stored-xss-in-simple-share-buttons-adder/
+    - https://packetstormsecurity.com/files/127238/
+    - https://wordpress.org/plugins/simple-share-buttons-adder/#developers
   classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
+    cvss-score: 8.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/simple-share-buttons-adder/"
     google-query: inurl:"/wp-content/plugins/simple-share-buttons-adder/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-share-buttons-adder,medium
+  tags: cve,wordpress,wp-plugin,simple-share-buttons-adder,high
 
 http:
   - method: GET
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 8.4.6')
+          - compare_versions(version, '< 4.5')

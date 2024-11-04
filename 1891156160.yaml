@@ -6,6 +6,7 @@ info:
   severity: info
   metadata:
     hostname: $1
+    info: no posting
     product: inn
     rarity: 0
     vendor: isc
@@ -21,4 +22,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) InterNetNews server INN ([\d.]+) ready\r\n
+    - ^201 ([-\w_.]+) InterNetNews (?:NNRP )?server INN ([\d.]+) .* ready \(no posting\)\.\r\n

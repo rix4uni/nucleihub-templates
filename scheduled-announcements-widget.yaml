@@ -1,4 +1,4 @@
-id: scheduled-announcements-widget
+id: scheduled-announcements-widget-a4e3f822295a3479d4d107f48351d52a
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/755ae574-9df3-44d1-a14b-16887f234510?source=api-scan
   classification:
     cvss-metrics: 

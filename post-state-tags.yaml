@@ -1,4 +1,4 @@
-id: post-state-tags
+id: post-state-tags-5381d68755a15a855c024e83bb2aa0cb
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2a938325-45f5-455b-b2b7-e19e6e22cd0c?source=api-scan
   classification:
     cvss-metrics: 

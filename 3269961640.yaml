@@ -1,13 +1,13 @@
 id: telnet
 info:
-  name: Scarlet One telnetd
+  name: Efficient Networks $1 SDSL router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: VoIP adapter
-    info: Firmware $1
+    device_type: router
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\xff\xfb\x03\r\nScarlet One\r\nFirmware version: ([-\w_.]+)\r\nScarlet\r\n\r\nPlease login:'
+    - '^\r\nEfficient 5851 SDSL \[CM\] Router \((5851-\d+)\) v([\d.]+) Ready\r\n\xff\xfb\x01\xff\xfb\x03\xff\xfd\x01\xff\xfe\x01Login: '

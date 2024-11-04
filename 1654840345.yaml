@@ -1,17 +1,14 @@
 id: afp
 info:
-  name: Netatalk
+  name: ExtremeZ-IP AFP
   author: nmap,cn-kali-team
   tags: detect,tech,afp,service
   severity: info
   metadata:
-    info: 'name: $1; protocol 3.2'
-    operating_system: Unix
-    product: netatalk
+    info: 'name: $1; afpserver: $5; $3-bit'
+    operating_system: Windows $2
     rarity: 6
-    vendor: netatalk
-    verified: true
-    version: '2'
+    version: $4
 tcp:
 - name: afp
   inputs:
@@ -23,4 +20,4 @@ tcp:
   - name: afp
     type: regex
     regex:
-    - (?i)^\x01\x03\0\x01\0\0\0\0....\0\0\0\0........\x83\x7f.([^\0\x01]+)[\0\x01].*Netatalk\x04\x06AFP2\.2\x06AFPX03\x06AFP3\.1\x06AFP3\.2
+    - '(?i)^\x01\x03\0\x01\0\0\0\0................\x03\xff.([^\0\x01]+)[\0\x01].*Windows Version: ([\d.]+ \(2\) build \d+ (?:Service Pack \d+)?) (\d+)-bit \(ExtremeZ-IP ([\w._-]+)\).*afpserver/([\w._@-]+)\0'

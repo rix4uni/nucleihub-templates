@@ -1,4 +1,4 @@
-id: wp-migrate-db-pro
+id: wp-migrate-db-pro-13aac3da620867d00a2f14aa8693ee41
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2b69f90a-1dd3-4184-aee3-9b0251b981cc?source=api-scan
   classification:
     cvss-metrics: 

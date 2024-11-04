@@ -1,4 +1,4 @@
-id: pie-forms-for-wp
+id: pie-forms-for-wp-7de1ade0f85c44d6169069685d501fa5
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/3a75ff86-dc4d-4519-8cc5-183afc00cb65?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,21 +1,22 @@
 id: printer
 info:
-  name: AIX lpd
+  name: VSE lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    info: Unauthorized
-    operating_system: AIX
-    rarity: 0
+    device_type: print server
+    operating_system: z/VSE
+    rarity: 6
 tcp:
-- name: 'null'
+- name: lpdstring
   inputs:
-  - data: ''
+  - data: \x01default\n
   host:
   - '{{Hostname}}'
+  port: 515,2947,3333,32211,19350
   extractors:
   - name: printer
     type: regex
     regex:
-    - ^\d+-202 your host does not have line printer access\.
+    - ^VSE Line Printer Daemon has rejected this request\.\0\0

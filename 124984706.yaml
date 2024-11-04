@@ -1,22 +1,24 @@
 id: http
 info:
-  name: udpxy UDP-to-HTTP multicast traffic relay
+  name: Catwalk
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    product: udpxy
-    rarity: 0
-    vendor: pavel_cherenkov
-    verified: true
+    device_type: printer
+    fallback:
+    - get-request
+    info: Canon imageRUNNER printer http config
+    rarity: 5
 tcp:
-- name: 'null'
+- name: sipoptions
   inputs:
-  - data: ''
+  - data: 'OPTIONS sip:nm SIP/2.0\r\nVia: SIP/2.0/TCP nm;branch=foo\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nMax-Forwards: 70\r\nContent-Length: 0\r\nContact: <sip:nm@nm>\r\nAccept: application/sdp\r\n\r\n'
   host:
   - '{{Hostname}}'
+  port: 406,5060,8081,31337
   extractors:
   - name: http
     type: regex
     regex:
-    - ^HTTP/1\.1 200 OK[ .]\nContent-Type:application/octet-stream\.?\n\n
+    - '^HTTP/1\.1 500 Internal Server Error\r\nServer: Catwalk\r\n'

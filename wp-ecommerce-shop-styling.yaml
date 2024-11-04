@@ -1,14 +1,15 @@
-id: wp-ecommerce-shop-styling
+id: wp-ecommerce-shop-styling-ef11fd8560749613d6cc22fc4561e87a
 
 info:
   name: >
-    WP eCommerce Shop Styling < 2.6 - Directory Traversal
+    WP eCommerce Shop Styling < 1.8 - Remote File Inclusion
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2cc737b3-4072-4dd4-8e50-ec94dc2a17d5?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e0de1962-13bd-4710-ae1f-ab5ced7cc59d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-ecommerce-shop-styling/"
     google-query: inurl:"/wp-content/plugins/wp-ecommerce-shop-styling/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-ecommerce-shop-styling,low
+  tags: cve,wordpress,wp-plugin,wp-ecommerce-shop-styling,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.6')
+          - compare_versions(version, '< 1.8')

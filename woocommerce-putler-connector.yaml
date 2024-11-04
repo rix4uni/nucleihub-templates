@@ -1,4 +1,4 @@
-id: woocommerce-putler-connector
+id: woocommerce-putler-connector-87db4fec3e1ca0b9100e3591486d8507
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/09a1388e-6c87-44cd-a137-4212b569423b?source=api-scan
   classification:
     cvss-metrics: 

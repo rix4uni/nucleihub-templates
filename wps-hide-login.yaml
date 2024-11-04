@@ -1,49 +1,56 @@
-id: wordpress-wps-hide-login
+id: wps-hide-login-dfde3550b45206f37db3200b5123c77e
 
 info:
-  name: WPS Hide Login Detection
-  author: ricardomaia
-  severity: info
+  name: "WPS Hide Login <= 1.5.4.2 - Hidden Login Page Location Disclosure"
+  author: topscoder
+  severity: medium
+  description: "The WPS Hide Login plugin for WordPress is vulnerable to login page disclosure even when the settings of the plugin are set to hide the login page making it possible for unauthenticated attackers to brute force credentials on sites in versions up to, and including, 1.5.4.2."
   reference:
-    - https://wordpress.org/plugins/wps-hide-login/
+    - https://blog.nintechnet.com/wordpress-wps-hide-login-fixed-security-issue/
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
+    cvss-score: 5.3
+    cve-id:
   metadata:
-    plugin_namespace: wps-hide-login
-    wpscan: https://wpscan.com/plugin/wps-hide-login
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/wps-hide-login/"
+    google-query: inurl:"/wp-content/plugins/wps-hide-login/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,wps-hide-login,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/wps-hide-login/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/wps-hide-login.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "wps-hide-login"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402202d3b21af3eb08e577b3d67597254f05895550dce751e3dce93edcc6cb323104d022028415fc7684c0c4be522b8383eb84d3861925da7dfc7f83acf6263e5db9985b6:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 1.5.4.2')

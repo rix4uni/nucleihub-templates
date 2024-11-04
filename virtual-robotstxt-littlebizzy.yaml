@@ -1,4 +1,4 @@
-id: virtual-robotstxt-littlebizzy
+id: virtual-robotstxt-littlebizzy-b63e739ce43d84ee439f614d7ac75bce
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/11653fa1-c6f5-4bcc-81d2-dd469300b40a?source=api-scan
   classification:
     cvss-metrics: 

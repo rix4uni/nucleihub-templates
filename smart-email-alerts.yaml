@@ -1,4 +1,4 @@
-id: smart-email-alerts
+id: smart-email-alerts-8b867de70ae7e376298179751f224f5f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/5b930316-7a2f-4539-8599-360751d49cde?source=api-scan
   classification:
     cvss-metrics: 

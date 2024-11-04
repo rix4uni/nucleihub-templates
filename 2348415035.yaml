@@ -1,20 +1,21 @@
 id: daytime
 info:
-  name: Cisco router daytime
+  name: Sun Solaris daytime
   author: nmap,cn-kali-team
   tags: detect,tech,daytime,service
   severity: info
   metadata:
-    operating_system: IOS
-    rarity: 0
+    operating_system: Solaris
+    rarity: 3
 tcp:
-- name: 'null'
+- name: help
   inputs:
-  - data: ''
+  - data: help\r\n\r\n
   host:
   - '{{Hostname}}'
+  port: 7,13,37,42
   extractors:
   - name: daytime
     type: regex
     regex:
-    - ^[A-Z][a-z]+day, [A-Z][a-z]+ \d{1,2}, \d{4} \d\d:\d\d:\d\d-\w\w\w\w?(?:-?DST)?\r\n
+    - ^[A-Z][a-z]{2} [A-Z][a-z]{2} +\d{1,2} +\d\d:\d\d:\d\d (?:19|20)\d\d\n\r$

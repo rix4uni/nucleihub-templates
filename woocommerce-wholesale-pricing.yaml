@@ -1,4 +1,4 @@
-id: woocommerce-wholesale-pricing
+id: woocommerce-wholesale-pricing-24285e85d035a72ccd14cf057087fa48
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/7f734db8-216e-43f3-8082-ebdcc28d3606?source=api-scan
   classification:
     cvss-metrics: 

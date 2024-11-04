@@ -1,14 +1,15 @@
-id: wp-cleanfix
+id: wp-cleanfix-f9df32c30cdbc90aabff7d807a1f99f7
 
 info:
   name: >
-    WP Cleanfix <= 3.0.1 - Cross-Site Request Forgery
+    WP Cleanfix <= 5.6.2 - Missing Authorization via register
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0d594e40-ae4d-43f7-b57e-8070a68d1c94?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/57896fa8-9360-41e8-a60e-8b95d01c25ac?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-cleanfix/"
     google-query: inurl:"/wp-content/plugins/wp-cleanfix/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-cleanfix,medium
+  tags: cve,wordpress,wp-plugin,wp-cleanfix,high
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.0.1')
+          - compare_versions(version, '<= 5.6.2')

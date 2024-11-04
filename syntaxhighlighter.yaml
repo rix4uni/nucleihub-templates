@@ -1,23 +1,24 @@
-id: syntaxhighlighter
+id: syntaxhighlighter-6257cc62dc74fb4f8edf952e025bf6f7
 
 info:
-  name: >
-    SyntaxHighlighter Evolved < 3.5.1 - Stored Cross-Site Scripting
+  name: "SyntaxHighlighter Evolved <= 3.1.9 - Cross-Site Scripting"
   author: topscoder
-  severity: high
-  description: >
-    The SyntaxHighlighter Evolved for WordPress is vulnerable to Stored Cross-Site Scripting in versions up to, and including, 3.5.0 due to insufficient input sanitization and output escaping on the user-supplied shortcode data. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
+  severity: medium
+  description: "The SyntaxHighlighter Evolved plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 3.1.9 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e94e39d3-61da-4adb-a89a-97cda4c9203d?source=api-prod
+    - https://wordpress.org/plugins/syntaxhighlighter/changelog/
+    - https://wpscan.com/vulnerability/04870de9-b902-497a-a32f-232faa60e05b
+    - https://patchstack.com/database/vulnerability/syntaxhighlighter/wordpress-syntaxhighlighter-evolved-plugin-3-1-9-cross-site-scripting
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-syntaxhighlighter-evolved-cross-site-scripting-3-1-9/
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 7.2
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/syntaxhighlighter/"
     google-query: inurl:"/wp-content/plugins/syntaxhighlighter/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,syntaxhighlighter,high
+  tags: cve,wordpress,wp-plugin,syntaxhighlighter,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.5.1')
+          - compare_versions(version, '<= 3.1.9')

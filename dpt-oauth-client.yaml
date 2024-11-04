@@ -1,14 +1,15 @@
-id: dpt-oauth-client
+id: dpt-oauth-client-c816cf65f82ebdf2ade35164058fc67e
 
 info:
   name: >
-    OAuth Client by DigitialPixies <= 1.1.0 - Cross-Site Request Forgery
+    OAuth Client by DigitialPixies <= 1.1.0 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2c643074-d57e-4878-b61d-2790ce9dadaa?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bb4d6d2c-a69d-492e-a2d5-fabfaef82f68?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/dpt-oauth-client/"
     google-query: inurl:"/wp-content/plugins/dpt-oauth-client/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,dpt-oauth-client,medium
+  tags: cve,wordpress,wp-plugin,dpt-oauth-client,low
 
 http:
   - method: GET

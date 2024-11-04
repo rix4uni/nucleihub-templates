@@ -1,15 +1,14 @@
 id: sip
 info:
-  name: X-Lite SIP phone
+  name: Polycom $1 videoconference system SIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: VoIP phone
     fallback:
     - get-request
     rarity: 5
-    version: $1
+    version: $2
 tcp:
 - name: sipoptions
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: X-Lite Beta release ([\w._ -]+)\r\n'
+    - (?i)^SIP/2\.0 404 Not Found\r\n(?:[^\r\n]+\r\n)*?User-Agent:Polycom (HDX [\w._ -]+) \(Release - ([\w._-]+)\)\r\n

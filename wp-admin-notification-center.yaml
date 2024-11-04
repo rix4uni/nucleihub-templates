@@ -1,4 +1,4 @@
-id: wp-admin-notification-center
+id: wp-admin-notification-center-0f7cbb05dc330627b12a01edc8540871
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/b98c5623-15fe-4937-9a0e-770aa0ab06f3?source=api-scan
   classification:
     cvss-metrics: 

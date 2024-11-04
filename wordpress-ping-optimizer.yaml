@@ -1,4 +1,4 @@
-id: wordpress-ping-optimizer
+id: wordpress-ping-optimizer-7eaa92d034f05b5a1d27fec5aa31d801
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8e93072c-eb0c-46a7-8ed7-7f48916dab50?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,14 +1,16 @@
 id: ssh
 info:
-  name: Dopra Linux sshd
+  name: Gravitational Teleport sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
-    operating_system: Dopra Linux
+    product: teleport
     rarity: 0
-    version: $2
+    vendor: gravitational
+    verified: true
+    version: 2.7.0 or later
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-DOPRA-([\w._-]+)\n
+    - ^SSH-([\d.]+)-Teleport\n

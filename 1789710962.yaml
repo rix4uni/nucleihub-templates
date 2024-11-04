@@ -1,16 +1,14 @@
 id: imap
 info:
-  name: Mercur imapd
+  name: Dovecot imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: mercur
+    product: dovecot
     rarity: 0
-    vendor: atrium
+    vendor: dovecot
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK MERCUR IMAP4-Server \(v([\w.]+) \w+\) for Windows ready
+    - ^\* OK \[CAPABILITY IMAP4rev1 SORT THREAD=REFERENCES MULTIAPPEND UNSELECT LITERAL\+ IDLE CHILDREN NAMESPACE LOGIN-REFERRALS [^\]]+\]

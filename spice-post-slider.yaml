@@ -1,4 +1,4 @@
-id: spice-post-slider
+id: spice-post-slider-347b7b133c5bc03f847b0cc6cd76824f
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/c0dd70b9-6f8a-41fc-ab4f-f6cdfee8dfb8?source=api-scan
   classification:
     cvss-metrics: 

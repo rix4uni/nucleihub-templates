@@ -1,4 +1,4 @@
-id: s2member
+id: s2member-440de2eaff5dbfe9d893f4510c46bbd4
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/80bfb470-a3df-497f-940d-051ccaa6215b?source=api-scan
   classification:
     cvss-metrics: 

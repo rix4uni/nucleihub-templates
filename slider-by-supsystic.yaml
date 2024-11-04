@@ -1,14 +1,15 @@
-id: slider-by-supsystic
+id: slider-by-supsystic-cda4bcfc95d6584a29dc850e5d8998c8
 
 info:
   name: >
-    Slider by Supsystic <= 1.8.6 - Missing Authorization
+    Slider by Supsystic <= 1.8.10 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/548731d5-078b-45a5-bcc5-9789b41ead44?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/717e77b7-8b42-4fca-b288-2415db2d68e6?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/slider-by-supsystic/"
     google-query: inurl:"/wp-content/plugins/slider-by-supsystic/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,slider-by-supsystic,high
+  tags: cve,wordpress,wp-plugin,slider-by-supsystic,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8.6')
+          - compare_versions(version, '<= 1.8.10')

@@ -1,14 +1,15 @@
-id: subscribe-to-category
+id: subscribe-to-category-768cacc4285b1e6996f6f1e14be4ecd2
 
 info:
   name: >
-    Subscribe to Category <= 2.7.3 - Missing Authorization
+    Subscribe to Category <= 2.7.4 - Unauthenticated SQL Injection
   author: topscoder
-  severity: high
+  severity: critical
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f040d5b9-0db2-467b-91fa-98aede9f7280?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0fae8440-ce36-45ba-bed2-af30162e4c1b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/subscribe-to-category/"
     google-query: inurl:"/wp-content/plugins/subscribe-to-category/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,subscribe-to-category,high
+  tags: cve,wordpress,wp-plugin,subscribe-to-category,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.7.3')
+          - compare_versions(version, '<= 2.7.4')

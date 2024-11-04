@@ -1,4 +1,4 @@
-id: podlove-subscribe-button
+id: podlove-subscribe-button-1cf75fc1c013c2ee7aa90473341d0982
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/af695224-24e7-4d5b-b472-dee53eb6073f?source=api-scan
   classification:
     cvss-metrics: 

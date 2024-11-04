@@ -1,4 +1,4 @@
-id: plugin-newsletter
+id: plugin-newsletter-e40581f611ffe73a6f20ba9a12cd0a0d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/7370e3c3-90e6-4698-88e7-baf56832528d?source=api-scan
   classification:
     cvss-metrics: 

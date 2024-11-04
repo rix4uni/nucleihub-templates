@@ -1,49 +1,59 @@
-id: wordpress-svg-support
+id: svg-support-8737608367f730b35c2f865cc5227ba0
 
 info:
-  name: SVG Support Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    SVG Support 2.5 - 2.5.1 - Insecure Plugin Defaults to Cross-Site Scripting
+  author: topscoder
+  severity: high
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/svg-support/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ddcf7901-e9cf-4ca0-87ae-70ecac09d102?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: svg-support
-    wpscan: https://wpscan.com/plugin/svg-support
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/svg-support/"
+    google-query: inurl:"/wp-content/plugins/svg-support/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,svg-support,high
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/svg-support/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/svg-support.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "svg-support"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 490a0046304402207ca2c5a1a28e024033065e8d85bd261b1e64fbbf5c8a94b6e0478cd2501e4538022025dcede04c5b5361511fc22ddd7dace4a1486d9d26e5065e9d96a98fbccb2931:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '>= 2.5', '<= 2.5.1')

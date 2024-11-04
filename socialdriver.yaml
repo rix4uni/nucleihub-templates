@@ -1,4 +1,4 @@
-id: socialdriver
+id: socialdriver-6fcdce7b2e71c211a98f5996105eddf2
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/24ac60fe-d751-43c7-89c1-5c0c9651e8f8?source=api-scan
   classification:
     cvss-metrics: 

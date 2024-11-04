@@ -1,14 +1,15 @@
-id: ultimate-store-kit
+id: ultimate-store-kit-799f4c8743d958449e3f902daac35c9c
 
 info:
   name: >
-    Ultimate Store Kit Elementor Addons <= 1.5.2 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Ultimate Store Kit Elementor Addons, Woocommerce Builder, EDD Builder, Elementor Store Builder, Product Grid, Product Table, Woocommerce Slider <= 2.0.3 - Unauthenticated PHP Object Injection
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ea630be6-16f8-4d93-ae27-8a29f82c5db9?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ef566dca-91ed-4929-b36b-4e424e07e1d4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ultimate-store-kit/"
     google-query: inurl:"/wp-content/plugins/ultimate-store-kit/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ultimate-store-kit,low
+  tags: cve,wordpress,wp-plugin,ultimate-store-kit,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.5.2')
+          - compare_versions(version, '<= 2.0.3')

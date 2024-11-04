@@ -1,12 +1,15 @@
 id: ssh
 info:
-  name: Xlight FTP Server sshd
+  name: VanDyke VShell
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
+    product: vshell
     rarity: 0
+    vendor: vandyke
+    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -18,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-xlightftpd_release_([\w._-]+)\r\n
+    - ^SSH-([\d.]+)-([\w.]+) VShell\r?\n

@@ -1,14 +1,15 @@
-id: wp-popups-lite
+id: wp-popups-lite-69ef67ee7aec095c81a6e3175b553ce1
 
 info:
   name: >
-    WP Popups <= 2.1.5.5 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    WP Popups – WordPress Popup builder <= 2.1.5 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8810d237-06d5-45a0-8402-a2e7e15418d0?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a9747cda-735c-4087-8c4d-9c445c6d1596?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1.5.5')
+          - compare_versions(version, '<= 2.1.5')

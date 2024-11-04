@@ -1,4 +1,4 @@
-id: wp-rss-images
+id: wp-rss-images-9ca778786a2a7435b270ca5297c4c144
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/adb70798-2ef9-4384-bcca-8862afa044ed?source=api-scan
   classification:
     cvss-metrics: 

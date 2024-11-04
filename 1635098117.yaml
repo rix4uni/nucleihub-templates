@@ -1,14 +1,15 @@
 id: ftp
 info:
-  name: Dell $2 printer ftpd
+  name: WarFTPd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
-    hostname: $1
+    product: warftpd
     rarity: 0
-    version: $3
+    vendor: jgaa
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ([-/.+\w_]+) Dell ([-/.+\w ]+) FTP Server ([\w._-]+) ready\.\r\n
+    - (?i)^220-.*\r\n(?:220-|)    WarFTPd (\d[-.\w]+) \([\w ]+\) Ready\r\n

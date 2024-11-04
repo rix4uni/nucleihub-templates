@@ -1,4 +1,4 @@
-id: wp-abstracts-manuscripts-manager
+id: wp-abstracts-manuscripts-manager-7518ae2f053c822659853ba95f55ea11
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ba03ee30-6da7-42fc-9cc9-2408bfbb09ce?source=api-scan
   classification:
     cvss-metrics: 

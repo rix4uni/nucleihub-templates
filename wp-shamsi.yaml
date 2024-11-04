@@ -1,14 +1,15 @@
-id: wp-shamsi
+id: wp-shamsi-d80212b26727fff04d47601179cd407f
 
 info:
   name: >
-    WP Shamsi <= 4.1.0 - Missing Authorization to Arbitrary Plugin Deactivation
+    WP Shamsi <= 4.3.3 - Missing Authorization leading to Authenticated (Subscriber+) Attachment Deletion
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7b498c5a-9fd1-43b8-b456-f6cec65d5077?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8fc88821-b2be-49a5-a2cf-53e87d0349a2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-shamsi/"
     google-query: inurl:"/wp-content/plugins/wp-shamsi/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-shamsi,high
+  tags: cve,wordpress,wp-plugin,wp-shamsi,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.1.0')
+          - compare_versions(version, '<= 4.3.3')

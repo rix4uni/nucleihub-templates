@@ -1,12 +1,15 @@
 id: pop3-proxy
 info:
-  name: POPgate pop3 proxy
+  name: PGP Universal pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
+    info: 'Proxied greeting: $1'
+    product: universal_server
     rarity: 0
-    version: $1
+    vendor: pgp
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK hello from popgate\(([\d.]+)\)\r\n
+    - ^\+OK (.*) \(PGP Universal service is proxying this connection\)\r\n

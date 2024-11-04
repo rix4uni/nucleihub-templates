@@ -1,4 +1,4 @@
-id: recently-viewed-and-most-viewed-products
+id: recently-viewed-and-most-viewed-products-4015b41c8556dbe81e8780babc2a6d9d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/61ec0e78-b367-438f-929d-94e055c83477?source=api-scan
   classification:
     cvss-metrics: 

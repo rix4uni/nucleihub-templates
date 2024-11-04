@@ -1,4 +1,4 @@
-id: page-flip-image-gallery
+id: page-flip-image-gallery-820df2f96e4e493eaefbc71aae198b84
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/44e3158c-6163-4780-a1d5-ca101ba92074?source=api-scan
   classification:
     cvss-metrics: 

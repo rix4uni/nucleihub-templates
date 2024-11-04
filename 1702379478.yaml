@@ -1,10 +1,11 @@
 id: pop3-proxy
 info:
-  name: ISafe pop3 proxy
+  name: InterScan VirusWall pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK \[ISafe POP3 Proxy\] \r\n
+    - ^\+OK InterScan VirusWall POP3 Proxy\r\n

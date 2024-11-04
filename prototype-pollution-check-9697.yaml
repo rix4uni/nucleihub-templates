@@ -4,7 +4,8 @@ info:
   name: Prototype Pollution Check
   author: pdteam
   severity: medium
-  reference: https://github.com/msrkp/PPScan
+  reference:
+    - https://github.com/msrkp/PPScan
   tags: headless
 
 headless:
@@ -32,7 +33,7 @@ headless:
             (function() {window.alerts = [];
 
             function logger(found) {
-                window.alerts.push(found);
+            	window.alerts.push(found);
             }
 
             function check() {

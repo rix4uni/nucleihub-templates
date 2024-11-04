@@ -1,14 +1,15 @@
-id: wp-svg-images
+id: wp-svg-images-a238cfe94ccc9b7f3aac7481a120385e
 
 info:
   name: >
-    WP SVG Images <= 3.3 - Authenticated (author+) Stored Cross-Site Scripting via SVG
+    WP SVG Images <= 4.2 - Authenticated (Author+) Stored Cross-Site Scripting via SVG
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b72a26dd-0d20-462e-bb71-ed83eae6766e?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/389d96e9-1fad-49a6-89b6-8f7f108d8117?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.3')
+          - compare_versions(version, '<= 4.2')

@@ -1,10 +1,11 @@
 id: nntp
 info:
-  name: Kerio MailServer nntpd
+  name: sn nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
+    info: posting ok
     rarity: 0
     version: $1
 tcp:
@@ -17,4 +18,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 +Kerio MailServer ([\w._-]+) +NNTP server ready\r\n
+    - ^200 Hi, you can post \(sn version ([\w.]+)\)\r\n

@@ -1,12 +1,16 @@
 id: nntp
 info:
-  name: NNTPCache
+  name: INN nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: Access denied
+    hostname: $1
+    product: inn
     rarity: 0
+    vendor: isc
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^502 access denied <[-\w_.]+@[-\w_.]+>, you do not have connect permissions in the nntpcache\.access file\.\r\n
+    - ^200 ([-\w_.]+) InterNetNews server INN ([\d.]+) ready\r\n

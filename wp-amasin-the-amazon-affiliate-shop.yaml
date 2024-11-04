@@ -1,4 +1,4 @@
-id: wp-amasin-the-amazon-affiliate-shop
+id: wp-amasin-the-amazon-affiliate-shop-6ca90c027d7fd5775cb5f2e1ea477c3c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/649cbd38-d926-4638-9fb9-6704befa1660?source=api-scan
   classification:
     cvss-metrics: 

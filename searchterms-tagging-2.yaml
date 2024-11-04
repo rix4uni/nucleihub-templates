@@ -1,4 +1,4 @@
-id: searchterms-tagging-2
+id: searchterms-tagging-2-ae9101b1c145e92464f5d9017d4f52ef
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/bb2df482-30bf-49e5-b1e2-06e102d2dd1b?source=api-scan
   classification:
     cvss-metrics: 

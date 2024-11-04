@@ -1,4 +1,4 @@
-id: wp-social-buttons
+id: wp-social-buttons-49df640c0b6481ed56758725f5991175
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f4198c51-4a26-4a50-b2c5-0467f8008b5b?source=api-scan
   classification:
     cvss-metrics: 

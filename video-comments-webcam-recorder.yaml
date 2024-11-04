@@ -1,4 +1,4 @@
-id: video-comments-webcam-recorder
+id: video-comments-webcam-recorder-3cdfad50a7aa695e112815ee0803a5dc
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1ddb9fc8-bed4-42ff-9664-6ea8fb136ec0?source=api-scan
   classification:
     cvss-metrics: 

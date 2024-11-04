@@ -1,12 +1,17 @@
 id: smtp
 info:
-  name: Yahoo! smtpd
+  name: IMail NT-ESMTP
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
+    operating_system: Windows
+    product: imail
     rarity: 0
+    vendor: ipswitch
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +22,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 YSmtp(\S+) ESMTP service ready
+    - ^220 ([-.+\w]+) \(IMail ([^)]+)\) NT-ESMTP Server

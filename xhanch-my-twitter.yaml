@@ -1,4 +1,4 @@
-id: xhanch-my-twitter
+id: xhanch-my-twitter-13afd7959bdba431246ec18eac06eb55
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/d6d394af-67b0-4754-bdec-6ee89b7e8bbd?source=api-scan
   classification:
     cvss-metrics: 

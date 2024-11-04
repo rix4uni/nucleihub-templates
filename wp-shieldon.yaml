@@ -1,4 +1,4 @@
-id: wp-shieldon
+id: wp-shieldon-545fd6f5f723f926a33b2f168565c8cc
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/6c8eaba3-9c23-4f35-8669-0ce345918fa6?source=api-scan
   classification:
     cvss-metrics: 

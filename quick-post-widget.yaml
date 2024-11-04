@@ -1,4 +1,4 @@
-id: quick-post-widget
+id: quick-post-widget-90d0fc1d6606eb1f818e2d1d3d0416a5
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/9cf10ed7-7248-4dfd-b7ee-13cea3ee2154?source=api-scan
   classification:
     cvss-metrics: 

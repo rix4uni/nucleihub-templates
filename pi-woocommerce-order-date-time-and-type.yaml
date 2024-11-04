@@ -1,4 +1,4 @@
-id: pi-woocommerce-order-date-time-and-type
+id: pi-woocommerce-order-date-time-and-type-a44345779387d191aa1fdac0be1e3bd0
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f19006a0-6848-467b-90ed-33b3ebd2c7ba?source=api-scan
   classification:
     cvss-metrics: 

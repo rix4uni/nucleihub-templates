@@ -1,12 +1,12 @@
 id: ssh
 info:
-  name: Moxa sshd
+  name: Microsoft Windows IoT sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    device_type: specialized
     info: protocol $1
+    operating_system: Windows 10 IoT Core
     rarity: 0
     version: $2
 tcp:
@@ -19,4 +19,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-moxa_([\d.]+)\r\n
+    - ^SSH-([\d.]+)-MS_(\d+\.\d\d\d)\r\n

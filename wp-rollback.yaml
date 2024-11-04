@@ -1,49 +1,59 @@
-id: wordpress-wp-rollback
+id: wp-rollback-1674d765e0d16c48682dcc63e2d650bc
 
 info:
-  name: WP Rollback – Rollback Plugins and Themes Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Rollback < 1.2.3 - Cross-Site Request Forgery
+  author: topscoder
+  severity: medium
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/wp-rollback/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c0d68506-ee5c-4b01-a0d2-caf2482106e0?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: wp-rollback
-    wpscan: https://wpscan.com/plugin/wp-rollback
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/wp-rollback/"
+    google-query: inurl:"/wp-content/plugins/wp-rollback/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,wp-rollback,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/wp-rollback/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/wp-rollback.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "wp-rollback"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a00473045022079c9a103a029535c9a525b36c1ef9957263bb5a6f6b1272a5dbab254b7d04115022100be9f049001b0427cbaa54549b5b358f0fd2ae0de1f63522df27fdaad55aef2e1:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '< 1.2.3')

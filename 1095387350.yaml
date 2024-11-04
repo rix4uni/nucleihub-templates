@@ -1,12 +1,13 @@
 id: ident
 info:
-  name: FreeBSD authd
+  name: Nullidentd
   author: nmap,cn-kali-team
   tags: detect,tech,ident,service
   severity: info
   metadata:
-    operating_system: FreeBSD
+    info: broken
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ident
     type: regex
     regex:
-    - '^\d+, \d+ : USERID : FreeBSD : \[x\]-\d+\r\n'
+    - '^nullidentd -- version (\d[-.\w]+)\nCopyright '

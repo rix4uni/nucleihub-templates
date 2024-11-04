@@ -1,11 +1,14 @@
 id: pop3pw
 info:
-  name: ApplePasswordServer pop3 password change daemon
+  name: CommuniGate Pro pop3 password change daemon
   author: nmap,cn-kali-team
   tags: detect,tech,pop3pw,service
   severity: info
   metadata:
+    product: communigate_pro
     rarity: 0
+    vendor: stalker
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -17,4 +20,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - '^\+OK ApplePasswordServer (\d[-.\w]+) password server at '
+    - ^200 CommuniGate Pro PWD Server (\d[-.\w]+) ready <

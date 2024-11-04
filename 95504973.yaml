@@ -1,12 +1,15 @@
 id: bitcoin
 info:
-  name: Dash cryptocurrency server
+  name: Bitcoin digital currency server
   author: nmap,cn-kali-team
   tags: detect,tech,bitcoin,service
   severity: info
   metadata:
-    info: Bitcoin fork
+    product: bitcoind
     rarity: 0
+    vendor: bitcoin
+    verified: true
+    version: 0.3.23
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: bitcoin
     type: regex
     regex:
-    - ^\xbf\x0ck\xbdgetsporks\0\0\0\0\0\0\0\]\xf6\xe0\xe2
+    - (?i)^\xf9\xbe\xb4\xd9version\0\0\0\0\0\x55\0\0\0\x2c\x7e\0\0\x01\0\0\0\0\0\0\0........\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\xff\xff......\x01\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\xff\xff..............\0....$

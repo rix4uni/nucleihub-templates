@@ -1,4 +1,4 @@
-id: dashboard-widgets-suite
+id: dashboard-widgets-suite-e06ac46c216c6e012360bb4494ceab3e
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/503a44ed-25c2-4178-aeec-756c5b533e04?source=api-scan
   classification:
     cvss-metrics: 

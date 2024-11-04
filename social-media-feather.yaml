@@ -1,4 +1,4 @@
-id: social-media-feather
+id: social-media-feather-d23af68a27f0d55dfe2452756b584200
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/6972f776-993c-4e5f-b347-5c784c42601c?source=api-scan
   classification:
     cvss-metrics: 

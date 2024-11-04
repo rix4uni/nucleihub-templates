@@ -1,49 +1,57 @@
-id: wordpress-updraftplus
+id: updraftplus-36d8a04dec959c6cec66a9c7e62f490c
 
 info:
-  name: UpdraftPlus' WP Backup & Migration Plugin Detection
-  author: ricardomaia
-  severity: info
+  name: "UpdraftPlus 1.22.14 to 1.23.2 and UpdraftPlus (Premium) 2.22.14 to 2.23.2 - Privilege Escalation via updraft_central_ajax_handler"
+  author: topscoder
+  severity: high
+  description: "The UpdraftPlus plugin for WordPress is vulnerable to Privilege Escalation due to missing authorization on the 'updraft_central_ajax_handler' function in versions from 1.22.14 to 1.23.2 inclusive, and 2.22.14 to 2.23.2 of the premium version. This allows authenticated attackers, with subscriber-level permissions or above, to update the plugin's settings in such a way that can allow them to perform administrator-level actions on some sites."
   reference:
-    - https://wordpress.org/plugins/updraftplus/
+    - https://updraftplus.com/updraftplus-1-23-3-2-23-3-important-security-release/
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2881369%40updraftplus%2Ftrunk&old=2880673%40updraftplus%2Ftrunk&sfp_email=&sfph_mail=
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id:
   metadata:
-    plugin_namespace: updraftplus
-    wpscan: https://wpscan.com/plugin/updraftplus
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/updraftplus/"
+    google-query: inurl:"/wp-content/plugins/updraftplus/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,updraftplus,high
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/updraftplus/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/updraftplus.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "updraftplus"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4b0a0048304602210083a21bd895aff9b8008ac1f870a446855fcdccf995722211e56a49f2f76904a202210094e5affe68caf128aedb6934daeaa7f6fc2976ea8d37b0cdea069c864a9ff2ab:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '>= 1.22.14', '<= 1.23.2')

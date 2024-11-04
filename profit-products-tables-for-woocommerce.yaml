@@ -1,14 +1,15 @@
-id: profit-products-tables-for-woocommerce
+id: profit-products-tables-for-woocommerce-a8cf79991fa8fec12ae5a0d63e3e5058
 
 info:
   name: >
-    Active Products Tables for WooCommerce <= 1.0.6 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Active Products Tables for WooCommerce. Professional products tables for WooCommerce store <= 1.0.6.1 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1f18147d-60e6-447d-a6f5-6ad7b633e62c?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5069fbc4-b3c4-4c0b-892c-2c83f35dc2fe?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/profit-products-tables-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/profit-products-tables-for-woocommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,profit-products-tables-for-woocommerce,low
+  tags: cve,wordpress,wp-plugin,profit-products-tables-for-woocommerce,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.6')
+          - compare_versions(version, '<= 1.0.6.1')

@@ -1,4 +1,4 @@
-id: simple-custom-author-profiles
+id: simple-custom-author-profiles-4e6a20ad732f5cde1046f7b7f22417b6
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/986d16d5-f1f4-4ed9-9978-0f12ee22a543?source=api-scan
   classification:
     cvss-metrics: 

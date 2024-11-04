@@ -1,4 +1,4 @@
-id: accommodation-system
+id: accommodation-system-9c18f15a1794c80d13d5e347f1bf796d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8206d00c-7eb1-4ef2-b3d3-be78d39036db?source=api-scan
   classification:
     cvss-metrics: 

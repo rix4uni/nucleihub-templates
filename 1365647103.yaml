@@ -1,14 +1,14 @@
 id: ftp
 info:
-  name: ProFTPD
+  name: XBFileZilla
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Unix
-    product: proftpd
+    info: Based on FileZilla $2
+    product: xbfilezilla
     rarity: 0
-    vendor: proftpd
+    vendor: xbmc
     verified: true
     version: $1
 tcp:
@@ -21,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ProFTPD (\d\S+) Server
+    - '^220-Welcome to XBOX FileZilla(?: \(XBMC\)|)\r\n220-version: XBMC:FileZilla version ([\d.]+), \(based on FileZilla Server ([\d.]+)\)\r\n220 http://sourceforge\.net/projects/xbfilezilla\r\n'

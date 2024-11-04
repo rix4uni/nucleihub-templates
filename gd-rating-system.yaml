@@ -1,14 +1,15 @@
-id: gd-rating-system
+id: gd-rating-system-62fa16b93f9c8f5e12715d66bdf734b4
 
 info:
   name: >
-    GD Rating System <= 2.3 - Cross-Site Scripting
+    GD Rating System <= 3.5.0 - Unauthenticated Stored Cross-Site Scripting via IP
   author: topscoder
   severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c14f473f-ca49-4610-b5df-9eb0e064ece5?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c0b3662d-e369-4978-aa7a-debbb3ee37e4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.3.1')
+          - compare_versions(version, '<= 3.5.0')

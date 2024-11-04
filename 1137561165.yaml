@@ -1,12 +1,17 @@
 id: lmtp
 info:
-  name: DSPAM lmtpd
+  name: Dovecot lmtpd
   author: nmap,cn-kali-team
   tags: detect,tech,lmtp,service
   severity: info
   metadata:
+    hostname: $1
+    info: Ubuntu
+    operating_system: Linux
+    product: dovecot
     rarity: 0
-    version: $1
+    vendor: dovecot
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +22,4 @@ tcp:
   - name: lmtp
     type: regex
     regex:
-    - ^220 DSPAM LMTP ([-\w_.]+) Ready\r\n
+    - ^220 ([\w.-]+) Dovecot \(Ubuntu\) ready\.\r\n

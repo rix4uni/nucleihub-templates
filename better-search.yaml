@@ -1,18 +1,19 @@
-id: better-search
+id: better-search-846d3dd4812c83bbd168888344f1659c
 
 info:
-  name: >
-    Better Search <= 1.3.4 - Reflected Cross-Site Scripting
+  name: "Better Search <= 3.1.0 - Cross-Site Request Forgery"
   author: topscoder
   severity: medium
-  description: >
-    The Better Search plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the search field in versions up to, and including, 1.3.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
+  description: "The Better Search plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 3.1.0. This is due to missing or incorrect nonce validation on the bsearch_ajax_clearcache function. This makes it possible for unauthenticated attackers to clear the plugin's cache via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e057a35b-8162-4636-9fd9-419378df1ca1?source=api-prod
+    - https://plugins.svn.wordpress.org/better-search/tags/3.2.0/readme.txt
+    - https://plugins.svn.wordpress.org/better-search/tags/3.2.0/readme.md
+    - https://webberzone.com/plugins/better-search/
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2896264%40better-search%2Ftrunk&old=2720215%40better-search%2Ftrunk&sfp_email=&sfph_mail=
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
+    cvss-score: 4.3
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/better-search/"
     google-query: inurl:"/wp-content/plugins/better-search/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.3.4')
+          - compare_versions(version, '<= 3.1.0')

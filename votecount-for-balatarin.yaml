@@ -1,4 +1,4 @@
-id: votecount-for-balatarin
+id: votecount-for-balatarin-c9ee335a6e160eeeadce2a3c276f2f36
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/507464cf-43a3-49bd-b8d8-9bc8030670e0?source=api-scan
   classification:
     cvss-metrics: 

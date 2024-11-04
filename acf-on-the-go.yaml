@@ -1,4 +1,4 @@
-id: acf-on-the-go
+id: acf-on-the-go-5e6bf13f5a698e0ff0bbce63d697db53
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/46df438c-abff-4cf3-a732-02e0b3196bac?source=api-scan
   classification:
     cvss-metrics: 

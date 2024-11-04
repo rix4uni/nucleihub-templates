@@ -1,13 +1,15 @@
 id: pop3
 info:
-  name: JAMES pop3d
+  name: Dovecot pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
+    product: dovecot
     rarity: 0
-    version: $2
+    vendor: dovecot
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-\w_.]+) POP3 server \(JAMES POP3 Server ([\w.]+)\) ready \r\n
+    - ^\+OK Dovecot at ([-\w_.]+) ready\.\r\n

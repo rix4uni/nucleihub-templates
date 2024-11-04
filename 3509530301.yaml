@@ -21,4 +21,4 @@ tcp:
   - name: ms-wbt-server
     type: regex
     regex:
-    - (?i)^\x03\0\0\x0b\x06\xd0\0\0\x03.\0$
+    - (?i)^\x03\0\0\x11\x08\x02..}\x08\x03\0\0\xdf\x14\x01\x01$

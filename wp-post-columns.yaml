@@ -1,4 +1,4 @@
-id: wp-post-columns
+id: wp-post-columns-c1a8c5573a5fe66718bc4705ddf4a068
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/d96e5986-8c89-4e7e-aa63-f41aa13eeff4?source=api-scan
   classification:
     cvss-metrics: 

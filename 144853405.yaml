@@ -1,11 +1,12 @@
 id: printer
 info:
-  name: lpsched
+  name: Linux lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    hostname: $1
+    info: client IP must resolve
+    operating_system: Linux
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - '^([-\w_.]+): lpsched: Malformed from address\n'
+    - '^lpd: Host name for your address \(\d+\.\d+\.\d+\.\d+\) unknown\n$'

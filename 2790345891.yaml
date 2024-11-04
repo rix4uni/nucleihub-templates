@@ -1,14 +1,14 @@
 id: imap
 info:
-  name: SCO imapd
+  name: CommuniGate Pro imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: SCO UNIX
+    product: communigate_pro
     rarity: 0
-    version: $2
+    vendor: stalker
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([-\w_.]+) IMAP4 Service ([\d.()]+) at .*\r\n
+    - ^\* OK CommuniGate Pro IMAP Server ready\r\n

@@ -1,15 +1,15 @@
-id: wp-sendgrid-mailer
+id: wp-sendgrid-mailer-1e450f9dcaa4b5d309da402a93b6466d
 
 info:
   name: >
-    SendGrid for WordPress <= 1.4 - Unauthenticated SQL Injection
+    SendGrid for WordPress <= 1.4 - Missing Authorization to Authenticated (Subscriber+) Log Deletion
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fdb3c672-0ac4-42e8-951b-e41dc8bd6231?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bb7d99a7-1e7d-43e1-839c-286b454c8276?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-sendgrid-mailer/"
     google-query: inurl:"/wp-content/plugins/wp-sendgrid-mailer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-sendgrid-mailer,critical
+  tags: cve,wordpress,wp-plugin,wp-sendgrid-mailer,low
 
 http:
   - method: GET

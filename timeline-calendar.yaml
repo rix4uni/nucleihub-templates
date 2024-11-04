@@ -1,4 +1,4 @@
-id: timeline-calendar
+id: timeline-calendar-bd2958d11010151149c20db10cdc59d5
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/2c2f0e74-cdc0-4da9-bd79-8d09f5459be7?source=api-scan
   classification:
     cvss-metrics: 

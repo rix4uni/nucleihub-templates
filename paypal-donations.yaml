@@ -1,4 +1,4 @@
-id: paypal-donations
+id: paypal-donations-5eead37a379def1e3474abcddf3a225c
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/0ec90144-bfd8-4840-8b0f-73340386b7d5?source=api-scan
   classification:
     cvss-metrics: 

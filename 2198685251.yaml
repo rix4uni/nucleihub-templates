@@ -1,13 +1,15 @@
 id: rtsp
 info:
-  name: Avtech MPEG4 DVR control rtspd
+  name: RealMedia EncoderServer
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
     fallback:
     - get-request
+    operating_system: Windows
     rarity: 5
+    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -19,4 +21,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nPublic: DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, SET_PARAMETER\r\n\r\n$'
+    - '(?i)^RTSP/1\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?Server: RealMedia EncoderServer Version (\d[-.\w]+) \(win32\)\r\n'

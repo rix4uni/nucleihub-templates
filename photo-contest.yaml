@@ -1,4 +1,4 @@
-id: photo-contest
+id: photo-contest-a4a063c3e85b18b077b4d35ef1813f25
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/1355bc94-7110-4d61-855e-78889e58dcad?source=api-scan
   classification:
     cvss-metrics: 

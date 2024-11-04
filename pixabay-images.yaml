@@ -1,4 +1,4 @@
-id: pixabay-images
+id: pixabay-images-4b2b2b1054d11b69a8c7a4d5f5725c7b
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/40a6a810-1151-49e6-bed4-2b7a572ac015?source=api-scan
   classification:
     cvss-metrics: 

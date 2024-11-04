@@ -1,4 +1,4 @@
-id: slick-contact-forms
+id: slick-contact-forms-5a9502c77ad6ca896fa0ea487fa77f31
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/22c63226-2bc6-40be-a5d1-1bd169fc78b8?source=api-scan
   classification:
     cvss-metrics: 
