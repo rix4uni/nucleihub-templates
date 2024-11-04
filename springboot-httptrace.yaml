@@ -1,38 +1,43 @@
-id: Springboot-Httptrace
+id: springboot-httptrace
+
 info:
   name: Detect Springboot httptrace
-  author:
-  - l0ne1y
-  description: |-
-    SpringBoot HttpTrace安全配置错误导致信息泄露
-    安全配置错误可以发生在一个应用程序堆栈的任何层面，包括网络服务，平台，web服务器、应用服务器、数据库、框架、自定义的代码、预安装的虚拟机、容器、存储等。
-    这通常是由于不安全的默认配置、不完整的临时配置、开源云存储、错误的HTTP 标头配置以及包含敏感信息的详细错误信息所造成的。
+  author: that_juan_,dwisiswant0,wdahlenb
   severity: low
-  remediation: |-
-    #### 官方修复方案：
-    升级系统至无漏洞版本，或于官网下载安全补丁。
-requests:
-- matchers:
-  - type: word
-    condition: and
-    part: body
-    words:
-    - '"traces"'
-    - '"timestamp"'
-    - '"principal"'
-    - '"session"'
-  - type: status
-    status:
-    - 200
-  - type: word
-    condition: or
-    part: header
-    words:
-    - application/json
-    - application/vnd.spring-boot.actuator
-    - application/vnd.spring-boot.actuator.v1+json
-  matchers-condition: and
-  path:
-  - '{{BaseURL}}/httptrace'
-  - '{{BaseURL}}/actuator/httptrace'
-  method: GET
+  description: View recent HTTP requests and responses
+  metadata:
+    max-request: 2
+  tags: springboot,exposure,misconfig
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/httptrace"
+      - "{{BaseURL}}/actuator/httptrace"
+
+    stop-at-first-match: true
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - '"traces"'
+          - '"timestamp"'
+          - '"principal"'
+          - '"session"'
+        condition: and
+
+      - type: word
+        part: header
+        words:
+          - "application/json"
+          - "application/vnd.spring-boot.actuator"
+          - "application/vnd.spring-boot.actuator.v1+json"
+        condition: or
+
+      - type: status
+        status:
+          - 200
+
+# digest: 490a0046304402202f0e987c5fe8eb97d0c163fabcd49a8f1fb9880391c3bfff2971f46d66e1ee5e0220680a9079af135bce4c509362fb053223582bcae20edb49efcec90d15a6f8bdb7:922c64590222798bb761d5b6d8e72950

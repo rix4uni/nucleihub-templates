@@ -1,24 +1,21 @@
-id: scv1
+id: SCv1
 
 info:
-  name: >
-    SCv1 Theme (All Known Versions) - Arbitrary File Download
+  name: "SCv1 Theme (All Known Versions) - Arbitrary File Download"
   author: topscoder
-  severity: high
-  description: >
-    The SCv1 Theme for WordPress is vulnerable to Arbitrary File Download in all known versions. This is due to insufficient sanitization of user input on the 'file' parameter. This makes it possible for unauthenticated attackers to download arbitrary files, including configuration files.
+  severity: low
+  description: "The SCv1 Theme for WordPress is vulnerable to Arbitrary File Download in all known versions. This is due to insufficient sanitization of user input on the 'file' parameter. This makes it possible for unauthenticated attackers to download arbitrary files, including configuration files."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d9d7dc61-1e28-426b-a9da-3a36134e7821?source=api-prod
+
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    cvss-score: 7.5
-    cve-id: 
+    cvss-metrics:
+    cvss-score:
+    cve-id:
   metadata:
-    fofa-query: "wp-content/themes/SCv1/"
-    google-query: inurl:"/wp-content/themes/SCv1/"
+    fofa-query: "wp-content/unknown/SCv1/"
+    google-query: inurl:"/wp-content/unknown/SCv1/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,SCv1,high
+  tags: cve,wordpress,wp-theme,SCv1,low
 
 http:
   - method: GET
@@ -56,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= *')
+          - compare_versions(version, '*')

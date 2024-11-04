@@ -1,15 +1,24 @@
-id: URL
+id: extract-urls
 
 info:
-  name: URL
-  author: Saud Aleanzi @Dmaral3noz
+  name: Extract URLs from HTML attributes
+  author: dwisiswant0
   severity: info
+  tags: headless,extractor
 
-file:
-  - extensions:
-      - all
-
+headless:
+  - steps:
+      - args:
+          url: "{{BaseURL}}"
+        action: navigate
+      - action: waitload
+      - action: script
+        name: extract
+        args:
+          code: |
+            '\n' + [...new Set(Array.from(document.querySelectorAll('[src], [href], [url], [action]')).map(i => i.src || i.href || i.url || i.action))].join('\r\n') + '\n'
     extractors:
-      - type: regex
-        regex:
-          - "(http|https)://[a-zA-Z0-9./?=_-]*"
+      - type: kval
+        part: extract
+        kval:
+          - extract

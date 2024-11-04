@@ -1,23 +1,24 @@
-id: Avada
+id: avada
 
 info:
-  name: "Avada <= 7.4.1 - Reflected Cross-Site Scripting"
+  name: >
+    Avada <= 7.11.1 - Missing Authorization
   author: topscoder
-  severity: medium
-  description: "The Avada theme for WordPress is vulnerable to Reflected Cross-Site Scripting via improper escaping of bbPress searches in versions up to, and including, 7.4.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  severity: high
+  description: >
+    
   reference:
-    - https://theme-fusion.com/documentation/avada/installation-maintenance/avada-changelog/
-    - https://wpscan.com/vulnerability/eb172b07-56ab-41ce-92a1-be38bab567cb
-    - https://themeforest.net/item/avada-responsive-multipurpose-theme/2833226
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bfffed4d-dacb-4591-840c-45105a58362a?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/themes/Avada/"
     google-query: inurl:"/wp-content/themes/Avada/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,Avada,medium
+  tags: cve,wordpress,wp-theme,Avada,high
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 7.4.1')
+          - compare_versions(version, '<= 7.11.1')

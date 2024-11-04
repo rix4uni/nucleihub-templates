@@ -1,24 +1,22 @@
-id: ultimate_vc_addons-f0acd4c87ded0e3f2246be763149bf34
+id: Ultimate_VC_Addons
 
 info:
-  name: >
-    Ultimate Addons for WPBakery <= 3.16.11 - Stored Cross-Site Scripting
+  name: "Ultimate Addons for WPBakery <= 3.16.11 - Stored Cross-Site Scripting"
   author: topscoder
-  severity: low
-  description: >
-    The Ultimate Addons for WPBakery plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the tab parameter in versions up to, and including 3.16.11 via the update_ultimate_options AJAX action and ultimate_smooth_scroll_options[step] parameter. This makes it possible for low-level authenticated attackers to inject arbitrary web scripts in administrative pages that execute whenever a user accesses the page with the stored web scripts.
+  severity: critical
+  description: "The Ultimate Addons for WPBakery plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the tab parameter in versions up to, and including 3.16.11 via the update_ultimate_options AJAX action and ultimate_smooth_scroll_options[step] parameter. This makes it possible for low-level authenticated attackers to inject arbitrary web scripts in administrative pages that execute whenever a user accesses the page with the stored web scripts."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6b48cae6-254c-4882-a464-3a44a63cadf5?source=api-prod
+    - https://ultimate.brainstormforce.com/changelog/page/4/
+    - https://web.archive.org/web/20190329161343/http%3A//wphutte.com%3A80/ultimate-addons-for-visual-composer-v3-16-10-xss-csrf-rce
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 9.8
-    cve-id: 
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/Ultimate_VC_Addons/"
     google-query: inurl:"/wp-content/plugins/Ultimate_VC_Addons/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,Ultimate_VC_Addons,low
+  tags: cve,wordpress,wp-plugin,Ultimate_VC_Addons,critical
 
 http:
   - method: GET

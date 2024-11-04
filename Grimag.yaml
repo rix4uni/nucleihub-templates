@@ -1,24 +1,21 @@
-id: grimag-10469289d4ce07c3ee9e6caf587a4ad6
+id: Grimag
 
 info:
-  name: >
-    Grimag <= 1.1.0 - Open Redirection
+  name: "Grimag <= 1.1.0 - Open Redirection"
   author: topscoder
-  severity: high
-  description: >
-    The Grimag theme for WordPress is vulnerable to Open Redirect in versions up to, and including, 1.1.0 via the 'go.php' file. This makes it possible for unauthenticated attackers to redirect users to a potentially malicious website where they can gather sensitive user information for future attacks.
+  severity: low
+  description: "The Grimag theme for WordPress is vulnerable to Open Redirect in versions up to, and including, 1.1.0 via the 'go.php' file. This makes it possible for unauthenticated attackers to redirect users to a potentially malicious website where they can gather sensitive user information for future attacks."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7d81bc83-9e36-4fe9-8274-c65d17905f6e?source=api-prod
+
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 7.2
-    cve-id: 
+    cvss-metrics:
+    cvss-score:
+    cve-id:
   metadata:
-    fofa-query: "wp-content/themes/Grimag/"
-    google-query: inurl:"/wp-content/themes/Grimag/"
+    fofa-query: "wp-content/unknown/Grimag/"
+    google-query: inurl:"/wp-content/unknown/Grimag/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,Grimag,high
+  tags: cve,wordpress,wp-theme,Grimag,low
 
 http:
   - method: GET
@@ -56,4 +53,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.0')
+          - compare_versions(version, '<=  1.1.0')
