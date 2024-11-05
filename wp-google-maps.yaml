@@ -1,59 +1,48 @@
-id: wp-google-maps-b22a0fa736e14153e26df71a8021fbcb
+id: wordpress-wp-google-maps
 
 info:
-  name: >
-    WP Go Maps (formerly WP Google Maps) <= 9.0.38 - Authenticated (Contributor+) Stored Cross-Site Scripting
-  author: topscoder
-  severity: low
-  description: >
-    The WP Go Maps (formerly WP Google Maps) plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Custom JS option in versions up to, and including, 9.0.38. This makes it possible for authenticated attackers that have been explicitly granted permissions by an administrator, with contributor-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Version 9.0.39 adds a caution to make administrators aware of the possibility for abuse if permissions are granted to lower-level users.
+  name: WP Go Maps (formerly WP Google Maps) Detection
+  author: ricardomaia
+  severity: info
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dd0597d2-07ba-4fb4-bf73-95770f8c3d6b?source=api-prod
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 6.4
-    cve-id: 
+    - https://wordpress.org/plugins/wp-google-maps/
   metadata:
-    fofa-query: "wp-content/plugins/wp-google-maps/"
-    google-query: inurl:"/wp-content/plugins/wp-google-maps/"
-    shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-google-maps,low
+    plugin_namespace: wp-google-maps
+    wpscan: https://wpscan.com/plugin/wp-google-maps
+  tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
-    redirects: true
-    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/wp-google-maps/readme.txt"
 
+    payloads:
+      last_version: helpers/wordpress/plugins/wp-google-maps.txt
+
     extractors:
       - type: regex
-        name: version
         part: body
-        group: 1
         internal: true
+        name: internal_detected_version
+        group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
       - type: regex
-        name: version
         part: body
+        name: detected_version
         group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
-    matchers-condition: and
+    matchers-condition: or
     matchers:
-      - type: status
-        status:
-          - 200
-
-      - type: word
-        words:
-          - "wp-google-maps"
-        part: body
-
       - type: dsl
+        name: "outdated_version"
         dsl:
-          - compare_versions(version, '<= 9.0.38')
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'

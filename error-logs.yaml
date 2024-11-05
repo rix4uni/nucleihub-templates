@@ -1,13 +1,12 @@
 id: error-logs
 
 info:
-  name: Error Log Files Detect
-  author: Redflare-Cyber
-  severity: medium
-  description: Error log files were exposed, enhanced from official nuclei templates with added paths and matchers.
+  name: Common Error Log Files
+  author: geeknik,daffainfo,ELSFA7110,Hardik-Solanki
+  severity: low
+  description: Error log files were exposed.
   metadata:
     max-request: 29
-    shodan-query: html:"error.log"
   tags: logs,exposure,error
 
 http:
@@ -45,31 +44,8 @@ http:
         - "/routes/error_log"
         - "/{{Hostname}}/error.log"
         - "/{{Hostname}}/errors.log"
-        - "/debug.log"
-        - "/application.log"
-        - "/server.log"
-        - "/system.log"
-        - "/logs/debug.log"
-        - "/logs/application.log"
-        - "/logs/server.log"
-        - "/logs/system.log"
-        - "/logs/debug.txt"
-        - "/logs/app.log"
-        - "/logs/php_error.log"
-        - "/logs/php_errors.log"
-        - "/logs/mysql_errors.log"
-        - "/logs/db_errors.log"
-        - "/logs/access.log"
-        - "/logs/access.txt"
-        - "/logs/access_log"
-        - "/logs/access_log.txt"
-        - "/storage/logs/laravel.log"
-        - "/wp-content/debug.log"
-        - "/app/logs/error.log"
-        - "/app/logs/errors.log"
-        - "/app/logs/debug.log"
 
-    stop-at-first-match: false
+    stop-at-first-match: true
 
     matchers-condition: and
     matchers:
@@ -83,31 +59,16 @@ http:
           - "Exception"
           - "Fatal"
           - "FastCGI sent in stderr"
-          - "Traceback (most recent call last)"
-          - "Error in application"
-          - "Stack trace"
-          - "Undefined variable"
-          - "Parse error"
-          - "Warning"
-          - "Notice"
-          - "NullPointerException"
-          - "TypeError"
-          - "ReferenceError"
-          - "Uncaught exception"
-          - "StackOverflowError"
-          - "ERROR:"
-          - "CRITICAL:"
-          - "FATAL:"
-          - "WARNING:"
         condition: or
 
       - type: word
         condition: or
         words:
-          - "text/plain"
-          - "application/octet-stream"
+          - text/plain
+          - application/octet-stream
         part: header
 
       - type: status
         status:
           - 200
+# digest: 4a0a00473045022017663309e37ec100676a46d12842accb8f0908cb56129107a1a384d9df046d4a0221009df958466d672148f1d17432e7710fc5c16529a2ba19bf4fdc1683730f099718:922c64590222798bb761d5b6d8e72950

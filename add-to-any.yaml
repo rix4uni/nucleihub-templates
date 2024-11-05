@@ -1,58 +1,48 @@
-id: add-to-any-fbfa59422d3ee961cc2146deb28c1df8
+id: wordpress-add-to-any
 
 info:
-  name: "AddToAny Share Buttons <= 1.7.14 - HTTP Host Header Injection"
-  author: topscoder
-  severity: medium
-  description: "The AddToAny Share Buttons plugin for WordPress is vulnerable to Host Header Injections in versions up to, and including, 1.7.14. This is due to a failure to properly validate the HTTP request header. This makes it possible for unauthorized attackers to poison the website cache and log users credentials."
+  name: AddToAny Share Buttons Detection
+  author: ricardomaia
+  severity: info
   reference:
-    - https://plugins.trac.wordpress.org/changeset/1713858/add-to-any
-    - https://wpscan.com/vulnerability/469e8aa7-b689-438c-8421-fba8ae5972fb
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-addtoany-share-buttons-host-header-injection-1-7-14/
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:N
-    cvss-score: 4.7
-    cve-id:
+    - https://wordpress.org/plugins/add-to-any/
   metadata:
-    fofa-query: "wp-content/plugins/add-to-any/"
-    google-query: inurl:"/wp-content/plugins/add-to-any/"
-    shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,add-to-any,medium
+    plugin_namespace: add-to-any
+    wpscan: https://wpscan.com/plugin/add-to-any
+  tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
-    redirects: true
-    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/add-to-any/readme.txt"
 
+    payloads:
+      last_version: helpers/wordpress/plugins/add-to-any.txt
+
     extractors:
       - type: regex
-        name: version
         part: body
-        group: 1
         internal: true
+        name: internal_detected_version
+        group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
       - type: regex
-        name: version
         part: body
+        name: detected_version
         group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
-    matchers-condition: and
+    matchers-condition: or
     matchers:
-      - type: status
-        status:
-          - 200
-
-      - type: word
-        words:
-          - "add-to-any"
-        part: body
-
       - type: dsl
+        name: "outdated_version"
         dsl:
-          - compare_versions(version, '<= 1.7.14')
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'

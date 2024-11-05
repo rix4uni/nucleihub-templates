@@ -140,7 +140,7 @@ http:
           - '(?i)\bSPYKIDS\b'
           - '(?i)\bCyb3r_Sw0rd\b'
           - '(?i)\blinuXploit_crew\b'
-          - '(?i)\bIr4dex    735\b'
+          - '(?i)\bIr4dex	735\b'
           - '(?i)\bKingSam\b'
           # Others groups or attackers
           - '(?i)\bLapsus$\b'
@@ -291,7 +291,7 @@ http:
           - '.{0,5}(?i)\bSPYKIDS\b.{0,5}'
           - '.{0,5}(?i)\bCyb3r_Sw0rd\b.{0,5}'
           - '.{0,5}(?i)\blinuXploit_crew\b.{0,5}'
-          - '.{0,5}(?i)\bIr4dex    735\b.{0,5}'
+          - '.{0,5}(?i)\bIr4dex	735\b.{0,5}'
           - '.{0,5}(?i)\bKingSam\b.{0,5}'
 
       - type: regex
