@@ -2,24 +2,42 @@ id: host-header-injection
 
 info:
   name: Host Header Injection
-  author: ProjectDiscoveryAI
-  severity: high
-  description: |
-    Detects potential host header injection vulnerabilities.
+  author: pdteam
+  severity: info
+  description: Host header injection
+
+variables:
+  domain: "oast.fun"
 
 http:
-  - raw:
-      - |
-        GET / HTTP/1.1
-        Host: {{Hostname}}
-        X-Forwarded-Host: evil.com
+  - pre-condition:
+      - type: dsl
+        dsl:
+          - 'method == "GET"'
+          - 'contains(path,"/host-header-lab")' # for integration testing only
+        condition: and
+    
+    fuzzing:
+      - part: header
+        type: replace
+        mode: single
+        fuzz:
+          X-Forwarded-For: "{{domain}}"
+          X-Forwarded-Host: "{{domain}}"
+          Forwarded: "{{domain}}"
+          X-Real-IP: "{{domain}}"
+          X-Original-URL: "{{domain}}"
+          X-Rewrite-URL: "{{domain}}"
+          Host: "{{domain}}"
+          # " Host": "{{domain}}" # space before host (not supported yet due to lack of unsafe mode)
 
-    matchers-condition: and
     matchers:
-      - type: word
-        words:
-          - "evil.com"
-        part: body
       - type: status
-        status:
+        status: 
           - 200
+
+      - type: word
+        part: body
+        words:
+          - "Interactsh"
+    matchers-condition: and

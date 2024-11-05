@@ -1,11 +1,12 @@
 id: xbmsp
 info:
-  name: Media File XStream
+  name: CcXstream Media Server
   author: nmap,cn-kali-team
   tags: detect,tech,xbmsp,service
   severity: info
   metadata:
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +17,4 @@ tcp:
   - name: xbmsp
     type: regex
     regex:
-    - ^XBMSP-1\.0 1\.0 Media File XStream Server \n
+    - ^XBMSP-1\.0 1\.0 CcXstream Media Server (\d[-.\w]+)\n

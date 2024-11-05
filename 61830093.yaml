@@ -5,7 +5,7 @@ info:
   tags: detect,tech,imap-proxy,service
   severity: info
   metadata:
-    info: disabled
+    info: 'Banner: $1'
     product: universal_server
     rarity: 0
     vendor: pgp
@@ -20,4 +20,4 @@ tcp:
   - name: imap-proxy
     type: regex
     regex:
-    - ^\* BYE PGP Universal no imap4 service here\r\n
+    - '^\* OK PGP Universal IMAP4rev1 service ready \(proxied server greeted us with: ([^)]+)\)\r\n'

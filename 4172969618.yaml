@@ -1,15 +1,17 @@
 id: pop3-proxy
 info:
-  name: PGP Universal pop3 proxy
+  name: AVG pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    info: 'Proxied greeting: $1'
-    product: universal_server
+    hostname: $1
+    operating_system: Windows
+    product: anti-virus
     rarity: 0
-    vendor: pgp
+    vendor: avg
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +22,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK (.*) \(PGP Universal service is proxying this connection\)\r\n
+    - ^\+OK AVG POP3 Proxy Server <[\d.]+@([-\w_.]+)> ([\d.]+)/[\d.]+ \[[\d/.]+\]\r\n

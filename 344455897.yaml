@@ -1,11 +1,11 @@
 id: chargen
 info:
-  name: Tektronix Phaser chargen
+  name: Linux chargen
   author: nmap,cn-kali-team
   tags: detect,tech,chargen,service
   severity: info
   metadata:
-    device_type: printer
+    operating_system: Linux
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: chargen
     type: regex
     regex:
-    - ^The quick brown fox jumps over the lazy dog\. 1234567890\r\n
+    - ^!"#\$%\&'\(\)\*\+,-\./0123456789:;<=>\?\@ABCDEFGHIJKLMNOPQRSTUVWXYZ\[\\\]\^_`abcdefgh\r\n"#\$%\&'\(\)\*\+,-\./0123456789:;<=>\?\@ABCDEF

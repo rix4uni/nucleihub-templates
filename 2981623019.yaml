@@ -1,14 +1,12 @@
 id: tftp
 info:
-  name: HP Intelligent Management Center tftpd
+  name: Plan 9 tftpd
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    product: intelligent_management_center
+    operating_system: Plan 9
     rarity: 5
-    vendor: hp
-    verified: true
 tcp:
 - name: dnsstatus-request
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - ^\0\x05\0\0Not defined, see error message\(if any\)\.\0
+    - ^\0\x05\0\x04Illegal TFTP operation\0

@@ -1,0 +1,5 @@
+argparse
+requests
+lxml
+colorama
+pyyaml

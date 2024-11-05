@@ -1,14 +1,14 @@
 id: finger
 info:
-  name: Hummingbird fingerd
+  name: OpenLDAP fingerd
   author: nmap,cn-kali-team
   tags: detect,tech,finger,service
   severity: info
   metadata:
-    info: WinNT $1 build $2
-    operating_system: Windows NT
+    product: openldap
     rarity: 0
-    version: $3
+    vendor: openldap
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +19,4 @@ tcp:
   - name: finger
     type: regex
     regex:
-    - ^Windows NT Version ([\d.]+) build (\d+), \d+ processors? \(.*\)\r\nFingerDW V([\d.]+) - Hummingbird Ltd\.\n
+    - ^OpenLDAP Finger Service\.\.\.\r\n

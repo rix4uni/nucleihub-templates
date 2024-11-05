@@ -1,6 +1,6 @@
 id: kerberos-sec
 info:
-  name: Heimdal Kerberos
+  name: MIT Kerberos
   author: nmap,cn-kali-team
   tags: detect,tech,kerberos-sec,service
   severity: info
@@ -8,8 +8,9 @@ info:
     info: 'server time: $1-$2-$3 $4:$5:$6Z'
     product: kerberos
     rarity: 5
-    vendor: heimdal
+    vendor: mit
     verified: true
+    version: 1.3 - 1.8
 tcp:
 - name: kerberos
   inputs:
@@ -21,4 +22,4 @@ tcp:
   - name: kerberos-sec
     type: regex
     regex:
-    - (?i)^~[\x60-\x62]0[\x5e-\x60]\xa0\x03\x02\x01\x05\xa1\x03\x02\x01\x1e\xa4\x11\x18\x0f(\d\d\d\d)(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)Z\xa5[\x03-\x05]\x02(?:\x03...|\x02..|\x01.)\xa6\x03\x02\x01<\xa9\x04\x1b\x02NM\xaa\x170\x15\xa0\x03\x02\x01\0\xa1\x0e0\x0c\x1b\x06krbtgt\x1b\x02NM\xab\x16\x1b\x14No client in request$
+    - (?i)^~[\x6b-\x6d]0[\x69-\x6b]\xa0\x03\x02\x01\x05\xa1\x03\x02\x01\x1e\xa2\x11\x18\x0f\d{14}Z\xa4\x11\x18\x0f(\d\d\d\d)(\d\d)(\d\d)(\d\d)(\d\d)(\d\d)Z\xa5[\x03-\x05]\x02(?:\x03...|\x02..|\x01.)\xa6\x03\x02\x01\x06\xa9\x04\x1b\x02NM\xaa\x170\x15\xa0\x03\x02\x01\0\xa1\x0e0\x0c\x1b\x06krbtgt\x1b\x02NM\xab\x0e\x1b\x0cNULL_CLIENT\0$
