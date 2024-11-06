@@ -5,7 +5,9 @@ info:
   tags: detect,tech,ganglia,service
   severity: info
   metadata:
+    info: 'Cluster name: $3; Owner: $4; Source: $2'
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +18,4 @@ tcp:
   - name: ganglia
     type: regex
     regex:
-    - '(?i)^<\?xml version=\"1\.0\".*<!DOCTYPE GANGLIA_XML \[\n   <!ELEMENT GANGLIA_XML \(GRID\x7cCLUSTER\x7cHOST\)\*>\n      <!ATTLIST GANGLIA_XML VERSION CDATA #REQUIRED>\n'
+    - (?i)^<\?xml version=\"1\.0\".*<!DOCTYPE GANGLIA_XML.*<GANGLIA_XML VERSION=\"([^\"]+)\" SOURCE=\"([^\"]+)\">.*<CLUSTER NAME=\"([^\"]+)\" LOCALTIME=\"\d+\" OWNER=\"([^\"]+)\"

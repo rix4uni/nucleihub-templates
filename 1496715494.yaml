@@ -5,9 +5,8 @@ info:
   tags: detect,tech,oracle-tns,service
   severity: info
   metadata:
-    info: for $1
+    info: unauthorized
     rarity: 7
-    version: $2
 tcp:
 - name: oracle-tns
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: oracle-tns
     type: regex
     regex:
-    - '(?i)^\0.\0\0[\x02\x04]\0\0\0.*TNSLSNR for ([-.+/ \w]{2,24}): Version ([-\d.]+) - Production'
+    - ^..\0\0\x04\0\0\0\"\0..\(DESCRIPTION=\(TMP=\)\(VSNNUM=\d+\)\(ERR=1189\)\(ERROR_STACK=\(ERROR=\(CODE=1189\)\(EMFI=4\)\)

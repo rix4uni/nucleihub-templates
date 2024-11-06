@@ -5,11 +5,13 @@ info:
   tags: detect,tech,sieve,service
   severity: info
   metadata:
-    info: included w/cyrus imap
+    info: Red Hat
+    operating_system: Linux
     product: cyrus_imap_server
     rarity: 0
     vendor: cmu
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +22,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - '^NO Fatal error: Error initializing actions\r\n$'
+    - ^\"IMPLEMENTATION\" \"Cyrus timsieved v([\w._-]+-Red Hat[- ][\w._+-]+)\"\r\n

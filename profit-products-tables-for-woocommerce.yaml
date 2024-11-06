@@ -1,15 +1,15 @@
-id: profit-products-tables-for-woocommerce-a8cf79991fa8fec12ae5a0d63e3e5058
+id: profit-products-tables-for-woocommerce-48c7496a59f1b46c410766acb760066a
 
 info:
   name: >
-    Active Products Tables for WooCommerce. Professional products tables for WooCommerce store <= 1.0.6.1 - Cross-Site Request Forgery
+    Active Products Tables for WooCommerce. Use constructor to create tables <= 1.0.6.4 - Authenticated (Contributor+) Stored Cross-Site Scripting via woot_button Shortcode
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5069fbc4-b3c4-4c0b-892c-2c83f35dc2fe?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4a13b13e-72d3-43c9-b5ec-d499f3b22091?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/profit-products-tables-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/profit-products-tables-for-woocommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,profit-products-tables-for-woocommerce,medium
+  tags: cve,wordpress,wp-plugin,profit-products-tables-for-woocommerce,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.6.1')
+          - compare_versions(version, '<= 1.0.6.4')

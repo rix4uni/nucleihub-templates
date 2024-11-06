@@ -21,4 +21,4 @@ tcp:
   - name: pop2
     type: regex
     regex:
-    - ^\+ POP2 ([\w._-]+) ([\w._-]+) server ready\r\n$
+    - '^\+ POP2 ([\w._-]+)(?: \[[\d.]+\])? v([\w._-]+) server ready\r\n$'

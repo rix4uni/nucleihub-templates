@@ -1,11 +1,11 @@
 id: directconnect
 info:
-  name: Shadows DirectConnect hub
+  name: PtokaX directconnect hub
   author: nmap,cn-kali-team
   tags: detect,tech,directconnect,service
   severity: info
   metadata:
-    info: Banned for $1 minutes
+    info: Redirected to $1
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: directconnect
     type: regex
     regex:
-    - <Hub-Security> You are being banned for (\d+) minutes \(by SDCH Anti Hammering\)\.\|
+    - <Hub-Security> You are being redirected to ([\d.]+)\|\$ForceMove [\d.]+\|

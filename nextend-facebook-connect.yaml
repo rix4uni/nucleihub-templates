@@ -1,48 +1,60 @@
-id: wordpress-nextend-facebook-connect
+id: nextend-facebook-connect-382f0d521c8395fd1265e1b77fd47050
 
 info:
-  name: Nextend Social Login and Register Detection
-  author: ricardomaia
-  severity: info
+  name: "Nextend Facebook Connect <= 1.5.8 - Cross-Site Request Forgery"
+  author: topscoder
+  severity: high
+  description: "The Nextend Facebook Connect plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.5.8. This is due to missing nonce validation on the store_settings() function. This makes it possible for unauthenticated attackers to update the plugins settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
   reference:
-    - https://wordpress.org/plugins/nextend-facebook-connect/
+    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-nextend-facebook-connect-unspecified-vulnerability-1-5-7/
+    - https://wpscan.com/vulnerability/281fe3cc-7079-403e-83d6-8b7e8811edbc
+    - https://plugins.trac.wordpress.org/browser/nextend-facebook-connect/tags/1.6.0/readme.txt#L81
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=1372066%40nextend-facebook-connect&new=1372066%40nextend-facebook-connect&sfp_email=&sfph_mail=
+    - https://plugins.trac.wordpress.org/browser/nextend-facebook-connect/tags/1.6.0/readme.txt#L78
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id:
   metadata:
-    plugin_namespace: nextend-facebook-connect
-    wpscan: https://wpscan.com/plugin/nextend-facebook-connect
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/nextend-facebook-connect/"
+    google-query: inurl:"/wp-content/plugins/nextend-facebook-connect/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,nextend-facebook-connect,high
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/nextend-facebook-connect/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/nextend-facebook-connect.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "nextend-facebook-connect"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 1.5.8')
