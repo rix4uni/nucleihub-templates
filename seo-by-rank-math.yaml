@@ -1,59 +1,48 @@
-id: seo-by-rank-math-fe744663adf0dc5658b92433c0e1f16a
+id: wordpress-seo-by-rank-math
 
 info:
-  name: >
-    Rank Math SEO <= 1.0.42.1 - Missing Authorization
-  author: topscoder
-  severity: medium
-  description: >
-    The Rank Math SEO plugin for WordPress is vulnerable to authorization bypass due to missing access controls on its "disable competitor plugins" functionality in versions up to, and including, 1.0.42.1. This makes it possible for subscriber-level attackers to disable other SEO or sitemap plugins on the site.
+  name: Rank Math SEO – AI SEO Tools to Dominate SEO Rankings Detection
+  author: ricardomaia
+  severity: info
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/138e0a38-c922-44d1-9fe6-2439ec32cf39?source=api-prod
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L
-    cvss-score: 5.4
-    cve-id: 
+    - https://wordpress.org/plugins/seo-by-rank-math/
   metadata:
-    fofa-query: "wp-content/plugins/seo-by-rank-math/"
-    google-query: inurl:"/wp-content/plugins/seo-by-rank-math/"
-    shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,seo-by-rank-math,medium
+    plugin_namespace: seo-by-rank-math
+    wpscan: https://wpscan.com/plugin/seo-by-rank-math
+  tags: tech,wordpress,wp-plugin,top-100,top-200
 
 http:
   - method: GET
-    redirects: true
-    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/seo-by-rank-math/readme.txt"
 
+    payloads:
+      last_version: helpers/wordpress/plugins/seo-by-rank-math.txt
+
     extractors:
       - type: regex
-        name: version
         part: body
-        group: 1
         internal: true
+        name: internal_detected_version
+        group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
       - type: regex
-        name: version
         part: body
+        name: detected_version
         group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
-    matchers-condition: and
+    matchers-condition: or
     matchers:
-      - type: status
-        status:
-          - 200
-
-      - type: word
-        words:
-          - "seo-by-rank-math"
-        part: body
-
       - type: dsl
+        name: "outdated_version"
         dsl:
-          - compare_versions(version, '< 1.0.42.2')
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'

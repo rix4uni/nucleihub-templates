@@ -1,58 +1,48 @@
-id: broken-link-checker-6163925230192006f2d2af7f98155029
+id: wordpress-broken-link-checker
 
 info:
-  name: "Broken Link Checker < 1.10.2 - Authenticated Stored Cross-Site Scripting"
-  author: topscoder
-  severity: medium
-  description: "The Broken Link Checker plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘exclusion_list’ parameter in versions up to, and including, 1.10.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  name: Broken Link Checker Detection
+  author: ricardomaia
+  severity: info
   reference:
-    - https://wordpress.org/plugins/broken-link-checker/#developers
-    - https://wpscan.com/vulnerability/b81639a2-c281-4d9f-a084-f845ab85d225
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=1038180%40broken-link-checker&new=1038180%40broken-link-checker&sfp_email=&sfph_mail=
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 6.4
-    cve-id:
+    - https://wordpress.org/plugins/broken-link-checker/
   metadata:
-    fofa-query: "wp-content/plugins/broken-link-checker/"
-    google-query: inurl:"/wp-content/plugins/broken-link-checker/"
-    shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,broken-link-checker,medium
+    plugin_namespace: broken-link-checker
+    wpscan: https://wpscan.com/plugin/broken-link-checker
+  tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
-    redirects: true
-    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/broken-link-checker/readme.txt"
 
+    payloads:
+      last_version: helpers/wordpress/plugins/broken-link-checker.txt
+
     extractors:
       - type: regex
-        name: version
         part: body
-        group: 1
         internal: true
+        name: internal_detected_version
+        group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
       - type: regex
-        name: version
         part: body
+        name: detected_version
         group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
-    matchers-condition: and
+    matchers-condition: or
     matchers:
-      - type: status
-        status:
-          - 200
-
-      - type: word
-        words:
-          - "broken-link-checker"
-        part: body
-
       - type: dsl
+        name: "outdated_version"
         dsl:
-          - compare_versions(version, '< 1.10.2')
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
