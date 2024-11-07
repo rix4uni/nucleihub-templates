@@ -1,59 +1,48 @@
-id: google-analytics-for-wordpress-26a6afe3487a34615c46bd9a9e23f6d7
+id: wordpress-google-analytics-for-wordpress
 
 info:
-  name: >
-    MonsterInsights – Google Analytics Dashboard for WordPress <= 5.3.2 - Authenticated Stored Cross-Site Scripting
-  author: topscoder
-  severity: low
-  description: >
-    The MonsterInsights – Google Analytics Dashboard for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘manual_ua_code_field’ parameter in versions up to, and including, 5.3.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers with admin-level privileges to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
+  name: MonsterInsights – Google Analytics Dashboard for WordPress (Website Stats Made Easy) Detection
+  author: ricardomaia
+  severity: info
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7e9dcedd-aa81-47c4-9fc5-cecc7bc394b5?source=api-prod
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 5.5
-    cve-id: 
+    - https://wordpress.org/plugins/google-analytics-for-wordpress/
   metadata:
-    fofa-query: "wp-content/plugins/google-analytics-for-wordpress/"
-    google-query: inurl:"/wp-content/plugins/google-analytics-for-wordpress/"
-    shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,google-analytics-for-wordpress,low
+    plugin_namespace: google-analytics-for-wordpress
+    wpscan: https://wpscan.com/plugin/google-analytics-for-wordpress
+  tags: tech,wordpress,wp-plugin,top-100,top-200
 
 http:
   - method: GET
-    redirects: true
-    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/google-analytics-for-wordpress/readme.txt"
 
+    payloads:
+      last_version: helpers/wordpress/plugins/google-analytics-for-wordpress.txt
+
     extractors:
       - type: regex
-        name: version
         part: body
-        group: 1
         internal: true
+        name: internal_detected_version
+        group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
       - type: regex
-        name: version
         part: body
+        name: detected_version
         group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
-    matchers-condition: and
+    matchers-condition: or
     matchers:
-      - type: status
-        status:
-          - 200
-
-      - type: word
-        words:
-          - "google-analytics-for-wordpress"
-        part: body
-
       - type: dsl
+        name: "outdated_version"
         dsl:
-          - compare_versions(version, '<= 5.3.2')
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'

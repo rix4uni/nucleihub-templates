@@ -1,60 +1,48 @@
-id: w3-total-cache-11901e3cd1d1d20151a2e2366e67aa1c
+id: wordpress-w3-total-cache
 
 info:
-  name: "W3 Total Cache <= 0.9.4.1 - Cross-Site Scripting via request_id"
-  author: topscoder
-  severity: medium
-  description: "The W3 Total Cache plugin plugin for WordPress is vulnerable to Cross-Site Scripting via the 'request_id' parameter in versions up to, and including, 0.9.4.1 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
+  name: W3 Total Cache Detection
+  author: ricardomaia
+  severity: info
   reference:
-    - https://blog.zerial.org/seguridad/vulnerabilidad-cross-site-scripting-en-wordpress-w3-total-cache/
-    - https://seclists.org/fulldisclosure/2016/Sep/52
-    - https://sumofpwn.nl/advisory/2016/reflected_cross_site_scripting_vulnerability_in_w3_total_cache_plugin.html
-    - https://seclists.org/fulldisclosure/2016/Nov/63
-    - https://wordpress.org/plugins/w3-total-cache/#developers
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    - https://wordpress.org/plugins/w3-total-cache/
   metadata:
-    fofa-query: "wp-content/plugins/w3-total-cache/"
-    google-query: inurl:"/wp-content/plugins/w3-total-cache/"
-    shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,w3-total-cache,medium
+    plugin_namespace: w3-total-cache
+    wpscan: https://wpscan.com/plugin/w3-total-cache
+  tags: tech,wordpress,wp-plugin,top-100,top-200
 
 http:
   - method: GET
-    redirects: true
-    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/w3-total-cache/readme.txt"
 
+    payloads:
+      last_version: helpers/wordpress/plugins/w3-total-cache.txt
+
     extractors:
       - type: regex
-        name: version
         part: body
-        group: 1
         internal: true
+        name: internal_detected_version
+        group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
       - type: regex
-        name: version
         part: body
+        name: detected_version
         group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
-    matchers-condition: and
+    matchers-condition: or
     matchers:
-      - type: status
-        status:
-          - 200
-
-      - type: word
-        words:
-          - "w3-total-cache"
-        part: body
-
       - type: dsl
+        name: "outdated_version"
         dsl:
-          - compare_versions(version, '<= 0.9.4.1')
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'

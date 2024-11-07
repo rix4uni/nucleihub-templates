@@ -1,59 +1,50 @@
-id: easy-fancybox-1d842b814b642f07c499e171a152dc4f
+id: wordpress-easy-fancybox
 
 info:
-  name: >
-    Firelight Lightbox <= 2.3.3 - Authenticated (Author+) Stored Cross-Site Scripting
-  author: topscoder
-  severity: low
-  description: >
-    
+  name: Easy FancyBox Detection
+  author: ricardomaia
+  severity: info
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e69392a8-da0a-47af-b851-0bc36727ff5a?source=api-scan
-  classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    - https://wordpress.org/plugins/easy-fancybox/
   metadata:
-    fofa-query: "wp-content/plugins/easy-fancybox/"
-    google-query: inurl:"/wp-content/plugins/easy-fancybox/"
-    shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,easy-fancybox,low
+    max-request: 1
+    plugin_namespace: easy-fancybox
+    wpscan: https://wpscan.com/plugin/easy-fancybox
+  tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
-    redirects: true
-    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/easy-fancybox/readme.txt"
 
+    payloads:
+      last_version: helpers/wordpress/plugins/easy-fancybox.txt
+
     extractors:
       - type: regex
-        name: version
         part: body
-        group: 1
         internal: true
+        name: internal_detected_version
+        group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
       - type: regex
-        name: version
         part: body
+        name: detected_version
         group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
-    matchers-condition: and
+    matchers-condition: or
     matchers:
-      - type: status
-        status:
-          - 200
-
-      - type: word
-        words:
-          - "easy-fancybox"
-        part: body
-
       - type: dsl
+        name: "outdated_version"
         dsl:
-          - compare_versions(version, '<= 2.3.3')
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4a0a0047304502202173e542c2a8571d03d9baefb4f5679a0b68c5d7881f8ec5e8253ee6d041f7df022100878b3c1d335814f9183863b6e1b4c70c4b6fdd4a43a5f4bbd76b8af21dda0871:922c64590222798bb761d5b6d8e72950
