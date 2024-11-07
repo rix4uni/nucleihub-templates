@@ -18,4 +18,4 @@ tcp:
   - name: distccd
     type: regex
     regex:
-    - '^DONE00000001.*ccache: failed to create /usr/share/distcc/\.ccache \(Permission denied\)\n'
+    - '^DONE00000001STAT00000100SERR000000\w+/tmp/distccd_.*:\d+: internal compiler error: Segmentation fault'

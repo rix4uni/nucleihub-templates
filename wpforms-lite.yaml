@@ -1,48 +1,59 @@
-id: wordpress-wpforms-lite
+id: wpforms-lite-fbb96cf63d39d29aaff5ffd73a1fe7c2
 
 info:
-  name: WPForms – Easy Form Builder for WordPress – Contact Forms, Payment Forms, Surveys, & More Detection
-  author: ricardomaia
-  severity: info
+  name: "Contact Form by WPForms <= 1.4.8 - Reflected Cross-Site Scripting"
+  author: topscoder
+  severity: high
+  description: "The Contact Form by WPForms for WordPress is vulnerable to Reflected Cross-Site Scripting in versions up to, and including, 1.4.8 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
   reference:
-    - https://wordpress.org/plugins/wpforms-lite/
+    - https://plugins.trac.wordpress.org/changeset/1935751/wpforms-lite
+    - https://patchstack.com/database/vulnerability/wpforms-lite/wordpress-contact-form-by-wpforms-plugin-1-4-8-unauthenticated-cross-site-scripting-xss-vulnerability
+    - https://web.archive.org/web/20201014050019/https%3A//demo.ripstech.com/issue/96/136/1/52191/details
+    - https://web.archive.org/web/20200513054402/https%3A//www.ripstech.com/php-security-calendar-2018/
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L
+    cvss-score: 7.1
+    cve-id:
   metadata:
-    plugin_namespace: wpforms-lite
-    wpscan: https://wpscan.com/plugin/wpforms-lite
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/wpforms-lite/"
+    google-query: inurl:"/wp-content/plugins/wpforms-lite/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,wpforms-lite,high
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/wpforms-lite/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/wpforms-lite.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "wpforms-lite"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '< 1.4.8.1')

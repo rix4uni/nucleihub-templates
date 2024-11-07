@@ -1,13 +1,15 @@
 id: smtp
 info:
-  name: StrongMail smtpd
+  name: Lotus Notes SMTP
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
+    product: lotus_domino
     rarity: 0
-    version: $2
+    vendor: ibm
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - '^220 ([\w_.-]+) StrongMail SMTP Service Version: (\S+) ready'
+    - ^220 ([-.\w]+) Lotus SMTP MTA Service Ready\r\n$

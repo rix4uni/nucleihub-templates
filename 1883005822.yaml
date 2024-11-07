@@ -1,12 +1,10 @@
 id: imap-proxy
 info:
-  name: AVG anti-virus IMAP proxy
+  name: imapproxy
   author: nmap,cn-kali-team
   tags: detect,tech,imap-proxy,service
   severity: info
   metadata:
-    info: connection limit exceeded by $1
-    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +16,4 @@ tcp:
   - name: imap-proxy
     type: regex
     regex:
-    - ^ BYE concurrent connection limit in AVG exceeded\(pass:\d+, processes:([\w._-]+)\[\d+\]\)\r\n
+    - \* OK \[CAPABILITY IMAP4rev1 UIDPLUS CHILDREN NAMESPACE THREAD=ORDEREDSUBJECT THREAD=REFERENCES SORT QUOTA IDLE ACL ACL2=UNION\] Courier-IMAP ready\. Copyright 1998-2008 Double Precision, Inc\. See COPYING for distribution information\.\r\n

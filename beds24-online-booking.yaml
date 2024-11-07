@@ -1,15 +1,15 @@
-id: beds24-online-booking-fc0c29669b9633228d75eb87e133c678
+id: beds24-online-booking-544d2f1fd646c6db19255d9d4e75d893
 
 info:
   name: >
-    Beds24 Online Booking <= 2.0.23 - Authenticated(Administrator+) Stored Cross-Site Scripting
+    Beds24 Online Booking <= 2.0.25 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ca5bc2af-394b-4fc1-b6c3-ed9ff0a5959a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7d249bc4-1230-4d85-8b29-e00a9cb80434?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.23')
+          - compare_versions(version, '<= 2.0.25')

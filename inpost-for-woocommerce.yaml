@@ -1,49 +1,59 @@
-id: wordpress-inpost-for-woocommerce
+id: inpost-for-woocommerce-97902ed319f08ee51d1d432495693fd7
 
 info:
-  name: InPost PL for WooCommerce Detection
-  author: mailler
-  severity: info
+  name: >
+    InPost for WooCommerce <= 1.4.0 and InPost PL <= 1.4.4 - Missing Authorization to Unauthenticated Arbitrary File Read and Delete
+  author: topscoder
+  severity: high
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/inpost-for-woocommerce/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7b57e750-71ec-4c52-999b-6c14a78c3bff?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: inpost-for-woocommerce
-    wpscan: https://wpscan.com/plugin/inpost-for-woocommerce/
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/inpost-for-woocommerce/"
+    google-query: inurl:"/wp-content/plugins/inpost-for-woocommerce/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,inpost-for-woocommerce,high
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/inpost-for-woocommerce/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/inpost-for-woocommerce.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "inpost-for-woocommerce"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a004730450220162a0276bec8f406269881562a072ecbb54e0a1d00ec86dd45fc49b4a544db94022100d92ee6735b13802336631eabf1d28ccb77efe44882231dfe6a746c5a0e867dd6:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 1.4.4')

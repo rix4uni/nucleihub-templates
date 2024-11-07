@@ -1,15 +1,13 @@
 id: domain
 info:
-  name: ISC BIND
+  name: PowerDNS Authoritative Server
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    info: Debian Linux 7.0 (Wheezy)
-    operating_system: Linux
-    product: bind
+    product: authoritative
     rarity: 1
-    vendor: isc
+    vendor: powerdns
     verified: true
     version: $1
 tcp:
@@ -23,4 +21,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}(\d[-\w.+~]*?)-9wheezy\w+-[Dd]ebian
+    - \x07version\x04bind\0\0\x10\0[\x01\x03]\xc0\x0c\0\x10\0[\x01\x03].{7}PowerDNS.Authoritative.Server.(\d[\w.-]+)

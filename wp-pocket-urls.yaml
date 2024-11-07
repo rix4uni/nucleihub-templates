@@ -1,15 +1,15 @@
-id: wp-pocket-urls-254217ba23bf67e5ab1f8ee2edeef109
+id: wp-pocket-urls-e2656a80e16ebe4db1ffd0ae706109ac
 
 info:
   name: >
-    WP Pocket URLs <= 1.0.2 - Reflected Cross-Site Scripting
+    WP Pocket URLs <= 1.0.3 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8a22873f-6f09-4183-92c5-a84e0d378920?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d1845942-2638-42db-9fdf-66890786ea0a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-pocket-urls/"
     google-query: inurl:"/wp-content/plugins/wp-pocket-urls/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-pocket-urls,medium
+  tags: cve,wordpress,wp-plugin,wp-pocket-urls,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.2')
+          - compare_versions(version, '<= 1.0.3')

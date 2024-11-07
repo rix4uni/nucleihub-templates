@@ -1,6 +1,6 @@
 id: pop3-proxy
 info:
-  name: Reivernet captive portal pop3 proxy
+  name: F-Secure Internet Gateway pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^-ERR Not Enrolled\r\rPlease open your internet browser and accept the terms and conditions of use for this service\.\r\n
+    - ^\+OK F-Secure/fsigk_pop/\d+/[-\w_.]+ starting\.\r\n
