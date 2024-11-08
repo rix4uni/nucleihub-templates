@@ -1,51 +1,58 @@
-id: wordpress-photo-gallery
+id: photo-gallery-f4f561d2e979b8540bbbbeb453d4d93c
 
 info:
-  name: Photo Gallery by 10Web – Mobile-Friendly Image Gallery Detection
-  author: ricardomaia
-  severity: info
+  name: "Photo Gallery by 10Web – Mobile-Friendly Image Gallery <= 1.8.7 - Open Redirect"
+  author: topscoder
+  severity: medium
+  description: "The Photo Gallery by 10Web plugin for WordPress is vulnerable to open redirect in versions up to 1.8.7. This is due to insufficient validation of the curr_url ($current_url) request parameter when a user accesses a link with an invalid share link. This would make it possible for an attacker to redirect a victim to a potentially malicious site, granted they could trick the victim into performing an action such as clicking on a link. The patches in 1.8.1, 1.8.3, 1.8.7 are incomplete and can be bypassed."
   reference:
-    - https://wordpress.org/plugins/photo-gallery/
+    - https://plugins.trac.wordpress.org/changeset/2823007/photo-gallery/trunk/frontend/views/BWGViewShare.php?contextall=1&old=2810119&old_path=%2Fphoto-gallery%2Ftrunk%2Ffrontend%2Fviews%2FBWGViewShare.php
+    - https://wordpress.org/plugins/photo-gallery/#developers
+    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2837469%40photo-gallery&new=2837469%40photo-gallery&sfp_email=&sfph_mail=
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
+    cvss-score: 5.4
+    cve-id:
   metadata:
-    max-request: 1
-    plugin_namespace: photo-gallery
-    wpscan: https://wpscan.com/plugin/photo-gallery
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/photo-gallery/"
+    google-query: inurl:"/wp-content/plugins/photo-gallery/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,photo-gallery,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/photo-gallery/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/photo-gallery.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "photo-gallery"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
 
-# digest: 4b0a00483046022100929ea89342f6b5a757b34813bab8cacecad7d5a7f47fdbc0ca2f1a45f63e56b8022100f708815432d990ea53a17148259eeef5e94b1fc034508d9350dd3e1091f30f1e:922c64590222798bb761d5b6d8e72950
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 1.8.7')

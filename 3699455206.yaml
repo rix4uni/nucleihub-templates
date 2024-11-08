@@ -5,7 +5,6 @@ info:
   tags: detect,tech,afs,service
   severity: info
   metadata:
-    info: $2
     product: openafs
     rarity: 5
     vendor: openafs
@@ -22,4 +21,4 @@ tcp:
   - name: afs
     type: regex
     regex:
-    - ^[\d\D]{28}\s*OpenAFS\s+([\d\.]+)\s+([^\0]+)\0
+    - ^[\d\D]{28}\s*OpenAFS([\d\.]{3}[^\s\0]*)\0

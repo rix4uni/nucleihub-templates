@@ -1,10 +1,11 @@
 id: adobe-crossdomain
 info:
-  name: Konica Minolta printer cross-domain-policy
+  name: Adobe cross-domain policy
   author: nmap,cn-kali-team
   tags: detect,tech,adobe-crossdomain,service
   severity: info
   metadata:
+    info: 'domain: $1; ports: $2'
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: adobe-crossdomain
     type: regex
     regex:
-    - ^<\?xml version=\"1\.0\"\?>\r\n<cross-domain-policy>\r\n    <site-control permitted-cross-domain-policies=\"master-only\"/>\r\n    <allow-access-from domain=\"\*\" to-ports=\"59160\"/>\r\n</cross-domain-policy>\0
+    - (?i)^<cross-domain-policy>[ \n]*<allow-access-from domain=\"([^\"]*)\" to-ports=\"([^\"]*)\" */>[ \n]*</cross-domain-policy>$

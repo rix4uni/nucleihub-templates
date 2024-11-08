@@ -1,12 +1,15 @@
 id: irc-proxy
 info:
-  name: psyBNC
+  name: ShroudBNC irc-proxy
   author: nmap,cn-kali-team
   tags: detect,tech,irc-proxy,service
   severity: info
   metadata:
-    hostname: $1
+    product: shroudbnc
     rarity: 0
+    vendor: gunnar_beutner
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: irc-proxy
     type: regex
     regex:
-    - ^:.*!psyBNC@[-\w_.]+ NOTICE \* :psyBNC on ([-\w_.]+)\r\n
+    - '^:shroudbnc\.info NOTICE AUTH :\*\*\* shroudBNC ([\d.]+) '

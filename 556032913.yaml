@@ -5,11 +5,12 @@ info:
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: HDD full
+    hostname: $1
     product: inn
     rarity: 0
     vendor: isc
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^400 No space left on device writing SMstore file -- throttling\r\n
+    - ^20. ([\w._-]+) InterNetNews NNRP server INN ([\w._-]+) ready \((?:posting ok|no posting)\)\.?\r\n

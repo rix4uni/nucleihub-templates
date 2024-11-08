@@ -1,12 +1,14 @@
 id: finger
 info:
-  name: Lexmark T642 printer fingerd
+  name: Hummingbird fingerd
   author: nmap,cn-kali-team
   tags: detect,tech,finger,service
   severity: info
   metadata:
-    device_type: printer
+    info: WinNT $1 build $2
+    operating_system: Windows NT
     rarity: 0
+    version: $3
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: finger
     type: regex
     regex:
-    - '^\r\nIntegrated port\r\nPrinter Type: Lexmark T642\r\nPrint Job Status:'
+    - ^Windows NT Version ([\d.]+) build (\d+), \d+ processors? \(.*\)\r\nFingerDW V([\d.]+) - Hummingbird Ltd\.\n

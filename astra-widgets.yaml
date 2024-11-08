@@ -1,50 +1,59 @@
-id: wordpress-astra-widgets
+id: astra-widgets-3d0e36e3f6b13f1b30cd676f507f0685
 
 info:
-  name: Astra Widgets Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Astra Widgets <= 1.2.14 - Authenticated (Contributor+) Stored Cross-Site Scripting
+  author: topscoder
+  severity: low
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/astra-widgets/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7ec29589-b524-4b67-af60-982cd78b81c5?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    max-request: 1
-    plugin_namespace: astra-widgets
-    wpscan: https://wpscan.com/plugin/astra-widgets
-  tags: tech,wordpress,wp-plugin,top-200
+    fofa-query: "wp-content/plugins/astra-widgets/"
+    google-query: inurl:"/wp-content/plugins/astra-widgets/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,astra-widgets,low
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/astra-widgets/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/astra-widgets.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "astra-widgets"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
-# digest: 4a0a004730450221009871b6d905bfd03eba02d3ea8b1e520f0dcf4e2ddc30aa35396464ab4b625bf50220112555897b88cbdc69eb15c47455902c1b6ed044dfc5c405eaf143913478c826:922c64590222798bb761d5b6d8e72950
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 1.2.14')

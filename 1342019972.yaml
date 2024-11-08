@@ -1,12 +1,16 @@
 id: tftp
 info:
-  name: Microsoft Windows Deployment Services tftpd
+  name: Cisco router tftpd
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    operating_system: Windows
+    device_type: router
+    operating_system: IOS
+    product: tftp_server
     rarity: 5
+    vendor: cisco
+    verified: true
 tcp:
 - name: dnsstatus-request
   inputs:
@@ -18,4 +22,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - ^\0\x05\0\x04Illegal operation error\.\0$
+    - ^\0\x05\0\x04Illegal operation\0$

@@ -1,48 +1,59 @@
-id: wordpress-sucuri-scanner
+id: sucuri-scanner-386504caabb7b04b98707b256e648141
 
 info:
-  name: Sucuri Security – Auditing, Malware Scanner and Security Hardening Detection
-  author: ricardomaia
-  severity: info
+  name: >
+    Sucuri Security <= 1.8.33 - Cross-Site Request Forgery
+  author: topscoder
+  severity: medium
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/sucuri-scanner/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a6298192-2afa-4468-86d5-8487321a0ff6?source=api-scan
+  classification:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
-    plugin_namespace: sucuri-scanner
-    wpscan: https://wpscan.com/plugin/sucuri-scanner
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    fofa-query: "wp-content/plugins/sucuri-scanner/"
+    google-query: inurl:"/wp-content/plugins/sucuri-scanner/"
+    shodan-query: 'vuln:'
+  tags: cve,wordpress,wp-plugin,sucuri-scanner,medium
 
 http:
   - method: GET
+    redirects: true
+    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/sucuri-scanner/readme.txt"
 
-    payloads:
-      last_version: helpers/wordpress/plugins/sucuri-scanner.txt
-
     extractors:
       - type: regex
+        name: version
         part: body
+        group: 1
         internal: true
-        name: internal_detected_version
-        group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
+        name: version
         part: body
-        name: detected_version
         group: 1
         regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+          - "(?mi)Stable tag: ([0-9.]+)"
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
-      - type: dsl
-        name: "outdated_version"
-        dsl:
-          - compare_versions(internal_detected_version, concat("< ", last_version))
+      - type: status
+        status:
+          - 200
 
-      - type: regex
+      - type: word
+        words:
+          - "sucuri-scanner"
         part: body
-        regex:
-          - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: dsl
+        dsl:
+          - compare_versions(version, '<= 1.8.33')

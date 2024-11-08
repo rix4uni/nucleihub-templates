@@ -1,14 +1,19 @@
 id: upnp
 info:
-  name: Cisco-Linksys E4200 WAP upnpd
+  name: Platinum unpnd
   author: nmap,cn-kali-team
   tags: detect,tech,upnp,service
   severity: info
   metadata:
     fallback:
     - get-request
-    info: UPnP $1
+    info: 'arch: $1; UPnP $2; DLNADOC $3'
+    operating_system: Linux
+    product: platinum
     rarity: 5
+    vendor: plutinosoft
+    verified: true
+    version: $4
 tcp:
 - name: sipoptions
   inputs:
@@ -20,4 +25,4 @@ tcp:
   - name: upnp
     type: regex
     regex:
-    - '^HTTP/1\.1 501 Unimplemented\r\nServer: unspecified, UPnP/([\w._-]+), unspecified\r\nConnection: close\r\nContent-Length: 0\r\n\r\n'
+    - '^HTTP/1\.1 404 Not Found\r\nContent-Length: \d+\r\nContent-Type: text/html\r\nServer: Linux/(\w+) UPnP/([\d.]+) DLNADOC/([\d.]+) Platinum/([\d.]+)\r\n\r\n'
