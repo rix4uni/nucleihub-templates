@@ -27,4 +27,4 @@ http:
           - 'status_code == 200'
           - 'contains_any(to_lower(body), "<title>hubble ui enterprise", "<title>hubble ui")'
         condition: and
-# digest: 4a0a004730450220340d06f746770d8f0ad44aaa39b6fb55868c394f9a3907d7386c1e9a88d4b94d022100aa16d0ef280ceea6890fc35b77750fd1f41f67b36febffa09cf6efbb37ee6670:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100d3d237eebb3d0b9259bd3f2adc1ea1829881a9c3f9b51b24e3fca1f636fd6d4902204de87186479e0196e632d8c48f65a1cc0e6dd3a3ca50ea5d6281999e453a4c08:922c64590222798bb761d5b6d8e72950
