@@ -2,53 +2,53 @@ id: phpmyadmin-setup
 
 info:
   name: PhpMyAdmin Setup File - Detect
-  author: sheikhrishad,thevillagehacker,Kr1shna4garwal,ArjunChandarana,0xpugal
+  author: rix4uni
   severity: medium
   description: Multiple phpMyAdmin setup files were detected.
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
     cvss-score: 5.3
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:phpmyadmin:phpmyadmin:*:*:*:*:*:*:*:*
+  reference:
+    - https://hackerone.com/reports/297339
+    - https://medium.com/@Dhamuharker/phpmyadmin-setup-is-accessible-without-authentication-5ab76ed28614
   metadata:
-    verified: true
-    max-request: 16
-    shodan-query: http.html:"phpMyAdmin"
-    product: phpmyadmin
-    vendor: phpmyadmin
-  tags: phpmyadmin,misconfig
+    google-query:
+      - inurl:"phpMyAdmin/setup/index.php"
+    shodan-query:
+      - http.title:"phpMyAdmin"
+  tags: phpmyadmin,authetication,misconfig
 
-http:
+requests:
   - method: GET
     path:
-      - "{{BaseURL}}{{paths}}"
-    payloads:
-      paths:
-        - "/phpmyadmin/scripts/setup.php"
-        - "/phpMyAdmin/scripts/setup.php"
-        - "/_phpmyadmin/scripts/setup.php"
-        - "/forum/phpmyadmin/scripts/setup.php"
-        - "/php/phpmyadmin/scripts/setup.php"
-        - "/typo3/phpmyadmin/scripts/setup.php"
-        - "/web/phpmyadmin/scripts/setup.php"
-        - "/xampp/phpmyadmin/scripts/setup.php"
-        - "/sysadmin/phpMyAdmin/scripts/setup.php"
-        - "/phpmyadmin/setup/index.php"
-        - "/phpMyAdmin/setup/index.php"
-        - "/pma/setup/index.php"
-        - "/admin/pma/setup/index.php"
-        - "/phpmyadmin/setup/"
-        - "/setup/index.php"
-        - "/admin/"
-        - "/phpMyAdminOLD/setup/index.php"
+      - "{{BaseURL}}/setup/index.php"
+      - "{{BaseURL}}/phpmyadmin/setup/index.php"
+      - "{{BaseURL}}/phpMyAdmin/setup/index.php"
+      - "{{BaseURL}}/admin/phpMyAdmin/setup/index.php"
+      - "{{BaseURL}}/phpmyadmin/scripts/setup.php"
+      - "{{BaseURL}}/phpMyAdmin/main.php"
+      - "{{BaseURL}}/phpmyadmin/pma/index.php"
+      - "{{BaseURL}}/_phpmyadmin/scripts/setup.php"
+      - "{{BaseURL}}/forum/phpmyadmin/scripts/setup.php"
+      - "{{BaseURL}}/php/phpmyadmin/scripts/setup.php"
+      - "{{BaseURL}}/typo3/phpmyadmin/scripts/setup.php"
+      - "{{BaseURL}}/web/phpmyadmin/scripts/setup.php"
+      - "{{BaseURL}}/xampp/phpmyadmin/scripts/setup.php"
+      - "{{BaseURL}}/sysadmin/phpMyAdmin/scripts/setup.php"
+      - "{{BaseURL}}/pma/setup/index.php"
+      - "{{BaseURL}}/admin/pma/setup/index.php"
+      - "{{BaseURL}}/phpmyadmin/setup/"
+      - "{{BaseURL}}/phpMyAdminOLD/setup/index.php"
 
     stop-at-first-match: true
-
     matchers-condition: and
     matchers:
       - type: word
         part: body
         words:
+          - "Overview"
+          - "Welcome to"
           - "You want to configure phpMyAdmin using web interface"
           - "<title>phpMyAdmin setup</title>"
         condition: or
@@ -56,4 +56,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100cd0c46c2350820b2657bae550b6baa5c7b455618af9cd943d35639caf2ca23c2022013290fa9427105903bc04fb20af0fe809e72a90707939c948db3c8e9c8f21608:922c64590222798bb761d5b6d8e72950

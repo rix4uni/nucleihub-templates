@@ -7,6 +7,7 @@ info:
   description: SaltGUI login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
@@ -17,6 +18,7 @@ http:
     path:
       - "{{BaseURL}}"
 
+    unsafe: true
     host-redirects: true
     max-redirects: 2
 
@@ -30,4 +32,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a00463044022063d01b92815670e7c0b50bdd7256a543620676b2491ca2474889ad1ddcf70a1802200447d49bd5e6772e6057b56a4cc0b68773fe894ddc21ab8523d4d4568fd50df4:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a004630440220128b0ec18b50e73a02f03639642e9bfc9317c62bdae92b30ae6d61398785d9fb02203d791e4bb942b85a226cae1c771d97d0c9f5e58e9a8b50aa4e13f3f20ac34471:922c64590222798bb761d5b6d8e72950

@@ -1,9 +1,17 @@
 id: springboot-heapdump
 
 info:
-  name: Spring Boot  Heap Dump
-  author: booboo
+  name: SpringBoot HeapDump
+  author: rix4uni
   severity: critical
+  reference:
+    - https://www.linkedin.com/posts/sandeshgg_bugbountytips-bugbounty-bugbountytip-activity-7065027158947102721-F_0W/?utm_source=share&utm_medium=member_android
+    - https://twitter.com/boobooHQ/status/1658439534433169409?t=JG5B9NZaaYCXv8OgSXRynQ&s=09
+    - https://www.linkedin.com/posts/sandeshgg_bugbountytip-bugbountytips-bugbounty-activity-7064287823603892224-HpuC?utm_source=share&utm_medium=member_android
+  metadata:
+    shodan-query:
+      - http.favicon.hash:116323821
+      - http.html:"heapdump"
   tags: springboot
 
 requests:
@@ -39,6 +47,8 @@ requests:
       - "{{BaseURL}}/%2e%2e/actuator/dump"
       - "{{BaseURL}}/..;/%2e/dump"
       - "{{BaseURL}}/..;/%2e/actuator/dump"
+      - "{{BaseURL}}/env"
+      - "{{BaseURL}}/actuator/env"
 
  
 

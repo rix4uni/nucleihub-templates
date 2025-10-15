@@ -5,10 +5,10 @@ info:
   author: dwisiswant0
   severity: high
   description: Critical Information Disclosure on WP Courses plugin < 2.0.29 exposes private course videos and materials
+  tags: wordpress,plugin
   reference:
     - https://www.exploit-db.com/exploits/48910
     - https://www.redtimmy.com/critical-information-disclosure-on-wp-courses-plugin-exposes-private-course-videos-and-materials/
-  tags: wordpress-misc,wordpress,plugin
 
 http:
   - method: GET
@@ -21,6 +21,7 @@ http:
         regex:
           - "rest_post_invalid_id"
           - "\"(guid|title|content|excerpt)\":{\"rendered\":"
+        condition: or
         part: body
 
       - type: word
@@ -32,3 +33,4 @@ http:
         status:
           - 200
           - 404
+        condition: or

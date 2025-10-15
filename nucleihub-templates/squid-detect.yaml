@@ -1,16 +1,23 @@
 id: squid-detect
 
 info:
-  name: Squid Proxy Page
-  author: notnotnotveg
+  name: squid Detect
+  author: rix4uni
   severity: info
+  metadata:
+    shodan-query:
+      - "Server: squid"
+    fofa-query:
+      - "Server: squid"
+  tags: tech,squid
 
-requests:
+http:
   - method: GET
     path:
-      - "{{BaseURL}}/"
-    matchers:
-      - type: word
-        words:
-          - "Squid Software"
-        part: body
+      - "{{BaseURL}}"
+
+    extractors:
+      - type: regex
+        part: header
+        regex:
+          - "Server: squid/([0-9.]+)|Server: squid"

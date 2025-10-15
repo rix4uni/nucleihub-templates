@@ -1,4 +1,4 @@
-id: unauthenticated-jenkin
+id: unaunthenticated-jenkin
 
 info:
   name: Unauthenticated Jenkins Dashboard
@@ -6,7 +6,7 @@ info:
   severity: high
   tags: jenkins
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
