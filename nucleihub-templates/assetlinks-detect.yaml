@@ -26,4 +26,4 @@ http:
           - "contains(body, 'android_app')"
           - "contains(content_type, 'application/json')"
         condition: and
-# digest: 4a0a0047304502200dcc37cbd9cbf571b36ad8ce170be7258007490baedea76241afba5cfd6f65ad022100d6dc8ec938fbc68f4e5a365e880b9f0ba914cdc4d8f6d8032d78a327729f98d1:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100edcd4d1c2b0fe95d3e5a3a51549d3eb0b962e0b00bd5d2659d2258d0298c08e50221009c9c6139358458e60d94b3b8975c620a2f44b4cecee1aad2dcf61a89b97d2ad6:922c64590222798bb761d5b6d8e72950
