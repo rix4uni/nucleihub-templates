@@ -10,7 +10,7 @@ info:
     - https://brave.com
   metadata:
     max-request: 1
-  tags: phishing,brave,osint
+  tags: phishing,brave,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"brave.com")'
-# digest: 4b0a004830460221009bc3f794d97849737a4ebc4546080cca70441fcbd7f2d1643abd910bf7bc5654022100d53b673cb17541dad29e45c0e0cbd49ad3d9c435a43ae611a1e3c8345201268e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022002049827873d38d88041397f6c45ac1a79eff62bc67b05510c86f591e836e34302210094779c8a8343b626a0f3322fb1f679be3a2167fd471ae972b9657bc80db9a8a4:922c64590222798bb761d5b6d8e72950

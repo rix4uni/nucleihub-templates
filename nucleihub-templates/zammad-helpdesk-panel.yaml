@@ -16,7 +16,7 @@ info:
     product: zammad
     shodan-query: http.title:"Zammad Helpdesk"
     fofa-query: title="Zammad Helpdesk"
-  tags: panel,zammad,detect,helpdesk,ticketing
+  tags: panel,zammad,detect,helpdesk,ticketing,discovery
 
 http:
   - method: GET
@@ -29,4 +29,4 @@ http:
           - 'status_code == 200'
           - 'contains_any(to_lower(body), "<title>zammad helpdesk</title>", "zammad_form_script")'
         condition: and
-# digest: 4a0a00473045022100f46f475a6a46171e69aacf38c2a57e52b8df4a5a5c0c03cdc1a9cfe7af571270022031d057e700247aa06bfba9dd1c5e8f04cf342b9e7fcb0b477bc93247f14b3e86:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220336da7f9d6dc95300297b4d9b35f287673ac6d24abb6230b0f400e857c3bfd6c022100d878d4629c1a9670ddb1b244a6d6fbb53d2c29530b23796d309959ec389302c2:922c64590222798bb761d5b6d8e72950

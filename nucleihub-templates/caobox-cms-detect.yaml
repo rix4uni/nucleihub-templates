@@ -12,7 +12,7 @@ info:
       - http.component:"Caobox"
       - http.component:"caobox"
       - cpe:"cpe:2.3:a:caobox:caobox"
-  tags: detect,caobox,cms,tech
+  tags: detect,caobox,cms,tech,discovery
 
 http:
   - method: GET
@@ -41,4 +41,4 @@ http:
           - "(?i)caobox"
           - "(?i)caobox\\s+(v[0-9.]+)"
           - "(?i)<title>Caobox CMS"
-# digest: 4a0a004730450220499368b113eef2d1a125bf2adf27623364b0ed8e0cf2787d8de41fb5225b77d10221008f70cc6b3c48dd90e3874f6c4c4f180f6f44027214699fc5db118ddac9405e9a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100fb2370c77f3ee164dd2d65d39cd0f92d3270d7043974ecf0e8447d47f14f6346022050be288bca6757648d999388e2c6973c7ee6b219eb58927d586b548f63736abd:922c64590222798bb761d5b6d8e72950

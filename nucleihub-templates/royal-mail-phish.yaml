@@ -10,7 +10,7 @@ info:
     - https://royalmail.com
   metadata:
     max-request: 1
-  tags: phishing,royal-mail,osint
+  tags: phishing,royal-mail,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"royalmail.com")'
-# digest: 4a0a00473045022100d2c6b12630702f6bdad845a0bc6662626da2644eb1bc8f68f47b3f8004ef0b6d022010fa6f7a7e7731ecb1be778f9b28120640f9dc8528fb873488daae3b866d02bc:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100e443b159166b14330a53af3e24060b9fc1fcbe6db4a627dc4b9811cad94701db02202359e676304cedba28b3bb3a2acdd3bd9ee7e15e155c7083cbafeb3d2c882f97:922c64590222798bb761d5b6d8e72950

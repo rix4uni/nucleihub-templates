@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: http.favicon.hash:"-839356603"
-  tags: panel,apigee,login
+  tags: panel,apigee,login,discovery
 
 http:
   - method: GET
@@ -32,4 +32,4 @@ http:
         group: 1
         regex:
           - 'Version:?\s+([0-9.]+)'
-# digest: 4b0a004830460221009022578ee52de2e501117187a3273f4b7a449ec2f3ab994fa7f9e1a4965ed6470221009a69e988e6789bd3d96ffcda228f8dc180fa47b595dd90a41bdcadc4d156489d:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100f2a0d381ef502512c825a437261a6b79415986b67209ed771095a3d171b1cd51022100ff4344e716c869bd7702387f903aafa6e89ba012dbc182307c7c213d58d150b3:922c64590222798bb761d5b6d8e72950

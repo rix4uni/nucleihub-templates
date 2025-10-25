@@ -10,7 +10,7 @@ info:
     - https://keepersecurity.com
   metadata:
     max-request: 1
-  tags: phishing,keepersecurity,osint
+  tags: phishing,keepersecurity,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"keepersecurity.com")'
-# digest: 4a0a0047304502205672a8a9adb7bf1b96ff0f02d655f560dc53daea8e30d508c124d1daf32e4004022100cfcca3b6c6d16fc0a1dbeeeac79921c681502b0934aa4c184a0c31622394efac:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100ae16e1ba6f78f8a415c3393c9803958df1daa6602bc0a420a2552208cceee4fb0221009771a8ff5b2be3d136cf1fc27ea04ed096a27f6bb7a9567c57dddef033e48ae8:922c64590222798bb761d5b6d8e72950

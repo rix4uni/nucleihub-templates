@@ -13,7 +13,7 @@ info:
     max-request: 2
     verified: true
     shodan-query: http.title:"opensign"
-  tags: panel,opensign,login,detect
+  tags: panel,opensign,login,detect,discovery
 
 http:
   - method: GET
@@ -28,4 +28,4 @@ http:
           - 'status_code == 200'
           - 'contains(body, "OpenSign")'
         condition: and
-# digest: 4a0a004730450220678f369f58e6bc218c26529715c31df6d92d5cc8e0e52efa6fda8d097d8e65ec022100f91cf3af885dbf39b334c2294c652744f6c67552b44c1ce953da8faf3370697e:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100928f72daa0497a8956ff44e0eef054c160ef50a1b4e25bbf983d17dd18b4b945022100ddf4e343a0fffc10e85c5116df1142163ac89109dca9d4f306a8dc51f0781852:922c64590222798bb761d5b6d8e72950

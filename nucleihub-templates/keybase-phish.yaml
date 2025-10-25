@@ -10,7 +10,7 @@ info:
     - https://keybase.io
   metadata:
     max-request: 1
-  tags: phishing,keybase,osint
+  tags: phishing,keybase,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"keybase.io")'
-# digest: 490a0046304402204e4932c6d8b13a890c3832170462259661fb09f41395cdcf743a32c6dd839ff302200a88e2dea7f5d09706688976c56b4d7f532305b3a51fd901bf15bbaf9254edaa:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a0048304602210081d91fa1ab0ae096aa3c16dba0739bcd473bbbd25a5976db3e84636917a5ccfa022100d621584fd23008d8beb5105a8f987567147f638f661525cd1bb516d8f2f44eea:922c64590222798bb761d5b6d8e72950

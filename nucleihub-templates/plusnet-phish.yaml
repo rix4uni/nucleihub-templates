@@ -10,7 +10,7 @@ info:
     - https://plus.net
   metadata:
     max-request: 1
-  tags: phishing,plusnet,osint
+  tags: phishing,plusnet,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"plus.net")'
-# digest: 4a0a00473045022100e059c5e2504e25315c98aa8315e90da4bbba55f70f5a07745601e0951f69828502204ba71067f7551e65778680b66812b1a3d14c84a8168497e3bd24478c1c32f3c9:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022045d2fc5df8420ea733cd92b11e13c711fbe04ea548078501a652c557847de938022100b305a54479e76ce536889927f5e828a546ad3ec6407661745e65c44a18ed1ddf:922c64590222798bb761d5b6d8e72950

@@ -8,7 +8,7 @@ info:
     Detect Discord Invites for users, bots and servers
   reference:
     - https://discord.com
-  tags: discord,info,osint,misc
+  tags: discord,info,osint,misc,vuln
 
 http:
   - method: GET
@@ -30,4 +30,4 @@ http:
         name: discord-bot-invite
         regex:
           - "https?:\\/\\/discord\\.com\\/oauth2\\/authorize\\?client_id=([0-9]+)[^\\s\"']*"
-# digest: 490a00463044022001d54346f879b85bb7da1e0fb1dda9724e6a4e714828a6caa0ad93bf2bdcae5c02207ed6ae7084b4a7cecc6b315a477d1fdfb5b682ada71ad20ac389598528ab4830:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502202778b0cf137ee1f3a444aa4d9a6c2b5897a96eb266a9153db9c80738e23cab18022100a264be2d14bcd56c67096f0e85364f72703056650e3f903e50eb4d812fcafb46:922c64590222798bb761d5b6d8e72950

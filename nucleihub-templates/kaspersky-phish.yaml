@@ -10,7 +10,7 @@ info:
     - https://kaspersky.co.uk
   metadata:
     max-request: 1
-  tags: phishing,kaspersky,osint
+  tags: phishing,kaspersky,osint,discovery
 http:
   - method: GET
     path:
@@ -33,4 +33,4 @@ http:
         dsl:
           - '!contains(host,"kaspersky.co.uk")'
           - '!contains(host,"kaspersky.com")'
-# digest: 490a0046304402201c6637243566a4a67685e697c322d0992469ad0a859898c6b3b4233e307489550220169f7d447a2698f56632732a11ac78b7b5b9b41410657bf55a164d7a549fec70:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100cd6883a8d8fbd8d62cbef08b25cd91fea34e7d08ae6284c745b98bb0134423c80220017c1b44206ea5194c5251908ae78939750e88aa5ef567e1c1478313c96f77c2:922c64590222798bb761d5b6d8e72950

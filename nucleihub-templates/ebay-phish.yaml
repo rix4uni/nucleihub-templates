@@ -10,7 +10,7 @@ info:
     - https://ebay.com
   metadata:
     max-request: 1
-  tags: phishing,ebay,osint
+  tags: phishing,ebay,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"ebay.com")'
-# digest: 4b0a00483046022100b1b57d556c2fb1b823044af3de097b6d2c458a098aee530f9c3740de1d5a7abd022100c18d159b7ed7056db788d339fcd0c11eb37b30395c99b484699168545dcf4dfa:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220467a525f5b55d28cf71172766f9c3800974bbda9e8340ba44636143e60f84ab702202603e2af0fea7d57a3fb8118885332d6d691c372160ed6101c486c6feb0eac4d:922c64590222798bb761d5b6d8e72950

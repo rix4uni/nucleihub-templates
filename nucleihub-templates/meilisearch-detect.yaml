@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     fofa-query: app="meilisearch"
-  tags: meilisearch,detect,tech
+  tags: meilisearch,detect,tech,discovery
 
 http:
   - method: GET
@@ -26,4 +26,4 @@ http:
           - 'status_code == 200'
           - 'contains(body, "Meilisearch is running")'
         condition: and
-# digest: 4a0a00473045022100ecf84f91865f0d2d3266151d66bf260ca208a94ac2cfe2a3a51956cd8b8ffd95022063c87d03cdd193c6f3ed7e968fed218687d211dac0555773c12f6fc17797cb05:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100dd730cbadd787cb6e49e08b52103dcac57c5d159509c6ea0cac9dcc5aaa149e8022100f8409fd492b684058498b00f8a4d2ad67e8ac47a8901dec3acedbbdb01ebf56e:922c64590222798bb761d5b6d8e72950

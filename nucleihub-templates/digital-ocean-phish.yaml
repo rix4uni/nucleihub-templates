@@ -10,7 +10,7 @@ info:
     - https://digitalocean.com
   metadata:
     max-request: 1
-  tags: phishing,digital-ocean,osint
+  tags: phishing,digital-ocean,osint,discovery
 http:
   - method: GET
     path:
@@ -35,4 +35,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"digitalocean.com")'
-# digest: 4a0a00473045022011647080b54724e5dc26a7cac74c394f6a25d1d0ed8902a33ed303366c6c309f02210095d0b1f8a032bcb9a060ce221ecf4895fbdc70f98dad9a50b7dbb6be270d91d5:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100c176f538024fa8118fedd1b74e7cefe59817ba300dd0864185c3d23b1ea35f69022100a873bb6c5bb36653700cf92b4ef68ab2a690ea7e65c81e9b47f730dd4e34f96e:922c64590222798bb761d5b6d8e72950

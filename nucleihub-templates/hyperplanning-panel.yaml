@@ -11,7 +11,7 @@ info:
   metadata:
     max-request: 1
     shodan-query: http.title:"HYPERPLANNING"
-  tags: panel,hyperplanning,login,detect
+  tags: panel,hyperplanning,login,detect,discovery
 
 http:
   - method: GET
@@ -33,4 +33,4 @@ http:
         group: 1
         regex:
           - '(?i)Server:\s+HYPERPLANNING\s+([0-9.\s\-]+)'
-# digest: 4b0a00483046022100ccf378bdaf0a0b2e15b0541bc4efbbbc2706b081da423d8f3f25d08efd784deb022100fd656adf81d250e8f3debb4b8b5a663fb8b56b64e6a0986ec34d88a4223256c7:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502206e1ad0411dac80e4c7e944b40e426da8b8f20c1975582dab3dbc573b4c386524022100a986705143dadb743f6e8c3f3fa20fe9d48c222af1d450d54bc6a97a475690cd:922c64590222798bb761d5b6d8e72950

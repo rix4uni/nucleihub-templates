@@ -11,7 +11,7 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: panel,amprion,login,detect
+  tags: panel,amprion,login,detect,discovery
 
 http:
   - method: GET
@@ -31,4 +31,4 @@ http:
         group: 1
         regex:
           - '"envTitle":"([A-Z0-9a-z]+)"'
-# digest: 4a0a0047304502203d18281237e1babc9ace6525932f99637da39227a077038a3157f41e1d9c552e022100dca9554cb017dc899692d7fff79bad47cce8562467dafb6bd7e6bf4d174a1523:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220645755d305151124442670ea49bd343ba31d3ed0e88f2a9b81fff670c5ea8f8402210095afa6ae1994e363d5ca20da899c9f0c8319d3cb2859d495bc1adc7a5ab03a38:922c64590222798bb761d5b6d8e72950

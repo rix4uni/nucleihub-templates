@@ -10,7 +10,7 @@ info:
     - https://uber.com
   metadata:
     max-request: 1
-  tags: phishing,uber,osint
+  tags: phishing,uber,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"uber.com")'
-# digest: 4a0a00473045022025c3e77da27fcb7e08aa90d7ff4c37bad260c4099543e80ded233d8e132e6596022100aa4dce370fd9592a12ccb400297ee3e587f06aadf56801ad271ce24974330b2b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450221009496fc532be12d3197aab2365b5a44c490384c871650baea0d8b3679aabeb7fa022014d326e999b11e6a9eb4ac557479093338ddccd55c0f53d625ffb704c527d2f2:922c64590222798bb761d5b6d8e72950

@@ -10,7 +10,7 @@ info:
     - https://instagram.com
   metadata:
     max-request: 1
-  tags: phishing,instagram,osint
+  tags: phishing,instagram,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"instagram.com")'
-# digest: 490a004630440220273abaab0ec641d1914bd639dacc91cbdf97dec7521760773df70c7b512c173e0220232189cfb0a76533dd3b5ad6ab2d39e015662e2a2d27922ae3b3457a559abe89:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100dda661d1abeb0962fe9cc0e216b27038c2ccb5a564e37c9a5232556881c219ef022100bd2f04f03c66d302009f9c37aacb3f74bc7f2cb18b66e175b5fa82ff62ba6412:922c64590222798bb761d5b6d8e72950

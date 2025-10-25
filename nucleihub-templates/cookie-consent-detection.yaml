@@ -6,7 +6,7 @@ info:
   severity: info
   description: |
     This template detects the presence of cookie consent forms
-  tags: headless,cookie,detect
+  tags: headless,cookie,detect,discovery
 
 headless:
   - steps:
@@ -31,4 +31,4 @@ headless:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100e9f0b3c50560e24097dc9cdaaf0f6abdf75dc746d51ca3bf757e1709356c7e3f0221008cf7f92942160b6e27175124aaa734bb1804798dbd6de252415f32f9f62b76cb:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008c4ed2a73ff3d13126074fc7e0f61cbe18b617cf6fb60ce4e285943e3832141b022100ea2ecad18d754ec0ef9cce7c4089d5d16ca088e62843aefd016c169d4b7c968d:922c64590222798bb761d5b6d8e72950

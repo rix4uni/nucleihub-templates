@@ -10,7 +10,7 @@ info:
     - https://walmart.com
   metadata:
     max-request: 1
-  tags: phishing,walmart,osint
+  tags: phishing,walmart,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"walmart.com")'
-# digest: 4b0a00483046022100d45fa754b86beead80de3eaa7f3268de6c3a8b72f5fc8b698f5db143ea0f2db9022100a79a1fb9950af9c28c6b601c6b5f7d8fb5bdcbaf0297fbd64f0b0888794536bc:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220476ea6a623da334129a9a78b2935784980ae010e11cc50af9dd29626ede340c4022029d87d332945502603bc67ae5cdfdd22b9ab1e3c88008bc9197e567de8056c5c:922c64590222798bb761d5b6d8e72950

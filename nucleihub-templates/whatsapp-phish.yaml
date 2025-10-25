@@ -10,7 +10,7 @@ info:
     - https://whatsapp.com
   metadata:
     max-request: 1
-  tags: phishing,whatsapp,osint
+  tags: phishing,whatsapp,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"whatsapp.com")'
-# digest: 490a00463044022064ade74d961f0ce002804e4737fc85a9d4404df455891345c5620465d74fa253022033585f4d2e84bcde464ba770d79d1e7f0e03bd01ed0c1d1710c605b6d7c27509:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100e2636d6340c66f4726ec4ffccdfe6755095244320b7a01718b6eec224098c03a022011213d6f1188c7c471ef4e62a9d47fd292456605e518e0f6d6007b2ae273ac3c:922c64590222798bb761d5b6d8e72950

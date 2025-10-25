@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: title:"PairDrop"
-  tags: panel,pairdrop,login
+  tags: panel,pairdrop,login,discovery
 
 http:
   - method: GET
@@ -33,4 +33,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022035340c594d233061bfd2c7f57b5e7a5ab76bcec71d1366b42d5b0908fba3c89302210094c5de8ae84376092f8566f592e9975647c75f7b39d68fa9b81bf5de94ddbca6:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502206840c9679c7868789b5fbc20bd74140bb5596c4325e89357b8ee9e6e13f783db02210094671e74eef19d06a3db7a7bfd5d90854f7733912cc0edac4204cc27f511778d:922c64590222798bb761d5b6d8e72950

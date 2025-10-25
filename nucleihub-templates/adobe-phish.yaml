@@ -10,7 +10,7 @@ info:
     - https://adobe.com
   metadata:
     max-request: 1
-  tags: phishing,adobe,osint
+  tags: phishing,adobe,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"adobe.com")'
-# digest: 490a004630440220269cf93b6f7c4a6cf7729d08f182d97b2fc135da61adb15dfe2710f705144e08022031b5f3261d5976bde57f70f74247d23554492a3f80f49d469a0a718b4bb40950:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402203b70d3df5661ee6211be22418d84e47b5da2a4e256de84b1df831cf80a3fcf2602202a4c8c2daf2827bca7760bca835ce894776e61148508fab42b739cb6eb20176d:922c64590222798bb761d5b6d8e72950

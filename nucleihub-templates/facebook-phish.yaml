@@ -10,7 +10,7 @@ info:
     - https://facebook.com
   metadata:
     max-request: 1
-  tags: phishing,facebook,osint
+  tags: phishing,facebook,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"facebook.com")'
-# digest: 4a0a004730450220159005ed25d258908e40ab132b28a5e57730dea1a5eba1baf524012659c0525e022100eb26eaea3102583795127e7486cd7dca92315b03e90f58ebdd1ce7c687679eff:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100b130284f6a0a84959a71820b7dbe55bf96b8496da78c07a5fe87bbdf9fcb6362022100fa622034663e5a741e4b6ae47b903e578c052b169fd9ae2c48b2b359e903fdb0:922c64590222798bb761d5b6d8e72950

@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 2
     shodan-query: http.title:"BMC Remedy Single Sign-On domain data entry"
-  tags: panel,bmc,login,detect
+  tags: panel,bmc,login,detect,discovery
 
 http:
   - method: GET
@@ -28,4 +28,4 @@ http:
           - 'status_code == 200'
           - 'contains(to_lower(body), "<title>bmc remedy single sign-on domain data entry")'
         condition: and
-# digest: 4a0a00473045022100aaf99fa1e6bdd3c096320ca5c69ec83655758ef42fcb42fc6a9bde3c07acda7e022004bf79ee6050b370a4b452c0d53c62ffaa84ece80876ad0617d23caa146a869b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502200407984b68ae05e258f4b17bc6b6a61068ed8dbe89109377e542cd2595a3bd45022100dcd824da48381e765567f08e2aa8f7ea3c311ea2c71436600e99bb727f25970e:922c64590222798bb761d5b6d8e72950

@@ -12,7 +12,7 @@ info:
     max-request: 1
     verified: true
     shodan-query: http.title:SearXNG
-  tags: searxng,search-engine,tech
+  tags: searxng,search-engine,tech,discovery
 
 http:
   - method: GET
@@ -29,4 +29,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100ef97fe2f54fa20b947b40e1241e12fec7d9a2400ae6683420342a783406b632f02204ec9b65dd681c982d81f65182657e408dba161b4eb586602fb9305e5d13a8dbe:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220076d7c8ea467a296d54df69ce9ca4e76d41a4370f4b91e8a991eb1d60fe11f07022064da6447155ce9492a8d88a650c6c1bd17020b0181f8d5032940599da5ec677e:922c64590222798bb761d5b6d8e72950

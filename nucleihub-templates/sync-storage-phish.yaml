@@ -10,7 +10,7 @@ info:
     - https://sync.com
   metadata:
     max-request: 1
-  tags: phishing,sync,osint
+  tags: phishing,sync,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"sync.com")'
-# digest: 4b0a00483046022100bd77e33b65a8a066a4d607e8ee5697e040653e666e7882de7ba2bcd0f7861b8f022100944cc1df026a3775e7623c86a0db634138e384c5f5cbc8212093f391aeb6a748:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100cf4e470415a57b516653408c77defc591fb79684b37e989b02cde65ed81fe6fc022009dd4c136aee8869b3389152ea9df2e0ec03ccf68092e8e79588e9187335d575:922c64590222798bb761d5b6d8e72950

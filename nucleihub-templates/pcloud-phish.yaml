@@ -10,7 +10,7 @@ info:
     - https://pcloud.com
   metadata:
     max-request: 1
-  tags: phishing,pcloud,osint
+  tags: phishing,pcloud,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"pcloud.com")'
-# digest: 490a00463044022035bf2c491cb01bf97555094c6094baec047a4d477a5d269a5f0a70bb93441482022023bbd0659a130b972280a45076ce7ad5d02e6237bb33b5959b59def8bc21e358:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402202d667dbb6f292f5ebbe096bcaef675038aea4f54ec05eb147af7e293c214d32102202d36e1aa369d8b0a325e66a4a91f78319d4ec73951e02a05d0eba37178fac2a7:922c64590222798bb761d5b6d8e72950

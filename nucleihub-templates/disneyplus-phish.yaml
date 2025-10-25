@@ -10,7 +10,7 @@ info:
     - https://disneyplus.com
   metadata:
     max-request: 1
-  tags: phishing,disneyplus,osint
+  tags: phishing,disneyplus,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"disneyplus.com")'
-# digest: 4a0a0047304502207ed4c09cae901fa520012325fde19a8da489f0f13d4eed81e323138adc3d8cfd022100c1136458bb2eac7cba6041393f5a438aefadc293fa1ad9ad8fdb4d7e2c0a5e92:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402204fa3e8fc7f9b3ddaf52f33790d6a1c2929a35321013dd95251fcb53eebc1d9df0220585f0edd97534a0f07d175f855acf1cca1aa0cfba0909bc25d8d91c1d8759095:922c64590222798bb761d5b6d8e72950

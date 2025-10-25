@@ -9,7 +9,7 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: misc,osint,tor,onion
+  tags: misc,osint,tor,onion,discovery
 
 http:
   - method: GET
@@ -28,4 +28,4 @@ http:
         group: 1
         regex:
           - '(?i)onion-location:\s*(https?://[a-z0-9]+\.onion)'
-# digest: 4a0a004730450220458247bc6d350d78e243a8c51ed29020ff36d9a3929238575b3f9b6245dfa5ff022100d2e9e86042e069ebac7878a8df9fe01757374b3b5a384b45851f9e0ed6270457:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022034776f9c644629fbec1a62525951f69b341f282155bf85b0e4a581b3dff5e2ba0221009bd73940cf9ddebc41830635e64d3d615e5cec41938d98f4b2d2b23fd99caec6:922c64590222798bb761d5b6d8e72950

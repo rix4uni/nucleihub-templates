@@ -10,7 +10,7 @@ info:
     - https://signin.aws.amazon.com
   metadata:
     max-request: 1
-  tags: phishing,amazon-web-services,aws,osint
+  tags: phishing,amazon-web-services,aws,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"amazon.com")'
-# digest: 4a0a004730450220360c622eec03b85ac61c9a2f9cbf047f79a7ded3405f5e8c118a842f13510c7102210099424a1074ce43754f264b6e226bb743479fd7ddf1574b54bef5c347266afbcd:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100c122392de5c56d7e4b20d025c3c04616c13a960e59646a9e8f436e34002c66360220521ea5135119193529ade7b82ce7e9e928abbf42f18f135b5ff84dff0e6b868c:922c64590222798bb761d5b6d8e72950

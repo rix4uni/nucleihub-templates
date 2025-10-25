@@ -10,7 +10,7 @@ info:
     - https://github.com/telekom-security/tpotce
   metadata:
     max-request: 1
-  tags: tpot,honeypot
+  tags: tpot,honeypot,discovery
 http:
   - method: GET
     path:
@@ -29,4 +29,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100b134d9353d37e6adccb9d2e42d50ea66b41a5426211d7c25c989ffd62357b91f02200d6fff93dd1c04eff3e12a8cfe6ac07b1c753d991349038a7f0fa12c6df2f25c:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100b83df7f8bded148c42a5c032a4dafaf357b4cba8183a6708500d97587e72aa62022100e0c30c3b23fca72854d14704f7e5113be1bfb40f42af0da0b0947afeccce09b4:922c64590222798bb761d5b6d8e72950

@@ -10,7 +10,7 @@ info:
     - https://microcenter.com
   metadata:
     max-request: 1
-  tags: phishing,microcenter,osint
+  tags: phishing,microcenter,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"microcenter.com")'
-# digest: 4a0a00473045022100cbfc53410bd379e1e73f19dd08aa1fc4aa5249a050b4a41b4229c1772cd456d20220468cae20f29ed1e321ff1449b190566e8f944abc16abf439d92073ec55a2afc4:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402204b4ef986c9252f99d9a13ad4d649652485cdbe1c80671972e68ddc2ad6658d6602205e728c8650e3dd878133c41416a278214f6970f0266f3cfc484ff978bda5509e:922c64590222798bb761d5b6d8e72950

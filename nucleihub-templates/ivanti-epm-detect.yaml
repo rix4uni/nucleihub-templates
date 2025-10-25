@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 2
     shodan-query: http.favicon.hash:362091310
-  tags: detect,ivanti,emm,tech,mobileiron,epm
+  tags: detect,ivanti,emm,tech,mobileiron,epm,discovery
 
 http:
   - method: GET
@@ -25,4 +25,4 @@ http:
       - type: dsl
         dsl:
           - "status_code==200 && (\"362091310\" == mmh3(base64_py(body)))"
-# digest: 4a0a0047304502206a0d8ffa2edcfae8be5c319db31a1855c904b1a33be9b83b79cf92f80d1b6d5e022100dc35a8fec7e83c1a24b727fe02f47a38f5571343856ed52ea9513bcf03d79b3c:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402204b33c059e22793211a673de3b78b2efd3776ad3741ef28d9980b60c8a52351910220634429280f26b1c977781c208c1544a35ca97bbf2709db481c5c4026f46b0515:922c64590222798bb761d5b6d8e72950

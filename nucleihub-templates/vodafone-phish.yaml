@@ -10,7 +10,7 @@ info:
     - https://vodafone.co.uk
   metadata:
     max-request: 1
-  tags: phishing,vodafone,osint
+  tags: phishing,vodafone,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"vodafone.co.uk")'
-# digest: 4a0a004730450221008ce17a1464cf84680bdc713ce6cfca93d091432f1afe18b24b08299893abe78402202c351c8b112252a9701e4976a96c717c0fe4b40a19963f370e29d7aaac448b07:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402202311906b87f9d51367093029df69d0776840c4942f6d6a401c9f93bae43aefa502201f83da80e85b633baff6019f8b99e0108fd0ad88283536cd47811ada8e507354:922c64590222798bb761d5b6d8e72950

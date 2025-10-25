@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: http.favicon.hash:-286484075
-  tags: panel,openwebui,login
+  tags: panel,openwebui,login,discovery
 
 http:
   - method: GET
@@ -31,4 +31,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502201242e646cae8cbe8efdd765f661aab81869421c96a1191a2f21678a813ae458c022100c22383647fcdfc7539099b8c0d4aa6637fe5d0e5846b6c1655525e3c19a38e94:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100b77cd319f310cd2da5efbbe8b58f2edbdc0d000399e317403ef61e532cdf8a0c022074a06fe4bd42106ac30d89e5f6f1dfb39e111b501a6c4280299a71eb08d39389:922c64590222798bb761d5b6d8e72950

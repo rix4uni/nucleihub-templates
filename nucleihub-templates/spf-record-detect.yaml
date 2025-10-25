@@ -10,7 +10,7 @@ info:
     - https://www.mimecast.com/content/how-to-create-an-spf-txt-record
   metadata:
     max-request: 1
-  tags: dns,spf
+  tags: dns,spf,discovery
 dns:
   - name: "{{FQDN}}"
     type: TXT
@@ -23,4 +23,4 @@ dns:
       - type: regex
         regex:
           - "v=spf1(.+)"
-# digest: 4a0a0047304502207ed12b16f38a84f1ee407fd89017f651c14d60d27f5d7629c9afad8122861628022100b08b4719abf1ada951d2e75d3b119f7687adcab74ebbcf6eb5dbb9d2b39d72a4:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100f13ebb9dda6d31f94b1a2413b025ad9c62554f6d88e902c186bdd39445375d8c02200d4ab1bcf5289bbc4943a635002af2f6aff29502bd96dc1387fc60c16b949ac2:922c64590222798bb761d5b6d8e72950

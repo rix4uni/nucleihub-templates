@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 2
     shodan-query: html:"title=\"blue yonder\""
-  tags: panel,login,blue-yonder,detect
+  tags: panel,login,blue-yonder,detect,discovery
 
 http:
   - method: GET
@@ -29,4 +29,4 @@ http:
           - 'status_code == 200'
           - 'contains(to_lower(body), "title=\"blue yonder\"")'
         condition: and
-# digest: 4a0a0047304502207fddde885cfbef5cfaddfadc047a4fbe88d15ef323dec4242a545f99c402876e022100b2d47323a11658aacc7379406b1bab38f47eb74e8da74877cc06d0ae69aa1825:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402205b96b65a086bd03bed8a30f9512b88f9a0490417f919cf7741eb05f60a9fd2ca02201ed91b161d7d7ecf07e68cab89061328b430e4c23370b5b357aabdb4c30a3dec:922c64590222798bb761d5b6d8e72950

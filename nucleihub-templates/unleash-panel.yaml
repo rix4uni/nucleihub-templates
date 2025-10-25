@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 3
     shodan-query: http.favicon.hash:-608690655
-  tags: panel,unleash,login,detect
+  tags: panel,unleash,login,detect,discovery
 
 http:
   - method: GET
@@ -37,4 +37,4 @@ http:
       - type: dsl
         dsl:
           - "status_code==200 && (\"-608690655\" == mmh3(base64_py(body)))"
-# digest: 4a0a00473045022004fce7edaa4e3799923d3d9f6419dfa0b64b1ebf4c9edd92693ecfa29f87803b022100f0648957d9172d4b8ec60190a1660dcaca56e5aad54a4d9e6d3f1ec1f69e848d:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100d8f9dd66d9a2be7b35c2a5f48b0a25967a65044211ac2f21bbd7b7b32cbd35a6022100b87d27c1550d5469fdcb54b9fdb2e66c78e34d7ede55749c74fe817d1da29cd7:922c64590222798bb761d5b6d8e72950

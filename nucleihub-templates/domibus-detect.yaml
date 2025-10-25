@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: http.title:"Domibus"
-  tags: tech,domibus,detect
+  tags: tech,domibus,detect,discovery
 
 http:
   - method: GET
@@ -34,4 +34,4 @@ http:
         group: 1
         regex:
           - '"versionNumber":\s*"([0-9.]+)"'
-# digest: 490a0046304402200bdee57f371108a6af6dc54168eb2614686d19e30bb3ab574d855ee2fdcb268e02202fca41ff33c842e2f64118c96b0ac42df81b8b8cc07a528b1fa4dc65790c0a4b:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a1703871f1c178a25f1603ba5266c229cddab52ef6044dd8d44075392541a3cd022100f4968502e06fa2e87d6d045ff62e3b2206c68cc1661c825d0f5fd50ceb447ad7:922c64590222798bb761d5b6d8e72950

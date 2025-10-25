@@ -10,7 +10,7 @@ info:
     - https://nordpass.com
   metadata:
     max-request: 1
-  tags: phishing,nordpass,osint
+  tags: phishing,nordpass,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"nordpass.com")'
-# digest: 4b0a004830460221008b01a72cd1e60f41ec2504ef396ffbe3b10f13fce58b7f2389664ae4530a445a02210099bd6a9472e74d4598a8470c46e2b12d0663c1b041e08788a88de6e7372c34b5:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402204a80245ae784db99a4258981b3adad53113727de76c0706f4d3ebe719e456aa0022048384d5b2a6903c1608b9589ff29794135ed0c9d93fb6850f8c728e3227e193f:922c64590222798bb761d5b6d8e72950

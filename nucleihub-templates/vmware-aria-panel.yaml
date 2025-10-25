@@ -10,7 +10,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: title:"VMware Aria Operations"
-  tags: panel,aria,login,detect
+  tags: panel,aria,login,detect,discovery
 
 http:
   - method: GET
@@ -27,4 +27,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402204bbf55b90fef4a29a3908e4c7490a94c6bb6746d69b538c6636d45fff23f9f4902207ca3da5f747c8cc1258cca2586179b94e895765fda3b0f4b50f6967f6055e44e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022078a1b05d50ea0a2464bd487afa24bafb9533a4523a8f7549edb919dce171b34a0221009f35d6083b2b55354af53fbee7e3741dc79a8362d0b006af44e2c34a4ad5afe0:922c64590222798bb761d5b6d8e72950

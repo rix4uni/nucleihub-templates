@@ -10,7 +10,7 @@ info:
     - https://trading212.com
   metadata:
     max-request: 1
-  tags: phishing,trading212,osint
+  tags: phishing,trading212,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"trading212.com")'
-# digest: 4a0a00473045022100e23913bb5efab925011efef6f70c6e2a625cf3343bd6a65a2b993bc3d4c0abd9022050b02e7de2796b11086c08afe1ceb9c2e843f8bdd7349eb80c2c463cd64b509a:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100d0a9a8b5ab73bdd3067442845e9a12f102123c89909c474860cb109b5a73be68022100fdcf1d3fc8f1f5b52b8797c596d586cb4f8bc0f0cb7cda49470fbd08c2eb1990:922c64590222798bb761d5b6d8e72950

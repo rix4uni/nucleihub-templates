@@ -10,7 +10,7 @@ info:
     - https://wikipedia.com
   metadata:
     max-request: 1
-  tags: phishing,wikipedia,osint
+  tags: phishing,wikipedia,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"wikipedia.org")'
-# digest: 4a0a00473045022100ccee61616a406ba2a2e913287516ac6394d9318620273ce37eacfceba23280bf02207cbce7e1b4b28be886348d6250c7b6d62b7df94693f490ed202d16634e312420:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502204170eee40c35b5e7ef7674d8683727abec3b659308f294b719b45aca1f0ecd95022100c4b185f488664056e69f18129b181b1809f99a591d0fb2d57e2084feb8cb820b:922c64590222798bb761d5b6d8e72950

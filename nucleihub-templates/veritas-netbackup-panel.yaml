@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: html:"Veritas NetBackup OpsCenter Analytics"
-  tags: panel,veritas,netbackup,opscenter,login,detect
+  tags: panel,veritas,netbackup,opscenter,login,detect,discovery
 
 http:
   - method: GET
@@ -29,4 +29,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402201eb2a29e957e64f46545d8c250dc231024a4850ca942cb8723261cfd4c32bcd4022021a378b9c030f2fe0c390d7f9255b6ba0f49e06186527aba4df994ca8030274a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100defdbb284f114812b250e9dbef83fbc6031dfea73c8222f503d785f25848bd5602200c8a32ed85d58b1ae9b121ddeed138844a93c957ae37ecceacd0560e634992a3:922c64590222798bb761d5b6d8e72950

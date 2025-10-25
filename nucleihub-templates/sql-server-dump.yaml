@@ -12,7 +12,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 21
-  tags: exposure,backup,sql-server
+  tags: exposure,backup,sql-server,vuln
 
 http:
   - method: GET
@@ -58,4 +58,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a004830460221008231a73710614a59ff441198545a70f03c0e50be341d63e093296bd9e4561026022100dfda6062a3bba4ea3afe87f178d1a254b225586a7296347ae3b47939dcb455c4:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100d61297db0c2215614777bb99162d894fe05d8a76e5ca101e75e7eba28714d79802210086d48388e4072fe02b712c5599d7a3395589f50eb7ba2976590f2aece87061e1:922c64590222798bb761d5b6d8e72950

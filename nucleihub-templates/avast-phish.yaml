@@ -10,7 +10,7 @@ info:
     - https://avast.com
   metadata:
     max-request: 1
-  tags: phishing,avast,osint
+  tags: phishing,avast,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"avast.com")'
-# digest: 490a0046304402203b725ef9f1e96ba2870dea199a3eabb0d5008d1a8cac0d580a0205f54891b4e10220057f7b6ad4c6bf379fdfcbfaa32012e1cdb9660b3d885a84e71bd44e7a2c1732:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502210083706f82b8007bec51b940faffb784efe013d278b31a51aced7a66d111863b7702202475ad3324e3400bb4432f806cca8214b75f0d43c5f711463be1a35f3dfda841:922c64590222798bb761d5b6d8e72950

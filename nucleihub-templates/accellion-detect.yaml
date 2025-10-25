@@ -10,7 +10,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: html:"/cfadmin/img/"
-  tags: accellion,tech,detect
+  tags: accellion,tech,detect,discovery
 
 http:
   - method: GET
@@ -29,4 +29,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100f8567c888519c42b6486f1a142e759cd0495c8685babc831e65e076f9d7b25dc022071959957c5165035a8aad65996eca017626168cfde42b52ec64f992820ed71f4:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100e3f3df7636379fd81976a57b15c535339dce8209464781e008050f49184d25fc022100fdb9a0c06e74a493a8773ee130d94a2f94903c8eb86958de56ba0d584e5e7ae1:922c64590222798bb761d5b6d8e72950

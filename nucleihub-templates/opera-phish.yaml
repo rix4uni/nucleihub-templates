@@ -10,7 +10,7 @@ info:
     - https://opera.com
   metadata:
     max-request: 1
-  tags: phishing,opera,osint
+  tags: phishing,opera,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"opera.com")'
-# digest: 4a0a00473045022100855bf2d744651add6e1de459d13d36bdc54324a0738ddd73204d20fbe02aef2602207c913484ed160dab08110b5f9fe69cc1a61f049b70bdc588e5964ecf09fbf36c:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100dcb3c553df377d78ebd425f373e03eaa9df88f1192825a61e5428aa768ccb41f0221009f42d4967a47f64922da99998f47a3a8991fee99edf10a05406ff0433d18eace:922c64590222798bb761d5b6d8e72950

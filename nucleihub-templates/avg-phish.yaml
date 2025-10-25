@@ -10,7 +10,7 @@ info:
     - https://avg.com
   metadata:
     max-request: 1
-  tags: phishing,avg,osint
+  tags: phishing,avg,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"avg.com")'
-# digest: 490a00463044022100a417dd378448708f3cfda33b734a146a2dbb6fdea6249fbc5254a789b31ed2b4021f22c8f1960e396ec66e0035ce0505d4403d5ad932697aa074b35c04d3b2df41:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100f1a917f82b58fa02e01e22d9d48ebc0ba8343ed420d9e99fd7306f734d147b360221009fe4bb64e7bc7b8766fe4059e89eaf67f73967fba51c95a026f0c3a3794396e7:922c64590222798bb761d5b6d8e72950

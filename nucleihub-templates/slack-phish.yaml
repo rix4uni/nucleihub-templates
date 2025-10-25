@@ -10,7 +10,7 @@ info:
     - https://slack.com
   metadata:
     max-request: 1
-  tags: phishing,slack,osint
+  tags: phishing,slack,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"slack.com")'
-# digest: 490a004630440220462bf8dc8e81f20967be5d9a2a1bd5b2d72d555416164621d8c441e79373792702205119f19f6cc12ba89182368ec44507f569a9264e1ce24b34f9c9a1986233f1fb:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402200ac15f1bb112aeacb4f9ed0357d7927ed1faabc544d8e52b9c75c5310676235002202dcce2cffdbb505366435298e49203eec65ba56f13491bc8adf344b72b2b31d9:922c64590222798bb761d5b6d8e72950

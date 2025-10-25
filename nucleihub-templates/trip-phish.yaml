@@ -10,7 +10,7 @@ info:
     - https://trip.com
   metadata:
     max-request: 1
-  tags: phishing,trip,osint
+  tags: phishing,trip,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"trip.com")'
-# digest: 4b0a00483046022100c4e89c6c4e820f11dcac6fb83654528dc49c0cbcfec3c9341dc1ee95056bd312022100c9743ce92b60c28a30d2907da3ac12c16144f79f1cf260804403582e3c31e925:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100aacef86c9b161e558c8ab21619fa827bea70e7bfbe2eea3b242a611b447b6a30022071db5343226b5255eb69994fc7155be2cef3935e92d18f4e4893815d1981285a:922c64590222798bb761d5b6d8e72950

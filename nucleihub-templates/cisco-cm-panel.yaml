@@ -11,7 +11,7 @@ info:
   metadata:
     max-request: 1
     shodan-query: html:"/ccmadmin/"
-  tags: cisco,ciscocm,panel,login
+  tags: cisco,ciscocm,panel,login,discovery
 
 http:
   - method: GET
@@ -28,4 +28,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220481901d017e8062f4b82707c74ac7dc6ff7d66dc990fc04e8665dc75ae60d9320220021e95a43f05e3059a02a5716ef132918eb11ea033f1ba218d733bba3920a369:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502201aeb600697b9c473839b818591d8614f2309d11f59f49ff37594284803280c10022100cf100208da3911cde9051bf89c045ee75c8c35386b318c42f40464f47cf2e0dd:922c64590222798bb761d5b6d8e72950

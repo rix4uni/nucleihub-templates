@@ -13,7 +13,7 @@ info:
     verified: true
     max-request: 2
     shodan-query: http.favicon.hash:-1495233116
-  tags: panel,ackee,login,detect
+  tags: panel,ackee,login,detect,discovery
 
 http:
   - method: GET
@@ -28,4 +28,4 @@ http:
           - 'status_code==200 && contains(tolower(body), "<title>ackee")'
           - "status_code==200 && (\"-1495233116\" == mmh3(base64_py(body)))"
         condition: or
-# digest: 4b0a00483046022100b88238d1a9f505ab7b2e5a24b70c86bc26740c63ef344bee487838402f95e51f022100e6d6eb9c55e0ce4bcbf1b827e50c2ea37bc1ad8fa69540c85ccc09bd88aa0342:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100e10e260c4dc21c4cb1ed5142df0224c0cad46fe95744d6a8a6566d7881d9b27e022061577da43dbd9c0c95d42b25766dabd31b41a1cf39c3c4bf54aaed352ad20692:922c64590222798bb761d5b6d8e72950

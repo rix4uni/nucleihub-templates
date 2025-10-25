@@ -10,7 +10,7 @@ info:
     - https://tiktok.com
   metadata:
     max-request: 1
-  tags: phishing,tiktok,osint
+  tags: phishing,tiktok,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"tiktok.com")'
-# digest: 490a0046304402204c34a840164a7051b896e165eeaa38883235ccba34ea8418487bc36ec363963602206a0665e57bda91dd8a15e03f88dc110188497b9b8a79ab298ac5453b224d092a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100e2d6b7acbc8476ea7a39efdabfd1f647500d0ec07284663e59e495bc9ea4393902201ab5a0c6c7ffdc5c1a4fcfd716b6c293225d4996012c385b7f2b880178bf96aa:922c64590222798bb761d5b6d8e72950

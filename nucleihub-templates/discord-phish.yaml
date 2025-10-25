@@ -10,7 +10,7 @@ info:
     - https://discord.com
   metadata:
     max-request: 1
-  tags: phishing,discord,osint
+  tags: phishing,discord,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"discord.com")'
-# digest: 4a0a00473045022100864ddad93ede9e3408146e94bda6cc0dc43838ca9af33779b09d64dcbfee588902203b1ed7d3ea28b0cf1e6b15932b2471372eb9733d60a7bf4fafd86efab6065b06:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008b4af61a977a70ca7f0affe3b9ada4eb19165174e4d0d3e8e6dd65849fae66cd022100c121ac3526b64e5fbcf18cf23e769e56ed295472db8cffe1a24f326f32521126:922c64590222798bb761d5b6d8e72950

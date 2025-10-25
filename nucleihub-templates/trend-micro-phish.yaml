@@ -10,7 +10,7 @@ info:
     - https://trendmicro.com
   metadata:
     max-request: 1
-  tags: phishing,trend-micro,osint
+  tags: phishing,trend-micro,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"trendmicro.com")'
-# digest: 4a0a00473045022100cecefcf7e341bcc4e1aa95eac752a6e2c1abb12a51745615bfdc56819296135a02207ba8baf4c81092975a7530c4628f259664a9d95e56a31c4674c6bc6562a81409:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022034b4e845c74e7ee0faa2fbda829f3ce6ad387ef59a9a1e04196318227d332abf022008f98637a8b58c1cec89bf2c9e4dd9dac2455f0b2c948e93d002a1948d12f7d2:922c64590222798bb761d5b6d8e72950

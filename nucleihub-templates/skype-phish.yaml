@@ -10,7 +10,7 @@ info:
     - https://skype.com
   metadata:
     max-request: 1
-  tags: phishing,skype,osint
+  tags: phishing,skype,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"skype.com")'
-# digest: 4a0a00473045022100859a59a5107f647f2910480e78c01c2aa8e3dc55486c378a557c7f9aaf9378f60220145ba959254f22ea1a16ed71b2cd179b4dbe2282ed7d93f2e17cedf75705b85c:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100ae0b3484fb19890fc6da5a497171c77e5b661d1a83d881ae75761a601afb25fd02201e29e7ffbee280b5ffb61ef938c61abe95af5eac8ed7f5049fe0eb0852eb0854:922c64590222798bb761d5b6d8e72950

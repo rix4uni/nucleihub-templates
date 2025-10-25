@@ -10,7 +10,7 @@ info:
     - https://reddit.com
   metadata:
     max-request: 1
-  tags: phishing,reddit,osint
+  tags: phishing,reddit,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"reddit.com")'
-# digest: 4b0a00483046022100b6a5e79d22cc58b5f0e30590a12b785ad3728da9d244ffb0a59a897db6657b6c022100cce59f2a5f7016588437c23e95a674edcbc02557a4efbd2ab229b48c29cef6c1:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100f06940660a9072e9d7687b28ff5341e3e7ccbcfc9f4c723848bf8f858bd94716022012bc3fae07fd49eccf0d3f8980308a501d99ec66bf348c173ac24304ee4bd303:922c64590222798bb761d5b6d8e72950

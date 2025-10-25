@@ -23,7 +23,7 @@ info:
       - title="oracle access management"
       - body="/oam/pages/css/login_page.css"
     google-query: intitle:"oracle access management"
-  tags: panel,oracle,login,detect
+  tags: panel,oracle,login,detect,discovery
 
 http:
   - method: GET
@@ -51,4 +51,4 @@ http:
         group: 1
         regex:
           - '(?i)Login\s+-\s+Oracle\s+Access\s+Management\s+([a-z0-9]+)</title>'
-# digest: 4b0a00483046022100e85128a28a9ec5238731315f616ac9008a56bb756a4d537482dd309b2f2b20fb022100b2f437951cfe2ef9dfa3e2e299b8356834c3ce61f7f1a678ef668f7a12213eab:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100e080c563fd508451ac2862cfc65011857bf72248def8998ad9530594ae6c940f02205772dc0404777be99a1634db5fb583bb7c5f5e5e039a133a2ee84580df748a7f:922c64590222798bb761d5b6d8e72950

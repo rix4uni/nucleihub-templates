@@ -13,7 +13,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: title:"CentreStack"
-  tags: panel,centrestack,login,gladinet
+  tags: panel,centrestack,login,gladinet,discovery
 
 http:
   - method: GET
@@ -30,4 +30,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100f5807951073f39e5a4d6e55cdac8d85a5e5ed60bb4963692430a883f38bcdc41022100d614a7bca5ddd2829f2f62939cea116c66d3f6dcfa9b0a9c97846157c2fc716b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450221009ac6abd5aafbd0a8292ff6fac489987d9a07199ae7725ab7fdbc91308237be6502204e739501db3fe4a7b8ac6ae6c5965daae80930dcc520a8f0001878b4fecd96c9:922c64590222798bb761d5b6d8e72950

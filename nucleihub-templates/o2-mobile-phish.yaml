@@ -10,7 +10,7 @@ info:
     - https://o2.co.uk
   metadata:
     max-request: 1
-  tags: phishing,o2,osint
+  tags: phishing,o2,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"o2.co.uk")'
-# digest: 4a0a00473045022100f4f9bc0e6d4fb5944e8671883c82ce661fe2eb0a9cc6fed42d529142f7fe298402204d2add452ff9e9ebfff8fb9df0ede814ad3660d8469ac6742e8f2dd24e2b44e5:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220479c577e0d3471c2d31235e7d45636d258c4e90a83381e1f476149b73b2b1d9f022044dd1ce25e63974e998f9e0406203b6036df415d2bac155d4a93f5d770853d14:922c64590222798bb761d5b6d8e72950

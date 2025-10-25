@@ -10,7 +10,7 @@ info:
     - https://dashlane.com
   metadata:
     max-request: 1
-  tags: phishing,dashlane,osint
+  tags: phishing,dashlane,osint,discovery
 http:
   - method: GET
     path:
@@ -34,4 +34,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"dashlane.com")'
-# digest: 4a0a0047304502210098506e33176295f32065cbdc337490b4bce1be0ab556d1ef84a67c8f69dac13102201bec429d93db255c0e8e89bba1b36cedd7eb263b6b77ac9cb75254ea347b2afb:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100e5da0da4f2dfd009fe0dd8b6769291a61678d82b5cb8755d01e7f35db79523c002210094111931e38eab1f372f96511cf2a3b92bbe904803a10449a769612f4f689618:922c64590222798bb761d5b6d8e72950

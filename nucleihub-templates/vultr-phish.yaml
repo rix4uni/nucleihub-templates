@@ -10,7 +10,7 @@ info:
     - https://my.vultr.com/
   metadata:
     max-request: 1
-  tags: phishing,vultr,osint
+  tags: phishing,vultr,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"vultr.com")'
-# digest: 4a0a0047304502210095956276276986e1cc54b4ba259f71093c04cb0d87c7a2341764c790f7c13f7e022027daa6f4ee1e15e3ed8f3b9da1f769cd1b7d2f8ee21214c95a83a9a006091e00:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100dd5c06e64aa866d45778dd68b51eeabe8528b4f5c5bab4d54a9f10aa6d8c385d0221008d80f0db5e58f9266e9c512d536313e9cf921b9e444e278d0185b941c8d77c17:922c64590222798bb761d5b6d8e72950

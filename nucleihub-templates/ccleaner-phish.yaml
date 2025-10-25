@@ -10,7 +10,7 @@ info:
     - https://ccleaner.com
   metadata:
     max-request: 1
-  tags: phishing,ccleaner,osint
+  tags: phishing,ccleaner,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"ccleaner.com")'
-# digest: 490a0046304402202cd05550360d5b346f2050d99b1bcc1bbc593928357c73d57254a626d3369dfd022073bcec60ddfc8ed5cdff337883e110ab0174a31368728b3776ed76ad2fbfeb13:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502205b429ea510769e88bfe22eab9bad687aeac7ebd32cc003e8e9b6f84ea3d86d47022100df653567b66b513c62c50a99a79122a709bf6c8a45d2519fc63614cb15f8332e:922c64590222798bb761d5b6d8e72950

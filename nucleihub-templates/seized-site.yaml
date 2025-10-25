@@ -10,7 +10,7 @@ info:
     max-request: 1
     verified: true
     shodan-query: title:"THIS WEBSITE HAS BEEN SEIZED"
-  tags: seized,miscellaneous,misc
+  tags: seized,miscellaneous,misc,vuln
 
 http:
   - method: GET
@@ -30,4 +30,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402201eef7a39e9d299711505ff15505bad016c65fde857c5660b5be68a33b0cbecf502205a689bcf673ce8c2cf4fc94a3436b3a2ee741e3d1fac24cf7f19148524aa81f2:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220316a8b657dda6e54a6b692b17c64e469ae9a15a7e6538548f28a2d9b89f87cc60220039e1d5b07581a920e196701f8e37c93dd6b3ff73f4679543196557be0c60ecd:922c64590222798bb761d5b6d8e72950

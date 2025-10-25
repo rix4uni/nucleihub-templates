@@ -10,7 +10,7 @@ info:
     - https://keepass.info
   metadata:
     max-request: 1
-  tags: phishing,keepass,osint
+  tags: phishing,keepass,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"keepass.info")'
-# digest: 4a0a0047304502210083eb0464c0e7a89f3d9af151a21a34cf143648ec32e4c69d03ee8de6c6de96420220025bd2030edd709edcc04eca72c3261da4a6c943a54f1c01fa169a63fcf8ee12:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502200d51fdf4b7ec95d8bf9beb8fb9afe3c5459cfdd92cb5e87d2c00d74983e41209022100f7b8c7b856d65a93c825d3b3050c420530416d3b351eea516fe6dc5fa2a7f963:922c64590222798bb761d5b6d8e72950

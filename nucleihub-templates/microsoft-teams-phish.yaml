@@ -10,7 +10,7 @@ info:
     - https://www.microsoft.com/en-gb/microsoft-teams/download-app
   metadata:
     max-request: 1
-  tags: phishing,microsoft-teams,osint
+  tags: phishing,microsoft-teams,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"microsoft.com")'
-# digest: 4a0a00473045022100ea14f0f88f1c5e60cc878b440ceedef5c2175ca77fbab1ecee962ab9213d80da022058d5da3022e286aa6eb92141786d8e53f7cb52c45bd4629ea9d20f4b9fcebb31:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221009635ba12b9fdc2bf237afc1c6ce86dfeefad0c9c5feccaa072e61a4945a237b4022100ec6a9bb235ed401c0f4b1e4b0b389727eb28ca9bd5cfe1b1580a9ec1e4dd0049:922c64590222798bb761d5b6d8e72950

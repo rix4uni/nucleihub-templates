@@ -12,7 +12,7 @@ info:
     max-request: 1
     verified: true
     shodan-query: http.html:"Adfinity"
-  tags: panel,adfinity,login
+  tags: panel,adfinity,login,discovery
 
 http:
   - method: GET
@@ -32,4 +32,4 @@ http:
         group: 1
         regex:
           - '(?i)Version\s+Adfinity([0-9.]+)'
-# digest: 4a0a00473045022100906c4da0d035441d4e36c88dffd5e827d53bd7d7f3269aba2a30d70030172b5b022024e61defaab295cebca57ac06700d7dde364084ec49650743edab9f870a1ca65:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402206f0b8ba1dc2ff9400ff47a057d88584111e42ff2db9d5b017e8a3e6ca7ee58730220753846ee65bdd71fd9a5ad5672316d08fd8da40297bca7bf3225a9c4db900731:922c64590222798bb761d5b6d8e72950

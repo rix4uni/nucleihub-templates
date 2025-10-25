@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: html:"assetlinks.json"
-  tags: misc,assetlinks,compliance,assetlinks
+  tags: misc,assetlinks,compliance,assetlinks,vuln
 
 http:
   - method: GET
@@ -26,4 +26,4 @@ http:
           - "contains(body, 'android_app')"
           - "contains(content_type, 'application/json')"
         condition: and
-# digest: 4a0a00473045022029dd912bf91513fad2317c81eab3ee36e64e8106d6c6e9a10f751244b8666e23022100e30a8570686bef948bc6de3e12d8cf5de8a324dca2670f40ee5141aaa62d4510:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a19e82525fc591d7cbb5f444ab5b83ebc48996eed87e42fcf3c358a90426977f0221009b9b3d1a12dc61ac94638dbad68811b062d97c7a01f1e6cf5a3b733c368bd40b:922c64590222798bb761d5b6d8e72950

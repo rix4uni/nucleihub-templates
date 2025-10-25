@@ -10,7 +10,7 @@ info:
     - https://ee.co.uk
   metadata:
     max-request: 1
-  tags: phishing,ee,osint
+  tags: phishing,ee,osint,discovery
 http:
   - method: GET
     path:
@@ -32,4 +32,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"ee.co.uk")'
-# digest: 4a0a00473045022100e82ec82497cffcb36738ebe77d188af6cb3e7553d239ffca65a135fec9901da302201e44492dbd8301f3a063d5d2779363193bc8cb185a2be62a14dc6b93bf892427:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402203d5c335219abe1c64cbf751f450fcda42cf2253bb678ec1b2b287270a82abac702204cc88149088babbf7738d7fe97b6ffc1774fcff120d5d6c366aad491e3521b2e:922c64590222798bb761d5b6d8e72950

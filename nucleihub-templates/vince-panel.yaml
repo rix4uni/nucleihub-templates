@@ -12,7 +12,7 @@ info:
   metadata:
     max-request: 1
     verified: true
-  tags: panel,vince,login
+  tags: panel,vince,login,discovery
 
 http:
   - method: GET
@@ -25,4 +25,4 @@ http:
           - 'status_code == 200'
           - 'contains_any(to_lower(body), "vince - high performance", "vince · open source web", "Welcome to Vince")'
         condition: and
-# digest: 4b0a00483046022100aa92ca83f1dee88d31857ef4b9f3c3dec955bdc5e406096a08739b124133c770022100bea3955f3502398db0272a944012720b14f0c4754f2dfe9fb67086bf3da7f5bb:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100965ebab45e023bd8dae214bfe349a9283ce6445085b52c5ee25dfdd8c772b36802201dd7fabfb4b6dda61cc2623bf4f034ff59249f5e1f45d57e5a5f0e08e6497a63:922c64590222798bb761d5b6d8e72950
