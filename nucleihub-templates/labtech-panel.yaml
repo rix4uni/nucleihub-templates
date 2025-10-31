@@ -7,11 +7,13 @@ info:
   description: LabTech Web Portal login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:labtech_software:labtech:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-  tags: panel,labtech
+    vendor: labtech_software
+    product: labtech
+  tags: panel,labtech,labtech_software,discovery
 
 http:
   - method: GET
@@ -37,5 +39,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a00463044022016e8fc128d0be5dbc09061c1e93f919b6273de3b640ef5fb43e93700ed57452702204f4b572252506c2ea5ccdfe633c06d9710c8eefed6297fdefa1613947bf0306e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502204b5f8059433f1e2d759a3dd7b288c037c011ac92b36f678cce6df01919c25106022100957934c513601c16510ac3d499107b57c31486783e060d0014f01f1504ce1ad5:922c64590222798bb761d5b6d8e72950

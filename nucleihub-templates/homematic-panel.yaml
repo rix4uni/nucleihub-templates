@@ -7,12 +7,17 @@ info:
   description: Homematic panel was deetcted.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:o:eq-3:homematic_ccu3_firmware:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    shodan-query: http.html:"Homematic"
-  tags: panel,homematic,iot
+    vendor: eq-3
+    product: homematic_ccu3_firmware
+    shodan-query:
+      - http.html:"Homematic"
+      - http.html:"homematic"
+    fofa-query: body="homematic"
+  tags: panel,homematic,iot,eq-3,discovery
 
 http:
   - method: GET
@@ -34,5 +39,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a004730450220081cccccf3d4bb4b15d6144e8ca77df34787511a84d85a0b7843ceed0b5e754902210088f596e3fb9264088bc55b2945cda6ac542d743aa4a52317acc75e8e8d86d9cc:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100c25664d4d70eb2d17bf87a6698661dc431d478310e30e4ecb09a7563b3ee2c6302204755ed81d6c3a6ab2bfc3283d19eaddaf57d8f66045f9c6c101e8472afd304f7:922c64590222798bb761d5b6d8e72950

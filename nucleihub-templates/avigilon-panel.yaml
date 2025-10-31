@@ -7,13 +7,19 @@ info:
   description: Avigilon login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:avigilon:avigilon_control_center:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: http.title:"Login - Avigilon Control Center"
-  tags: panel,avigilon
+    vendor: avigilon
+    product: avigilon_control_center
+    shodan-query:
+      - http.title:"Login - Avigilon Control Center"
+      - http.title:"login - avigilon control center"
+    fofa-query: title="login - avigilon control center"
+    google-query: intitle:"login - avigilon control center"
+  tags: panel,avigilon,discovery
 
 http:
   - method: GET
@@ -37,5 +43,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a00483046022100fd32228e92989995f2783c2cf8c4c8a1d09d644e199759938600c4c8f6d8ed8c022100ce0e3aa47f9eb74ed31b2001e9ea1eb9a741d01563dd59d2efc45e83f60a0f81:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502204b8916cc1ff8c5d0bd6e526ced2f3c4f3a8f5b458b330f44d9b517322c002b18022100b7eb16031d85bc9c996effc6aff883cd43c393efc1606d4db369f1aa63892aac:922c64590222798bb761d5b6d8e72950

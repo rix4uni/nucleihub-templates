@@ -7,12 +7,18 @@ info:
   description: Netflix Conductor UI panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:netflix:conductor:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    shodan-query: http.title:"Conductor UI", http.title:"Workflow UI"
-  tags: webserver,netflix,conductor,panel
+    vendor: netflix
+    product: conductor
+    shodan-query:
+      - http.title:"Conductor UI", http.title:"Workflow UI"
+      - http.title:"conductor ui", http.title:"workflow ui"
+    fofa-query: title="conductor ui", http.title:"workflow ui"
+    google-query: intitle:"conductor ui", http.title:"workflow ui"
+  tags: webserver,netflix,conductor,panel,discovery
 
 http:
   - method: GET
@@ -34,5 +40,4 @@ http:
           - '<title>Conductor UI</title>'
           - '<title>Workflow UI</title>'
         condition: or
-
-# digest: 4b0a004830460221009d7182a556cbe3077f4df99416d196a22efc2ebb71108c299c55fb7fb1bc69610221008f53d15067a5174c2c24a26e66fcf326d62f030964caedcf9adc3e6ac3f9933e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502205482ec746f95fe5db1e16cc88b215dea7032b37ce7c74500270b05e20c9d0df60221008a872dce62a5863b09c1870249fb7316c4a57bff30f51356fb15f3dc2400e379:922c64590222798bb761d5b6d8e72950

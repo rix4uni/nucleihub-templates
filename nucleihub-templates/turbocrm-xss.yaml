@@ -1,12 +1,19 @@
 id: turbocrm-xss
 
 info:
-  name: TurboCRM XSS
+  name: TurboCRM - Cross-Site Scripting
   author: pikpikcu
-  severity: medium
-  description: A vulnerability in TurboCRM allows remote attackers to inject arbitrary Javascript into the response returned by the application.
-  reference: https://gist.github.com/pikpikcu/9689c5220abbe04d4927ffa660241b4a
-  tags: xss,turbocrm
+  severity: high
+  description: TurboCRM contains a cross-site scripting vulnerability which allows a remote attacker to inject arbitrary JavaScript into the response returned by the application.
+  reference:
+    - https://gist.github.com/pikpikcu/9689c5220abbe04d4927ffa660241b4a
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 7.2
+    cwe-id: CWE-79
+  metadata:
+    max-request: 1
+  tags: xss,turbocrm,vuln
 
 http:
   - method: GET
@@ -15,7 +22,6 @@ http:
 
     matchers-condition: and
     matchers:
-
       - type: word
         words:
           - '"><script>alert(document.domain)</script>'
@@ -29,3 +35,4 @@ http:
       - type: status
         status:
           - 200
+# digest: 4b0a00483046022100ba50458a878fdfbbbb16ba7324dadeee1deda737d7661d01406138d1f40e277c022100a2a589fdfedf16b433551bf1c62b99b843c457a72fe9d61ee8462dc07917f5e6:922c64590222798bb761d5b6d8e72950

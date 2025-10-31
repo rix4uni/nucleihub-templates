@@ -13,7 +13,7 @@ info:
   metadata:
     verified: true
     max-request: 2
-  tags: config,exposure,node,npm
+  tags: config,exposure,node,npm,vuln
 
 http:
   - method: GET
@@ -37,5 +37,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022041a2b51adce1e4d2a01fd0017fbe04dbb4d313af6b075e94190bb5368dd55fa2022100b34322e5720bd3eb652a881f24425e0c081e155e6a2c36782bccaf21a07409d2:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100d09a7957b053aafd3e43b7d3b1904fa5f5e36cfb7bc44b6e3792d13012607860022014043d485ccf666bce543a5d64863db7308ddff8c5be87476e16e33574679f16:922c64590222798bb761d5b6d8e72950

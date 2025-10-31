@@ -7,11 +7,13 @@ info:
   description: Gerapy panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:gerapy:gerapy:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-  tags: tech,gerapy,panel
+    vendor: gerapy
+    product: gerapy
+  tags: tech,gerapy,panel,discovery
 
 http:
   - method: GET
@@ -28,5 +30,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a0046304402206af40a11462f52f9acdf62cd86f27611fb3d5f428ae529be2ab25a3b2f379ae202203b1854971469d22d66d122e4092e706ff2d6c6de691f2d2070411305c0e87730:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450221008f7603807716b1629cc1e6b14fb4d45347d97a51eeceb7ecc5c004c47084e4660220293cf323898aae665695b2e6ddb8604de4e9caa1e5ce981734a06e1f56e1f831:922c64590222798bb761d5b6d8e72950

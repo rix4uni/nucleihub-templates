@@ -2,40 +2,65 @@ id: netdata-panel
 
 info:
   name: Netdata Panel - Detect
-  author: TechbrunchFR
+  author: TechbrunchFR,righettod,matejsmycka
   severity: info
   description: |
-    Netdata panel was detected.
+    Netdata panel was discovered.
   reference:
     - https://github.com/netdata/netdata
+    - https://www.netdata.cloud/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:netdata:netdata:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    shodan-query: http.title:"netdata dashboard"
-  tags: panel,netdata
+    vendor: netdata
+    product: netdata
+    shodan-query:
+      - http.title:"netdata dashboard"
+      - http.title:"Netdata Console"
+      - "server: netdata embedded http server"
+    fofa-query: title="netdata dashboard"
+    google-query: intitle:"netdata dashboard"
+  tags: panel,netdata,login,dashboard,discovery
 
 http:
   - method: GET
     path:
       - "{{BaseURL}}/api/v1/info"
+      - "{{BaseURL}}/api/v2/info"
+      - "{{BaseURL}}/sign-in"
 
-    matchers-condition: and
+    stop-at-first-match: true
+    matchers-condition: or
     matchers:
-      - type: status
-        status:
-          - 200
+      - type: dsl
+        dsl:
+          - 'status_code == 200'
+          - 'contains(to_lower(header), "application/json")'
+          - 'contains(to_lower(body), "netdata")'
+        condition: and
 
-      - type: word
-        part: header
-        words:
-          - "application/json"
+      - type: dsl
+        dsl:
+          - 'status_code == 200'
+          - 'contains(to_lower(body), "<title>netdata console</title>")'
+        condition: and
 
-      - type: word
+    extractors:
+      - type: regex
         part: body
-        words:
-          - "netdata"
+        regex:
+          - 'version"\s*:\s*"v([^"]+)"'
 
-# digest: 4a0a00473045022100fc06e996113e89100033f69c17a511e80695b5472530a7c47d9efaab98b32f50022058fde5a4cc81b3ba6c7089a129c2ff1063ebc881a62bf5d8826ab48d448b9dd5:922c64590222798bb761d5b6d8e72950
+      - type: regex
+        part: body
+        regex:
+          - 'kernel_version"\s*:\s*"([^"]+)"'
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)nodeEnv:\s+"([a-z0-9]+)"'
+# digest: 4a0a0047304502202064c3f79bf2f3b569c0518e5fbb80f21c31ac7f6417df0de4efa20b63f3fa19022100f960449b0606c7b6de2d88f2743f6b00233954b1407b58bef14b19516bc336cd:922c64590222798bb761d5b6d8e72950

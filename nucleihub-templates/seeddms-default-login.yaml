@@ -12,10 +12,13 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
+    cpe: cpe:2.3:a:seeddms:seeddms:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: http.title:"SeedDMS"
-  tags: default-login,seeddms
+    product: seeddms
+    vendor: seeddms
+  tags: default-login,seeddms,vuln
 
 http:
   - raw:
@@ -43,5 +46,4 @@ http:
       - type: status
         status:
           - 302
-
-# digest: 4a0a00473045022100d82cfee35978bded2a46979183addd6bdf2cfece0b0e74f99e3758371ed99c9a02205f98235f1b798819eb7bac406595359b71b52b7171456eacff757bd9318b8511:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008e78a4b99cfd0aaf91de7ef7c9734fbad0fe411640b3a7649fcf993ebd0e68fa022100ca7b6267f773dfa1554b8370c0a97e1291f61947f4a6db91c85835a29f64cdf9:922c64590222798bb761d5b6d8e72950

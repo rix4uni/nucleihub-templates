@@ -7,13 +7,19 @@ info:
   description: VMware vCenter Converter panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:vmware:vcenter_converter_standalone:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: title:"VMware vCenter Converter Standalone"
-  tags: panel,vmware,vcenter
+    vendor: vmware
+    product: vcenter_converter_standalone
+    shodan-query:
+      - title:"VMware vCenter Converter Standalone"
+      - http.title:"vmware vcenter converter standalone"
+    fofa-query: title="vmware vcenter converter standalone"
+    google-query: intitle:"vmware vcenter converter standalone"
+  tags: panel,vmware,vcenter,discovery
 
 http:
   - method: GET
@@ -30,5 +36,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022024694d81579632a9088a67c964c8eaab11d0b8a280724616e56e5e7c7895a481022100f90ff29d03625891d40d24af60c7cbc4c6fcd21a7e28ad9e0c2b023104c617c9:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a604cc1e0f7780b8c59c99a63a89d2564dd554e240849f34c788d7a621299d2c022100e63eecfbc07a4801c8d021a04a524632e2b37536192f8745d5ed2abfeaf94832:922c64590222798bb761d5b6d8e72950

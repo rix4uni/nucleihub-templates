@@ -7,12 +7,25 @@ info:
   description: MinIO Browser login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:minio:minio:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    shodan-query: title:"MinIO Browser"
-  tags: panel,minio
+    vendor: minio
+    product: minio
+    shodan-query:
+      - title:"MinIO Browser"
+      - http.title:"minio browser"
+      - cpe:"cpe:2.3:a:minio:minio"
+      - http.title:"minio console"
+    fofa-query:
+      - app="minio"
+      - title="minio browser"
+      - title="minio console"
+    google-query:
+      - intitle:"minio browser"
+      - intitle:"minio console"
+  tags: panel,minio,discovery
 
 http:
   - method: GET
@@ -28,5 +41,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100a05b6cbdadfd8b62b9e660752bdfaf3c35ce6fac9252c405621e235cf5fdaf5d02203d025f667d98a1ee915045f35da03c9f5ca61968e2ccdf64295e8f2ff1112bda:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502203adae623a6c7bdafcf1261e78c6d52c02ed2b3383c7dd529deb60376815669de022100c9c90c925805d6b05e1d9b487adab1da55d84517b87552b221ddcfcb6394c038:922c64590222798bb761d5b6d8e72950

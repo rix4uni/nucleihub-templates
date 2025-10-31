@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-522
   metadata:
     max-request: 1
-  tags: samsung,default-login
+  tags: samsung,default-login,vuln
 
 http:
   - raw:
@@ -41,5 +41,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a0046304402204c0c004f4e1523701e478e97dea5095b387b9e48975efa867a71d9ec5012c9c802203dda76ffd89c7ddec72b0bf0621c90196db5ea0b214d890ef7dbd4c7fbbbc3e0:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402200af63f33627a572b625bf2befcb90aaa1c3c1cd3a03cf3f65239a3b9d67325970220276ae4b550c38a56d213f7556bc8a7130b114d340c5920fb9f9a2b7bcc7ed7c4:922c64590222798bb761d5b6d8e72950

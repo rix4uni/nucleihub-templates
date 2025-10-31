@@ -9,7 +9,7 @@ info:
     - https://laravel.com/docs/master/logging
   metadata:
     max-request: 1
-  tags: laravel,logs,exposure
+  tags: laravel,logs,exposure,vuln
 
 http:
   - method: GET
@@ -37,5 +37,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100b0fce74f167a40ba4645dab793e58cb86f6ff71560b7f07669742469b5e0b7d40220182c1088c71f30cffa3615e8eb8faf0ca6edb3c75d8dd5e626e40f9ec4677b4a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022013d8ea6e1932825d2bb50407b71a6ac17d3bdfb9c5c33563861f527457e2097c022100e072b0d78a05a8ac2e395ddd05a0a2610d37758893e58c0b6e5f1b27030628e3:922c64590222798bb761d5b6d8e72950

@@ -7,12 +7,15 @@ info:
   description: Redash login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:redash:redash:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
+    vendor: redash
+    product: redash
     shodan-query: http.favicon.hash:698624197
-  tags: panel,redash
+    fofa-query: icon_hash=698624197
+  tags: panel,redash,discovery
 
 http:
   - method: GET
@@ -31,5 +34,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022072e6dceca96b03a295e4c35c9d112648208584fa10d3df8c56da8702a4795657022100c43d8443fdc659183b0bad3ba7d1c0e4b7b4e65d5a79017681dc74c11e7408de:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100897a7d21d11566c56f2c50244b43a9c6c6711b7f527f231dc95c0e73e4d5084c02202f10991518aae579b400a1218bd917cadfbeafd83cd6f83aa0c5820f2aff3fff:922c64590222798bb761d5b6d8e72950

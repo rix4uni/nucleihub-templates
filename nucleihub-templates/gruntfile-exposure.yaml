@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 2
-  tags: config,exposure
+  tags: config,exposure,vuln
 
 http:
   - method: GET
@@ -36,5 +36,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100e8a2800fd792f3ec53f3e33a76736dd79b33a9c08cc5fdafa49bdbf35c37505602202826f2c8f9cf7a481ae5347e459218772cdbd936991cd8697521816c4a970419:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402200dd7566b1b3389ed0d48008c6eb6087e2f2c1cd40f72df75663bbf9806c15363022063d26db0d70053c81ebb49cb11ec7cd8ee2c50d6621c5ad7c9540a77dae6e7f7:922c64590222798bb761d5b6d8e72950

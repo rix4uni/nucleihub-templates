@@ -12,7 +12,9 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
     cwe-id: CWE-22
-  tags: lfi,yishaadmin,huntr
+  metadata:
+    max-request: 1
+  tags: lfi,yishaadmin,huntr,vuln
 
 http:
   - raw:
@@ -29,5 +31,4 @@ http:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/08/04
+# digest: 490a0046304402200545bf7a7e2c998cfd6b2a20c6caab48c12df555883bde331b0e18e579b3c0970220625d3c729cb91fa7534e139bfa440bd42352b003572aa00f9398443234ab2e43:922c64590222798bb761d5b6d8e72950

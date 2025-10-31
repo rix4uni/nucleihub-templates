@@ -10,12 +10,13 @@ info:
     - https://mobile.twitter.com/sec715/status/1406886851072253953
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    cvss-score: 10.0
+    cvss-score: 10
     cwe-id: CWE-77
   metadata:
     verified: true
+    max-request: 1
     fofa-query: app="sangfor"
-  tags: rce,sangfor
+  tags: rce,sangfor,intrusive,vuln
 
 http:
   - method: GET
@@ -32,5 +33,4 @@ http:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/05/30
+# digest: 490a004630440220386bab6ba512bd57974255494f91b7595d83b6fe1c11e4038870fece9a0d840d02204a9cf35f34ea84c20f0dcfae92af19f1896ec312cb2fa2b3cb66fef18cbcff5c:922c64590222798bb761d5b6d8e72950

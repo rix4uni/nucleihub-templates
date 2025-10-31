@@ -2,18 +2,23 @@ id: microfocus-vibe-panel
 
 info:
   name: Micro Focus Vibe Login Panel - Detect
-  author: ritikchaddha
+  author: ritikchaddha,righettod
   severity: info
   description: Micro Focus Vibe login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:microfocus:vibe:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: http.html:"Micro Focus Vibe"
-  tags: panel,microfocus,vibe
+    vendor: microfocus
+    product: vibe
+    shodan-query:
+      - http.html:"Micro Focus Vibe"
+      - http.html:"micro focus vibe"
+    fofa-query: body="micro focus vibe"
+  tags: panel,microfocus,vibe,discovery
 
 http:
   - method: GET
@@ -36,4 +41,10 @@ http:
         status:
           - 200
 
-# digest: 4a0a0047304502202e183fb6993e57f970f81cc09c5e9523a692dfcc039f9135632625fdcd47a7b7022100a589eb051afecefa9fa5d52a40de20612ea3b16b13d123801a7cece5fd4325dc:922c64590222798bb761d5b6d8e72950
+    extractors:
+      - type: regex
+        part: body
+        group: 1
+        regex:
+          - '(?i)Copyright\s+([0-9-]+)\s+Micro\s+Focus'
+# digest: 4a0a00473045022065c38d1ad488a429baccd900f3fccaf2bdf4d8296a0e452811835cbb066308fd022100e1619d4950b266b1ae08fa4582da059e7f69b7c3145675f007dc3edcf87183ff:922c64590222798bb761d5b6d8e72950

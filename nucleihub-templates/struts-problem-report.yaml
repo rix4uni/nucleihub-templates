@@ -9,7 +9,7 @@ info:
     - https://www.exploit-db.com/ghdb/4278
   metadata:
     max-request: 1
-  tags: struts,debug,edb,exposure,apache
+  tags: struts,debug,edb,exposure,apache,vuln
 
 http:
   - method: GET
@@ -25,5 +25,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022072b2375b4cd9dbf2bcce90d71c72e6c52718019b361ce71eea5f617c6a3904e1022100dc2851ed0fcc38ac40f189bfbaef67f1afbef38a0e43466dfdd3eb6005efd6a5:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450221009f86ba6024a37c0a8129d8fd360d7c1626e066b225266ce9e3b93ed039d0c3ee02202932e64fe561ebb15e59b134cc868efb13ab962ae52675fcc26030963413aa20:922c64590222798bb761d5b6d8e72950

@@ -7,13 +7,15 @@ info:
   description: Pichome login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:oaooa:pichome:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
     shodan-query: http.favicon.hash:933976300
-  tags: pichome,panel
+    product: pichome
+    vendor: oaooa
+  tags: pichome,panel,discovery
 
 http:
   - method: GET
@@ -37,5 +39,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a0047304502204a03e698a4523bf89165eb0502cc0eab27e5da84c030d1f91b380b556ca797bf0221008f117bcd60847f0fbd7beece1244ef30783a68e6adb6bd379a37197127bf8e66:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100b4c23ef0e8e858b3ecea672a36272a026b2c815f5e2c15f08c0116fa08dd270002210099c986d6b80d89dd356b71f6dd80e35328195988c2376703fd0e332ba2e44cb9:922c64590222798bb761d5b6d8e72950

@@ -7,13 +7,18 @@ info:
   description: Mitel login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:mitel:cmg_suite:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
-    shodan-query: http.html:"Mitel Networks"
-  tags: panel,mitel
+    vendor: mitel
+    product: cmg_suite
+    shodan-query:
+      - http.html:"Mitel Networks"
+      - http.html:"mitel networks"
+    fofa-query: body="mitel networks"
+  tags: panel,mitel,discovery
 
 http:
   - method: GET
@@ -35,5 +40,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a0047304502207878c8328528a14084df661d50ae0fcb633fb62ba05355f80498c1d3b6cfe855022100e5945f201ea0bf4c3d77de51771af924b9fecc6a86c52a6621816c9b334648a2:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502200837eac52896b11a0af3a9b47e05c121bee17c05a9a2116e8d346c1396b226b8022100d8f7d3ca3e524c8fb51392004fdb9aba1e61d3d8971b14d4ef52ecf8b205d7e9:922c64590222798bb761d5b6d8e72950

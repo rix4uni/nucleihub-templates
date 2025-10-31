@@ -7,13 +7,17 @@ info:
   description: DzzOffice login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     verified: true
     max-request: 3
     shodan-query: http.favicon.hash:-1961736892
-  tags: dzzoffice,panel
+    product: dzzoffice
+    vendor: dzzoffice
+    fofa-query:
+      - title="dzzoffice"
+      - icon_hash=-1961736892
+  tags: dzzoffice,panel,discovery
 
 http:
   - method: GET
@@ -39,5 +43,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100f0f65d6c7e20c252a0909c548216391b3c3db6ac370cd97567f2309013329fea022065cb95c773512c225a0a1358f809eb74c51180487c6d3687db3af4a8d1a0dc01:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a071dc2a5857a8cf50837cfdf72bc88787a7d68dfff0b9ed03874f2cb1d71faf022100af5da12954bae92209c4f35a61600afd93350ea65af70bfad6bab5daeb474623:922c64590222798bb761d5b6d8e72950

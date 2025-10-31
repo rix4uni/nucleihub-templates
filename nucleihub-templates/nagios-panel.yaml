@@ -7,13 +7,17 @@ info:
   description: Nagios login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:nagios:nagios:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
+    vendor: nagios
+    product: nagios
     shodan-query: http.title:"nagios"
-  tags: panel,nagios
+    fofa-query: title="nagios"
+    google-query: intitle:"nagios"
+  tags: panel,nagios,discovery
 
 http:
   - method: GET
@@ -33,5 +37,4 @@ http:
       - type: status
         status:
           - 401
-
-# digest: 4b0a0048304602210092a4e5b809b72ecda0882ee3f52e4ba438bb5124f4fee91429d490beaeb381920221009d48a1355ba361c5fae137b071d6f3252242aa5e0408edf5ad47958a5a0a5de9:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402203ae08c1cf202fdac3d87ae48532f830e66a8fc6ef20ab16b27077decd1cff5ca022052590fb919875df2480755c9f35bc3939765d3ddced7df6a9f976b19d8d12871:922c64590222798bb761d5b6d8e72950

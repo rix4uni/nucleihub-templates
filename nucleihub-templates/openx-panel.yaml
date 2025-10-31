@@ -1,20 +1,30 @@
 id: openx-panel
 
 info:
-  name: OpenX Login Panel - Detect
-  author: pikpikcu
+  name: OpenX/Revive Adserver Login Panel - Detect
+  author: pikpikcu,righettod
   severity: info
-  description: OpenX login panel was detected. Note that OpenX is now Revive Adserver.
+  description: OpenX login panel was detected. Note that OpenX is now a Revive Adserver.
   reference:
     - https://www.revive-adserver.com/download/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:revive-adserver:revive_adserver:*:*:*:*:*:*:*:*
   metadata:
+    verified: true
     max-request: 2
-    shodan-query: http.title:"OpenX"
-  tags: panel,openx,login
+    vendor: revive-adserver
+    product: revive_adserver
+    shodan-query:
+      - title:"Revive Adserver"
+      - http.title:"revive adserver"
+      - http.favicon.hash:106844876
+    fofa-query:
+      - icon_hash=106844876
+      - title="revive adserver"
+    google-query: intitle:"revive adserver"
+  tags: panel,openx,revive,adserver,login,revive-adserver,discovery
 
 http:
   - method: GET
@@ -23,13 +33,14 @@ http:
       - "{{BaseURL}}/admin/index.php"
 
     stop-at-first-match: true
-
     matchers-condition: and
     matchers:
       - type: regex
         part: body
         regex:
           - '<title>OpenX</title>'
+          - '<title>Revive Adserver</title>'
+        condition: or
 
       - type: status
         status:
@@ -42,4 +53,9 @@ http:
         regex:
           - '(.*)- http://www.openx.org'
 
-# digest: 490a0046304402202f4a48b99aabb6d142a6aca8e01830006eccb66847b307e8e132b9cd5a03f9c802200bd647427b8ad5d47672c7d8755889a9c190aaffdf5bfb9624b74b1116766412:922c64590222798bb761d5b6d8e72950
+      - type: regex
+        part: body
+        group: 1
+        regex:
+          - 'v=([0-9a-z.\-]+)'
+# digest: 490a004630440220078dd227144cefdadc9d4ae6537bffb426573be4654cf28e5a9af46f90e176f602207011fc752295d2f34d5419406f5d29b77def6e9dc0f6b320a430b343df7e0193:922c64590222798bb761d5b6d8e72950

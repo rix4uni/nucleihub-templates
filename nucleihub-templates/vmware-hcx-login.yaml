@@ -7,13 +7,15 @@ info:
   description: VMware HCX login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:vmware:vmware_hcx:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
     shodan-query: title:"VMware HCX"
-  tags: panel,vmware
+    product: vmware_hcx
+    vendor: vmware
+  tags: panel,vmware,discovery
 
 http:
   - method: GET
@@ -30,5 +32,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a0047304502204eebf2c1e7ae1129d2b44dac5441ef48b13d16d6abe406afbd5afce6fb5b5082022100b81dc6e3cd8eb00616af61e909493b14a1f7a8c6d112ae7a6e00bb243755ad31:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022068b12ee3a04bac3ab9a02d800b47bd931720bd5d536c6b051efd51bcd7965d75022100988f3fb2b60bea9901e55fbab6cf3ad9f87fb6b2e0b9c938af4787f168f5e215:922c64590222798bb761d5b6d8e72950

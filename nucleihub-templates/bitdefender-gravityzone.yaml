@@ -7,13 +7,19 @@ info:
   description: Bitdefender GravityZone panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:bitdefender:gravityzone:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: title:"Bitdefender GravityZone"
-  tags: panel,bitdefender
+    vendor: bitdefender
+    product: gravityzone
+    shodan-query:
+      - title:"Bitdefender GravityZone"
+      - http.title:"bitdefender gravityzone"
+    fofa-query: title="bitdefender gravityzone"
+    google-query: intitle:"bitdefender gravityzone"
+  tags: panel,bitdefender,discovery
 
 http:
   - method: GET
@@ -30,5 +36,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a004730450220589de4b230ad838edc2587f24f7fc2d038d729517d7399a7c925881a7c077f430221009f8b66c8f75014b236611712cf51547c717d4135c76fdab6f787a87a373d981c:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100dd3700b5218d3b4ff625339267bdca8735bbb8ce60e90142f2d15e20bd721554022100b040182d9e49e42ed7bea5122d3465b7286a0a9c80d7690516f0209f28d9d534:922c64590222798bb761d5b6d8e72950

@@ -7,14 +7,22 @@ info:
   description: Intelbras router panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:o:intelbras:cip_92200_firmware:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: http.title:"Intelbras"
-    fofa-query: app="Intelbras"
-  tags: panel,intelbras
+    vendor: intelbras
+    product: cip_92200_firmware
+    shodan-query:
+      - http.title:"Intelbras"
+      - http.title:"intelbras"
+    fofa-query:
+      - app="Intelbras"
+      - title="intelbras"
+      - app="intelbras"
+    google-query: intitle:"intelbras"
+  tags: panel,intelbras,discovery
 
 http:
   - method: GET
@@ -35,5 +43,4 @@ http:
         group: 1
         regex:
           - 'id="product">([A-Za-z 0-9]+)<\/p>'
-
-# digest: 4a0a00473045022100f42ad21d80f7f986a9ea0166d6a4308fd01fde3f5a1902894332a96a123aa642022050e7a352d711c84d1a8940986c5f557dc1b2d742ff4da8ca990e7fd305d665fe:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022045a0cc587cdf593be8ad2820fd6a3f5947e32d012a7b996c745b86c8157a0d8b0220383ebccfaab570836b796df9cd6301207e2a69c8ca48969a3dda51cca574c201:922c64590222798bb761d5b6d8e72950

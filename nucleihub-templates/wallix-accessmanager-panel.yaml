@@ -9,12 +9,14 @@ info:
     - https://www.wallix.com/privileged-access-management/access-manager/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:wallix:bastion_access_manager:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
     shodan-query: http.title:"Wallix Access Manager"
-  tags: panel,wallix
+    product: bastion_access_manager
+    vendor: wallix
+  tags: panel,wallix,discovery
 
 http:
   - method: GET
@@ -39,5 +41,4 @@ http:
           - "status_code==200"
           - "('1745235488' == mmh3(base64_py(body)))"
         condition: and
-
-# digest: 490a004630440220142fecbb79cf6a6eaf59973845c51f66b944680cd2961f505309a68d69e2a45602206b3afad9fb1dd28d66fa259960110759a124e68ec98a908255aed893d8b8a2c0:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100fd76f56998a51fadb2a927fb42da51ad517325c187b0447fb2bed430b9eaa62f022100b99771b1e94de48c317c30948eb0ae129a28fc69e2ebe2da222072c2ffd2f3e3:922c64590222798bb761d5b6d8e72950

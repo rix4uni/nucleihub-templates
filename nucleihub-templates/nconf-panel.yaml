@@ -7,13 +7,15 @@ info:
   description: NConf login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:nconf_project:nconf:*:*:*:*:node.js:*:*:*
   metadata:
     verified: true
     max-request: 1
     shodan-query: http.title:"nconf"
-  tags: panel,nconf
+    product: nconf
+    vendor: nconf_project
+  tags: panel,nconf,discovery
 
 http:
   - method: GET
@@ -32,5 +34,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100d6af60c9a0890c60f3a3c109e12ab08252795a13095a0ac07f98987ed36673400220546fa1d3088229465c08c8085deef4699271cdada361b6aad4442129bc8a7a62:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008f9d062dd362ace6c787c992ebabb3325a0f2737bcc271cea3ee3f16de751d61022100be0b443ba30dfe193e5b97e53b27e324ae9277ee0f82362933ca9911be1bf33a:922c64590222798bb761d5b6d8e72950

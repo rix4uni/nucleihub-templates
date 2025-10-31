@@ -2,15 +2,23 @@ id: wazuh-panel
 
 info:
   name: Wazuh Login Panel
-  author: cyllective,daffainfo
+  author: cyllective,daffainfo,idealphase
   severity: info
   description: Wazuh - The Open Source Security Platform
   reference:
     - https://github.com/wazuh/wazuh
+  classification:
+    cpe: cpe:2.3:a:wazuh:wazuh:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    shodan-query: http.title:"Wazuh"
-  tags: panel,wazuh,login
+    vendor: wazuh
+    product: wazuh
+    shodan-query:
+      - http.title:"Wazuh"
+      - http.title:"wazuh"
+    fofa-query: title="wazuh"
+    google-query: intitle:"wazuh"
+  tags: panel,wazuh,login,discovery
 
 http:
   - method: GET
@@ -37,6 +45,5 @@ http:
         part: body
         group: 1
         regex:
-          - '&quot;version&quot;:&quot;([0-9.]+)&quot;'
-
-# digest: 4a0a00473045022029a63ed0d39c0274481c1a197261279d9ee4714b69e08a5d6cc66aa24967d6dc022100b4556e381c8ee12071cc3715afe84891b518d3b9834e825d78a4ea7c49fd368c:922c64590222798bb761d5b6d8e72950
+          - '&quot;(?:version|wazuhVersion)&quot;:&quot;([0-9.]+)&quot;'
+# digest: 4a0a004730450220763fe8f1a0a744acb5724b17ab3922715307ee3890c28ded8575b671d4786633022100e7b414950bf1d0d7c2258a7e8953a4036621bde3da60c1038d08bae07df058a1:922c64590222798bb761d5b6d8e72950

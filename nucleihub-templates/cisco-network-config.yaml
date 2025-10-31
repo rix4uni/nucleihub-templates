@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: exposure,cisco,edb,config
+  tags: exposure,cisco,edb,config,vuln
 
 http:
   - method: GET
@@ -30,5 +30,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100813e9973d7d1eb4268049f244920487c3e1e8c5f9b58215265196a714355dc5402205619213595d60a04fcca831907236db30ba7efba530002f8c6b8637ace9f53dc:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220481138e9a1bfd2ab18f2560a8247bb0c72558077c17ee8b3053ed4f74e054165022100c8b182a463b8f401760ca862031051cf4094de019b17bdeaf6262c7a811f1763:922c64590222798bb761d5b6d8e72950

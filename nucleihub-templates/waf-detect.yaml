@@ -9,7 +9,9 @@ info:
     - https://github.com/Ekultek/WhatWaf
   classification:
     cwe-id: CWE-200
-  tags: waf,tech,misc
+  metadata:
+    max-request: 1
+  tags: waf,tech,misc,discovery
 
 http:
   - raw:
@@ -72,9 +74,9 @@ http:
       - type: regex
         name: teros
         regex:
-          - '(?i)st8(id|.wa|.wf)?.?(\d+|\w+)?'
+          - '(?i)st8(id|.wa|.wf)?.?(\d+|\w+)?='
         condition: or
-        part: response
+        part: header
 
       - type: regex
         name: stricthttp
@@ -96,7 +98,7 @@ http:
         regex:
           - '(?i)<h\d>\d{3}.forbidden<.h\d>'
           - '(?i)request.forbidden.by.administrative.rules.'
-        condition: or
+        condition: and
         part: response
 
       - type: regex
@@ -151,14 +153,6 @@ http:
         regex:
           - '(?i)error(s)?.aliyun(dun)?.(com|net)'
           - '(?i)http(s)?://(www.)?aliyun.(com|net)'
-        condition: or
-        part: response
-
-      - type: regex
-        name: ats
-        regex:
-          - '(?i)(\()?apachetrafficserver((\/)?\d+(.\d+(.\d+)?)?)'
-          - '(?i)ats((\/)?(\d+(.\d+(.\d+)?)?))?'
         condition: or
         part: response
 
@@ -578,7 +572,6 @@ http:
         regex:
           - '(?i)This.request.is.blocked.by.the.SonicWALL'
           - '(?i)Dell.SonicWALL'
-          - '(?i)\bDell\b'
           - '(?i)Web.Site.Blocked.+\bnsa.banner'
           - '(?i)SonicWALL'
           - '(?i).>policy.this.site.is.blocked<.'
@@ -686,7 +679,6 @@ http:
         name: securesphere
         regex:
           - '(?i)<h2>error<.h2>'
-          - '(?i)<title>error<.title>'
           - '(?i)<b>error<.b>'
           - '(?i)<td.class="(errormessage|error)".height="[0-9]{1,3}".width="[0-9]{1,3}">'
           - '(?i)the.incident.id.(is|number.is).'
@@ -750,8 +742,62 @@ http:
         name: huaweicloud
         condition: and
         regex:
-          - '(?)content="CloudWAF"'
-          - 'Server: CloudWAF'
+          - '(?i)content="CloudWAF"'
           - 'Set-Cookie: HWWAFSESID='
+          - 'Set-Cookie: HWWAFSESTIME='
 
-# Enhanced by mp on 2022/03/21
+      - type: word
+        name: safe3webfirewall
+        part: header
+        words:
+          - "safe3 Web Firewall"
+
+      - type: word
+        name: safedog
+        part: header
+        words:
+          - "X-Safe-Firewall"
+          - "safedog-flow"
+        condition: or
+
+      - type: word
+        name: squarespace
+        part: header
+        words:
+          - "Squarespace"
+          - "Firewall_action"
+        condition: and
+
+      - type: word
+        name: yunsuo
+        part: body
+        words:
+          - "yunsuologo"
+
+      - type: word
+        name: godaddywebprotection
+        part: body
+        words:
+          - "GoDaddy Security"
+          - "seal.godaddy.com"
+          - "GoDaddy security"
+        condition: or
+
+      - type: word
+        name: transipwebfirewall
+        part: header
+        words:
+          - "X-TransIP-Balancer"
+
+      - type: word
+        name: xlabssecuritywaf
+        part: header
+        words:
+          - "Secured: By XLabs Security"
+
+      - type: word
+        name: shieldonfirewall
+        part: header
+        words:
+          - "X-Protected-By: shieldon.io"
+# digest: 4b0a00483046022100c3e0a9a470eaf33b5998582b32dc2a219352cead26aba59a2f703639eed23c84022100d45bce064e3560f3e73e2dde4f22a681c817779953f3c6c17f314d1aab88644c:922c64590222798bb761d5b6d8e72950

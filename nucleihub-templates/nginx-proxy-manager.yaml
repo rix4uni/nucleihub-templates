@@ -7,12 +7,14 @@ info:
   description: Nginx Proxy Manager login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:nginxproxymanager:nginx_proxy_manager:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: http.title:"Nginx Proxy Manager"
-  tags: panel,nginx,proxy
+    product: nginx_proxy_manager
+    vendor: nginxproxymanager
+  tags: panel,nginx,proxy,discovery
 
 http:
   - method: GET
@@ -35,5 +37,4 @@ http:
         group: 1
         regex:
           - '"page" id="login" data\-version="([0-9.]+)">'
-
-# digest: 490a00463044022016e60d081797925b032f2135bbb85b075db2e048745f264c4029008c4a9d0625022020454b8715188ea11452b08b7be49ac50b8a57faeef3268151cf4523c1357729:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008ad07fcb520be96339310d7f41757a5b94ba9b6c5b9aaa32e63cc5843f4ec809022100d856e7b5d0da5aa6f4b5bf55741ae596018ff773e8b7bf9c1836f18ab585fbed:922c64590222798bb761d5b6d8e72950

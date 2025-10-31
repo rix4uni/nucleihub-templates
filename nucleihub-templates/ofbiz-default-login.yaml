@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-522
   metadata:
     max-request: 1
-  tags: ofbiz,default-login,apache
+  tags: ofbiz,default-login,apache,vuln
 
 http:
   - raw:
@@ -36,5 +36,4 @@ http:
           - "ofbiz-pagination-template"
           - "<span>Powered by OFBiz</span>"
         condition: and
-
-# digest: 4b0a00483046022100b51f0ae7f8930dee1c2e79a346c9747aedb0bbc606672d874692268ff0c204d7022100f433a7bb473f26f5366a2cf0cfff5749d6547992d9b06dd9e0099ac817613739:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450221008fba84db769e6c0518f9668f9dca1adf4c6a25d6a8b499c0351c21747221b64102202b5d4d4f85ec14be61e4c0eeb8334e345074c2bd88f1f0711d0e47dee1881217:922c64590222798bb761d5b6d8e72950

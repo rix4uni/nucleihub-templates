@@ -7,12 +7,14 @@ info:
   description: Kerio Connect login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:gfi:kerio_connect:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: http.title:"Kerio Connect Client"
-  tags: panel,kerio
+    product: kerio_connect
+    vendor: gfi
+  tags: panel,kerio,discovery
 
 http:
   - method: GET
@@ -29,5 +31,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a00483046022100f1125dd7110e7ad697819b4e785d31271e0b29997b3c0349cd2c8bbce207e8b10221009b909b9be2e4adf85b9fa149337e4f2859291e9d83ff43abbfda50e74f9cf167:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022029685816e05311c2ea202395ab2b5d2045e5e0304765543999d1344983418cce022100da5329646b900a075aa8495504c16936c6aaae5b351609240b848a4653d7d0dd:922c64590222798bb761d5b6d8e72950

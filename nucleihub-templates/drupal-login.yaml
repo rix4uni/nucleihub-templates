@@ -7,12 +7,16 @@ info:
   description: Drupal login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
-    shodan-query: http.component:"drupal"
-  tags: panel,drupal
+    vendor: drupal
+    product: drupal
+    shodan-query:
+      - http.component:"drupal"
+      - cpe:"cpe:2.3:a:drupal:drupal"
+  tags: panel,drupal,discovery
 
 http:
   - method: GET
@@ -37,5 +41,4 @@ http:
           - '(?i)x-drupal'
           - "(?i)x-generator: drupal"
         condition: or
-
-# digest: 490a00463044022015c71d077f1a59a1c994deb608566b429f5d55723a4722069f1a83e55ca105710220435d462c6beeed3fd3e3cd4dd8e3832b5b56c8e169f50b9611b06399bd8a2405:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100f39f5c60f2d67f0848e52a825139e20c9a5f9db6fba9a4ed225899e92f87ab5f02201434dd9033fa446b800cbf470fa2b671f8ce428c749d6cb5b36bc147e7aceb9b:922c64590222798bb761d5b6d8e72950

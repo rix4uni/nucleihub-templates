@@ -4,11 +4,13 @@ info:
   name: WordPress 123ContactForm Plugin Directory Listing
   author: pussycat0x
   severity: info
-  description: Searches for sensitive directories present in the wordpress-plugins plugin.
+  description: Searches for sensitive directories present in the 123contactform-for-wordpress plugin.
   reference:
     - https://blog.sucuri.net/2021/01/critical-vulnerabilities-in-123contactform-for-wordpress-wordpress-plugin.html
     - https://www.exploit-db.com/ghdb/6979
-  tags: wordpress,listing,plugin
+  metadata:
+    max-request: 1
+  tags: wordpress,listing,plugin,edb,vuln
 
 http:
   - method: GET
@@ -26,3 +28,4 @@ http:
       - type: status
         status:
           - 200
+# digest: 490a0046304402206866a2b8a0d03a22cdc3b0fe3b33d5ebb395788fb133c5267ed9396c3e67709d0220350f838bf27199ff5bdc84cc81e6d8f6d070d20e22f5a89b00f1b6a5394243d5:922c64590222798bb761d5b6d8e72950

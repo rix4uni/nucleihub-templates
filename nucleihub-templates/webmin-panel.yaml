@@ -7,11 +7,16 @@ info:
   description: Webmin admin login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:webmin:webmin:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
-  tags: panel,webmin
+    vendor: webmin
+    product: webmin
+    shodan-query: http.title:"webmin"
+    fofa-query: title="webmin"
+    google-query: intitle:"webmin"
+  tags: panel,webmin,discovery
 
 http:
   - method: GET
@@ -25,5 +30,4 @@ http:
         words:
           - "<title>Login to Webmin</title>"
         part: body
-
-# digest: 4a0a0047304502210092050b03e8c58c7da985b72df7680c668b8c91aed431a8bd58f595999ca5314e022013b26071d513eb2c825a9d6b596f62e30eb81c8051232bbdff8561edc6b6a5ed:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a004830460221008c52efe43dea30fdb8f693b8fcb9a10e7decbe7e2471adebf6afeca4ef37487d022100931510a8b73038949588ee76b311bf238682bd8ac5ae2e57f71ff91e16da1a10:922c64590222798bb761d5b6d8e72950

@@ -11,7 +11,7 @@ info:
     cwe-id: CWE-798
   metadata:
     max-request: 1
-  tags: iot,audiocodes,default-login
+  tags: iot,audiocodes,default-login,vuln
 
 http:
   - raw:
@@ -45,5 +45,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a00463044022054134961f9dae8e28f1a3ab15e2f4d54ab53cc99d2cd6f0ad84d409de02bd54102207d3ddda420249b278edca1d72b1ba7b373e5bb4b8df47724af9df2396caa2660:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100a268ec475306e9e2fc315d2e4a075fefcd61a89f782d5e761433355647498c2e022006ef816272b75a2033606812b7e0805130493d9e4242f0a4b6f859e90fb66b69:922c64590222798bb761d5b6d8e72950

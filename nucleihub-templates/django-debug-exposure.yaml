@@ -4,11 +4,12 @@ info:
   name: Django Debug Exposure
   author: geeknik
   severity: high
+  description: Django debug mode enabled exposes internal information.
   reference:
     - https://twitter.com/Alra3ees/status/1397660633928286208
   metadata:
     max-request: 1
-  tags: django,exposure
+  tags: django,exposure,vuln
 
 http:
   - method: POST
@@ -29,5 +30,4 @@ http:
           - "DJANGO"
           - "ADMIN_PASSWORD"
         condition: and
-
-# digest: 4a0a004730450221008ff81e15c36296cd75b01124d993e8e61236dfff28fef7feb42b759d1226644c02201a1348afce37dd3a899eea16a4422a346cd8589694c98a7ef5cab4bae6f4fcdc:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a0048304602210099fc520723bbf72c75d6f36c89b9a5f497567410daa64cc34464276a02bbac73022100bb9e7b175895be06e6a85684fe75e4df684f15d7df10fad615f55e4777211e3b:922c64590222798bb761d5b6d8e72950

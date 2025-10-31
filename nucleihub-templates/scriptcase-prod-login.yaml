@@ -7,11 +7,15 @@ info:
   reference:
     - https://www.scriptcase.com.br
     - https://www.scriptcase.net
+  classification:
+    cpe: cpe:2.3:a:scriptcase:scriptcase:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
+    vendor: scriptcase
+    product: scriptcase
     shodan-query: title:"ScriptCase"
-  tags: panel,scriptcase
+  tags: panel,scriptcase,discovery
 
 http:
   - method: GET
@@ -41,5 +45,4 @@ http:
         group: 2
         regex:
           - '(Vers&atilde;o|Version|Versão)\b.*\s(\d.*\d)'
-
-# digest: 4a0a004730450220155fff9d894e134ccfba04d353e065781fc6440d0fc341210842e010ab66e7b50221008d16cf986fb7ca248291cf5a9f08408c3d38984cd2decbd1eeffc9e052e7050d:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402205bef112a642c5544749ab96fb1fdd034a9c6a103c68aab3467202183af9a816e0220737458451907636c523024ec2ed6feae886c06f4cb2c24c3dc929cbb8bcc658a:922c64590222798bb761d5b6d8e72950

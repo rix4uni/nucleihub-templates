@@ -6,11 +6,19 @@ info:
   severity: info
   reference:
     - https://www.qbittorrent.org/
+  classification:
+    cpe: cpe:2.3:a:qbittorrent:qbittorrent:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: title:"qbittorrent"
-  tags: panel,qbittorrent,detect
+    vendor: qbittorrent
+    product: qbittorrent
+    shodan-query:
+      - title:"qbittorrent"
+      - http.title:"qbittorrent"
+    fofa-query: title="qbittorrent"
+    google-query: intitle:"qbittorrent"
+  tags: panel,qbittorrent,detect,discovery
 
 http:
   - method: GET
@@ -32,5 +40,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a0046304402207f511d6417897db75daaf6b2371a059bdac09639fea1416ef3eadde616fcd95202203b5f56e6607bf2aad362afcd9880635df1b029a5abf24a89e9e83a9db6c60525:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100a8d0018f5dc8c6e18396070a957f3daab54e4a69d23a3eda5c0382f3c2b3b8340220494b8ec5fd25ab92fb5133dab6793b3dbce1ec4748d617833ebb6e459470cc47:922c64590222798bb761d5b6d8e72950

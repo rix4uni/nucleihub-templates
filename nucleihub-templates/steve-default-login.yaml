@@ -13,12 +13,15 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:steve-community:steve:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
     shodan-query: http.title:"SteVe - Steckdosenverwaltung"
     google-query: intitle:"SteVe - Steckdosenverwaltung"
-  tags: panel,default-login,steve
+    product: steve
+    vendor: steve-community
+  tags: panel,default-login,steve,vuln
 
 http:
   - raw:
@@ -38,10 +41,8 @@ http:
         - admin
       password:
         - 1234
-    req-condition: true
     redirects: true
     max-redirects: 2
-    cookie-reuse: true
 
     matchers-condition: and
     matchers:
@@ -64,5 +65,4 @@ http:
         regex:
           - '_csrf" value="(.*?)"/>'
         internal: true
-
-# digest: 490a0046304402201d1cb8de59c0637c9e2b96bd47e1d1774a9a8565047b6031e095b7832a0f19650220216afa2bbfcb5888e3b0970841c816063ec40605219aacb80308c1edaf0946ba:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402203e5e3fcc4f80be05528dcdebe17165eb461234aa4760d9eb7cf2c00a1c8df6fd02204cdfcb7bdcd8479c385101a3e16244b6f14f66e9fb9154fc9cfa7579e482bd8e:922c64590222798bb761d5b6d8e72950

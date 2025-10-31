@@ -5,13 +5,17 @@ info:
   author: pdteam
   severity: info
   description: The remote server fetched a spoofed URL from the request headers.
-  reference: https://github.com/PortSwigger/collaborator-everywhere
-  tags: oast,ssrf,generic
+  reference:
+    - https://github.com/PortSwigger/collaborator-everywhere
+  metadata:
+    max-request: 1
+  tags: oast,ssrf,generic,vuln
 
 http:
   - method: GET
     path:
       - "{{BaseURL}}"
+
     headers:
       User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 root@{{interactsh-url}}
       Referer: http://{{interactsh-url}}/ref
@@ -30,6 +34,7 @@ http:
       X-Host: spoofed.{{interactsh-url}}
       X-Forwarded-Server: spoofed.{{interactsh-url}}
       X-HTTP-Host-Override: spoofed.{{interactsh-url}}
+      Profile: http://{{interactsh-url}}/profile.xml
       Cache-Control: no-transform
 
     matchers-condition: or
@@ -45,3 +50,4 @@ http:
         name: dns
         words:
           - "dns"
+# digest: 4b0a00483046022100be8bd0b44efbbf84410bcfff55b280df565449a33fa1eaa2966ac7dbeeb9ab99022100fa571550fea99183f40dcbcdc43f2af502093a8f95e71101dcb20516eb5ea9f4:922c64590222798bb761d5b6d8e72950

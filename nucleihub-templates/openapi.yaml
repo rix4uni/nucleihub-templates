@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: exposure,api
+  tags: exposure,api,discovery
 
 http:
   - method: GET
@@ -38,5 +38,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a00483046022100aebbbfb61b53494a11771ec1d5661fee0afba212f4e5911ab9eb030afddcd90b022100a9c45435d3447a1c003f20503cafa44cb506029f635e30a4e172c2aedb5d087b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502200b6f8cf3f59dc7d908d88d11dafaef35edf603ce7cc76dbafb242c7d1dfa0acb022100d61e3b0e34490778848e731fc19bfc624bfdda128226237b4ec8c50686cefc9a:922c64590222798bb761d5b6d8e72950

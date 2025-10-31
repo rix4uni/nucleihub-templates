@@ -7,12 +7,17 @@ info:
   description: Craft CMS admin login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:nystudio107:seomatic:*:*:*:*:craft_cms:*:*:*
   metadata:
     max-request: 1
-    shodan-query: 'X-Powered-By: Craft CMS'
-  tags: panel,craftcms
+    vendor: nystudio107
+    product: seomatic
+    shodan-query:
+      - 'X-Powered-By: Craft CMS'
+      - "x-powered-by: craft cms"
+      - 'x-powered-by: craft cms html:"seomatic"'
+  tags: panel,craftcms,nystudio107,discovery
 
 http:
   - method: GET
@@ -30,5 +35,4 @@ http:
         part: body
         words:
           - '<a id=\"poweredby\" href=\"http:\/\/craftcms.com\/\"'
-
-# digest: 4b0a0048304602210099b18c52ed1457499324151a2cddaf8eff1f1afaaf115f779d9ac5fe75fd0225022100986a408328479e9aacd458ab44d1774b25a960beb9fe1158f6ccaab837dcd699:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402202bf23dced3e45ba7beac73eb3acaf5ea52fd7c9ba0d766e35f3f664646309dad0220610fa355939068719c2d5bc099fe41ae996da52c03fe69ceb9c7b34b00268d9d:922c64590222798bb761d5b6d8e72950

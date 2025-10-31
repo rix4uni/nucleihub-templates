@@ -7,12 +7,14 @@ info:
   description: EMS Web Client login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:ems_project:ems:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
     google-query: inurl:EMSWebClient/
-  tags: panel,ems
+    product: ems
+    vendor: ems_project
+  tags: panel,ems,discovery
 
 http:
   - method: GET
@@ -39,5 +41,4 @@ http:
         group: 1
         regex:
           - 'Web Client Version (.*)</span>'
-
-# digest: 4b0a00483046022100d097a3340b8fc83266a97a48c55a80e3d541789cb9137207296b9167c49cab1d022100f794a2d8f3ebb4080d7647c07e7aae78dc162e48c30565efa704451fe10d4cbc:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220749b66a3298b59ac4f80476a109acafb0b724f7257519c5daf0ca5fc95b7dd3f02202b4dea36b79d29ce2712b976f572ea1e43704abd8b699f202e16bd18523762f1:922c64590222798bb761d5b6d8e72950

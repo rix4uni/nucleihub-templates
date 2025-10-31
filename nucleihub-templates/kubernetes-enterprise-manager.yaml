@@ -7,12 +7,19 @@ info:
   description: Kubernetes Enterprise Manager panel was detected.
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:kubernetes:kubernetes:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    fofa-query: app="Kubernetes-Enterprise-Manager"
-  tags: tech,kubernetes,panel
+    vendor: kubernetes
+    product: kubernetes
+    fofa-query:
+      - app="Kubernetes-Enterprise-Manager"
+      - title="kubernetes web view"
+      - app="kubernetes-enterprise-manager"
+    shodan-query: http.title:"kubernetes web view"
+    google-query: intitle:"kubernetes web view"
+  tags: tech,kubernetes,panel,discovery
 
 http:
   - method: GET
@@ -29,5 +36,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100f498e4565469c30f65bffdeea55ac29b66e550c0d6272afce8bdb49d6cda78c5022009b3f9d4cc8a26eb6fda028b80fe94c933b18a0272c91a00802298c8ecea2c47:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450221009c6ea3ae548da5e27d5d5f5f0e7a02223c2d6fccb733aa8cb3d5dbed4ae1f50702203ba9f0eed4e9716d2e4fcad206e5f36b42ea43292484d8d8687f0c4507a2a248:922c64590222798bb761d5b6d8e72950

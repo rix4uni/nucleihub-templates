@@ -7,12 +7,18 @@ info:
   description: Dotclear admin login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:dotclear:dotclear:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
-    shodan-query: http.title:"Dotclear"
-  tags: panel,dotclear
+    vendor: dotclear
+    product: dotclear
+    shodan-query:
+      - http.title:"Dotclear"
+      - http.title:"dotclear"
+    fofa-query: title="dotclear"
+    google-query: intitle:"dotclear"
+  tags: panel,dotclear,discovery
 
 http:
   - method: GET
@@ -31,5 +37,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a004830460221009c8ebf25a6d92e61b7d2d4f34fa43aad14f808698404a44d4eb176014efd2625022100cce25f4afad1fc28687254d287abfe95ff3e98a5f2cbfed024692ae0f5f0a67b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502201e907f47bb73402822f7f80b53b3486de7a40c18ce7fa5ec14724afc478b91a8022100b6d04e2b2f49779fceaa9015fa96953eed7d8cda699521596e01a5929781545f:922c64590222798bb761d5b6d8e72950

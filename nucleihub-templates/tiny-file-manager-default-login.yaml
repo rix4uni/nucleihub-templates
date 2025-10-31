@@ -12,11 +12,14 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
+    cpe: cpe:2.3:a:tinyfilemanager_project:tinyfilemanager:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 3
     shodan-query: html:"Tiny File Manager"
-  tags: default-login,tiny,filemanager
+    product: tinyfilemanager
+    vendor: tinyfilemanager_project
+  tags: default-login,tiny,filemanager,vuln
 
 http:
   - raw:
@@ -42,7 +45,6 @@ http:
     skip-variables-check: true
     host-redirects: true
     max-redirects: 2
-    cookie-reuse: true
 
     matchers-condition: and
     matchers:
@@ -64,5 +66,4 @@ http:
         regex:
           - '([a-f0-9]{64})'
         internal: true
-
-# digest: 490a00463044022042251fddbfaa8f82da270c7eb9b3bc0ffc92bd7638301da0036f0a225f4d857f02203d797fe3c351546bf714438b9fc8d3b50514d981742818fe4133e57548867ece:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022030caa45ee44e5f9068b7be963a6d66d45d71b9b520efeaf89d0bba36e8340e78022100cc7c8ce845b6537b1c576c6fb645e8a5c81b206b33f1b15da10ebcba152c513b:922c64590222798bb761d5b6d8e72950

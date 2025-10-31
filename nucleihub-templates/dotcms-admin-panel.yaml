@@ -7,11 +7,16 @@ info:
   description: dotAdmin login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:dotcms:dotcms:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-  tags: panel,dotcms,cms
+    vendor: dotcms
+    product: dotcms
+    shodan-query: http.title:"dotcms"
+    fofa-query: title="dotcms"
+    google-query: intitle:"dotcms"
+  tags: panel,dotcms,cms,discovery
 
 http:
   - method: GET
@@ -23,5 +28,4 @@ http:
       - type: word
         words:
           - '<title>dotCMS Content Management Platform</title>'
-
-# digest: 490a0046304402205d75c7d5c977c57b15c043fdbe2c7c3ec1dec8a1ac7d5fa46dc6d31169b4c5690220619ec76fc9c9d9b3004fa57cc211ca628d34361550c2c8d8139c35a709aefd4b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100d9be6814a561f984a579095d56ec2c335e0feb84d97b675b11cd8570dff6488302202eeb4acf149db23c9883a24df6f088e59899b684e6b76d581e47fda23551e6e0:922c64590222798bb761d5b6d8e72950

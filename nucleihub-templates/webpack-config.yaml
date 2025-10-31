@@ -9,10 +9,13 @@ info:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:webpack.js:webpack:*:*:*:*:node.js:*:*:*
   metadata:
     max-request: 1
     shodan-query: html:"webpack.config.js"
-  tags: config,exposure
+    product: webpack
+    vendor: webpack.js
+  tags: config,exposure,vuln
 
 http:
   - method: GET
@@ -37,5 +40,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a004830460221009b84f724ff6b190bd0be1fd2512856c6321ed28f63fb78f3883bf7f56cc8abb40221009bfdfdcca831b5f8ad88d917d0e4322b923a7dc7c6484cc91bcac7cbc9731f3b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220550a5959380152a051bfac2ff5f8110b346623504fa445d82cd754fdaffedd69022100abe5feca8b824a6d0b70190d9aada52cb7210ada9cd4520bbd17a54ac5508ad7:922c64590222798bb761d5b6d8e72950

@@ -5,16 +5,20 @@ info:
   author: DhiyaneshDK
   severity: info
   description: Google Cloud default configuration was detected.
-  reference: https://cloud.google.com
+  reference:
+    - https://cloud.google.com
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:google:cloud_platform:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
     shodan-query: html:"access_tokens.db"
-  tags: google,cloud,devops,exposure
+    product: cloud_platform
+    vendor: google
+  tags: google,cloud,devops,exposure,vuln
 
 http:
   - method: GET
@@ -35,5 +39,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100d0a910249cc49a3cbe12502c6d9459a40ddc5a823105e8eae01dea16d4c8fe22022038555393022f94dbcadd44f028fa0b0b903b6e2daa290f2995a6459ca56c6d5e:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100bcfe2b7ebb902d6843ce609516d9cc1aa11cfa11220363b6cebca54d0b426875022100c84e250688d7629550127ddbde9893543c8b69e846aed91f038db55b9776e6c7:922c64590222798bb761d5b6d8e72950

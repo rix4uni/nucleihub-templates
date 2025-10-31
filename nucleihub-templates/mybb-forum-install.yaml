@@ -9,11 +9,18 @@ info:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L
     cvss-score: 8.6
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:mybb:mybb:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: http.title:"MyBB"
-  tags: panel,mybb,forum
+    vendor: mybb
+    product: mybb
+    shodan-query:
+      - http.title:"MyBB"
+      - http.title:"mybb"
+    fofa-query: title="mybb"
+    google-query: intitle:"mybb"
+  tags: panel,mybb,forum,discovery
 
 http:
   - method: GET
@@ -38,5 +45,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a0047304502202e2bd6aac0de91915a48f0bc232bebd2d72158b200db391197815f9ad33b9650022100ef6ca1a802171cc303a98228d263d36c06c982639b2baab70fbf3c623a9d630d:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502207911b7487102096c52bc1882172ffbec8bf89b9859bce30d1923f7f7ab201d9f022100ed01b3603d207d7043adbd0b2184698ad29fc9833ecf96ed87cc116f0df59a9b:922c64590222798bb761d5b6d8e72950

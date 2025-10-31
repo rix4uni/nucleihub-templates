@@ -9,11 +9,24 @@ info:
   reference:
     - https://tautulli.com/
     - https://github.com/Tautulli/Tautulli
+  classification:
+    cpe: cpe:2.3:a:tautulli:tautulli:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
-    shodan-query: title:"TAUTULLI"
-  tags: panel,tautulli,detect
+    vendor: tautulli
+    product: tautulli
+    shodan-query:
+      - title:"TAUTULLI"
+      - http.title:"tautulli"
+      - http.title:"tautulli - home"
+    fofa-query:
+      - title="tautulli - home"
+      - title="tautulli"
+    google-query:
+      - intitle:"tautulli"
+      - intitle:"tautulli - home"
+  tags: panel,tautulli,detect,discovery
 
 http:
   - method: GET
@@ -38,5 +51,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a0046304402200e451a4c2ebed7a3e9b059c8302336e1562b4a19cce00758281dc02a72006f2b0220570f038371e8cf5970892a02e90a56da0319029f05903674b2fd93f3bb0ee33a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022073db7fe213eedd9222091249980192a068358323e165ee1abca84241dacb46610221009b9078c2d626ce8a9e53553756ac1f904921880683859719dca0aa2910336022:922c64590222798bb761d5b6d8e72950

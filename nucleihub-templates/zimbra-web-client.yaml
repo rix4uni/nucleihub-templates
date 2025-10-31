@@ -10,13 +10,24 @@ info:
     - https://www.zimbra.com/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:synacor:zimbra_collaboration_suite:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: http.title:"Zimbra Web Client Sign In"
-  tags: edb,panel,zimbra
+    vendor: synacor
+    product: zimbra_collaboration_suite
+    shodan-query:
+      - http.title:"Zimbra Web Client Sign In"
+      - http.title:"zimbra collaboration suite"
+      - http.title:"zimbra web client sign in"
+    fofa-query:
+      - title="zimbra web client sign in"
+      - title="zimbra collaboration suite"
+    google-query:
+      - intitle:"zimbra collaboration suite"
+      - intitle:"zimbra web client sign in"
+  tags: edb,panel,zimbra,synacor,discovery
 
 http:
   - method: GET
@@ -40,5 +51,4 @@ http:
         group: 1
         regex:
           - 'AjxPackage\.setQueryString\("v=(.+)"\);'
-
-# digest: 4b0a00483046022100c7aba1f7c8dfcb25cb4ac444f2441ef79baf1c156bacf2ddd346f3ceec926ce00221009912dc8791685c72768c421405110ae41dd88ac49e5e7d97bfba112228984dcf:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402202e357dc8222de39921b102b203be58ec8d581e9f75ebd0b645c4bd6573d5eb2602202b108e05ddccb3bf8180b538eea2d2df17ba815fa103f4a9f6e2992faee0c93b:922c64590222798bb761d5b6d8e72950

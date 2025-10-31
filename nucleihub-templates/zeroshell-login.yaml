@@ -7,12 +7,18 @@ info:
   description: ZeroShell panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:o:zeroshell:zeroshell:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    shodan-query: http.title:"ZeroShell"
-  tags: panel,zeroshell
+    vendor: zeroshell
+    product: zeroshell
+    shodan-query:
+      - http.title:"ZeroShell"
+      - http.title:"zeroshell"
+    fofa-query: title="zeroshell"
+    google-query: intitle:"zeroshell"
+  tags: panel,zeroshell,discovery
 
 http:
   - method: GET
@@ -28,5 +34,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a00483046022100e334b7100e2310a5bcbdf4aa1eab82088cfdeeaf31cd53f3a2b69f766a70fbbd022100981de431f87e4d06d38a8d5805cb16ce10f3a6da957ad08002d92432d8017ea0:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100e1cf488a34813346921696093e263f1b5355f60954f90f287abc1017639bcb210221009dc1a8cdfd49947dc4f1809fae8a9a600138d0b83fa3ec45eeaa3b2713376d41:922c64590222798bb761d5b6d8e72950

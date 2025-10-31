@@ -7,11 +7,13 @@ info:
   description: Palo Alto Networks GlobalProtect login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:paloaltonetworks:globalprotect:*:*:*:*:chrome:*:*:*
   metadata:
     max-request: 2
-  tags: panel,panos,globalprotect
+    vendor: paloaltonetworks
+    product: globalprotect
+  tags: panel,panos,globalprotect,paloaltonetworks,discovery
 
 http:
   - method: GET
@@ -26,5 +28,4 @@ http:
           - "<title>GlobalProtect Portal</TITLE>"
           - "<msg>Invalid parameters</msg>"
         condition: or
-
-# digest: 4b0a00483046022100c80668bcd77ead45321df0ba22d698e8adef9dfb4e65e0f7e50482c53202a6fc022100dacda879e28acb654b089c37dd59c9257cde3d016af3b4c1eeaa659788b1c4b2:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220636f004650b45c46a8b79a6fa683600e03660370f5e62a0ce2a291bf62aa97f2022100a38120645cd72d7cd3d8d0c53b0cd1b77716b2c785d337d97c8762749a648197:922c64590222798bb761d5b6d8e72950

@@ -7,13 +7,18 @@ info:
   description: Darktrace Threat Visualizer login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:darktrace:threat_visualizer:*:*:*:*:android:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: html:"Darktrace Threat Visualizer"
-  tags: panel,darktrace
+    vendor: darktrace
+    product: threat_visualizer
+    shodan-query:
+      - html:"Darktrace Threat Visualizer"
+      - http.html:"darktrace threat visualizer"
+    fofa-query: body="darktrace threat visualizer"
+  tags: panel,darktrace,discovery
 
 http:
   - method: GET
@@ -30,5 +35,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a00483046022100d709245ece6dc3023b67ff11ec7f73aca6649fa47d3a36c29c873bf9b6a53b77022100b8e8f8e4f26305017d49b1b66e43111157db64e154c554fc8afd4058dbf1a4a9:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402202f98190988705a330bc0b41da3790cb0a82085fc2aede524c983c031cff229ff022011ec0cf5f93a2e424e90db9d8accfdc1692bf9da52a7f56c115dda414ba60444:922c64590222798bb761d5b6d8e72950

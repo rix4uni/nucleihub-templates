@@ -4,9 +4,12 @@ info:
   name: Google API Key
   author: Swissky
   severity: info
+  reference:
+    - https://cloud.google.com/docs/authentication/api-keys#securing
+    - https://support.google.com/googleapi/answer/6310037
   metadata:
     max-request: 2
-  tags: exposure,token,google
+  tags: exposure,token,google,vuln
 
 http:
   - method: GET
@@ -19,5 +22,4 @@ http:
         part: body
         regex:
           - "AIza[0-9A-Za-z\\-_]{35}"
-
-# digest: 4a0a004730450221008529a1cf21d244ce3327f73d3d68a4e1afc76d0dab02130fa43f449db87fb51802200b6b4d64369e56d8ebba8796e30b0cee88ca1318014c35dee345905fffdb4a3c:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100d690d16050855b7da8890848e083d831a442b80020b43688497d752321c901730220261dc35b09bac35251ba9eb94d5a83327a45f0f6a2dbe8884225ce2fb07c3e79:922c64590222798bb761d5b6d8e72950

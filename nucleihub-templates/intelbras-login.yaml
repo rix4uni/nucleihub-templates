@@ -9,13 +9,15 @@ info:
     - https://www.exploit-db.com/ghdb/7272
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:h:intelbras:iwr_3000n:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: http.title:"Intelbras"
     google-query: intitle:"Intelbras" "All Rights Reserved" -.com
-  tags: panel,edb
+    product: iwr_3000n
+    vendor: intelbras
+  tags: panel,edb,discovery
 
 http:
   - method: GET
@@ -31,5 +33,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022061634ef213e2f3b1dd5a1cd9abd977e765af3af014d2db4b1ed259b551cc2a560221009fad52bf154890f7551f0941db0762e63808f300f8850d17613b1dd4cb65892a:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022045142dcb97b2b9e0399dc8c60bdab01ac4fa2c0b4e80117318c68a5bf1c87ed602200a89d0572b965df46c969043573a87e2f4b35aeaef11b5dbefd0da352e559121:922c64590222798bb761d5b6d8e72950

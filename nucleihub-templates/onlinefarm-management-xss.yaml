@@ -14,7 +14,8 @@ info:
     cwe-id: CWE-79
   metadata:
     verified: true
-  tags: onlinefarm,cms,xss,edb
+    max-request: 1
+  tags: onlinefarm,cms,xss,edb,vuln
 
 http:
   - raw:
@@ -27,6 +28,7 @@ http:
 
     host-redirects: true
     max-redirects: 2
+
     matchers-condition: and
     matchers:
       - type: word
@@ -42,5 +44,4 @@ http:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/09/23
+# digest: 490a0046304402204b0b1da01374c804bdb169e427db816c78bea2ceddd155bf698b46b4dd7519d802207b2258e297ab6f1c7ee2cfc02894796f52d2f3839c17f5ff3b1467257f585537:922c64590222798bb761d5b6d8e72950

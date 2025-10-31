@@ -2,40 +2,59 @@ id: phpmyadmin-panel
 
 info:
   name: phpMyAdmin Panel - Detect
-  author: pdteam
+  author: pdteam,righettod
   severity: info
   description: phpMyAdmin panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:phpmyadmin:phpmyadmin:*:*:*:*:*:*:*:*
   metadata:
-    max-request: 12
-    shodan-query: http.title:phpMyAdmin
-  tags: panel,phpmyadmin
+    max-request: 14
+    vendor: phpmyadmin
+    product: phpmyadmin
+    shodan-query:
+      - "http.title:phpMyAdmin"
+      - http.title:"phpmyadmin"
+      - http.component:"phpmyadmin"
+      - cpe:"cpe:2.3:a:phpmyadmin:phpmyadmin"
+    fofa-query:
+      - body="pma_servername" && body="4.8.4"
+      - title="phpmyadmin"
+    google-query: intitle:"phpmyadmin"
+    hunter-query: app.name="phpmyadmin"&&web.body="pma_servername"&&web.body="4.8.4"
+  tags: panel,phpmyadmin,detect,discovery
 
 http:
   - method: GET
     path:
-      - "{{BaseURL}}/phpmyadmin/"
-      - "{{BaseURL}}/admin/phpmyadmin/"
-      - "{{BaseURL}}/_phpmyadmin/"
-      - "{{BaseURL}}/administrator/components/com_joommyadmin/phpmyadmin/"
-      - "{{BaseURL}}/apache-default/phpmyadmin/"
-      - "{{BaseURL}}/blog/phpmyadmin/"
-      - "{{BaseURL}}/forum/phpmyadmin/"
-      - "{{BaseURL}}/php/phpmyadmin/"
-      - "{{BaseURL}}/typo3/phpmyadmin/"
-      - "{{BaseURL}}/web/phpmyadmin/"
-      - "{{BaseURL}}/xampp/phpmyadmin/"
-      - "{{BaseURL}}/phpMyAdmin/"
+      - "{{BaseURL}}{{paths}}"
+    payloads:
+      paths:
+        - ""
+        - "/phpmyadmin/"
+        - "/admin/phpmyadmin/"
+        - "/_phpmyadmin/"
+        - "/administrator/components/com_joommyadmin/phpmyadmin/"
+        - "/apache-default/phpmyadmin/"
+        - "/blog/phpmyadmin/"
+        - "/forum/phpmyadmin/"
+        - "/php/phpmyadmin/"
+        - "/typo3/phpmyadmin/"
+        - "/web/phpmyadmin/"
+        - "/xampp/phpmyadmin/"
+        - "/phpMyAdmin/"
+        - "/phpma/"
+        - "/phpMyAdmin/index.php"
 
     stop-at-first-match: true
     matchers:
       - type: word
         words:
-          - "<title>phpMyAdmin"
-          - "pmahomme"
+          - 'alt="phpMyAdmin'
+          - 'name="pma_username'
+          - '/pmahomme/'
+        condition: or
 
     extractors:
       - type: regex
@@ -43,5 +62,4 @@ http:
         group: 1
         regex:
           - 'v=([a-z0-9-._]+)'
-
-# digest: 4a0a00473045022100c4a653444f0c36fb9eb9940daa9743092129626b8968dc7373a6ba59b57768ae02204f533b66d56852e6ed6f16daef93eb4a24b0c2822b3b149274a61dcca5869c00:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022046c8ef935af76118ef321c91f62c700f8c3cdf73833c8c09eadbf769b6b1418602206ae10e0b4285c194d6a9b2aca27de87ecc525c53e86d4c739de57a413fcf623a:922c64590222798bb761d5b6d8e72950

@@ -4,10 +4,12 @@ info:
   name: zm-system-log-detect
   author: pussycat0x
   severity: low
-  reference: https://www.exploit-db.com/ghdb/6926
+  description: Zm system log file exposed.
+  reference:
+    - https://www.exploit-db.com/ghdb/6926
   metadata:
     max-request: 2
-  tags: logs,zm,exposure
+  tags: logs,zm,exposure,discovery
 
 http:
   - method: GET
@@ -26,5 +28,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a00483046022100f5d17953a7baead39797c8d7d1662ddaa898065f92175d0b95886bf5933f1d9902210084399f206a5106015b9621cb3e1451d25cd73c2158fe5dbd6f0cd6e60a4ba3e7:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100bd7756ed3a038359e6280a1d29cea9bd00bc17103649499ca1502699a0b390a602210090b8608d3e41aaf1c15c048ebb6ca078ec8f8680702f8c50b98f394862e33b8a:922c64590222798bb761d5b6d8e72950

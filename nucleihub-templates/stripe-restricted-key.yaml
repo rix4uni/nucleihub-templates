@@ -4,9 +4,11 @@ info:
   name: Stripe Restricted Key Disclosure
   author: Ice3man
   severity: info
+  reference:
+    - https://stripe.com/docs/keys
   metadata:
     max-request: 1
-  tags: exposure,token,stripe
+  tags: exposure,token,stripe,vuln
 
 http:
   - method: GET
@@ -18,5 +20,4 @@ http:
         part: body
         regex:
           - 'rk_(?:live|test)_[0-9a-zA-Z]{24}'
-
-# digest: 4a0a00473045022100de0bca08cd5a5579b1a20a1d7ef49579f97c6dff09fd06b639259c620ba1117702201014a521f9da04d4d73ba3b20ba8d096b7c18471b102d2a610e833360b216738:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502210088c3bf3fba2b6e94d2915df8e8889da1450c19d1b28ec7654967871ba10b5d22022043b6fcaa6f459d5ce94f8b7e09f7c2f9924176693adaa714ff65f415c7433d1f:922c64590222798bb761d5b6d8e72950

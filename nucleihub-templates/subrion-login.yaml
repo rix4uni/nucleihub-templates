@@ -7,11 +7,13 @@ info:
   description: Subrion Admin Panel login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:intelliants:subrion:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-  tags: panel,subrion
+    vendor: intelliants
+    product: subrion
+  tags: panel,subrion,intelliants,discovery
 
 http:
   - method: GET
@@ -38,5 +40,4 @@ http:
         group: 1
         regex:
           - "Subrion CMS ([a-z0-9.]+)</a><br>"
-
-# digest: 4a0a0047304502205b8f81d137a02feeaddb2baabae7d0ec78559ab2c556aeea91f05518c4210b7802210099185e3638a96461a7670eb13294f10cb32c0eff6f5c25f48353919853bea810:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022100dc473cdbd3fc73e59d7e29e5f09c3f16ec647032bb4a4522a3bd4e612294474d021f64fa2dc547ab688a2cf42741ef9856e5837f3da08bed50f4d058dc46fc497b:922c64590222798bb761d5b6d8e72950

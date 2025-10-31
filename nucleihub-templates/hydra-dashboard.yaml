@@ -7,13 +7,19 @@ info:
   description: Hydra router dashboard was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:hydra_project:hydra:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: title:"Hydra Router Dashboard"
-  tags: panel,exposure,hydra
+    vendor: hydra_project
+    product: hydra
+    shodan-query:
+      - title:"Hydra Router Dashboard"
+      - http.title:"hydra router dashboard"
+    fofa-query: title="hydra router dashboard"
+    google-query: intitle:"hydra router dashboard"
+  tags: panel,exposure,hydra,hydra_project,discovery
 
 http:
   - method: GET
@@ -32,5 +38,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a0046304402205c4da1ec1f55c8ce92298cdc02f4f4936cbef2f93db1daee13bbd87a1f0ac0c60220386dc1d342b7e1215fd8ad714c63f55b7ed7a75b180a3fe27ae4977dcd1a4932:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402202fbaba47e7d296fca9ab4e754ca54a543b0926095f42441cfd40cea48f9b4ca902207573b17304c1a67a1450d07998596d8f5553fd7a630a5a06957edff44802bf36:922c64590222798bb761d5b6d8e72950

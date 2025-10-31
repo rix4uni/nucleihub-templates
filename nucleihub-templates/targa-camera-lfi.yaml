@@ -11,7 +11,9 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
     cvss-score: 8.6
     cwe-id: CWE-22
-  tags: targa,lfi,iot,camera,selea
+  metadata:
+    max-request: 1
+  tags: targa,lfi,iot,camera,selea,vuln
 
 http:
   - method: GET
@@ -20,7 +22,6 @@ http:
 
     matchers-condition: and
     matchers:
-
       - type: regex
         regex:
           - "root:.*:0:0:"
@@ -28,5 +29,4 @@ http:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/07/14
+# digest: 490a0046304402202f67ac22023b2ee9727f7a155ef724b7c38fcde0ca545b274580148d9a4bd59102206bb2f257d88a667b997e8b7cf7dd7188350ceafe09bbf63ce7e07d01edb37262:922c64590222798bb761d5b6d8e72950

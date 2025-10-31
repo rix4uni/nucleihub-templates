@@ -8,11 +8,21 @@ info:
     ServiceNow Login Panel was detected.
   reference:
     - https://www.servicenow.com/
+  classification:
+    cpe: cpe:2.3:a:servicenow:servicenow:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: http.favicon.hash:1701804003
-  tags: panel,servicenow,login,detect
+    vendor: servicenow
+    product: servicenow
+    shodan-query:
+      - http.favicon.hash:1701804003
+      - http.title:"servicenow"
+    fofa-query:
+      - icon_hash=1701804003
+      - title="servicenow"
+    google-query: intitle:"servicenow"
+  tags: panel,servicenow,login,detect,discovery
 
 http:
   - method: GET
@@ -40,5 +50,4 @@ http:
         group: 1
         regex:
           - '(?i)g_builddate\s+=\s+"([0-9._-]+)"'
-
-# digest: 4a0a0047304502207c5734325bd9e204272dfb556dcd255a949bee0e116215fe9de0f8c2fff17cf2022100c1f43d0d313cf0144a075e6dc6be98b9f0297c45fe3c1f55f2fa54ef04196636:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a2fb9ff814f3c91054cdbc132272d30e2cd0af76ae4565a2c7a98e00cff4cabe022100c993e07d7c3bee52db5bef13204779a2fc1d2ec18dbf2f6d72b6ac9b78da8f0b:922c64590222798bb761d5b6d8e72950

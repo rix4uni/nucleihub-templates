@@ -2,7 +2,7 @@ id: quiz_maker-b34194de-6b6e-4aaa-908e-85c424207c51
 
 info:
   name: >
-    Quiz Maker <= 6.7.0.62 - Cross-Site Request Forgery
+    Quiz Maker <= 6.7.0.64 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
   description: >
@@ -48,4 +48,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 6.7.0.62')
+          - compare_versions(version, '<= 6.7.0.64')

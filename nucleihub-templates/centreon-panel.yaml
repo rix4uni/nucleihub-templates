@@ -7,12 +7,18 @@ info:
   description: Centreon login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:centreon:centreon_web:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    shodan-query: http.title:"Centreon"
-  tags: panel,centreon,login
+    vendor: centreon
+    product: centreon_web
+    shodan-query:
+      - http.title:"Centreon"
+      - http.title:"centreon"
+    fofa-query: title="centreon"
+    google-query: intitle:"centreon"
+  tags: panel,centreon,login,discovery
 
 http:
   - method: GET
@@ -38,5 +44,4 @@ http:
         group: 1
         regex:
           - 'v. (.*)'
-
-# digest: 4b0a00483046022100afae42df085c0136c8309e38ab0d3750461c52e82d84c952dd882c2e875df05d022100af79c573c6976948d991469ddad0c276199115eeb97d8b7f43f83e5e257e476d:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100c0368e3fc1e50c2296dc7ebf32fb03f633c314a12ae0cbb6154ce61e966e42a4022100a8b2594573f012968c8dae2b9dc0933398ca0f5a4cbb4edbf3532a4cda9b6254:922c64590222798bb761d5b6d8e72950

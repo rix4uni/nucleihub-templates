@@ -12,7 +12,9 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
     cwe-id: CWE-22
-  tags: lfi,rackn,digitalrebar
+  metadata:
+    max-request: 1
+  tags: lfi,rackn,digitalrebar,vuln
 
 http:
   - method: GET
@@ -21,7 +23,6 @@ http:
 
     matchers-condition: and
     matchers:
-
       - type: regex
         part: body
         regex:
@@ -35,5 +36,4 @@ http:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/07/22
+# digest: 4a0a0047304502203314d1d95685fb07cabd11497fcef13030391d190229050095a3be24594797c7022100cd63e2fad3f3d49a1b08b7df2d9ad284b745a603b93f8e104bb2eb4aff70e440:922c64590222798bb761d5b6d8e72950

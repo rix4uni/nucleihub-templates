@@ -7,11 +7,13 @@ info:
   description: Avaya Aura Communication Manager login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:avaya:aura_communication_manager:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-  tags: panel,avaya
+    vendor: avaya
+    product: aura_communication_manager
+  tags: panel,avaya,discovery
 
 http:
   - method: GET
@@ -30,5 +32,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 490a00463044022017ce7566ece8cce0d759602f0a66cc7dcb42231dc1aa9a94bb8fe41852233fd002201c230e80972519dd5a652ba424468467afb12ce7eae177a31fc4ea6333301cd2:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100d2aef82c32c864190566d885f1efe832a985236ad754665afe2f924dafbedbd8022100f141909b61e1e562eadd0991a1477e67f8e46b99c06dd42da94dd45318d60213:922c64590222798bb761d5b6d8e72950

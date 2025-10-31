@@ -1,18 +1,25 @@
 id: netdata-dashboard-detect
 
 info:
-  name: Netdata Dashboard Panel -  Detect
+  name: Netdata Dashboard Panel - Detect
   author: pussycat0x
   severity: info
   description: Netdata Dashboard panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:netdata:netdata:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    shodan-query: 'Server: NetData Embedded HTTP Server'
-  tags: netdata,panel,tech
+    vendor: netdata
+    product: netdata
+    shodan-query:
+      - 'Server: NetData Embedded HTTP Server'
+      - http.title:"netdata dashboard"
+      - "server: netdata embedded http server"
+    fofa-query: title="netdata dashboard"
+    google-query: intitle:"netdata dashboard"
+  tags: netdata,panel,tech,discovery
 
 http:
   - method: GET
@@ -29,5 +36,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a0048304602210081e3ba0681a935ad6a300ed42377c830fa1bef7fde458efe97ba94f9282e8d4202210096f1846e626d9ee59b796a53fdef21db95ad66f1d5a893c8de3e1f02bccb1abe:922c64590222798bb761d5b6d8e72950
+# digest: 490a004630440220224bcae0765eed70b41cae520bb521dd93f620c420314d8b32d4c9a7916e9c1602201938d4f931def4f7ec03ed8f8ff7063e24483512855decb50968ec750ba376f0:922c64590222798bb761d5b6d8e72950

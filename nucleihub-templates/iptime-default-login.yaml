@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-522
   metadata:
     max-request: 1
-  tags: iptime,default-login
+  tags: iptime,default-login,vuln
 
 http:
   - raw:
@@ -44,5 +44,4 @@ http:
           - "login.cgi"
         part: body
         condition: and
-
-# digest: 480a00453043021f48378eaeeba6c7b9c45cbe0a34e4f50162ecf7871700bb62a1183045ce49b402205d975fa7eabd5ad242a0eee4b7894233564acfe9e9b04ee5775e4d4ae57142e1:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502201927c4e9a728a93d3cabd296886588c2de77067b6176b05d58a4f09a93e16f8c022100c3a402daf8ec17e52207b197a51157bbaa2f44c18f58557f3634f48414b0a051:922c64590222798bb761d5b6d8e72950

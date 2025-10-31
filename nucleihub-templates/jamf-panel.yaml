@@ -7,12 +7,14 @@ info:
   description: Jamf Mobile Device Management login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:jamf:jamf:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: http.favicon.hash:1262005940
-  tags: jamf,panel,mdm
+    product: jamf
+    vendor: jamf
+  tags: jamf,panel,mdm,discovery
 
 http:
   - method: GET
@@ -37,5 +39,4 @@ http:
         group: 1
         regex:
           - '<meta name=\"version\" content=\"(.*)\">'
-
-# digest: 4a0a004730450221009fb86a9da0753f221bd90742c29d99c92171d12b14b247f5fb51d58f9b77d72c02202592ea277f58c1112cc26ee58a2b8aa85131b7adf30076dd35816bccde30a050:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100b1356e69c73ab70b4c601af05f8a9ffe0237e7aa10cfdac51247d7aa1855d32902206a2e27eb91179f90ea457f483ccadc1d45958f01ff961ec405b813377769d27e:922c64590222798bb761d5b6d8e72950

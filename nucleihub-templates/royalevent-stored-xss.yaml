@@ -15,7 +15,8 @@ info:
     cwe-id: CWE-79
   metadata:
     verified: true
-  tags: xss,unauthenticated,cms,royalevent,packetstorm
+    max-request: 1
+  tags: xss,unauthenticated,cms,royalevent,packetstorm,vuln
 
 http:
   - raw:
@@ -34,5 +35,4 @@ http:
       - type: status
         status:
           - 302
-
-# Enhanced by mp on 2022/09/23
+# digest: 4b0a00483046022100bd48519c8d0ce786ff294b72137e5b51fbd5cadc4dea3ed6f693221fb17053e2022100913205ba94f75ad71d4b189f8ab329500552d01d56f40db1676074b48ffb9cab:922c64590222798bb761d5b6d8e72950

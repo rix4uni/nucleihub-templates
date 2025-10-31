@@ -13,7 +13,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: title:"Scribble Diffusion"
-  tags: panel,scribble,detect
+  tags: panel,scribble,detect,discovery
 
 http:
   - method: GET
@@ -31,5 +31,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100b2d7bbaace6c645b1e1230f1cb3d3c5ef96223607738f932be13985bfed702890220366e02d193cb7698ec80a35310e5bc2ac65699d0ad1ffcd7f7d6f0cb9fdc3dbd:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a83c50b64f539df2df6d2ebffcd97a771bb017d2c0fe4478422cc4c5fd922111022100c53b9711ca67a7b8c3d87cbc1e8376ffad3570bac9b9615051ab00bd6ca7d3d2:922c64590222798bb761d5b6d8e72950

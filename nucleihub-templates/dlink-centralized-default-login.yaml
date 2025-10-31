@@ -10,7 +10,7 @@ info:
     verified: true
     max-request: 1
     fofa-query: title="AC集中管理平台" && body="D-Link路由器管理页"
-  tags: default-login,dlink
+  tags: default-login,dlink,vuln
 
 http:
   - raw:
@@ -47,5 +47,4 @@ http:
         words:
           - "window.open"
         condition: and
-
-# digest: 490a0046304402203ab1c3e821f4fdd28e937a4673976fae16eb67bc51c95fe89588930f65f8a3d502207e4b432b38001214c5f5cc9036b00588150c159aa2c2f49f575bb58278f20856:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402207e4d0ab1678a91ef842f3187e4be481820a1d8aea15f9370aa42170e76d0669b02204a662f5f3256932f62b4b69c02e62d58621f9ea0e16494c7be3daa9e9b842d04:922c64590222798bb761d5b6d8e72950

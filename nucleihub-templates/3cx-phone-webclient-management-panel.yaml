@@ -11,13 +11,26 @@ info:
     - https://medium.com/@frycos/pwning-3cx-phone-management-backends-from-the-internet-d0096339dd88
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:3cx:3cx:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    shodan-query: http.title:"3CX Webclient"
-    google-query: intitle:"3CX Webclient"
-  tags: panel,3cx
+    vendor: 3cx
+    product: 3cx
+    shodan-query:
+      - http.title:"3CX Webclient"
+      - http.title:"3cx webclient"
+      - http.title:"3cx phone system management console"
+      - http.favicon.hash:970132176
+    google-query:
+      - intitle:"3CX Webclient"
+      - intitle:"3cx phone system management console"
+      - intitle:"3cx webclient"
+    fofa-query:
+      - icon_hash=970132176
+      - title="3cx phone system management console"
+      - title="3cx webclient"
+  tags: panel,3cx,discovery
 
 http:
   - method: GET
@@ -30,5 +43,4 @@ http:
           - " <title>3CX Webclient</title>"
           - '<meta name="description" content="3CX">'
         condition: or
-
-# digest: 490a00463044022050009d08ad6ad418d345423b84c3600387bc9341fd133b79ad7c640792829f44022057dfbb3797521e78d3398a5961b13160a633b95a8af3f9c401fc22526f251fa6:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022070074b6ec4261f5cb58a9cd0de5d6bcf7937a0a4ef3ed8d1dc6250633f51fe2002206427df5af4ff71df1787296f871b3bb3687a80dfffbe8d44e274e46be66d992a:922c64590222798bb761d5b6d8e72950

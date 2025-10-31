@@ -7,13 +7,20 @@ info:
   description: Weiphp panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:weiphp:weiphp:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: http.html:"weiphp"
-  tags: panel,weiphp
+    vendor: weiphp
+    product: weiphp
+    shodan-query:
+      - http.html:"weiphp"
+      - http.html:"weiphp5.0"
+    fofa-query:
+      - body="weiphp"
+      - body="weiphp5.0"
+  tags: panel,weiphp,discovery
 
 http:
   - method: GET
@@ -35,5 +42,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a0047304502205db880a12929db15e027f119a651de4a42358c6fdd305087118b89022921564b02210099089333a7ae57880ee329202e84f8ba93b8dcca2238faf861ee5a73699adffc:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100a0810137791bea3879e897802cea208fa130fd8d9bac86c193bcddbfa6b8d086022100a0ae7768153377d25c104aa543efc8c2de77a67c0d79b47afc636773279731c5:922c64590222798bb761d5b6d8e72950

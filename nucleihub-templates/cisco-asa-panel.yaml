@@ -1,4 +1,4 @@
-id: cisco-asa-panel-detect
+id: cisco-asa-panel
 
 info:
   name: Cisco ASA VPN Panel - Detect
@@ -7,11 +7,13 @@ info:
   description: Cisco ASA VPN panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-  tags: cisco,panel
+    vendor: cisco
+    product: adaptive_security_appliance_software
+  tags: cisco,panel,discovery
 
 http:
   - method: GET
@@ -27,5 +29,4 @@ http:
           - "/+CSCOU+/portal.css"
           - "SSL VPN Service"
         condition: or
-
-# digest: 4b0a00483046022100958a32d71df792ef5fbaa3c3248bb6c9319df95244bcd275ec1b2570f2b2796e022100ca906379cd2ab83799e30d6789184d87b6671146e7aab8477936bb746fc1cf2d:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100a58709bae8c7e02627b814418142ab5445e58eacc1a40336d930fbcdd0c3f72f02206a2fab9185bcd78ad046325d867f9e6d22da114de93f78ee866800c83efd3c7a:922c64590222798bb761d5b6d8e72950

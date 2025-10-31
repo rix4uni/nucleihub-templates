@@ -10,9 +10,17 @@ info:
     - https://www.jenkins.io/doc/book/security/
   classification:
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-  tags: panel,jenkins
+    vendor: jenkins
+    product: jenkins
+    shodan-query:
+      - cpe:"cpe:2.3:a:jenkins:jenkins"
+      - http.favicon.hash:81586312
+      - product:"jenkins"
+    fofa-query: icon_hash=81586312
+  tags: panel,jenkins,discovery
 
 http:
   - method: GET
@@ -28,5 +36,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a0047304502200e449779166c85b60ce2c781a152d6285d4b1e32cdd269ff907c991ee5f4cd2d0221009e25adb7443f9130bf3b422e8a703f55446e7899ab759cd29baf027610c7e82f:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502210084d642c326adc8755ccaa81a23a3b0a3f3243e771949313e406b85d39f5de3ba02207c65d9dadb4c9cc8320e223fe5bc81598f3034e3b1c6aa4cf475b0358be04c8a:922c64590222798bb761d5b6d8e72950

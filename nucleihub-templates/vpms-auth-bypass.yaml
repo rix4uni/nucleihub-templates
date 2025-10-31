@@ -1,12 +1,20 @@
 id: vpms-auth-bypass
 
 info:
-  name: Vehicle Parking Management System 1.0 - Authentication Bypass
+  name: Vehicle Parking Management System 1.0 - SQL Injection
   author: dwisiswant0
-  severity: high
-  description: The Vehicle Parking Management System allows remote attackers to bypass the authentication system by utilizing an SQL injection vulnerability in the 'password' parameter.
-  reference: https://www.exploit-db.com/exploits/48877
-  tags: auth-bypass
+  severity: critical
+  description: Vehicle Parking Management System 1.0 contains a SQL injection vulnerability via the password parameter. An attacker can possibly obtain sensitive information from a database, modify data, and execute unauthorized administrative operations in the context of the affected site.
+  reference:
+    - https://www.exploit-db.com/exploits/48877
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
+    cvss-score: 10
+    cwe-id: CWE-89
+  metadata:
+    max-request: 1
+  tags: auth-bypass,edb,sqli,vuln
+
 http:
   - raw:
       - |
@@ -28,6 +36,8 @@ http:
           - "location.href = 'index.php';"
         condition: and
         part: body
+
       - type: status
         status:
           - 200
+# digest: 490a0046304402203105c27d01dc73618d30a35cef74a433d33154ccda763d577f33ad39c7ee28e602203a98a10e848b121564bce4a1a244344234d70c7fc8cec6ca3d8408bc24cbef7b:922c64590222798bb761d5b6d8e72950

@@ -7,12 +7,22 @@ info:
   description: SugarCRM login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:sugarcrm:sugarcrm:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
-    shodan-query: http.title:sugarcrm
-  tags: sugarcrm,panel
+    vendor: sugarcrm
+    product: sugarcrm
+    shodan-query:
+      - http.title:sugarcrm
+      - http.html:"sugarcrm inc. all rights reserved"
+    google-query:
+      - intitle:sugarcrm
+      - intext:"sugarcrm inc. all rights reserved"
+    fofa-query:
+      - title=sugarcrm
+      - body="sugarcrm inc. all rights reserved"
+  tags: sugarcrm,panel,discovery
 
 http:
   - method: GET
@@ -32,5 +42,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022015af1e420a5ab0e27b2714aff6132e7318e607b5eb6f36a379917848d7b9e38f022100802ca839974d623aab4db7c34f2a5fe63eaaebd6993236ef549b1b79ac3384af:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502201ce3d8f62f6f1a94aeaa221bbf7fa39b670427ea2035cacf6700c1ad35db7bd00221009591e1b9db34124a0e5f1d9e8b577f8cead7909b06988e6b20b92d8e993bd53b:922c64590222798bb761d5b6d8e72950

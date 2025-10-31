@@ -6,13 +6,15 @@ info:
   severity: info
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:redhat:satellite:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
     shodan-query: http.html:"redhat" "Satellite"
-  tags: panel,redhat,satellite
+    product: satellite
+    vendor: redhat
+  tags: panel,redhat,satellite,discovery
 
 http:
   - method: GET
@@ -39,5 +41,4 @@ http:
         group: 1
         regex:
           - '&quot;version&quot;:&quot;([0-9.]+)&quot;,'
-
-# digest: 4a0a0047304502200eb01396ccf13114810f449307b0ceca80c19a5d81c4cb164c57c2814982c213022100f8ef968eaf0e73ddf417275f59581921ddea41581b7547695f31d553295f1dff:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022002e996c61386b6178ae3ccf0ccacd1a20b226b40d0192dd1442aea1fca6e671b022100d187d1c8648116b040413da61747c2f197c566586d26125d598ac57e51874d1b:922c64590222798bb761d5b6d8e72950

@@ -9,7 +9,7 @@ info:
     - https://www.secpulse.com/archives/107611.html
   metadata:
     max-request: 1
-  tags: config,exposure
+  tags: config,exposure,coremail,vuln
 
 http:
   - method: GET
@@ -29,5 +29,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a00483046022100a933f66f20dfcc2d371ec242220500567b8d7a74265d8d3f5617dda78fdc5da6022100cdbff71d832b672411cafdaef856fc940d0e4b56c7d00e71ae1a6a28d7a4787e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220655fcf14ffe010e80942abdff6d514d4afa41e64d0d661e567363c794b6e30aa022100e7825074b737a2f966b43dc9d659fbd098cbfe819cd83af85dfa9ac49cbfca9c:922c64590222798bb761d5b6d8e72950

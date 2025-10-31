@@ -7,13 +7,19 @@ info:
   description: Lansweeper login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
+    cpe: cpe:2.3:a:lansweeper:lansweeper:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: title:"Lansweeper - Login"
-  tags: lansweeper,tech,panel
+    vendor: lansweeper
+    product: lansweeper
+    shodan-query:
+      - title:"Lansweeper - Login"
+      - http.title:"lansweeper - login"
+    fofa-query: title="lansweeper - login"
+    google-query: intitle:"lansweeper - login"
+  tags: lansweeper,tech,panel,discovery
 
 http:
   - method: GET
@@ -37,5 +43,4 @@ http:
         group: 1
         regex:
           - '"\/js\/CustomControls\.js\?([0-9.]+)" type="text\/javascript"'
-
-# digest: 490a0046304402207d05e439f57066e26a03f20e56f3f2e638ce161e69e6ea4eddbd4f6bb60fc9a6022004e1fc12be3cbefa9f75dcd9fd90c77aaa9be54c74c63568b4eeb29f1581fbfc:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100bd79a629defcda77e34dfb49ed4dfdad67b4c22bbc249f56b5d818be858311d70220745b4649ee31d29dcda069d2997a20be5044bff0d38b8aba51e2a81cca9483e3:922c64590222798bb761d5b6d8e72950

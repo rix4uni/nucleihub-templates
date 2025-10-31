@@ -5,7 +5,8 @@ info:
   author: DhiyaneshDk
   severity: info
   description: Web Proxy Auto-Discovery configuration file was detected.
-  reference: https://en.wikipedia.org/wiki/Web_Proxy_Auto-Discovery_Protocol
+  reference:
+    - https://en.wikipedia.org/wiki/Web_Proxy_Auto-Discovery_Protocol
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cvss-score: 0
@@ -14,7 +15,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: html:"wpad.dat"
-  tags: config,exposure,proxy
+  tags: config,exposure,proxy,vuln
 
 http:
   - method: GET
@@ -33,5 +34,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100dc33e95b72bec214e74cc59a130539ce63c2acd66b639aba1a3358c1d3cfb001022012df0afdabe4deb9e11b4b9f8215c8985d48140e302c99ae6ce61ecf21cc8d0e:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100921202a956346b8cdaf8337dce520423d2645276d19a724e01d3d19396fb1fb802201409513218722591867821d495abb53047cd430df1365a939ac815e2dd2eab99:922c64590222798bb761d5b6d8e72950

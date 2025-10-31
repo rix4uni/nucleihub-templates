@@ -7,7 +7,7 @@ info:
   description: Golang expvar function exposes multiple public variables via HTTP such as stack trace information and server operation counters.
   metadata:
     max-request: 1
-  tags: go,debug,exposure
+  tags: go,debug,exposure,vuln
 
 http:
   - method: GET
@@ -25,5 +25,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100e8e01368901ebc22b4dfc118084d0ad34fad1d956a8317c6addcad61f357e372022030260d85513e57f4bafab4ce1cea17bc90a36d4aaab76fcfa0c7cce378bfaf6c:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402205506da8c713a09e77fc4d8978f6c43311e9fb738981a1202629cde0b6c4379bc02203f52a8d039d43914f825f4ce9709f0a63de4d72ac9df14f15bfe57c90d084111:922c64590222798bb761d5b6d8e72950

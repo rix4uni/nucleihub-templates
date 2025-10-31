@@ -10,8 +10,8 @@ info:
     cvss-score: 5.3
     cwe-id: CWE-200
   metadata:
-    max-request: 6
-  tags: exposure,backup
+    max-request: 7
+  tags: exposure,backup,vuln
 
 http:
   - method: GET
@@ -22,6 +22,7 @@ http:
       - "{{BaseURL}}/settings.php.save"
       - "{{BaseURL}}/settings.php.swp"
       - "{{BaseURL}}/settings.php.txt"
+      - "{{BaseURL}}/config/settings.old.php"
 
     matchers-condition: and
     matchers:
@@ -34,5 +35,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a0047304502205d01111f8104897ec14d420d10fe452a20511e65a49461f220716997903363e9022100d7e2b69aa7cca6943256c9ffa70af615558a17df2690daad67082d6343a55601:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402201d6bc365d8e186803116f9f3baceb9cc06da8a3db4a63be40700fa4e45db179a0220467614f32a5490e9562ab9f45d668b5ef880552ff60783c10600048b46da2d31:922c64590222798bb761d5b6d8e72950

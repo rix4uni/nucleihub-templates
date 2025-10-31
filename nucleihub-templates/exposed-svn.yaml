@@ -11,7 +11,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: config,exposure,svn
+  tags: config,exposure,svn,vuln
 
 http:
   - method: GET
@@ -23,7 +23,7 @@ http:
       - type: regex
         part: body
         regex:
-          - "(^10\\s*dir|\\.svn-base|has-props|svn:\\/\\/|([\\da-f]{32}[\\S+\\r\\n\\s]+[\\d]{4}-[\\d]{2}-[\\d]{2}T[\\d]{2}:[\\d]{2}:[\\d]{2}.[\\d]{6}Z))"
+          - "(^\\d\\s*dir|\\.svn-base|has-props|svn:\\/\\/|([\\da-f]{32}[\\S+\\r\\n\\s]+[\\d]{4}-[\\d]{2}-[\\d]{2}T[\\d]{2}:[\\d]{2}:[\\d]{2}.[\\d]{6}Z))"
 
       - type: status
         status:
@@ -33,5 +33,4 @@ http:
         part: header
         words:
           - "text/plain"
-
-# digest: 490a00463044022005396383a0f6f9d24fe35d0f3efbae1bd4f4462c98c3afa66e54576a7d185a38022051a53f8ba6064ade4a69b39f3717bd47017f1d5d9220dfa53ce3c016435c8a09:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502206b8d68131d21b062cfc45470c19eba930ee5eda6c6605dabc23dd72fcc9689e3022100966d68a2360df5c9f46ffcf3e5b60b3380556657a3ca40ee61a31839b0fdcc85:922c64590222798bb761d5b6d8e72950

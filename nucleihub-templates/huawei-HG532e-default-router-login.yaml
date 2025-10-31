@@ -9,10 +9,13 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
+    cpe: cpe:2.3:h:huawei:hg532e:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: http.html:"HG532e"
-  tags: default-login,huawei
+    product: hg532e
+    vendor: huawei
+  tags: default-login,huawei,vuln
 
 http:
   - raw:
@@ -39,5 +42,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a0047304502210098853593bd79906f1fc55c1386f724501e413fa0160f1001597c53617c79af2a02200e4fa649e43eba6e6bf28db68abe93584b5cf961542e2d2afe5bdf55ddc3c6d7:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100a10295dd66ce837510c593b314f59bfebdb5c0fab4690ceacd21151aa9ac529f02201d53ce16a326af87613e20687e23d7fdf2386b15ff736173d1631f4610753b90:922c64590222798bb761d5b6d8e72950

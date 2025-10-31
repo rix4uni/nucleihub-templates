@@ -5,7 +5,8 @@ info:
   author: DhiyaneshDK
   severity: info
   description: phpspec configuration information was detected.
-  reference: https://phpspec.net/en/stable/cookbook/configuration.html
+  reference:
+    - https://phpspec.net/en/stable/cookbook/configuration.html
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cvss-score: 0
@@ -14,7 +15,7 @@ info:
     verified: true
     max-request: 2
     shodan-query: html:"phpspec.yml"
-  tags: exposure,phpsec,php,devops,cicd
+  tags: exposure,phpsec,php,devops,cicd,vuln
 
 http:
   - method: GET
@@ -36,5 +37,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100accf4f3f78577ee3cce577346fe335b74589259866b9b7858eca893a32fc73ed02204be683ed29d90e13fd2070e33301fec1d1c3adcca09fce769d40c9427559953e:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022076f286fd8b0a20b3e4bd42cabd6998db84771da866a6d5d60fb29e9c733f218302200e8927a99b8a68b0732b0f5f03231a514023cc231df708aab2689786070883d2:922c64590222798bb761d5b6d8e72950
