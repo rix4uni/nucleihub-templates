@@ -9,12 +9,9 @@ info:
     - https://enterprise.arcgis.com/en/
   classification:
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:esri:arcgis_enterprise:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: esri
-    product: arcgis_enterprise
-  tags: docs,arcgis,cms,panel,esri,discovery
+  tags: docs,arcgis,cms,panel
 
 http:
   - method: GET
@@ -44,6 +41,6 @@ http:
         part: body
         group: 2
         regex:
-          - '(Released Version:</strong>[\n\t ]+(([0-9]+(.[0-9]+)?(.[0-9]+)?)([\n\t
-            ]+\([A-Za-z]+[\t ]+20[0-9][0-9]\))?))'
-# digest: 4b0a00483046022100fc3aa2607b52d6612c320a8229b3b7ff70f2176f32f763ca73cab106cb7aacbb022100b7dbffd8ce02a158715b416db9f2d1f9178aeeafdac80978f15b056b7800c417:922c64590222798bb761d5b6d8e72950
+          - '(Released Version:</strong>[\n\t ]+(([0-9]+(.[0-9]+)?(.[0-9]+)?)([\n\t ]+\([A-Za-z]+[\t ]+20[0-9][0-9]\))?))'
+
+# digest: 4b0a0048304602210096d850efe329f6b6fea7bc11e4f0b7fcf6c2d1ca603429fba639bb8adbf83b4a022100b26b4332ab05291ff4782e9075ea63c0f59587e4df73bfd955d06a9ac3376f6e:922c64590222798bb761d5b6d8e72950

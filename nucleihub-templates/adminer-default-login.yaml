@@ -16,7 +16,7 @@ info:
     verified: true
     max-request: 5
     shodan-query: http.title:adminer
-  tags: default-login,adminer,vuln
+  tags: default-login,adminer
 
 http:
   - raw:
@@ -40,6 +40,7 @@ http:
     host-redirects: true
     max-redirects: 1
     stop-at-first-match: true
+    cookie-reuse: true
 
     matchers-condition: and
     matchers:
@@ -61,4 +62,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402205b848aad03ca0a0d2e657a49ff3d985391a7983e22787c346f10617182d84fdd022068cec93e1cab782d87414f428dd955ac135ea3a4b023b3e35e8c96fdec294643:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100dbf25b5da2a42e80758dc941da0912847472aeec06e707171030e91d7175cce302206912effab916a3fb8f706383619aa306f07ae52fa88fd1cf5c6240726cfe5ee0:922c64590222798bb761d5b6d8e72950

@@ -9,18 +9,13 @@ info:
     - https://www.jalios.com/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:jalios:jcms:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
-    vendor: jalios
-    product: jcms
-    shodan-query:
-      - html:"Jalios JCMS"
-      - http.html:"jalios jcms"
-    fofa-query: body="jalios jcms"
-  tags: panel,jalios,jcms,discovery
+    shodan-query: html:"Jalios JCMS"
+  tags: panel,jalios,jcms
 
 http:
   - method: GET
@@ -42,4 +37,5 @@ http:
           - "JCMS_login"
           - "/jcms/"
         condition: or
-# digest: 490a00463044022036a01419adeeeb22f8a0ec1dc6e4b9318394288521e54169e289318bfafda8a60220749ef2fe3af40c972d52d174acb2f0eb7290a2b4f30ae1de2e4fda09fe23036e:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402207dd3d35c074bc4279dd1d0ab3c90744757b4045d9af8a77db217a24971f4305602201b6f4dbfb25545e500e449234855e31d368d8066e2d70d4ff248c76335d4cb14:922c64590222798bb761d5b6d8e72950

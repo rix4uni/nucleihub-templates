@@ -7,23 +7,12 @@ info:
   description: Apache Kafka Control Center login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:apache:kafka:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: apache
-    product: kafka
-    shodan-query:
-      - http.title:"Kafka Center"
-      - http.title:"kafka center"
-      - http.title:"kafka consumer offset monitor"
-    fofa-query:
-      - title="kafka center"
-      - title="kafka consumer offset monitor"
-    google-query:
-      - intitle:"kafka center"
-      - intitle:"kafka consumer offset monitor"
-  tags: panel,kafka,apache,discovery
+    shodan-query: http.title:"Kafka Center"
+  tags: panel,kafka
 
 http:
   - method: GET
@@ -36,4 +25,5 @@ http:
       - type: word
         words:
           - '<title>Kafka Center</title>'
-# digest: 490a00463044022034f3f471130a014aec2ba946025677a4f9ad1e63116a535aaec77b63544f3f470220548aace2ad32360e3188f848a3899a569ec4aa3e97d300e8c88b362b3d1d0471:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100fa0996e4674e99919c1e2d9188b560e4a27ed0d3d3eb7721b4bb48a8f411e4a0022100b44b057cdf0044851ddf351c111d4739d2d426de0330056b2fcb13cd8f21c250:922c64590222798bb761d5b6d8e72950

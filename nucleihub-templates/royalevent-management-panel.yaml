@@ -7,11 +7,12 @@ info:
   description: Royal Event Management System admin panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     verified: true
     max-request: 1
-  tags: royalevent,panel,discovery
+  tags: royalevent,panel
 
 http:
   - method: GET
@@ -30,4 +31,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450221009f19badc1b6f0deb68c377f27c685d54e447f458413c113e997af2175fac1d360220221b31c5dc6702b45701b9f7e31d8523204f7dd9149006f54625be81cd8441e5:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100f984662e502d602051db663bd8794d4eb2d92c8b100c651e83f9d1446271242402205594d7e0def20288f9d1932f76a6d73b0703792118f0e95e6f2eb4dcb5982c60:922c64590222798bb761d5b6d8e72950

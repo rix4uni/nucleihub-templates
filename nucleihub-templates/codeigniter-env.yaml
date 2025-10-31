@@ -7,26 +7,23 @@ info:
   description: Codeigniter .env file was discovered.
   metadata:
     max-request: 12
-  tags: config,exposure,codeigniter,vuln
+  tags: config,exposure,codeigniter
 
 http:
   - method: GET
     path:
-      - "{{BaseURL}}{{paths}}"
-    payloads:
-      paths:
-        - "/.env"
-        - "/.env.dev.local"
-        - "/.env.development.local"
-        - "/.env.prod.local"
-        - "/.env.production.local"
-        - "/.env.local"
-        - "/.env.example"
-        - "/.env.stage"
-        - "/.env.live"
-        - "/.env_1"
-        - "/.env.old"
-        - "/.env_sample"
+      - "{{BaseURL}}/.env"
+      - "{{BaseURL}}/.env.dev.local"
+      - "{{BaseURL}}/.env.development.local"
+      - "{{BaseURL}}/.env.prod.local"
+      - "{{BaseURL}}/.env.production.local"
+      - "{{BaseURL}}/.env.local"
+      - "{{BaseURL}}/.env.example"
+      - "{{BaseURL}}/.env.stage"
+      - "{{BaseURL}}/.env.live"
+      - "{{BaseURL}}/.env_1"
+      - "{{BaseURL}}/.env.old"
+      - "{{BaseURL}}/.env_sample"
 
     matchers-condition: and
     matchers:
@@ -39,4 +36,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100f3281b7d674311800e95e741a9b28ef0312b2508fc911658cf5871b79101ba14022056fcd26ee7d32c2aff458904aa3d40a4212bd4fa95f2d8e833ce2b0e1ca829ee:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100cb79f22431167b6829b0b341cf47b26c37e61327579239107ebbc4cbf668c20b02210083e613c309e1c555d9cda57540eb609f9c7ad22f43cd2c7f4aa0e761b3b2e2ed:922c64590222798bb761d5b6d8e72950

@@ -4,13 +4,11 @@ info:
   name: Docker Cloud Yaml - File Disclosure
   author: DhiyaneshDK
   severity: medium
-  description: Docker cloud internal yaml file is exposed.
   reference: https://www.exploit-db.com/ghdb/7959
   metadata:
     verified: true
-    max-request: 1
     google-query: intitle:"index of" "docker-cloud.yml"
-  tags: exposure,cloud,devops,docker,files,vuln
+  tags: exposure,cloud,devops,docker,files
 
 http:
   - method: GET
@@ -19,6 +17,7 @@ http:
 
     matchers-condition: and
     matchers:
+
       - type: regex
         regex:
           - '(?m)^  image:'
@@ -36,4 +35,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100d737b4ac4df9effcb3d8db3b293379e66f5b6741882ac148b41a8b939c60b6d9022100ae114d0c4429bf9576531c0bf46cef09ab0811c85f4f9aaea37d94f035b63094:922c64590222798bb761d5b6d8e72950

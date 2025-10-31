@@ -8,16 +8,11 @@ info:
     Sauter moduWeb Vision was detected.
   reference:
     - https://www.sauter-controls.com
-  classification:
-    cpe: cpe:2.3:o:sauter:moduweb_vision:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: sauter
-    product: moduweb_vision
     shodan-query: http.favicon.hash:-1663319756
-    fofa-query: icon_hash=-1663319756
-  tags: panel,moduweb,sauter,login,discovery
+  tags: panel,moduweb,sauter,login
 
 http:
   - method: GET
@@ -37,4 +32,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a0048304602210087e5260112179263e84a5f7d78e7dde9e63f6120d8e033530f9d4747d7a4b7da022100b8f33400f4acca5438cb35d8b45827f60b4a4686cb88ed56c1e4317c4365ff88:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100fed19c63a5b25035a40eae4d598455166f61f8ee1cff7d6a31a8108f51c9f41902202e4b1d272494a4b6d546b6469d7056a14744fd0c835462e468b6c256de0302b3:922c64590222798bb761d5b6d8e72950

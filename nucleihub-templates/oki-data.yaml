@@ -9,10 +9,11 @@ info:
     - https://www.exploit-db.com/ghdb/5937
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: panel,oki,edb,discovery
+  tags: panel,oki,edb
 
 http:
   - method: GET
@@ -28,4 +29,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a0048304602210093454541933244c83e6212194a6699a5e474c5c4b513f75273a1ef946d84d275022100d15e173981fd2a79e9aa761f52a3a4c799b8be6e7ae54ea166df4ad2a4c26898:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a004730450220340f705e4fdbc05d0df44d352d809cbf76a95bb1463fe9def4362b4ebb7f18ba022100be913fdd2a27a00a1c03f9d70369c7a269b623258a997aefbb362c65a4730e60:922c64590222798bb761d5b6d8e72950

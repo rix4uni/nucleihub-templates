@@ -14,7 +14,7 @@ info:
     cwe-id: CWE-522
   metadata:
     max-request: 1
-  tags: rackn,digitalrebar,default-login,vuln
+  tags: rackn,digitalrebar,default-login
 
 http:
   - raw:
@@ -47,4 +47,5 @@ http:
           - 'Name'
           - 'Secret'
         condition: and
-# digest: 4a0a0047304502210098edc0b533836fed6ceb4e45ecdca8b24be9dd76a847726b24596fef492d513d022042dd6b846a392ac70930a0b8830489313abe8a292a64e378f97394478e525474:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100dba9a81ddd9e951cbfab4ba1b7ce9c4aad2f2de46b173f26c43b0ee2e6aced4a022100870029bce3a78a4483eabbf5da4638aec42822a236ba5c2e0483ec52d59c9c34:922c64590222798bb761d5b6d8e72950

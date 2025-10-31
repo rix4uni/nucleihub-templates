@@ -12,7 +12,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: http.title:"Coverity"
-  tags: panel,coverity,synopsys,discovery
+  tags: panel,coverity,synopsys
 
 http:
   - method: GET
@@ -32,4 +32,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100b392246ae3c6ed4786ed662f41717f50021abbe6aa6b383184401534b1bcac26022100f1dd618738207fb244377f512a6a691b711516d9add31a2059c987a524c96d81:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022057a4673b5698894d4faf4ced8686761232a435b26f3b7932cbd081801381a4e7022100b02afb2601ec2187b296d190fc4b241387c2fe45ced4d548aa761ea89500726b:922c64590222798bb761d5b6d8e72950

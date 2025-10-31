@@ -9,7 +9,7 @@ info:
     - https://bbs.secnet.cn/post/t-30
   metadata:
     max-request: 1
-  tags: default-login,secnet,vuln
+  tags: default-login,secnet
 
 http:
   - raw:
@@ -42,4 +42,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100f92b241502c844d5b0b44d7c547d2faf3cc8fa2018236f96bbff70492e5d6a1a0220698f670afd53f6840f8d940222a6c52ef5c61885a5d6c68ee81640c987a2e820:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a004830460221008b0bffdca451d4f7a6e3c778051d52d7d8d9dadd85f59ecdadbf3842cb9e1b84022100c20662b0c8793fdf0f5789f2ff09b6bb14c79f20fbf9e4d065af8a09ee8a8896:922c64590222798bb761d5b6d8e72950

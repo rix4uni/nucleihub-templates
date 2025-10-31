@@ -10,14 +10,12 @@ info:
     - https://teltonika-iot-group.com/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:h:teltonika:rut900:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     google-query: intitle:"Teltonika -Web UI" | intitle:"Teltonika-RUT -Web UI" inurl:"/cgi-bin/luci"
-    product: rut900
-    vendor: teltonika
-  tags: panel,teltonika,edb,discovery
+  tags: panel,teltonika,edb
 
 http:
   - method: GET
@@ -33,4 +31,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100837717e3f308bd33abae8afcab4d86876bfba5798ab1d74586bc57333324e96e022100c4ae1e756790fa6b52e6f3050b3694bc9ecd2588fca1f8b0eced956e04136d22:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100c921ae73a6da2afa0739f0b6fb1d0d7b6b827e35ade39c1c41f1c0ac0eea2b7302205a1241084c94ced67773828db73c2ea2c8fa2c53ac522bfd1e4b7ca4118d9fd4:922c64590222798bb761d5b6d8e72950

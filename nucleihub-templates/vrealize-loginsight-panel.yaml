@@ -7,19 +7,13 @@ info:
   description: Detect vRealize Log Insight login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:vmware:vrealize_log_insight:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: vmware
-    product: vrealize_log_insight
-    shodan-query:
-      - title:"vRealize Log insight"
-      - http.title:"vrealize log insight"
-    fofa-query: title="vrealize log insight"
-    google-query: intitle:"vrealize log insight"
-  tags: panel,vmware,vrealize,discovery
+    shodan-query: title:"vRealize Log insight"
+  tags: panel,vmware,vrealize
 
 http:
   - method: GET
@@ -35,4 +29,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502202dcdb3a396c1a0e9034a606b3810337de63f3b6a882a14896012d1362de787a1022100fbd59c59c6ae831bbdab35638bf8d4a04b9f4b5e8b1cbac737671093277e1186:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100c8d4cd908d89c98d92a141bd8687b48d0b4059d1bf2c3d1010ca37d615e7d3670220296c1ac647b7dcfb7283514b35f5c8febfc6723fe390dd8fe8283514514b7718:922c64590222798bb761d5b6d8e72950

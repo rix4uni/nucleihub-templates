@@ -7,10 +7,11 @@ info:
   description: PostgreSQL pgAdmin Dashboard panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: unauth,pgadmin,postgres,panel,discovery
+  tags: unauth,pgadmin,postgres,panel
 
 http:
   - method: GET
@@ -32,4 +33,5 @@ http:
         words:
           - "<title>pgAdmin"
         part: body
-# digest: 490a004630440220619af821811d05aa60fabf8ccf95035b68955be209246dfbb00a56ca0a9772540220562d71740c0b1508c161fb027def89a5bc44d82df22106309679dab08e478331:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100b3254c0989a223af4722334ebb05758b599529b577b54c716da47d4bac1c059d02210095e57636184ddb04a4d84566fb53b27f243997d2536dd5dd065ba9452501cdcd:922c64590222798bb761d5b6d8e72950

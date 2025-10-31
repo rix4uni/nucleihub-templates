@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: edb,config,exposure,vuln
+  tags: edb,config,exposure
 
 http:
   - method: GET
@@ -30,4 +30,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a004830460221008b54b5b91b9b360b98f80ec9da2e1a8d65b8456bebe6d366518c6976b46475bb022100c782c6186fe69336e68c57f094c99bd348756d157ba9de0c8e3638fab67932af:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100e29cf7a902d02e7311f6e99c6241f961b647d2f1e1604207229372caf608d7320221009948b28a87cc633b8f3190a60014bd67bdcd2fda80ef6abe5e811863fd547bce:922c64590222798bb761d5b6d8e72950

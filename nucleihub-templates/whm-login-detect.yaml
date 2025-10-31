@@ -9,13 +9,11 @@ info:
     - https://www.exploit-db.com/ghdb/7128
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:cpanel:whm:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: cpanel
-    product: whm
-  tags: edb,whm,panel,login,cpanel,discovery
+  tags: edb,whm,panel,login
 
 http:
   - method: GET
@@ -31,4 +29,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402203ea3e1b89d95557a1bde14060dee0a32cd01b4f3037d802d9ead324c511589f802203347a5538863717df097b90a3d8f17362b9903fc93c76afb859ccb504ff01787:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502207711c44e3c1405bc8ba5366c37fa1f888e17c98be33776c5f754c0181a0bce8c022100db98959e59176b58756868b13dce8deb60096e0190a226805f3a3800cdae3424:922c64590222798bb761d5b6d8e72950

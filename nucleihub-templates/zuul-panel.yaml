@@ -9,14 +9,12 @@ info:
     - https://opendev.org/zuul/zuul
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:zuul-ci:zuul:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
     shodan-query: http.favicon.hash:-1127895693
-    product: zuul
-    vendor: zuul-ci
-  tags: panel,zuul,cicd,oss,discovery
+  tags: panel,zuul,cicd,oss
 
 http:
   - method: GET
@@ -41,4 +39,5 @@ http:
       - type: word
         words:
           - 'zuul_version'
-# digest: 4a0a0047304502203b0ec8163ae48af2d995ee0d7666d8d51fb942f9bb030a4f6d6fdafadc5f7a0d022100a9984f14c86468e702e1382b80433f7f945f025375897c958a629a7f5b7b8ec7:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100b0352cb468969eaae6f76e7b1d3765b9d6dc2da59fd3bbe14eedddc860960d40022048225f8362f0a701d81ab744fa2bb06d5c98d747c3f7c97c4be3eac0086991e9:922c64590222798bb761d5b6d8e72950

@@ -14,7 +14,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: html:"phpstan.neon"
-  tags: devops,exposure,vuln
+  tags: devops,exposure
 
 http:
   - method: GET
@@ -37,4 +37,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502207b42fa6a1c617276c09eeb7599e583298f4fdca84059f4968ea8c73e2eb91ebf0221009f8fd276e3f2443905413b89f10399de6ddb20ae1b73d4418fcd062427a69781:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a004630440220441934031397cf2ed74a0c018c45754d01819b225a10e27ee9ed1264846039bf022076187e594d0d9b487e26d5c2fccceb2a48cdf92ea50b129ddc353470bf5958cc:922c64590222798bb761d5b6d8e72950

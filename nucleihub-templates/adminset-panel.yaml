@@ -12,7 +12,7 @@ info:
     fofa-query: app="AdminSet"
     reference:
       - https://github.com/guhongze/adminset/
-  tags: adminset,panel,discovery
+  tags: adminset,panel
 
 http:
   - method: GET
@@ -32,4 +32,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100ff64615d06f8b2902340c00a64e9472476a63e0c34fff37e6e46cb4ada4578830220379600d3d7be58d1aad39c07b8fcf1f20cccf0d27a1b7bf937f6fbce39117914:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100eb908932891337d53a3a07ca6ea1a6c7eed7c522a413a653e2d710bbdae50835022045c6e93343ec70e8380ac9408f7e48b6ab97ac5150c0dec08241c0088db3ca08:922c64590222798bb761d5b6d8e72950

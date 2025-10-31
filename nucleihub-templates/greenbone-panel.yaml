@@ -6,20 +6,12 @@ info:
   severity: info
   description: |
     Greenbone Security Assistant Web Panel is detected
-  classification:
-    cpe: cpe:2.3:a:greenbone:greenbone_security_assistant:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: greenbone
-    product: greenbone_security_assistant
-    shodan-query:
-      - http.title:"Greenbone Security Assistant"
-      - http.title:"greenbone security assistant"
-    zoomeye-query: title="Greenbone Security Assistant"
-    fofa-query: title="greenbone security assistant"
-    google-query: intitle:"greenbone security assistant"
-  tags: panel,greenbone,login,discovery
+    shodan-query: http.title:"Greenbone Security Assistant"
+    zoomeye-query: title:"Greenbone Security Assistant"
+  tags: panel,greenbone,login
 
 http:
   - method: GET
@@ -36,4 +28,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402202a5572ac39669c312ed67312fef0a09654ae850e4eeb0c6df3fb196abb9c146002206d14f675c9ed5640b84c128d5e7ca6e18c1b309054d45ed897bf9d93bdbdd06a:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402203c9f7c73a6ed6d8f8994f6210834cf6628b73f56ce8285868490f890c898740402207958d608ecb7005e3467e258cf08d78ebc933a544026ae91b7d6da9ad92d9f07:922c64590222798bb761d5b6d8e72950

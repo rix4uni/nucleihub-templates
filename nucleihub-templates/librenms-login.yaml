@@ -7,14 +7,12 @@ info:
   description: LibreNMS login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:librenms:librenms:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: librenms
-    product: librenms
     fofa-query: title="librenms"
-  tags: librenms,panel,discovery
+  tags: librenms,panel
 
 http:
   - method: GET
@@ -31,4 +29,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450220232bdc55fd6a0ba141eb5726ba0c1ef0f4a05bbfc5393cb0434f36fa49258643022100e431bb4cce064900a36bad28d29fe085e84dc85c2c3575a619eb3d4803587cc4:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402203e6fce89f461675811e9461a72c3f228358aa9f3f0ce2485a13b0390d983cc7b022020efdfe06d8606f20d82e8b926d2690ad0928d0fc139d16b89f1beba1f5c5d9b:922c64590222798bb761d5b6d8e72950

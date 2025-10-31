@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: exposure,oracle,config,vuln
+  tags: exposure,oracle,config
 
 http:
   - method: GET
@@ -35,4 +35,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100b360439d4639fb09ab62423cfff1d9a9abd6303628497c40c9c5db4ed9b95ca602206ebab5f93a1ab0ced7d08d66a40229714b3bad37f1790b4ff59cdce437c98518:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502205505ac2155b8bfd33db9941b3831ba08320cfbe968ed9ca3e8f461da25f12cea022100d19f089572c2671314f9035ed139b0a2529073f253f6cd001cf323ba835fae8f:922c64590222798bb761d5b6d8e72950

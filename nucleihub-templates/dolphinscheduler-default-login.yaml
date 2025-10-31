@@ -11,13 +11,10 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
-    cpe: cpe:2.3:a:apache:dolphinscheduler:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: http.title:"DolphinScheduler"
-    product: dolphinscheduler
-    vendor: apache
-  tags: apache,dolphinscheduler,default-login,oss,vuln
+  tags: apache,dolphinscheduler,default-login,oss
 
 http:
   - raw:
@@ -47,4 +44,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a0048304602210099b367cf13564ec1eee2d8d371b140ff1a025dfa7ab0cf0312b0ed32795ef487022100a596c327fb3eceec9563948fa98c9788539caf578911245ffcce82ca7083ff92:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502207145a1c47f315245ad5c976b1b397ac9505b36481698a247e81ecd41d4c6f76f022100aa4e7fd43be6c89acf664d53e830f9b9b4d47d33900d3bd45b34ff1433bf6104:922c64590222798bb761d5b6d8e72950

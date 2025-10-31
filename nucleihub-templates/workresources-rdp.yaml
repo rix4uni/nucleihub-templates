@@ -7,11 +7,12 @@ info:
   description: RDWeb RemoteApp and Desktop Connections does not display.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
     shodan-query: http.title:"RD Web Access"
-  tags: panel,workresources,discovery
+  tags: panel,workresources
 
 http:
   - method: GET
@@ -27,4 +28,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450221009b3ecb8e254601c08305b3966f3742dcaa0391c8190634bd7b834dcd172c7db80220239cffd9dc1fae33240180349f61794c706cbed4107e5db5f5800d35710d86d9:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100e7ae61661061924550cb9ab7ee0192247008125e8afd04680ea1b90335a5805a02203be4c2727161ac9ad0a0a1cb84f4f36ae66d240af82a309a9244a31b2981e5dd:922c64590222798bb761d5b6d8e72950

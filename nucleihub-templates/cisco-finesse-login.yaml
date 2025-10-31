@@ -9,13 +9,11 @@ info:
     - https://www.exploit-db.com/ghdb/6824
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:cisco:finesse:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: cisco
-    product: finesse
-  tags: panel,cisco,edb,discovery
+  tags: panel,cisco,edb
 
 http:
   - method: GET
@@ -31,4 +29,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100d9b6f1511d726f8ca4d648a60e771350f5179cf70d8c1fce91982354dcfb65a90221009b4b15429ab05e86bdcd101e87d8ecb4d9f187518a5a23cd77bdb34b979507d7:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a004730450221008b8f86faa0d4a645d7b1a8cac9fef657dde8d6fbbd3cc03c503e63fc69bcb40d02204f63813c4ca9bd3f8e2347d28d3b7d0d0352f3c06e3017dc5fffb55a8f09e00a:922c64590222798bb761d5b6d8e72950

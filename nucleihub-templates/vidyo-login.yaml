@@ -7,14 +7,12 @@ info:
   description: Vidyo admin login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:vidyo:vidyo:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
     shodan-query: http.favicon.hash:-1970367401
-    product: vidyo
-    vendor: vidyo
-  tags: panel,vidyo,discovery
+  tags: panel,vidyo
 
 http:
   - method: GET
@@ -33,4 +31,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450221008638346e159e99b8a9ce2563bf875e972ff502edd827782928d705085a0a8d2c022027b8a851b0e0a0682900b65af03220ecba609b0ce0a50e4aab7fbb77d686f3f5:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100c2df3e6d4d8f33015d265edd0511066f94bbeb3bf79bf9a181de55d806faf7f7022100be67b4c2846afffa5a8b6f1e7e77d4a6f51a873d5a2624d253c7e6448c69a532:922c64590222798bb761d5b6d8e72950

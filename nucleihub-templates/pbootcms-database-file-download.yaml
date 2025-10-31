@@ -10,11 +10,9 @@ info:
     - https://www.cnblogs.com/0daybug/p/12786036.html
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    cvss-score: 10
+    cvss-score: 10.0
     cwe-id: CWE-89
-  metadata:
-    max-request: 1
-  tags: pbootcms,db,exposure,database,sqlite,sqli,vuln
+  tags: pbootcms,db,exposure,database,sqlite
 
 http:
   - method: GET
@@ -22,7 +20,6 @@ http:
       - "{{BaseURL}}/data/pbootcms.db"
 
     max-size: 20000
-
     matchers-condition: and
     matchers:
       - type: word
@@ -35,4 +32,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402206653ccef1c337763215dcdb39a12b5ad95f4ab49a148984b86b8bafae1638b8802207cc44a20120f682fc52044fdafbce5ad30d848aa809a2ed0c91a92ad45215946:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by mp on 2022/09/28

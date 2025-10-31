@@ -1,14 +1,12 @@
 id: thinkphp-5023-rce
 
 info:
-  name: ThinkPHP 5.0.23 - Remote Code Execution
+  name: ThinkPHP 5.0.23 RCE
   author: dr_set
   severity: critical
-  description: ThinkPHP 5.0.23 is susceptible to remote code execution. An attacker can execute malware, obtain sensitive information, modify data, and/or gain full control over a compromised system without entering necessary credentials.
+  description: Thinkphp5 5.0(<5.0.24) Remote Code Execution.
   reference: https://github.com/vulhub/vulhub/tree/0a0bc719f9a9ad5b27854e92bc4dfa17deea25b4/thinkphp/5.0.23-rce
-  metadata:
-    max-request: 1
-  tags: thinkphp,rce,vuln
+  tags: thinkphp,rce
 
 http:
   - method: POST
@@ -32,4 +30,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a004830460221009eb92d0bfd254c9ad882e5ae0ac25bf7c4a31380198264bbb6ebc8f352e03363022100c3fd19a668ac48859c3e9e29226379dbaa65a1a15e959c8ad590e1a7fbf646da:922c64590222798bb761d5b6d8e72950

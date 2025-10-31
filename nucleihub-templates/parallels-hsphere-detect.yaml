@@ -7,24 +7,13 @@ info:
   description: Parallels H-Sphere login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:parallels:h-sphere:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: parallels
-    product: h-sphere
-    shodan-query:
-      - title:"Parallels H-Sphere"
-      - http.title:"h-sphere"
-      - http.title:"parallels h-sphere"
-    fofa-query:
-      - title="h-sphere"
-      - title="parallels h-sphere"
-    google-query:
-      - intitle:"h-sphere"
-      - intitle:"parallels h-sphere"
-  tags: panel,parallels,hsphere,discovery
+    shodan-query: title:"Parallels H-Sphere"
+  tags: panel,parallels,hsphere
 
 http:
   - method: GET
@@ -42,4 +31,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100e446be4e256583fc508b1cb65bfbb7ceafb79a606768d163c463700193514eee022100cc6483455b8ee052de0b4b891abb386957cd28bffcab44339f6cee9d723fc4fc:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a00463044022004a0e4c05bc41aab20ce28818a398bc684bb3efacf2a5065e26ddcdeff6f0e34022022ca0db551601a3a6645b9ff14ea7b9f7c679958b72881d7394cfd43d4026e2e:922c64590222798bb761d5b6d8e72950

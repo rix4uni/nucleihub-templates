@@ -9,9 +9,8 @@ info:
   reference:
     - https://packetstormsecurity.com/files/167888/WordPress-SeatReg-1.23.0-Open-Redirect.html
   metadata:
-    verified: true
-    max-request: 3
-  tags: redirect,packetstorm,seatreg,wp-plugin,wp,wordpress,authenticated,vuln
+    verified: "true"
+  tags: redirect,packetstorm,seatreg,wp-plugin,wp,wordpress,authenticated
 
 http:
   - raw:
@@ -21,9 +20,11 @@ http:
         Content-Type: application/x-www-form-urlencoded
 
         log={{username}}&pwd={{password}}&wp-submit=Log+In&testcookie=1
+
       - |
         GET /wp-admin/admin.php?page=seatreg-welcome HTTP/1.1
         Host: {{Hostname}}
+
       - |
         POST /wp-admin/admin-post.php HTTP/1.1
         Host: {{Hostname}}
@@ -31,6 +32,7 @@ http:
 
         new-registration-name=test&action=seatreg_create_submit&seatreg-admin-nonce={{seatreg-admin-nonce}}&_wp_http_referer=http://interact.sh&submit=Create+new+registration
 
+    cookie-reuse: true
     matchers:
       - type: dsl
         dsl:
@@ -46,4 +48,3 @@ http:
         regex:
           - '"seatreg\-admin\-nonce" value="([0-9a-z]+)"'
         internal: true
-# digest: 4a0a0047304502207ad5d0e4320f1743d453ad30974e06c2ae88b6e7df4286bdafabb68cf3cc9c340221008644afed6ec78e124e06ff7cbdb2e07d03f28432ad818ac3a7ec8ed26bc981d7:922c64590222798bb761d5b6d8e72950

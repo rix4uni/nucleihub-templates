@@ -4,19 +4,13 @@ info:
   name: JK Status Manager - Detect
   author: pdteam,DhiyaneshDk
   severity: low
-  description: |
-    Exposed JKStatus manager which is a web-based tool that allows administrators to monitor and manage the connections between the Apache HTTP Server and the Tomcat application server.
   reference:
     - https://github.com/PortSwigger/j2ee-scan/blob/master/src/main/java/burp/j2ee/issues/impl/JKStatus.java
-  classification:
-    cpe: cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 8
-    vendor: apache
-    product: tomcat
     shodan-query: html:"JK Status Manager"
-  tags: config,jk,status,exposure,vuln
+  tags: config,jk,status,exposure
 
 http:
   - method: GET
@@ -38,4 +32,5 @@ http:
       - type: word
         words:
           - "JK Status Manager"
-# digest: 4a0a004730450220446c0bcb52f7decf946942a4daba74f019160c06416c084f87d945acc26146e20221009035e1744b5f6402cd7703f8aa578ae2ac03c1aeed31136831efc4dcfc98c23e:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100fb9a49e044929222a0a7bf7e45d32dc24c142324f769a1d53e1c7d698dd834ea022100bd3066f986a2ae6536450a05092b8164e0c0d241af46bfafbecdf12c3f709900:922c64590222798bb761d5b6d8e72950

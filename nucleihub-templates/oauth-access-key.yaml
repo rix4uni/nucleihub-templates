@@ -6,7 +6,7 @@ info:
   severity: info
   metadata:
     max-request: 1
-  tags: exposure,token,google,vuln
+  tags: exposure,token,google
 
 http:
   - method: GET
@@ -18,4 +18,5 @@ http:
         part: body
         regex:
           - 'ya29\.[0-9A-Za-z\-_]+'
-# digest: 4a0a00473045022100b75466f1d272f5769132b28908adf9247a763b961028a3bc37372093477f099d0220671d4e06b2b49b4b4bbd0d08aeaef3efa3a9871d4b3b51c794c2f032d256d535:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502204d03880d0ac100fc1b228742a40f773ee0eb8f075ce931afd868dafc63f76969022100a6b6074606cbfa0b79f133853b3fd5e4358a4675572cf02117b1a85dd99f2c8d:922c64590222798bb761d5b6d8e72950

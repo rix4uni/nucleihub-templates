@@ -4,17 +4,11 @@ info:
   name: Composer-auth Json File Disclosure
   author: DhiyaneshDK
   severity: low
-  description: Composer Auth Josn file is disclosed.
   reference: https://www.exploit-db.com/ghdb/5768
-  classification:
-    cpe: cpe:2.3:a:getcomposer:composer:*:*:*:*:*:*:*:*
   metadata:
     verified: true
-    max-request: 2
-    vendor: getcomposer
-    product: composer
     google-query: intext:"index of /" ".composer-auth.json"
-  tags: exposure,devops,files,vuln
+  tags: exposure,devops,files
 
 http:
   - method: GET
@@ -23,7 +17,6 @@ http:
       - "{{BaseURL}}/vendor/webmozart/assert/.composer-auth.json"
 
     stop-at-first-match: true
-
     matchers-condition: and
     matchers:
       - type: word
@@ -35,4 +28,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502210087849324789e58ad6ec7d90ad33ed988fba126a22914605d0319829191f485fc02203e7923ac9ae92c640a8ada301f2902c4ccadd06364227d79f29a489c8310db32:922c64590222798bb761d5b6d8e72950

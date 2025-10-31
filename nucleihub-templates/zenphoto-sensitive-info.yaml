@@ -4,10 +4,9 @@ info:
   name: Zenphoto Installation Sensitive Information
   author: qlkwej
   severity: medium
-  description: Misconfiguration on Zenphoto version < 1.5.X which lead to sensitive information disclosure
-  metadata:
-    max-request: 4
-  tags: misconfig,unauth,vuln
+  description: Misconfiguration on Zenphoto version < 1.5.X which lead to sensitive
+    information disclosure
+  tags: unauth
 
 http:
   - method: GET
@@ -18,7 +17,6 @@ http:
       - '{{BaseURL}}/zp-core/setup/index.php'
 
     stop-at-first-match: true
-
     matchers-condition: and
     matchers:
       - type: word
@@ -34,4 +32,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402205d7993db7d00ceda48eb8af2cd817e26a415d1709744d5c26045c3f94a03e03602205269ae85cb5e40eccc3c80a09d0f922568433c72394d2571d8ad2af786b13a54:922c64590222798bb761d5b6d8e72950

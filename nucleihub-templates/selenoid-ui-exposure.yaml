@@ -7,10 +7,11 @@ info:
   description: Selenoid UI login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: panel,discovery
+  tags: panel
 
 http:
   - method: GET
@@ -23,4 +24,5 @@ http:
           - "<title>Selenoid UI</title>"
           - "/manifest.json"
         condition: and
-# digest: 4a0a00473045022100d8c992007e60d8672990289f4b6cf99989121c659387b1d7ccb1745ed89df214022034f311188424629faea93800fddb1d4180de2acb15ac9c026f4a159b2401ef82:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a00463044022005a45cb934ac72074e41f0edda0cc945de7a936fe58becd0897c0a04dd907ed802205abe6d349288664135f934c74099d9758a76c56f540298ea8e752869e8e417f8:922c64590222798bb761d5b6d8e72950

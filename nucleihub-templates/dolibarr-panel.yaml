@@ -2,16 +2,17 @@ id: dolibarr-panel
 
 info:
   name: Dolibarr Login Panel - Detect
-  author: pikpikcu,daffainfo,righettod
+  author: pikpikcu,daffainfo
   severity: info
   description: Dolibarr login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
     shodan-query: http.title:"Dolibarr"
-  tags: panel,dolibarr,discovery
+  tags: panel,dolibarr
 
 http:
   - method: GET
@@ -29,10 +30,6 @@ http:
         part: body
         words:
           - '<meta name="author" content="Dolibarr Development Team">'
-          - 'authentication mode = dolibarr'
-          - 'Includes JS of Dolibarr'
-          - '<div class="login_table_title center" title="Dolibarr'
-        condition: or
 
       - type: status
         status:
@@ -46,5 +43,5 @@ http:
           - '<td align="center">Dolibarr ([0-9.]+)<\/td>'
           - '<td class="center">Dolibarr ([0-9.]+)<\/td>'
           - '<div id="infoVersion">Dolibarr ([0-9.]+)<\/div>'
-          - 'amp;version=([0-9.]+)'
-# digest: 4a0a00473045022041a9f82e7a7e85654e3ccaf058fe92560849978739951de1618a7cd43ba2f9630221009cb9ca6f4a1ce6efdfb949f38ab955cfeca80644cd2ced69c420cd522c4cd03a:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100abd70e20f8292aa6f942f0087f0ed7795fc38b3385737acf3554860ec9b8afb6022030cd097cd020fe53c4d1df73c983201be0cd5a4706899dcdb5a0beeb253899e5:922c64590222798bb761d5b6d8e72950

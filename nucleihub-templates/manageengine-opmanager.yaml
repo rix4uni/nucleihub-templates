@@ -9,18 +9,12 @@ info:
     - https://www.manageengine.com/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:zohocorp:manageengine_opmanager:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: zohocorp
-    product: manageengine_opmanager
-    shodan-query:
-      - http.title:"OpManager Plus"
-      - http.title:"opmanager plus"
-    fofa-query: title="opmanager plus"
-    google-query: intitle:"opmanager plus"
-  tags: panel,zoho,manageengine,zohocorp,discovery
+    shodan-query: http.title:"OpManager Plus"
+  tags: panel,zoho,manageengine
 
 http:
   - method: GET
@@ -40,4 +34,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100a3ee7e6c48b5af25c72d31252728e5078c85535667e451904f3bda5b82f53442022070a3e510b8849aa32b3a8b36217bb02df80b0e54fbdd3553a353d022b9cc7007:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502205f16a95b897f331df79db74f9a6e4847552475d252b10383cf8bac041c71b935022100a2fdd68b6384a78e99a2a81fc0dcf1b59c496c5d7d29885199de017a8918be4a:922c64590222798bb761d5b6d8e72950

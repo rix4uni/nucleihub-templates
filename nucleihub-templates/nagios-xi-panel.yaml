@@ -7,21 +7,13 @@ info:
   description: Nagios XI login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
-    vendor: nagios
-    product: nagios_xi
-    shodan-query:
-      - http.title:"Nagios XI"
-      - http.title:"nagios xi"
-    fofa-query:
-      - title="nagios xi"
-      - app="nagios-xi"
-    google-query: intitle:"nagios xi"
-  tags: panel,nagios,nagios-xi,discovery
+    shodan-query: http.title:"Nagios XI"
+  tags: panel,nagios,nagios-xi
 
 http:
   - method: GET
@@ -45,4 +37,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220164001e53809596524487f7efa3f3a0574d64d77c83cda01a1419d1d5035f571022043b2c6ecff7af2bea7b3468c41d3786f4b937e603f588cef7d416eb5c43fcdca:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022047f8a0a46490eec9a99ff677cd3d36aab11c8053c744fdf83c5c7b779c85e3ac022100ba46130326b69b8eee95875bc2cf34ce97bf8c80f7d9e4d60e67f1bfb10d9776:922c64590222798bb761d5b6d8e72950

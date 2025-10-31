@@ -5,13 +5,9 @@ info:
   author: princechaddha
   severity: low
   description: XOOPS Installation Wizard panel was detected.
-  classification:
-    cpe: cpe:2.3:a:xoops:xoops:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: xoops
-    product: xoops
-  tags: panel,xoops,discovery
+  tags: panel,xoops
 
 http:
   - method: GET
@@ -25,4 +21,5 @@ http:
           - "(?i)(<title>(.*)XOOPS Installation Wizard(.*)</title>)"
           - "(?i)(<title>(.*)XOOPS 安裝精靈(.*)</title>)"
         condition: or
-# digest: 4b0a00483046022100fbe4198dedce406709692594ce470948585ef9e91db9b6815a5132d3874535bc022100ffcbb4cc86ed6f0b514696f73b70c45ec216db54c1d68dc5f416ea59b608ce28:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402207d353458b5cdc803647092414e11dbb52732f52b2e0ba14217ec5b93ee1d0df802203d14071cc219c557e2c4320a42722f3d8bb1e58a496390f1d12e1637281e6e98:922c64590222798bb761d5b6d8e72950

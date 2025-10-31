@@ -4,18 +4,11 @@ info:
   name: Product Input Fields for WooCommerce < 1.2.7 - Unauthenticated File Download
   author: 0x_Akoko
   severity: high
-  description: |
-    WordPress WooCommerce < 1.2.7 is susceptible to file download vulnerabilities. The lack of authorization checks in the handle_downloads() function hooked to admin_init() could allow unauthenticated users to download arbitrary files from the blog using a path traversal payload.
-  reference: |
+  tags: wordpress,woocommerce,lfi
+  description: The lack of authorisation checks in the handle_downloads() function, hooked to admin_init() could allow unauthenticated users to download arbitrary files from the blog using a path traversal payload.
+  reference:
     - https://wpscan.com/vulnerability/15f345e6-fc53-4bac-bc5a-de898181ea74
     - https://blog.nintechnet.com/high-severity-vulnerability-fixed-in-product-input-fields-for-woocommerce/
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
-    cvss-score: 8.6
-    cwe-id: CWE-22
-  metadata:
-    max-request: 1
-  tags: wordpress,woocommerce,lfi,wp-plugin,wp,vuln
 
 http:
   - method: GET
@@ -34,4 +27,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a00463044022054815f991408b371ac357a9a7b9796de129b550b6ca799cb2e66dd55de82df0a02204ca6e62bf385cb3bcd5894f30ecaaea82627623c6c14b4b871611ecafbb39909:922c64590222798bb761d5b6d8e72950

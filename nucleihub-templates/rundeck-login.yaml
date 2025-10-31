@@ -7,15 +7,13 @@ info:
   description: Rundeck login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:pagerduty:rundeck:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
     shodan-query: title:"Rundeck"
-    product: rundeck
-    vendor: pagerduty
-  tags: panel,rundeck,discovery
+  tags: panel,rundeck
 
 http:
   - method: GET
@@ -46,4 +44,5 @@ http:
           - 'utm_medium=([0-9.]+)-'
           - 'data-version-string=\"([0-9.-]+)\"' ## Detection version on old rundeck
           - '<span class="version">([0-9.-]+)<\/span>' ## Detection on very old rudneck
-# digest: 4a0a00473045022011e1db58a9f92856e886a94574be05ac9e80a690e6910947e1565a4388e26f04022100bc6e9a69324ad84e925cf11585bc52cb081d465b588dfd9ccce2cf05712a4476:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402207487dfdc707ea35027efe118fc6e0faeb2a3094d55bc0a6458e406ef358f7ed902201d2ec761d8e0137b5c97fc3c80656146c7c9ce694016370b889b16af5652b9ad:922c64590222798bb761d5b6d8e72950

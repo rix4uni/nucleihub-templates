@@ -4,18 +4,11 @@ info:
   name: Symmetricom SyncServer Panel - Detect
   author: DhiyaneshDk
   severity: info
-  classification:
-    cpe: cpe:2.3:o:microchip:syncserver_s650_firmware:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: microchip
-    product: syncserver_s650_firmware
-    shodan-query:
-      - html:"Symmetricom SyncServer"
-      - http.html:"symmetricom syncserver"
-    fofa-query: body="symmetricom syncserver"
-  tags: panel,login,syncserver,symmetricom,detect,microchip,discovery
+    shodan-query: html:"Symmetricom SyncServer"
+  tags: panel,login,syncserver,symmetricom,detect
 
 http:
   - method: GET
@@ -41,4 +34,5 @@ http:
         group: 1
         regex:
           - "Symmetricom SyncServer ([A-Z0-9]+)"
-# digest: 4b0a004830460221008ac74bd906b7d2aaf71fb1f494e8acb2c2dc430b4bd2de91b2f0209f860856b0022100efc2f4384270c34bf39f5c1c17559ce698213f673107f3fd3aa85c618ea4634c:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502202dd8f4377905b0fdf57795ec207dfa5b48a3dbf82e9857a4c8998845f08056e4022100dbdee66e6d3858b56c6e124db3b4a7e4386e813835fa564df21d99b34b9a6d32:922c64590222798bb761d5b6d8e72950

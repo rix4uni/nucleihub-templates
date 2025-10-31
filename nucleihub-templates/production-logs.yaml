@@ -4,10 +4,9 @@ info:
   name: Discover production log files
   author: geeknik
   severity: info
-  description: Production log file was exposed.
   metadata:
     max-request: 3
-  tags: exposure,logs,rails,vuln
+  tags: exposure,logs,rails
 
 http:
   - method: GET
@@ -40,4 +39,5 @@ http:
         part: header
         regex:
           - 'Last-Modified:.*'
-# digest: 4a0a00473045022058e824354123bdf40b5f1745147be77e0e63fc1029f3c12fe59ba39dee536e8b022100a6e97f08d277b1abf1e3d219651bd499145094424e3893782f809f89309e81db:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100a38713583e2a55ad0343c4115da819838f3f4cd0ebcef23f58e7a5541c1e150302202cd2dd72c9f7bcc7dbbd00619a14637be21dfd8cc1950f1d7cd9b035ddca9d8f:922c64590222798bb761d5b6d8e72950

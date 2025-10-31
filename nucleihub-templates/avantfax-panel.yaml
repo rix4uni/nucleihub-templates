@@ -9,18 +9,12 @@ info:
     - http://www.avantfax.com/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-668
-    cpe: cpe:2.3:a:avantfax:avantfax:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: avantfax
-    product: avantfax
-    shodan-query:
-      - http.title:"AvantFAX - Login"
-      - http.title:"avantfax - login"
-    fofa-query: title="avantfax - login"
-    google-query: intitle:"avantfax - login"
-  tags: panel,avantfax,login,discovery
+    shodan-query: http.title:"AvantFAX - Login"
+  tags: panel,avantfax,login
 
 http:
   - method: GET
@@ -44,4 +38,5 @@ http:
         group: 1
         regex:
           - '<p align="center">([0-9.]+)<\/p>'
-# digest: 4a0a00473045022100897f012ad0dcee9e91b9fad7694d421c52a64a9f816c907f1429c956f3bd90e602205becaf1ba4b416dc3da7994b21dd06686187eff2ef188d432bcf913b6a116341:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100edb9ca166c9d1d700e22f19d80dd73b8a7ff5a300046d8ad52712eba8a97f27d0220351b0a39656e81713b6954466d49711e9314ac4ae424073f45e002f61782f9da:922c64590222798bb761d5b6d8e72950

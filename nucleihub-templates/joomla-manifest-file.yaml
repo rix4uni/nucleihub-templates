@@ -9,9 +9,7 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
     cvss-score: 5.3
     cwe-id: CWE-200
-  metadata:
-    max-request: 1
-  tags: miscellaneous,misc,joomla,vuln
+  tags: misc,joomla
 
 http:
   - method: GET
@@ -34,4 +32,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100e134665f11fb2028ba449390a6288dc269454fb2eddad5bf8c750933592d2771022054c0f4d8c27a9a4683c12ba0f7d63a3165c6c9783a335429375954e1d6530497:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by mp on 2022/04/08

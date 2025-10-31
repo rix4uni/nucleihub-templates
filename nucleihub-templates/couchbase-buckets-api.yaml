@@ -14,7 +14,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: exposure,couchbase,discovery
+  tags: exposure,couchbase
 
 http:
   - method: GET
@@ -38,4 +38,5 @@ http:
         part: header
         words:
           - 'application/json'
-# digest: 4a0a00473045022100d557cd70886daff1b7f89dd4a20fa35ae77b8a2ee03d362b885bd9e62c92211a0220045f5b50d06fd202442f74a46ccb19f99e226c18a194ab5afb85ff7f024eb74e:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100e55dbcbb79adce61041fd1cac9a564f188b7e62a6d0f7c290482da1fb502bd7b022063a58d316d535472c2601e23b2f4b717d6899e978ee9c58c92603914303b2739:922c64590222798bb761d5b6d8e72950

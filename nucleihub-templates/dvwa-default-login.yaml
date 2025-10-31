@@ -11,7 +11,7 @@ info:
     cwe-id: CWE-798
   metadata:
     max-request: 2
-  tags: dvwa,default-login,vuln
+  tags: dvwa,default-login
 
 http:
   - raw:
@@ -56,4 +56,5 @@ http:
       - type: word
         words:
           - "You have logged in as 'admin'"
-# digest: 490a004630440220201404365eba7e7c66a3871324f4c85765baa33dc5f62c39b438d8a8cc488a0d02200db97a8412317790ab5a3b918351a34709d536ace525794b06570ccccf9ccf9e:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a00463044022045f5835991e9296cd7ed9bdca15bba2bb5a2c5f7f36071fa10441e2b91eddb5102205eb559de4798a34aa57c1816eef56160104d0ed92ce27f1a122ab3db664fddca:922c64590222798bb761d5b6d8e72950

@@ -10,16 +10,13 @@ info:
     - https://rancher.com/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:suse:rancher:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: suse
-    product: rancher
     shodan-query: http.favicon.hash:464587962
-    fofa-query: icon_hash=464587962
-  tags: panel,rancher,kubernetes,devops,cloud,login,suse,discovery
+  tags: panel,rancher,kubernetes,devops,cloud,login
 
 http:
   - method: GET
@@ -45,4 +42,5 @@ http:
         group: 1
         regex:
           - '<!\-\- ([0-9. ]+)\-\->'
-# digest: 4b0a0048304602210088838f058c2d509abbc9a6ad3d27ee3e3c0407920483eaa249f9351be2355035022100c32d08e462252258c72594ddf5ea80c9e85f36849f193f13657a4f5b1b74cd6a:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402206fd7fcbe60d67a9d5c1e3d7e2f2c4a6622c80b279ff65b8d1357496cf5870b1f02204fea122e15c9f0304706138029b966963b4ad5e08cd25ef8dd6380f02eded51b:922c64590222798bb761d5b6d8e72950

@@ -10,15 +10,13 @@ info:
     - https://www.tendacn.com/products/11n-routers.html
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-668
-    cpe: cpe:2.3:h:tenda:11n:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: http.title:"Tenda 11N Wireless Router Login Screen"
     google-query: intitle:"Tenda 11N Wireless Router Login Screen"
-    product: 11n
-    vendor: tenda
-  tags: panel,tenda,discovery
+  tags: panel,tenda
 
 http:
   - method: GET
@@ -35,4 +33,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502201b69c0d088387b1c169e9a427a620ec2f31231561b3bb2f915ad4ea0d58a0c75022100f22c3b4037e1902a19d0bdab9841f50da692fc7e88b0f5cdb0db8cf8abf9082e:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a00463044022029f78f6fc22cb1e8d36a5f54ad2b1cd39bce24189e4c0392617676c9722b2a4002204051f426ddd27ec33649dee4f4dee74cf4ec79b6f75559eb41627480d720b7f0:922c64590222798bb761d5b6d8e72950

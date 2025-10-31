@@ -5,16 +5,10 @@ info:
   author: ggranjus
   severity: medium
   description: Browserless instance can be used to make web requests. May worth checking /workspace for juicy files.
-  reference:
-    - https://docs.browserless.io/docs/docker.html#securing-your-instance
-  classification:
-    cpe: cpe:2.3:a:browserless:chrome:*:*:*:*:node.js:*:*:*
+  reference: https://docs.browserless.io/docs/docker.html#securing-your-instance
   metadata:
-    max-request: 1
-    vendor: browserless
-    product: chrome
-    shodan-query: http.title:"browserless debugger"
-  tags: browserless,unauth,debug,misconfig,vuln
+    shodan-query: 'http.title:"browserless debugger"'
+  tags: browserless,unauth,debug
 
 http:
   - method: GET
@@ -33,4 +27,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450220355ea6546f125195121a6d12bf275f86a3afc5dfbb50cbd506ed4b2d5e309e720221008e501da5d1d6a7c994ade9beca024cc3dc52e34a3b57f9b8f4f093fbe2033160:922c64590222798bb761d5b6d8e72950

@@ -7,18 +7,12 @@ info:
   description: IBM WebSphere Portal login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:ibm:websphere_portal:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: ibm
-    product: websphere_portal
-    shodan-query:
-      - http.html:"IBM WebSphere Portal"
-      - http.html:"ibm websphere portal"
-      - cpe:"cpe:2.3:a:ibm:websphere_portal"
-    fofa-query: body="ibm websphere portal"
-  tags: ibm,websphere,panel,discovery
+    shodan-query: http.html:"IBM WebSphere Portal"
+  tags: ibm,websphere,panel
 
 http:
   - method: GET
@@ -40,9 +34,4 @@ http:
           - 'IBMPortalWeb'
         condition: or
 
-      - type: regex
-        part: header
-        regex:
-          - "Content-Location: .+"
-        negative: true
-# digest: 4b0a0048304602210086c4073325f9dd689a3a7a87a8d5c7a5a7212408771d64fab1728b10f7349364022100b9055ec1edcfb36dd7923c9836df6971f35b97fe2a99ed8dd17c5f2dbfbdcba8:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100bdb464d8b05d4acc90dd75c5eb54390a62c93c41176dba4be32ff1c769fbb1e8022100c6c46d041e1bb4a67b93fe658cc16f6d7620b9644842d54ad152fb891dbaad36:922c64590222798bb761d5b6d8e72950

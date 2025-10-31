@@ -7,11 +7,12 @@ info:
   description: Secure Login Service login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
     shodan-query: http.title:"Secure Login Service"
-  tags: panel,sls,login,service,discovery
+  tags: panel,sls,login,service
 
 http:
   - method: GET
@@ -27,4 +28,5 @@ http:
       - type: word
         words:
           - "<title>Secure Login Service</title>"
-# digest: 490a004630440220634c96bd530575d31ae59154544d184f35690eeb725503c0e10f36370f4db6e0022035ac993fd05c6658c367b668a143ca5c69101727635cd3786c53cd8155153c3a:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022067f2a29e933e3efb7d01b7bbd70c7a844e991d0ce6b106c306edc763183e84a8022100eebea87fb93ebc7e816189b0270fbc420e3836a869aa16e5b4da0c7ac9019f7a:922c64590222798bb761d5b6d8e72950

@@ -7,12 +7,13 @@ info:
   description: NoEscape login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     verified: true
     max-request: 1
     shodan-query: title:"NoEscape - Login"
-  tags: panel,noescape,discovery
+  tags: panel,noescape
 
 http:
   - method: GET
@@ -25,4 +26,5 @@ http:
         part: body
         words:
           - 'NoEscape - Login'
-# digest: 4a0a00473045022006ae0b04a18f3426e7a79a45990459aa21f7c233562fb7a4bb5c732ef616bd20022100fc341202c0d24b36c9fe5f3cd97f76d83fe0cf01d3534ebe7e55ec80bab43312:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a004630440220425d546008aa5ad82bb22be345414c69facbe84e7797ff34eda571d912fcced2022057f8c129a4e27a15ed865b23c739e5b8ebc01f4247674619890ac3122693a9d3:922c64590222798bb761d5b6d8e72950

@@ -7,10 +7,11 @@ info:
   description: SecNet login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: secnet-ac,panel,discovery
+  tags: secnet-ac,panel
 
 http:
   - method: GET
@@ -27,4 +28,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502207e27c7b7fa8a139bacec88b7d6cc24d3b0f6ef5c6d74cfab32094bae81d54d67022100bf0a96f4bcb75f7766722ac8e8d60cea32de9844ca24e1a120638a211ec5952f:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a004830460221009cc4211063a28e604eaa084823a4f60c6d518f000ae0840242e1022fa425c8d0022100c0718a85310e1e4636dea27b412b516d0c9e491152f00aa288c2a3785fcf66a3:922c64590222798bb761d5b6d8e72950

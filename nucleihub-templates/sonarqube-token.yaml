@@ -4,11 +4,9 @@ info:
   name: SonarQube Token Disclosure
   author: Ice3man
   severity: info
-  reference:
-    - https://docs.sonarqube.org/latest/user-guide/user-token/
   metadata:
     max-request: 1
-  tags: exposure,token,sonarqube,vuln
+  tags: exposure,token,sonarqube
 
 http:
   - method: GET
@@ -20,4 +18,5 @@ http:
         part: body
         regex:
           - "sonar.{0,50}(?:\"|'|`)?[0-9a-f]{40}(?:\"|'|`)?"
-# digest: 490a0046304402203fdbb9e035ad099d5ffc64bfb893ecb8663326e729b7907b9cfc36fb35c2938a02200e473a1aa9da7258fde1b2acac80ae3fcb6c7309895d55fb764b8b95913352ef:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502204b7b6bb1ff958d322155673133a99b081ed1c61bd8afb5e1d0f249849b9badc6022100efbd2cb1fd9179a7c9a30daac8033d293490f30b28af36dadb2107ddd9d6e604:922c64590222798bb761d5b6d8e72950

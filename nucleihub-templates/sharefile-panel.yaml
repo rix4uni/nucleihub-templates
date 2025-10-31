@@ -8,19 +8,11 @@ info:
     ShareFile is a cloud-based file sharing and collaboration platform that provides secure access to files from anywhere.
   reference:
     - https://www.sharefile.com/
-  classification:
-    cpe: cpe:2.3:a:citrix:sharefile:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: citrix
-    product: sharefile
-    shodan-query:
-      - title:"ShareFile Login"
-      - http.title:"sharefile login"
-    fofa-query: title="sharefile login"
-    google-query: intitle:"sharefile login"
-  tags: sharefile,login,panel,detect,citrix,discovery
+    shodan-query: title:"ShareFile Login"
+  tags: sharefile,login,panel,detect
 
 http:
   - method: GET
@@ -38,4 +30,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a0048304602210084130da6dad4a0e9c34ec654c1226546519ca1b2be7d15864eac5d75e0e01cd9022100b24cda74a077e92b0e3140b897b18863fc7f515ea77d92a3443e93da98cb5ddc:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502205754f75650d3ce5ea2a8b9db7111ca75d8c74b0a765ca4df7d41648b6b143b10022100ce81be63f5f632dd9c797a6b87125321754323c28aa9ae11e70d71d38f0a7233:922c64590222798bb761d5b6d8e72950

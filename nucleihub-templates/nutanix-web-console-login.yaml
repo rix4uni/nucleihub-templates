@@ -7,10 +7,11 @@ info:
   description: Nutanix Web Console login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: panel,nutanix,login,discovery
+  tags: panel,nutanix,login
 
 http:
   - method: GET
@@ -26,4 +27,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220674aaf3d45567cb5031e4f58302117a644cc0538a3cf933c9768e98376dd5aa702207eb8d0b348e011bf94a7d2c66d8c43d6e4527dbeefd8b37958499a52c2fc3cf2:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a004730450220110344f1fb1a6c5c58ef2bb6a5f11301b7566c461f0e2bd40bd8069971aadfd3022100d631cdff493876a1ba7b90990b86d553292eaf44d1c147026de257b30c6d1d6d:922c64590222798bb761d5b6d8e72950

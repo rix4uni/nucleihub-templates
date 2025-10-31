@@ -9,12 +9,9 @@ info:
     - https://activeadmin.info/
   classification:
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:activeadmin:activeadmin:*:*:*:*:ruby:*:*:*
   metadata:
     max-request: 1
-    vendor: activeadmin
-    product: activeadmin
-  tags: panel,activeadmin,discovery
+  tags: panel,activeadmin
 
 http:
   - method: GET
@@ -27,4 +24,5 @@ http:
           - "active_admin_content"
           - "active_admin-"
         condition: and
-# digest: 490a004630440220057f6605497325b761a1f084979dfbcf6ea9512c5eb96793002a3a539437d435022007164d98d3cdc5885cda69f935f800784efae1f635b8ab2fe1ab2f60cb782404:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502210093a1e17e2496cbac4f37f6b4ea056f35f5cc2806c6cc54fa10841f7373287542022051cb9601cde6623215edc0aacb5f78ad1cd753a0eff94ce49f8155914d30031d:922c64590222798bb761d5b6d8e72950

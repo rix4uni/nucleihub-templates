@@ -1,37 +1,24 @@
 id: django-debug
 
 info:
-  name: Django Debug Mode
-  author: rix4uni
+  name: Django debug mode pr debug bar enabled
+  author: melbadry9 & xelkomy
   severity: medium
-  reference:
-    - https://twitter.com/fattselimi/status/1620719712081686528
-    - https://infosecwriteups.com/how-i-was-able-to-find-django-misconfiguration-using-shodan-3929942a3940
-  metadata:
-    shodan-query:
-      - body="DisallowedHost at /"
-    fofa-query:
-      - http.title:"DisallowedHost at /"
-    hunter-query:
-      - web.title="DisallowedHost at /"
-    zoomeye-query:
-      - title:"DisallowedHost at /"
-  tags: exposure,django,debug
 
-http:
+requests:
   - method: GET
     path:
-      - "{{BaseURL}}"
+      - "{{BaseURL}}/widgets/platformx/-/svg-badge.svg"
+  
+  - method: POST
+    path:
+      - "{{BaseURL}}/"
 
-    matchers-condition: and
     matchers:
       - type: word
-        part: body
         words:
-          - "DisallowedHost at /"
-          - "HTTP_HOST"
-          - "EMAIL_HOST_USER"
-        
-      - type: status
-        status:
-          - 400
+          - "ROOT_URLCONF"
+          - "Django settings file."
+          - "DEBUG = True"
+          - "djDebugOdd" #Debug Toolbar
+        condition: or

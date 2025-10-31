@@ -9,7 +9,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: barracuda,panel,vpn,discovery
+  tags: barracuda,panel,vpn
 
 http:
   - method: GET
@@ -25,4 +25,5 @@ http:
       - type: word
         words:
           - 'Barracuda SSL VPN'
-# digest: 4b0a00483046022100846e0d53bb6d4a8f764f152e84b0290d2cc90c1204a6651cd0ccbe00fa5a187e022100e19b407376150ae9d01b46c7c8f3eda0b8f67623eaa07a6a5e71f682fe611576:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502200371b3d2c7ba8b69253594dc9ceb55650b500fc64920afb0a8d544fcf56304ed02210094f66299570d3d0d8418a4f3e67d32efd1880b514b4841240bcf427421452da6:922c64590222798bb761d5b6d8e72950

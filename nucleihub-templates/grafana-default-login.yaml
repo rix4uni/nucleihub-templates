@@ -13,13 +13,10 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
-    cpe: cpe:2.3:a:grafana:grafana:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
     shodan-query: title:"Grafana"
-    product: grafana
-    vendor: grafana
-  tags: grafana,default-login,vuln
+  tags: grafana,default-login
 
 http:
   - raw:
@@ -57,4 +54,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a00463044022014c874a60b3ef240fe9880b2bf53d7a9578a27f293c974e9cdec89673aa0e5af02204feb1f3c604d47aef55c26b304fe4e9fd8c514463c49957f57b275f1abbdceff:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022015da772ded9921d25543af7a08929ef137e082a21756e78abba11781b0e9821b022100c43905bd8a11cc9048b434fd9e58315a847cba06d9100b54245e52c257124ecf:922c64590222798bb761d5b6d8e72950

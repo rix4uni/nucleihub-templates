@@ -14,7 +14,7 @@ info:
   metadata:
     max-request: 1
     shodan-query: http.title:"Kafka Center"
-  tags: kafka,default-login,vuln
+  tags: kafka,default-login
 
 http:
   - raw:
@@ -43,4 +43,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220609cdeb4459d42fece360c36fa819c613c5dbc15f29d174cd57b9dfa391202ee0220792a6c2237d17cc00c66130943ee167ca104b45bb0b17a5951fee47875d1ed0c:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100e5dd96ecc7bca7c106e2aaed38555f28cb2c791d1da55d5cdc7d29f9e91de1d2022040f7f445acbf823452128450f6887c94a6a7c312b9b216074e293f6ccfc5bf83:922c64590222798bb761d5b6d8e72950

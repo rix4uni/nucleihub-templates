@@ -8,14 +8,13 @@ info:
   reference:
     - https://wpscan.com/vulnerability/ea617acd-348a-4060-a8bf-08ab3b569577
     - https://wordpress.org/plugins/woocommerce-checkout-manager
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 5.4
-    cwe-id: CWE-80
   metadata:
     verified: true
-    max-request: 2
-  tags: xss,wp,wordpress,authenticated,woocommerce,wpscan,wp-plugin,vuln
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 7.2
+    cwe-id: CWE-79
+  tags: xss,wp,wordpress,authenticated,woocommerce,wpscan,wp-plugin
 
 http:
   - raw:
@@ -31,6 +30,7 @@ http:
         GET /wp-admin/admin.php?page=wc-settings&tab=wooccm&section=advanced&">--><script>alert(1)</script> HTTP/1.1
         Host: {{Hostname}}
 
+    cookie-reuse: true
     matchers-condition: and
     matchers:
       - type: word
@@ -46,4 +46,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100ec8ad1543ddff43a0993123b4e7f497203efbfbe560533c8ddf3cbbaedf93941022100e277e8b5501d14e637bf3e511708fac7e5dc8210bf807b5eedda0e254f63a832:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by mp on 2022/09/07

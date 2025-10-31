@@ -10,14 +10,11 @@ info:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:apache:subversion:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
     google-query: intext:"configuration of the svnserve daemon"
-    product: subversion
-    vendor: apache
-  tags: config,exposure,svnserve,vuln
+  tags: config,exposure,svnserve
 
 http:
   - method: GET
@@ -33,4 +30,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100b00d2106c50a8fc5c4385daf33d4502ef7c2d332dfee366ebe2d82ce50c9e181022100c3a9739f706779692ebd966b145229a2bcc7238196f54c13912f54cdc02c54c4:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100e8efc7f77b4cf9f5f02af6824995eed50d285f0823ac2c75eb7caf723f3782d0022021eec1e8d4e7f06ab9d71812d399fb6cca9d0ea2197f0fff5cb5947861a47661:922c64590222798bb761d5b6d8e72950

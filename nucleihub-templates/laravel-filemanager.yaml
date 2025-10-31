@@ -9,10 +9,11 @@ info:
     - https://github.com/UniSharp/laravel-filemanager
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: panel,laravel,filemanager,fileupload,intrusive,discovery
+  tags: laravel,filemanager,fileupload,intrusive
 
 http:
   - method: GET
@@ -29,4 +30,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100fb9e876271083cb60a3cd8d132d33313e45260e84faa164f240f1001a0d214fa02203ef18a88894066344ffa5d012e1413fabf51be7cfe8aa196172da8d5c7a5b613:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100ae836200f3ab84801da6676a7cd53a618139d09e0f2495446aadb3f67a344f20022100ecdd5a753c6e531eccdda643e06b2531b1a4d9c4065dad642c57a4efe821590d:922c64590222798bb761d5b6d8e72950

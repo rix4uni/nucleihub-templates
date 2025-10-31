@@ -7,10 +7,11 @@ info:
   description: LuCi login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: panel,login,discovery
+  tags: login
 
 http:
   - method: GET
@@ -26,4 +27,5 @@ http:
       - type: word
         words:
           - "Authorization Required"
-# digest: 4b0a00483046022100a1f36370322a41a45fc10c5087c6cad72a8f007c7837335ab2bcb773680a69e1022100af3539cbae44ca1ce3dcb772ff0c6eba9c32d72166fc7a6dfa2b94d58af6a74e:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100ec9ced222ffce4964d8d10a1cf36f4122ed611b400f6f58a270c0f8fd7f9bad702205a05195f123b7d0e97c72686fb4bb8d8a8d1586523ab711db85e121f4a37aaaa:922c64590222798bb761d5b6d8e72950

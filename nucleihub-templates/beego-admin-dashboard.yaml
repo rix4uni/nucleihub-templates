@@ -12,17 +12,11 @@ info:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
     cvss-score: 5.3
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:beego:beego:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: beego
-    product: beego
-    shodan-query:
-      - html:"Beego Admin Dashboard"
-      - http.html:"beego admin dashboard"
-    fofa-query: body="beego admin dashboard"
-  tags: panel,beego,unauth,discovery
+    shodan-query: html:"Beego Admin Dashboard"
+  tags: panel,beego,unauth
 
 http:
   - method: GET
@@ -46,4 +40,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a00463044022053960ae54bd33a33453e9b9d4fbced83cee5ccc2caf20c85227f4fa0cad1e920022050ca2eb0ca2ea9b87a2c60ab80e56cd5c98a444485ba3cbdf626bec852919ba1:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022029b00e9b4f830998ad9159489a63217e50bd5c7b8631aca086e420d9ce80bb7f022100ee0c9db23c62007fa878b73ea9a406b460ee492a9644e7a231e0efe1c9a91f62:922c64590222798bb761d5b6d8e72950

@@ -11,17 +11,16 @@ info:
     - https://github.com/kiks7/rusty_joomla_rce
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    cvss-score: 10
+    cvss-score: 10.0
     cwe-id: CWE-77
-  metadata:
-    max-request: 2
-  tags: joomla,rce,unauth,php,cms,objectinjection,vuln
+  tags: joomla,rce,unauth,php,cms,objectinjection
 
 http:
   - raw:
       - |
         GET / HTTP/1.1
         Host: {{Hostname}}
+
       - |
         POST / HTTP/1.1
         Host: {{Hostname}}
@@ -31,7 +30,7 @@ http:
 
     host-redirects: true
     max-redirects: 2
-
+    cookie-reuse: true
     extractors:
       - type: regex
         name: csrf
@@ -40,6 +39,7 @@ http:
         regex:
           - "<input type=\"hidden\" name=\"([0-9a-z]{32})\" value=\"1\""
         internal: true
+
     matchers:
       - type: word
         part: body
@@ -47,4 +47,5 @@ http:
           - "http://rusty.jooml/;pkwxhxqxmdkkmscotwvh"
           - "Failed to decode session object"
         condition: and
-# digest: 4b0a00483046022100c414d33f3e686a7db22048f8e12ad67ee5df11eecf2d14c0236b73a23e0097f5022100cfe3323a00dc24b4470b6153784df0162fba9b3deed1e49d0a1a81144518045e:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by mp on 2022/05/27

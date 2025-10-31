@@ -10,18 +10,13 @@ info:
     - https://docs.magento.com/user-guide/stores/store-urls-custom-admin.html
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:magento:magento:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: magento
-    product: magento
-    shodan-query:
-      - http.component:"Magento"
-      - cpe:"cpe:2.3:a:magento:magento"
-      - http.component:"magento"
-  tags: magento,panel,discovery
+    shodan-query: http.component:"Magento"
+  tags: magento,panel
 
 http:
   - method: GET
@@ -39,4 +34,5 @@ http:
           - "Magento"
           - "Admin Panel"
         condition: and
-# digest: 490a004630440220086545f02669d0649ff6105b52db457c3d9b2dd61dec987f0000f8fd7aa29e2f02202a0433cc5ce3d6fae9a5fadb421c7ee35035053250a4fd32c9ce155271896308:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a00463044022066fee88a4c6b8930bba4e8cc90b5e29139803318f1dcea8296dbcf519afd89820220544e59a68f858b93b60794e3bebb328b56dbcedea36bf8771d1d2fb0780b7bea:922c64590222798bb761d5b6d8e72950

@@ -7,18 +7,10 @@ info:
   reference:
     - https://openwrt.org
     - https://github.com/openwrt/luci
-  classification:
-    cpe: cpe:2.3:o:openwrt:openwrt:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
-    vendor: openwrt
-    product: openwrt
-    shodan-query:
-      - http.title:"OpenWrt - LuCI"
-      - http.title:"openwrt - luci"
-    fofa-query: title="openwrt - luci"
-    google-query: intitle:"openwrt - luci"
-  tags: openwrt,router,panel,discovery
+    shodan-query: http.title:"OpenWrt - LuCI"
+  tags: openwrt,router,panel
 
 http:
   - method: GET
@@ -43,4 +35,5 @@ http:
         group: 1
         regex:
           - '(?i)OpenWrt  ([A-Z0-9.]+)'
-# digest: 4b0a00483046022100c272c38f1c051b6d6747124dcb5fb615b9af0c21faeae71365d0c267167eb1ef022100de665f288f266df0be5dee3a19eb36fa6239b3b599d1a383aa89b27446c23bae:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100b43839fa626ca1f2651a4a25a48ed400fb0c0301eb428e012733683cb1a21bf1022100a46b090ed6baa7e4b6c0688d066a5b5e42ccedd6d018d88eda7b19a9fa02916c:922c64590222798bb761d5b6d8e72950

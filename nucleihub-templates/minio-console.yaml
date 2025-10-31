@@ -7,15 +7,13 @@ info:
   description: MinIO Console login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:minio:console:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: title:"MinIO Console"
     fofa-query: app="MinIO-Console"
-    product: console
-    vendor: minio
-  tags: panel,minio,discovery
+  tags: panel,minio
 
 http:
   - method: GET
@@ -31,4 +29,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502200a657813ee4216250fc4382dc54884852a253122b62e226e707a20faa73fb414022100bcbeb0e9720210f32bb8d5052d809d398b838b0c935e65abcef994da062f428b:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100e05df150d57b9dc5eefb1e6a62246b39473b71322c06524a2b59fbbc7a020515022100aa480dcc1e4fdc776432f6e69ba44fdd2c0c27a31b5f7b81220d5f679b4dcb5c:922c64590222798bb761d5b6d8e72950

@@ -7,14 +7,12 @@ info:
   description: Oracle Integrated Lights Out Manager login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:o:oracle:integrated_lights_out_manager_firmware:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: http.title:"Oracle(R) Integrated Lights Out Manager"
-    product: integrated_lights_out_manager_firmware
-    vendor: oracle
-  tags: oracle,login,panel,discovery
+  tags: oracle,login,panel
 
 http:
   - method: GET
@@ -38,4 +36,5 @@ http:
         group: 1
         regex:
           - 'id="hostname">([a-z0-9-]+)<\/span><\/td>'
-# digest: 4b0a00483046022100d24de90245e2d3ad0fc096bd6f3109736a2a1334826bc53feccad937af2b70f1022100d8c45734afa34363b1aac565f7886d34fd3ab796cd4886f7d8ec1bcd11979bd2:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100a01bd9c4a7be8ddc865894b6d79955918881e2c9db85620a8034ff16c1b9b3d7022100d0db1245063f8d49d4ca22f1a4ea19c0af6ffd140f8cf24243fa1ad1946f0186:922c64590222798bb761d5b6d8e72950

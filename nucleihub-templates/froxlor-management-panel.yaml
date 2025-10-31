@@ -7,19 +7,13 @@ info:
   description: Froxlor Server Management login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:froxlor:froxlor:*:*:*:*:gentoo:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: froxlor
-    product: froxlor
-    shodan-query:
-      - title:"Froxlor Server Management Panel"
-      - http.title:"froxlor server management panel"
-    fofa-query: title="froxlor server management panel"
-    google-query: intitle:"froxlor server management panel"
-  tags: panel,froxlor,discovery
+    shodan-query: title:"Froxlor Server Management Panel"
+  tags: panel,froxlor
 
 http:
   - method: GET
@@ -40,4 +34,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502206f9e67a6643ec9893e26fb003de2c7973b8ddc99fa53ac1d12c480bc0e69cb36022100e2d085b917780a0c21fc461d891d819137917d39bcb5679ed22a8ef51e7b5995:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022070974afa4ce23498249eb8c9da0607868c90a2c76e23f3bee05ff7671d5e542c0221009d3329fe67b729b2dee336323cdf500f726faa17038fed8ec280af9585a02cf6:922c64590222798bb761d5b6d8e72950

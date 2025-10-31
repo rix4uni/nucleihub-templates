@@ -10,10 +10,11 @@ info:
     - https://zentral.io
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: panel,zentral,oss,discovery
+  tags: panel,zentral,oss
 
 http:
   - method: GET
@@ -26,4 +27,5 @@ http:
           - '<title>Zentral</title>'
           - '<div class="panel-footer btn-group btn-group-justified"'
         condition: and
-# digest: 490a0046304402202889977dcde0e58084900f254f0850671a3ac2c7fe1a31ac76c4885904fd7598022044f7ead8f0f9b10eb78948e56c0c0ffda517c3b4b393e5431a3bf7e6d9dd68fb:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100dfdfbae25ecd5a79b7608522c0ff5d6181c0779fcaa42bac1402088a53f98dfb022100a605ac7967ba5cfdab00e704a643abf95d81913d263fa69c84cdaf5d8fd878a4:922c64590222798bb761d5b6d8e72950

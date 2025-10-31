@@ -14,7 +14,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 3
-  tags: exposure,tenable,config,git,vuln
+  tags: exposure,tenable,config,git
 
 http:
   - method: GET
@@ -44,8 +44,8 @@ http:
           - "<script"
           - "<meta"
           - "image/"
-          - "Response xmlns"
         part: response
         negative: true
         condition: or
-# digest: 4a0a00473045022100d8ad2d6c8ec5f09ac2ef5bc77496afbf8f794d5c01dffbdbf9d46bafbbcac0a702202d21da01a78f9e5a660f3c4305ada035b8e190f5d0846f05449dbc5f4ffabea3:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022047cee6846b95be1b913db1322c34847a71a6f11df568d7d832e064752963e87e0221009337b92788ead19c80adf441b8923484481edeed80e08fe513c5928135a3b09c:922c64590222798bb761d5b6d8e72950

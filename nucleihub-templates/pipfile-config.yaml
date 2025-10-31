@@ -14,7 +14,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: html:"Pipfile"
-  tags: exposure,pip,devops,cicd,vuln
+  tags: exposure,pip,devops,cicd
 
 http:
   - method: GET
@@ -33,4 +33,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100a3a187f99d2b60a7c8a5793e8e5e0a8ca63a7116e5c816cb73df36a09da98b16022013bf5b38888fca720938e6bd9610e5b2adfa1f28ce37bfae90b9538e8435d875:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502207561fc36c8d76e1f5e6587bc96554b31e13046d5190b85bd3c1e648d5d11935e022100cc2d97e7ec8a594f6c146808854751c348080ad1f375725dd73f63fa331e6bf9:922c64590222798bb761d5b6d8e72950

@@ -9,13 +9,11 @@ info:
     - https://www.exploit-db.com/ghdb/6500
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:miniweb_http_server_project:miniweb_http_server:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
-    vendor: miniweb_http_server_project
-    product: miniweb_http_server
-  tags: edb,panel,miniweb_http_server_project,discovery
+  tags: edb,panel
 
 http:
   - method: GET
@@ -33,4 +31,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100a5f2c023e9e0861500d4b30f3e830daa98ce581f5bd3e5e10c47b22a71a203aa02210093a4da8e2cc5f78180190ab6614c3a212db9e638063fb45d07a0f379ae689776:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a00463044022078643b2fdff7be160dde8a9dcf8d24f8dbf8b6968fd106884b8522740e8b42af0220213b4d398a87b22e0ef2404bc84aa50361721a2f1f8ce180c81368ea287bdcef:922c64590222798bb761d5b6d8e72950

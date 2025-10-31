@@ -7,13 +7,11 @@ info:
   description: SonicWall Management admin login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:sonicwall:global_management_system:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: sonicwall
-    product: global_management_system
-  tags: panel,sonicwall,discovery
+  tags: panel,sonicwall
 
 http:
   - method: GET
@@ -25,4 +23,5 @@ http:
         words:
           - "<title>SonicWall - Authentication</title>"
           - "SonicWall Administrator"
-# digest: 4b0a0048304602210099938414dcc33500e009fed106c0a5b32fe49835cff26719a966f9d5d4a1bb58022100ff530d6269310b390df6d4b6926c471f9e8d09e40f904ee32bd381e52742db8a:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402202758349ec30dc672a3ee7c0d17a01142531d2e58a86872360fd32a7c57788469022020b6eed009f89f560a34726d9c6b49c1ac0de6a564552581f25d9a994e689431:922c64590222798bb761d5b6d8e72950

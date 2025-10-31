@@ -7,13 +7,11 @@ info:
   description: Oracle Enterprise Manager login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:oracle:enterprise_manager_base_platform:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: oracle
-    product: enterprise_manager_base_platform
-  tags: panel,oracle,manager,login,discovery
+  tags: panel,oracle,manager,login
 
 http:
   - method: GET
@@ -32,4 +30,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502200935b0f700f35cf91a429426d563e95521c3dac2867b6b322dd08d6f4e2ab85c022100bbffd07af9f1134e7b3afa919e108286f153ddaf677aeacfb3693a34323c784d:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a004730450220244e07ec325d721fe33d59548f1e3b3872b25e50366f0779c8c17004a507d8bc0221008f05c3549ea167e7f7a36f46d0f52bbde76c3d3934b81e10a4d8d8ec1523db3f:922c64590222798bb761d5b6d8e72950

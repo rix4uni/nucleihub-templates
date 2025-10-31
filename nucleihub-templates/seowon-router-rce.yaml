@@ -4,17 +4,9 @@ info:
   name: Seowon 130-SLC router -  Remote Code Execution
   author: gy741
   severity: critical
-  description: |
-    Seowon 130-SLC router lets remote attackers execute commands without authentication as admin users via the router ip & Port(if available) in the request.
-  reference:
-    - https://www.exploit-db.com/exploits/50295
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-    cvss-score: 10
-    cwe-id: CWE-77
-  metadata:
-    max-request: 1
-  tags: unauth,iot,edb,rce,seowon,router,vuln
+  description: Execute commands without authentication as admin user, To use it in all versions, we only enter the router ip & Port(if available) in the request The result of the request is visible on the browser page
+  reference: https://www.exploit-db.com/exploits/50295
+  tags: rce,seowon,router,unauth,iot
 
 http:
   - raw:
@@ -32,9 +24,8 @@ http:
       - type: regex
         part: body
         regex:
-          - "root:.*:0:0:"
+          - "root:.*:0:0"
 
       - type: status
         status:
           - 200
-# digest: 4b0a004830460221009a417979f61680d43bca83d89ad8392d5952456b9744e47b719ce19cf03396e8022100b7614b45ff2013a794bae3a0868bb72e6495a4dcde38ed1f4fb5514b99007300:922c64590222798bb761d5b6d8e72950

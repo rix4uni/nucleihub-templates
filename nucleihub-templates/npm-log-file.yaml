@@ -4,18 +4,13 @@ info:
   name: Publicly accessible NPM Log file
   author: sheikhrishad,DhiyaneshDk
   severity: low
-  description: NPM log file is exposed to external users.
   reference:
     - https://github.com/maurosoria/dirsearch/blob/master/db/dicc.txt
-  classification:
-    cpe: cpe:2.3:a:npmjs:npm:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
-    vendor: npmjs
-    product: npm
     shodan-query: html:"npm-debug.log"
-  tags: npm,logs,exposure,vuln
+  tags: npm,logs,exposure
 
 http:
   - method: GET
@@ -34,4 +29,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402206b7d7e88fe100e1197f01d09ab2c57988a82ef8dbbe466d3c7ce3462f15b6cd002203280654f24c539afebee95bd0dadbb7331ba3c4e75ac3ef77ba4d804ff23bf28:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a004630440220200eecafc0bc184ce0a7e81d7fa19e18441dbba8774c1cbb1e5ce429811dc3e202207fb668a1a77b2cc50974c885703a834e5966fad0c11e840b601f4be18c02203a:922c64590222798bb761d5b6d8e72950

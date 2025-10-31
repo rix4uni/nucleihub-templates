@@ -9,18 +9,12 @@ info:
     - https://kiwitcms.org
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:kiwitcms:kiwi_tcms:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: kiwitcms
-    product: kiwi_tcms
-    shodan-query:
-      - title:"Kiwi TCMS - Login" http.favicon.hash:-1909533337
-      - http.title:"kiwi tcms - login" http.favicon.hash:-1909533337
-    fofa-query: title="kiwi tcms - login" http.favicon.hash:-1909533337
-    google-query: intitle:"kiwi tcms - login" http.favicon.hash:-1909533337
-  tags: kiwitcms,panel,discovery
+    shodan-query: title:"Kiwi TCMS - Login",http.favicon.hash:-1909533337
+  tags: kiwitcms,panel
 
 http:
   - method: GET
@@ -37,4 +31,5 @@ http:
         group: 1
         regex:
           - "Version ([0-9.]+)"
-# digest: 4a0a00473045022100f04520608501a71684eb8127a646443699706697a6ed955b4e538b927ed7f11102201713ec9f69c6ee2afef8b1b0d5c1ff89afc9fb9f19e8cf9260214958dd63e41d:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100fa8cc89de868310a152088549914d0c8cb7811ed6a42846a7b432b6ef290f024022100dbfc2174ee2c05f5fed6fb0de26c55c5a0137b6d2002a50939c1ca6efe1659ed:922c64590222798bb761d5b6d8e72950

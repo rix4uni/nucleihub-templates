@@ -9,18 +9,12 @@ info:
     - https://www.directadmin.com/whats_new.php
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:directadmin:directadmin:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: directadmin
-    product: directadmin
-    shodan-query:
-      - title:"DirectAdmin Login"
-      - http.title:"directadmin login"
-    fofa-query: title="directadmin login"
-    google-query: intitle:"directadmin login"
-  tags: panel,directadmin,discovery
+    shodan-query: title:"DirectAdmin Login"
+  tags: panel,directadmin
 
 http:
   - method: GET
@@ -36,4 +30,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402207d5915c12fd1bda9bcafd219ae0edaba3d5f37587307b19c1c541303b52ab4d00220392b376d3081e329fbc7f6b87e1a0135c117b34e3191473d41af308b6c513aa7:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a00463044022078d01eec8e9967538cd133c2e94178e516a7987ce1e1089359310c2197f01f550220132ad1a8b08d22ea45480b26ba991994fff970518735d5d21e13741790b90ddd:922c64590222798bb761d5b6d8e72950

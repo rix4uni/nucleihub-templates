@@ -7,18 +7,12 @@ info:
   description: Intelllian Aptus Web login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:intelliantech:aptus_web:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: intelliantech
-    product: aptus_web
-    shodan-query:
-      - http.title:"Intellian Aptus Web"
-      - http.title:"intellian aptus web"
-    fofa-query: title="intellian aptus web"
-    google-query: intitle:"intellian aptus web"
-  tags: panel,intellian,aptus,intelliantech,discovery
+    shodan-query: http.title:"Intellian Aptus Web"
+  tags: panel,intellian,aptus
 
 http:
   - method: GET
@@ -44,4 +38,5 @@ http:
         group: 1
         regex:
           - '<title>Intellian Aptus Web (.*)</title>'
-# digest: 4a0a00473045022056a6013e7aeeea8c07c7ccc03b2ecf62e255d2b1bf787466ea8029ed2538bf4a022100c154a89941edfd22892dd4ef2d506da06ebbea25532a7a0a59dd1c7f6c0e7678:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502201faaccbcf6bfea3fee7cce994259c216cf8b7a41d82ff7e3b7ca3c85cbeeda79022100baf51985b14b470bca163f3e32cc5f4dce5cf37795edfff02afab09d7ec4d98c:922c64590222798bb761d5b6d8e72950

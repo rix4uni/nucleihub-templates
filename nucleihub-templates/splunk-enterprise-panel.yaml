@@ -9,18 +9,12 @@ info:
     - https://www.splunk.com/en_us/software/splunk-enterprise.html
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:splunk:splunk:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: splunk
-    product: splunk
-    shodan-query:
-      - http.title:"Login - Splunk"
-      - http.title:"login - splunk"
-    fofa-query: title="login - splunk"
-    google-query: intitle:"login - splunk"
-  tags: panel,splunk,discovery
+    shodan-query: http.title:"Login - Splunk"
+  tags: panel,splunk
 
 http:
   - method: GET
@@ -47,4 +41,5 @@ http:
           - '"version": "(.*)"'
           - 'versionNumber": "([0-9.]+)"'
           - '"VERSION_LABEL": "([0-9.]+)"'
-# digest: 490a0046304402201512f716e77d92874419aa6b3404e5e52ba9bff06657455f1e19a3e182eec79102200febdc253ae9b516ca6961c9ac91dee0bcc6cd35a7fc87d8aaff031296c65a31:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100d463ceafaf5a540368aa1f949104844f281f66feb748fac88bd6246fd2165fff022007f32f21fb7b2a9e8e136699dfd372791b72c672ae24175eafada1f6644afe7f:922c64590222798bb761d5b6d8e72950

@@ -10,14 +10,13 @@ info:
     - https://codevigilant.com/disclosure/wp-plugin-athlon-manage-calameo-publications-a3-cross-site-scripting-xss/
     - https://wpscan.com/vulnerability/83343eb3-bb4c-4b82-adf6-745882f872cc
     - https://wordpress.org/plugins/athlon-manage-calameo-publications/
-  classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 5.4
-    cwe-id: CWE-80
   metadata:
     verified: true
-    max-request: 1
-  tags: wordpress,wp-plugin,xss,wp,wpscan,vuln
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 7.2
+    cwe-id: CWE-79
+  tags: wordpress,wp-plugin,xss,wp,wpscan
 
 http:
   - method: GET
@@ -39,4 +38,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100ffc4f062f6948e696a5bb65eb4d1f847c8c41563c71ac5c0c5519b7959fc6ec3022100d56c634f44fff4dc754e8571338a523a7fd728f1184d18aa7c720b21e369b2a5:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by mp on 2022/09/07

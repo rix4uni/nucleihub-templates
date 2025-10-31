@@ -7,19 +7,12 @@ info:
   description: Netdata Dashboard panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:netdata:netdata:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: netdata
-    product: netdata
-    shodan-query:
-      - 'Server: NetData Embedded HTTP Server'
-      - http.title:"netdata dashboard"
-      - "server: netdata embedded http server"
-    fofa-query: title="netdata dashboard"
-    google-query: intitle:"netdata dashboard"
-  tags: netdata,panel,tech,discovery
+    shodan-query: 'Server: NetData Embedded HTTP Server'
+  tags: netdata,panel,tech
 
 http:
   - method: GET
@@ -36,4 +29,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100b7dffb45de32e056a79d6e31c77ec6ba9923c39453ecaff36532fa7d6380a04402210089719d7651390dce260d4453e3d1c41f4fa6085e38d7c843a7ca3fde64f5dd45:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a0048304602210081e3ba0681a935ad6a300ed42377c830fa1bef7fde458efe97ba94f9282e8d4202210096f1846e626d9ee59b796a53fdef21db95ad66f1d5a893c8de3e1f02bccb1abe:922c64590222798bb761d5b6d8e72950

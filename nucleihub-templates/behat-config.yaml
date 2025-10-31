@@ -15,7 +15,7 @@ info:
     verified: true
     max-request: 2
     shodan-query: html:"behat.yml"
-  tags: exposure,behat,devops,cicd,vuln
+  tags: exposure,behat,devops,cicd
 
 http:
   - method: GET
@@ -38,4 +38,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502203421848b5cfd6e8c986ffc7506a75443dfc364f89bfedab77b42829d1e15a4870221008ae2cd1fd5a6d1240bec996dfa65545fab677535f45e2b849917c4322bf757a3:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502201ca9b08a93676da1bf20fa302751bc5afd76ef5d1bb0ae05bfed6f9dbc1ec26d022100eb7997c4e154b4a77e0ae9b03fd2fff774b4f28c9a342e35bdc40b7f2967003f:922c64590222798bb761d5b6d8e72950

@@ -11,15 +11,13 @@ info:
     - https://www.synopsys.com/software-integrity/security-testing/software-composition-analysis.html
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:synopsys:black_duck_hub:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
     shodan-query: http.title:"Black Duck"
-    product: black_duck_hub
-    vendor: synopsys
-  tags: panel,blackduck,synopsys,discovery
+  tags: panel,blackduck,synopsys
 
 http:
   - method: GET
@@ -46,4 +44,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022077168c0a2924a1ee2245b203979ff05aac8c53895791fc121444535fbed509f7022100faa7de6232035e26fc584ce1f23ab1a82ee454bacdc06c7138ace1fbd764d9cc:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a0048304602210094f4eb7be160d7fd7a4b46597775d0f2051a775b6e1d87f7b447c90493429c7c0221008d766029fd26a7d9a4948f75d5a5510d7ca16b261a7a82b0709a3ff68a0a04b0:922c64590222798bb761d5b6d8e72950

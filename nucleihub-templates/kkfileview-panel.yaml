@@ -7,15 +7,13 @@ info:
   description: kkFileView panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:keking:kkfileview:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
     shodan-query: http.title:"kkFileView"
-    product: kkfileview
-    vendor: keking
-  tags: panel,kkfileview,discovery
+  tags: panel,kkfileview
 
 http:
   - method: GET
@@ -31,4 +29,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100c459687fe22d02057fc2b70c31384890d5e7d44ecbc65de90fee4b1f7e2a4f4402204d8d7b585fa3a39ad419679009b61ba2ff2218d8c14512a6125b67b67e4fbc1a:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100c86fa6fcab3aac0d3c0e6198210a275abc5ad42095e466b5d6829625db3a497b022026368351052c195f20c410b78aa70e4538f7186f8526820537613c89acb3811f:922c64590222798bb761d5b6d8e72950

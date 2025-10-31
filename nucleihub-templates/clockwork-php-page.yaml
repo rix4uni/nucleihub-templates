@@ -4,13 +4,11 @@ info:
   name: Clockwork PHP page exposure
   author: organiccrap
   severity: high
-  description: |
-    Clockwork php page was exposed, which allows admins to profile and debug the application, view database queries, HTTP requests, and other details right from the browser's developer tools.
   reference:
     - https://twitter.com/damian_89_/status/1250721398747791360
   metadata:
     max-request: 1
-  tags: tech,clockwork,exposure,vuln
+  tags: tech,clockwork,exposure
 
 http:
   - method: GET
@@ -29,4 +27,5 @@ http:
           - <html ng-app="Clockwork" ng-csp="">
         part: body
         condition: or
-# digest: 490a00463044022015136a19ce5c4460dd4386b14c9e7997f765f39761cdbcc899a00ffaed31ac5a02202b0941cb5b13b01c3af3b86c885c290aaf78c16da90dde845a1774ab1a0d7b95:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022017f7b11a6d86418caad2c0598f404dcd578b68d9e2178711837c93cc00790538022100b69ece8a769235db44a6184c1318fecb47f7ac472e95f8c3bb428f9b452168df:922c64590222798bb761d5b6d8e72950

@@ -7,19 +7,12 @@ info:
   description: Oracle WebLogic login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:oracle:weblogic_server:*:*:*:*:-:*:*:*
   metadata:
     max-request: 1
-    vendor: oracle
-    product: weblogic_server
-    shodan-query:
-      - product:"Oracle Weblogic"
-      - product:"oracle weblogic"
-      - http.title:"oracle peoplesoft sign-in"
-    fofa-query: title="oracle peoplesoft sign-in"
-    google-query: intitle:"oracle peoplesoft sign-in"
-  tags: panel,oracle,weblogic,login,discovery
+    shodan-query: product:"Oracle Weblogic"
+  tags: panel,oracle,weblogic,login
 
 http:
   - method: GET
@@ -41,4 +34,5 @@ http:
         group: 1
         regex:
           - 'WebLogic Server Version: (.*?)<'
-# digest: 4b0a00483046022100a9a7e2345e51d773801406d41a0e352738b3b6cec9085c10fdc0c9aef9a79e1e022100a65271c2a118fe35ba67a06a268806af941c263d8d330305a55f561ef7ed071f:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402205f0444b6f2cca35e89a2379a553fab9dcb3c1a3ee8f9b75cebc15dd4d135446c0220510b883cb5c850e3534635f5bea482d5748568848a14af13c4ad2c4751cbfd07:922c64590222798bb761d5b6d8e72950

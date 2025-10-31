@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-522
   metadata:
     max-request: 1
-  tags: guacamole,default-login,vuln
+  tags: guacamole,default-login
 
 http:
   - raw:
@@ -50,4 +50,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100b7e92db41c5e7d76773227a077fe113a0ed5964a84085b394a06dbf8bd54dd19022063c29d5bd23463a2c6a9ef8104631e7e46fcf5d60b19c4d97ca4b58d87acdfc1:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022017cbd9a577da9580b25601a92ca12140aba01cfa155139b4b528662bc2683310022100b8847255257f8cfbb5b9ff4b8dbdf20108a739013991804e002d822b45589c6b:922c64590222798bb761d5b6d8e72950

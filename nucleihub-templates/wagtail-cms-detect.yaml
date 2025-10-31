@@ -7,19 +7,13 @@ info:
   description: The Wagtail panel has been detected.
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:torchbox:wagtail:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
-    vendor: torchbox
-    product: wagtail
-    shodan-query:
-      - title:"Wagtail - Sign in"
-      - http.title:"wagtail - sign in"
-    fofa-query: title="wagtail - sign in"
-    google-query: intitle:"wagtail - sign in"
-  tags: panel,wagtail,torchbox,discovery
+    shodan-query: title:"Wagtail - Sign in"
+  tags: panel,wagtail
 
 http:
   - method: GET
@@ -39,4 +33,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100b8140d1aa1ebda8582a2b3924f3e0ac878b98242cd4408217aa249ff4c8972c7022040408aa60f4ab228434c72cb3511bc2facf465ff0ad223ae2a8c593cfe556a86:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a004730450221009ce8e0a0a89713d3d2b89f0fe2f6ddbed6787d1e5c5236a9405cdde02330bf9c0220736cc9f55c0f8cb78da677dfdcb2d1fbc80cb0696935cc8afb9640fff35c7991:922c64590222798bb761d5b6d8e72950

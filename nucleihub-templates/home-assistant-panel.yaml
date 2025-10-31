@@ -7,15 +7,13 @@ info:
   reference: https://www.home-assistant.io/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:home-assistant:home-assistant:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
     shodan-query: http.title:"Home Assistant"
-    product: home-assistant
-    vendor: home-assistant
-  tags: panel,iot,homeassistant,discovery
+  tags: panel,iot,homeassistant
 
 http:
   - method: GET
@@ -32,4 +30,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a0048304602210090e2bebde6408ff45522f3af9538a41057a13a01961ed8c372558b982b563404022100996ec0d96c877f36f05d789f24baa299fc9a7105ce9d5f97ccec87fa5b9115b0:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100874104f457cdccbfee502d6206a63e06ddae606045551e8753aae421bb2e6874022100b86accb1fee0e900c37791c8388d23880b6bcf372173db9c0fa9d127980dedb0:922c64590222798bb761d5b6d8e72950

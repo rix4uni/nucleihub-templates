@@ -12,7 +12,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 3
-  tags: config,exposure,status,vuln
+  tags: config,exposure,status
 
 http:
   - method: GET
@@ -28,4 +28,5 @@ http:
           - "<th>opcache_hit_rate</th>"
         condition: and
         part: body
-# digest: 4b0a00483046022100cd9a2422bd0a0f267bc7e4a3a430eff7a4daa247e37c47eb5fadf54b01018fae022100f0157f3ea57a577838165e845341543efbd8d39f196e13d562d4e40ff718eaa1:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100a58c7ad4f551d7d31aab799b9fd3c2a651fd117a7ecaf98894b83a3042a076dd022100a90cc78ceb641ff59a126ac370e9d72667ee72bef6b2660d586a9eafe8b71617:922c64590222798bb761d5b6d8e72950

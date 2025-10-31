@@ -7,13 +7,11 @@ info:
   description: Polycom admin panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:h:polycom:vvx:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: polycom
-    product: vvx
-  tags: panel,polycom,discovery
+  tags: panel
 
 http:
   - method: GET
@@ -35,4 +33,5 @@ http:
         words:
           - "Server: lighttpd"
         part: header
-# digest: 4b0a00483046022100e5edb992c38acb70e1abac8f759d1229c1f690a17c5f6b9fa10a30aa9af64b24022100f04446aeae8f7653bd8a0d1eaad6b4e5cf969dd8b49afe5af013e9ba0b7eca11:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100b222912f3e6a22c7e8c67b42e1b1fdbe60d3f15c936848cad1217e702a0ad7d8022100c174e4c29c2c7f4eafcb46364ead0f26eae1b25cc19c5a71c2b7a50c3d2fb4ea:922c64590222798bb761d5b6d8e72950

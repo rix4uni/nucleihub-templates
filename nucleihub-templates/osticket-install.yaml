@@ -9,25 +9,11 @@ info:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H
     cvss-score: 9.4
     cwe-id: CWE-284
-    cpe: cpe:2.3:a:osticket:osticket:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 2
-    vendor: osticket
-    product: osticket
-    shodan-query:
-      - http.title:"osTicket Installer"
-      - http.title:"osticket"
-      - http.html:"powered by osticket"
-      - http.title:"osticket installer"
-    fofa-query:
-      - body="powered by osticket"
-      - title="osticket"
-      - title="osticket installer"
-    google-query:
-      - intitle:"osticket"
-      - intitle:"osticket installer"
-  tags: panel,osticket,install,discovery
+    shodan-query: http.title:"osTicket Installer"
+  tags: panel,osticket,install
 
 http:
   - method: GET
@@ -53,4 +39,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022035d0e7dbba1784db12cb4fb7ced8fbd7bb5e203f3b99603d001c0b680ae3864d022100c9db677907c233439ef4a032b7e7a62cf887cf2675c1bcc4aa2c8f46fefb7868:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402205982df1c400810c93e21d0ca00c353c09739f22cdb4587d60dae42e83b04ca2802204b724f40e9cf3a4b0965ccabc7cd64c40cb149eba8b0401fb983199fe20dd65c:922c64590222798bb761d5b6d8e72950

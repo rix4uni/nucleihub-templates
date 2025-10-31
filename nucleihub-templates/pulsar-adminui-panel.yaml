@@ -7,24 +7,13 @@ info:
   description: Pulsar admin UI panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:apache:pulsar:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: apache
-    product: pulsar
-    shodan-query:
-      - title:"Pulsar Admin UI"
-      - http.title:"pulsar admin ui"
-      - http.title:"pulsar admin console"
-    fofa-query:
-      - title="pulsar admin ui"
-      - title="pulsar admin console"
-    google-query:
-      - intitle:"pulsar admin ui"
-      - intitle:"pulsar admin console"
-  tags: panel,pulsar,pulsarui,admin,apache,discovery
+    shodan-query: title:"Pulsar Admin UI"
+  tags: panel,pulsar,pulsarui,admin
 
 http:
   - method: GET
@@ -41,4 +30,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220110f54d7a405ff5722fdc4901402363f3c96174397907c5836c40a5cd4e3d3e8022008b96abc4232bfeb0f1ea5728a69458f341a69d71d7fb5ba610f490a89cdeb7c:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100c49284d716d85b794e537aefedd18319049d57f9c3a94c71739a3ca61087c8b8022100d7f0f8614e3cc9dcfbb6e222ac5e5e8abff0e3ec61d2989b5862a5827554a89d:922c64590222798bb761d5b6d8e72950

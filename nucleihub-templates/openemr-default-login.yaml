@@ -11,14 +11,11 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
-    cpe: cpe:2.3:a:open-emr:openemr:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: http.html:"OpenEMR"
     fofa-query: app="OpenEMR"
-    product: openemr
-    vendor: open-emr
-  tags: openemr,default-login,vuln
+  tags: openemr,default-login
 
 http:
   - raw:
@@ -48,4 +45,5 @@ http:
       - type: status
         status:
           - 302
-# digest: 490a00463044022017c24a8f5f79a18eed9c4af68dda830388763419f6abb9e6d136a341ec43e7be02205f52560de896a51371eceefeb75b95be466d5ca529816a679f2ce1916a606d83:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100ca28f5e1b3bd9306613c33ba95a3e324fc42d6af06705e4ab3094d4d3ae1226e02210082e6c7488aa1b6e3ed88dc0c546d05aab2bc3c2b22bdad42fff78b31180d449d:922c64590222798bb761d5b6d8e72950

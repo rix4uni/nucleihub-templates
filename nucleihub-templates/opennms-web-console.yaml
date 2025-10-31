@@ -9,13 +9,11 @@ info:
     - https://www.exploit-db.com/ghdb/5468
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:opennms:opennms:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: opennms
-    product: opennms
-  tags: panel,login,edb,opennms,discovery
+  tags: panel,login,edb
 
 http:
   - method: GET
@@ -32,4 +30,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a00463044022051b49f68330ba55ce4765582e9ebf4c3d3dfb52acfb574ad9fd710ba82bd691302206d6c5f704c336358807313fa7b87e3d68d613bce5a3414faa9568d5bf5ad5976:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100c4bbc2c7092fe28f558fcaa4b73ac8775bcc6e536c3e6dbd579d63956013523e0220482045b0407213a481afc090fb82f542269616cbf0c769c2ee4115cf368cf827:922c64590222798bb761d5b6d8e72950

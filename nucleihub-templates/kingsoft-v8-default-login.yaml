@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-522
   metadata:
     max-request: 1
-  tags: kingsoft,default-login,vuln
+  tags: kingsoft,default-login
 
 http:
   - raw:
@@ -44,4 +44,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a00463044022059a8004926ad85e8f511d64718a9fcf455286dd2ca2e4aecb4dc88b4d7edf0d9022000c899619fd2f78b1877d5af1d48a477b401de4be747b7e57091a3ea38026ebe:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100d16428d7b8d8508f8a649bc69ca6fcc86f3e420950b2974cc632ae010f164aa1022100ba6a182a3f90e1e3715e89bc9007abd051666afd9a479a647fd699ff647fe21c:922c64590222798bb761d5b6d8e72950

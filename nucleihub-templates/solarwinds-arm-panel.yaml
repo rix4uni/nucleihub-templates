@@ -10,19 +10,14 @@ info:
     - https://www.solarwinds.com/access-rights-manager
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:solarwinds:access_rights_manager:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: solarwinds
-    product: access_rights_manager
     shodan-query: http.favicon.hash:-1416464161
-    censys-query:
-      - services.http.response.html_title="Solarwinds Access Rights Manager"
-      - services.http.response.html_title="solarwinds access rights manager"
-    fofa-query: icon_hash=-1416464161
-  tags: panel,solarwinds,discovery
+    censys-query: services.http.response.html_title="Solarwinds Access Rights Manager"
+  tags: panel,solarwinds
 
 http:
   - method: GET
@@ -42,4 +37,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402207080905da2c9f71f12a2dee5551db1e132fac4e88c17c604a51cd107aa561a5302203eeafbb359bdb308f2fe07c59028dfbce40f3af0a8551bf5a6a2a1fd544497e5:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a0048304602210092e17a435ec9e73190ad96e1c4eda0d3ba14050c033553c417365e19a938fb1a02210091d10ca99becdac51fa46651730190d7ae0feb19725b30ba64abdc7f1dbe10e4:922c64590222798bb761d5b6d8e72950

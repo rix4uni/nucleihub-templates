@@ -12,9 +12,7 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
     cwe-id: CWE-22
-  metadata:
-    max-request: 1
-  tags: bscw,orbiteam,lfi,unauth,packetstorm,xss,vuln
+  tags: bscw,orbiteam,lfi,unauth,packetstorm
 
 http:
   - method: GET
@@ -23,6 +21,7 @@ http:
 
     matchers-condition: and
     matchers:
+
       - type: regex
         regex:
           - "root:[x*]:0:0"
@@ -30,4 +29,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100bf458f4423b5378cb9f3d9f5b3f0d41205d4cd352c9c18a83a3b4b3024ac069f02203052194675acc63418ea1a1bda0df990f84425955a056cfd74a05dc264104f0d:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by mp on 2022/08/04

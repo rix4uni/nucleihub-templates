@@ -9,16 +9,13 @@ info:
     - https://www.ibm.com/support/pages/what-default-username-and-password-websphere-application-server-community-edition-and-how-add-users-admin-group
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:ibm:websphere_application_server:*:*:*:*:z\/os:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: ibm
-    product: websphere_application_server
     shodan-query: http.favicon.hash:1337147129
-    fofa-query: icon_hash=1337147129
-  tags: websphere,panel,ibm,discovery
+  tags: websphere,panel,ibm
 
 http:
   - method: GET
@@ -40,4 +37,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a004830460221009968ac259f1b77ce0d3d8de0a9acbb1fdd5e86e100a67c23de49cda8583d2ad0022100c5558d577a1267559eb4509b965a03c8e409c8e126ee61123da84ae423f5d2a6:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100e74fa4063d1faf13d045bb0c4ccd3043d8a1ece8782329e786cc8669b15055dd02204b85050b3c1e8b109fc155aafb86269a8115205d89100e6b55a374fd19cfbb2e:922c64590222798bb761d5b6d8e72950

@@ -11,14 +11,11 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
-    cpe: cpe:2.3:a:xnat:xnat:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
     shodan-query: http.title:"XNAT"
-    product: xnat
-    vendor: xnat
-  tags: default-login,xnat,vuln
+  tags: default-login,xnat
 
 http:
   - raw:
@@ -48,4 +45,5 @@ http:
       - type: status
         status:
           - 302
-# digest: 4b0a00483046022100fb8cc93ee7206153c5d6165230fd20326ccb4a2ccbd2fbc91bbfb7d8918000d3022100fcd305686e6d18ff36a1a0afc3e229900fa77b4edbde12f865c187780a6b6b2a:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100c95511dc279aa6daf3d36fd67e9a61d5008bcd8cc78c95a3cb6ef33134798270022100edf2ca6512a5a0667edfbd579193cd32e623bc6484b9f4cc5b6f338e8dace76c:922c64590222798bb761d5b6d8e72950

@@ -10,12 +10,9 @@ info:
     - https://stack.watch/product/citrix/netscaler-gateway/
   classification:
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: citrix
-    product: netscaler_gateway
-  tags: panel,netscaler,citrix,discovery
+  tags: panel,netscaler
 
 http:
   - method: GET
@@ -26,4 +23,5 @@ http:
       - type: word
         words:
           - <title>Netscaler Gateway</title>
-# digest: 4b0a00483046022100ee26d372c2820b04f0f0be899b5ea1c6df53f4aaff5d81e9d6aa72a015ebaecd022100a0a1b8df20cd9ff2ef7ad5303871256676490ec115d88bb842775223c10ba831:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a004730450220502c04fdc7846539b9d2ef1c3917928b2c32ff3f4d0adec529a7e169c8759e03022100a1287d7f7881213aa4bf06deb9ef1797f6b5137a9537c2d7e9bdd509f3e49b26:922c64590222798bb761d5b6d8e72950

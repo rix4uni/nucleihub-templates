@@ -7,7 +7,7 @@ info:
   description: Telecom Gateway default admin login credentials were successful.
   metadata:
     max-request: 1
-  tags: default-login,telecom,gateway,vuln
+  tags: default-login,telecom,gateway
 
 http:
   - raw:
@@ -39,4 +39,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a0048304602210080782655ba38730784d57708d13c57bbf254470dcd2e2704a43d13830a845fea02210096bccdad217b88adfbbe9d97c2d1e0f63bf24db39906a687f5733de57b33c9fc:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a00473045022100a367ccbfabd23210af96b3439c4ba6cbe08f9800ae62553ccd130828136642480220114c4652ae60ed84e6ae4c520992c75d8e25f826fd02f172fcc9e416309fe566:922c64590222798bb761d5b6d8e72950

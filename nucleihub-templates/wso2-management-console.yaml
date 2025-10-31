@@ -9,16 +9,12 @@ info:
     - https://www.exploit-db.com/ghdb/5691
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:wso2:api_manager:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: wso2
-    product: api_manager
     shodan-query: http.favicon.hash:1398055326
-    fofa-query: icon_hash=1398055326
-    google-query: inurl:"carbon/admin/login"
-  tags: panel,wso2,edb,discovery
+  tags: panel,wso2,edb
 
 http:
   - method: GET
@@ -43,4 +39,5 @@ http:
         part: header
         kval:
           - server
-# digest: 4a0a00473045022100c50c2b4928e80c37b197f6800dde32184d50540be7cbadd5d32120435b044a460220480e9c47795cdce1f66eb91929bc546ee46ca98f0afa09ee1828d032efaa03fb:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402202f6afe2ba67d75f24b75392184078d3556028e9d22c7661ea8e0facf2d210eb40220485d8abdf7dbf4619f9e2e73b8fef32d8cf222ab64571de57bcfc15aa280f695:922c64590222798bb761d5b6d8e72950

@@ -9,10 +9,11 @@ info:
     - https://www.contentkeeper.com/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: contentkeeper,panel,discovery
+  tags: contentkeeper,panel
 
 http:
   - method: GET
@@ -35,4 +36,5 @@ http:
         words:
           - "text/html"
         part: header
-# digest: 4a0a00473045022071d52a6347b8a7a71a59f99fc88dcd354cc8c0fcc1d81b835633fcd1671b276c022100914da03a870c826080f7e981ea3b041cd37f54d340dc44ec7b64c615e90e89d5:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100f652f6de6b48b3977862b62c2bd74f7e895ae631f610bdfa8c7951ea8778b7cd022100dbf4c4e48045aa717ed9e0f22f10de088a5aa4b21506e388ccc16c013a6b620d:922c64590222798bb761d5b6d8e72950

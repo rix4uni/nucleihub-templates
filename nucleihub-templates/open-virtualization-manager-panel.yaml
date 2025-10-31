@@ -10,12 +10,13 @@ info:
     - https://www.ovirt.org/dropped/admin-guide/virt/console-client-resources.html
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-668
   metadata:
     max-request: 2
     shodan-query: title:"Ovirt-Engine"
     google-query: intitle:"Ovirt-Engine"
-  tags: panel,ovirt,oss,discovery
+  tags: panel,ovirt,oss
 
 http:
   - method: GET
@@ -40,4 +41,5 @@ http:
         group: 1
         regex:
           - '"application_title":"(([a-zA-Z]+\s)*[a-zA-Z]+)"'
-# digest: 4a0a00473045022100cbc4374ae135bad71df6ee60a26a3ab7c911013193945e4a59eaf6825707c9d20220356d9d22673e42f5071c21de55a9ebd020c02714eb408f9c8ed9417a919152ab:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a004730450221009b0e4561ed2425a5a68562e3a5f2fdccadb188f63ef388fdf25456b5b3a021d10220033bcd9b35e57b8ee1ce37002b7fa66c9db26e14e27336728a0ad557303f867a:922c64590222798bb761d5b6d8e72950

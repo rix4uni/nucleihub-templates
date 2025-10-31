@@ -8,7 +8,7 @@ info:
     - https://ask.shoppable.com/knowledge/quick-start-api-guide
   metadata:
     max-request: 1
-  tags: exposure,shoppable,token,auth,service,generic,vuln
+  tags: exposure,shoppable,token,auth,service,generic
 
 http:
   - method: GET
@@ -20,4 +20,5 @@ http:
         part: body
         words:
           - data-shoppable-auth-token
-# digest: 4b0a00483046022100ed7a423cb837b986a51f519b37a73201ea8d40fbecb6132f6121a74a87941d60022100c1915a0d9087ac393762ffa416f32dd57616eecf57f5c55ce9be9110243f945e:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502206c945b4719d4749f9e83920b51e62e8ef36f9056a2a1552e977983e49a8e2116022100af51da3298a7f57f744ed85046ea2f7d356c03eea20a35b0cc22d3542f5443c1:922c64590222798bb761d5b6d8e72950

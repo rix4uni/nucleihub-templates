@@ -9,10 +9,11 @@ info:
     - https://www.tectuus.mx/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: panel,tectuus,scada,discovery
+  tags: panel,tectuus,scada
 
 http:
   - method: GET
@@ -29,4 +30,5 @@ http:
         words:
           - "<title>SCADAmonitor</title>"
         part: body
-# digest: 4a0a0047304502206feb79405f169f7f3d155f9890d565b094e06acfdab6024ae6a348d7141d5846022100b0bbea63d69fe260dd4e4abbcfa72b5a4dd55ff891c2947221f43184c6c6898d:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a00463044022065949145daaadffa380468b83eee9d7867bde321720b7962d11c5899555aec7902205ddf47cf4bb26e87cb237be26d2a9023a2f2744fa29eb291011077680cec7f59:922c64590222798bb761d5b6d8e72950

@@ -7,18 +7,12 @@ info:
   description: Cisco Identity Services Engine admin login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:cisco:identity_services_engine:*:*:*:*:*:*:*:*
   metadata:
     max-request: 2
-    vendor: cisco
-    product: identity_services_engine
-    shodan-query:
-      - http.title:"Identity Services Engine"
-      - http.title:"identity services engine"
-    fofa-query: title="identity services engine"
-    google-query: intitle:"identity services engine"
-  tags: panel,cisco,discovery
+    shodan-query: http.title:"Identity Services Engine"
+  tags: panel
 
 http:
   - method: GET
@@ -31,4 +25,5 @@ http:
       - type: word
         words:
           - '<title>Identity Services Engine</title>'
-# digest: 4a0a0047304502203d238396c0291d85f6419fcf30f2f675755be8363c044fa968acb2ce8f2f1a76022100b494366e0d038d4580a65779f2f62ae95485fa17a51727cb46301ba7d3d356da:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100df50a8f1779e7f3f0a7aeabae6eefe1c70a602bfdd6ee77abe9b1f5552f570e5022100fefbe3b0de6cdb8accc4b1a634ceeb4395a0d0470471e6f4a22aafec8585f164:922c64590222798bb761d5b6d8e72950

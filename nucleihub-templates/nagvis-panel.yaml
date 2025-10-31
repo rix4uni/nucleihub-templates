@@ -7,18 +7,13 @@ info:
   description: NagVis login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:nagvis:nagvis:*:*:*:*:nagios_xi:*:*:*
   metadata:
     verified: true
     max-request: 2
-    vendor: nagvis
-    product: nagvis
-    shodan-query:
-      - http.html:"NagVis"
-      - http.html:"nagvis"
-    fofa-query: body="nagvis"
-  tags: panel,nagvis,discovery
+    shodan-query: http.html:"NagVis"
+  tags: panel,nagvis
 
 http:
   - method: GET
@@ -42,4 +37,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100fbc47c09a7ddff1786cc5c2b3824082cc866fc44fc7caa3d723acb57521e2aaf022100afe7ba68b255c77113b31ba4c32ce4de3a8828f3f2c756b07665f19dd8403a0a:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402203e0fc6d03fabdb93462e7bec72bfe921e37f29e188354c8748e393fd9165faba022002a2916e86b06458083a25aa97f00f0669083f05c417d7ec3819525101f49c2f:922c64590222798bb761d5b6d8e72950

@@ -1,20 +1,14 @@
 id: church-admin-lfi
 
 info:
-  name: WordPress Church Admin 0.33.2.1 - Local File Inclusion
+  name: Church Admin 0.33.2.1 - Unauthenticated Directory Traversal
   author: 0x_Akoko
   severity: high
-  description: WordPress Church Admin 0.33.2.1 is vulnerable to local file inclusion via the "key" parameter of plugins/church-admin/display/download.php.
+  description: The "key" parameter of download.php from plugins/church-admin/display/download.php is not sanitized and is vulnerable to a directory traversal type of attack.
   reference:
     - https://wpscan.com/vulnerability/8997
     - https://id.wordpress.org/plugins/church-admin/
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    cvss-score: 7.5
-    cwe-id: CWE-22
-  metadata:
-    max-request: 1
-  tags: wordpress,wp-plugin,lfi,wpscan,vuln
+  tags: wordpress,wp-plugin,lfi
 
 http:
   - method: GET
@@ -23,6 +17,7 @@ http:
 
     matchers-condition: and
     matchers:
+
       - type: regex
         regex:
           - "root:[x*]:0:0"
@@ -30,4 +25,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402204f821fb244bfdc0a4272075ec5c6deddaab0b28e7dd569a1f09cd8286ed9e4ce0220683bd23c44e7c246ad6500d602b4fe58c6f8e62982442d2146a46ffe8bc9afa4:922c64590222798bb761d5b6d8e72950

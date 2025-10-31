@@ -10,20 +10,13 @@ info:
     - https://docs.ansible.com/ansible-tower/latest/html/release-notes/index.html
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:redhat:ansible_tower:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: redhat
-    product: ansible_tower
-    shodan-query:
-      - title:"Ansible Tower"
-      - http.title:"ansible tower"
-    google-query:
-      - intitle:"Ansible Tower"
-      - intitle:"ansible tower"
-    fofa-query: title="ansible tower"
-  tags: panel,ansible,redhat,discovery
+    shodan-query: title:"Ansible Tower"
+    google-query: intitle:"Ansible Tower"
+  tags: panel,ansible
 
 http:
   - method: GET
@@ -43,4 +36,5 @@ http:
         part: body
         regex:
           - 'href="\/static\/assets\/favicon\.ico\?v=(.+)" \/>'
-# digest: 4a0a00473045022052f5c01ec6996978b611cc7d36fdb0620118b824ce3bf2583ee99a8510cb6d96022100bdb3e18260b6650cb50d6e1fdc697add3eb7216daa01c0963e576f47ad03eb8d:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100812b940225545f00c38af9c41819dac0596b47018224abec33004c5f0d66cf46022100f8c48fc39817b5d68eb74a3f5a5ca8790e2d6794c101548bd7d54655ca1e9960:922c64590222798bb761d5b6d8e72950

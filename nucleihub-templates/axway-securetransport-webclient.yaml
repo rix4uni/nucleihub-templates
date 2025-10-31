@@ -9,24 +9,13 @@ info:
     - https://www.axway.com/en/products/managed-file-transfer/securetransport
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:axway:securetransport:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: axway
-    product: securetransport
-    google-query:
-      - intitle:"ST Web Client"
-      - intitle:"st web client"
-      - intitle:"securetransport" || http.favicon.hash:1330269434
-    shodan-query:
-      - http.title:"st web client"
-      - http.title:"securetransport" || http.favicon.hash:1330269434
-    fofa-query:
-      - title="securetransport" || http.favicon.hash:1330269434
-      - title="st web client"
-  tags: panel,axway,securetransport,webclient,discovery
+    google-query: intitle:"ST Web Client"
+  tags: panel,axway,securetransport,webclient
 
 http:
   - method: GET
@@ -43,4 +32,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100fbde5632eb7980a66a18134fc4a2d058d11753f18b4d8858c7cf73e901fb590f0220664df5dab158b30c045d3945f7aa39120517971c695b7d1b77b38a32bbd44fa9:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402205c4988fcfd775fbaa1e8015d7f4568b9e8ccf162cd684787b706d96b9e686e15022021e9480d766e8c294b6f86cff3f1e167db4bc96a95765469841a89ad52960038:922c64590222798bb761d5b6d8e72950

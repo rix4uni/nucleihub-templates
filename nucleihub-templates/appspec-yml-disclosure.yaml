@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-200
   metadata:
     max-request: 2
-  tags: exposure,config,vuln
+  tags: exposure,config
 
 http:
   - method: GET
@@ -31,13 +31,8 @@ http:
         part: body
         condition: and
 
-      - type: word
-        part: header
-        words:
-          - "text/html"
-        negative: true
-
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022070202f1c1cc0354db60a0e53722e22ed46b324d722917ab8203752a2228d80ba022100bec2a76bcbbf9277d6dfedf6013668e0794655892ce95b8f1878eae40f46de1e:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502207a4b0932e4bf9a73ac47c834c7ad8a7afaebc6467f319c5838c3cdbd961ea27f022100f61bb08a799e587699696f96e8e7e3def08d20af7de79c5e24fc939735ed36d4:922c64590222798bb761d5b6d8e72950

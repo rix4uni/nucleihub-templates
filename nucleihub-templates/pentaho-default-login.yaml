@@ -14,9 +14,7 @@ info:
   metadata:
     max-request: 1
     shodan-query: pentaho
-    product: vantara_pentaho
-    vendor: hitachi
-  tags: pentaho,default-login,vuln
+  tags: pentaho,default-login
 
 http:
   - raw:
@@ -46,4 +44,5 @@ http:
       - type: status
         status:
           - 302
-# digest: 490a0046304402206144b813c00018ee966cb76c87045507479c3c167048e19a931a55cc1ab919aa0220396895f228aa6436832bc129cedf69ff3349104397104d875f8a1fb359894ca8:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402207879c4c3d158c1befbc85369695e7c809e1c3321bfd3f41c3c14de63f25a565202206992c6b32c87dcec119c635edb212470f39effb0255284d3fa477e3581a0722e:922c64590222798bb761d5b6d8e72950

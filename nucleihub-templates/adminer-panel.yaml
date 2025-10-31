@@ -9,22 +9,11 @@ info:
     - https://blog.sorcery.ie/posts/adminer/
   classification:
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:adminer:adminer:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 8
-    vendor: adminer
-    product: adminer
-    shodan-query:
-      - title:"Login - Adminer"
-      - cpe:"cpe:2.3:a:adminer:adminer"
-      - http.title:"login - adminer"
-    fofa-query:
-      - title="login - adminer"
-      - app="adminer" && body="4.7.8"
-    hunter-query: app.name="adminer"&&web.body="4.7.8"
-    google-query: intitle:"login - adminer"
-  tags: panel,adminer,discovery
+    shodan-query: title:"Login - Adminer"
+  tags: panel,adminer
 
 http:
   - method: GET
@@ -37,7 +26,6 @@ http:
       - '{{BaseURL}}/sql.php'
       - '{{BaseURL}}/wp-content/plugins/adminer/adminer.php'
       - '{{BaseURL}}/admin.php'
-      - '{{BaseURL}}/modules/sfkdbmanage/adminer.php'
 
     headers:
       Accept-Language: en-US,en;q=0.5
@@ -61,4 +49,5 @@ http:
         group: 1
         regex:
           - '<span class="version">([0-9.]+)'
-# digest: 4a0a00473045022055652a1cb2282a7464c1f71af7ee22c7af270eab92188393cb6e1ce4597dc04d022100ff029a89baf82e1d24ad096893a0c89c50ba68729b6a75bb8e7fe8d92267660b:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100c166edbee03f727682624943a34e60c1f63804219bd13fd5167c0f730d2ff10b022100837e4867b53cf64741699b3d5fc2ef9ebf7c5329b5d8ca7a7a95d1caad81a2b5:922c64590222798bb761d5b6d8e72950

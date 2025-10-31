@@ -9,10 +9,11 @@ info:
     - https://www.fatpipeinc.com/products/warp/index.php
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: tech,fatpipe,panel,discovery
+  tags: tech,fatpipe,panel
 
 http:
   - method: GET
@@ -36,4 +37,5 @@ http:
         group: 1
         regex:
           - '<h5>([0-9.a-z]+)<\/h5>'
-# digest: 4a0a0047304502200ca019b9845b54c1be53c6a7747edf9c1d47383946aa0052c09a9be53583d9a7022100fcf031fc44d6335696dc5449912ed4946e7568d02d8e79d050be01527940071c:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a0046304402203958170a244334561c5ad7f812b144dd6a10c8276fe79bb12503342d1c6287280220345a64766e92f32e9a82404a61fd6f73ec1995d7934fee7f8c00b84bc19cd476:922c64590222798bb761d5b6d8e72950

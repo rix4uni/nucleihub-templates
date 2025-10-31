@@ -9,7 +9,7 @@ info:
     - https://www.gnu.org/software/inetutils/manual/html_node/The-_002enetrc-file.html
   metadata:
     max-request: 2
-  tags: netrc,config,exposure,vuln
+  tags: netrc,config,exposure
 
 http:
   - method: GET
@@ -33,15 +33,10 @@ http:
           - "password "
         condition: and
 
-      - type: word
-        part: header
-        words:
-          - "text/html"
-        negative: true
-
     extractors:
       - type: regex
         part: body
         regex:
           - "machine [0-9A-Za-z](?:(?:[0-9A-Za-z]|-){0,61}[0-9A-Za-z])?(?:\\.[0-9A-Za-z](?:(?:[0-9A-Za-z]|-){0,61}[0-9A-Za-z])?)*\\.?"
-# digest: 490a0046304402201e6dab24e7b7c068e2bac2a3e673a35b66275d6e9d26493ae5082cb0238d11ad02203e743507813cb388466c7634bf24ecdcd9c57ce4fa6ce61d7a2fd1dd2dd932e7:922c64590222798bb761d5b6d8e72950
+
+# digest: 490a00463044022072f3810d5161d773a7e963bf1431f25dc27b0af216a44b5d3ebc90f6bbc4b9f402207701413414bce54d3da7716463e173f5192dfe85efd4dcaa10f91901a398163e:922c64590222798bb761d5b6d8e72950

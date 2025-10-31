@@ -9,12 +9,9 @@ info:
     - https://techdocs.akamai.com/cloudtest/docs
   classification:
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:akamai:cloudtest:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
-    vendor: akamai
-    product: cloudtest
-  tags: panel,akamai,discovery
+  tags: panel,akamai
 
 http:
   - method: GET
@@ -32,4 +29,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502210092ac0a854e51edd60b18f8cecca4cf3952029011e933134ad340fdd21f80cb1d022016ab1e9109a50434f67c17ae0e4877b7c379832d8412dea77c8daa513bb29deb:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100c9199d7ec7c0a404f7da765e698b0a47f2d9625b3c3e6129f2e19cb42aa78bfd022100f67f1c12612faf75fd3a9d5241f732ab98d3bc62cb909e27abe5de05586e37d7:922c64590222798bb761d5b6d8e72950

@@ -14,7 +14,7 @@ info:
     cwe-id: CWE-522
   metadata:
     max-request: 3
-  tags: ibm,default-login,vuln
+  tags: ibm,default-login
 
 http:
   - raw:
@@ -48,4 +48,5 @@ http:
       - type: status
         status:
           - 302
-# digest: 4a0a004730450221009ee6726fdf0ed109eeeb4520c75bf255c14e1ea6254b278afec0635c7f498d0602207b1d6aaed810a78ab5a6659a4bfea253f71245431d6911c4984417becbfa0b25:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100e9d7e6d6ad074e2a3610997a10fea6593ae8bdb549c3a68523ccf4c49a3e78c8022100943f69fb1ffe93bf5de3a4a558a86d70ecde00f65ef0176fe27e7556eba9f042:922c64590222798bb761d5b6d8e72950

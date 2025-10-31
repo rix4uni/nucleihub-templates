@@ -1,19 +1,11 @@
 id: solr-admin-query
 
 info:
-  name: Solr - Admin Page Access
+  name: Solr Admin Query Page
   author: dhiyaneshDK
   severity: high
-  description: Solr's admin page was able to be accessed with no authentication requirements in place.
-  reference:
-    - https://www.exploit-db.com/ghdb/5856
-  classification:
-    cpe: cpe:2.3:a:apache:solr:*:*:*:*:*:*:*:*
-  metadata:
-    max-request: 2
-    vendor: apache
-    product: solr
-  tags: solr,unauth,edb,misconfig,discovery
+  reference: https://www.exploit-db.com/ghdb/5856
+  tags: solr,unauth
 
 http:
   - method: GET
@@ -30,4 +22,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220044eaa1ac1ef40b6e7d10bc31c5fd786e5991657d13730e7a0a1885860beba5a0220392437c3bb1f2ad646c8251f4f94c5b5bf354345ea1bd33c00ee9a8755b9fd80:922c64590222798bb761d5b6d8e72950

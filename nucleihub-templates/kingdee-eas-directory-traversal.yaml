@@ -11,9 +11,7 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
     cwe-id: CWE-22
-  metadata:
-    max-request: 2
-  tags: kingdee,lfi,traversal,vuln
+  tags: kingdee,lfi,traversal
 
 http:
   - method: GET
@@ -22,7 +20,6 @@ http:
       - "{{BaseURL}}/appmonitor/protected/selector/server_file/files?folder=/&suffix="
 
     stop-at-first-match: true
-
     matchers-condition: and
     matchers:
       - type: word
@@ -40,4 +37,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a00463044022069baf66b979890ceb2caa3c7440f58ee25adeddbcb3e6e5cfeb82b591088dda1022025b20be5c895df245339012017de5a2f1d71a685ccce292fa9472169e8e02a1a:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by mp on 2022/08/03

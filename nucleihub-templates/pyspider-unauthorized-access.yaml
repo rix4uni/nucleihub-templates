@@ -4,12 +4,9 @@ info:
   name: Pyspider Unauthorized Access
   author: ritikchaddha
   severity: high
-  description: Unauthorized Access exists in PySpider which is an open-source web crawling and web scraping framework written in Python.
   reference:
     - https://github.com/ianxtianxt/Pyspider-webui-poc
-  metadata:
-    max-request: 1
-  tags: pyspider,unauth,vuln
+  tags: pyspider,unauth
 
 http:
   - raw:
@@ -22,7 +19,6 @@ http:
 
     host-redirects: true
     max-redirects: 2
-
     matchers-condition: and
     matchers:
       - type: word
@@ -33,4 +29,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a004630440220023fbf050b40480e3f02fba12dc34a7fb71952bd3022012ba26098ff7e9a54ab0220366ebcbe646c5fc9e6a57a8942ab436fbff101be88aaa640252ad28b4dcac8b8:922c64590222798bb761d5b6d8e72950

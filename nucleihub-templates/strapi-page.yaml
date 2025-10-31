@@ -10,13 +10,10 @@ info:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
     cvss-score: 0
     cwe-id: CWE-200
-    cpe: cpe:2.3:a:strapi:strapi:*:*:*:*:*:*:*:*
   metadata:
     max-request: 1
     shodan-query: http.title:"Welcome to your Strapi app"
-    product: strapi
-    vendor: strapi
-  tags: api,strapi,exposure,discovery
+  tags: api,strapi,exposure
 
 http:
   - method: GET
@@ -28,4 +25,5 @@ http:
         words:
           - '<title>Welcome to your Strapi app</title>'
         condition: and
-# digest: 4a0a00473045022050a2dd388b0b96eee9700f4c3b873054b093931bcc2054083e6068e3ab265a9e022100d654d74ccf10ca118165ea2a3ffc559fe704b699a1bbed4ae211e55d33138a4a:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100859fc0e5aec1e65804427dbd12649e2f3adf4e4ce71b95604608cdf60d715803022100c73417dd6e7cb1446911af30545abecbee549cb091266bf972a9bd873b642236:922c64590222798bb761d5b6d8e72950

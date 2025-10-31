@@ -14,7 +14,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: html:"tox.ini"
-  tags: exposure,config,tox,vuln
+  tags: exposure,config,tox
 
 http:
   - method: GET
@@ -38,4 +38,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100d83452407fd0cadc8eeec1bd556066f882abb44ef9a1a616e366df9dc0cf892f0220551435dce0ed384f46383646c520d329836ff4b3c9f078fd6098a28354909e59:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502206dcf66476af4958fb9e37afd2640ad7d35b842665bf0790286205f0aa094441f022100c2b1e966ab62dd55fe84090eb749eb09363171c7bf4d284d9efd95c44f9eba3c:922c64590222798bb761d5b6d8e72950
