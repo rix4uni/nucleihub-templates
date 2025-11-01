@@ -7,11 +7,10 @@ info:
   description: Start Element Manager panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: panel
+  tags: panel,discovery
 
 http:
   - method: GET
@@ -28,5 +27,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022100ae40e4b73757ab8fa79f1bbfccdbdd7068bbd7a3f3062bc21b3321aaec88c817022026ac3f78385fa2d17c2d14a93f8ffa3fe16618d58f8cbd4ff4e07b908a32eba9:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022044ee7ce50882d8f763ed5ea989300f6ae5eca443a6b56c1c327032a0c1384d700220220975ca3795b733d011d0444f30eadb980a42203ac7acab0cf596e217ba9dbb:922c64590222798bb761d5b6d8e72950

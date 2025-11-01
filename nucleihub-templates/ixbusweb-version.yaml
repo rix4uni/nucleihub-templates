@@ -7,12 +7,11 @@ info:
   description: iXBus login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
     shodan-query: http.title:"iXBus"
-  tags: panel,ixbusweb,cms
+  tags: panel,ixbusweb,cms,discovery
 
 http:
   - method: GET
@@ -35,5 +34,4 @@ http:
         group: 2
         regex:
           - '(iXBusWeb[\n\t ]+\((([0-9]+(.[0-9]+)?(.[0-9]+)?(.[0-9]+)?))\))'
-
-# digest: 4a0a00473045022100e3b5ecf71563dc7986a8eea310d07d3567db18a73602f0db048a7adebb88f22a022042785a99e6161cdc0a1d0857a96f3dbbbe30bcc82fd7fa34c1360b6158ffa728:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402203202df4df347bef474401e78e85b372bb2b640ac73c2ef13c1ac4da7ee3c3ea60220718b092558e0794293eb912af5ee725690de8fd2197b7b607541c0cd21011e72:922c64590222798bb761d5b6d8e72950

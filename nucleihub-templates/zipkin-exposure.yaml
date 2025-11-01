@@ -7,13 +7,12 @@ info:
   description: Zipkin login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     verified: true
     max-request: 2
     shodan-query: html:"webpackJsonpzipkin-lens"
-  tags: panel,zipkin
+  tags: panel,zipkin,discovery
 
 http:
   - method: GET
@@ -26,5 +25,4 @@ http:
         part: body
         words:
           - "webpackJsonpzipkin-lens"
-
-# digest: 4a0a00473045022100b5ad0700205282f8d26f42d1aaecb745bd528320dce14ee72d8717a5da16c43002200be35b803e4ab384c1114249a59c2075ac85f95b65065db5611015233cbfa0d6:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402200badec3bff190372c7562d996d075cba8c60040304ff5d637a7b6c8ff411bb6f02203a6c64899759b4bc2ffee347a95a87d02b7c397c037c05de64a68b17dac05efd:922c64590222798bb761d5b6d8e72950

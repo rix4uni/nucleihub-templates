@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-522
   metadata:
     max-request: 2
-  tags: gophish,default-login
+  tags: gophish,default-login,vuln
 
 http:
   - raw:
@@ -33,7 +33,6 @@ http:
         - admin
       pass:
         - gophish
-    cookie-reuse: true
 
     extractors:
       - type: regex
@@ -51,5 +50,4 @@ http:
           - "contains(tolower(header), 'gophish')"
           - "status_code==302"
         condition: and
-
-# digest: 4b0a00483046022100b0a3092afa91f9134e5ba820d3156f5a9d302f82a3d1a7ce1f41a94fe7a10dcf022100f0ceb4a5273843ffa4c4a4de320a41c80c8d54a2803c29d19c4e2bd314175196:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220173291e05d19e15956ea781acbf51650eb431510960fa74acb3c1f396c3e2dc6022100b6bbf1909bdb00440d74c5ffa1c29a6a6aa138f90b0e81d2109d4357150aeed7:922c64590222798bb761d5b6d8e72950

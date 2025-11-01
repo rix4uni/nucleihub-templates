@@ -10,12 +10,11 @@ info:
     - https://blueirissoftware.com/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
     shodan-query: http.title:"Blue Iris Login"
-  tags: panel,blueiris,edb
+  tags: panel,blueiris,edb,discovery
 
 http:
   - method: GET
@@ -37,5 +36,4 @@ http:
         group: 1
         regex:
           - 'var bi_version = "(.*)";'
-
-# digest: 4b0a00483046022100b39c8aa2272e2a5ba6f3e17d7f238c776bef3fee2a72f2bc8ef488494fe1cfcf022100c48a4a0f4b3967dc4784f56642f0ebe9c67796acfd715ce60781b99f31556c69:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100a21cf2d1e02597599f0c63724ff5929d0577c26cc4d830f6d08418d09811d972022023417f4a1f67a5cc9d6108d19ca7e245db0ad78be9a8cbae257c226cd5c1ff4e:922c64590222798bb761d5b6d8e72950

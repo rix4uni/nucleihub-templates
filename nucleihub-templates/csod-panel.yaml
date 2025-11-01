@@ -7,11 +7,10 @@ info:
   description: Cornerstone OnDemand panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: panel,csod
+  tags: panel,csod,discovery
 
 http:
   - method: GET
@@ -27,5 +26,4 @@ http:
           - "csodcommon"
         part: body
         condition: or
-
-# digest: 490a0046304402206cdd14eba40762153c60890dc8679fcd6a22b0fee952bf78ec28cd8bbe26555302204d4dc1133208ad4e4cb3a44cf7754245a0baf32a1ca033829d72ba088d5de344:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100d3ea878292f4d71afccd4c49f6c9eed9800ced1b50b9269cddebe3b5b8ee52c402200bdc5b221a613458f5eb320932f90e42391a781a99d755d187745d0eecd06ab3:922c64590222798bb761d5b6d8e72950

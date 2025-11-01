@@ -9,7 +9,7 @@ info:
     - http://forum.panabit.com/thread-10830-1-1.html
   metadata:
     max-request: 1
-  tags: default-login,ixcache,panabit
+  tags: default-login,ixcache,panabit,vuln
 
 http:
   - raw:
@@ -36,5 +36,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a00483046022100c220cc1239979a33a9fa0ff94786fb09f6d2899e97a21be24d458ee690bf2272022100f2539225eb3aaab67a45563f00a03398885b57ed3c0dac3d2b0f6f99e3c0395d:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022056fca33935723bb7cf81be185a245c87b1a00884ffe5da328d78ad843a9f21ff022030dc672d0edcb543406f5cfd5ce9d985d6684d8a0df8939cd846916638bf945b:922c64590222798bb761d5b6d8e72950

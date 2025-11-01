@@ -7,12 +7,11 @@ info:
   description: HP Virtual Connect Manager login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
     shodan-query: http.title:"HP Virtual Connect Manager"
-  tags: panel,hp
+  tags: panel,hp,discovery
 
 http:
   - method: GET
@@ -28,5 +27,4 @@ http:
       - type: word
         words:
           - "<title>HP Virtual Connect Manager</title>"
-
-# digest: 4b0a00483046022100b1def01affbb562f7ffd1685ef0296e1ed0cf648963b53f6d15a617f044f30e8022100e5cf9730c11d06dd9fe70451f19de401f1ce8294ffcebd0a32b132c3d72caa3a:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a0048304602210093e34e04746be378c1d68e1ff13edf93d7bf40c9feebdc0ebc413e6fa5da0deb022100cab6c795195e59b5a82e2a8f71d38043af03f73714cefe9d31edcc669d84f64d:922c64590222798bb761d5b6d8e72950

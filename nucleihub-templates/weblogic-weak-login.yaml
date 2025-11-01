@@ -14,7 +14,7 @@ info:
     cwe-id: CWE-522
   metadata:
     max-request: 16
-  tags: default-login,weblogic,vulhub
+  tags: default-login,weblogic,vulhub,vuln
 
 http:
   - raw:
@@ -49,7 +49,6 @@ http:
         - security
         - password
     stop-at-first-match: true
-    cookie-reuse: true
 
     matchers-condition: and
     matchers:
@@ -63,5 +62,4 @@ http:
       - type: status
         status:
           - 302
-
-# digest: 4a0a00473045022100fcc4de602d583dd8639aa5dab98ef226d03efdf4ed1739e59f3d6798f464b93c02200db8611894ffb6383485a038e5fdea83b7e2e70ae7e2994ca1b7a1a8ca1c5cdd:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220266ca92d38b180d9922223fd5a7be963edc6d9d0e969bf31dda08ee66cdd86f5022100882f2d8db0980a82142c770aa34b6fb34e26edf849a4323ac2eb08b341627f14:922c64590222798bb761d5b6d8e72950

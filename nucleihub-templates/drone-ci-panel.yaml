@@ -9,12 +9,11 @@ info:
     - https://www.drone.io
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
     shodan-query: http.favicon.hash:1354079303
-  tags: panel,droneci,cicd
+  tags: panel,droneci,cicd,discovery
 
 http:
   - method: GET
@@ -32,5 +31,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a0047304502203e223f39b2dc6fc681ee7ad165297cab380cc28857345637420e32d2e988dc51022100c37f54c7c71d168f383a42532edc5a56a85d285bf92dbe2b4f0080c77f9390d5:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402207944911bac973a8b806ff363650250b8ba841364f6aa8b2a106481d5e9c7979002203e4bd6325471fc155c6887ff94b231aff027baac809bf776edbff8097c21c710:922c64590222798bb761d5b6d8e72950

@@ -15,7 +15,7 @@ info:
     verified: true
     max-request: 1
     shodan-query: title:"ruckus"
-  tags: default-login,router,ruckus
+  tags: default-login,router,ruckus,vuln
 
 http:
   - raw:
@@ -34,7 +34,6 @@ http:
         - sp-admin
     host-redirects: true
     max-redirects: 2
-    cookie-reuse: true
 
     matchers-condition: and
     matchers:
@@ -48,5 +47,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4b0a0048304602210098b07e1e0248d11a619cf588c3c5d47cfb7ba3adf0e7705d7bd2524175480eb7022100d7db5f9129b06531a13604920f048a1bc3e9177e1a473cdd712c6490bbbfc260:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022071c23a5a9b774961b7f7067f5c890af834cf01b511cf43768083d441a38e52a602210081722cd30b9e48330c00e05c0e4c4c548d197eacc9d9377ce5799f74ca39d92f:922c64590222798bb761d5b6d8e72950

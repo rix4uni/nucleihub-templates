@@ -9,11 +9,10 @@ info:
     - https://www.exploit-db.com/ghdb/6610
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: panel,login,edb
+  tags: panel,login,edb,discovery
 
 http:
   - method: GET
@@ -29,5 +28,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a0047304502205205761ed678f220785057ddad4a3470cab519acf994a0f7637965f91815974e022100dede240fe0b532f162e2afb8126aae23440f7b7ecd7fb07f1f0088ea49341e86:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100bdc11260afc774d0c05ed06e88235d7205964ef31eea6d831d1f58f3147ec0e5022100acd31ed8a75dc8b4cb6e3b8aa49cadeca3277bbd685046f38998ffce3f4b837c:922c64590222798bb761d5b6d8e72950

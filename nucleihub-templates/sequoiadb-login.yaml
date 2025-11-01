@@ -7,12 +7,11 @@ info:
   description: SequoiaDB login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
     shodan-query: http.title:"SequoiaDB"
-  tags: sequoiadb,panel,login
+  tags: sequoiadb,panel,login,discovery
 
 http:
   - method: GET
@@ -30,5 +29,4 @@ http:
         part: header
         words:
           - "text/html"
-
-# digest: 4a0a00473045022100aed48f1dc6a84116d4af4a3154d53b933ebd856c86f454f36236b186171de4ac0220354fdabc6a77d6f033f083c11560fa6d25452d2451832f4ef8ae51898812876c:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100dfa9129ee5ef9f8924718aff1bfed341ed21ddbc470215ce04d492dae1556b5d022100caf3fd6a7b11b5ba6a06016972250f963086310422a6df9f6fefed260459f2fb:922c64590222798bb761d5b6d8e72950

@@ -7,13 +7,12 @@ info:
   description: Looker login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     verified: true
     max-request: 1
     shodan-query: http.html:"lookerVersion"
-  tags: panel,login,looker
+  tags: panel,login,looker,discovery
 
 http:
   - method: GET
@@ -38,5 +37,4 @@ http:
         group: 1
         regex:
           - "lookerVersion: '([0-9.]+)',"
-
-# digest: 4b0a00483046022100a395de97a2c33920669ff6277916ae6052640371431057da001fcda9e5fa14e3022100c20aacce5f507b21607178b7f78f51e1644d5d32a8e6cb411b31dd8be8ef0f33:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100c8cf7e17a8b39454ac9f3093e0b1920658838ae3749b7f5ebc98fa6243822e4a022100886d72d9f80aa6017fbe281f3ccd839181c5e65472d5f6965688332501d59438:922c64590222798bb761d5b6d8e72950

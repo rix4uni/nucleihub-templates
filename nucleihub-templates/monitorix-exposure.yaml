@@ -9,11 +9,10 @@ info:
     - https://www.monitorix.org/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: monitorix,exposure,logs,panel
+  tags: monitorix,exposure,logs,panel,discovery
 
 http:
   - method: GET
@@ -35,5 +34,4 @@ http:
       - type: status
         status:
           - 200
-
-# digest: 4a0a00473045022017c595ad55a7c65c379316462eec475ac100601f329010d3fb3f7125e54712f5022100f9455a77685ea40a54ba92b4922718708548caf7ff954434ddc825c58aeaf94b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502201f876b218d5221a7f60254ce95af5e16a7f4c37c1804c984ee081482c1b67334022100c5ab3c6ee8e92138e0bc0e1799717d03cfb35301d44a7390bb8105675268ad5d:922c64590222798bb761d5b6d8e72950

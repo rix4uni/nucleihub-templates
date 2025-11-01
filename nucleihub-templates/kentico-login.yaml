@@ -9,11 +9,10 @@ info:
     - https://docs.xperience.io/k8/using-the-kentico-interface
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: panel,login,kentico
+  tags: panel,login,kentico,discovery
 
 http:
   - method: GET
@@ -30,5 +29,4 @@ http:
           - "status_code==200"
           - "contains(tolower(body), 'cmspages/getresource.ashx')"
         condition: and
-
-# digest: 490a004630440220078d50c830b7aa190132f85b41d021bbfa9afd66faaf56cce243bf8fbbedd6e4022013cf168da3ddebdcb992697741bb9e589b6269951be8c333ede07cc3cd1886d6:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100e258b71be04b868281b5f921ac28f155d9eb19100c236915f3c8d50133974b230220471d8366ac14d472fbfe948d5bcf16fde5540acf3c1a95ab69119ec47c1ecea4:922c64590222798bb761d5b6d8e72950

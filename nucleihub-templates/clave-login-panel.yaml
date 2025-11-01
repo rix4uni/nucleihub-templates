@@ -7,11 +7,10 @@ info:
   description: Clave login panel was detected.
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0
     cwe-id: CWE-200
   metadata:
     max-request: 1
-  tags: panel,clave,login
+  tags: panel,clave,login,discovery
 
 http:
   - method: GET
@@ -29,5 +28,4 @@ http:
       - type: word
         words:
           - "Clave"
-
-# digest: 4a0a0047304502206d4cba4b97a9642cadff7652f975a84d0481520ba78c1b83cbb94b7bb501e927022100f41bf06c7975e3e00711c9f67662d46d457c772a057a52390a5dc043a89b43c8:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022014ccbb2cd7e3c986f6fe16a9087d43e024bb1bed0952a901dc9fff29fa1b65f4022100959f95060e1039942c9c1be8d8d6bec614d6f085e51f1c426ecea0c8c3cb6264:922c64590222798bb761d5b6d8e72950

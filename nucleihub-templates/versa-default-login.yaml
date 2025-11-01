@@ -13,7 +13,7 @@ info:
     cwe-id: CWE-522
   metadata:
     max-request: 2
-  tags: default-login,versa,sdwan
+  tags: default-login,versa,sdwan,vuln
 
 http:
   - raw:
@@ -34,8 +34,6 @@ http:
         - Administrator
       pass:
         - versa123
-    cookie-reuse: true
-    req-condition: true
 
     matchers-condition: and
     matchers:
@@ -51,5 +49,4 @@ http:
           - "contains(tolower(header_2), '/login?error=true')"
           - "contains(tolower(header_2), '/login?tokenmissingerror=true')"
         negative: true
-
-# digest: 4b0a00483046022100999377e255e370d3cdce38ead81d80101c8093f98d45e60c5362f0ddfa9dd669022100868530f6c6b834c36963c522f0d16d4f28a949a8af9b49f54c5c0fa574671a4f:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502210083cb49b99922f75f03d03772e225551bf1e102dfcafefa8f75a91478956e7249022000ba66eece4bd1650a1593d532c6efb7da299914c2d0ae268174068b23be7986:922c64590222798bb761d5b6d8e72950
