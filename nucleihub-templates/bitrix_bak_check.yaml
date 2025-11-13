@@ -2,7 +2,7 @@ id: "bitrix_bak_check"
 
 info:
   name: Bitrix check .env file existence
-  author: crth0
+  author: JhonnyBonny
   severity: high
   description: Check if the .env file exists on the website.
   reference:
